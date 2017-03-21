@@ -798,6 +798,14 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/person#hasUnknownKinship -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasUnknownKinship">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#kinWith"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/person#hasWife -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasWife">
