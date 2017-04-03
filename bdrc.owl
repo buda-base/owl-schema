@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.bdrc.io/ontology/root/"
-     xml:base="http://purl.bdrc.io/ontology/root/"
+<rdf:RDF xmlns="http://purl.bdrc.io/ontology/root#"
+     xml:base="http://purl.bdrc.io/ontology/root#"
      xmlns:com="http://purl.bdrc.io/ontology/common#"
      xmlns:crp="http://purl.bdrc.io/ontology/corporation#"
      xmlns:prd="http://purl.bdrc.io/ontology/product#"
@@ -16,10 +16,9 @@
      xmlns:top="http://purl.bdrc.io/ontology/topic#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:root="http://purl.bdrc.io/ontology/root#"
      xmlns:per="http://purl.bdrc.io/ontology/person#"
      xmlns:desc="http://purl.bdrc.io/ontology/description#">
-    <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/root/">
+    <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/root#">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
     </owl:Ontology>
@@ -74,17 +73,17 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     
 
 
-    <!-- http://purl.bdrc.io/ontology/root/inferSubTree -->
+    <!-- http://purl.bdrc.io/ontology/root#inferSubTree -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root/inferSubTree">
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#inferSubTree">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/root/migration_exception -->
+    <!-- http://purl.bdrc.io/ontology/root#migration_exception -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root/migration_exception">
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#migration_exception">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
     
@@ -113,7 +112,7 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     <!-- http://purl.bdrc.io/ontology/root#StatusType -->
 
     <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/root#StatusType">
-        <root:status>released</root:status>
+        <status>released</status>
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1248,9 +1247,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
-    <!-- http://purl.bdrc.io/ontology/root/subject_noType -->
+    <!-- http://purl.bdrc.io/ontology/root#subject_noType -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root/subject_noType">
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#subject_noType">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/root#subjectObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -5496,8 +5495,8 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/common#P1331_Note_1">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/root#Note"/>
         <wrk:work rdf:resource="http://purl.bdrc.io/ontology/work#W20115"/>
-        <root:note_content xml:lang="en">The source of the information that P1331 was a teacher of P1323</root:note_content>
-        <root:note_location xml:lang="en">pg. 354</root:note_location>
+        <note_content xml:lang="en">The source of the information that P1331 was a teacher of P1323</note_content>
+        <note_location xml:lang="en">pg. 354</note_location>
     </owl:NamedIndividual>
     
 
@@ -5538,7 +5537,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/person#P1323">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/person#Person"/>
-        <root:status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</root:status>
+        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
     </owl:NamedIndividual>
     
 
@@ -5553,15 +5552,15 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <per:gender>male</per:gender>
         <per:primaryName xml:lang="bo-x-ewts">blo bzang rnam dag</per:primaryName>
         <per:primaryTitle xml:lang="bo-x-ewts">bya yul blo bzang rnam dag</per:primaryTitle>
-        <root:note rdf:resource="http://purl.bdrc.io/ontology/common#P1331_Note_1"/>
-        <root:status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</root:status>
+        <note rdf:resource="http://purl.bdrc.io/ontology/common#P1331_Note_1"/>
+        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
         <rdfs:label xml:lang="bo-x-ewts">blo gros rnam dag</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.bdrc.io/ontology/person#P1331"/>
         <owl:annotatedProperty rdf:resource="http://purl.bdrc.io/ontology/person#teacherOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.bdrc.io/ontology/person#P1323"/>
-        <root:note rdf:resource="http://purl.bdrc.io/ontology/common#P1331_Note_1"/>
+        <note rdf:resource="http://purl.bdrc.io/ontology/common#P1331_Note_1"/>
     </owl:Axiom>
     
 
@@ -5596,7 +5595,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/place#G844">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/place#Place"/>
-        <root:status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</root:status>
+        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
     </owl:NamedIndividual>
     
 
@@ -5637,7 +5636,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/work#W20115">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/work#Work"/>
-        <root:status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</root:status>
+        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
     </owl:NamedIndividual>
 </rdf:RDF>
 
