@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/root#"
      xml:base="http://purl.bdrc.io/ontology/root#"
-     xmlns:com="http://purl.bdrc.io/ontology/common#"
      xmlns:crp="http://purl.bdrc.io/ontology/corporation#"
      xmlns:prd="http://purl.bdrc.io/ontology/product#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
