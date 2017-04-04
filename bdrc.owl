@@ -699,6 +699,22 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/person#hasMaternalAunt -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasMaternalAunt">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasAunt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/person#hasMaternalUncle -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasMaternalUncle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasUncle"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/person#hasMother -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasMother">
@@ -731,6 +747,22 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/person#hasOlderBrother -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasOlderBrother">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasBrother"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/person#hasOlderSister -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasOlderSister">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSister"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/person#hasParent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasParent">
@@ -743,6 +775,22 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasParentSibling">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#kinWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/person#hasPaternalAunt -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasPaternalAunt">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasAunt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/person#hasPaternalUncle -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasPaternalUncle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasUncle"/>
     </owl:ObjectProperty>
     
 
@@ -817,6 +865,22 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasWife">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSpouse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/person#hasYoungerBrother -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasYoungerBrother">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasBrother"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/person#hasYoungerSister -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasYoungerSister">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSister"/>
     </owl:ObjectProperty>
     
 
@@ -1045,70 +1109,6 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/product#objectProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasMaternalAunt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasMaternalAunt">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasAunt"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasMaternalUncle -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasMaternalUncle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasUncle"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasOlderBrother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasOlderBrother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasBrother"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasOlderSister -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasOlderSister">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSister"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasPaternalAunt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasPaternalAunt">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasAunt"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasPaternalUncle -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasPaternalUncle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasUncle"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasYoungerBrother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasYoungerBrother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasBrother"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#hasYoungerSister -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/root#hasYoungerSister">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSister"/>
     </owl:ObjectProperty>
     
 
