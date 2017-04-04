@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/root#"
-     xml:base="http://purl.bdrc.io/ontology/root#"
+     xml:base="http://purl.bdrc.io/ontology/root"
      xmlns:crp="http://purl.bdrc.io/ontology/corporation#"
      xmlns:prd="http://purl.bdrc.io/ontology/product#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -5489,17 +5489,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/common#P1331_Note_1 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/common#P1331_Note_1">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/root#Note"/>
-        <wrk:work rdf:resource="http://purl.bdrc.io/ontology/work#W20115"/>
-        <note_content xml:lang="en">The source of the information that P1331 was a teacher of P1323</note_content>
-        <note_location xml:lang="en">pg. 354</note_location>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/corporation#UNKNOWN -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/corporation#UNKNOWN">
@@ -5532,69 +5521,10 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/person#P1323 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/person#P1323">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/person#Person"/>
-        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#P1331 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/person#P1331">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/person#Person"/>
-        <per:event rdf:resource="http://purl.bdrc.io/ontology/person#P1331_Event_1"/>
-        <per:hasSeat rdf:resource="http://purl.bdrc.io/ontology/person#P1331_Seat_1"/>
-        <per:teacherOf rdf:resource="http://purl.bdrc.io/ontology/person#P1323"/>
-        <per:gender>male</per:gender>
-        <per:primaryName xml:lang="bo-x-ewts">blo bzang rnam dag</per:primaryName>
-        <per:primaryTitle xml:lang="bo-x-ewts">bya yul blo bzang rnam dag</per:primaryTitle>
-        <note rdf:resource="http://purl.bdrc.io/ontology/common#P1331_Note_1"/>
-        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
-        <rdfs:label xml:lang="bo-x-ewts">blo gros rnam dag</rdfs:label>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.bdrc.io/ontology/person#P1331"/>
-        <owl:annotatedProperty rdf:resource="http://purl.bdrc.io/ontology/person#teacherOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.bdrc.io/ontology/person#P1323"/>
-        <note rdf:resource="http://purl.bdrc.io/ontology/common#P1331_Note_1"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#P1331_Event_1 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/person#P1331_Event_1">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/person#Death"/>
-        <per:event_circa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1322</per:event_circa>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#P1331_Seat_1 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/person#P1331_Seat_1">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/person#Seat"/>
-        <per:seat_place rdf:resource="http://purl.bdrc.io/ontology/place#G844"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/person#UNKNOWN -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/person#UNKNOWN">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/person#Person"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#G844 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/place#G844">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/place#Place"/>
-        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
     </owl:NamedIndividual>
     
 
@@ -5627,15 +5557,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/work#UNKNOWN">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/work#Work"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#W20115 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/work#W20115">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/work#Work"/>
-        <status rdf:datatype="http://purl.bdrc.io/ontology/root#StatusType">released</status>
     </owl:NamedIndividual>
 </rdf:RDF>
 
