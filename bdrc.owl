@@ -43,11 +43,27 @@
     
 
 
+    <!-- http://purl.bdrc.io/ontology/root#inferSubTree -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#inferSubTree">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/root#log_entry -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#log_entry">
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/common#LogEntry"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/root#Resource"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/root#migration_exception -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#migration_exception">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
     
 
@@ -68,22 +84,6 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#status">
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/root#StatusType"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/root#Resource"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#inferSubTree -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#inferSubTree">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/root#migration_exception -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#migration_exception">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
     
 
@@ -2921,7 +2921,7 @@ In any event, when a per:Person is being migrated with info/@type = nonActor the
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/root#Note"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
