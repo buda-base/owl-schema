@@ -809,6 +809,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSibling">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#kinWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
 
@@ -841,6 +842,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSpouse">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#kinWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
 
@@ -917,6 +919,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#kinWith">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#objectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/person#Person"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
