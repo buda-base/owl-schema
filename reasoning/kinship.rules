@@ -1,0 +1,73 @@
+@prefix per: <http://purl.bdrc.io/ontology/person#>.
+
+#
+# Sister / Brother
+#
+
+[obm: (?a per:hasOlderBrother ?b), (?a per:gender 'male') -> (?b per:hasYoungerBrother ?a)]
+[ybm: (?a per:hasYoungerBrother ?b), (?a per:gender 'male') -> (?b per:hasOlderBrother ?a)]
+[bm: (?a per:hasBrother ?b), (?a per:gender 'male') -> (?b per:hasBrother ?a)]
+
+[obf: (?a per:hasOlderBrother ?b), (?a per:gender 'female') -> (?b per:hasYoungerSister ?a)]
+[ybf: (?a per:hasYoungerBrother ?b), (?a per:gender 'female') -> (?b per:hasOlderSister ?a)]
+[bf: (?a per:hasBrother ?b), (?a per:gender 'female') -> (?b per:hasSister ?a)]
+
+[osm: (?a per:hasOlderSister ?b), (?a per:gender 'male') -> (?b per:hasYoungerBrother ?a)]
+[ysm: (?a per:hasYoungerSister ?b), (?a per:gender 'male') -> (?b per:hasOlderBrother ?a)]
+[sm: (?a per:hasSister ?b), (?a per:gender 'male') -> (?b per:hasBrother ?a)]
+
+[osf: (?a per:hasOlderSister ?b), (?a per:gender 'female') -> (?b per:hasYoungerSister ?a)]
+[ysf: (?a per:hasYoungerSister ?b), (?a per:gender 'female') -> (?b per:hasOlderSister ?a)]
+[sf: (?a per:hasSister ?b), (?a per:gender 'female') -> (?b per:hasSister ?a)]
+
+#
+# Child / Parent
+#
+
+[fm:  (?a per:hasFather ?b), (?a per:gender 'male') -> (?b per:hasSon ?a)]
+[ff:  (?a per:hasFather ?b), (?a per:gender 'female') -> (?b per:hasDaughter ?a)]
+[mm:  (?a per:hasMother ?b), (?a per:gender 'male') -> (?b per:hasSon ?a)]
+[mf:  (?a per:hasMother ?b), (?a per:gender 'female') -> (?b per:hasDaughter ?a)]
+
+[sm:  (?a per:hasSon ?b), (?a per:gender 'male') -> (?b per:hasFather ?a)]
+[sf:  (?a per:hasSon ?b), (?a per:gender 'female') -> (?b per:hasMother ?a)]
+[dm:  (?a per:hasDaughter ?b), (?a per:gender 'male') -> (?b per:hasFather ?a)]
+[df:  (?a per:hasDaughter ?b), (?a per:gender 'female') -> (?b per:hasMother ?a)]
+
+#
+# Grandchild / Grandparent
+#
+
+[gfm:  (?a per:hasGrandfather ?b), (?a per:gender 'male') -> (?b per:hasGrandson ?a)]
+[gff:  (?a per:hasGrandfather ?b), (?a per:gender 'female') -> (?b per:hasGranddaughter ?a)]
+[gmm:  (?a per:hasGrandmother ?b), (?a per:gender 'male') -> (?b per:hasGrandson ?a)]
+[gmf:  (?a per:hasGrandmother ?b), (?a per:gender 'female') -> (?b per:hasGranddaughter ?a)]
+
+[gsm:  (?a per:hasGrandson ?b), (?a per:gender 'male') -> (?b per:hasGrandfather ?a)]
+[gsf:  (?a per:hasGrandson ?b), (?a per:gender 'female') -> (?b per:hasGrandmother ?a)]
+[gdm:  (?a per:hasGranddaughter ?b), (?a per:gender 'male') -> (?b per:hasGrandfather ?a)]
+[gdf:  (?a per:hasGranddaughter ?b), (?a per:gender 'female') -> (?b per:hasGrandmother ?a)]
+
+
+#
+# Hunsband / Wife (modern version)
+#
+
+[wm:  (?a per:hasWife ?b), (?a per:gender 'male') -> (?b per:hasHusband ?a)]
+[wf:  (?a per:hasWife ?b), (?a per:gender 'female') -> (?b per:hasWife ?a)]
+[hm:  (?a per:hasHusband ?b), (?a per:gender 'male') -> (?b per:hasHusband ?a)]
+[hf:  (?a per:hasHusband ?b), (?a per:gender 'female') -> (?b per:hasWife ?a)]
+
+#
+# Nibling / Parent sibling
+#
+
+[am:  (?a per:hasAunt ?b), (?a per:gender 'male') -> (?b per:hasNephew ?a)]
+[af:  (?a per:hasAunt ?b), (?a per:gender 'female') -> (?b per:hasNiece ?a)]
+[um:  (?a per:hasUncle ?b), (?a per:gender 'male') -> (?b per:hasNephew ?a)]
+[uf:  (?a per:hasUncle ?b), (?a per:gender 'female') -> (?b per:hasNiece ?a)]
+
+[nem:  (?a per:hasNephew ?b), (?a per:gender 'male') -> (?b per:hasUncle ?a)]
+[nef:  (?a per:hasNephew ?b), (?a per:gender 'female') -> (?b per:hasAunt ?a)]
+[nim:  (?a per:hasNiece ?b), (?a per:gender 'male') -> (?b per:hasUncle ?a)]
+[nif:  (?a per:hasNiece ?b), (?a per:gender 'female') -> (?b per:hasAunt ?a)]
