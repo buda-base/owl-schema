@@ -14,7 +14,7 @@ See [Change log](CHANGELOG.md).
 
 Due to Protege handling only RDF 1.0, the files are in this format. They can be easily converted to RDF 1.1 (handled by Jena 3 among others) with:
 
-```
+```sh
 $ sed 's,http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral,http://www.w3.org/1999/02/22-rdf-syntax-ns#langString,' bdrc.owl > bdrc-rdf11.owl
 ```
 
