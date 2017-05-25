@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50105",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person to a pseudonymous or other identity assumed by a person."
+        ],
+        "fr": [
+            "Met une personne en relation avec un pseudonyme ou une autre identité adoptée par la personne."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο με ένα ψευδώνυμο ή άλλη ψευδή ταυτότητα ενός φυσικού προσώπου."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50105",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/alternateIdentity.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24614.html",
+            "label": "has alternate identity"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50105",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/alternateIdentity.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24894.html",
+            "label": "has alternate identity"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60036",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/alternateIdentity.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14638.html",
+        "label": "has alternate identity"
+    },
+    "instructionNumber": "29.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has alternate identity",
+        "fr": "a pour identité alternative",
+        "el": "έχει εναλλακτική ταυτότητα"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/alternateIdentity.en",
+    "name": {
+        "en": "alternateIdentity",
+        "el": "εναλλακτικήΤαυτότητα"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A pseudonymous or other identity assumed by a person.",
+        "fr": "Pseudonyme ou autre identité adoptée par la personne.",
+        "es": "Un seudónimo u otra identidad asumida por la persona.",
+        "el": "Ένα ψευδώνυμο ή άλλη ψευδή ταυτότητα ενός φυσικού προσώπου."
+    },
+    "ToolkitLabel": {
+        "en": "alternate identity",
+        "fr": "identité alternative",
+        "es": "identidad alternativa",
+        "el": "εναλλακτική ταυτότητα"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13970.html"
+}

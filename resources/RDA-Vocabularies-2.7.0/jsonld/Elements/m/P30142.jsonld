@@ -1,0 +1,66 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/m/P30142",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a manifestation to a word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a manifestation."
+        ],
+        "fr": [
+            "Met une manifestation en relation avec une information reliée et subordonnée au titre propre d’une ressource."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10007",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
+        "label": "manifestation"
+    },
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60493",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherTitleInformation.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15083.html",
+        "label": "has other title information"
+    },
+    "instructionNumber": "2.3.4",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/m/",
+        "url": "http://metadataregistry.org/schema/show/id/79.html",
+        "label": "RDA Manifestation properties"
+    },
+    "label": {
+        "en": "has other title information",
+        "fr": "a pour complément du titre",
+        "sv": "har övrig titelinformation"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/m/otherTitleInformation.en",
+    "name": {
+        "en": "otherTitleInformation"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/P30134",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/title.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14523.html",
+            "label": "has title"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a manifestation.",
+        "fr": "Information reliée et subordonnée au titre propre d’une ressource.",
+        "es": "Información que aparece en conjunción con el título, y está subordinada al título propiamente dicho de un recurso."
+    },
+    "ToolkitLabel": {
+        "en": "other title information",
+        "fr": "complément du titre",
+        "es": "información complementaria del título",
+        "sv": "övrig titelinformation"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14531.html"
+}

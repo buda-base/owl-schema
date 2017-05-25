@@ -1,0 +1,89 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50162",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent currently having legal possession of an item to an item."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité possédant légalement un item en relation avec l’item."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που επί του παρόντος έχει τη νόμιμη κατοχή ενός αντιτύπου, με ένα αντίτυπο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50047",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/depositorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13912.html",
+            "label": "is depositor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50162",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/currentOwnerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24657.html",
+            "label": "is current owner of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50162",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/currentOwnerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24951.html",
+            "label": "is current owner of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60628",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/currentOwnerOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15218.html",
+        "label": "is current owner of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is current owner of",
+        "fr": "est le propriétaire actuel de",
+        "el": "είναι τρέχων ιδιοκτήτης του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/currentOwnerOf.en",
+    "name": {
+        "en": "currentOwnerOf",
+        "el": "τρέχωνΙδιοκτήτηςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50165",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/ownerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14030.html",
+            "label": "is owner of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité possédant légalement un item.",
+        "en": "An item currently in the legal possession of an agent.",
+        "el": "Ένα αντίτυπο που επί του παρόντος βρίσκεται υπό τη νόμιμη κατοχή ενός φορέα."
+    },
+    "ToolkitLabel": {
+        "fr": "propriétaire actuel de",
+        "en": "current owner of",
+        "el": "τρέχων ιδιοκτήτης του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14027.html"
+}

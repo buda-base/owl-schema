@@ -1,0 +1,447 @@
+{
+  "http://rdaregistry.info/termList/configPlayback/1004": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of more than four channels for surround sound."
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "surround"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Surround"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "sonido global"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "surround"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "ambiophonique"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "surround"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/877"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/configPlayback"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Surround"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "sonido global"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "surround"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "ambiophonique"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "surround"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "surround"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of more than four channels for surround sound."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/configPlayback/1001": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of a single channel for monophonic sound."
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Mono"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "mono"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/874"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/configPlayback"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Mono"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "mono"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "mono"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of a single channel for monophonic sound."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/configPlayback/1002": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of two channels for stereophonic sound."
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "stereo"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "stereo"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Stereo"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "stéréo"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "estéreo"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "stereo"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/875"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/configPlayback"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "stereo"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Stereo"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "stereo"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "stéréo"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "estéreo"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "stereo"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of two channels for stereophonic sound."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/configPlayback/1003": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of four channels for quadraphonic sound."
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "quadriphonique"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "quadrifonico"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "kvadrofoninen"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "quadraphonic"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "cuadrafónico"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Quadro"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/876"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/configPlayback"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Quadro"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "quadrifonico"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "quadraphonic"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "cuadrafónico"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "kvadrofoninen"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "quadriphonique"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A configuration of playback channels consisting of four channels for quadraphonic sound."
+      }
+    ]
+  }, 
+  "http://metadataregistry.org/uri/RegStatus/1001": {
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "Published"
+      }
+    ], 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/configPlayback": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+      }
+    ], 
+    "http://purl.org/dc/elements/1.1/title": [
+      {
+        "type": "literal", 
+        "value": "RDA Configuration of Playback Channels"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50236",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a corporate body to a date or range of dates indicative of the period in which a corporate body was active."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με μια χρονολογία ή εύρος χρονολογιών ενδεικτικών της περιόδου κατά την οποία ήταν ενεργό ένα συλλογικό όργανο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10005",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
+        "label": "corporate body"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50236",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/periodOfActivityOfCorporateBody.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25025.html",
+            "label": "has period of activity of corporate body"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60076",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/periodOfActivityOfAgent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14672.html",
+        "label": "has period of activity of agent"
+    },
+    "instructionNumber": "11.4.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has period of activity of corporate body",
+        "sv": "har verksamhetstid för institutionen",
+        "el": "έχει περίοδο της δραστηριοποίησης του συλλογικού οργάνου"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/periodOfActivityOfCorporateBody.en",
+    "name": {
+        "en": "periodOfActivityOfCorporateBody",
+        "el": "περίοδοςΤηςΔραστηριοποίησηςΤουΣυλλογικούΟργάνου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50040",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/dateAssociatedWithCorporateBody.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13905.html",
+            "label": "has date associated with corporate body"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A date or range of dates indicative of the period in which a corporate body was active.",
+        "es": "Una fecha o rango de fechas que indican el período en el que la entidad corporativa estaba activa.",
+        "el": "Μια χρονολογία ή εύρος χρονολογιών ενδεικτικών της περιόδου κατά την οποία ένα συλλογικό όργανο έδρασε/ήταν ενεργό."
+    },
+    "ToolkitLabel": {
+        "en": "period of activity of corporate body",
+        "es": "período de actividad de la entidad corporativa",
+        "sv": "verksamhetstid för institutionen",
+        "el": "περίοδος της δραστηριοποίησης του συλλογικού οργάνου"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15668.html"
+}

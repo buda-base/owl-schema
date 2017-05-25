@@ -1,0 +1,58 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/m/P30146",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a manifestation to a limitation placed on reproduction, publication, exhibition, etc., of a manifestation."
+        ],
+        "fr": [
+            "Met une manifestation en relation avec des limitations imposées sur des usages tels que la reproduction, la publication, l’exposition, etc."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10007",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
+        "label": "manifestation"
+    },
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60497",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/restrictionsOnUse.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15087.html",
+        "label": "has restrictions on use"
+    },
+    "instructionNumber": "4.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/m/",
+        "url": "http://metadataregistry.org/schema/show/id/79.html",
+        "label": "RDA Manifestation properties"
+    },
+    "label": {
+        "en": "has restriction on use of manifestation",
+        "fr": "a pour restrictions d’usage",
+        "sv": "har användningsrestriktioner"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/m/restrictionOnUseOfManifestation.en",
+    "name": {
+        "en": "restrictionOnUseOfManifestation"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A limitation placed on reproduction, publication, exhibition, etc., of a manifestation.",
+        "fr": "Limitations imposées sur des usages tels que la reproduction, la publication, l’exposition, etc.",
+        "es": "Limitaciones establecidas sobre los usos, tales como reproducción, publicación, exhibición, etc."
+    },
+    "ToolkitLabel": {
+        "en": "restriction on use of manifestation",
+        "fr": "restrictions d’usage",
+        "es": "restricciones sobre el uso",
+        "sv": "användningsrestriktioner"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14535.html"
+}

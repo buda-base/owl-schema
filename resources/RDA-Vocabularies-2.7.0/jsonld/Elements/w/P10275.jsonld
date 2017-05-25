@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10275",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a manifestation used as a basis for a critical evaluation."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10275",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/critiqueOfManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24166.html",
+            "label": "is critique of (manifestation)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60292",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/critiqueOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14888.html",
+        "label": "is critique of"
+    },
+    "instructionNumber": "23.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "is critique of (manifestation)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/critiqueOfManifestation.en",
+    "name": {
+        "en": "critiqueOfManifestation"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10271",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/descriptionOfManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/16209.html",
+            "label": "is description of (manifestation)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A manifestation used as a basis for a critical evaluation.",
+        "fr": "Manifestation servant de base à une évaluation critique.",
+        "es": "Una manifestación usada como base para una evaluación crítica."
+    },
+    "ToolkitLabel": {
+        "en": "critique of (manifestation)",
+        "fr": "critique de (manifestation)",
+        "es": "crítica de (manifestación)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16213.html"
+}

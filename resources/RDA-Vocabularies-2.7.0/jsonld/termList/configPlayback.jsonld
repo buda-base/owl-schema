@@ -1,0 +1,250 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
+        {
+            "@id": "http://rdaregistry.info/termList/configPlayback",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA Configuration of Playback Channels"
+            },
+            "description": {
+                "en": "A number of sound channels used to make a recording. "
+            },
+            "token": "configPlayback",
+            "prefix": "rdacpc",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/82",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/82.html",
+            "documentation": "",
+            "tags": {
+                "en": [
+                    "Libraries",
+                    "Information Services"
+                ]
+            },
+            "count": 4,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": "WIP"
+                },
+                {
+                    "code": "ca",
+                    "lang": "Catalan",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": "WIP"
+                },
+                {
+                    "code": "da",
+                    "lang": "Danish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": "WIP"
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fi",
+                    "lang": "Finnish",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": ""
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "el",
+                    "lang": "Greek",
+                    "version": "WIP"
+                },
+                {
+                    "code": "he",
+                    "lang": "Hebrew",
+                    "version": "WIP"
+                },
+                {
+                    "code": "it",
+                    "lang": "Italian",
+                    "version": ""
+                },
+                {
+                    "code": "no",
+                    "lang": "Norwegian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "pl",
+                    "lang": "Polish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "pt",
+                    "lang": "Portuguese",
+                    "version": "WIP"
+                },
+                {
+                    "code": "sk",
+                    "lang": "Slovak",
+                    "version": "WIP"
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "uk",
+                    "lang": "Ukrainian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "vi",
+                    "lang": "Vietnamese",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/configPlayback/1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/874",
+            "inScheme": "http://rdaregistry.info/termList/configPlayback",
+            "status": "Published",
+            "prefLabel": {
+                "en": "mono",
+                "it": "mono",
+                "de": "Mono",
+                "fr": "mono",
+                "es": "mono",
+                "fi": "mono"
+            },
+            "ToolkitLabel": {
+                "en": "mono",
+                "it": "mono",
+                "de": "Mono",
+                "fr": "mono",
+                "es": "mono",
+                "fi": "mono"
+            },
+            "definition": {
+                "en": "A configuration of playback channels consisting of a single channel for monophonic sound."
+            },
+            "ToolkitDefinition": {
+                "en": "A configuration of playback channels consisting of a single channel for monophonic sound."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/configPlayback/1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/876",
+            "inScheme": "http://rdaregistry.info/termList/configPlayback",
+            "status": "Published",
+            "prefLabel": {
+                "en": "quadraphonic",
+                "it": "quadrifonico",
+                "de": "Quadro",
+                "fr": "quadriphonique",
+                "es": "cuadrafónico",
+                "fi": "kvadrofoninen"
+            },
+            "ToolkitLabel": {
+                "en": "quadraphonic",
+                "it": "quadrifonico",
+                "de": "Quadro",
+                "fr": "quadriphonique",
+                "es": "cuadrafónico",
+                "fi": "kvadrofoninen"
+            },
+            "definition": {
+                "en": "A configuration of playback channels consisting of four channels for quadraphonic sound."
+            },
+            "ToolkitDefinition": {
+                "en": "A configuration of playback channels consisting of four channels for quadraphonic sound."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/configPlayback/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/875",
+            "inScheme": "http://rdaregistry.info/termList/configPlayback",
+            "status": "Published",
+            "prefLabel": {
+                "en": "stereo",
+                "it": "stereo",
+                "de": "Stereo",
+                "fr": "stéréo",
+                "es": "estéreo",
+                "fi": "stereo"
+            },
+            "ToolkitLabel": {
+                "en": "stereo",
+                "it": "stereo",
+                "de": "Stereo",
+                "fr": "stéréo",
+                "es": "estéreo",
+                "fi": "stereo"
+            },
+            "definition": {
+                "en": "A configuration of playback channels consisting of two channels for stereophonic sound."
+            },
+            "ToolkitDefinition": {
+                "en": "A configuration of playback channels consisting of two channels for stereophonic sound."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/configPlayback/1004",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/877",
+            "inScheme": "http://rdaregistry.info/termList/configPlayback",
+            "status": "Published",
+            "prefLabel": {
+                "en": "surround",
+                "it": "surround",
+                "de": "Surround",
+                "fr": "ambiophonique",
+                "es": "sonido global",
+                "fi": "surround"
+            },
+            "ToolkitLabel": {
+                "en": "surround",
+                "it": "surround",
+                "de": "Surround",
+                "fr": "ambiophonique",
+                "es": "sonido global",
+                "fi": "surround"
+            },
+            "definition": {
+                "en": "A configuration of playback channels consisting of more than four channels for surround sound."
+            },
+            "ToolkitDefinition": {
+                "en": "A configuration of playback channels consisting of more than four channels for surround sound."
+            }
+        }
+    ]
+}

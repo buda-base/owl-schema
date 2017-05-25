@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10276",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a manifestation used as a basis for a set of explanatory or critical notes."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10276",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/commentaryOnManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24167.html",
+            "label": "is commentary on (manifestation)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60298",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/commentaryOn.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14894.html",
+        "label": "is commentary on"
+    },
+    "instructionNumber": "23.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "is commentary on (manifestation)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/commentaryOnManifestation.en",
+    "name": {
+        "en": "commentaryOnManifestation"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10271",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/descriptionOfManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/16209.html",
+            "label": "is description of (manifestation)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A manifestation used as a basis for a set of explanatory or critical notes.",
+        "fr": "Manifestation servant de base à un ensemble de notes explicatives ou critiques.",
+        "es": "Una manifestación usada como base para un conjunto de notas explicativas o críticas."
+    },
+    "ToolkitLabel": {
+        "en": "commentary on (manifestation)",
+        "fr": "commentaire sur (manifestation)",
+        "es": "comentario sobre (manifestación)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16214.html"
+}

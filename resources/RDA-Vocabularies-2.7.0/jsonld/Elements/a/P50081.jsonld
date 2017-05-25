@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50081",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a performer contributing to an expression of a work by reading aloud or giving an account of an act, occurrence, course of events, etc. to an expression."
+        ],
+        "fr": [
+            "Met un interprète contribuant à une expression d’une œuvre en lisant à voix haute ou en rendant compte d’une action, d’une situation, du déroulement des événements, etc. en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέει έναν εκτελεστή, που συνεισφέρει σε μια έκφραση ενός έργου μέσω της ηχηρής ανάγνωσης ή της αναφοράς μιας ενέργειας, ενός περιστατικού, μιας αλληλουχίας γεγονότων κ.λπ., με μια έκφραση.."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50081",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/narratorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24599.html",
+            "label": "is narrator of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50081",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/narratorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24870.html",
+            "label": "is narrator of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60028",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/narratorOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14630.html",
+        "label": "is narrator of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is narrator of",
+        "fr": "est le narrateur de",
+        "el": "είναι αφηγητής του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/narratorOf.en",
+    "name": {
+        "en": "narratorOf",
+        "el": "αφηγητήςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50147",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/performerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14012.html",
+            "label": "is performer of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Interprète contribuant à une expression d’une œuvre en lisant à voix haute ou en rendant compte d’une action, d’une situation, du déroulement des événements, etc.",
+        "en": "An expression of a work that incorporates a performance of reading aloud or giving an account of an act, occurrence, course of events, etc.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της ανάγνωσης ή της αφήγησης για να  διηγηθεί ένα γεγονός, μία πράξη, μία σειρά συμβάντων κ.λπ."
+    },
+    "ToolkitLabel": {
+        "fr": "narrateur de",
+        "en": "narrator of",
+        "el": "αφηγητής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13946.html"
+}

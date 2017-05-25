@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50257",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person serving on a committee that supervises a student's thesis or dissertation to a work."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο που συνιστά μέλος επιτροπής εποπτείας διδακτορικής διατριβής, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50257",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/degreeCommitteeMemberOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24747.html",
+            "label": "is degree committee member of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50257",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/degreeCommitteeMemberOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25046.html",
+            "label": "is degree committee member of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60816",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/degreeCommitteeMemberOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/16239.html",
+        "label": "is degree committee member of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is degree committee member of",
+        "el": "είναι μέλος συμβουλευτικής επιτροπής του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/degreeCommitteeMemberOf.en",
+    "name": {
+        "en": "degreeCommitteeMemberOf",
+        "el": "μέλοςΣυμβουλευτικήςΕπιτροπήςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50131",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
+            "label": "is other agent associated with work of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A work that involves a responsibility for serving on a committee that supervises a student's thesis or dissertation.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη ενός μέλους επιτροπής που επιβλέπει μια διδακτορική διατριβή ενός έργου."
+    },
+    "ToolkitLabel": {
+        "en": "degree committee member of",
+        "el": "μέλος συμβουλευτικής επιτροπής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16097.html"
+}

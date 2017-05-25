@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50106",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person to a real person who assumes an alternate identity."
+        ],
+        "fr": [
+            "Met une personne en relation avec une personne réelle qui adopte l’identité alternative."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο με ένα πραγματικό φυσικό πρόσωπο με εναλλακτική ταυτότητα."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50106",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/realIdentity.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24615.html",
+            "label": "has real identity"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50106",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/realIdentity.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24895.html",
+            "label": "has real identity"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60037",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/realIdentity.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14639.html",
+        "label": "has real identity"
+    },
+    "instructionNumber": "29.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has real identity",
+        "fr": "a pour identité réelle",
+        "el": "έχει πραγματική ταυτότητα"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/realIdentity.en",
+    "name": {
+        "en": "realIdentity",
+        "el": "πραγματικήΤαυτότητα"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A real person who assumes an alternate identity.",
+        "fr": "Personne réelle qui adopte l’identité alternative.",
+        "es": "Una persona real que asume la identidad alternativa.",
+        "el": "Ένα πραγματικό φυσικό πρόσωπο με εναλλακτική ταυτότητα."
+    },
+    "ToolkitLabel": {
+        "en": "real identity",
+        "fr": "identité réelle",
+        "es": "identidad real",
+        "el": "πραγματική ταυτότητα"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13971.html"
+}

@@ -1,0 +1,74 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://metadataregistry.org/uri/RegStatus/1001>
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
+
+<http://rdaregistry.info/termList/fileType>
+    dc:title "RDA File Type" ;
+    a skos:ConceptScheme .
+
+<http://rdaregistry.info/termList/fileType/1001>
+    rdakit:toolkitDefinition "A file type for storing electronically recorded audio content."@en ;
+    rdakit:toolkitLabel "Audiodatei"@de, "archivo sonoro"@es, "audio file"@en, "fichier audio"@fr, "file audio"@it, "äänitiedosto"@fi ;
+    reg:identifier <http://metadataregistry.org/concepts/1116> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A file type for storing electronically recorded audio content."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/fileType> ;
+    skos:prefLabel "Audiodatei"@de, "archivo sonoro"@es, "audio file"@en, "fichier audio"@fr, "file audio"@it, "äänitiedosto"@fi .
+
+<http://rdaregistry.info/termList/fileType/1002>
+    rdakit:toolkitDefinition "A file type for storing electronically recorded textual content."@en ;
+    rdakit:toolkitLabel "Textdatei"@de, "archivo de texto"@es, "fichier texte"@fr, "file di testo"@it, "tekstitiedosto"@fi, "text file"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/1117> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A file type for storing electronically recorded textual content."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/fileType> ;
+    skos:prefLabel "Textdatei"@de, "archivo de texto"@es, "fichier texte"@fr, "file di testo"@it, "tekstitiedosto"@fi, "text file"@en .
+
+<http://rdaregistry.info/termList/fileType/1003>
+    rdakit:toolkitDefinition "A file type for storing electronically recorded programs consisting of organized lists of instructions to be executed by computer software."@en ;
+    rdakit:toolkitLabel "Programmdatei"@de, "archivo de programa"@es, "fichier de programme"@fr, "file di programma"@it, "ohjelmatiedosto"@fi, "program file"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/1118> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A file type for storing electronically recorded programs consisting of organized lists of instructions to be executed by computer software."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/fileType> ;
+    skos:prefLabel "Programmdatei"@de, "archivo de programa"@es, "fichier de programme"@fr, "file di programma"@it, "ohjelmatiedosto"@fi, "program file"@en .
+
+<http://rdaregistry.info/termList/fileType/1004>
+    rdakit:toolkitDefinition "A file type for storing electronically recorded content representing still images."@en ;
+    rdakit:toolkitLabel "Bilddatei"@de, "archivo de imagen"@es, "fichier image"@fr, "file di immagini"@it, "image file"@en, "kuvatiedosto"@fi ;
+    reg:identifier <http://metadataregistry.org/concepts/1119> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A file type for storing electronically recorded content representing still images."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/fileType> ;
+    skos:prefLabel "Bilddatei"@de, "archivo de imagen"@es, "fichier image"@fr, "file di immagini"@it, "image file"@en, "kuvatiedosto"@fi .
+
+<http://rdaregistry.info/termList/fileType/1005>
+    rdakit:toolkitDefinition "A file type for storing electronically recorded content representing data values."@en ;
+    rdakit:toolkitLabel "Datendatei"@de, "archivo de datos"@es, "data file"@en, "datatiedosto"@fi, "fichier de données"@fr, "file di dati"@it ;
+    reg:identifier <http://metadataregistry.org/concepts/1120> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A file type for storing electronically recorded content representing data values."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/fileType> ;
+    skos:prefLabel "Datendatei"@de, "archivo de datos"@es, "data file"@en, "datatiedosto"@fi, "fichier de données"@fr, "file di dati"@it .
+
+<http://rdaregistry.info/termList/fileType/1006>
+    rdakit:toolkitDefinition "A file type for storing electronically recorded content representing moving images."@en ;
+    rdakit:toolkitLabel "Videodatei"@de, "archivo de video"@es, "fichier vidéo"@fr, "file video"@it, "video file"@en, "videotiedosto"@fi ;
+    reg:identifier <http://metadataregistry.org/concepts/1121> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A file type for storing electronically recorded content representing moving images."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/fileType> ;
+    skos:prefLabel "Videodatei"@de, "archivo de video"@es, "fichier vidéo"@fr, "file video"@it, "video file"@en, "videotiedosto"@fi .
+

@@ -1,0 +1,50 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/c/C10010",
+    "@type": "Class",
+    "description": {
+        "en": [
+            "A temporal extent having a beginning, an end and a duration."
+        ],
+        "el": [
+            "Μια χρονική έκταση με αρχή, τέλος και διάρκεια."
+        ]
+    },
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/c/",
+        "url": "http://metadataregistry.org/schema/show/id/83.html",
+        "label": "RDA Classes"
+    },
+    "label": {
+        "en": "time-span",
+        "el": "χρονικό διάστημα"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/c/Timespan.en",
+    "name": {
+        "en": "Timespan",
+        "el": "ΧρονικόΔιάστημα"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subClassOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/c/C10013",
+            "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25154.html",
+            "label": "RDA entity"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A temporal extent having a beginning, an end and a duration.",
+        "el": "Μια χρονική έκταση με αρχή, τέλος και διάρκεια."
+    },
+    "ToolkitLabel": {
+        "en": "time-span",
+        "el": "χρονικό διάστημα"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/25151.html"
+}

@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50259",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person who is accused in a criminal proceeding or sued in a civil proceeding to a work."
+        ],
+        "fr": [
+            "Met une personne qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, το οποίο ασκεί αγωγή στο πλαίσιο αστικής διαδικασίας, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50259",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/defendantPersonOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24749.html",
+            "label": "is defendant person of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50259",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/defendantPersonOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25048.html",
+            "label": "is defendant person of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60698",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/defendantOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15287.html",
+        "label": "is defendant of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is defendant person of",
+        "fr": "est la personne défenderesse de",
+        "el": "είναι εναγόμενο φυσικό πρόσωπο του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/defendantPersonOf.en",
+    "name": {
+        "en": "defendantPersonOf",
+        "el": "εναγόμενοΦυσικόΠρόσωποΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50090",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/defendantOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13955.html",
+            "label": "is defendant of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée.",
+        "en": "A work that involves a responsibility for being a person accused in a criminal proceeding or sued in a civil proceeding.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για ένα φυσικό πρόσωπο, εναντίον του οποίου ασκείται αγωγή στο πλαίσιο αστικής διαδικασίας."
+    },
+    "ToolkitLabel": {
+        "fr": "personne défenderesse de",
+        "en": "defendant person of",
+        "el": "εναγόμενο φυσικό πρόσωπο του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16099.html"
+}

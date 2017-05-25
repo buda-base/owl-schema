@@ -1,0 +1,71 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10258",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to an expression that a work is about."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10277",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/descriptionOfExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/16215.html",
+            "label": "is description of (expression)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/datatype/P10258",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/subjectExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23875.html",
+            "label": "has subject (expression)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60805",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/subject.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/16303.html",
+        "label": "has subject"
+    },
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has subject (expression)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/subjectExpression.en",
+    "name": {
+        "en": "subjectExpression"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10256",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/subjectRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/16194.html",
+            "label": "has subject relationship"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An expression that a work is about.",
+        "es": "Una expresión sobre la que trata la obra."
+    },
+    "ToolkitLabel": {
+        "en": "subject (expression)",
+        "es": "materia (expresión)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16196.html"
+}

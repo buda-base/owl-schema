@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50174",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent involved in manufacturing a manifestation by pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold to a manifestation."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité prenant part à la fabrication d’une manifestation en versant un liquide ou une substance fondue dans un moule et en laissant ce liquide ou cette substance se solidifier pour prendre la forme du moule en relation avec la manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που εμπλέκεται στην κατασκευή μιας εκδήλωσης μέσω της έκχυσης υγρής ή τηγμένης ουσίας και αφήνοντάς την να στερεοποιηθεί για να πάρει το σχήμα του καλουπιού, με μια εκδήλωση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50174",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/casterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24669.html",
+            "label": "is caster of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50174",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/casterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24963.html",
+            "label": "is caster of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60641",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/casterOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15231.html",
+        "label": "is caster of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is caster of",
+        "fr": "est le fondeur de",
+        "el": "είναι χύτευση του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/casterOf.en",
+    "name": {
+        "en": "casterOf",
+        "el": "χύτευσηΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50202",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/manufacturerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14067.html",
+            "label": "is manufacturer of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité prenant part à la fabrication d’une manifestation en versant un liquide ou une substance fondue dans un moule et en laissant ce liquide ou cette substance se solidifier pour prendre la forme du moule.",
+        "en": "A manifestation manufactured by an agent responsible for pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold.",
+        "el": "Μια εκδήλωση που κατασκευάζεται από έναν φορέα υπεύθυνο για την έκχυση υγρής ή τηγμένης ουσίας και τη στερεοποίησή της μέχρι να πάρει το σχήμα του καλουπιού."
+    },
+    "ToolkitLabel": {
+        "fr": "fondeur de",
+        "en": "caster of",
+        "el": "χύτευση του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14039.html"
+}

@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10067",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to an agent sponsoring some aspect of a work, such as funding research or sponsoring an event."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10067",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/sponsoringBody.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23982.html",
+            "label": "has sponsoring body"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60451",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/sponsoringBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15042.html",
+        "label": "has sponsoring body"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has sponsoring body"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/sponsoringBody.en",
+    "name": {
+        "en": "sponsoringBody"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10047",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherAgentWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15350.html",
+            "label": "has other agent associated with work"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An agent sponsoring some aspect of a work, such as funding research or sponsoring an event.",
+        "fr": "Personne, famille ou collectivité commanditant certains aspects d’une œuvre, par exemple, le financement de la recherche, le parrainage d’un événement.",
+        "es": "Una persona, familia o entidad corporativa que patrocina algún aspecto de una obra, por ej., financiando una investigación, patrocinando un evento."
+    },
+    "ToolkitLabel": {
+        "en": "sponsoring body",
+        "fr": "commanditaire",
+        "es": "entidad patrocinadora"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15370.html"
+}

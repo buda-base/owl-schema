@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<rdf:RDF
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdakit="http://metadataregistry.org/uri/profile/rdakit/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Scheme: RDA Configuration of Playback Channels -->
+    <skos:ConceptScheme rdf:about="http://rdaregistry.info/termList/configPlayback">
+        <dc:title>RDA Configuration of Playback Channels</dc:title>
+    </skos:ConceptScheme>
+
+<!-- Concept: mono  -->
+    <skos:Concept rdf:about="http://rdaregistry.info/termList/configPlayback/1001" xml:lang="en">
+      <skos:inScheme rdf:resource="http://rdaregistry.info/termList/configPlayback"/>
+      <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+      <reg:identifier rdf:resource="http://metadataregistry.org/concepts/874"/>
+      <skos:prefLabel xml:lang="en">mono</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="en">mono</rdakit:toolkitLabel>
+      <skos:definition xml:lang="en">A configuration of playback channels consisting of a single channel for monophonic sound.</skos:definition>
+      <rdakit:toolkitDefinition xml:lang="en">A configuration of playback channels consisting of a single channel for monophonic sound.</rdakit:toolkitDefinition>
+      <skos:prefLabel xml:lang="it">mono</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="it">mono</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="de">Mono</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="de">Mono</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fr">mono</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fr">mono</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="es">mono</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="es">mono</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fi">mono</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fi">mono</rdakit:toolkitLabel>
+    </skos:Concept>
+<!-- Concept: quadraphonic  -->
+    <skos:Concept rdf:about="http://rdaregistry.info/termList/configPlayback/1003" xml:lang="en">
+      <skos:inScheme rdf:resource="http://rdaregistry.info/termList/configPlayback"/>
+      <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+      <reg:identifier rdf:resource="http://metadataregistry.org/concepts/876"/>
+      <skos:prefLabel xml:lang="en">quadraphonic</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="en">quadraphonic</rdakit:toolkitLabel>
+      <skos:definition xml:lang="en">A configuration of playback channels consisting of four channels for quadraphonic sound.</skos:definition>
+      <rdakit:toolkitDefinition xml:lang="en">A configuration of playback channels consisting of four channels for quadraphonic sound.</rdakit:toolkitDefinition>
+      <skos:prefLabel xml:lang="it">quadrifonico</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="it">quadrifonico</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="de">Quadro</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="de">Quadro</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fr">quadriphonique</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fr">quadriphonique</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="es">cuadrafónico</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="es">cuadrafónico</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fi">kvadrofoninen</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fi">kvadrofoninen</rdakit:toolkitLabel>
+    </skos:Concept>
+<!-- Concept: stereo  -->
+    <skos:Concept rdf:about="http://rdaregistry.info/termList/configPlayback/1002" xml:lang="en">
+      <skos:inScheme rdf:resource="http://rdaregistry.info/termList/configPlayback"/>
+      <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+      <reg:identifier rdf:resource="http://metadataregistry.org/concepts/875"/>
+      <skos:prefLabel xml:lang="en">stereo</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="en">stereo</rdakit:toolkitLabel>
+      <skos:definition xml:lang="en">A configuration of playback channels consisting of two channels for stereophonic sound.</skos:definition>
+      <rdakit:toolkitDefinition xml:lang="en">A configuration of playback channels consisting of two channels for stereophonic sound.</rdakit:toolkitDefinition>
+      <skos:prefLabel xml:lang="it">stereo</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="it">stereo</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="de">Stereo</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="de">Stereo</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fr">stéréo</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fr">stéréo</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="es">estéreo</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="es">estéreo</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fi">stereo</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fi">stereo</rdakit:toolkitLabel>
+    </skos:Concept>
+<!-- Concept: surround  -->
+    <skos:Concept rdf:about="http://rdaregistry.info/termList/configPlayback/1004" xml:lang="en">
+      <skos:inScheme rdf:resource="http://rdaregistry.info/termList/configPlayback"/>
+      <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+      <reg:identifier rdf:resource="http://metadataregistry.org/concepts/877"/>
+      <skos:prefLabel xml:lang="en">surround</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="en">surround</rdakit:toolkitLabel>
+      <skos:definition xml:lang="en">A configuration of playback channels consisting of more than four channels for surround sound.</skos:definition>
+      <rdakit:toolkitDefinition xml:lang="en">A configuration of playback channels consisting of more than four channels for surround sound.</rdakit:toolkitDefinition>
+      <skos:prefLabel xml:lang="it">surround</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="it">surround</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="de">Surround</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="de">Surround</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fr">ambiophonique</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fr">ambiophonique</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="es">sonido global</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="es">sonido global</rdakit:toolkitLabel>
+      <skos:prefLabel xml:lang="fi">surround</skos:prefLabel>
+      <rdakit:toolkitLabel xml:lang="fi">surround</rdakit:toolkitLabel>
+    </skos:Concept>
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+
+</rdf:RDF>

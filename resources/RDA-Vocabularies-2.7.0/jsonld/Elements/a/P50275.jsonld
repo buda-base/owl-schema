@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50275",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person to a colleague who helps another person."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο με έναν συνάδελφο ο οποίος παρέχει βοήθεια σε ένα άλλο φυσικό πρόσωπο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50275",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/assistant.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24764.html",
+            "label": "has assistant"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50275",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/assistant.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25064.html",
+            "label": "has assistant"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60857",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/assistant.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/22841.html",
+        "label": "has assistant"
+    },
+    "instructionNumber": "29.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has assistant",
+        "el": "έχει βοηθό"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/assistant.en",
+    "name": {
+        "en": "assistant",
+        "el": "βοηθός"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50274",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/colleague.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/22855.html",
+            "label": "has colleague"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A colleague who helps another person.",
+        "el": "Ένας συνάδελφος που παρέχει βοήθεια σε ένα άλλο φυσικό πρόσωπο."
+    },
+    "ToolkitLabel": {
+        "en": "assistant",
+        "el": "βοηθός"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/22856.html"
+}

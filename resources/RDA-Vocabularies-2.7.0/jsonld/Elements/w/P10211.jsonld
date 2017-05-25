@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10211",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a work resulting from division of an earlier work into two or more separate works."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10211",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/splitIntoWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24114.html",
+            "label": "is split into (work)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60503",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/splitInto.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15093.html",
+        "label": "is split into"
+    },
+    "instructionNumber": "24.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "is split into (work)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/splitIntoWork.en",
+    "name": {
+        "en": "splitIntoWork"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10170",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/succeededByWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15473.html",
+            "label": "is succeeded by (work)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A work resulting from division of an earlier work into two or more separate works.",
+        "fr": "L’une de deux ou plusieurs œuvres résultant de la division d’une œuvre antérieure en œuvres séparées.",
+        "es": "Una de dos o más obras que resultan de la división de una obra anterior en obras separadas."
+    },
+    "ToolkitLabel": {
+        "en": "split into (work)",
+        "fr": "scindé en (œuvre)",
+        "es": "escindida en (obra)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15514.html"
+}

@@ -1,0 +1,655 @@
+{
+  "http://rdaregistry.info/termList/fileType": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+      }
+    ], 
+    "http://purl.org/dc/elements/1.1/title": [
+      {
+        "type": "literal", 
+        "value": "RDA File Type"
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/fileType/1006": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded content representing moving images."
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier vidéo"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de video"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "video file"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file video"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Videodatei"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "videotiedosto"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/1121"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/fileType"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Videodatei"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "video file"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de video"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier vidéo"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "videotiedosto"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file video"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded content representing moving images."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/fileType/1005": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded content representing data values."
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Datendatei"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "data file"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier de données"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de datos"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di dati"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "datatiedosto"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/1120"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/fileType"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "data file"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Datendatei"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier de données"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di dati"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de datos"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "datatiedosto"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded content representing data values."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/fileType/1004": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded content representing still images."
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Bilddatei"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di immagini"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier image"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "image file"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "kuvatiedosto"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de imagen"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/1119"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/fileType"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de imagen"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Bilddatei"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier image"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "image file"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di immagini"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "kuvatiedosto"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded content representing still images."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/fileType/1003": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded programs consisting of organized lists of instructions to be executed by computer software."
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier de programme"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de programa"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di programma"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "ohjelmatiedosto"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "program file"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Programmdatei"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/1118"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/fileType"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di programma"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de programa"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Programmdatei"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "program file"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "ohjelmatiedosto"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier de programme"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded programs consisting of organized lists of instructions to be executed by computer software."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/fileType/1002": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded textual content."
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier texte"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Textdatei"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de texto"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "text file"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "tekstitiedosto"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di testo"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/1117"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/fileType"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Textdatei"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier texte"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo de texto"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "tekstitiedosto"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "text file"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file di testo"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded textual content."
+      }
+    ]
+  }, 
+  "http://rdaregistry.info/termList/fileType/1001": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded audio content."
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/rdakit/toolkitLabel": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "audio file"
+      }, 
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier audio"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Audiodatei"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo sonoro"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "äänitiedosto"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file audio"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/identifier": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/concepts/1116"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "type": "uri", 
+        "value": "http://rdaregistry.info/termList/fileType"
+      }
+    ], 
+    "http://metadataregistry.org/uri/profile/regap/status": [
+      {
+        "type": "uri", 
+        "value": "http://metadataregistry.org/uri/RegStatus/1001"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "fr", 
+        "type": "literal", 
+        "value": "fichier audio"
+      }, 
+      {
+        "lang": "es", 
+        "type": "literal", 
+        "value": "archivo sonoro"
+      }, 
+      {
+        "lang": "fi", 
+        "type": "literal", 
+        "value": "äänitiedosto"
+      }, 
+      {
+        "lang": "it", 
+        "type": "literal", 
+        "value": "file audio"
+      }, 
+      {
+        "lang": "de", 
+        "type": "literal", 
+        "value": "Audiodatei"
+      }, 
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "audio file"
+      }
+    ], 
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "A file type for storing electronically recorded audio content."
+      }
+    ]
+  }, 
+  "http://metadataregistry.org/uri/RegStatus/1001": {
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "lang": "en", 
+        "type": "literal", 
+        "value": "Published"
+      }
+    ], 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri", 
+        "value": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ]
+  }
+}

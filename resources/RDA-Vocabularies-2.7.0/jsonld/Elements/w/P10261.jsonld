@@ -1,0 +1,71 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10261",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a person that a work is about."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/datatype/P10261",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/subjectPerson.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23878.html",
+            "label": "has subject (person)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10325",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/descriptionOfPerson.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/33542.html",
+            "label": "is description of (person)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60805",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/subject.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/16303.html",
+        "label": "has subject"
+    },
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has subject (person)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/subjectPerson.en",
+    "name": {
+        "en": "subjectPerson"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10319",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/subjectAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25641.html",
+            "label": "has subject (agent)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A person that a work is about.",
+        "es": "Una persona sobre la que trata la obra."
+    },
+    "ToolkitLabel": {
+        "en": "subject (person)",
+        "es": "materia (persona)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16199.html"
+}

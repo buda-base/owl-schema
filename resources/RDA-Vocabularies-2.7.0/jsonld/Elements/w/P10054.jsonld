@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10054",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to an agent responsible for creating a new device or process."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10054",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/inventor.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23969.html",
+            "label": "has inventor"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60427",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/inventor.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15021.html",
+        "label": "has inventor"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has inventor"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/inventor.en",
+    "name": {
+        "en": "inventor"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10065",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/creator.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15368.html",
+            "label": "has creator"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An agent responsible for creating a new device or process.",
+        "fr": "Personne, famille ou collectivité responsable de la création d’un nouveau dispositif ou procédé.",
+        "es": "Una persona, familia o entidad corporativa responsable de la creación de un nuevo aparato o proceso."
+    },
+    "ToolkitLabel": {
+        "en": "inventor",
+        "fr": "inventeur",
+        "es": "inventor"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15357.html"
+}

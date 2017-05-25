@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50258",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a corporate body who is accused in a criminal proceeding or sued in a civil proceeding to a work."
+        ],
+        "fr": [
+            "Met une collectivité qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο το οποίο ασκεί αγωγή στο πλαίσιο αστικής διαδικασίας, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10005",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
+        "label": "corporate body"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50258",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/defendantCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24748.html",
+            "label": "is defendant corporate body of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50258",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/defendantCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25047.html",
+            "label": "is defendant corporate body of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60698",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/defendantOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15287.html",
+        "label": "is defendant of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is defendant corporate body of",
+        "fr": "est la collectivité défenderesse de",
+        "el": "είναι εναγόμενο συλλογικό όργανο του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/defendantCorporateBodyOf.en",
+    "name": {
+        "en": "defendantCorporateBodyOf",
+        "el": "εναγόμενοΣυλλογικόΌργανοΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50090",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/defendantOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13955.html",
+            "label": "is defendant of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Collectivité qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée.",
+        "en": "A work that involves a responsibility for being a corporate body accused in a criminal proceeding or sued in a civil proceeding.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για ένα συλλογικό όργανο εναντίον του οποίου ασκείται αγωγή στο πλαίσιο αστικής διαδικασίας."
+    },
+    "ToolkitLabel": {
+        "fr": "collectivité défenderesse de",
+        "en": "defendant corporate body of",
+        "el": "εναγόμενο συλλογικό όργανο του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16098.html"
+}

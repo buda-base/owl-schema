@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10031",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a musical work that provides incidental music for a play or other spoken work for the stage."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10031",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/incidentalMusicWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23949.html",
+            "label": "is incidental music (work)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60118",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/incidentalMusic.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14714.html",
+        "label": "is incidental music"
+    },
+    "instructionNumber": "24.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "is incidental music (work)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/incidentalMusicWork.en",
+    "name": {
+        "en": "incidentalMusicWork"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10237",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/musicWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15612.html",
+            "label": "is music (work)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A musical work that provides incidental music for a play or other spoken work for the stage.",
+        "fr": "Œuvre musicale qui fournit la musique de scène pour une pièce de théâtre ou une autre œuvre parlée pour la scène.",
+        "es": "Una obra musical que proporciona música incidental para una obra de teatro u otra obra hablada para el escenario."
+    },
+    "ToolkitLabel": {
+        "en": "incidental music (work)",
+        "fr": "musique de scène (œuvre)",
+        "es": "música incidental (obra)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15334.html"
+}

@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50143",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent contributing to an expression of a work by coordinating the activities of composers, sound editors, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment to an expression."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en coordonnant les activités du compositeur, du monteur son et des mixeurs de son pour une production d’images animées ou bien pour une représentation ou un spectacle dramatique ou musical en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που συνεισφέρει σε μια έκφραση ενός έργου συντονίζοντας τις ενέργειες των συνθετών, των επιμελητών ήχου και των ηχοληπτών για μια παραγωγή κινητής εικόνας ή για μια μουσική ή θεατρική παράσταση ή άλλο ψυχαγωγικό θέαμα, με μια έκφραση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50143",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/musicalDirectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24638.html",
+            "label": "is musical director of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50143",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/musicalDirectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24932.html",
+            "label": "is musical director of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60611",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/musicalDirectorOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15201.html",
+        "label": "is musical director of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is musical director of",
+        "fr": "est le directeur musical de",
+        "el": "είναι μουσικός διευθυντής του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/musicalDirectorOf.en",
+    "name": {
+        "en": "musicalDirectorOf",
+        "el": "μουσικόςΔιευθυντήςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50161",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/contributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14026.html",
+            "label": "is contributor of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en coordonnant les activités du compositeur, du monteur son et des mixeurs de son pour une production d’images animées ou bien pour une représentation ou un spectacle dramatique ou musical.",
+        "en": "An expression of a work that incorporates a contribution of coordinating the activities of composers, sound editors, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά του συντονισμού των ενεργειών των συνθετών, των επιμελητών ήχου και των ηχοληπτών για μια παραγωγή κινητής εικόνας ή για μια μουσική ή θεατρική παράσταση ή άλλο ψυχαγωγικό θέαμα."
+    },
+    "ToolkitLabel": {
+        "fr": "directeur musical de",
+        "en": "musical director of",
+        "el": "μουσικός διευθυντής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14008.html"
+}

@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50045",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a curator who brings together items from various sources that are then arranged, described, and cataloged as a collection to an item."
+        ],
+        "fr": [
+            "Met un conservateur qui rassemble des items de diverses sources qui sont subséquemment arrangés, décrits et catalogués comme une collection en relation avec l’item."
+        ],
+        "el": [
+            "Συνδέει έναν έφορο, ο οποίος συγκεντρώνει αντικείμενα από διάφορες πηγές, τα οποία εν συνεχεία οργανώνονται, περιγράφονται και καταλογογραφούνται ως μία συλλογή από αντικείμενα, με ένα αντικείμενο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50045",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/collectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24573.html",
+            "label": "is collector of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50045",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/collectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24834.html",
+            "label": "is collector of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60006",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/collectorOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14608.html",
+        "label": "is collector of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is collector of",
+        "fr": "est le collectionneur de",
+        "el": "είναι συλλέκτης του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/collectorOf.en",
+    "name": {
+        "en": "collectorOf",
+        "el": "συλλέκτηςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50133",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/curatorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13998.html",
+            "label": "is curator of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Conservateur qui rassemble des items de diverses sources qui sont subséquemment arrangés, décrits et catalogués comme une collection.",
+        "en": "An item brought together with items from various sources that are then arranged, described, and cataloged as a collection.",
+        "el": "Ένα τεκμήριο που συνενώνεται με τεκμήρια από διάφορες πηγές τα οποία εν συνεχεία οργανώνονται, περιγράφονται, και καταλογογραφούνται ως μία συλλογή."
+    },
+    "ToolkitLabel": {
+        "fr": "collectionneur de",
+        "en": "collector of",
+        "el": "συλλέκτης του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13910.html"
+}

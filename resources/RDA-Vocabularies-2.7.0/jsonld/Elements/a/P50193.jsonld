@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50193",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent responsible for creating a work by responding to an interviewer, usually a reporter, pollster, or some other information gathering agent to a work."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité responsable de la création d’une œuvre en répondant à un intervieweur, habituellement un journaliste, un sondeur ou un autre agent recueillant de l’information en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα υπεύθυνο για τη δημιουργία ενός έργου αποκρινόμενος στον λαμβάνοντα τη συνέντευξη, συνήθως δημοσιογράφο, δημοσκόπο ή κάποιον άλλον φορέα συλλογής πληροφοριών, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50193",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/intervieweeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24688.html",
+            "label": "is interviewee of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50193",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/intervieweeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24982.html",
+            "label": "is interviewee of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60661",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/intervieweeOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15251.html",
+        "label": "is interviewee of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is interviewee of",
+        "fr": "est l’interviewé de",
+        "el": "είναι συνεντευξιαζόμενος του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/intervieweeOf.en",
+    "name": {
+        "en": "intervieweeOf",
+        "el": "συνεντευξιαζόμενοςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50204",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/creatorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14069.html",
+            "label": "is creator of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité responsable de la création d’une œuvre en répondant à un intervieweur, habituellement un journaliste, un sondeur ou un autre agent recueillant de l’information.",
+        "en": "A work that involves a creation responsibility for responding to an interviewer, usually a reporter, pollster, or some other information gathering agent.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη της δημιουργίας αποκρινόμενος στον λαμβάνοντα τη συνέντευξη, συνήθως δημοσιογράφο, δημοσκόπο ή κάποιον άλλον φορέα συλλογής πληροφοριών."
+    },
+    "ToolkitLabel": {
+        "fr": "interviewé de",
+        "en": "interviewee of",
+        "el": "συνεντευξιαζόμενος του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14058.html"
+}

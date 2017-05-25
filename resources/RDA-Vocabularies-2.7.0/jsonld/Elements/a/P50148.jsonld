@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50148",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent contributing to an expression of a work by preparing a court's opinions for publication to an expression."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en préparant les opinions d’un tribunal aux fins de publication en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που συνεισφέρει σε μια έκφραση ενός έργου προετοιμάζοντας τις δικαστικές αποφάσεις προς δημοσίευση, με μια έκφραση. ."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50148",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/courtReporterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24643.html",
+            "label": "is court reporter of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50148",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/courtReporterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24937.html",
+            "label": "is court reporter of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60616",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/courtReporterOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15206.html",
+        "label": "is court reporter of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is court reporter of",
+        "fr": "est le rapporteur judiciaire de",
+        "el": "είναι στενογράφος του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/courtReporterOf.en",
+    "name": {
+        "en": "courtReporterOf",
+        "el": "στενογράφοςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50161",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/contributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14026.html",
+            "label": "is contributor of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en préparant les opinions d’un tribunal aux fins de publication.",
+        "en": "An expression of a work that incorporates a contribution of preparing a court's opinions for publication.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της προετοιμασίας των δικαστικών αποφάσεων προς δημοσίευση."
+    },
+    "ToolkitLabel": {
+        "fr": "rapporteur judiciaire de",
+        "en": "court reporter of",
+        "el": "στενογράφος του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14013.html"
+}

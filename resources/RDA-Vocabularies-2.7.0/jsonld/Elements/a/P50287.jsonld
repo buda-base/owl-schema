@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50287",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person to a corporate body that grants the powers of administration to an officer in order to act for its benefit."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο με ένα συλλογικό όργανο το οποίο εξουσιοδοτεί έναν υπάλληλο να ενεργεί προς όφελός του. ."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50287",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/trusteeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24776.html",
+            "label": "is trustee of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50287",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/trusteeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25076.html",
+            "label": "is trustee of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60867",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/trusteeOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/22851.html",
+        "label": "is trustee of"
+    },
+    "instructionNumber": "29.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is trustee of",
+        "el": "είναι διαχειριστής του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/trusteeOf.en",
+    "name": {
+        "en": "trusteeOf",
+        "el": "διαχειριστήςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50234",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/officerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15666.html",
+            "label": "is officer of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A corporate body that grants the powers of administration to an officer in order to act for its benefit.",
+        "el": "Ένα συλλογικό όργανο το οποίο εξουσιοδοτεί έναν υπάλληλο να ενεργεί προς όφελός του."
+    },
+    "ToolkitLabel": {
+        "en": "trustee of",
+        "el": "διαχειριστής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/22868.html"
+}

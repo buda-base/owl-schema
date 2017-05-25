@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50149",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent contributing to an expression of a work by providing a preface to an original work to an expression."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une préface à l’œuvre originale en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέεει έναν φορέα, που συνεισφέρει σε μια έκφραση ενός έργου παρέχοντας έναν πρόλογο στο αρχικό έργο, με μια έκφραση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50149",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/writerOfPrefaceOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24644.html",
+            "label": "is writer of preface of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50149",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/writerOfPrefaceOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24938.html",
+            "label": "is writer of preface of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60617",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPrefaceOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15207.html",
+        "label": "is writer of introduction of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is writer of preface of",
+        "fr": "est le préfacier de",
+        "el": "είναι συγγραφέας του προλόγου του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/writerOfPrefaceOf.en",
+    "name": {
+        "en": "writerOfPrefaceOf",
+        "el": "συγγραφέαςΤουΠρολόγουΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50154",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/writerOfSupplementaryTextualContentOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14019.html",
+            "label": "is writer of supplementary textual content of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une préface à l’œuvre originale.",
+        "en": "An expression of a work that incorporates a contribution of providing a preface to an original work.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά του προλόγου σε ένα πρωτότυπο έργο."
+    },
+    "ToolkitLabel": {
+        "fr": "préfacier de",
+        "en": "writer of preface of",
+        "el": "συγγραφέας του προλόγου του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14014.html"
+}

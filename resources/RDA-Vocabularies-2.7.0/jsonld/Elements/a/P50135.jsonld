@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50135",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent contributing to an expression of a cartographic work by providing measurements or dimensional relationships for a geographic area represented to an expression."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre cartographique en fournissant les mesures ou les relations dimensionnelles pour l’aire géographique représentée en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που συνεισφέρει σε μια έκφραση ενός χαρτογραφικού έργου παρέχοντας μετρήσεις ή σχέσεις διαστάσεων για τη γεωγραφική περιοχή που παρουσιάζεται, με μια έκφραση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50135",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/surveyorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24630.html",
+            "label": "is surveyor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50135",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/surveyorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24924.html",
+            "label": "is surveyor of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60605",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/surveyorOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15195.html",
+        "label": "is surveyor of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is surveyor of",
+        "fr": "est l’arpenteur de",
+        "el": "είναι τοπογράφος μηχανικός του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/surveyorOf.en",
+    "name": {
+        "en": "surveyorOf",
+        "el": "τοπογράφοςΜηχανικόςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50161",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/contributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14026.html",
+            "label": "is contributor of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre cartographique en fournissant les mesures ou les relations dimensionnelles pour l’aire géographique représentée.",
+        "en": "An expression of a cartographic work that incorporates a contribution of providing measurements or dimensional relationships for a geographic area represented.",
+        "el": "Μια έκφραση ενός χαρτογραφικού έργου που ενσωματώνει τη συνεισφορά της παροχής μετρήσεων ή σχέσεων διαστάσεων για τη γεωγραφική περιοχή που παρουσιάζεται με μια έκφραση."
+    },
+    "ToolkitLabel": {
+        "fr": "arpenteur de",
+        "en": "surveyor of",
+        "el": "τοπογράφος μηχανικός του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14000.html"
+}

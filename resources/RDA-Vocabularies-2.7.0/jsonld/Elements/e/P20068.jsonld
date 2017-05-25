@@ -1,0 +1,81 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/e/P20068",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an expression to a writer of words added to an expression of a musical work."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10006",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
+        "label": "expression"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/object/P20068",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/object/writerOfAddedLyrics.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24311.html",
+            "label": "has writer of added lyrics"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60371",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyrics.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14967.html",
+        "label": "has writer of added lyrics"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/e/",
+        "url": "http://metadataregistry.org/schema/show/id/78.html",
+        "label": "RDA Expression properties"
+    },
+    "label": {
+        "en": "has writer of added lyrics"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/e/writerOfAddedLyrics.en",
+    "name": {
+        "en": "writerOfAddedLyrics"
+    },
+    "note": {
+        "en": [
+            "Writing of lyrics in collaboration with a composer to form an original work is excluded."
+        ]
+    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10204",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/lyricist.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15507.html",
+            "label": "has lyricist"
+        }
+    ],
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/P20030",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/writerOfAddedText.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14121.html",
+            "label": "has writer of added text"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A writer of words added to an expression of a musical work.",
+        "fr": "Auteur de paroles ajoutées à une expression d’une œuvre musicale.",
+        "es": "Un autor que agrega palabras a una expresión de una obra musical."
+    },
+    "ToolkitLabel": {
+        "en": "writer of added lyrics",
+        "fr": "auteur de paroles ajoutées",
+        "es": "autor de letra adicional"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14159.html"
+}

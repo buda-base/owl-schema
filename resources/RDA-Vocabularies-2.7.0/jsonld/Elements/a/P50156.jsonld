@@ -1,0 +1,102 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50156",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent contributing to an expression of a work by revising or clarifying the content, or by selecting and putting together works, or parts of works, by one or more creators to an expression."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en révisant ou en clarifiant le contenu, ou bien en choisissant et en rassemblant des œuvres, ou des parties d’œuvres, d’un ou de plusieurs créateurs en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που συνεισφέρει σε μια έκφραση ενός έργου μέσω της αναθεώρησης ή αποσαφήνισης του περιεχομένου ή μέσω της συλλογής, επιλογής και επιμέλειας έργων ή μερών έργων από έναν ή περισσότερους δημιουργούς, με μια έκφραση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50156",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/editorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24651.html",
+            "label": "is editor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50156",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/editorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24945.html",
+            "label": "is editor of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60621",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/editorOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15211.html",
+        "label": "is editor of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is editor of",
+        "fr": "est l’éditeur intellectuel de",
+        "el": "είναι επιμελητής του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/editorOf.en",
+    "name": {
+        "en": "editorOf",
+        "el": "επιμελητήςΤου"
+    },
+    "note": {
+        "en": [
+            "Contributions may include adding an introduction, notes, or other critical matter, or preparing the expression of a work for production, publication, or distribution."
+        ],
+        "fr": [
+            "Les contributions peuvent inclure l’ajout d’une introduction, de notes ou d’autres textes critiques, ou bien la préparation de l’expression d’une œuvre aux fins de production, de publication ou de diffusion/distribution."
+        ],
+        "el": [
+            "Οι συνεισφορές μπορεί να περιλαμβάνουν μια εισαγωγή, σημειώσεις ή άλλο κριτικό υλικό ή προετοιμασία της έκφρασης ενός έργου για παραγωγή, δημοσίευση ή διανομή."
+        ]
+    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50195",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/authorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14060.html",
+            "label": "is author of"
+        }
+    ],
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50161",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/contributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14026.html",
+            "label": "is contributor of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en révisant ou en clarifiant le contenu, ou bien en choisissant et en rassemblant des œuvres, ou des parties d’œuvres, d’un ou de plusieurs créateurs.",
+        "en": "An expression of a work that incorporates a contribution of revising or clarifying the content, or by selecting and putting together works, or parts of works, by one or more creators.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά μέσω της αναθεώρησης ή αποσαφήνισης του περιεχομένου ή μέσω της συλλογής, επιλογής και επιμέλειας έργων ή μερών έργων από έναν ή περισσότερους δημιουργούς."
+    },
+    "ToolkitLabel": {
+        "fr": "éditeur intellectuel de",
+        "en": "editor of",
+        "el": "επιμελητής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14021.html"
+}

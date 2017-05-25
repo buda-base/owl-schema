@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50021",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a corporate body to a family that sponsors a corporate body."
+        ],
+        "fr": [
+            "Met une collectivité en relation avec une famille qui commandite la collectivité."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με μια οικογένεια η οποία χρηματοδοτεί ένα συλλογικό όργανο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10005",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
+        "label": "corporate body"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50021",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/sponsoringFamily.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24810.html",
+            "label": "has sponsoring family"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50021",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/sponsoringFamily.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24564.html",
+            "label": "has sponsoring family"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60676",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/sponsor.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15266.html",
+        "label": "has sponsor"
+    },
+    "instructionNumber": "29.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has sponsoring family",
+        "fr": "a pour famille commanditaire",
+        "el": "έχει χορηγό οικογένεια"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/sponsoringFamily.en",
+    "name": {
+        "en": "sponsoringFamily",
+        "el": "χορηγόςΟικογένεια"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A family that sponsors a corporate body.",
+        "fr": "Famille qui commandite la collectivité.",
+        "es": "Una familia que patrocina la entidad corporativa.",
+        "el": "Μια οικογένεια η οποία χρηματοδοτεί ένα συλλογικό όργανο."
+    },
+    "ToolkitLabel": {
+        "en": "sponsoring family",
+        "fr": "famille commanditaire",
+        "es": "familia patrocinadora",
+        "el": "χορηγός οικογένεια"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15556.html"
+}

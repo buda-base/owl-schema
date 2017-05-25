@@ -1,0 +1,58 @@
+<http://rdaregistry.info/termList/RDAColourContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://rdaregistry.info/termList/RDAColourContent> <http://purl.org/dc/elements/1.1/title> "RDA Colour Content" .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/RDAColourContent> .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/6851> .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "monochrome"@en .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#definition> "A colour content consisting of tones of one colour, or black and white, or black or white and another colour."@en .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u5355\u8272"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "\u5355\u8272"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "monochrome"@en .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#definition> "\u5305\u542B\u4E00\u79CD\u8272\u5F69\u3001\u6216\u9ED1\u8272\u548C\u767D\u8272\u6216\u9ED1\u8272\u548C\u767D\u8272\u4E4B\u4E00\u4E0E\u53E6\u4E00\u79CD\u8272\u5F69\u7684\u8272\u5F69\u5185\u5BB9\u3002"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "\u5305\u542B\u4E00\u79CD\u8272\u5F69\u3001\u6216\u9ED1\u8272\u548C\u767D\u8272\u6216\u9ED1\u8272\u548C\u767D\u8272\u4E4B\u4E00\u4E0E\u53E6\u4E00\u79CD\u8272\u5F69\u7684\u8272\u5F69\u5185\u5BB9\u3002"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A colour content consisting of tones of one colour, or black and white, or black or white and another colour."@en .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "monocromo"@es .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "monocromo"@es .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#definition> "Contenido a color que consiste de tonos de un color, blanco y negro, o blanco y negro con otro color."@es .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "Contenido a color que consiste de tonos de un color, blanco y negro, o blanco y negro con otro color."@es .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "monochroom"@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "monochroom"@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#definition> "Kleuraspect bestaande uit schakeringen van \u00E9\u00E9n kleur, of zwart en wit, of zwart of wit, of wit en een andere kleur."@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "Kleuraspect bestaande uit schakeringen van \u00E9\u00E9n kleur, of zwart en wit, of zwart of wit, of wit en een andere kleur."@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "moniv\u00E4rinen"@fi .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "moniv\u00E4rinen"@fi .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "monochrom"@de .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "monochrom"@de .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u0623\u062D\u0627\u062F\u064A\u0629 \u0627\u0644\u0644\u0648\u0646"@ar .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://www.w3.org/2004/02/skos/core#prefLabel> "monokrom"@sv .
+<http://rdaregistry.info/termList/RDAColourContent/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "monokrom"@sv .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/RDAColourContent> .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/6852> .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "polychrome"@en .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#definition> "A colour content consisting of two colours, neither of which is black or white, or more than two colours."@en .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u5F69\u8272"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "\u5F69\u8272"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "polychrome"@en .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#definition> "\u5305\u542B\u4E24\u79CD\u6216\u4E24\u79CD\u4EE5\u4E0A\u8272\u5F69\uFF08\u9ED1\u8272\u548C\u767D\u8272\u4EE5\u5916\uFF09\u7684\u8272\u5F69\u5185\u5BB9\u3002"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "\u5305\u542B\u4E24\u79CD\u6216\u4E24\u79CD\u4EE5\u4E0A\u8272\u5F69\uFF08\u9ED1\u8272\u548C\u767D\u8272\u4EE5\u5916\uFF09\u7684\u8272\u5F69\u5185\u5BB9\u3002"@zh .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A colour content consisting of two colours, neither of which is black or white, or more than two colours."@en .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "policromo"@es .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "policromo"@es .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#definition> "Contenido a color que consiste en dos colores (ninguno de los cuales es blanco o negro) o m\u00E1s de dos colores."@es .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "Contenido a color que consiste en dos colores (ninguno de los cuales es blanco o negro) o m\u00E1s de dos colores."@es .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "polychroom"@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "polychroom"@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#definition> "Kleuraspect bestaande uit twee kleuren (anders dan zwart of wit) of meer dan twee kleuren."@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "Kleuraspect bestaande uit twee kleuren (anders dan zwart of wit) of meer dan twee kleuren."@nl .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "yksiv\u00E4rinen"@fi .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "yksiv\u00E4rinen"@fi .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "polychrom"@de .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "polychrom"@de .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u0645\u0632\u062E\u0631\u0641 \u0628\u0623\u0644\u0648\u0627\u0646 \u0645\u062A\u0639\u062F\u062F\u0629"@ar .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://www.w3.org/2004/02/skos/core#prefLabel> "polykrom"@sv .
+<http://rdaregistry.info/termList/RDAColourContent/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "polykrom"@sv .
+<http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Published"@en .

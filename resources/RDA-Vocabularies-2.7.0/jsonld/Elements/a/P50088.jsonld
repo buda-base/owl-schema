@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50088",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person or corporate body who appeals the decision of a lower court recorded in a legal work of a higher court to a work."
+        ],
+        "fr": [
+            "Met une personne ou collectivité qui en appelle de la décision d’un tribunal inférieur en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο ή συλλογικό όργανο, που ασκεί έφεση εναντίον απόφασης κατώτερου δικαστηρίου, που καταχωρίστηκε στα πρακτικά ενός ανωτέρου δικαστηρίου, με ένα έργο."
+        ]
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50042",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/appellantCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13907.html",
+            "label": "is appellant corporate body of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50122",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/appellantPersonOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24617.html",
+            "label": "is appellant person of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50088"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50088"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60691",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/appellantOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15280.html",
+        "label": "is appellant of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is appellant of",
+        "fr": "est l’appelant de",
+        "el": "είναι εκκαλών/αναιρεσείων του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/appellantOf.en",
+    "name": {
+        "en": "appellantOf",
+        "el": "εκκαλών/αναιρεσείωνΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50131",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
+            "label": "is other agent associated with work of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne ou collectivité qui en appelle de la décision d’un tribunal inférieur.",
+        "en": "A legal work of a higher court recording a decision of a lower court that is appealed by a person or corporate body.",
+        "el": "Ένα έργο, που καταχωρίστηκε στα πρακτικά ενός ανωτέρου δικαστηρίου,για το οποίο ασκείται έφεση εναντίον απόφασης κατώτερου δικαστηρίου από φυσικό πρόσωπο ή συλλογικό όργανο."
+    },
+    "ToolkitLabel": {
+        "fr": "appelant de",
+        "en": "appellant of",
+        "el": "εκκαλών/αναιρεσείων του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13953.html"
+}

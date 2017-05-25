@@ -1,0 +1,207 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
+        {
+            "@id": "http://rdaregistry.info/termList/RDAColourContent",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA Colour Content"
+            },
+            "description": {
+                "en": "A presence of colour, tone, etc., in the content of a resource. "
+            },
+            "token": "RDAColourContent",
+            "prefix": "rdacc",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/355",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/355.html",
+            "documentation": "http://www.rdaregistry.info/termList/RDAColourContent/",
+            "tags": {
+                "en": []
+            },
+            "count": 2,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": ""
+                },
+                {
+                    "code": "ca",
+                    "lang": "Catalan",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": ""
+                },
+                {
+                    "code": "da",
+                    "lang": "Danish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": ""
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fi",
+                    "lang": "Finnish",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": "WIP"
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "el",
+                    "lang": "Greek",
+                    "version": "WIP"
+                },
+                {
+                    "code": "he",
+                    "lang": "Hebrew",
+                    "version": "WIP"
+                },
+                {
+                    "code": "it",
+                    "lang": "Italian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "no",
+                    "lang": "Norwegian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "pl",
+                    "lang": "Polish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "pt",
+                    "lang": "Portuguese",
+                    "version": "WIP"
+                },
+                {
+                    "code": "sk",
+                    "lang": "Slovak",
+                    "version": "WIP"
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": ""
+                },
+                {
+                    "code": "uk",
+                    "lang": "Ukrainian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "vi",
+                    "lang": "Vietnamese",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/RDAColourContent/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6851",
+            "inScheme": "http://rdaregistry.info/termList/RDAColourContent",
+            "status": "Published",
+            "prefLabel": {
+                "en": "monochrome",
+                "zh": "单色",
+                "es": "monocromo",
+                "nl": "monochroom",
+                "fi": "monivärinen",
+                "de": "monochrom",
+                "ar": "أحادية اللون",
+                "sv": "monokrom"
+            },
+            "definition": {
+                "en": "A colour content consisting of tones of one colour, or black and white, or black or white and another colour.",
+                "zh": "包含一种色彩、或黑色和白色或黑色和白色之一与另一种色彩的色彩内容。",
+                "es": "Contenido a color que consiste de tonos de un color, blanco y negro, o blanco y negro con otro color.",
+                "nl": "Kleuraspect bestaande uit schakeringen van één kleur, of zwart en wit, of zwart of wit, of wit en een andere kleur."
+            },
+            "ToolkitLabel": {
+                "zh": "单色",
+                "en": "monochrome",
+                "es": "monocromo",
+                "nl": "monochroom",
+                "fi": "monivärinen",
+                "de": "monochrom",
+                "sv": "monokrom"
+            },
+            "ToolkitDefinition": {
+                "zh": "包含一种色彩、或黑色和白色或黑色和白色之一与另一种色彩的色彩内容。",
+                "en": "A colour content consisting of tones of one colour, or black and white, or black or white and another colour.",
+                "es": "Contenido a color que consiste de tonos de un color, blanco y negro, o blanco y negro con otro color.",
+                "nl": "Kleuraspect bestaande uit schakeringen van één kleur, of zwart en wit, of zwart of wit, of wit en een andere kleur."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/RDAColourContent/1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6852",
+            "inScheme": "http://rdaregistry.info/termList/RDAColourContent",
+            "status": "Published",
+            "prefLabel": {
+                "en": "polychrome",
+                "zh": "彩色",
+                "es": "policromo",
+                "nl": "polychroom",
+                "fi": "yksivärinen",
+                "de": "polychrom",
+                "ar": "مزخرف بألوان متعددة",
+                "sv": "polykrom"
+            },
+            "definition": {
+                "en": "A colour content consisting of two colours, neither of which is black or white, or more than two colours.",
+                "zh": "包含两种或两种以上色彩（黑色和白色以外）的色彩内容。",
+                "es": "Contenido a color que consiste en dos colores (ninguno de los cuales es blanco o negro) o más de dos colores.",
+                "nl": "Kleuraspect bestaande uit twee kleuren (anders dan zwart of wit) of meer dan twee kleuren."
+            },
+            "ToolkitLabel": {
+                "zh": "彩色",
+                "en": "polychrome",
+                "es": "policromo",
+                "nl": "polychroom",
+                "fi": "yksivärinen",
+                "de": "polychrom",
+                "sv": "polykrom"
+            },
+            "ToolkitDefinition": {
+                "zh": "包含两种或两种以上色彩（黑色和白色以外）的色彩内容。",
+                "en": "A colour content consisting of two colours, neither of which is black or white, or more than two colours.",
+                "es": "Contenido a color que consiste en dos colores (ninguno de los cuales es blanco o negro) o más de dos colores.",
+                "nl": "Kleuraspect bestaande uit twee kleuren (anders dan zwart of wit) of meer dan twee kleuren."
+            }
+        }
+    ]
+}

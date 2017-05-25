@@ -1,0 +1,73 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50033",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a corporate body to a word, phrase, or abbreviation indicating incorporation or legal status of a corporate body, or any term serving to differentiate a corporate body from other corporate bodies, persons, etc."
+        ],
+        "fr": [
+            "Met une collectivité en relation avec un mot, une locution ou une abréviation indiquant le statut commercial ou juridique d’une collectivité ou tout terme permettant de différencier la collectivité d’autres collectivités, personnes, etc."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με μια λέξη, φράση, ή συντομογραφία που δηλώνει σύσταση ή νομικό καθεστώς ενός συλλογικού οργάνου ή οποιονδήποτε όρο, που έχει ως στόχο τη διαφοροποίηση ενός συλλογικού οργάνου από άλλα συλλογικά όργανα, φυσικά πρόσωπα, κ.λπ."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10005",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
+        "label": "corporate body"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50033",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/otherDesignationAssociatedWithCorporateBody.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24822.html",
+            "label": "has other designation associated with corporate body"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60370",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherDesignationAssociatedWithAgent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14966.html",
+        "label": "has other designation associated with agent"
+    },
+    "instructionNumber": "11.7",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has other designation associated with corporate body",
+        "fr": "a pour autre information associée à la collectivité",
+        "sv": "har övrig beteckning förknippad med institutionen",
+        "el": "έχει άλλον προσδιορισμό συνδεδεμένο με το συλλογικό όργανο"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/otherDesignationAssociatedWithCorporateBody.en",
+    "name": {
+        "en": "otherDesignationAssociatedWithCorporateBody",
+        "el": "άλλοςΠροσδιορισμόςΣυνδεδεμένοςΜεΤοΣυλλογικόΌργανο"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A word, phrase, or abbreviation indicating incorporation or legal status of a corporate body, or any term serving to differentiate a corporate body from other corporate bodies, persons, etc.",
+        "fr": "Mot, locution ou abréviation indiquant le statut commercial ou juridique d’une collectivité ou tout terme permettant de différencier la collectivité d’autres collectivités, personnes, etc.",
+        "es": "Una palabra, frase o abreviatura que indica la incorporación o la condición legal de una entidad corporativa, o cualquier término que diferencia la entidad de otras entidades corporativas, personas, etc.",
+        "el": "Μια λέξη, φράση, ή συντομογραφία που δηλώνει σύσταση ή νομικό καθστώς ενός συλλογικού οργάνου, ή οποιοσδήποτε όρος που έχει ως στόχο τη διαφοροποίηση ενός συλλογικού οργάνου από άλλα συλλογικά όργανα, φυσικά πρόσωπα κ.λπ."
+    },
+    "ToolkitLabel": {
+        "en": "other designation associated with corporate body",
+        "fr": "autre information associée à la collectivité",
+        "es": "otra designación asociada con la entidad corporativa",
+        "sv": "övrig beteckning förknippad med institutionen",
+        "el": "άλλος προσδιορισμός συνδεδεμένος με το συλλογικό όργανο"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13898.html"
+}

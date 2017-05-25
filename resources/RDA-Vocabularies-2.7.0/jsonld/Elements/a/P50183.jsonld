@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50183",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent responsible for assembling, arranging, and trimming film, video, or other moving image formats, including both visual and audio aspects to an expression."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité responsable de l’assemblage, de l’arrangement et du découpage de film, de vidéo ou d’autres formats d’images animées, y compris les aspects visuels et sonores, en relation avec l’expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, που είναι υπεύθυνος για τη συλλογή, επιλογή, οργάνωση και προετοιμασία φιλμ, βίντεο ή άλλων μορφότυπων κινητής εικόνας, περιλαμβανομένων οπτικών και ακουστικών πτυχών, με μια έκφραση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50183",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/editorOfMovingImageWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24678.html",
+            "label": "is editor of moving image work of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50183",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/editorOfMovingImageWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24972.html",
+            "label": "is editor of moving image work of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60651",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/editorOfMovingImageResourceOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15241.html",
+        "label": "is editor of moving image resource of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is editor of moving image work of",
+        "fr": "est le monteur d’œuvre d’images animées de",
+        "el": "είναι επιμελητής του έργου κινητής εικόνας του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/editorOfMovingImageWorkOf.en",
+    "name": {
+        "en": "editorOfMovingImageWorkOf",
+        "el": "επιμελητήςΈργουΚινητήςΕικόναςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50161",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/contributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14026.html",
+            "label": "is contributor of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité responsable de l’assemblage, de l’arrangement et du découpage de film, de vidéo ou d’autres formats d’images animées, y compris les aspects visuels et sonores.",
+        "en": "An expression that incorporates a contribution of assembling, arranging, and trimming film, video, or other moving image formats, including both visual and audio aspects.",
+        "el": "Μια έκφραση που ενσωματώνει τη συνεισφορά της συλλογής, επιλογής, οργάνωσης και προετοιμασίας φιλμ, βίντεο ή άλλων μορφότυπων κινητής εικόνας, περιλαμβανομένων οπτικών και ακουστικών πτυχών."
+    },
+    "ToolkitLabel": {
+        "fr": "monteur d’œuvre d’images animées de",
+        "en": "editor of moving image work of",
+        "el": "επιμελητής έργου κινητής εικόνας του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14048.html"
+}

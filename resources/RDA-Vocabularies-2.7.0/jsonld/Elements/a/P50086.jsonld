@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50086",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person held to be a channel of communication between the earthly world and a world of spirits to a work."
+        ],
+        "fr": [
+            "Met une personne tenue pour être un canal de communication entre le monde terrestre et le monde des esprits en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, που χρησιμοποιείται ως ενδιάμεσο κανάλι επικοινωνίας μεταξύ του γήινου κόσμου και του πνευματικού κόσμου, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50086",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/mediumOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24604.html",
+            "label": "is medium of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50086",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/mediumOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24875.html",
+            "label": "is medium of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60032",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/mediumOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14634.html",
+        "label": "is medium of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is medium of",
+        "fr": "est le médium de",
+        "el": "είναι μέσο του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/mediumOf.en",
+    "name": {
+        "en": "mediumOf",
+        "el": "μέσοΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50131",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
+            "label": "is other agent associated with work of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne tenue pour être un canal de communication entre le monde terrestre et le monde des esprits.",
+        "en": "A work that involves a responsibility for a communication between the earthly world and a world of spirits.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για την επικοινωνία μεταξύ του γήινου και του πνευματικού κόσμου."
+    },
+    "ToolkitLabel": {
+        "fr": "médium de",
+        "en": "medium of",
+        "el": "μέσο του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13951.html"
+}

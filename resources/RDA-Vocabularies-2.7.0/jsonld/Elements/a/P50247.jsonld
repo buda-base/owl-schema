@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50247",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an artist resonsible for creating art works that exploit the book form or alter its physical structure as part of the content to a work."
+        ],
+        "fr": [
+            "Met un artiste responsable de la création d’œuvres d’art qui exploitent la forme livre ou qui modifient sa structure physique comme partie du contenu de l’œuvre en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν καλλιτέχνη, υπεύθυνο για τη δημιουργία έργων τέχνης τα οποία αξιοποιούν τη μορφή του βιβλίου ή μεταβάλλουν τη φυσική του δομή ως μέρος του περιεχομένου, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50247",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/bookArtistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24737.html",
+            "label": "is book artist of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50247",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/bookArtistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25036.html",
+            "label": "is book artist of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60759",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/bookArtistOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/16232.html",
+        "label": "is book artist of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is book artist of",
+        "fr": "est l’artiste du livre de",
+        "el": "είναι βιβλίο ως έργο τέχνης του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/bookArtistOf.en",
+    "name": {
+        "en": "bookArtistOf",
+        "el": "βιβλίοΩς'ΕργοΤέχνηςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50192",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/artistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14057.html",
+            "label": "is artist of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Artiste responsable de la création d’œuvres d’art qui exploitent la forme livre ou qui modifient sa structure physique comme partie du contenu de l’œuvre.",
+        "en": "A work that involves an artistic responsibility for creating art works that exploit the book form or alter its physical structure as part of the content.",
+        "el": "Ένα έργο που περιλαμβάνει την καλλιτεχνική ευθύνη για τη δημιουργία έργων τέχνης τα οποία αξιοποιούν τη μορφή του βιβλίου ή μεταβάλλουν τη φυσική του δομή ως μέρος του περιεχομένου."
+    },
+    "ToolkitLabel": {
+        "fr": "artiste du livre de",
+        "en": "book artist of",
+        "el": "βιβλίο ως έργο τέχνης του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16087.html"
+}

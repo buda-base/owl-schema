@@ -1,0 +1,77 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50030",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a corporate body to a person who is a member of a corporate body."
+        ],
+        "fr": [
+            "Met une collectivité en relation avec une personne qui est membre du groupe d’interprètes, de l’expédition, etc."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με ένα φυσικό πρόσωπο, το οποίο είναι μέλος ενός συλλογικού οργάνου."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10005",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
+        "label": "corporate body"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50030",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/member.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24569.html",
+            "label": "has member"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50030",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/member.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24819.html",
+            "label": "has member"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60697",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/member.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15286.html",
+        "label": "has member"
+    },
+    "instructionNumber": "29.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has member",
+        "fr": "a pour membre",
+        "el": "έχει μέλος"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/member.en",
+    "name": {
+        "en": "member",
+        "el": "μέλος"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A person who is a member of a corporate body.",
+        "fr": "Personne qui est membre du groupe d’interprètes, de l’expédition, etc.",
+        "es": "Una persona que es miembro de una entidad corporativa.",
+        "el": "Ένα φυσικό πρόσωπο που είναι μέλος ενός συλλογικού οργάνου"
+    },
+    "ToolkitLabel": {
+        "en": "member",
+        "fr": "membre",
+        "es": "miembro",
+        "el": "μέλος"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13895.html"
+}

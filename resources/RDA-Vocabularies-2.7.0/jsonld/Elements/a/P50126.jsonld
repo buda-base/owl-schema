@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50126",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person who hears and decides on legal matters in court to a work."
+        ],
+        "fr": [
+            "Met une personne qui entend des causes juridiques et rend jugement dans un tribunal en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, το οποίο ακούει και αποφασίζει αναφορικά με ζητήματα νομικής φύσης στο δικαστήριο, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50126",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/judgeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24621.html",
+            "label": "is judge of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50126",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/judgeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24915.html",
+            "label": "is judge of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60696",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/judgeOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15285.html",
+        "label": "is judge of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is judge of",
+        "fr": "est le juge de",
+        "el": "είναι κριτήςΤου"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/judgeOf.en",
+    "name": {
+        "en": "judgeOf",
+        "el": "κριτήςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50131",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
+            "label": "is other agent associated with work of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne qui entend des causes juridiques et rend jugement dans un tribunal.",
+        "en": "A work that involves a responsibility for hearing and decision on legal matters in court.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη της ακρόασης και της λήψης απόφασης αναφορικά με ζητήματα νομικής φύσης στο δικαστήριο με ένα έργο."
+    },
+    "ToolkitLabel": {
+        "fr": "juge de",
+        "en": "judge of",
+        "el": "κριτής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13991.html"
+}

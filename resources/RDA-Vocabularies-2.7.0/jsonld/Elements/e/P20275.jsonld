@@ -1,0 +1,66 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/e/P20275",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an expression to an agent contributing to an expression of a work by providing a foreword to an original work."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10006",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
+        "label": "expression"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/object/P20275",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/object/writerOfForeword.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24318.html",
+            "label": "has writer of foreword"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60809",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForeword.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/16308.html",
+        "label": "has writer of foreword"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/e/",
+        "url": "http://metadataregistry.org/schema/show/id/78.html",
+        "label": "RDA Expression properties"
+    },
+    "label": {
+        "en": "has writer of foreword"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/e/writerOfForeword.en",
+    "name": {
+        "en": "writerOfForeword"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/P20046",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/writerOfSupplementaryTextualContent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14137.html",
+            "label": "has writer of supplementary textual content"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An agent contributing to an expression of a work by providing a foreword to an original work.",
+        "es": "Una persona, familia o entidad corporativa que contribuye a una expresión de una obra proporcionando un prólogo a la obra original."
+    },
+    "ToolkitLabel": {
+        "en": "writer of foreword",
+        "es": "escritor de prólogo"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/16123.html"
+}

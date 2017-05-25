@@ -1,0 +1,91 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50225",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an author of the words of an opera or other musical stage work, or an oratorio to a work."
+        ],
+        "fr": [
+            "Met un auteur des paroles d’un opéra ou d’une autre œuvre scénique ou d’un oratorio en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν συγγραφέα των στίχων μιας όπερας ή κάποιου άλλου μουσικού σκηνικού έργου ή ενός ορατορίου, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50225",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/librettistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24720.html",
+            "label": "is librettist of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50225",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/librettistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25014.html",
+            "label": "is librettist of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60708",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/librettistOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15297.html",
+        "label": "is librettist of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is librettist of",
+        "fr": "est le librettiste de",
+        "el": "είναι λιμπρετίστας του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/librettistOf.en",
+    "name": {
+        "en": "librettistOf",
+        "el": "λιμπρετίσταςΤου"
+    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50224",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/lyricistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14089.html",
+            "label": "is lyricist of"
+        }
+    ],
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50195",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/authorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14060.html",
+            "label": "is author of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Auteur des paroles d’un opéra ou d’une autre œuvre scénique ou d’un oratorio.",
+        "en": "A work that involves an authoring responsibility for the words of an opera or other musical stage work, or an oratorio.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνης της συγγραφής των στίχων μιας όπερας ή κάποιου άλλου μουσικού σκηνικού έργου ή ενός ορατορίου."
+    },
+    "ToolkitLabel": {
+        "fr": "librettiste de",
+        "en": "librettist of",
+        "el": "λιμπρετίστας του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14090.html"
+}

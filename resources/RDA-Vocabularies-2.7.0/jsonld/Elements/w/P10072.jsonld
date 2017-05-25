@@ -1,0 +1,56 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10072",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a physical embodiment of a work."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10072",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/manifestationOfWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23987.html",
+            "label": "has manifestation of work"
+        }
+    ],
+    "instructionNumber": "17.7",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has manifestation of work",
+        "sv": "har manifestation av verk"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/manifestationOfWork.en",
+    "name": {
+        "en": "manifestationOfWork"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A physical embodiment of a work.",
+        "fr": "Matérialisation d’une expression d’une œuvre.",
+        "es": "La materialización física de una expresión de una obra."
+    },
+    "ToolkitLabel": {
+        "en": "manifestation of work",
+        "fr": "manifestation d’une œuvre",
+        "es": "manifestación de la obra",
+        "sv": "manifestation av verk"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15375.html"
+}

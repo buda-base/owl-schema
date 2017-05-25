@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50129",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person whose manuscript signature appears on an item to an item."
+        ],
+        "fr": [
+            "Met une personne dont la signature manuscrite figure sur un item en relation avec l’item."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, του οποίου η χειρόγραφη υπογραφή υπάρχει σε ένα αντίτυπο, με ένα αντίτυπο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50129",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/autographerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24624.html",
+            "label": "is autographer of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50129",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/autographerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24918.html",
+            "label": "is autographer of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60702",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/autographerOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15291.html",
+        "label": "is autographer of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is autographer of",
+        "fr": "est le signataire autographe de",
+        "el": "είναι χειρόγραφη υπογραφή του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/autographerOf.en",
+    "name": {
+        "en": "autographerOf",
+        "el": "χειρόγραφηΥπογραφήΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50182",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentItemOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14047.html",
+            "label": "is other agent associated with item of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne dont la signature manuscrite figure sur un item.",
+        "en": "An item with a manuscript signature appearing on it.",
+        "el": "Ένα αντίτυπο στο οποίο εμφανίζεται μια χειρόγραφη υπογραφή."
+    },
+    "ToolkitLabel": {
+        "fr": "signataire autographe de",
+        "en": "autographer of",
+        "el": "χειρόγραφη υπογραφή του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13994.html"
+}

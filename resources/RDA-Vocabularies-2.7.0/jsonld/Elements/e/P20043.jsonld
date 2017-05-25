@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/e/P20043",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an expression to an agent contributing to an expression of a work by providing additional choreography, or by modifying previous choreography."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10006",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
+        "label": "expression"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/object/P20043",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/object/choreographerExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24296.html",
+            "label": "has choreographer (expression)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60433",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/choreographer.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15027.html",
+        "label": "has choreographer"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/e/",
+        "url": "http://metadataregistry.org/schema/show/id/78.html",
+        "label": "RDA Expression properties"
+    },
+    "label": {
+        "en": "has choreographer (expression)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/e/choreographerExpression.en",
+    "name": {
+        "en": "choreographerExpression"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/P20053",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/contributor.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14144.html",
+            "label": "has contributor"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An agent contributing to an expression of a work by providing additional choreography, or by modifying previous choreography.",
+        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une chorégraphie additionnelle ou en modifiant la chorégraphie antérieure.",
+        "es": "Una persona, familia o entidad corporativa que contribuye a una expresión de una obra proporcionando coreografía adicional, o modificando la coreografía anterior."
+    },
+    "ToolkitLabel": {
+        "en": "choreographer (expression)",
+        "fr": "chorégraphe (expression)",
+        "es": "coreógrafo (expresión)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14134.html"
+}

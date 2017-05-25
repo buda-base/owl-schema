@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10049",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to an agent honoured by a work."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10049",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/honouree.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23964.html",
+            "label": "has honouree"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60406",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/honouree.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15000.html",
+        "label": "has honouree"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has honouree"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/honouree.en",
+    "name": {
+        "en": "honouree"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10047",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherAgentWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15350.html",
+            "label": "has other agent associated with work"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An agent honoured by a work.",
+        "fr": "Personne, famille ou collectivité honorée par une œuvre (par exemple, une personne à qui sont offerts des mélanges).",
+        "es": "Una persona, familia o entidad corporativa en cuyo honor se realiza una obra (por ej., quien es objeto de una obra conmemorativa)"
+    },
+    "ToolkitLabel": {
+        "en": "honouree",
+        "fr": "entité honorée",
+        "es": "homenajeado"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15352.html"
+}

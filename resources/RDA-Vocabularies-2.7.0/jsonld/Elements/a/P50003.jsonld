@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50003",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a corporate body granting an academic degree to a work."
+        ],
+        "fr": [
+            "Met une collectivité conférant un diplôme universitaire en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο που χρηματοδοτεί ένα ανώτερου επιπέδου ακαδημαϊκό πτυχίο, με ένα έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10005",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
+        "label": "corporate body"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50003",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/degreeGrantingInstitutionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24549.html",
+            "label": "is degree granting institution of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50003",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/degreeGrantingInstitutionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24793.html",
+            "label": "is degree granting institution of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/degreeGrantingInstitutionOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14604.html",
+        "label": "is degree granting institution of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is degree granting institution of",
+        "fr": "est l’institution conférant des diplômes universitaires de",
+        "el": "είναι ίδρυμα χορήγησης πτυχίου του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/degreeGrantingInstitutionOf.en",
+    "name": {
+        "en": "degreeGrantingInstitutionOf",
+        "el": "ίδρυμαΧορήγησηςΠτυχίουΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50131",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
+            "label": "is other agent associated with work of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Collectivité conférant un diplôme universitaire.",
+        "en": "An academic degree that is granted to a corporate body.",
+        "el": "Ένα ανώτερου επιπέδου ακαδημαϊκό πτυχίο, το οποίο χρηματοδοτείται από ένα συλλογικό όργανο."
+    },
+    "ToolkitLabel": {
+        "fr": "institution conférant des diplômes universitaires de",
+        "en": "degree granting institution of",
+        "el": "ίδρυμα χορήγησης πτυχίου του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15538.html"
+}

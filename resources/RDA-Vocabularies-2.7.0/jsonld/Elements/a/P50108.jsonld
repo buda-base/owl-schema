@@ -1,0 +1,73 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50108",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person to a term other than a title that is associated with a person's name."
+        ],
+        "fr": [
+            "Met une personne en relation avec un terme, autre qu’un titre, associé à un nom de personne."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο με όρο άλλον από τον τίτλο, ο οποίος συνδέεται με τον όνομα ενός φυσικού προσώπου."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50108",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/otherDesignationAssociatedWithPerson.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24897.html",
+            "label": "has other designation associated with person"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60370",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherDesignationAssociatedWithAgent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14966.html",
+        "label": "has other designation associated with agent"
+    },
+    "instructionNumber": "9.6",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "has other designation associated with person",
+        "fr": "a pour autre information associée à la personne",
+        "sv": "har övrig beteckning förknippad med personen",
+        "el": "έχει άλλον προσδιορισμό συνδεδεμένο με το φυσικό πρόσωπο"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/otherDesignationAssociatedWithPerson.en",
+    "name": {
+        "en": "otherDesignationAssociatedWithPerson",
+        "el": "άλλοςΠροσδιορισμόςΣυνδεδεμένοςΜεΤοΦυσικόΠρόσωπο"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "ToolkitDefinition": {
+        "en": "A term other than a title that is associated with a person.",
+        "fr": "Terme, autre qu’un titre, associé à un nom de personne.",
+        "es": "Un término diferente de un título que está asociado con el nombre de la persona.",
+        "el": "Ένας όρος άλλον από τον τίτλο, ο οποίος συνδέεται με τον όνομα ενός φυσικού προσώπου."
+    },
+    "ToolkitLabel": {
+        "en": "other designation associated with person",
+        "fr": "autre information associée à la personne",
+        "es": "otra designación asociada con la persona",
+        "sv": "övrig beteckning förknippad med personen",
+        "el": "άλλος προσδιορισμός συνδεδεμένος με το φυσικό πρόσωπο"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13973.html"
+}

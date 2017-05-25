@@ -1,0 +1,68 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10016",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to a dramatic work adapted from a source work."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10016",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/dramatizedAsWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23935.html",
+            "label": "is dramatized as (work)"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60088",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/dramatizedAs.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14684.html",
+        "label": "is dramatized as"
+    },
+    "instructionNumber": "24.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "is dramatized as (work)"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/dramatizedAsWork.en",
+    "name": {
+        "en": "dramatizedAsWork"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10155",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/adaptedAsWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15458.html",
+            "label": "is adapted as (work)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "A dramatic work adapted from a source work.",
+        "fr": "Œuvre théâtrale adaptée de l’œuvre source.",
+        "es": "Una obra dramática adaptada de la obra fuente."
+    },
+    "ToolkitLabel": {
+        "en": "dramatized as (work)",
+        "fr": "adapté au théâtre comme (œuvre)",
+        "es": "dramatizada como (obra)"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15319.html"
+}

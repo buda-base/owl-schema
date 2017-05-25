@@ -9,3 +9,7 @@ Initial version translating the XSD Schemas used for BDRC XML Metadata.
 ## [0.1.1] - 2017-05-25
 
 Separate migration and production ontologies.
+
+## [0.1.2] - 2017-05-25
+
+Added resources for use in developing productio ontologies

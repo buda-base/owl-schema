@@ -1,0 +1,93 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50181",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates an agent other than a producer, publisher, distributor, or manufacturer associated with a manifestation to a manifestation."
+        ],
+        "fr": [
+            "Met une personne, famille ou collectivité, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associée à une manifestation en relation avec la manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος διαφέρει από τον παραγωγό, εκδότη, διαθέτη ή κατασκευαστή που συνδέεται με την εκδήλωση, με μια εκδήλωση."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10002",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
+        "label": "agent"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50181",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/otherAgentManifestationOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24676.html",
+            "label": "is other agent associated with manifestation of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50181",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/otherAgentManifestationOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24970.html",
+            "label": "is other agent associated with manifestation of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60602",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithResourceOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15192.html",
+        "label": "is other agent associated with resource of"
+    },
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is other agent associated with manifestation of",
+        "fr": "est l’autre personne, famille ou collectivité associée à une manifestation de",
+        "el": "είναι άλλο φυσικό πρόσωπο, οικογένεια ή συλλογικό όργανο συνδεδεμένο με την εκδήλωσή του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentManifestationOf.en",
+    "name": {
+        "en": "otherAgentManifestationOf",
+        "el": "άλληΕκδήλωσηΤουΠΟΣ"
+    },
+    "note": {
+        "en": [
+            "Book designers, platemakers, etc., are included."
+        ],
+        "fr": [
+            "Comprend les graphistes, les graveurs de planches, etc."
+        ],
+        "el": [
+            "Περιλαμβάνονται σχεδιαστές βιβλίων, κατασκευαστές πλακών κ.λπ."
+        ]
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50307",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedManifestationAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25293.html",
+            "label": "has related manifestation (agent)"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne, famille ou collectivité, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associée à une manifestation.",
+        "en": "A manifestation associated with an agent other than a producer, publisher, distributor, or manufacturer.",
+        "el": "Μια εκδήλωση που συνδέεται με έναν φορέα ο οποίος διαφέρει από τον παραγωγό, εκδότη, διαθέτη ή κατασκευαστή."
+    },
+    "ToolkitLabel": {
+        "fr": "autre personne, famille ou collectivité associée à une manifestation de",
+        "en": "other agent associated with manifestation of",
+        "el": "άλλο φυσικό πρόσωπο, οικογένεια ή συλλογικό όργανο συνδεδεμένο με μία εκδήλωση του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/14046.html"
+}

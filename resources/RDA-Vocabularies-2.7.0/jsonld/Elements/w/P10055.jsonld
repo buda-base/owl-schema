@@ -1,0 +1,81 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/w/P10055",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a work to an agent responsible for creating a new work such as a bibliography or a directory by selecting, arranging, aggregating, and editing data, information, etc."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10001",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+        "label": "work"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10055",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/compiler.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23970.html",
+            "label": "has compiler"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60428",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/compiler.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15022.html",
+        "label": "has compiler"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/w/",
+        "url": "http://metadataregistry.org/schema/show/id/77.html",
+        "label": "RDA Work properties"
+    },
+    "label": {
+        "en": "has compiler"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/w/compiler.en",
+    "name": {
+        "en": "compiler"
+    },
+    "note": {
+        "en": [
+            "Revising or clarifying the content, or selecting and putting together works or parts of work, by one or more creators is excluded."
+        ]
+    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/P20048",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/editor.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14139.html",
+            "label": "has editor"
+        }
+    ],
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10065",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/creator.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15368.html",
+            "label": "has creator"
+        }
+    ],
+    "ToolkitDefinition": {
+        "en": "An agent responsible for creating a new work such as a bibliography or a directory by selecting, arranging, aggregating, and editing data, information, etc.",
+        "fr": "Personne, famille ou collectivité responsable de la création d’une nouvelle œuvre (par exemple, une bibliographie, un répertoire) en sélectionnant, en organisant, en regroupant et en éditant des données, de l’information, etc.",
+        "es": "Una persona, familia o entidad corporativa responsable de la creación de una nueva obra (por ej., una bibliografía, un directorio) seleccionando, arreglando, agregando y editando datos, información, etc."
+    },
+    "ToolkitLabel": {
+        "en": "compiler",
+        "fr": "compilateur",
+        "es": "compilador"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/15358.html"
+}

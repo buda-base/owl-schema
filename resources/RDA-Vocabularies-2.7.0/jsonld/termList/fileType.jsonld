@@ -1,0 +1,308 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
+        {
+            "@id": "http://rdaregistry.info/termList/fileType",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA File Type"
+            },
+            "description": {
+                "en": "A general type of data content encoded in a computer file."
+            },
+            "token": "fileType",
+            "prefix": "rdaft",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/98",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/98.html",
+            "documentation": "",
+            "tags": {
+                "en": [
+                    "Libraries",
+                    "Information Services"
+                ]
+            },
+            "count": 6,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": "WIP"
+                },
+                {
+                    "code": "ca",
+                    "lang": "Catalan",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": "WIP"
+                },
+                {
+                    "code": "da",
+                    "lang": "Danish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": "WIP"
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fi",
+                    "lang": "Finnish",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": ""
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "el",
+                    "lang": "Greek",
+                    "version": "WIP"
+                },
+                {
+                    "code": "he",
+                    "lang": "Hebrew",
+                    "version": "WIP"
+                },
+                {
+                    "code": "it",
+                    "lang": "Italian",
+                    "version": ""
+                },
+                {
+                    "code": "no",
+                    "lang": "Norwegian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "pl",
+                    "lang": "Polish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "pt",
+                    "lang": "Portuguese",
+                    "version": "WIP"
+                },
+                {
+                    "code": "sk",
+                    "lang": "Slovak",
+                    "version": "WIP"
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": "WIP"
+                },
+                {
+                    "code": "uk",
+                    "lang": "Ukrainian",
+                    "version": "WIP"
+                },
+                {
+                    "code": "vi",
+                    "lang": "Vietnamese",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/fileType/1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1116",
+            "inScheme": "http://rdaregistry.info/termList/fileType",
+            "status": "Published",
+            "prefLabel": {
+                "en": "audio file",
+                "fr": "fichier audio",
+                "fi": "äänitiedosto",
+                "de": "Audiodatei",
+                "it": "file audio",
+                "es": "archivo sonoro"
+            },
+            "ToolkitLabel": {
+                "en": "audio file",
+                "fr": "fichier audio",
+                "fi": "äänitiedosto",
+                "de": "Audiodatei",
+                "it": "file audio",
+                "es": "archivo sonoro"
+            },
+            "definition": {
+                "en": "A file type for storing electronically recorded audio content."
+            },
+            "ToolkitDefinition": {
+                "en": "A file type for storing electronically recorded audio content."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/fileType/1005",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1120",
+            "inScheme": "http://rdaregistry.info/termList/fileType",
+            "status": "Published",
+            "prefLabel": {
+                "en": "data file",
+                "fr": "fichier de données",
+                "fi": "datatiedosto",
+                "de": "Datendatei",
+                "it": "file di dati",
+                "es": "archivo de datos"
+            },
+            "ToolkitLabel": {
+                "en": "data file",
+                "fr": "fichier de données",
+                "fi": "datatiedosto",
+                "de": "Datendatei",
+                "it": "file di dati",
+                "es": "archivo de datos"
+            },
+            "definition": {
+                "en": "A file type for storing electronically recorded content representing data values."
+            },
+            "ToolkitDefinition": {
+                "en": "A file type for storing electronically recorded content representing data values."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/fileType/1004",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1119",
+            "inScheme": "http://rdaregistry.info/termList/fileType",
+            "status": "Published",
+            "prefLabel": {
+                "en": "image file",
+                "fr": "fichier image",
+                "fi": "kuvatiedosto",
+                "de": "Bilddatei",
+                "it": "file di immagini",
+                "es": "archivo de imagen"
+            },
+            "ToolkitLabel": {
+                "en": "image file",
+                "fr": "fichier image",
+                "fi": "kuvatiedosto",
+                "de": "Bilddatei",
+                "it": "file di immagini",
+                "es": "archivo de imagen"
+            },
+            "definition": {
+                "en": "A file type for storing electronically recorded content representing still images."
+            },
+            "ToolkitDefinition": {
+                "en": "A file type for storing electronically recorded content representing still images."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/fileType/1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1118",
+            "inScheme": "http://rdaregistry.info/termList/fileType",
+            "status": "Published",
+            "prefLabel": {
+                "en": "program file",
+                "fr": "fichier de programme",
+                "fi": "ohjelmatiedosto",
+                "de": "Programmdatei",
+                "it": "file di programma",
+                "es": "archivo de programa"
+            },
+            "ToolkitLabel": {
+                "en": "program file",
+                "fr": "fichier de programme",
+                "fi": "ohjelmatiedosto",
+                "de": "Programmdatei",
+                "it": "file di programma",
+                "es": "archivo de programa"
+            },
+            "definition": {
+                "en": "A file type for storing electronically recorded programs consisting of organized lists of instructions to be executed by computer software."
+            },
+            "ToolkitDefinition": {
+                "en": "A file type for storing electronically recorded programs consisting of organized lists of instructions to be executed by computer software."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/fileType/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1117",
+            "inScheme": "http://rdaregistry.info/termList/fileType",
+            "status": "Published",
+            "prefLabel": {
+                "en": "text file",
+                "fr": "fichier texte",
+                "fi": "tekstitiedosto",
+                "de": "Textdatei",
+                "it": "file di testo",
+                "es": "archivo de texto"
+            },
+            "ToolkitLabel": {
+                "en": "text file",
+                "fr": "fichier texte",
+                "fi": "tekstitiedosto",
+                "de": "Textdatei",
+                "it": "file di testo",
+                "es": "archivo de texto"
+            },
+            "definition": {
+                "en": "A file type for storing electronically recorded textual content."
+            },
+            "ToolkitDefinition": {
+                "en": "A file type for storing electronically recorded textual content."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/fileType/1006",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1121",
+            "inScheme": "http://rdaregistry.info/termList/fileType",
+            "status": "Published",
+            "prefLabel": {
+                "en": "video file",
+                "fr": "fichier vidéo",
+                "fi": "videotiedosto",
+                "de": "Videodatei",
+                "it": "file video",
+                "es": "archivo de video"
+            },
+            "ToolkitLabel": {
+                "en": "video file",
+                "fr": "fichier vidéo",
+                "fi": "videotiedosto",
+                "de": "Videodatei",
+                "it": "file video",
+                "es": "archivo de video"
+            },
+            "definition": {
+                "en": "A file type for storing electronically recorded content representing moving images."
+            },
+            "ToolkitDefinition": {
+                "en": "A file type for storing electronically recorded content representing moving images."
+            }
+        }
+    ]
+}

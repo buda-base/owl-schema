@@ -1,0 +1,83 @@
+{
+    "@context": "http://rdaregistry.info/Contexts/elements_langmap.jsonld",
+    "@id": "http://rdaregistry.info/Elements/a/P50091",
+    "@type": "Property",
+    "description": {
+        "en": [
+            "Relates a person, such as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis to a work."
+        ],
+        "fr": [
+            "Met une personne supervisant un diplôme universitaire de niveau supérieur en relation avec l’œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, όπως σύμβουλο ή επόπτη  μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας, είτε για την απόκτηση ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού, με το έργο."
+        ]
+    },
+    "domain": {
+        "@id": "http://rdaregistry.info/Elements/c/C10004",
+        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
+        "label": "person"
+    },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50091",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/degreeSupervisorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24609.html",
+            "label": "is degree supervisor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50091",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/degreeSupervisorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24880.html",
+            "label": "is degree supervisor of"
+        }
+    ],
+    "hasUnconstrained": {
+        "@id": "http://rdaregistry.info/Elements/u/P60649",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/degreeSupervisorOf.en",
+        "url": "http://metadataregistry.org/schemaprop/show/id/15239.html",
+        "label": "is degree supervisor of"
+    },
+    "instructionNumber": "18.5",
+    "isDefinedBy": {
+        "@id": "http://rdaregistry.info/Elements/a/",
+        "url": "http://metadataregistry.org/schema/show/id/81.html",
+        "label": "RDA Agent properties"
+    },
+    "label": {
+        "en": "is degree supervisor of",
+        "fr": "est le superviseur académique de",
+        "el": "είναι επόπτης καθηγητής του"
+    },
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/degreeSupervisorOf.en",
+    "name": {
+        "en": "degreeSupervisorOf",
+        "el": "επόπτηςΚαθηγητήςΤου"
+    },
+    "status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+        "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
+        "url": "http://metadataregistry.org/concept/show/id/412.html",
+        "label": "Published"
+    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50131",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
+            "label": "is other agent associated with work of"
+        }
+    ],
+    "ToolkitDefinition": {
+        "fr": "Personne supervisant un diplôme universitaire de niveau supérieur.",
+        "en": "A work that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για την επίβλεψη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας για την απόκτηση είτε ενός ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού."
+    },
+    "ToolkitLabel": {
+        "fr": "superviseur académique de",
+        "en": "degree supervisor of",
+        "el": "επόπτης καθηγητής του"
+    },
+    "url": "http://metadataregistry.org/schemaprop/show/id/13956.html"
+}
