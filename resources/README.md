@@ -4,4 +4,4 @@ The [bibframe RDF view](http://id.loc.gov/ontologies/bibframe.rdf) and [bflc ext
 
 The turtle versions are generated via `jena riot`.
 
-The `RDA-Vocabularies` are cloned from [RDA-Vocabularies](https://github.com/RDARegistry/RDA-Vocabularies) and specify some of the authoritative values of literals that occur in bibframe, e.g., `bf:BookFormat`.
+The `RDA-Vocabularies` are cloned from [RDA-Vocabularies](https://github.com/RDARegistry/RDA-Vocabularies) and specify some of the authoritative values of literals that occur in bibframe, e.g., `bf:BookFormat`. [See also](http://www.rdaregistry.info).
