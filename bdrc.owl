@@ -395,6 +395,40 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/outline#beginsAt -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outline#beginsAt">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#objectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/outline#Node"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/outline#Outline"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/work#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/outline#endsAt -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outline#endsAt">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#objectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/outline#Node"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/outline#Outline"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/work#Location"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/outline#hasDetail -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outline#hasDetail">
@@ -456,6 +490,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/work#Location"/>
+        <owl:deprecated xml:lang="en">replaced by out:beginsAt and out:endsAt</owl:deprecated>
     </owl:ObjectProperty>
     
 

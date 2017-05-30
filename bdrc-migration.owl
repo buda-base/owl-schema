@@ -490,6 +490,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/work#Location"/>
+        <owl:deprecated xml:lang="en">replaced by out:beginsAt and out:endsAt</owl:deprecated>
     </owl:ObjectProperty>
     
 
