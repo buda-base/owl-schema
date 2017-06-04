@@ -78,6 +78,15 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/root#dataTypeExpression -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#dataTypeExpression">
+        <skos:definition xml:lang="en">Defines a regex that validates a subclass of xsd:string.</skos:definition>
+        <skos:prefLabel xml:lang="en">DataType Expression</skos:prefLabel>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/root#external -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/root#external">
@@ -166,6 +175,17 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/root#LCCN -->
+
+    <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/root#LCCN">
+        <dataTypeExpression>[[a-z]|[[a-z][a-z]|dd]|[a-z][[a-z][a-z]|dd]|[a-z][a-z]dd]dddddddd</dataTypeExpression>
+        <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/marc/lccn-namespace.html"/>
+        <skos:prefLabel xml:lang="en">Library of Congress Control Number</skos:prefLabel>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
     
 
 
