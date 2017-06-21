@@ -388,7 +388,11 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/base/corpObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/base/Corporation"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/place#Place"/>
-        <rdfs:comment xml:lang="endcirca. the uses are not correct and these attributes have not been included in the current model.  thus crp:region maps crp:corporation directly to plc:place without any additional chaff">The original corporation.xsd includes several attributes on &lt;region/&gt;: @start, @startCirca, @end, @endCirca that are not used except in one case for @start, C71, and a different instance, C13, for </rdfs:comment>
+        <rdfs:comment xml:lang="en">
+The original corporation.xsd includes several attributes on &lt;region/&gt;: @start, @startCirca, @end, @endCirca that are not used except in one case 
+for @start, C71, and a different instance, C13, for @endCirca. The uses are not correct and these attributes have not been included in the current model.
+
+Thus crp:region maps crp:Corporation directly to plc:Place without any additional chaff</rdfs:comment>
     </owl:ObjectProperty>
     
 
