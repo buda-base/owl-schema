@@ -397,6 +397,15 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/inTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/inTaxonomy">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Taxonomy"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/lineageAlternative -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/lineageAlternative">
@@ -730,19 +739,22 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personEvent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEvent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personEventObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
         <rdfs:comment xml:lang="en">The source person.xsd includes event/pid which is not used and should be silently discarded during migration.</rdfs:comment>
         <rdfs:label xml:lang="en">event</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/personEventObjectProperty -->
+    <!-- http://purl.bdrc.io/ontology/personEventType -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEventObjectProperty">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEventType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
     </owl:ObjectProperty>
     
 
@@ -750,8 +762,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personEvent_corporation -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEvent_corporation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personEventObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Corporation"/>
     </owl:ObjectProperty>
     
@@ -760,8 +772,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personEvent_office -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEvent_office">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personEventObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Role"/>
     </owl:ObjectProperty>
     
@@ -770,8 +782,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personEvent_place -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEvent_place">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personEventObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
     </owl:ObjectProperty>
     
@@ -780,7 +792,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personHasConsort -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personHasConsort">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Person"/>
     </owl:ObjectProperty>
     
@@ -789,7 +801,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personHasName -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personHasName">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
@@ -802,9 +814,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personHasSeat -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personHasSeat">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/person#Seat"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonSeat"/>
     </owl:ObjectProperty>
     
 
@@ -812,9 +824,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personIncarnationOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personIncarnationOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/person#IncarnationOf"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonIncarnationOf"/>
         <rdfs:comment>The IncarnationOf records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -823,8 +835,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personIncarnationOf_being -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personIncarnationOf_being">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#IncarnationOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonIncarnationOf"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -837,13 +849,33 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/personKinType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personKinType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Kin"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/personKinWho -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personKinWho">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Kin"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Person"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/personKinWith -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personKinWith">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Person"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Kin"/>
         <bdo:inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bdo:inferSubTree>
     </owl:ObjectProperty>
     
@@ -852,7 +884,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personNameType -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personNameType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
         <rdfs:comment xml:lang="en">the type of name described by the PersonName such as primary, first ordination, etc.</rdfs:comment>
@@ -861,16 +893,10 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
-    <!-- http://purl.bdrc.io/ontology/personObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personObjectProperty"/>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/personOfSect -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personOfSect">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Topic"/>
     </owl:ObjectProperty>
@@ -880,8 +906,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personSeat_place -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personSeat_place">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Seat"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonSeat"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
     </owl:ObjectProperty>
     
@@ -890,7 +916,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personStudentOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personStudentOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/personTeacherOf"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Person"/>
@@ -901,7 +927,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <!-- http://purl.bdrc.io/ontology/personTeacherOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personTeacherOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1070,6 +1096,33 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/taxElementOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/taxElementOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/taxExemplar -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/taxExemplar">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/taxSubClass -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/taxSubClass">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/volumesForWork -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/volumesForWork">
@@ -1208,306 +1261,6 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasAunt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasAunt">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasParentSibling"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasBrother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasBrother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSibling"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasBrotherInLaw -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasBrotherInLaw">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasInLaw"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasChild -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasChild">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/person#hasParent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasCousin -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasCousin">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasDaughter -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasDaughter">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasChild"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasFather -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasFather">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasParent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasGrandChild -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasGrandChild">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/person#hasGrandParent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasGrandParent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasGrandParent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasGranddaughter -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasGranddaughter">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasGrandChild"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasGrandfather -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasGrandfather">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasGrandParent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasGrandmother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasGrandmother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasGrandParent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasGrandson -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasGrandson">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasGrandChild"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasHusband -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasHusband">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSpouse"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasInLaw -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasInLaw">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasMaternalAunt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasMaternalAunt">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasAunt"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasMaternalUncle -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasMaternalUncle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasUncle"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasMother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasMother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasParent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasNephew -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasNephew">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasNibling"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasNibling -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasNibling">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasNiece -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasNiece">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasNibling"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasOlderBrother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasOlderBrother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasBrother"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasOlderSister -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasOlderSister">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSister"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasParent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasParent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasParentSibling -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasParentSibling">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasPaternalAunt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasPaternalAunt">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasAunt"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasPaternalUncle -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasPaternalUncle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasUncle"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasSibling -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSibling">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasSister -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSister">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSibling"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasSisterInLaw -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSisterInLaw">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasInLaw"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasSon -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSon">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasChild"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasSpouse -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasSpouse">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasUncle -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasUncle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasParentSibling"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasUnknownKinship -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasUnknownKinship">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/personKinWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasWife -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasWife">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSpouse"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasYoungerBrother -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasYoungerBrother">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasBrother"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#hasYoungerSister -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/person#hasYoungerSister">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#hasSister"/>
     </owl:ObjectProperty>
     
 
@@ -2453,7 +2206,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/person#event_circa">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2527,7 +2280,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/person#incarnationOf_relation">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#IncarnationOf"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonIncarnationOf"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -2583,7 +2336,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/person#incarnationOf_secondary">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#IncarnationOf"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonIncarnationOf"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -2733,7 +2486,7 @@ In any event, when a per:Person is being migrated with info/@type = nonActor the
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/person#seat_circa">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/person#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/person#Seat"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonSeat"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -4256,6 +4009,22 @@ If the data attribute is present the web-client will use it to display a link th
     
 
 
+    <!-- http://purl.bdrc.io/ontology/Kin -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/Kin">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/KinType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/KinType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/Lineage -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Lineage">
@@ -4398,10 +4167,50 @@ Text nodes typically describe a single work, e.g., a sutra, tantra or commentary
     
 
 
+    <!-- http://purl.bdrc.io/ontology/PersonEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/personEvent_corporation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/Corporation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/personEvent_office"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/personEvent_place"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <bdo:inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bdo:inferSubTree>
+        <rdfs:comment xml:lang="pid which is not used and should be silently discarded during migration.">The source person.xsd includes event/</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/PersonEventType -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonEventType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonIncarnationOf -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonIncarnationOf">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+        <rdfs:comment>The IncarnationOf records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary.</rdfs:comment>
     </owl:Class>
     
 
@@ -4420,6 +4229,14 @@ Text nodes typically describe a single work, e.g., a sutra, tantra or commentary
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonNameType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonSeat -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonSeat">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
     </owl:Class>
     
 
@@ -4513,6 +4330,22 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/StatusType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/TaxClass -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/TaxClass">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/Taxonomy -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/Taxonomy">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Entity"/>
     </owl:Class>
     
 
@@ -4807,182 +4640,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Volume">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Affiliation -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Affiliation">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Birth -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Birth">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Death -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Death">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Divorce -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Divorce">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Event -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Event">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Facet"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/personEvent_corporation"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/Corporation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/personEvent_office"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/personEvent_place"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <bdo:inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bdo:inferSubTree>
-        <rdfs:comment>The source person.xsd includes event/@pid which is not used and should be silently discarded during migration.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Facet -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Facet">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#FinalOrdination -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#FinalOrdination">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#GterMaDiscovery -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#GterMaDiscovery">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#IncarnationOf -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#IncarnationOf">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Facet"/>
-        <rdfs:comment>The IncarnationOf records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Marriage -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Marriage">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#MonasteryFoundation -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#MonasteryFoundation">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#NotSpecified -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#NotSpecified">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#OfficeAssume -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#OfficeAssume">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#OfficeLeave -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#OfficeLeave">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#RabByungOrdination -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#RabByungOrdination">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Residence -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Residence">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#Seat -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#Seat">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Facet"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#SeatAssume -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#SeatAssume">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/person#SeatLeave -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/person#SeatLeave">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/person#Event"/>
     </owl:Class>
     
 
@@ -5733,6 +5390,19 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment xml:lang="en">the set of all Things in the bdrc ontology are factored into subsets that represent 
+
+    the principle concepts/entities
+    facets/n-ary properties of the principle concepts
+    types of resources such as place events, work titles and so on 
+    classes from 3rd party ontologies that are referred to</rdfs:comment>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -5741,6 +5411,358 @@ The Works also included some structural metadata in the volumeMap but that is mo
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.bdrc.io/resource/Grandparent -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Grandparent">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinAunt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinAunt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinBrother -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinBrother">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinChild -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinChild">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinCousin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinCousin">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinDaughter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinDaughter">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinDaughterInLaw -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinDaughterInLaw">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipInLawClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinFather -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinFather">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinFatherInLaw -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinFatherInLaw">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipInLawClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinGrandchild -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinGrandchild">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinGranddaughter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinGranddaughter">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinGrandfather -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinGrandfather">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinGrandmother -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinGrandmother">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinGrandson -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinGrandson">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinHusband -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinHusband">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipSpouseClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinMaternalAunt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinMaternalAunt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinMaternalUncle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinMaternalUncle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinMother -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinMother">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinMotherInLaw -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinMotherInLaw">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipInLawClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinNephew -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinNephew">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipNiblingClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinNiece -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinNiece">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipNiblingClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinOlderBrother -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinOlderBrother">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinOlderSister -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinOlderSister">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinParent -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinParent">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinParentSibling -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinParentSibling">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinPaternalAunt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinPaternalAunt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinPaternalUncle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinPaternalUncle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinSibling -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinSibling">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinSister -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinSister">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinSon -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinSon">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinSonInLaw -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinSonInLaw">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipInLawClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinSpouse -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinSpouse">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxExemplar rdf:resource="http://purl.bdrc.io/resource/KinshipSpouseClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinUncle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinUncle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinUnspecified -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinUnspecified">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxExemplar rdf:resource="http://purl.bdrc.io/resource/KinshipRootClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinWife -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinWife">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+        <bdo:taxElementOf rdf:resource="http://purl.bdrc.io/resource/KinshipSpouseClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinYoungerBrother -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinYoungerBrother">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinYoungerSister -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinYoungerSister">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/KinType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinshipInLawClass -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinshipInLawClass">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+        <bdo:inTaxonomy rdf:resource="http://purl.bdrc.io/resource/KinshipTaxonomy"/>
+        <bdo:taxSubClass rdf:resource="http://purl.bdrc.io/resource/KinshipRootClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinshipNiblingClass -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinshipNiblingClass">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+        <bdo:inTaxonomy rdf:resource="http://purl.bdrc.io/resource/KinshipTaxonomy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinshipRootClass -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinshipRootClass">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+        <bdo:inTaxonomy rdf:resource="http://purl.bdrc.io/resource/KinshipTaxonomy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinshipSpouseClass -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinshipSpouseClass">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/TaxClass"/>
+        <bdo:inTaxonomy rdf:resource="http://purl.bdrc.io/resource/KinshipTaxonomy"/>
+        <bdo:taxSubClass rdf:resource="http://purl.bdrc.io/resource/KinshipRootClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/KinshipTaxonomy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/KinshipTaxonomy">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Taxonomy"/>
+    </owl:NamedIndividual>
     
 
 
@@ -5848,6 +5870,126 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageSnyanBrgyud">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/LineageType"/>
         <rdfs:label xml:lang="en">oral lineage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventAffiliation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventAffiliation">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventAssumesOffice -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventAssumesOffice">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventAssumesSeat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventAssumesSeat">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventBirth -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventBirth">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventDeath -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventDeath">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventDivorce -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventDivorce">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventFinalOrdination -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventFinalOrdination">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventGterMaDiscovery -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventGterMaDiscovery">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventInResidence -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventInResidence">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventLeavesOffice -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventLeavesOffice">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventLeavesSeat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventLeavesSeat">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventMarriage -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventMarriage">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventMonasteryFoundation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventMonasteryFoundation">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventNotSpecified -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventNotSpecified">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PersonEventRabByungOrdination -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventRabByungOrdination">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
     </owl:NamedIndividual>
     
 
@@ -6097,14 +6239,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <rdf:Description rdf:about="http://purl.bdrc.io/ontology/StatusType">
         <rdfs:label xml:lang="en">status</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates the status of the subject description</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-        <rdfs:comment xml:lang="en">the set of all Things in the bdrc ontology are factored into subsets that represent 
-
-    the principle concepts/entities
-    facets/n-ary properties of the principle concepts
-    types of resources such as place events, work titles and so on 
-    classes from 3rd party ontologies that are referred to</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
