@@ -10,7 +10,7 @@ The modifications made to dottoxml include:
 
  - setting arrowheads on the target end of edges; 
  - setting the shape of nodes to ellipse rather than rectangle; 
- - deleting a useless comment about domain and range on edge labels that OntoGraf seems to insert when generating the edge labels from property names'; and 
+ - deleting a useless comment about domain and range on edge labels that OntoGraf seems to insert when generating the edge labels from property names; and 
  - setting the edge style to smooth Bezier rather than PolyLine
 
 Running the dottoxml is done via:
