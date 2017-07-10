@@ -624,93 +624,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/outlineHasDetail -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineHasDetail">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineHasNode -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineHasNode">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Outline"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/OutlineNode"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineHasParent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineHasParent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-        <rdfs:comment>This property is used to reference the containing Outline in the case of an large Work that is being outline via multiple smaller outlines</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineNode_class -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineNode_class">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Entity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineNode_parent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineNode_parent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-        <rdfs:comment>This property is used to reference the Conceptual Work that this Node is an instance/manifestation/edition of</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineNode_work -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineNode_work">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:comment>This attribute is being used largely incorrectly. It was intended to support some sort of linkage from the Outline of a Work to a Work that a node was related to but I don&apos;t know of any instances of this use case. It seems to largely be used as a redundant reference to the Work being outlined --- another great example of how an intended cool relational feature is not supported in the cataloguing tool in a way that makes sense to the librarians</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineOutlineOf -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/outlineOutlineOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/workOutlinedBy"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/personEvent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEvent">
@@ -941,7 +854,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAffiliatedWith_lineage">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeAffiliatedWith"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
     </owl:ObjectProperty>
     
 
@@ -1269,9 +1181,10 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <!-- http://purl.bdrc.io/ontology/workHasHolding -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasHolding">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+        <rdfs:comment xml:lang="en">References a :WorkHolding that describes a physical holding of this :Work at a particular Library (:Place).</rdfs:comment>
+        <rdfs:label xml:lang="en">has holding</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1341,12 +1254,13 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workHolding_library -->
+    <!-- http://purl.bdrc.io/ontology/workHoldingLibrary -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHolding_library">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingLibrary">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:comment xml:lang="en">The Library (Place) that contains the physical holding</rdfs:comment>
+        <rdfs:label xml:lang="en">library</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1439,6 +1353,17 @@ bdr:SomeKanjurVinayaSection a :Work ;
       :workBeginsAt bdr:WorkLocationZ001 ;
       :workEndsAt bdr:WorksLocationZ002 .</rdfs:comment>
         <rdfs:label xml:lang="en">part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPartType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workPartType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
+        <rdfs:comment xml:lang="en">If the subject Work :isPartOf another work then the referenced part type reflects the type of part: chapter, section, volume, etc</rdfs:comment>
+        <rdfs:label xml:lang="en">part type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1843,7 +1768,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineBrowserDataProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <owl:deprecated xml:lang="en">These properties are attributes of the &lt;outline:browser/&gt; element on &lt;outline:node/&gt;s. They were used in the prior www.tbrc.org web client as part of the taxonomy-driven generation of pages and are no longer used.</owl:deprecated>
     </owl:DatatypeProperty>
@@ -1886,14 +1810,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineViewInDataProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Outline"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/OutlineNode"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <owl:deprecated xml:lang="en">The Outline ViewIn properties are associated with the &lt;outline:viewIn/&gt; element of &lt;outline:node/&gt; and were used to to control taxonomy-driven page generation in the prior www.tbrc.org web client. This mechanism will not be used and so these sub-data-properties are deprecated</owl:deprecated>
     </owl:DatatypeProperty>
@@ -1971,6 +1887,42 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">This was the description of type colophon which was used primarily (exclusively?) on &lt;outline:node/&gt;s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon</rdfs:comment>
         <rdfs:label xml:lang="en">colophon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHoldingCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingCode">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHoldingCopies -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingCopies">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHoldingException -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingException">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHoldingShelf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingShelf">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -2157,7 +2109,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#node_value">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2281,14 +2232,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#webAccess">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Outline"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/OutlineNode"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -2945,51 +2888,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
-    <!-- http://purl.bdrc.io/ontology/work#holdingDataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#holdingDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#holding_code -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#holding_code">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#holdingDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#holding_copies -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#holding_copies">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#holdingDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#holding_exception -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#holding_exception">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#holdingDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#holding_shelf -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#holding_shelf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#holdingDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/work#incipit -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#incipit">
@@ -3554,14 +3452,6 @@ Every Work has a license with an associated access type. The most common case is
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#title">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/OutlineNode"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment>this models the &lt;title/&gt;defined in common.xsd. It&apos;s moved to the Work namespace since it makes more sense there and the constraints on organizing ontologies are different from those applying to XSD. The @type is modeled as subDataProperties of this property and the @lang and @encoding are modeled via the language tags that go with rdf:PlainLiteral.
@@ -3967,17 +3857,6 @@ Text nodes typically describe a single work, e.g., a sutra, tantra or commentary
     
 
 
-    <!-- http://purl.bdrc.io/ontology/OutlineNode -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/OutlineNode">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
-        <rdfs:comment>NB: The o:node/o:ref is not used in the original metadata set so there is nothing to migrate</rdfs:comment>
-        <rdfs:comment xml:lang="en">The o:node/type attribute is modeled as sub-classes of out:node and specifies the kind of content that can be expected in the node. for example, if the type is &quot;class&quot; then the node is part of a taxonomy and the information will relate to either a topic of a value that is simply a token used to identify an instance of a taxonomy element.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/OutlineType -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/OutlineType">
@@ -4313,7 +4192,22 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkHolding">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment>A holding refers to the library Place which has one or more physical copies of the  catalogued Work and shows the number of copies that are held at the library. The CData for the Holding is the Library&apos;s shelving information concerning the location in the library of the physical copies. The exception is an optional note regarding missing volumes in a copy or other information such as may  be useful to qualify the status of one or more copies</rdfs:comment>
+        <rdfs:comment>A holding refers to the library Place which has one or more physical copies of the  catalogued Work and shows the number of copies that are held at the library. The CData for the Holding is the Library&apos;s shelving information concerning the location in the library of the physical copies. The exception is an optional note regarding missing volumes in a copy or other information such as may  be useful to qualify the status of one or more copies.
+
+Example:
+
+bdr:W1TLMTGA000883 a :Work ;
+      :workHasHolding [ a :WorkHolding ;
+            :workHoldingLibrary bdr:G1TLMTGA000001 ;
+            :workHoldingCopies 1 ;
+            :workHoldingShelf &quot;ཇ|ཇ|༣||001278&quot; ;
+            :workHoldingCode &quot;TGA&quot; ] ;
+      :workHasHolding [ a :WorkHolding ;
+            :workHoldingLibrary bdr:G1TLMTGB000001 ;
+            :workHoldingCopies 1 ;
+            :workHoldingShelf &quot;ག|༦|||000026&quot; ;
+            :workHoldingCode &quot;TGB&quot; ] ;</rdfs:comment>
+        <rdfs:label xml:lang="en">Holding</rdfs:label>
     </owl:Class>
     
 
@@ -4325,6 +4219,14 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment>The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a &lt;o:location/&gt; element spec&apos;d in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase</rdfs:comment>
         <rdfs:comment>parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkPartType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkPartType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
     </owl:Class>
     
 
@@ -4352,70 +4254,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
         <rdfs:comment xml:lang="en">Indicates what type of activity, e.g., completed, edited, printed, etc., regarding a work occurred at some site (:WorkSite)</rdfs:comment>
         <rdfs:label xml:lang="en">Site what</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Chapter -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Chapter">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Class -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Class">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#NoType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#NoType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Section -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Section">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Text -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Text">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Token -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Token">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Translation -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Translation">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#Volume -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/outline#Volume">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/OutlineNode"/>
     </owl:Class>
     
 
@@ -6433,6 +6271,22 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
+    <!-- http://purl.bdrc.io/resource/WorkChapter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkChapter">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkSection -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSection">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/WorkSiteTypeCompleted -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSiteTypeCompleted">
@@ -6477,6 +6331,22 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSiteTypeWritten">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkSiteType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkText -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkText">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkVolume -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkVolume">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
     </owl:NamedIndividual>
     
 
