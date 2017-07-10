@@ -1,4 +1,0 @@
-digraph boost {
-  "wave" -> "intrusive";
-  "test" [style="filled" fillcolor="#A3A27C" shape="box"];
- }

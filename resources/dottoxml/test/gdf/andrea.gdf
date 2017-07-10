@@ -1,5 +1,0 @@
-nodedef> name
-A
-B
-A,B
-edgedef> node1,node2
