@@ -1070,6 +1070,7 @@ bdr:W30532 is a printing based on woodblocks that have a variety of &quot;correc
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/workHasExpression"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:comment xml:lang="en">Migration info: The &lt;work:info @parent/&gt; should be migrated as :workExpressionOf</rdfs:comment>
         <rdfs:comment xml:lang="en">The subject work is an expression of the referenced work. This may mean that the subject work is an edition or version or the only extant occurrence of the referenced work.
 
 This modeling is relevant when there are more than one occurrence of a work that needs to be accounted for in the library. If there is a single edition of a unique work then this elaborate modeling is not needed; however, for many works in the domain of Buddhist Universal Digital Archive there are many expressions of a single identified &quot;conceptual&quot; work such as the Kanjur, Tengyur, Nyingma Gyu Bum, Rinchen Terdzod, Nyingma Kama, Songs of Milarepa, and on and on.
@@ -1100,6 +1101,18 @@ bdr:W26071 a Work ;
             :workHasTitleType bdr:TitleTypeBibliographicTitle ]
       :workExpressionOf bdr:T2423 .</rdfs:comment>
         <rdfs:label xml:lang="en">expression of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHasAccess -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasAccess">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">permitted access</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
     </owl:ObjectProperty>
     
 
@@ -1214,7 +1227,6 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <!-- http://purl.bdrc.io/ontology/workHasPubInfoSeries -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasPubInfoSeries">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
     </owl:ObjectProperty>
@@ -1248,9 +1260,32 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <!-- http://purl.bdrc.io/ontology/workHasSourcePrintery -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasSourcePrintery">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHasTitle -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasTitle">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:comment xml:lang="en">Asserts that the subject Work has a particular title.</rdfs:comment>
+        <rdfs:label xml:lang="en">has title</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHasType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
+        <rdfs:comment xml:lang="en">Migration info: This is the &lt;work:info @nodeType/&gt; attribute NOT the unused @type attribute</rdfs:comment>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
     </owl:ObjectProperty>
     
 
@@ -1270,17 +1305,8 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <!-- http://purl.bdrc.io/ontology/workInProduct -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workInProduct">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Product"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workInfo_parent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workInfo_parent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
     </owl:ObjectProperty>
     
 
@@ -1318,20 +1344,36 @@ bdr:T354 a :Topic ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workObjectProperty -->
+    <!-- http://purl.bdrc.io/ontology/workLicense -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workObjectProperty">
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLicense">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
+        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workOutlinedBy -->
+    <!-- http://purl.bdrc.io/ontology/workLocationWork -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workOutlinedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLocationWork">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:label xml:lang="en">work location</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPagination -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workPagination">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PaginationType"/>
+        <rdfs:label xml:lang="en">pagination</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/PaginationType"/>
     </owl:ObjectProperty>
     
 
@@ -1366,6 +1408,15 @@ bdr:SomeKanjurVinayaSection a :Work ;
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
         <rdfs:comment xml:lang="en">If the subject Work :isPartOf another work then the referenced part type reflects the type of part: chapter, section, volume, etc</rdfs:comment>
         <rdfs:label xml:lang="en">part type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoPrintType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPrintType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
     </owl:ObjectProperty>
     
 
@@ -1410,6 +1461,18 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workTitleType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workTitleType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+        <rdfs:comment xml:lang="en">The type of the title, e.g., fullTitle, titlePageTitle and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workTranslationOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workTranslationOf">
@@ -1418,16 +1481,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:comment xml:lang="en">The subject work is identified as a translation of the referenced work. This will be used, for example, when the subject work is a Tibetan translation of a referenced Sanskrit work.</rdfs:comment>
         <rdfs:label xml:lang="en">translation of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workWork -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workWork">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/workObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
     </owl:ObjectProperty>
     
 
@@ -1882,6 +1935,114 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
+    <!-- http://purl.bdrc.io/ontology/volumeImageList -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeImageList">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeNumber">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumePagesIntro -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesIntro">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumePagesTbrcIntro -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesTbrcIntro">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumePagesText -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesText">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumePagesTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesTotal">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumeQcDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeQcDate">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumeQcNote -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeQcNote">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumeQcPerson -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeQcPerson">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/volumeScanVenue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeScanVenue">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="venue attribute from ScanRequest. It records where the scanning was to take place">this property is used to migrate the </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workCatalogInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workCatalogInfo">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workColophon -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workColophon">
@@ -1937,6 +2098,17 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
         <rdfs:comment xml:lang="en">Identifies where the holding is shelved. The shelf code is based on a library specific taxonomy</rdfs:comment>
         <rdfs:label xml:lang="en">shelf</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workIsNumbered -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workIsNumbered">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">True if this Work is part of a series. In which case it should have a :workSeriesNumber</rdfs:comment>
+        <rdfs:label xml:lang="en">is numbered</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2035,6 +2207,253 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
         </rdfs:range>
         <rdfs:comment xml:lang="en">this should be a positive integer indicating the volume of the Work referenced in this Location</rdfs:comment>
         <rdfs:label xml:lang="en">volume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workNumberOfVolumes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workNumberOfVolumes">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">Migration info: this is the &lt;work:archiveInfo @vols/&gt; attribute.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the number of volumes (if any) associated with the Work. Typically this is for a published work. The value may differ from the &quot;actual&quot; number of volumes in an associated Item owing to missing volumes.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of volumes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoAuthorshipStatement -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoAuthorshipStatement">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoBiblioNote -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoBiblioNote">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoDateOfWriting -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoDateOfWriting">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoDimensions -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoDimensions">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoEncoding -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoEncoding">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoIllustrations -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoIllustrations">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoIsbn -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoIsbn">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ISBN"/>
+        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Isbn class</adm:convertProperty>
+        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Isbn"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoLcCallNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoLcCallNumber">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LCCallNumber"/>
+        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe ShelfMarkLcc class</adm:convertProperty>
+        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoLccn -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoLccn">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LCCN"/>
+        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Lccn class</adm:convertProperty>
+        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Lccn"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoPL480 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPL480">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoPrintery -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPrintery">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoPublisherDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPublisherDate">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoPublisherLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPublisherLocation">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoPublisherName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPublisherName">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoSeeHarvard -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoSeeHarvard">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoSeriesContent -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoSeriesContent">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoSeriesName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoSeriesName">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoSeriesNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoSeriesNumber">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoSourceNote -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoSourceNote">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoSourcePrintery_string -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoSourcePrintery_string">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoTbrcHoldings -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoTbrcHoldings">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoVolumes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoVolumes">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfo_EditionStatement -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfo_EditionStatement">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workScanInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workScanInfo">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workSeriesNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeriesNumber">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This is the number of this Work in a series - implies that this work is a part (member of) a series Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2238,37 +2657,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#vinayottaragrantha">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#webAccess -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#webAccess">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>abstractOnly</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>fullAccess</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>notAvailable</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -2596,889 +2984,20 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
-    <!-- http://purl.bdrc.io/ontology/volumes#dataProperty -->
+    <!-- http://purl.bdrc.io/ontology/work#pubinfoExtent -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#dataProperty">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#imageList -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#imageList">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#pages_intro -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#pages_intro">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#pages_tbrcintro -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#pages_tbrcintro">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#pages_text -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#pages_text">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#pages_total -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#pages_total">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#qcdate -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#qcdate">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#qcnote -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#qcnote">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#qcperson -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#qcperson">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/volumes#scan_venue -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumes#scan_venue">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/volumes#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Item"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>this property is used to migrate the @venue attribute from ScanRequest. It records where the scanning was to take place</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#access -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#access">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#archiveInfo"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfoExtent">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>fairUse</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>openAccess</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>restrictedByQuality</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>restrictedByTbrc</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>restrictedInChina</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>restrictedSealed</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>temporarilyRestricted</rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/work#archiveInfo -->
+    <!-- http://purl.bdrc.io/ontology/work#pubinfoHollis -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#archiveInfo">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfoHollis">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#archiveInfo_status -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#archiveInfo_status">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#archiveInfo"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>formattedClean</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>formattedPoor</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>needsReconstruction</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>notInTBRC</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>scanned</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#archiveInfo_vols -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#archiveInfo_vols">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#archiveInfo"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#bibliographicalTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#bibliographicalTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#captionTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#captionTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#catalogInfo -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#catalogInfo">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#colophonTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#colophonTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#copyrightPageTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#copyrightPageTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#coverTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#coverTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#dataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#dataProperty"/>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#dkarChagTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#dkarChagTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#fullTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#fullTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#halfTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#halfTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#incipit -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#incipit">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#infoProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#infoProperty">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#info_edition -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#info_edition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#infoProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#info_nodeType -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#info_nodeType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#infoProperty"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>bibliographicOnly</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>conceptualWork</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>isIntendedTranslationOf</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>isPublishedTranslationOf</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>isUnpublishedTranslationOf</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>publishedWork</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>series</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>unicodeText</rdf:first>
-                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#info_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#info_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#infoProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#info_numbered -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#info_numbered">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#infoProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#info_seriesType -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#info_seriesType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#infoProperty"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>monographic</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>multipart</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>non-monographic</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>serial</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>supplement</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#license -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#license">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#archiveInfo"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>ccby</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>copyright</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:comment>The wrk:license property models both the @license and @access items from &lt;archiveInfo/&gt; in work.xsd.
-
-Every Work has a license with an associated access type. The most common case is wrk:Wxxxx wrk:ccby &quot;openAccess&quot;. The next most common is wrk:Wyyyy wrk:copyright &quot;fairUse&quot;.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#otherTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#otherTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#portion -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#portion">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfoDataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfoDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_authorshipStatement -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_authorshipStatement">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_biblioNote -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_biblioNote">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_dateOfWriting -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_dateOfWriting">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_dimensions -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_dimensions">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_editionStatement -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_editionStatement">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_encoding -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_encoding">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_extent -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_extent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_hollis -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_hollis">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_illustrations -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_illustrations">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_isbn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_isbn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ISBN"/>
-        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Isbn class</adm:convertProperty>
-        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Isbn"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_lcCallNumber -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_lcCallNumber">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LCCallNumber"/>
-        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe ShelfMarkLcc class</adm:convertProperty>
-        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_lccn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_lccn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LCCN"/>
-        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Lccn class</adm:convertProperty>
-        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Lccn"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_pl480 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_pl480">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_printType -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_printType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>OCR</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>blockprint</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>computerInput</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>dbuCan</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>dbuMed</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>facsimile</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>typeSet</rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_printery -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_printery">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_publisherDate -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_publisherDate">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_publisherLocation -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_publisherLocation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_publisherName -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_publisherName">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_seeHarvard -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_seeHarvard">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_series -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_series">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_seriesName -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_seriesName">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_seriesNumber -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_seriesNumber">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_series_content -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_series_content">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfo_series"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_series_name -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_series_name">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfo_series"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_series_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_series_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfo_series"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_sourceNote -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_sourceNote">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_sourcePrintery_string -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_sourcePrintery_string">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_tbrcHoldings -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_tbrcHoldings">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfo_volumes -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfo_volumes">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#pubinfoDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#runningTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#runningTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#scanInfo -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#scanInfo">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#sectionTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#sectionTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#spineTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#spineTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#subtitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#subtitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#title -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#title">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#dataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
-        <rdfs:comment>this models the &lt;title/&gt;defined in common.xsd. It&apos;s moved to the Work namespace since it makes more sense there and the constraints on organizing ontologies are different from those applying to XSD. The @type is modeled as subDataProperties of this property and the @lang and @encoding are modeled via the language tags that go with rdf:PlainLiteral.
-
-The wrk:title(s) are applicable to Work resources and Outline Node facets</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#titlePageTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#titlePageTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/work#title"/>
     </owl:DatatypeProperty>
     
 
@@ -3879,6 +3398,19 @@ Text nodes typically describe a single work, e.g., a sutra, tantra or commentary
     
 
 
+    <!-- http://purl.bdrc.io/ontology/PaginationType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PaginationType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">Indicates whether the outlining is relative or absolute. This refers to the convention for WorkLocation information. Almost all outlining is done with absolute pagination.
+
+Relative pagination uses pagination in the content of the work while absolute counts from the first image of a scanned volume an since there are 2 scanned pages of metadata in each volume, absolute pagination generally starts at 3.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration info: The pagination information affects the interpretation of the :WorkLocation(s) that occur in the original outline. The migration should add the pagination information to each WorkLocation since there will no longer be an Outline document</rdfs:comment>
+        <rdfs:label xml:lang="en">pagination type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/Person -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Person">
@@ -4037,6 +3569,15 @@ Text nodes typically describe a single work, e.g., a sutra, tantra or commentary
     
 
 
+    <!-- http://purl.bdrc.io/ontology/PrintType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PrintType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">Type print: manuscript, computer, woodblock, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/Product -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Product">
@@ -4186,6 +3727,16 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
+    <!-- http://purl.bdrc.io/ontology/WorkAccessType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkAccessType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">The type of access reflects whether and how much of the content of a Work is made available online.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Access Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/WorkCreator -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCreator">
@@ -4241,11 +3792,22 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/WorkLicense -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkLicense">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/WorkLocation -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkLocation">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
+        <rdfs:comment xml:lang="en">The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage</rdfs:comment>
         <rdfs:comment>The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a &lt;o:location/&gt; element spec&apos;d in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase</rdfs:comment>
         <rdfs:comment>parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location</rdfs:comment>
     </owl:Class>
@@ -4283,6 +3845,46 @@ bdr:W1KG20928 a :Work ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
         <rdfs:comment xml:lang="en">Indicates what type of activity, e.g., completed, edited, printed, etc., regarding a work occurred at some site (:WorkSite)</rdfs:comment>
         <rdfs:label xml:lang="en">Site what</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+        <rdfs:comment xml:lang="en">A title for the Work including the title text and title type: full, sub, etc:
+
+
+bdr:W22083 a :Work ;
+      :workHasTitle [ a :WorkTitle ;
+            :workTitleType bdr:WorkBibliogrpahicTitle ;
+            rdfs:label &quot;bka&apos; &apos;gyur (stog pho brang bris ma/)&quot;@bo-x-ewts ] ;
+      :workHasTitle [ a :WorkTitle ;
+            :workTitleType bdr:WorkOtherTitle ;
+            rdfs:label &quot;la dwags tog mu mkhar bzhugs pa&apos;i bod yig bka&apos; &apos;gyur bris ma/&quot;@bo-x-ewts ] ;
+      :workHasTitle [ a :WorkTitle ;
+            :workTitleType bdr:WorkTitlePageTitle ;
+            rdfs:label &quot;the tog palace manuscript of the tibetan kanjur&quot;@en ] .</rdfs:comment>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkTitleType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitleType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the &lt;work:info @nodeType/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">type of work</rdfs:label>
     </owl:Class>
     
 
@@ -5117,6 +4719,24 @@ bdr:W1KG20928 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeSubjectCollection">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PaginationAbsolute -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaginationAbsolute">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PaginationType"/>
+        <rdfs:label xml:lang="en">absolute pagination</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PaginationRelative -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaginationRelative">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PaginationType"/>
+        <rdfs:label xml:lang="en">relative pagination</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6120,6 +5740,62 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/PrintTypeBlockPrint -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeBlockPrint">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeComputerInput -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeComputerInput">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeDbuCan -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeDbuCan">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeDbuMed -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeDbuMed">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeFacsimile -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeFacsimile">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeOCR -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeOCR">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeTypeSet -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeTypeSet">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/StatusAccessioned -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusAccessioned">
@@ -6300,6 +5976,92 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/WorkAccessFairUse -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessFairUse">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">A copyrighted Work permits a small portion of its contents to be made available</rdfs:comment>
+        <rdfs:label xml:lang="en">Fair Use</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkAccessOpen -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessOpen">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">The contents of the Work are freely avaiable in their entirety</rdfs:comment>
+        <rdfs:label xml:lang="en">Open Access</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedByQuality -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedByQuality">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">The quality of the scanning or eText conversion to poor to warrant making it available online.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restricted by Quality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedByTbrc -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedByTbrc">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">BDRC is restricting access to the Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restricted by BDRC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedInChina -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedInChina">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">The Work is not to be made available in the PRC.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restricted in China</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedSealed -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedSealed">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">The Work is sealed by tradition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restricted Sealed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedTemporarily -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedTemporarily">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:comment xml:lang="en">The Work is temporarily restricted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporarily Restricted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkBibliographicTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkBibliographicTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkCaptionTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkCaptionTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/WorkChapter -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkChapter">
@@ -6308,10 +6070,90 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/WorkColophonTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkColophonTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkCopyrightPageTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkCopyrightPageTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkCoverTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkCoverTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkDkarChagTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkDkarChagTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkFullTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkFullTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkHalfTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkHalfTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkIncipit -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkIncipit">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkOtherTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkOtherTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkRunningTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkRunningTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/WorkSection -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSection">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkSectionTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSectionTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
     </owl:NamedIndividual>
     
 
@@ -6364,10 +6206,74 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/WorkSpineTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSpineTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkSubtitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSubtitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/WorkText -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkText">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkTitlePageTitle -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTitlePageTitle">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkTitlePortion -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTitlePortion">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkTypeConceptualWork -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeConceptualWork">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkTypePublishedWork -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypePublishedWork">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkTypeSeries -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeSeries">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkTypeUnicodeText -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeUnicodeText">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
     </owl:NamedIndividual>
     
 
