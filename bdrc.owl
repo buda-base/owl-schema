@@ -1043,6 +1043,18 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workCreator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workCreator">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkCreator"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
+        <rdfs:comment xml:lang="en">Identifies the type and person that are a creator of the work</rdfs:comment>
+        <rdfs:label xml:lang="en">has creator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workCreatorType -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workCreatorType">
@@ -1142,18 +1154,6 @@ bdr:W26071 a Work ;
         <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
         <rdfs:label xml:lang="en">permitted access</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHasCreator -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasCreator">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkCreator"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
-        <rdfs:comment xml:lang="en">Identifies the type and person that are a creator of the work</rdfs:comment>
-        <rdfs:label xml:lang="en">has creator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1291,30 +1291,6 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasSourcePrintery">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHasTitle -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasTitle">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
-        <rdfs:comment xml:lang="en">Asserts that the subject Work has a particular title.</rdfs:comment>
-        <rdfs:label xml:lang="en">has title</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHasType -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasType">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
-        <rdfs:comment xml:lang="en">Migration info: This is the &lt;work:info @nodeType/&gt; attribute NOT the unused @type attribute</rdfs:comment>
-        <rdfs:label xml:lang="en">has type</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
     </owl:ObjectProperty>
     
 
@@ -1502,6 +1478,18 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workTitle -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workTitle">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:comment xml:lang="en">Asserts that the subject Work has a particular title.</rdfs:comment>
+        <rdfs:label xml:lang="en">has title</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workTitleType -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workTitleType">
@@ -1522,6 +1510,18 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:comment xml:lang="en">The subject work is identified as a translation of the referenced work. This will be used, for example, when the subject work is a Tibetan translation of a referenced Sanskrit work.</rdfs:comment>
         <rdfs:label xml:lang="en">translation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
+        <rdfs:comment xml:lang="en">Migration info: This is the &lt;work:info @nodeType/&gt; attribute NOT the unused @type attribute</rdfs:comment>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkType"/>
     </owl:ObjectProperty>
     
 
@@ -2308,6 +2308,24 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workPubinfoExtent -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoExtent">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workPubinfoHollis -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoHollis">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workPubinfoIllustrations -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoIllustrations">
@@ -3021,24 +3039,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#wb_pop_2010">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfoExtent -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfoExtent">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work#pubinfoHollis -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work#pubinfoHollis">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -6182,6 +6182,27 @@ The relations that are used to organize the :KinType individuals are the :taxEle
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkIncipit">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkLicenseCCBY -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLicenseCCBY">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
+        <rdfs:label xml:lang="en">CC-BY</rdfs:label>
+        <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC-BY, license with attribution</rdfs:label>
+        <rdfs:seeAlso rdf:resource="&lt;https://creativecommons.org/licenses/&gt;"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkLicenseCopyrighted -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLicenseCopyrighted">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
+        <rdfs:comment xml:lang="en">This work is copyrighted and BDRC will only make at most fairuse access available</rdfs:comment>
+        <rdfs:label xml:lang="en">copyrighted</rdfs:label>
     </owl:NamedIndividual>
     
 
