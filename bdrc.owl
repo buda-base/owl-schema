@@ -847,37 +847,13 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/placeAffiliatedWith -->
+    <!-- http://purl.bdrc.io/ontology/placeAddress -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAffiliatedWith">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceEvent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeAffiliatedWith_corporation -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAffiliatedWith_corporation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeAffiliatedWith"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Corporation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeAffiliatedWith_lineage -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAffiliatedWith_lineage">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeAffiliatedWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeAffiliatedWith_office -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAffiliatedWith_office">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeAffiliatedWith"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Role"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAddress">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:comment xml:lang="en">Associates modern address information with a Place</rdfs:comment>
+        <rdfs:label xml:lang="en">address</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -885,57 +861,33 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <!-- http://purl.bdrc.io/ontology/placeContains -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeContains">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/placeIsLocatedIn"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/placeLocatedIn"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:comment xml:lang="en">Identifies a Place that this Place contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/placeHasAddress -->
+    <!-- http://purl.bdrc.io/ontology/placeEvent -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeHasAddress">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeHasEvent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeHasEvent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeEvent">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PlaceEvent"/>
+        <rdfs:comment xml:lang="en">Identifies an event that occurred at this Place, e.g., founded, rebuilt, deserted, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">event</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/placeHasGIS -->
+    <!-- http://purl.bdrc.io/ontology/placeEventAffiliation -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeHasGIS">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeHasTLM_taxonomy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeHasTLM_taxonomy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-        <rdfs:comment>The TLMTaxonomy references a Taxonomy Outline that specifies the Library&apos;s shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeIsLocatedIn -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeIsLocatedIn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeEventAffiliation">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceEvent"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+        <rdfs:comment xml:lang="en">Refers to the Tradition that the place event is affiliated with.</rdfs:comment>
+        <rdfs:label xml:lang="en">affiliated tradition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -943,17 +895,33 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <!-- http://purl.bdrc.io/ontology/placeIsNear -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeIsNear">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/placeObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:comment xml:lang="en">Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/placeObjectProperty -->
+    <!-- http://purl.bdrc.io/ontology/placeLocatedIn -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeLocatedIn">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:comment xml:lang="en">Identifies a Place that this Place is located in - usually a single Place but to account for changes over time in the definitions of regions and such it may be necessary to have multiple associations.</rdfs:comment>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeTlmTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeTlmTaxonomy">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Taxonomy"/>
+        <rdfs:comment xml:lang="en">Identifies a Taxonomy that specifies the Library&apos;s shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design.</rdfs:comment>
+        <rdfs:label xml:lang="en">TLM taxonomy</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -1534,210 +1502,88 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/addressCity -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressCity">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">city</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/addressCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressCountry">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/addressNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressNumber">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/addressPostal -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressPostal">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">postasl code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/addressState -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressState">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">state</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/addressStreet -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressStreet">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">street</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/desc_NoType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/desc_NoType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">description with no type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/desc_status -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/desc_status">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">description status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/description">
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionAccess -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionAccess">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionAuthorship -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionAuthorship">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionCompletionDate -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionCompletionDate">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionContents -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionContents">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionDate -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionDate">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionDld -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionDld">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionDpl480 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionDpl480">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionErrata -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionErrata">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionFeatured -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionFeatured">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionHungarianAcademyofSciences -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionHungarianAcademyofSciences">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionIsIAO -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionIsIAO">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionLicense -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionLicense">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionLocation -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionLocation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionNameLex -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionNameLex">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionNoType -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionNoType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionOrientalInstitute.Prague -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionOrientalInstitute.Prague">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionStatus -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionStatus">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionSummary -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionSummary">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionThumbnail -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionThumbnail">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionTib.Hand.und.Blockdrucke -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionTib.Hand.und.Blockdrucke">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionToyoBunko -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionToyoBunko">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionWhat -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionWhat">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionWhen -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionWhen">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionWhere -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionWhere">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/descriptionWho -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/descriptionWho">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/description"/>
     </owl:DatatypeProperty>
     
 
@@ -1849,90 +1695,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/outlineBrowserDataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineBrowserDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <owl:deprecated xml:lang="en">These properties are attributes of the &lt;outline:browser/&gt; element on &lt;outline:node/&gt;s. They were used in the prior www.tbrc.org web client as part of the taxonomy-driven generation of pages and are no longer used.</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineBrowser_class -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineBrowser_class">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineBrowserDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineBrowser_funct -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineBrowser_funct">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineBrowserDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineBrowser_module -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineBrowser_module">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineBrowserDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineBrowser_params -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineBrowser_params">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineBrowserDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineViewInDataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineViewInDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <owl:deprecated xml:lang="en">The Outline ViewIn properties are associated with the &lt;outline:viewIn/&gt; element of &lt;outline:node/&gt; and were used to to control taxonomy-driven page generation in the prior www.tbrc.org web client. This mechanism will not be used and so these sub-data-properties are deprecated</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineViewIn_content -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineViewIn_content">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineViewInDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineViewIn_label -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineViewIn_label">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineViewInDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineViewIn_list -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineViewIn_list">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineViewInDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outlineViewIn_target -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outlineViewIn_target">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outlineViewInDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/personIsNonActor -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/personIsNonActor">
@@ -1943,6 +1705,316 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
 
 In any event, when a per:Person is being migrated with info/@type = nonactor then simply assert:  p? :personNonActor true, and we will be able to locate these individuals after migration for further attention</rdfs:comment>
         <rdfs:label xml:lang="en">non actor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeAccuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeAccuracy">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The accuracy of the latitude and longitude</rdfs:comment>
+        <rdfs:label xml:lang="en">accuracy</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeChgisId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeChgisId">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A legacy Chinese gis id for the Place provided during migration of historical Tibetan Places by Karl Ryavek and Lex Berman</rdfs:comment>
+        <rdfs:comment xml:lang="en">chgis id</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeGB2260-2013 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeGB2260-2013">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The 2013 Chinese GB code for the Place. Similar to U.S. Zipcode</rdfs:comment>
+        <rdfs:label xml:lang="en">GB2260-2013</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeIdLex -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeIdLex">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Place ID assigned by Lex Berman used for import of historical Tibetan place information.</rdfs:comment>
+        <rdfs:label xml:lang="en">place ID Lex</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeIdTBRC -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeIdTBRC">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavek used for import of historical Tibetan place information.</rdfs:comment>
+        <rdfs:label xml:lang="en">place id TBRC</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeLat -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeLat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The latitude of the Place</rdfs:comment>
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeLong -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeLong">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The longitude of the Place</rdfs:comment>
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeRegionPoly -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeRegionPoly">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The object of this property is an xsd:string representing a geoJSON Polygon or Mulit-Polygon. See http://geojson.org/geojson-spec.html</rdfs:comment>
+        <rdfs:label xml:lang="en">region poly</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeWB2000 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeWB2000">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">THe World Bank 2000 population for the Place</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeWB2010 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeWB2010">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The World Bank 2010 population for the Place</rdfs:comment>
+        <rdfs:label xml:lang="en">WB 2010 population</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/placeWBArea -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeWBArea">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The area in square km of the Place from the World Bank 2010</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_accession -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_accession">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The accession attribute records the next accession number to be allocated for the Library. The num should be a 6 digit zero filled string initialized to &quot;000001&quot;. This number is incremented each time a new holdng is added for this library.</rdfs:comment>
+        <rdfs:label xml:lang="en">accession</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_admin -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_admin">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The admin property records the name of the group of users that are permitted to update the Library and Monastery profiles for the Library. The group name will conventionally be named by lower-casing the hasTLM_code property value and appending &quot;Admin&quot;. For example, &quot;dzlAdmin&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">tlm admin group</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_adminEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_adminEmail">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The admin email is used to send requests for new users to be added to the Library.</rdfs:comment>
+        <rdfs:label xml:lang="en">tlm admin email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_code -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_code">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>the code attribute records a unique 3-latin-letter code for the Library. For example, DZL would be reasonable for Dzongsar Library. The code along with the num attribute are used to create RIDs for Works that are added by the library. RIDs will take the form of: W1TLMDZL000001</rdfs:comment>
+        <rdfs:label xml:lang="en">tlm code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_librarian -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_librarian">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="code and appending &quot;Librarian&quot;. For example, &quot;dzlLibrarian&quot;">The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/</rdfs:comment>
+        <rdfs:label xml:lang="en">tlm librarian group</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_librarianEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_librarianEmail">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">The librarian email is used to send requests to the library staff.</rdfs:label>
+        <rdfs:label xml:lang="en">tlm librarian email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_TLM_num -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_num">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The num attribute records the last RID suffix allocated for the Library. The num should be a 6 digit zero filled string initialized to &quot;000001&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">tlm num</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_dist_py -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_dist_py">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavek and Lex Berman.</rdfs:comment>
+        <rdfs:label xml:lang="en">district</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_gb_dist -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_gb_dist">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An old GB code for the district containing this place from import of historical Tibetan places by Karl Ryavec and Lex Beerman</rdfs:comment>
+        <rdfs:label xml:lang="en">old containing district gb</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_gonpa_per1000 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_gonpa_per1000">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The number of monasteries per 1000 sq km in this Place (presumably a region) from data provided by Karl Ryavec</rdfs:comment>
+        <rdfs:label xml:lang="en">monasteries per 1000 sq km</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_gonpa_perEcumen -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_gonpa_perEcumen">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The number of monasteries per ecumen in this Place (presumably a region) from data provided by Karl Ryavec</rdfs:comment>
+        <rdfs:label xml:lang="en">monasteries per ecumen</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_name_kr -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_name_kr">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Place name provided by Karl Ryavec for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">name per KR</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_name_lex -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_name_lex">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Place name provided by Lex Berman for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">name per lex</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_prov_py -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_prov_py">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Name of containing province in pinyin per Karl Ryavec for import of historical places</rdfs:comment>
+        <rdfs:label xml:lang="en">province name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_town_ch -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_town_ch">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Name of the containing town in Chinese unicode per Karl Ryavec for import of historicla Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">town name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_town_py -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_town_py">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Name of containing town in pinyin per Karl Ryavec for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">town name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/place_town_syl -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_town_syl">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Another version of the name of the containing town per Karl Ryavec</rdfs:comment>
+        <rdfs:label xml:lang="en">town name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2132,6 +2204,17 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workIncipit -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workIncipit">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The opening words of the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">incipit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workIsNumbered -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workIsNumbered">
@@ -2268,6 +2351,9 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoAuthorshipStatement">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Authorship statement for the Work.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: Use this when migrating &lt;o:description type=&quot;authorship&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">authorship</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2523,528 +2609,287 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
-    <!-- http://purl.bdrc.io/ontology/outline#authorship -->
+    <!-- http://purl.bdrc.io/ontology/workSummary -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#authorship">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSummary">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">A summary of the work</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: use this property for &lt;outline:description type=&quot;summary&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">summary</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/outline#bon_bka_gyur_number -->
+    <!-- http://purl.bdrc.io/ontology/work_IsIAO -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#bon_bka_gyur_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#catalogue_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#catalogue_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#chapters -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#chapters">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#dataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#extent -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#extent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#gser_bris_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#gser_bris_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#incipit -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#incipit">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#lhasa_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#lhasa_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#libraryOfCongress -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#libraryOfCongress">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#node_value -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#node_value">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_IsIAO">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">IsIAO reference</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/outline#otani -->
+    <!-- http://purl.bdrc.io/ontology/work_bon_bka_gyur_number -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#otani">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#otani_beijing -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#otani_beijing">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#pagination -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#pagination">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Outline"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>absolute</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>relative</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#rKTsReference -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#rKTsReference">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#ref_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#ref_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#sde_dge_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#sde_dge_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#shey_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#shey_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#snar_thang_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#snar_thang_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#stog_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#stog_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#toh -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#toh">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#urga_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#urga_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/outline#vinayottaragrantha -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/outline#vinayottaragrantha">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/outline#ref_number"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#accuracy -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#accuracy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_bon_bka_gyur_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">bon kanjur item number</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#addressProperty -->
+    <!-- http://purl.bdrc.io/ontology/work_catalogue_number -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#addressProperty">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#address_city -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#address_city">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#addressProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_catalogue_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">unspecified catalogue number</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#address_country -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_chapters -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#address_country">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#addressProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_chapters">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">chapters from outline</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#address_number -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_completionDate -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#address_number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#addressProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_completionDate">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">completionDate</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#address_postal -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_contents -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#address_postal">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#addressProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_contents">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">contents</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#address_state -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_date -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#address_state">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#addressProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_date">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">date</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#address_street -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_errata -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#address_street">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#addressProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_errata">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">errata</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#chgis_id -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_extent -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#chgis_id">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#dataProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#dist_py -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#dist_py">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#fromLex -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#fromLex">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#fromTBRC -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#fromTBRC">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#gb2260-2013 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#gb2260-2013">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#gbdist -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#gbdist">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#gisId -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#gisId">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_extent">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">extent from outline description</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#gisProperty -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_id -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#gisProperty">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#gonpaPer1000 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#gonpaPer1000">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#gonpaPerEcumen -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#gonpaPerEcumen">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_id">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;id&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">id</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_accession -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_libraryOfCongress -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_accession">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-        <rdfs:comment>The accession attribute records the next accession number to be allocated for the Library. The num should be a 6 digit zero filled string initialized to &quot;000001&quot;. This number is incremented each time a new holdng is added for this library.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_admin -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_admin">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-        <rdfs:comment>The admin property records the name of the group of users that are permitted to update the Library and Monastery profiles for the Library. The group name will conventionally be named by lower-casing the hasTLM_code property value and appending &quot;Admin&quot;. For example, &quot;dzlAdmin&quot;</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_adminEmail -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_adminEmail">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-        <rdfs:comment>The admin email is used to send requests for new users to be added to the Library.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_code -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_code">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-        <rdfs:comment>the code attribute records a unique 3-latin-letter code for the Library. For example, DZL would be reasonable for Dzongsar Library. The code along with the num attribute are used to create RIDs for Works that are added by the library. RIDs will take the form of: W1TLMDZL000001</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_librarian -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_librarian">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-        <rdfs:comment>The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/@code and appending &quot;Librarian&quot;. For example, &quot;dzlLibrarian&quot;</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_librarianEmail -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_librarianEmail">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#hasTLM_num -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#hasTLM_num">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#hasTLM"/>
-        <rdfs:comment>The num attribute records the last RID suffix allocated for the Library. The num should be a 6 digit zero filled string initialized to &quot;000001&quot;.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#lat -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#lat">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_libraryOfCongress">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">library of congress id</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#long -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_location -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#long">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_location">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#nameKR -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_mahavyutpattiNumber -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#nameKR">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#prov_py -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#prov_py">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/place#regionPoly -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#regionPoly">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_mahavyutpattiNumber">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>The object of this property is an xsd:string representing a geoJSON Polygon or Mulit-Polygon. See http://geojson.org/geojson-spec.html</rdfs:comment>
+        <rdfs:label xml:lang="en">mahavyutpatti number</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#town_ch -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_remarks -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#town_ch">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_remarks">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;remarks&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">remarks</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#town_py -->
+    <!-- http://purl.bdrc.io/ontology/work_desc_room -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#town_py">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_room">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;room&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">room</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#town_syl -->
+    <!-- http://purl.bdrc.io/ontology/work_gser_bris_number -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#town_syl">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#dataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_gser_bris_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">gser bris number</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#wb_area_sq_km -->
+    <!-- http://purl.bdrc.io/ontology/work_lhasa_number -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#wb_area_sq_km">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_lhasa_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">lhasa number</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#wb_pop_2000 -->
+    <!-- http://purl.bdrc.io/ontology/work_otani -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#wb_pop_2000">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_otani">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">otani reference</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/place#wb_pop_2010 -->
+    <!-- http://purl.bdrc.io/ontology/work_otani_beijing -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place#wb_pop_2010">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/place#gisId"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_otani_beijing">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">otani bejing reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_rKTs_reference -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_rKTs_reference">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">rKTs reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_sde_dge_number -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_sde_dge_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">dege number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_shey_number -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_shey_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">shey number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_snar_thang_number -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_snar_thang_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">narthang number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_stog_number -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_stog_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">stog number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_toh_number -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_toh_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">toh muber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_urga_number -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_urga_number">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">urga number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/work_vinayottaragrantha -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_vinayottaragrantha">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">vinayottaragrantha reference</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3737,6 +3582,16 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Kinship individual
         <rdfs:comment>Subjects Just as in a traditional library catalog, each Work in the knowledgebase can be classified under one or more Subject Headings. A Subject Heading can be one of the following things: 1. A technical term; 2. The title of a Work; 3. The name of a Person; 4. The name of a Place. A technical term (e.g. mandala or sgrub thabs can have any number of Equivalent Meanings from other languages. The other types of Subject Headings (Work Titles, Person Names, Place Names) are also Library Objects with their own records in the Works, Persons, or Places databases. Each Subject Headings record is composed of several fields. Not every field appears in each record. Click on the links below for more information about these fields. Subtopics: Subject Headings that are connected to Works Subject Headings with equivalent meanings Subject Headings Usage Information See also: Library Objects | Subject Search</rdfs:comment>
         <rdfs:comment>The topic.xsd &lt;seeAlso/&gt; is model via the top:seeAlso annotation property</rdfs:comment>
         <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/Tradition -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/Tradition">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">Individuals represent various (Tibetan) Buddhist traditions</rdfs:comment>
+        <rdfs:label xml:lang="en">Tradition</rdfs:label>
     </owl:Class>
     
 
@@ -5954,6 +5809,214 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusWithdrawn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/StatusType"/>
         <rdfs:label xml:lang="en">withdrawn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionBaromKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBaromKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionBodong -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBodong">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionBon -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBon">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionChod -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionChod">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionDrigungKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrigungKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionDrukpaKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrukpaKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionGeluk -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionGeluk">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionJonang -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionJonang">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionKadam -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKadam">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionKarmaKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKarmaKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionMarpaKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMarpaKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionNedoKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNedoKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionNgorSakya -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNgorSakya">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionNyingma -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNyingma">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionRime -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionRime">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionSakya -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionSakya">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionShangpaKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionShangpaKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionTaklungKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTaklungKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionTodrukKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTodrukKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionTsalpaKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTsalpaKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionYazangKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionYazangKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionYelpaKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionYelpaKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionZhalu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZhalu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionZhije -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZhije">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionZurmangKagyu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZurmangKagyu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Tradition"/>
     </owl:NamedIndividual>
     
 
