@@ -6192,7 +6192,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
         <rdfs:label xml:lang="en">CC-BY</rdfs:label>
         <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC-BY, license with attribution</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://creativecommons.org/licenses/"/>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:NamedIndividual>
     
 
