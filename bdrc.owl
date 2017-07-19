@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/"
      xml:base="http://purl.bdrc.io/ontology/"
-     xmlns:bdo="http://purl.bdrc.io/ontology/"
      xmlns:bdr="http://purl.bdrc.io/resource/"
      xmlns:bdd="http://purl.bdrc.io/data/"
-     xmlns:adm="http://purl.bdrc.io/ontology/admin/"
      xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:adm="http://purl.bdrc.io/ontology/admin/"
+     xmlns:bdo="http://purl.bdrc.io/ontology/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
@@ -1868,7 +1868,7 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_librarian">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="code and appending &quot;librarian&quot;. for example, &quot;dzllibrarian&quot;">The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/</rdfs:comment>
+        <rdfs:comment xml:lang="en">The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/code and appending &quot;librarian&quot;. for example, &quot;dzllibrarian&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">tlm librarian group</rdfs:label>
     </owl:DatatypeProperty>
     
