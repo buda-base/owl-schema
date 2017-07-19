@@ -1,31 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/"
      xml:base="http://purl.bdrc.io/ontology/"
-     xmlns:role="http://purl.bdrc.io/ontology/role#"
+     xmlns:bdo="http://purl.bdrc.io/ontology/"
+     xmlns:bdr="http://purl.bdrc.io/resource/"
+     xmlns:bdd="http://purl.bdrc.io/data/"
+     xmlns:adm="http://purl.bdrc.io/ontology/admin/"
      xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:out="http://purl.bdrc.io/ontology/outline#"
-     xmlns:lin="http://purl.bdrc.io/ontology/lineage#"
-     xmlns:vol="http://purl.bdrc.io/ontology/volumes#"
-     xmlns:top="http://purl.bdrc.io/ontology/topic#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:root="http://purl.bdrc.io/ontology/root#"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:per="http://purl.bdrc.io/ontology/person#"
-     xmlns:crp="http://purl.bdrc.io/ontology/corporation#"
-     xmlns:prd="http://purl.bdrc.io/ontology/product#"
-     xmlns:bdd="http://purl.bdrc.io/data/"
-     xmlns:plc="http://purl.bdrc.io/ontology/place#"
-     xmlns:adm="http://purl.bdrc.io/ontology/admin/"
-     xmlns:bdo="http://purl.bdrc.io/ontology/"
-     xmlns:ofc="http://purl.bdrc.io/ontology/office#"
-     xmlns:bdr="http://purl.bdrc.io/resource/"
-     xmlns:wrk="http://purl.bdrc.io/ontology/work#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:desc="http://purl.bdrc.io/ontology/description#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
@@ -1725,7 +1712,7 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeChgisId">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">A legacy Chinese gis id for the Place provided during migration of historical Tibetan Places by Karl Ryavek and Lex Berman</rdfs:comment>
+        <rdfs:comment xml:lang="en">A legacy Chinese gis id for the Place provided during migration of historical Tibetan Places by Karl Ryavec and Lex Berman</rdfs:comment>
         <rdfs:comment xml:lang="en">chgis id</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1758,7 +1745,7 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeIdTBRC">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavek used for import of historical Tibetan place information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavec used for import of historical Tibetan place information.</rdfs:comment>
         <rdfs:label xml:lang="en">place id TBRC</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1881,7 +1868,7 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_TLM_librarian">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="code and appending &quot;Librarian&quot;. For example, &quot;dzlLibrarian&quot;">The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/</rdfs:comment>
+        <rdfs:comment xml:lang="code and appending &quot;librarian&quot;. for example, &quot;dzllibrarian&quot;">The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/</rdfs:comment>
         <rdfs:label xml:lang="en">tlm librarian group</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1914,7 +1901,7 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_dist_py">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavek and Lex Berman.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavec and Lex Berman.</rdfs:comment>
         <rdfs:label xml:lang="en">district</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1991,7 +1978,7 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/place_town_ch">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">Name of the containing town in Chinese unicode per Karl Ryavec for import of historicla Tibetan places</rdfs:comment>
+        <rdfs:comment xml:lang="en">Name of the containing town in Chinese unicode per Karl Ryavec for import of historical Tibetan places</rdfs:comment>
         <rdfs:label xml:lang="en">town name</rdfs:label>
     </owl:DatatypeProperty>
     
