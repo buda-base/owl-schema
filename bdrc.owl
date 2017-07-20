@@ -2224,6 +2224,136 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workKaTenRefToh -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenRefToh">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Tohoku Derge Kanjur and Tengyur Catalogue reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">toh number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://prajnaquest.fr/blog/tohoku-catalogue-available-here/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenRefrKTs -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenRefrKTs">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">University of Vienna, resources for Kanju and Tanjur studies (rKTs) reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">rKTs reference</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/xml/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaBon -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaBon">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Reference number in the Bon combined Kanjur and Tenjur</rdfs:comment>
+        <rdfs:label xml:lang="en">bon kanjur item number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaD -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaD">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Dergé Kangyur and Tengyur reference numbers</rdfs:comment>
+        <rdfs:label xml:lang="en">sde dge number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaG -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaG">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">gser bris number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaH -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaH">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Lhasa Kanjur reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">lhasa number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaN -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaN">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Narthang Kangyur and Tengyur reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">narthang number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaQ -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaQ">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Reference numbers based on Beijing printed Kangyur and Tenjur. Conventional sigla, Q.</rdfs:comment>
+        <rdfs:label xml:lang="en">otani beijing reference</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaS -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaS">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Tok Palace manuscript Kanjur reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">stog number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaU -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaU">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Urga or Ulan Bator manuscript Kangyur reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">urga number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workKaTenSiglaZ -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workKaTenSiglaZ">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Shey Palace manuscript reference number</rdfs:comment>
+        <rdfs:label xml:lang="en">shey number</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workLegacyNode -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLegacyNode">
@@ -2587,6 +2717,30 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workRefChokLing -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workRefChokLing">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642</rdfs:comment>
+        <rdfs:label xml:lang="en">chokling tersar reference</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://rywiki.tsadra.org/index.php/Catalogue_of_the_New_Treasures_of_Chokgyur_Lingpa_Part_1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workRefIsIAO -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workRefIsIAO">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Catalog of the Tucci Tibetan fund in the library of ISMEO</rdfs:comment>
+        <rdfs:label xml:lang="en">IsIAO reference</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.tbrc.org/#!rid=W19841"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workScanInfo -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workScanInfo">
@@ -2615,36 +2769,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
         <rdfs:comment xml:lang="en">A summary of the work</rdfs:comment>
         <rdfs:comment xml:lang="en">Migration hint: use this property for &lt;outline:description type=&quot;summary&quot;/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">summary</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_IsIAO -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_IsIAO">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">IsIAO reference</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_bon_bka_gyur_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_bon_bka_gyur_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">bon kanjur item number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_catalogue_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_catalogue_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">unspecified catalogue number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2758,117 +2882,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;room&quot;/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">room</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_gser_bris_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_gser_bris_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">gser bris number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_lhasa_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_lhasa_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">lhasa number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_otani -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_otani">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Reference numbers based on Beijing printed Kangyur and Tenjur. Conventional sigla, Q.</rdfs:comment>
-        <rdfs:label xml:lang="en">otani beijing reference</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_rKTs_reference -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_rKTs_reference">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">rKTs reference</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_sde_dge_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_sde_dge_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">dege number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_shey_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_shey_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">shey number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_snar_thang_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_snar_thang_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">narthang number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_stog_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_stog_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">stog number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_toh_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_toh_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">toh muber</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_urga_number -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_urga_number">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">urga number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_vinayottaragrantha -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_vinayottaragrantha">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">vinayottaragrantha reference</rdfs:label>
     </owl:DatatypeProperty>
     
 
