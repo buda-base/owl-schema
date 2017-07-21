@@ -3234,6 +3234,8 @@ bdr:Lwwww a :Lineage ;
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Indicates who, what, and when an update to BDRC resources was made</rdfs:comment>
+        <rdfs:label xml:lang="en">Log Entry</rdfs:label>
     </owl:Class>
     
 
