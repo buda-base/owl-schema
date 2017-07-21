@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/"
      xml:base="http://purl.bdrc.io/ontology/"
-     xmlns:bdr="http://purl.bdrc.io/resource/"
      xmlns:bdd="http://purl.bdrc.io/data/"
      xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:adm="http://purl.bdrc.io/ontology/admin/"
-     xmlns:bdo="http://purl.bdrc.io/ontology/">
+     xmlns:bdo="http://purl.bdrc.io/ontology/"
+     xmlns:bdr="http://purl.bdrc.io/resource/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
@@ -56,9 +57,11 @@
     
 
 
-    <!-- http://purl.bdrc.io/ontology/log_entry -->
+    <!-- http://purl.bdrc.io/ontology/logEntry -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/log_entry">
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/logEntry">
+        <rdfs:comment xml:lang="en">Log entry for updates to BDRC resources</rdfs:comment>
+        <rdfs:label xml:lang="en">log entry</rdfs:label>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/common#LogEntry"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/root#Resource"/>
     </owl:AnnotationProperty>
@@ -627,6 +630,17 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:comment xml:lang="en">This refers to a :Work that the subject :LineageHolder authored as an element of the :Lineage - a commentary of some sort typically</rdfs:comment>
         <rdfs:label xml:lang="en">work</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/LineageHolder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/logWho -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/logWho">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">who performed the updated being logged</rdfs:comment>
+        <rdfs:label xml:lang="en">who</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1618,32 +1632,26 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/log_content -->
+    <!-- http://purl.bdrc.io/ontology/logMessage -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/log_content">
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/logMessage">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The log message explaining the update</rdfs:comment>
+        <rdfs:label xml:lang="en">message</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/log_when -->
+    <!-- http://purl.bdrc.io/ontology/logWhen -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/log_when">
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/logWhen">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/log_who -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/log_who">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The timestamp for the update being logged</rdfs:comment>
+        <rdfs:label xml:lang="en">time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3214,23 +3222,16 @@ bdr:Lwwww a :Lineage ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/log_content"/>
+                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/logMessage"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/log_when"/>
+                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/logWhen"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/log_who"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3796,6 +3797,12 @@ bdr:W22083 a :Work ;
     types of resources such as place events, work titles and so on 
     classes from 3rd party ontologies that are referred to</rdfs:comment>
     </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
     
 
 
