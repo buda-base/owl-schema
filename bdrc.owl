@@ -62,8 +62,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/logEntry">
         <rdfs:comment xml:lang="en">Log entry for updates to BDRC resources</rdfs:comment>
         <rdfs:label xml:lang="en">log entry</rdfs:label>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/common#LogEntry"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/root#Resource"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Entity"/>
     </owl:AnnotationProperty>
     
 
@@ -255,6 +255,17 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/place_TLM_taxonomy -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_TLM_taxonomy">
+        <rdfs:comment xml:lang="en">Identifies a Taxonomy that specifies the Library&apos;s shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design.</rdfs:comment>
+        <rdfs:label xml:lang="en">TLM taxonomy</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Taxonomy"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/place_dist_py -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_dist_py">
@@ -350,6 +361,17 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:label xml:lang="en">town name</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/work_desc_date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/work_desc_date">
+        <rdfs:comment xml:lang="en">Migration hint: Used only in O01CT0001 to record some sort of date information from the colophons of various texts. The format is non-standard will require further examination</rdfs:comment>
+        <rdfs:label xml:lang="en">date from description</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
     </owl:AnnotationProperty>
     
 
@@ -1102,17 +1124,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/placeTlmTaxonomy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeTlmTaxonomy">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Taxonomy"/>
-        <rdfs:comment xml:lang="en">Identifies a Taxonomy that specifies the Library&apos;s shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design.</rdfs:comment>
-        <rdfs:label xml:lang="en">TLM taxonomy</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/placeType -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeType">
@@ -1770,15 +1781,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/desc_status -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/desc_status">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">description status</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/description">
@@ -1853,13 +1855,13 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/noteLoc -->
+    <!-- http://purl.bdrc.io/ontology/noteLocationStatement -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/noteLoc">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/noteLocationStatement">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Note"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A location statement for where in the :noteWork to look for the :noteText</rdfs:comment>
         <rdfs:comment xml:lang="en">Migration hint: the @location of the &lt;x:note/&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:DatatypeProperty>
@@ -2177,6 +2179,18 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workBiblioStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workBiblioStatus">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">A bibliogrpahic status statement in the language of the Work</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: this is used for &lt;o:description type=&quot;status&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">bibliographic status statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workCatalogInfo -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workCatalogInfo">
@@ -2193,6 +2207,42 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">This was the description of type colophon which was used primarily (exclusively?) on &lt;outline:node/&gt;s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon</rdfs:comment>
         <rdfs:label xml:lang="en">colophon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workCompletionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workCompletionDate">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Migration hint: from &lt;o:description type=&quot;completionDate&quot;/&gt;</rdfs:comment>
+        <rdfs:comment xml:lang="en">Records the declared date of completion for the Work - typically from the colophon</rdfs:comment>
+        <rdfs:label xml:lang="en">completion date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workContainsChapters -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workContainsChapters">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Migration hint: &lt;o:description type=&quot;chapters&quot;/&gt;</rdfs:comment>
+        <rdfs:comment xml:lang="en">records the chapters of a larger Work contained in this Work</rdfs:comment>
+        <rdfs:label xml:lang="en">chapters contained</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workContents -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workContents">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Describes the type of contents of the Work. Not to be confused with :workSummary.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: &lt;o:description type=&quot;contents&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">contents</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2233,11 +2283,25 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workExtent -->
+    <!-- http://purl.bdrc.io/ontology/workErrata -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workExtent">
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workErrata">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Indicates a statement of error in the content</rdfs:comment>
+        <rdfs:label xml:lang="en">errata</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workExtentStatement -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workExtentStatement">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A statement of the extent of the Work</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: use also for &lt;o:description type=&quot;extent&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">extent statement</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2603,6 +2667,17 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/workLocationStatement -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationStatement">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A statement of the location of this Work in a containing Work or of the pagination present in the text versus the formal location in terms of page images.</rdfs:comment>
+        <rdfs:label xml:lang="en">location statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workLocationVolume -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationVolume">
@@ -2810,67 +2885,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/work_desc_chapters -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_chapters">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">this needs to be assessed for how it&apos;s used</rdfs:comment>
-        <rdfs:label xml:lang="en">chapters from outline</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_completionDate -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_completionDate">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">completionDate</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_contents -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_contents">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">contents</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_date -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_date">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_errata -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_errata">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">errata</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_extent -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_extent">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">extent from outline description</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/work_desc_id -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_id">
@@ -2878,26 +2892,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;id&quot;/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">id</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_libraryOfCongress -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_libraryOfCongress">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">library of congress id</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_location -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_location">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:DatatypeProperty>
     
 
