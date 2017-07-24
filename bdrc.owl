@@ -57,17 +57,6 @@
     
 
 
-    <!-- http://purl.bdrc.io/ontology/logEntry -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/logEntry">
-        <rdfs:comment xml:lang="en">Log entry for updates to BDRC resources</rdfs:comment>
-        <rdfs:label xml:lang="en">log entry</rdfs:label>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Entity"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/migration_exception -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/migration_exception">
@@ -174,6 +163,50 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:comment xml:lang="en">Indicates that the value of the property being converted is to be an instance of the designated class</rdfs:comment>
         <skos:prefLabel xml:lang="en">Admin convertValueToClass</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/admin/conversionAnnotations"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/logDate -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/logDate">
+        <rdfs:comment xml:lang="en">When the update was performed</rdfs:comment>
+        <rdfs:label xml:lang="en">date</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/LogEntry"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/logEntry -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/logEntry">
+        <rdfs:comment xml:lang="en">Log entry for updates to BDRC resources</rdfs:comment>
+        <rdfs:label xml:lang="en">log entry</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/LogEntry"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/logMessage -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/logMessage">
+        <rdfs:comment xml:lang="en">Explanation of the update</rdfs:comment>
+        <rdfs:label xml:lang="en">message</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/LogEntry"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/logWho -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/logWho">
+        <rdfs:comment xml:lang="en">who performed the updated being logged</rdfs:comment>
+        <rdfs:label xml:lang="en">who</rdfs:label>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/LogEntry"/>
     </owl:AnnotationProperty>
     
 
@@ -592,6 +625,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/workHasItem"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Item"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:comment xml:lang="en">This Item is for the referenced Work, i.e., this Item represents a physical or digital instance of the referenced Work</rdfs:comment>
+        <rdfs:label xml:lang="en">for work</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -605,6 +640,12 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
         <rdfs:comment xml:lang="en">refers to a volume description which could be a digital asset, scanned or etext; or a physical volume (part of a physical holding)</rdfs:comment>
         <rdfs:label xml:lang="en">has volume</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/itemType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/itemType"/>
     
 
 
@@ -1817,30 +1858,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/External"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>a link to the top-level of an external resource such as a http://treasuryoflives.org.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/logMessage -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/logMessage">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">The log message explaining the update</rdfs:comment>
-        <rdfs:label xml:lang="en">message</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/logWhen -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/logWhen">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">The timestamp for the update being logged</rdfs:comment>
-        <rdfs:label xml:lang="en">time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3244,20 +3261,6 @@ bdr:Lwwww a :Lineage ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/LogEntry">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/logMessage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/logWhen"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Indicates who, what, and when an update to BDRC resources was made</rdfs:comment>
         <rdfs:label xml:lang="en">Log Entry</rdfs:label>
     </owl:Class>
@@ -3791,6 +3794,22 @@ bdr:W22083 a :Work ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
         <rdfs:comment xml:lang="en">The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the &lt;work:info @nodeType/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">type of work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/Admin -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Admin"/>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/LogEntry -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/LogEntry">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:comment xml:lang="en">Log entries for :Entity updates. Includes the agent, date and message explaing the update.</rdfs:comment>
+        <rdfs:label xml:lang="en">Log Entry</rdfs:label>
     </owl:Class>
     
 
