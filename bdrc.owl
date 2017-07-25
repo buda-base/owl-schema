@@ -779,7 +779,13 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <!-- http://purl.bdrc.io/ontology/itemType -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/itemType"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/itemType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Item"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ItemType"/>
+        <rdfs:comment xml:lang="en">Indicates the type of the Item: physical work, digital asset - scanned, ocr&apos;d or input.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: imagegroups with lists of image names will be of type bdr:ItemTypeImageAsset</rdfs:comment>
+        <rdfs:label xml:lang="en">item type</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -1942,6 +1948,20 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/itemBDRCHoldingStatement -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/itemBDRCHoldingStatement">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A free-text statement of the holdings by BDRC of this Item (and its relatives).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: the &lt;pubinfo:tbrcHoldings/&gt; should be mapped to :itemBDRCHoldingStatement on the associated Item.
+
+This might require creating an otherwise empty Item to stand-in for a Work that has yet to be scanned.</rdfs:comment>
+        <rdfs:label xml:lang="en">BDRC holdings statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/name -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/name">
@@ -2852,15 +2872,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workSourcePrintery_string -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSourcePrintery_string">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workTbrcHoldings -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workTbrcHoldings">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
