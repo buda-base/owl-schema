@@ -429,18 +429,7 @@ The value of this property should be an explanation of the needed conversion as 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productAllowByAddr">
         <rdfs:comment xml:lang="en">The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="_:genid256"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/productHasOrg -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasOrg">
-        <rdfs:label xml:lang="en">The :ProductOrg allows to modularize the sometimes extensive lists of IP address ranges that are part of the subscription service</rdfs:label>
-        <rdfs:label xml:lang="en">has organization</rdfs:label>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
-        <rdfs:domain rdf:resource="_:genid253"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
     </owl:AnnotationProperty>
     
 
@@ -1790,6 +1779,23 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:comment xml:lang="en">The referenced work is identified as a translation of the subject work. This will be used, for example, when the referenced work is a Tibetan translation of a subject Sanskrit work.</rdfs:comment>
         <rdfs:label xml:lang="en">has translation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/productHasOrg -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasOrg">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
+        <rdfs:comment xml:lang="en">Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on</rdfs:comment>
     </owl:ObjectProperty>
     
 
