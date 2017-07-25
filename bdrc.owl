@@ -2101,6 +2101,27 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/summary -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/summary">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Lineage"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Taxonomy"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Topic"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">A summary of the work</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: use this property for &lt;outline:description type=&quot;summary&quot;/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">summary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/volumeImageList -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeImageList">
@@ -2865,18 +2886,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSourcePrintery_string">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workSummary -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSummary">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">A summary of the work</rdfs:comment>
-        <rdfs:comment xml:lang="en">Migration hint: use this property for &lt;outline:description type=&quot;summary&quot;/&gt;</rdfs:comment>
-        <rdfs:label xml:lang="en">summary</rdfs:label>
     </owl:DatatypeProperty>
     
 
