@@ -1176,34 +1176,32 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/productHasOrg -->
+    <!-- http://purl.bdrc.io/ontology/admin/productHasOrg -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/productHasOrg">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasOrg">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Product"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/ProductOrg"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ProductOrg"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
         <rdfs:label xml:lang="en">The :ProductOrg allows to modularize the sometimes extensive lists of IP address ranges that are part of the subscription service</rdfs:label>
         <rdfs:label xml:lang="en">has organization</rdfs:label>
-    </owl:ObjectProperty>
+    </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/productIncludes -->
+    <!-- http://purl.bdrc.io/ontology/admin/productIncludes -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/productIncludes">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Product"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Product"/>
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productIncludes">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
         <rdfs:comment xml:lang="en">A Product may include another Product for the purpose of including access information in support of the subscription service.</rdfs:comment>
         <rdfs:label xml:lang="en">includes</rdfs:label>
-    </owl:ObjectProperty>
+    </owl:AnnotationProperty>
     
 
 
@@ -1516,7 +1514,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workInProduct">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Product"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
     </owl:ObjectProperty>
     
 
@@ -2058,21 +2056,20 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/productAllowByAddr -->
+    <!-- http://purl.bdrc.io/ontology/admin/productAllowByAddr -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/productAllowByAddr">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productAllowByAddr">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Product"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/ProductOrg"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works</rdfs:comment>
-    </owl:DatatypeProperty>
+    </owl:AnnotationProperty>
     
 
 
@@ -3453,33 +3450,6 @@ Relative pagination uses pagination in the content of the work while absolute co
     
 
 
-    <!-- http://purl.bdrc.io/ontology/Product -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/Product">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Entity"/>
-        <rdfs:comment>An Product represents a collection of works that are distributed together. Historically this has meant on a CDROM, DVDROM or harddrive; nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still harddrive collections prepared from Products.
-
-IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
-
-Products have decs:contents rather than a :name (but this can be added during normalization). 
-
-The various Works that are contained in the Product include an inProduct element that refers back to the Product. So to find all the Works that are contained in a Product is a simple query. to locate all Works that refer to a given Product via wrk:inProduct.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Names are represented by rdfs:label</rdfs:comment>
-        <rdfs:label xml:lang="en">Product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/ProductOrg -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ProductOrg">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment xml:lang="en">A ProductOrg is a unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access.</rdfs:comment>
-        <rdfs:comment xml:lang="en">the name of a ProductOrg is represented by rdfs:label</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/Role -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Role">
@@ -3810,6 +3780,33 @@ bdr:W22083 a :Work ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
         <rdfs:comment xml:lang="en">Log entries for :Entity updates. Includes the agent, date and message explaing the update.</rdfs:comment>
         <rdfs:label xml:lang="en">Log Entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/Product -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Product">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:comment>An Product represents a collection of works that are distributed together. Historically this has meant on a CDROM, DVDROM or harddrive; nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still harddrive collections prepared from Products.
+
+IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
+
+Products have decs:contents rather than a :name (but this can be added during normalization). 
+
+The various Works that are contained in the Product include an inProduct element that refers back to the Product. So to find all the Works that are contained in a Product is a simple query. to locate all Works that refer to a given Product via wrk:inProduct.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Names are represented by rdfs:label</rdfs:comment>
+        <rdfs:label xml:lang="en">Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/ProductOrg -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:comment xml:lang="en">A ProductOrg is a unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access.</rdfs:comment>
+        <rdfs:comment xml:lang="en">the name of a ProductOrg is represented by rdfs:label</rdfs:comment>
     </owl:Class>
     
 
@@ -6102,7 +6099,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/UNKNOWN_Product -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/UNKNOWN_Product">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/Product"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
         <status rdf:resource="http://purl.bdrc.io/resource/StatusReleased"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.bdrc.io/data/UNKNOWN_Product"/>
         <rdfs:label xml:lang="en">Unknown</rdfs:label>
