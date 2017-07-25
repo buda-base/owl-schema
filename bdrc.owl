@@ -358,6 +358,28 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/place_id_Lex -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_id_Lex">
+        <rdfs:comment xml:lang="en">Place ID assigned by Lex Berman used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set</rdfs:comment>
+        <rdfs:label xml:lang="en">place ID Lex</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/place_id_TBRC -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_id_TBRC">
+        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavec used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set</rdfs:comment>
+        <rdfs:label xml:lang="en">place id TBRC</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/place_name_kr -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_name_kr">
@@ -1997,28 +2019,6 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
 Gonpa per ecumen would be how many temples are there per one sq km of land area minus water, bare rock, ice and so forth.  Thus I totaled the ecumen areas of each township primarily in terms of the sq km of grassland and forests and farmland.  Then because these areas per temple are so tiny I represented the final amounts on my map legend per 1000 sq km so that the numbers would be closer to 1.0 at times.  For example there might only be .0000001 temples per sq km of ecumen.  But if we convert to per 1000 sq km of ecumen we get .0001 temples  which is a more understandable amount.  Though I think most scholars are baffled by technology and so just understand the idea of core areas like the Lhasa valley compared the peripheral areas like the Changthang.  So that&apos;s mainly what I focused on showing.</rdfs:comment>
         <rdfs:comment xml:lang="en">The number of monasteries per ecumen in this Place (presumably a region) from data provided by Karl Ryavec</rdfs:comment>
         <rdfs:label xml:lang="en">monasteries per ecumen</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeIdLex -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeIdLex">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Place ID assigned by Lex Berman used for import of historical Tibetan place information.</rdfs:comment>
-        <rdfs:label xml:lang="en">place ID Lex</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/placeIdTBRC -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/placeIdTBRC">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavec used for import of historical Tibetan place information.</rdfs:comment>
-        <rdfs:label xml:lang="en">place id TBRC</rdfs:label>
     </owl:DatatypeProperty>
     
 
