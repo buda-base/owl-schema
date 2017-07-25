@@ -1398,15 +1398,15 @@ bdr:W26071 a Work ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workHasAccess -->
+    <!-- http://purl.bdrc.io/ontology/admin/workAccess -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasAccess">
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workAccess">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
         <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
         <rdfs:label xml:lang="en">permitted access</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
-    </owl:ObjectProperty>
+    </owl:AnnotationProperty>
     
 
 
@@ -1613,15 +1613,15 @@ bdr:T354 a :Topic ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workLicense -->
+    <!-- http://purl.bdrc.io/ontology/admin/workLicense -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLicense">
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLicense">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
         <rdfs:label xml:lang="en">has license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
-    </owl:ObjectProperty>
+    </owl:AnnotationProperty>
     
 
 
