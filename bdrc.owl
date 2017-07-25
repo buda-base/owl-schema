@@ -398,6 +398,38 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/productAllowByAddr -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productAllowByAddr">
+        <rdfs:comment xml:lang="en">The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="_:genid256"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/productHasOrg -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasOrg">
+        <rdfs:label xml:lang="en">The :ProductOrg allows to modularize the sometimes extensive lists of IP address ranges that are part of the subscription service</rdfs:label>
+        <rdfs:label xml:lang="en">has organization</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
+        <rdfs:domain rdf:resource="_:genid253"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/productIncludes -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productIncludes">
+        <rdfs:comment xml:lang="en">A Product may include another Product for the purpose of including access information in support of the subscription service.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/work_desc_date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/work_desc_date">
@@ -764,18 +796,6 @@ This illustrates that while bdr:P3094 received the :Lineage from bdr:P502 in bot
         <rdfs:comment xml:lang="en">the object of :lineageHolder is a :LineageHolder that describes an individual that held the given :Lineage</rdfs:comment>
         <rdfs:label xml:lang="en">has holder</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/LineageHolder"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/lineageLocation -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/lineageLocation">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Lineage"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
-        <rdfs:comment xml:lang="en">This is the location of the source information for this :Lineage in a specified gsan / thob yig.</rdfs:comment>
-        <rdfs:label xml:lang="en">source text</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/Lineage"/>
     </owl:ObjectProperty>
     
 
@@ -1176,35 +1196,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/productHasOrg -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasOrg">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
-        <rdfs:label xml:lang="en">The :ProductOrg allows to modularize the sometimes extensive lists of IP address ranges that are part of the subscription service</rdfs:label>
-        <rdfs:label xml:lang="en">has organization</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/productIncludes -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productIncludes">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
-        <rdfs:comment xml:lang="en">A Product may include another Product for the purpose of including access information in support of the subscription service.</rdfs:comment>
-        <rdfs:label xml:lang="en">includes</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/taxElementOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/taxElementOf">
@@ -1572,6 +1563,19 @@ bdr:T354 a :Topic ;
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
         <rdfs:label xml:lang="en">has license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLocation">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Lineage"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:comment xml:lang="en">This is the location of the source information for this :Lineage in a specified gsan / thob yig.</rdfs:comment>
+        <rdfs:comment xml:lang="en">the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note</rdfs:comment>
+        <rdfs:label xml:lang="en">source text</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/Lineage"/>
     </owl:ObjectProperty>
     
 
@@ -2053,23 +2057,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The area in square km of the Place from the World Bank 2010</rdfs:comment>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/productAllowByAddr -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productAllowByAddr">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works</rdfs:comment>
-    </owl:AnnotationProperty>
     
 
 
