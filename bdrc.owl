@@ -499,6 +499,30 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/workAccess -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workAccess">
+        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">permitted access</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/workLicense -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLicense">
+        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/work_desc_date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/work_desc_date">
@@ -962,17 +986,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/logWho -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/logWho">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment xml:lang="en">who performed the updated being logged</rdfs:comment>
-        <rdfs:label xml:lang="en">who</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/personEvent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEvent">
@@ -1285,16 +1298,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workBeginsAt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workBeginsAt">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
-        <rdfs:comment xml:lang="en">identifies the beginning page, line, syllable of text denoted by the out:Node or out:Outline</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workCreator -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workCreator">
@@ -1347,16 +1350,6 @@ bdr:W30532 is a printing based on woodblocks that have a variety of &quot;correc
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workEndsAt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workEndsAt">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
-        <rdfs:comment xml:lang="en">identifies the ending page, line, syllable of text denoted by the out:Node or out:Outline</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workExpressionOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workExpressionOf">
@@ -1398,44 +1391,9 @@ bdr:W26071 a Work ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/workAccess -->
+    <!-- http://purl.bdrc.io/ontology/workGenre -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workAccess">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
-        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
-        <rdfs:label xml:lang="en">permitted access</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkAccessType"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHasDerivative -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasDerivative">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:comment xml:lang="en">The referenced work is a derivative of this work. This means that the referenced work may be a later edition or a version with some &quot;corrections&quot;/changes to the content of the referenced work.</rdfs:comment>
-        <rdfs:label xml:lang="en">has derivative</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/workDerivativeOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHasExpression -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasExpression">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:label xml:lang="en">has expression</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/workExpressionOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHasGenre -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasGenre">
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workGenre">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Topic"/>
         <rdfs:comment xml:lang="en">The referenced Topic is expected to be a &quot;genre&quot; topic and eventually the genre topics will be moved to a class of Genre and/or a Taxonomy of Genre may be supplied.
@@ -1468,6 +1426,29 @@ bdr:T354 a :Topic ;
 
 This suggests that bdr:W12827 contains some commentaries and some instructions regarding dzogchen and so forth.</rdfs:comment>
         <rdfs:label xml:lang="en">has genre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHasDerivative -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasDerivative">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:comment xml:lang="en">The referenced work is a derivative of this work. This means that the referenced work may be a later edition or a version with some &quot;corrections&quot;/changes to the content of the referenced work.</rdfs:comment>
+        <rdfs:label xml:lang="en">has derivative</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/workDerivativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workHasExpression -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasExpression">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:label xml:lang="en">has expression</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/workExpressionOf"/>
     </owl:ObjectProperty>
     
 
@@ -1613,18 +1594,6 @@ bdr:T354 a :Topic ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/workLicense -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLicense">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
-        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
-        <rdfs:label xml:lang="en">has license</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workLocation -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLocation">
@@ -1634,6 +1603,17 @@ bdr:T354 a :Topic ;
         <rdfs:comment xml:lang="en">the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note</rdfs:comment>
         <rdfs:label xml:lang="en">source text</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/Lineage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocationType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLocationType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLocationType"/>
+        <rdfs:comment xml:lang="en">Indicates the type of the WorkLocation: beginning or end</rdfs:comment>
+        <rdfs:comment xml:lang="en">location type</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1694,9 +1674,9 @@ bdr:SomeKanjurVinayaSection a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workPubinfoPrintType -->
+    <!-- http://purl.bdrc.io/ontology/workPrintType -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoPrintType">
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workPrintType">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PrintType"/>
     </owl:ObjectProperty>
@@ -1928,14 +1908,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">whenever a name (or title) is needed such as for Place, Office, PersonName and so on. Use of the rdfs:label is reserved for &quot;primary&quot; display purposes, i.e., the name (or title) that is used when identifying the resource on a web page or the like.</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/noteText -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/noteText">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -2621,6 +2593,17 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">If true then the location is specified in terms of folio # and side: verso/recto</rdfs:comment>
         <rdfs:label xml:lang="en">location by folio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocationFF -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationFF">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Indicates the number of following pages included in the WorkLocation. This is an alternative to using bdr:WorkLocationBegins and bdr:WorkLocationEnds which are really only needed when a WorkLocation spans volumes or when there is a reason to specify begin and end locations down to the line and phrase, e.g., in some of the rGyud &apos;bum where texts start and end mid-page</rdfs:comment>
+        <rdfs:label xml:lang="en">ff</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3678,6 +3661,16 @@ bdr:W1KG20928 a :Work ;
         <rdfs:comment xml:lang="en">The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage</rdfs:comment>
         <rdfs:comment>The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a &lt;o:location/&gt; element spec&apos;d in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase</rdfs:comment>
         <rdfs:comment>parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkLocationType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkLocationType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">Indicates whether the WorkLocation is the beginning or end of a reference into a Work. An untyped WorkLocation may include a :workLocationFF indicating the number of following pages. This won&apos;t always work when the reference spans volumes as with some of the very long texts in Kanjur</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Location Type</rdfs:label>
     </owl:Class>
     
 
@@ -6311,6 +6304,24 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     
 
 
+    <!-- http://purl.bdrc.io/resource/WorkLocationBegins -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLocationBegins">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLocationType"/>
+        <rdfs:label xml:lang="en">Work Beginning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/WorkLocationEnds -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLocationEnds">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLocationType"/>
+        <rdfs:label xml:lang="en">Work Ending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/WorkOtherTitle -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkOtherTitle">
@@ -6482,10 +6493,6 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <rdf:Description rdf:about="http://purl.bdrc.io/ontology/StatusType">
         <rdfs:label xml:lang="en">status</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates the status of the subject description</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/noteText">
-        <rdfs:comment xml:lang="en">Migration hint: the text of the &lt;x:note/&gt; element</rdfs:comment>
-        <rdfs:label xml:lang="en">text</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
