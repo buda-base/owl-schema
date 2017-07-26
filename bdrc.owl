@@ -1602,17 +1602,6 @@ bdr:T354 a :Topic ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workLocationType -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLocationType">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkLocationType"/>
-        <rdfs:comment xml:lang="en">Indicates the type of the WorkLocation: beginning or end</rdfs:comment>
-        <rdfs:comment xml:lang="en">location type</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workLocationWork -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workLocationWork">
@@ -2570,13 +2559,89 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workLocationFF -->
+    <!-- http://purl.bdrc.io/ontology/workLocationEndLine -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationFF">
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndLine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Indicates the number of following pages included in the WorkLocation. This is an alternative to using bdr:WorkLocationBegins and bdr:WorkLocationEnds which are really only needed when a WorkLocation spans volumes or when there is a reason to specify begin and end locations down to the line and phrase, e.g., in some of the rGyud &apos;bum where texts start and end mid-page</rdfs:comment>
-        <rdfs:label xml:lang="en">ff</rdfs:label>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The ending line on the ending page that is referenced</rdfs:comment>
+        <rdfs:label xml:lang="en">end line</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocationEndPage -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndPage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The ending page in the volume of the Work indicated by the other statements for this :WorkLocation</rdfs:comment>
+        <rdfs:label xml:lang="en">end page</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocationEndPhrase -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndPhrase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationEndLine specified as well.</rdfs:comment>
+        <rdfs:label xml:lang="en">end phrase</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocationEndSide -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndSide">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">If :workLocationByFolio true then end side should be either &quot;recto&quot; or &quot;verso&quot; but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages.</rdfs:comment>
+        <rdfs:label xml:lang="en">end side</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/workLocationEndVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndVolume">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">this should be a positive integer indicating the ending volume (if different from the starting volume) of the Work referenced in this Location</rdfs:comment>
+        <rdfs:label xml:lang="en">end volume</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3821,16 +3886,6 @@ bdr:W1KG20928 a :Work ;
         <rdfs:comment xml:lang="en">The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage</rdfs:comment>
         <rdfs:comment>The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a &lt;o:location/&gt; element spec&apos;d in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase</rdfs:comment>
         <rdfs:comment>parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/WorkLocationType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkLocationType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-        <rdfs:comment xml:lang="en">Indicates whether the WorkLocation is the beginning or end of a reference into a Work. An untyped WorkLocation may include a :workLocationFF indicating the number of following pages. This won&apos;t always work when the reference spans volumes as with some of the very long texts in Kanjur</rdfs:comment>
-        <rdfs:label xml:lang="en">Work Location Type</rdfs:label>
     </owl:Class>
     
 
@@ -6289,24 +6344,6 @@ The relations that are used to organize the :KinType individuals are the :taxEle
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLicense"/>
         <rdfs:comment xml:lang="en">This work is copyrighted and BDRC will only make at most fairuse access available</rdfs:comment>
         <rdfs:label xml:lang="en">copyrighted</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkLocationBegins -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLocationBegins">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLocationType"/>
-        <rdfs:label xml:lang="en">Work Beginning</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkLocationEnds -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLocationEnds">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkLocationType"/>
-        <rdfs:label xml:lang="en">Work Ending</rdfs:label>
     </owl:NamedIndividual>
     
 
