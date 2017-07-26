@@ -1157,17 +1157,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/personNameType -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personNameType">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-        <rdfs:comment xml:lang="en">the type of name described by the PersonName such as primary, first ordination, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">type</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/personOfSect -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personOfSect">
@@ -1750,18 +1739,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
         <rdfs:comment xml:lang="en">Asserts that the subject Work has a particular title.</rdfs:comment>
         <rdfs:label xml:lang="en">has title</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workTitleType -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workTitleType">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-        <rdfs:comment xml:lang="en">The type of the title, e.g., fullTitle, titlePageTitle and so on</rdfs:comment>
-        <rdfs:label xml:lang="en">type</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
     </owl:ObjectProperty>
     
@@ -3273,6 +3250,38 @@ Relative pagination uses pagination in the content of the work while absolute co
     
 
 
+    <!-- http://purl.bdrc.io/ontology/PersonBodhisattvaVowName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonBodhisattvaVowName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonChineseName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonChineseName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonCommonName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonCommonName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonCorporateName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonCorporateName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/PersonEvent -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonEvent">
@@ -3315,6 +3324,38 @@ Relative pagination uses pagination in the content of the work while absolute co
     
 
 
+    <!-- http://purl.bdrc.io/ontology/PersonFamilyName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonFamilyName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonFinalOrdinationName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonFinalOrdinationName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonFirstOrdinationName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonFirstOrdinationName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonGterStonTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonGterStonTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/PersonIncarnationOf -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonIncarnationOf">
@@ -3339,23 +3380,84 @@ Relative pagination uses pagination in the content of the work while absolute co
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment xml:lang="en">represents a name of a Person via an rdfs:label and :personNameType :PersonNameType. For example:
+        <rdfs:comment xml:lang="en">represents a name of a Person via an rdfs:label and a subclass of  :PersonName. For example:
 
     bdr:Pxxxx a :Person ;
-               :personHasName [ a :PersonName ;
-                                             rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ;
-                                             :personNameType bdr:PersonPrimaryName ]</rdfs:comment>
+               :personHasName [ a bdr:PersonPrimaryName ;
+                                             rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ]</rdfs:comment>
         <rdfs:label xml:lang="en">person name</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/PersonNameType -->
+    <!-- http://purl.bdrc.io/ontology/PersonOfficeTitle -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonNameType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-        <rdfs:comment xml:lang="en">Denotes the type of a :PersonName, e.g., first ordination, family, office title, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Name type</rdfs:label>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonOfficeTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonOtherName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonOtherName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonPenName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPenName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonPersonTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPersonTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonPersonalName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPersonalName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonPrimaryName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPrimaryName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonPrimaryTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPrimaryTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonSecretInitiatoryName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonSecretInitiatoryName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/PersonTulkuTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonTulkuTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
     </owl:Class>
     
 
@@ -3574,6 +3676,46 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
+    <!-- http://purl.bdrc.io/ontology/WorkBibliographicTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkBibliographicTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkCaptionTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCaptionTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkColophonTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkColophonTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkCopyrightPageTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCopyrightPageTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkCoverTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCoverTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/WorkCreator -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCreator">
@@ -3586,6 +3728,30 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCreatorType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkDkarChagTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkDkarChagTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkFullTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkFullTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkHalfTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkHalfTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
     </owl:Class>
     
 
@@ -3629,6 +3795,14 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/WorkIncipit -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkIncipit">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/WorkLicense -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkLicense">
@@ -3661,6 +3835,14 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/WorkOtherTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkOtherTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/WorkPartType -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkPartType">
@@ -3676,6 +3858,22 @@ bdr:W1KG20928 a :Work ;
         <rdfs:comment xml:lang="en">Blank nodes of this class collect together the various reference numbers that apply to a given work. This is primarily used in Kanjurs and Tengyurs for which there are quite a number of different catalogue number schemes.</rdfs:comment>
         <rdfs:label xml:lang="en">Work References</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkRunningTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkRunningTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkSectionTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSectionTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
     </owl:Class>
     
 
@@ -3699,6 +3897,22 @@ bdr:W1KG20928 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/WorkSpineTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSpineTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkSubtitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSubtitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/WorkTitle -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitle">
@@ -3707,24 +3921,29 @@ bdr:W1KG20928 a :Work ;
 
 
 bdr:W22083 a :Work ;
-      :workHasTitle [ a :WorkTitle ;
-            :workTitleType bdr:WorkBibliogrpahicTitle ;
-            rdfs:label &quot;bka&apos; &apos;gyur (stog pho brang bris ma/)&quot;@bo-x-ewts ] ;
-      :workHasTitle [ a :WorkTitle ;
-            :workTitleType bdr:WorkOtherTitle ;
-            rdfs:label &quot;la dwags tog mu mkhar bzhugs pa&apos;i bod yig bka&apos; &apos;gyur bris ma/&quot;@bo-x-ewts ] ;
-      :workHasTitle [ a :WorkTitle ;
-            :workTitleType bdr:WorkTitlePageTitle ;
+      :workHasTitle [ a :WorkBibliographicTitle ;
+            rdfs:label &quot;bka&apos; &apos;gyur (stog pho brang bris ma/)&quot;@bo-x-ewts ] ,
+          [ a :WorkOtherTitle ;
+            rdfs:label &quot;la dwags tog mu mkhar bzhugs pa&apos;i bod yig bka&apos; &apos;gyur bris ma/&quot;@bo-x-ewts ] ,
+          [ a :WorkTitlePageTitle ;
             rdfs:label &quot;the tog palace manuscript of the tibetan kanjur&quot;@en ] .</rdfs:comment>
         <rdfs:label xml:lang="en">Title</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/WorkTitleType -->
+    <!-- http://purl.bdrc.io/ontology/WorkTitlePageTitle -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitleType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitlePageTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/WorkTitlePortion -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitlePortion">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
     </owl:Class>
     
 
@@ -4654,38 +4873,6 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     
 
 
-    <!-- http://purl.bdrc.io/resource/PersonBodhisattvaVowName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonBodhisattvaVowName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonChineseName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonChineseName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonCommonName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonCommonName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonCorporateName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonCorporateName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PersonEventAffiliation -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventAffiliation">
@@ -4827,110 +5014,6 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonEventRabByungOrdination">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
         <rdfs:label xml:lang="en">Rabjung Ordination</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonFamilyName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonFamilyName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonFinalOrdinationName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonFinalOrdinationName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonFirstOrdinationName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonFirstOrdinationName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonGterStonTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonGterStonTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonOfficeTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonOfficeTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonOtherName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonOtherName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonPenName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonPenName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonPersonTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonPersonTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonPersonalName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonPersonalName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonPrimaryName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonPrimaryName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonPrimaryTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonPrimaryTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonSecretInitiatoryName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonSecretInitiatoryName">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PersonTulkuTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PersonTulkuTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonNameType"/>
     </owl:NamedIndividual>
     
 
@@ -6181,82 +6264,10 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     
 
 
-    <!-- http://purl.bdrc.io/resource/WorkBibliographicTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkBibliographicTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkCaptionTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkCaptionTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/WorkChapter -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkChapter">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkColophonTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkColophonTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkCopyrightPageTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkCopyrightPageTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkCoverTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkCoverTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkDkarChagTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkDkarChagTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkFullTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkFullTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkHalfTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkHalfTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkIncipit -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkIncipit">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
     </owl:NamedIndividual>
     
 
@@ -6300,34 +6311,10 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     
 
 
-    <!-- http://purl.bdrc.io/resource/WorkOtherTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkOtherTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkRunningTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkRunningTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/WorkSection -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSection">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkSectionTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSectionTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
     </owl:NamedIndividual>
     
 
@@ -6380,42 +6367,10 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     
 
 
-    <!-- http://purl.bdrc.io/resource/WorkSpineTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSpineTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkSubtitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSubtitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/WorkText -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkText">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkPartType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkTitlePageTitle -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTitlePageTitle">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/WorkTitlePortion -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTitlePortion">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/WorkTitleType"/>
     </owl:NamedIndividual>
     
 
