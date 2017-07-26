@@ -4,6 +4,7 @@
      xmlns:bdd="http://purl.bdrc.io/data/"
      xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:tbr="http://purl.bdrc.io/ontology/toberemoved/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:admin="http://purl.bdrc.io/ontology/admin/"
@@ -237,6 +238,26 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/outlineAuthorStatement -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/outlineAuthorStatement">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/outlineLogEntry -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/outlineLogEntry">
+        <rdfs:comment xml:lang="en">Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works</rdfs:comment>
+        <rdfs:label xml:lang="en">outline log entry</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/place_TLM_accession -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_TLM_accession">
@@ -325,127 +346,6 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/place_dist_py -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_dist_py">
-        <rdfs:comment xml:lang="en">The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavec and Lex Berman.</rdfs:comment>
-        <rdfs:label xml:lang="en">district</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_gb_dist -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_gb_dist">
-        <rdfs:comment xml:lang="en">An old GB code for the district containing this place from import of historical Tibetan places by Karl Ryavec and Lex Beerman</rdfs:comment>
-        <rdfs:label xml:lang="en">old containing district gb</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_gonpa_per1000 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_gonpa_per1000">
-        <rdfs:comment xml:lang="en">The number of monasteries per 1000 sq km in this Place (presumably a region) from data provided by Karl Ryavec</rdfs:comment>
-        <rdfs:label xml:lang="en">monasteries per 1000 sq km</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_id_Lex -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_id_Lex">
-        <rdfs:comment xml:lang="en">Place ID assigned by Lex Berman used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set</rdfs:comment>
-        <rdfs:label xml:lang="en">place ID Lex</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_id_TBRC -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_id_TBRC">
-        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavec used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set</rdfs:comment>
-        <rdfs:label xml:lang="en">place id TBRC</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_name_kr -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_name_kr">
-        <rdfs:comment xml:lang="en">Place name provided by Karl Ryavec for import of historical Tibetan places</rdfs:comment>
-        <rdfs:label xml:lang="en">name per KR</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_name_lex -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_name_lex">
-        <rdfs:comment xml:lang="en">Place name provided by Lex Berman for import of historical Tibetan places</rdfs:comment>
-        <rdfs:label xml:lang="en">name per lex</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_prov_py -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_prov_py">
-        <rdfs:comment xml:lang="en">Name of containing province in pinyin per Karl Ryavec for import of historical places</rdfs:comment>
-        <rdfs:label xml:lang="en">province name</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_town_ch -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_town_ch">
-        <rdfs:comment xml:lang="en">Name of the containing town in Chinese unicode per Karl Ryavec for import of historical Tibetan places</rdfs:comment>
-        <rdfs:label xml:lang="en">town name</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_town_py -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_town_py">
-        <rdfs:comment xml:lang="en">Name of containing town in pinyin per Karl Ryavec for import of historical Tibetan places</rdfs:comment>
-        <rdfs:label xml:lang="en">town name</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/place_town_syl -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_town_syl">
-        <rdfs:comment xml:lang="en">Another version of the name of the containing town per Karl Ryavec</rdfs:comment>
-        <rdfs:label xml:lang="en">town name</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/admin/productAllowByAddr -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productAllowByAddr">
@@ -516,6 +416,17 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/workInProduct -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workInProduct">
+        <rdfs:comment xml:lang="en">This :Work is included in the referenced admin:Product</rdfs:comment>
+        <rdfs:label xml:lang="en">in product</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/workLicense -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLicense">
@@ -535,6 +446,145 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:label xml:lang="en">date from description</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/outlineName -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/outlineName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/outlineType -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/outlineType">
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_dist_py -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_dist_py">
+        <rdfs:comment xml:lang="en">The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavec and Lex Berman.</rdfs:comment>
+        <rdfs:label xml:lang="en">district</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_gb_dist -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_gb_dist">
+        <rdfs:comment xml:lang="en">An old GB code for the district containing this place from import of historical Tibetan places by Karl Ryavec and Lex Beerman</rdfs:comment>
+        <rdfs:label xml:lang="en">old containing district gb</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_gonpa_per1000 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_gonpa_per1000">
+        <rdfs:comment xml:lang="en">The number of monasteries per 1000 sq km in this Place (presumably a region) from data provided by Karl Ryavec</rdfs:comment>
+        <rdfs:label xml:lang="en">monasteries per 1000 sq km</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_id_Lex -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_id_Lex">
+        <rdfs:comment xml:lang="en">Place ID assigned by Lex Berman used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set</rdfs:comment>
+        <rdfs:label xml:lang="en">place ID Lex</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_id_TBRC -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_id_TBRC">
+        <rdfs:comment xml:lang="en">Place ID assigned by Karl Ryavec used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set</rdfs:comment>
+        <rdfs:label xml:lang="en">place id TBRC</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_name_kr -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_name_kr">
+        <rdfs:comment xml:lang="en">Place name provided by Karl Ryavec for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">name per KR</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_name_lex -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_name_lex">
+        <rdfs:comment xml:lang="en">Place name provided by Lex Berman for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">name per lex</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_prov_py -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_prov_py">
+        <rdfs:comment xml:lang="en">Name of containing province in pinyin per Karl Ryavec for import of historical places</rdfs:comment>
+        <rdfs:label xml:lang="en">province name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_town_ch -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_town_ch">
+        <rdfs:comment xml:lang="en">Name of the containing town in Chinese unicode per Karl Ryavec for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">town name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_town_py -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_town_py">
+        <rdfs:comment xml:lang="en">Name of containing town in pinyin per Karl Ryavec for import of historical Tibetan places</rdfs:comment>
+        <rdfs:label xml:lang="en">town name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/toberemoved/place_town_syl -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/place_town_syl">
+        <rdfs:comment xml:lang="en">Another version of the name of the containing town per Karl Ryavec</rdfs:comment>
+        <rdfs:label xml:lang="en">town name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
     </owl:AnnotationProperty>
     
 
@@ -561,6 +611,30 @@ We take the view that the summary or contents statements can be treated in a man
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
         <rdfs:label xml:lang="en">The rdfs:label is used in the BDRC ontology to provide a preferred and localized human readable label for any resource. So while we provide :name to give all of the variants for a name or title for a Work, Person and so on</rdfs:label>
     </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -1531,15 +1605,6 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
         <rdfs:comment xml:lang="en">The Library (Place) that contains the physical holding</rdfs:comment>
         <rdfs:label xml:lang="en">library</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workInProduct -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workInProduct">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
     </owl:ObjectProperty>
     
 
