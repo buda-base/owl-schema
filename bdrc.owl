@@ -442,6 +442,17 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/workVolumesNote -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workVolumesNote">
+        <rdfs:comment xml:lang="en">Migration hint: When not empty the &lt;pubinfo:volumes/&gt; is a note regarding how many and which volumes have been acquired, scanned and so on.</rdfs:comment>
+        <rdfs:label xml:lang="en">volumes note</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/work_desc_date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/work_desc_date">
@@ -2851,15 +2862,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPrintery">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workPubinfoVolumes -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPubinfoVolumes">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
