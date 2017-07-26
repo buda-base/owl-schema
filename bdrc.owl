@@ -1501,15 +1501,6 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workHasPubInfoSeries -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasPubInfoSeries">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workHasReproduction -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasReproduction">
@@ -2833,7 +2824,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workSeriesContent -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeriesContent">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </owl:DatatypeProperty>
     
@@ -2842,7 +2833,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workSeriesName -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeriesName">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </owl:DatatypeProperty>
     
@@ -2852,7 +2843,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeriesNumber">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkPubinfoSeries"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">This is the number of this Work in a series - implies that this work is a part (member of) a series Work.</rdfs:comment>
         <rdfs:label xml:lang="en">number</rdfs:label>
@@ -3675,14 +3665,6 @@ bdr:W1KG20928 a :Work ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkPartType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/WorkPubinfoSeries -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkPubinfoSeries">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
     </owl:Class>
     
 
