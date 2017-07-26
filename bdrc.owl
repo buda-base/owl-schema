@@ -241,6 +241,9 @@ The value of this property should be an explanation of the needed conversion as 
     <!-- http://purl.bdrc.io/ontology/admin/outlineAuthorStatement -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/outlineAuthorStatement">
+        <rdfs:comment xml:lang="en">A statement of the authorship of the outline of this Work</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: use this for &lt;outline:creator/&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">outline author</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
     </owl:AnnotationProperty>
@@ -453,6 +456,8 @@ The value of this property should be an explanation of the needed conversion as 
     <!-- http://purl.bdrc.io/ontology/toberemoved/outlineName -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/outlineName">
+        <rdfs:comment xml:lang="en">Migration hint: the name from the outline. This should be the bibliographic name of the Work being outlined but apparently isn&apos;t always.</rdfs:comment>
+        <rdfs:label xml:lang="en">tbr outline name</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
     </owl:AnnotationProperty>
@@ -462,6 +467,8 @@ The value of this property should be an explanation of the needed conversion as 
     <!-- http://purl.bdrc.io/ontology/toberemoved/outlineType -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/toberemoved/outlineType">
+        <rdfs:comment xml:lang="en">Migration hint: The outline type. It&apos;s not clear if this has been consistently used when creating an outline and it is not currently used in the web application</rdfs:comment>
+        <rdfs:label xml:lang="en">tbr outline type</rdfs:label>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
     </owl:AnnotationProperty>
@@ -609,7 +616,8 @@ We take the view that the summary or contents statements can be treated in a man
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <rdfs:label xml:lang="en">The rdfs:label is used in the BDRC ontology to provide a preferred and localized human readable label for any resource. So while we provide :name to give all of the variants for a name or title for a Work, Person and so on</rdfs:label>
+        <rdfs:label xml:lang="en">The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </rdf:Description>
     
 
@@ -617,7 +625,10 @@ We take the view that the summary or contents statements can be treated in a man
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment xml:lang="en">A variant label for entities such as :Place, :Corporation and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">variant label</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </owl:AnnotationProperty>
     
 
@@ -625,7 +636,10 @@ We take the view that the summary or contents statements can be treated in a man
     <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:comment xml:lang="en">Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset</rdfs:comment>
+        <rdfs:label xml:lang="en">hidden label</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </owl:AnnotationProperty>
     
 
@@ -633,7 +647,10 @@ We take the view that the summary or contents statements can be treated in a man
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:comment xml:lang="en">The preferred human-readable label for a resource. For a Work this is typically the bibliographic title and will be repeated in a WorkTitle, similarly for Persons</rdfs:comment>
+        <rdfs:label xml:lang="en">label</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </owl:AnnotationProperty>
     
 
