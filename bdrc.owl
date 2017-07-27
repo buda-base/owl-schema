@@ -238,6 +238,17 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/outline -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/outline">
+        <rdfs:comment xml:lang="en">The referenced admin:Outline contains the root-level information from an Outline for this Work</rdfs:comment>
+        <rdfs:label xml:lang="en">had outline</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Outline"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/outlineAuthorStatement -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/outlineAuthorStatement">
@@ -245,7 +256,7 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:comment xml:lang="en">Migration hint: use this for &lt;outline:creator/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">outline author</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Outline"/>
     </owl:AnnotationProperty>
     
 
@@ -256,7 +267,7 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:comment xml:lang="en">Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works</rdfs:comment>
         <rdfs:label xml:lang="en">outline log entry</rdfs:label>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/LogEntry"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Outline"/>
     </owl:AnnotationProperty>
     
 
@@ -2633,7 +2644,14 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLegacyNode -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLegacyNode">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Work"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Outline"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site.</rdfs:comment>
         <rdfs:label xml:lang="en">has legacy node</rdfs:label>
@@ -4109,6 +4127,16 @@ bdr:W22083 a :Work ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
         <rdfs:comment xml:lang="en">Log entries for :Entity updates. Includes the agent, date and message explaing the update.</rdfs:comment>
         <rdfs:label xml:lang="en">Log Entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/Outline -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Outline">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:comment xml:lang="en">Used to hold various root-level Outline information that has no place in the constituent Works.</rdfs:comment>
+        <rdfs:label xml:lang="en">Outline root</rdfs:label>
     </owl:Class>
     
 
