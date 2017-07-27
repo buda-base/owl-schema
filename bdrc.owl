@@ -904,14 +904,14 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
-    <!-- http://purl.bdrc.io/ontology/itemType -->
+    <!-- http://purl.bdrc.io/ontology/itemLibrary -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/itemType">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Item"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ItemType"/>
-        <rdfs:comment xml:lang="en">Indicates the type of the Item: physical work, digital asset - scanned, ocr&apos;d or input.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Migration hint: imagegroups with lists of image names will be of type bdr:ItemTypeImageAsset</rdfs:comment>
-        <rdfs:label xml:lang="en">item type</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/itemLibrary">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ItemPhysicalHolding"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
+        <rdfs:comment xml:lang="en">The Library (Place) that contains the physical holding</rdfs:comment>
+        <rdfs:label xml:lang="en">library</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
     </owl:ObjectProperty>
     
 
@@ -1649,18 +1649,6 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workHoldingLibrary -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingLibrary">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-        <rdfs:comment xml:lang="en">The Library (Place) that contains the physical holding</rdfs:comment>
-        <rdfs:label xml:lang="en">library</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workIsAbout -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workIsAbout">
@@ -1935,6 +1923,45 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/itemHoldingCopies -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/itemHoldingCopies">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ItemPhysicalHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The number of copies of the :Work in this holding</rdfs:comment>
+        <rdfs:label xml:lang="en">copies</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/itemHoldingException -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/itemHoldingException">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ItemPhysicalHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Exception notes such a missing volume, damage to pages and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">exception</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/itemHoldingShelf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/itemHoldingShelf">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ItemPhysicalHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifies where the holding is shelved. The shelf code is based on a library specific taxonomy</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: For physical items in the FPL - note there is both a physical item and an image asset item for FPL - the string value for the :itemHoldingShelf is formed by concatenation:
+
+    desc_room + &apos; | &apos; + desc_id</rdfs:comment>
+        <rdfs:label xml:lang="en">shelf</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/onOrAbout -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/onOrAbout">
@@ -2076,7 +2103,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/volumeImageList -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeImageList">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/VolumeImageAsset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
     </owl:DatatypeProperty>
@@ -2267,54 +2294,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:comment xml:lang="en">A statement of the extent of the Work</rdfs:comment>
         <rdfs:comment xml:lang="en">Migration hint: use also for &lt;o:description type=&quot;extent&quot;/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">extent statement</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHoldingCode -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingCode">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Code indicating the library</rdfs:comment>
-        <rdfs:label xml:lang="en">code</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHoldingCopies -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingCopies">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The number of copies of the :Work in this holding</rdfs:comment>
-        <rdfs:label xml:lang="en">copies</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHoldingException -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingException">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">Exception notes such a missing volume, damage to pages and so on</rdfs:comment>
-        <rdfs:label xml:lang="en">exception</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/workHoldingShelf -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHoldingShelf">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Identifies where the holding is shelved. The shelf code is based on a library specific taxonomy</rdfs:comment>
-        <rdfs:label xml:lang="en">shelf</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/WorkHolding"/>
     </owl:DatatypeProperty>
     
 
@@ -2888,39 +2867,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/work_desc_id -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_id">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;id&quot;/&gt;</rdfs:comment>
-        <rdfs:label xml:lang="en">id</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_remarks -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_remarks">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;remarks&quot;/&gt;</rdfs:comment>
-        <rdfs:label xml:lang="en">remarks</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/work_desc_room -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/work_desc_room">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">used in the Fragile Palm Leaves project in &lt;w:description type=&quot;room&quot;/&gt;</rdfs:comment>
-        <rdfs:label xml:lang="en">room</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/admin/workLegacyNode -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLegacyNode">
@@ -3133,12 +3079,34 @@ bdr:Czzzz a :Corporation ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/ItemType -->
+    <!-- http://purl.bdrc.io/ontology/ItemEtextInput -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ItemType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-        <rdfs:comment xml:lang="en">The type of Item: scanned asset, ocr&apos;d, physical holding, etc</rdfs:comment>
-        <rdfs:label xml:lang="en">item type</rdfs:label>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ItemEtextInput">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ItemImageAsset -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ItemImageAsset">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ItemOCREtext -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ItemOCREtext">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ItemPhysicalHolding -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ItemPhysicalHolding">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Item"/>
     </owl:Class>
     
 
@@ -3737,6 +3705,38 @@ The set of such individuals may be further organized via :Taxonomy but need not 
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <rdfs:comment>Each vol:Volume MAY have a desc:onDisk property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/VolumeEtextInput -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumeEtextInput">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/VolumeImageAsset -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumeImageAsset">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/VolumeOCREtext -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumeOCREtext">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/VolumePhysicalHolding -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumePhysicalHolding">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
     </owl:Class>
     
 
@@ -4413,46 +4413,6 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/IncarnationTypeYangtse">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/PersonIncarnationType"/>
         <rdfs:label xml:lang="en">yangtse</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/ItemTypeEtextInput -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ItemTypeEtextInput">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/ItemType"/>
-        <rdfs:comment xml:lang="en">An eText created by human input of a text rather than OCR</rdfs:comment>
-        <rdfs:label xml:lang="en">Input eText</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/ItemTypeImageAsset -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ItemTypeImageAsset">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/ItemType"/>
-        <rdfs:comment xml:lang="en">A collection of images, scanned, captured with camera, or microfilm conversion that comprise one or more volumes of a :Work</rdfs:comment>
-        <rdfs:label xml:lang="en">Image Asset</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/ItemTypeOCREtext -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ItemTypeOCREtext">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/ItemType"/>
-        <rdfs:comment xml:lang="en">An eText created by OCR of an Image Asset. This is relevant since OCR&apos;d items allow for matching eText content to the original image.</rdfs:comment>
-        <rdfs:label xml:lang="en">OCR&apos;d eText</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/ItemTypePhysicalHolding -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ItemTypePhysicalHolding">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/ItemType"/>
-        <rdfs:comment xml:lang="en">A physical holding in a particular library (Place)</rdfs:comment>
-        <rdfs:label xml:lang="en">Physical Holding</rdfs:label>
     </owl:NamedIndividual>
     
 
