@@ -272,6 +272,17 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/outlineType -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/outlineType">
+        <rdfs:comment xml:lang="en">records the legacy outline type</rdfs:comment>
+        <rdfs:label xml:lang="en">outline type</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Outline"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/place_TLM_accession -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/place_TLM_accession">
@@ -3389,6 +3400,8 @@ bdr:Lwwww a :Lineage ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/OutlineType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">A legacy outline type</rdfs:comment>
+        <rdfs:label xml:lang="en">Outline Type</rdfs:label>
     </owl:Class>
     
 
