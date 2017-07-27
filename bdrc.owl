@@ -109,6 +109,8 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     <!-- http://purl.bdrc.io/ontology/seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/seeAlso">
+        <rdfs:comment xml:lang="en">Indicates that another Topic is related in someway to this Topic. Eventually this will need to be clarified in terms of prior practice</rdfs:comment>
+        <rdfs:label xml:lang="en">see other topic</rdfs:label>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Topic"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Topic"/>
     </owl:AnnotationProperty>
@@ -3106,17 +3108,6 @@ bdr:Czzzz a :Corporation ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/External -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/External">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment>The external entry element is intended to be used to link to an external site / resource that provides additional or related information for the Work, Person, Place and so on. The content of the external entry is a string that will be displayed by the web client. If the data attribute is present it will be interpreted as a URL linking to a web resource, e.g., to a related Treasury of Lives biography. There are currently a few records, e.g., G1KG5700, that have data links to TBRC Outline nodes.
-
-If the data attribute is present the web-client will use it to display a link that can be clicked to visit the linked item in a new window.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/Facet -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Facet">
@@ -3318,6 +3309,8 @@ bdr:Lwwww a :Lineage ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Note">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+        <rdfs:comment xml:lang="en">A comment about the subject resource, possibly with a source Work and a location in the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Note</rdfs:label>
     </owl:Class>
     
 
@@ -3594,6 +3587,8 @@ Relative pagination uses pagination in the content of the work while absolute co
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PlaceEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
+        <rdfs:comment xml:lang="en">An event of some type that occurred at the subject Place around some date, involving some Persons and other entities: founding, destruction etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place Event</rdfs:label>
     </owl:Class>
     
 
@@ -3623,6 +3618,7 @@ Relative pagination uses pagination in the content of the work while absolute co
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PrintType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
         <rdfs:comment xml:lang="en">Type print: manuscript, computer, woodblock, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">print type</rdfs:label>
     </owl:Class>
     
 
@@ -3754,6 +3750,7 @@ The set of such individuals may be further organized via :Taxonomy but need not 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Volume">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <rdfs:comment>Each vol:Volume MAY have a desc:onDisk property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
     
 
@@ -3826,6 +3823,8 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCreator">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+        <rdfs:comment xml:lang="en">The identity and type of a individual involved in the creation of the subject Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Creator</rdfs:label>
     </owl:Class>
     
 
@@ -3834,6 +3833,8 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCreatorType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">Was this creator an author, editor revealer, etc</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Creator Type</rdfs:label>
     </owl:Class>
     
 
@@ -3943,6 +3944,8 @@ bdr:W1KG20928 a :Work ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkPartType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
+        <rdfs:comment xml:lang="en">Migration hint: represents the Work related outline:node/@type</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Part Type</rdfs:label>
     </owl:Class>
     
 
@@ -3979,6 +3982,8 @@ bdr:W1KG20928 a :Work ;
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSite">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
+        <rdfs:comment xml:lang="en">Information about the site/Place where a Work was written, edited, completed and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Site</rdfs:label>
     </owl:Class>
     
 
@@ -4056,7 +4061,10 @@ bdr:W22083 a :Work ;
 
     <!-- http://purl.bdrc.io/ontology/admin/Admin -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Admin"/>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Admin">
+        <rdfs:comment xml:lang="en">Classes that represent administrative information needed to manage a system with digital assets and metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">Admin</rdfs:label>
+    </owl:Class>
     
 
 
@@ -6513,7 +6521,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
 
     <rdf:Description rdf:about="http://purl.bdrc.io/ontology/StatusType">
         <rdfs:label xml:lang="en">status</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates the status of the subject description</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the status of the subject resource</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
