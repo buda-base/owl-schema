@@ -9,6 +9,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:admin="http://purl.bdrc.io/ontology/admin/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
      xmlns:bdo="http://purl.bdrc.io/ontology/"
      xmlns:bdr="http://purl.bdrc.io/resource/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -1312,7 +1313,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/placeAddress">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Place"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
         <rdfs:comment xml:lang="en">Associates modern address information with a Place</rdfs:comment>
         <rdfs:label xml:lang="en">address</rdfs:label>
     </owl:ObjectProperty>
@@ -1908,66 +1909,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/addressCity -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressCity">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">city</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/addressCountry -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressCountry">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">country</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/addressNumber -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressNumber">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/addressPostal -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressPostal">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">postasl code</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/addressState -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressState">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">state</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/addressStreet -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/addressStreet">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PlaceAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">street</rdfs:label>
-    </owl:DatatypeProperty>
     
 
 
@@ -2998,6 +2939,60 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://www.w3.org/2006/vcard/ns#country-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">map the country for a Library address</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#locality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">use for city for a Library address</rdfs:comment>
+        <rdfs:label xml:lang="en">locality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#postal-code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">postal code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#region -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#region">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">use for state in Library address</rdfs:comment>
+        <rdfs:label xml:lang="en">region</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#street-address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">concatenate with the street number for a Library address</rdfs:comment>
+        <rdfs:label xml:lang="en">street address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3573,15 +3568,6 @@ Relative pagination uses pagination in the content of the work while absolute co
     
 
 
-    <!-- http://purl.bdrc.io/ontology/PlaceAddress -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PlaceAddress">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment>The plc:Address allows to record conventional address informaton for a Place. It is added to support the Tibetan Library Management application that allows for recording holdings of Works from other libraries.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/PlaceEvent -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PlaceEvent">
@@ -4128,9 +4114,48 @@ The various Works that are contained in the Product include an inProduct element
     
 
 
+    <!-- http://www.w3.org/2006/vcard/ns#Address -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Entity"/>
+        <rdfs:comment xml:lang="en">To specify the components of the address for a physical location</rdfs:comment>
+        <rdfs:label xml:lang="en">vcard Address</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1292"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Entity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Entity">
+        <rdfs:comment xml:lang="en">Entities used from vcard. Primarily for contemporary addresses. There may be a better vocabulary but it has not yet been found. vcard provides the appropriate vocabulary for expressing the address information associated with Libraries in the TLM project.</rdfs:comment>
+        <rdfs:label xml:lang="en">vcard Entity</rdfs:label>
+        <rdfs:seeAlso>https://www.w3.org/TR/vcard-rdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Entity"/>
+        <rdfs:comment xml:lang="en">The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
+
+The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Entity -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Entity">
+        <rdfs:comment xml:lang="en">foaf classes used in the Buddhist Digital Ontology. Any classes from the foaf vocabulary are used primarily for administrative purposes since foaf is not itself a cultural heritage vocabulary.
+
+FOAF is a project devoted to linking people and information using the Web. Regardless of whether information is in people&apos;s heads, in physical or digital documents, or in the form of factual data, it can be linked.</rdfs:comment>
+        <rdfs:label xml:lang="en">foaf Entity</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/"/>
+    </owl:Class>
     
 
 
