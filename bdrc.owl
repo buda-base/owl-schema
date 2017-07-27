@@ -1629,7 +1629,6 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <!-- http://purl.bdrc.io/ontology/workHasSite -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workHasSite">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/WorkSite"/>
         <rdfs:comment xml:lang="en">A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)</rdfs:comment>
@@ -1816,7 +1815,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     <!-- http://purl.bdrc.io/ontology/workSitePlace -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/workSitePlace">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkSite"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/Place"/>
         <rdfs:comment xml:lang="en">The place where some aspect of a Work occurred, such as the completion, editing, revelation and so on.</rdfs:comment>
@@ -1980,46 +1978,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/description -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/description">
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/external_content -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/external_content">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/External"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/external_data -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/external_data">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/External"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment>this should be the link to the specific item that is related to this Work, Person, Place and so on.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/external_source -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/external_source">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/External"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment>a link to the top-level of an external resource such as a http://treasuryoflives.org.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/itemBDRCHoldingStatement -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/itemBDRCHoldingStatement">
@@ -2030,16 +1988,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
 
 This might require creating an otherwise empty Item to stand-in for a Work that has yet to be scanned.</rdfs:comment>
         <rdfs:label xml:lang="en">BDRC holdings statement</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/name -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/name">
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">whenever a name (or title) is needed such as for Place, Office, PersonName and so on. Use of the rdfs:label is reserved for &quot;primary&quot; display purposes, i.e., the name (or title) that is used when identifying the resource on a web page or the like.</rdfs:comment>
-        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2057,7 +2005,6 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     <!-- http://purl.bdrc.io/ontology/personIsNonActor -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/personIsNonActor">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">The source person.xsd includes @type on &lt;info/&gt; which is meant to capture whether the Person is an &quot;actor&quot; in the world of Tibetan books. There are 40 out of 18,320 individuals that have been marked as info/@type = nonActor. These 40 are non-Tibetan individuals that have been included in the db because they are translators, or authors of some work of interest. Many of the records of nonActors have various small errors that need to be corrected.
@@ -2652,24 +2599,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/workLegacyNode -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLegacyNode">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Work"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Outline"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site.</rdfs:comment>
-        <rdfs:label xml:lang="en">has legacy node</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/workLocationByFolio -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationByFolio">
@@ -2684,7 +2613,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationEndLine -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndLine">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -2703,7 +2631,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationEndPage -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndPage">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -2722,7 +2649,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationEndPhrase -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndPhrase">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2740,7 +2667,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationEndSide -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndSide">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">If :workLocationByFolio true then end side should be either &quot;recto&quot; or &quot;verso&quot; but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages.</rdfs:comment>
@@ -2752,7 +2678,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationEndVolume -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationEndVolume">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -2771,7 +2696,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationLine -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationLine">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -2790,7 +2714,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationPage -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationPage">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -2809,7 +2732,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationPhrase -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationPhrase">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2827,7 +2750,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/workLocationSide -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workLocationSide">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/WorkLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">If :workLocationByFolio true then side should be either &quot;recto&quot; or &quot;verso&quot; but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages.</rdfs:comment>
@@ -3056,6 +2978,24 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/workLegacyNode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLegacyNode">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/Work"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Outline"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site.</rdfs:comment>
+        <rdfs:label xml:lang="en">has legacy node</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3170,20 +3110,6 @@ bdr:Czzzz a :Corporation ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/External">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/external_data"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/external_source"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>The external entry element is intended to be used to link to an external site / resource that provides additional or related information for the Work, Person, Place and so on. The content of the external entry is a string that will be displayed by the web client. If the data attribute is present it will be interpreted as a URL linking to a web resource, e.g., to a related Treasury of Lives biography. There are currently a few records, e.g., G1KG5700, that have data links to TBRC Outline nodes.
 
 If the data attribute is present the web-client will use it to display a link that can be clicked to visit the linked item in a new window.</rdfs:comment>
