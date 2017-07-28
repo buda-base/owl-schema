@@ -2162,6 +2162,20 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/volumePhysicalDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePhysicalDescription">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/VolumePhysicalHolding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">A description of the physical appearance of a Volume of the Item. For example,
+
+&quot;No covers. Gilded leaves with vermilion band. Printed cotton wrapper with floral designs.&quot;@en</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: for FPL Works map the &lt;work:description type=&quot;remarks&quot;/&gt;to :itemPhysicalDescription with string with language tag &quot;en&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">physical description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/workAuthorshipStatement -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workAuthorshipStatement">
