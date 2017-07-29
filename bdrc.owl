@@ -1168,16 +1168,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/personEventType -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personEventType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/PersonEventType"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/personGender -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/personGender">
@@ -3555,16 +3545,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonEventRabByungOrdination">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonEvent"/>
         <rdfs:label xml:lang="en">Rabjung Ordination</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/PersonEventType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonEventType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-        <rdfs:comment xml:lang="en">For :PersonEvent(s) indicates the type of event, e.g., birth, death, marriage, final ordination, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
     
 
