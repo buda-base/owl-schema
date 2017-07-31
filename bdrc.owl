@@ -2137,7 +2137,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:comment xml:lang="en">A description of the physical appearance of a Volume of the Item. For example,
 
 &quot;No covers. Gilded leaves with vermilion band. Printed cotton wrapper with floral designs.&quot;@en</rdfs:comment>
-        <rdfs:comment xml:lang="en">Migration hint: for FPL Works map the &lt;work:description type=&quot;remarks&quot;/&gt;to :itemPhysicalDescription with string with language tag &quot;en&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: for FPL Works map the &lt;work:description type=&quot;remarks&quot;/&gt;to :volumePhysicalDescription with string with language tag &quot;en&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">physical description</rdfs:label>
     </owl:DatatypeProperty>
     
