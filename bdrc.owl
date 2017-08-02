@@ -860,7 +860,6 @@ We take the view that the summary or contents statements can be treated in a man
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/corporationMemberType">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/CorporationMember"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/CorporationMemberType"/>
     </owl:ObjectProperty>
     
 
@@ -2072,7 +2071,10 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumeImageList">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/VolumeImageAsset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
+        <rdfs:comment xml:lang="en">If this property is present it indicates that digitized images of the volume are present in the archive.
+
+Migration hint: this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
+        <rdfs:label xml:lang="en">image list</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2089,6 +2091,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
                 </owl:unionOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">The number of the volume in the Item. There is no implied order in RDF and there may be missing volumes so it is necessary to explicitly indicate the volume number.</rdfs:comment>
+        <rdfs:label xml:lang="en">volume number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2098,6 +2102,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesIntro">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">May be used to indicate the number of introductory pages in a volume</rdfs:comment>
+        <rdfs:label xml:lang="en">intro pp</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2107,6 +2113,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesTbrcIntro">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The number of digitized metadata pages added by TBRC (now BDRC). Originally this was 2 pages and more recently condensed to a single non-blank page however a second blank page 2 was included to simplify processing of volumes for display and so on. The intention being to capture some relevant metadata in along with the digitized images so that the volume is essentially standalone.</rdfs:comment>
+        <rdfs:label xml:lang="en">tbrc intro pp</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2116,6 +2124,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesText">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">pages of text content in the volume</rdfs:comment>
+        <rdfs:label xml:lang="en">text pp</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2125,6 +2135,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesTotal">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">Total number of pages in the volume</rdfs:comment>
+        <rdfs:label xml:lang="en">total pp</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2160,6 +2172,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workBiblioNote">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">A note regarding a bibliographic feature of the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">bibliographic note</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2181,6 +2195,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workCatalogInfo">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Summary information about the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">catalog info</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2225,6 +2241,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workDateOfWriting">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">date of writing</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2234,6 +2251,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workDimensions">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">physical dimensions</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2243,6 +2261,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workEditionStatement">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">edition statement</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2252,6 +2271,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workEncoding">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">May indicate language and script information about the content of the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">encoding</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2284,6 +2305,10 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workHollis">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Harvard Online Library ID for the Work.
+
+There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard</rdfs:comment>
+        <rdfs:label xml:lang="en">hollis id</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2293,6 +2318,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workIllustrations">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">illustrations</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2707,6 +2733,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPL480">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Id and indication that the Work was prepared and acquired as part of Gene Smith&apos;s contribution to the implementation of Public Law 480 in India in the 1960&apos;s and 70&apos;s</rdfs:comment>
+        <rdfs:label xml:lang="en">pl480</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2716,6 +2744,10 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPrintery">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Free text comment on where the copy of the Work that was digitized was printed.
+
+This is generally not the source printery of the original wood block prints that were later photocopied and digitized</rdfs:comment>
+        <rdfs:label xml:lang="en">printery</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2725,6 +2757,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPublisherDate">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The date of publication of the form of the Work that has been digitized. This date is typically taken from the printed material in the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2734,6 +2768,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPublisherLocation">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Loction of the publisher of the form of the Work that has been digitized.</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher location</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2743,6 +2779,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workPublisherName">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The name of the publisher transcribed from the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2788,6 +2826,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workScanInfo">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Where and by whom the Work was scanned (or requested to be scanned)</rdfs:comment>
+        <rdfs:label xml:lang="en">scan info</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2797,6 +2837,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeeHarvard">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">see Harvard</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2806,6 +2847,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeriesContent">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">series content</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2815,6 +2857,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSeriesName">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">series name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2835,6 +2878,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSourceNote">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">source note</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2844,6 +2888,10 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workSourcePrintery_string">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Free-text expression of the source printery for the Work.
+
+Should be converted to a reference to a Place resource</rdfs:comment>
+        <rdfs:label xml:lang="en">source printery</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2999,24 +3047,47 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 
 bdr:Czzzz a :Corporation ;
                  :corporationHasMember
-                       [ a :CorporationMember ;
-                         :corporationMember bdr:Pyyyyy ;
-                         :corporationMemberType bdr:CorporationMemberTypeByBlood ] ;
-                 :corporationHasMember
-                       [ a CorporationMember ;
-                         :corporationMember bdr:Pxxxxx ;
-                         :corporationMemberType bdr:CorporationMemberTypeByMarriage ] .</rdfs:comment>
+                       [ a :CorporationMemberByBlood ;
+                         :corporationMember bdr:Pyyyyy ] ,
+                        [ a CorporationMemberByMarriage ;
+                         :corporationMember bdr:Pxxxxx ] .</rdfs:comment>
         <rdfs:label xml:lang="en">Corporation Member</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/CorporationMemberType -->
+    <!-- http://purl.bdrc.io/ontology/CorporationMemberByBlood -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/CorporationMemberType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-        <rdfs:comment xml:lang="en">Indicates the relation of a given :Person to the corporation, such as related by blood, marriage, or monastic status</rdfs:comment>
-        <rdfs:label xml:lang="en">Corporation Member type</rdfs:label>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/CorporationMemberByBlood">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/CorporationMember"/>
+        <rdfs:label xml:lang="en">Member by Blood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/CorporationMemberByMarriage -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/CorporationMemberByMarriage">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/CorporationMember"/>
+        <rdfs:label xml:lang="en">Member by Marriage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/CorporationMemberMonastic -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/CorporationMemberMonastic">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/CorporationMember"/>
+        <rdfs:label xml:lang="en">Monastic Member</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/CorporationMemberNotSpecified -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/CorporationMemberNotSpecified">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/CorporationMember"/>
+        <rdfs:label xml:lang="en">Unspecified Member</rdfs:label>
     </owl:Class>
     
 
@@ -3283,32 +3354,12 @@ bdr:Lwwww a :Lineage ;
     
 
 
-    <!-- http://purl.bdrc.io/ontology/LogEntry -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/LogEntry">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment xml:lang="en">Indicates who, what, and when an update to BDRC resources was made</rdfs:comment>
-        <rdfs:label xml:lang="en">Log Entry</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/Note -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Note">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <rdfs:comment xml:lang="en">A comment about the subject resource, possibly with a source Work and a location in the Work</rdfs:comment>
         <rdfs:label xml:lang="en">Note</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/OutlineType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/OutlineType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Type"/>
-        <rdfs:comment xml:lang="en">A legacy outline type</rdfs:comment>
-        <rdfs:label xml:lang="en">Outline Type</rdfs:label>
     </owl:Class>
     
 
@@ -3341,6 +3392,7 @@ Relative pagination uses pagination in the content of the work while absolute co
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonBodhisattvaVowName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Bodhisattva Vow Name</rdfs:label>
     </owl:Class>
     
 
@@ -3349,6 +3401,7 @@ Relative pagination uses pagination in the content of the work while absolute co
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonChineseName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Chinese Name</rdfs:label>
     </owl:Class>
     
 
@@ -3357,6 +3410,7 @@ Relative pagination uses pagination in the content of the work while absolute co
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonCommonName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Common Name</rdfs:label>
     </owl:Class>
     
 
@@ -3365,6 +3419,7 @@ Relative pagination uses pagination in the content of the work while absolute co
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonCorporateName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Corporate Name</rdfs:label>
     </owl:Class>
     
 
@@ -3553,6 +3608,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonFamilyName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Family Name</rdfs:label>
     </owl:Class>
     
 
@@ -3561,6 +3617,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonFinalOrdinationName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Final Ordination Name</rdfs:label>
     </owl:Class>
     
 
@@ -3569,6 +3626,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonFirstOrdinationName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">First Ordination Name</rdfs:label>
     </owl:Class>
     
 
@@ -3577,6 +3635,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonGterStonTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Terton Title</rdfs:label>
     </owl:Class>
     
 
@@ -3607,9 +3666,9 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
         <rdfs:comment xml:lang="en">represents a name of a Person via an rdfs:label and a subclass of  :PersonName. For example:
 
-    bdr:Pxxxx a :Person ;
-               :personHasName [ a bdr:PersonPrimaryName ;
-                                             rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ]</rdfs:comment>
+    bdr:P1583 a :Person ;
+               :personName [ a bdr:PersonPrimaryName ;
+                                       rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ]</rdfs:comment>
         <rdfs:label xml:lang="en">person name</rdfs:label>
     </owl:Class>
     
@@ -3619,6 +3678,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonOfficeTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Office Title</rdfs:label>
     </owl:Class>
     
 
@@ -3627,6 +3687,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonOtherName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Other Name</rdfs:label>
     </owl:Class>
     
 
@@ -3635,6 +3696,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPenName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Pen Name</rdfs:label>
     </owl:Class>
     
 
@@ -3643,6 +3705,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPersonTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Person Title</rdfs:label>
     </owl:Class>
     
 
@@ -3651,6 +3714,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPersonalName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Personal Name</rdfs:label>
     </owl:Class>
     
 
@@ -3659,6 +3723,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPrimaryName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Primary Name</rdfs:label>
     </owl:Class>
     
 
@@ -3667,6 +3732,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonPrimaryTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Primary Title</rdfs:label>
     </owl:Class>
     
 
@@ -3675,6 +3741,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonSecretInitiatoryName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Secret Initiatory Name</rdfs:label>
     </owl:Class>
     
 
@@ -3683,6 +3750,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/PersonTulkuTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/PersonName"/>
+        <rdfs:label xml:lang="en">Tulku Title</rdfs:label>
     </owl:Class>
     
 
@@ -3910,7 +3978,7 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/Volume">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
-        <rdfs:comment>Each vol:Volume MAY have a desc:onDisk property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.</rdfs:comment>
+        <rdfs:comment xml:lang="en">There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
     
@@ -3920,6 +3988,10 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumeImageAsset">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:comment xml:lang="en">The :VolumeImageAsset represents a scanned or otherwise digitized set of page images. These may be from paper hardcopy or microfilm. Digitization may be via scanning or camera. Going forward all of this information should be captured to reflect the provenance of the digital asset.
+
+Each :VolumeImageAsset may have a :volumeImageList property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume Image Asset</rdfs:label>
     </owl:Class>
     
 
@@ -3928,6 +4000,8 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumeInputEtext">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:comment xml:lang="en">Input etexts are prepared manually and used to typeset printed versions of texts so these texts are expected to be somewhat less error-prone by comparison with OCR&apos;d materials. On the other hand these texts generally do not provide alignment with digitized pages.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume Input Etext</rdfs:label>
     </owl:Class>
     
 
@@ -3936,6 +4010,8 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumeOCREtext">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:comment xml:lang="en">OCR&apos;d etexts are searchable Unicode documents that correspond to image assets in the BUDA archives. OCR&apos;d etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume OCR&apos;d Etext</rdfs:label>
     </owl:Class>
     
 
@@ -3944,6 +4020,8 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/VolumePhysicalAsset">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
+        <rdfs:comment xml:lang="en">Physical assets are indicated for libraries that are register their holdings in the BUDA dataset</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume Physical Asset</rdfs:label>
     </owl:Class>
     
 
@@ -3976,6 +4054,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkBibliographicTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Bibliographic Title</rdfs:label>
     </owl:Class>
     
 
@@ -3984,6 +4063,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCaptionTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Caption Title</rdfs:label>
     </owl:Class>
     
 
@@ -3992,6 +4072,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkColophonTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Colophon Title</rdfs:label>
     </owl:Class>
     
 
@@ -4000,6 +4081,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCopyrightPageTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Copyright page Title</rdfs:label>
     </owl:Class>
     
 
@@ -4008,6 +4090,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkCoverTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Cover Title</rdfs:label>
     </owl:Class>
     
 
@@ -4036,6 +4119,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkDkarChagTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Table of Contents Title</rdfs:label>
     </owl:Class>
     
 
@@ -4044,6 +4128,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkFullTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Full Title</rdfs:label>
     </owl:Class>
     
 
@@ -4052,6 +4137,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkHalfTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Half Title</rdfs:label>
     </owl:Class>
     
 
@@ -4059,7 +4145,9 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <!-- http://purl.bdrc.io/ontology/WorkIncipit -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkIncipit">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/Facet"/>
+        <rdfs:comment xml:lang="en">The first few syllables/words of the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Incipit</rdfs:label>
     </owl:Class>
     
 
@@ -4090,6 +4178,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkOtherTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Other Title</rdfs:label>
     </owl:Class>
     
 
@@ -4119,6 +4208,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkRunningTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Running Title</rdfs:label>
     </owl:Class>
     
 
@@ -4127,6 +4217,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSectionTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Section Title</rdfs:label>
     </owl:Class>
     
 
@@ -4156,6 +4247,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSpineTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Spine Title</rdfs:label>
     </owl:Class>
     
 
@@ -4164,6 +4256,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkSubtitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Sibtitle</rdfs:label>
     </owl:Class>
     
 
@@ -4191,6 +4284,7 @@ bdr:W22083 a :Work ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitlePageTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Title page Title</rdfs:label>
     </owl:Class>
     
 
@@ -4199,6 +4293,7 @@ bdr:W22083 a :Work ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/WorkTitlePortion">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/WorkTitle"/>
+        <rdfs:label xml:lang="en">Title portion</rdfs:label>
     </owl:Class>
     
 
@@ -4238,6 +4333,16 @@ bdr:W22083 a :Work ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
         <rdfs:comment xml:lang="en">Used to hold various root-level Outline information that has no place in the constituent Works.</rdfs:comment>
         <rdfs:label xml:lang="en">Outline root</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/OutlineType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/OutlineType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:comment xml:lang="en">A legacy outline type</rdfs:comment>
+        <rdfs:label xml:lang="en">Outline Type</rdfs:label>
     </owl:Class>
     
 
@@ -4335,38 +4440,6 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.bdrc.io/resource/CorporationMemberTypeByBlood -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/CorporationMemberTypeByBlood">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/CorporationMemberType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/CorporationMemberTypeByMarriage -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/CorporationMemberTypeByMarriage">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/CorporationMemberType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/CorporationMemberTypeMonastic -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/CorporationMemberTypeMonastic">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/CorporationMemberType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/CorporationMemberTypeNotSpecified -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/CorporationMemberTypeNotSpecified">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/CorporationMemberType"/>
-    </owl:NamedIndividual>
     
 
 
@@ -5061,7 +5134,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeCompositeVolume -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeCompositeVolume">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5069,7 +5142,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeGsungBum -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeGsungBum">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5077,7 +5150,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeGterChos -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeGterChos">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5085,7 +5158,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeMultiVolumeCollection -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeMultiVolumeCollection">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5093,7 +5166,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeNotAssigned -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeNotAssigned">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5101,7 +5174,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypePartialCollectedWorks -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypePartialCollectedWorks">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5109,7 +5182,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeSaBcad -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeSaBcad">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
@@ -5117,7 +5190,7 @@ The relations that are used to organize the :KinType individuals are the :taxEle
     <!-- http://purl.bdrc.io/resource/OutlineTypeSubjectCollection -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeSubjectCollection">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/OutlineType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/OutlineType"/>
     </owl:NamedIndividual>
     
 
