@@ -2086,7 +2086,7 @@ Migration hint: this property appears as &lt;ig:description type=&quot;onDisk&qu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2134,7 +2134,7 @@ Migration hint: this property appears as &lt;ig:description type=&quot;onDisk&qu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/volumePagesTotal">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/Volume"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Total number of pages in the volume</rdfs:comment>
         <rdfs:label xml:lang="en">total pp</rdfs:label>
     </owl:DatatypeProperty>
@@ -2546,7 +2546,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2564,7 +2564,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2582,7 +2582,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2611,7 +2611,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2629,7 +2629,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2647,7 +2647,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2665,7 +2665,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2706,7 +2706,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
                 </owl:unionOf>
             </rdfs:Datatype>
@@ -2720,7 +2720,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     <!-- http://purl.bdrc.io/ontology/workNumberOfVolumes -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/workNumberOfVolumes">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Migration info: this is the &lt;work:archiveInfo @vols/&gt; attribute.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the number of volumes (if any) associated with the Work. Typically this is for a published work. The value may differ from the &quot;actual&quot; number of volumes in an associated Item owing to missing volumes.</rdfs:comment>
         <rdfs:label xml:lang="en">number of volumes</rdfs:label>
