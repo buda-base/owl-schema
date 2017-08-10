@@ -299,9 +299,6 @@
     },
     "adm:workLicense" : {
       "@type" : "@id"
-    },
-    "tbr:outlineType" : {
-      "@type" : "@id"
     }
   }
 }
