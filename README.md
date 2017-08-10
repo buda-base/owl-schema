@@ -8,6 +8,8 @@ The `bdrc.owl` is the current ontology and at some point the migration toolchain
 
 The [resources](resources/) directory contains reference copies of third-party ontologies used in developing the production ontology.
 
+The [context.jsonld](context.jsonld) file is a JSON-LD context file that can be used, with the url http://purl.bdrc.io/context.jsonld .
+
 ### Features
 
 See [reasoning](reasoning/) directory for reasoning rules, and [i18n](i18n/) directory for string translations.
