@@ -464,6 +464,7 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/taxElementOfRelation">
         <rdfs:comment xml:lang="en">Identifies a relation to be used as the element of relation for a custom taxonomy</rdfs:comment>
         <rdfs:label xml:lang="en">taxonomy element of relation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
     </owl:AnnotationProperty>
@@ -475,6 +476,7 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/taxSubclassRelation">
         <rdfs:comment xml:lang="en">This identifies a property that is used in a custom taxonomy to represent the subclass relation for the taxonomy</rdfs:comment>
         <rdfs:label xml:lang="en">taxonomy subclass relation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
     </owl:AnnotationProperty>
@@ -1989,6 +1991,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property is used to indicated that a given Thing, usually some sort of Type, is an element of a (sub)class of some Taxonomy. The object of the property is typically some other individual of the same Type that is marked as a taxSubClassOf a Taxonomy or a (sub)class of a Taxonomy, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">taxonomy element</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
     </owl:ObjectProperty>
     
 
@@ -1998,6 +2001,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/taxSubClass">
         <rdfs:label xml:lang="en">This property identifies the subject as a subclass of a Taxonomy or some other subclass of a Taxonomy</rdfs:label>
         <rdfs:label xml:lang="en">taxonomy subclass</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
     </owl:ObjectProperty>
     
 
@@ -4473,7 +4477,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Taxonomy">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
-        <rdfs:comment xml:lang="en">A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :KinType are organized via the bdr:KinshipTaxonomy.
+        <rdfs:comment xml:lang="en">A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
 
 Assertions using :taxSubClass and :taxElementOf object properties organize the set of typed individuals into a class/subclass hierarchy. Typed indivduals can be asserted to be :taxSubClass of other individuals or of the :Taxonomy individual itself - the :Taxonomy individual is the root of the class/subclass hierarchy.
 
@@ -4481,57 +4485,60 @@ Typed individuals are asserted to be :taxElementOf other typed individuals that 
 
 This approach allows for typed individuals to be elements or subclass as needed for the given taxonomy. For example, 
 
-    :KinType owl:subClassOf :Type .
+    :Tradition owl:subClassOf :Type .
 
-    bdr:KinshipTaxonomy a :Taxonomy .
+    bdr:TraditionTaxonomy a :Taxonomy .
+    bdr:EightPracticeLineages a :Taxonomy ;
+        :taxSubClass bdr:TraditionTaxonomy .
 
-    bdr:KinParentSibling a :KinType ;
-                                     :taxSubClass bdr:KinshipTaxonomy
+    bdr:TraditionGeluk a :Tradition ;
+        :taxSubClass bdr:TraditionTaxonomy .
 
-    bdr:KinUncle a :KinType ;
-                         :taxSubClass bdr:KinParentSibling
+    bdr:TraditionNyingma a :Tradition ;
+        :taxSubClass bdr:EightPracticeLineages .
 
-and
-
-    bdr:KinPaternalUncle a :KinType ;
-    bdr:KinPaternalUncle :taxElementOf bdr:KinUncle .
+    bdr:TraditionKagyu a :Tradition ;
+        :taxSubClass bdr:EightPracticeLineages .
 
 permits one to assert that
 
-    bdr:Pxxxx [ a :Kin ;
-                       :personKinType bdr:KinUncle ;
-                       :personKinWho bdr:Pyyyy ]
+    bdr:G521 :placeEvent 
+                    [ a :PlaceFounded ;
+                      :onOrAbout  &quot;1150&quot; ;
+                      :placeEventAffiliation bdr:TraditionKagyu ] ,
+                    [ a :PlaceConverted ;
+                      :placeEventAffiliation bdr:TraditionNyingma ] .
 
-or if there is more specificity known:
+and
+
+    bdr:G1KR781 :placeEvent
+                    [ a :PlaceFounded ;
+                      :onOrAbout  &quot;1660&quot; ;
+                      :placeEventAffiliation bdr:TraditionKagyu ] ,
+                    [ a :PlaceConverted ;
+                      :onOrAbout  &quot;1674&quot; ;
+                      :placeEventAffiliation bdr:TraditionGeluk ] .
 
 
-    bdr:Pxxxx [ a :Kin ;
-                       :personKinType bdr:KinPaternalUncle ;
-                       :personKinWho bdr:Pyyyy ]
-
-The idea of distinguishing :taxElementOf versus :taxSubClass allows to indicate what can be extended and what typed individuals are &quot;final&quot;.
-
-If all typed individuals represent extendable entities then they can all be asserted as :taxSubClass.
-
-Using typed individuals provides a straightforward approach to localization by simply attaching rdfs:label in the various languages to eah of the typed individuals so that bdr:KinUncle will have the zh, bo, and en labels needed to display in an application.
+Using typed individuals provides a straightforward approach to localization by simply attaching rdfs:label in the various languages to eah of the typed individuals so that bdr:TraditionNyingms will have the zh, bo, and en labels needed to display in an application.
 
 Using typed individuals allows to provide a uniform approach to typing names, events, groups and so on rather than using owl:class/subclass relations in some cases and sub-properties (data or object) in other cases.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a &quot;coherent&quot; set of individuals of type :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
+        <rdfs:comment xml:lang="en">Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a &quot;coherent&quot; set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
 
-Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:KinUncle find also instances of bdr:PaternalUncle and so on.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the properties :taxSubclassProperty and :taxElementOfProperty:
+Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:TraditionDrukpaKagyu find also instances of bdr:TraditionTodrukKagyu and so on.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
 
-bdr:KinshipTaxonomy a :Taxonomy ;
+bdr:TraditionTaxonomy a :Taxonomy ;
       :taxSubclassProperty :taxSubclass ;
       :taxElementOfProperty :taxElementOf .
 
-If there were an alternative Taxonomy, bdr:OtherTaxonomy:
+If there were an alternative Taxonomy of Traditions, e.g.,  bdr:OtherTaxonomy:
 
 bdr:OtherTaxonomy a :Taxonomy ;
       :taxSubclassProperty :taxSubclass02 ;
       :taxElementOfProperty :taxElementOf02 .
 
-Would allow for bdr:OtherTaxonomy to organize the same set of Kinship individuals unambiguously.</rdfs:comment>
+Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously.</rdfs:comment>
         <rdfs:label xml:lang="en">Taxonomy</rdfs:label>
     </owl:Class>
     
