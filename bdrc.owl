@@ -2159,6 +2159,16 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workHasNumber -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasNumber">
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workNumberOf"/>
+        <rdfs:comment xml:lang="en">used with a Series to reference a number of the series</rdfs:comment>
+        <rdfs:label xml:lang="en">work has number</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workHasPart -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasPart">
