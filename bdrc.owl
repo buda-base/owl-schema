@@ -269,6 +269,15 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/productHasWork -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasWork">
+        <rdfs:comment xml:lang="en">the admin:Product contains the referenced :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">has work</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/productIncludes -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/productIncludes">
