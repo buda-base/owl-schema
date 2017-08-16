@@ -2029,16 +2029,6 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/workCreatorWho -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workCreatorWho">
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
-        <rdfs:comment xml:lang="en">The :Person who is the creator of the :Work</rdfs:comment>
-        <rdfs:label xml:lang="en">who</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/workDerivativeOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workDerivativeOf">
