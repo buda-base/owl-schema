@@ -1607,17 +1607,6 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/lineageAlternative -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/lineageAlternative">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Lineage"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/LineageAlternative"/>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/LineageAlternative"/>
-        <owl:deprecated xml:lang="en">deprecated. See :LineageAlternative for details</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/lineageDownFrom -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/lineageDownFrom">
@@ -1960,6 +1949,17 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/placeEventWho -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/placeEventWho">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PlaceEvent"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:comment xml:lang="en">who founded or otherwise was involved in the place event</rdfs:comment>
+        <rdfs:label xml:lang="en">who</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/placeIsNear -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/placeIsNear">
@@ -1967,6 +1967,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:comment xml:lang="en">Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions.</rdfs:comment>
+        <owl:deprecated xml:lang="en">not actually used in legacy data and not well defined</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -3692,6 +3693,12 @@ The various Works that are contained in the Product include an inProduct element
         <rdfs:comment xml:lang="en">Names are represented by rdfs:label</rdfs:comment>
         <rdfs:label xml:lang="en">Corporation</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.bdrc.io/ontology/core/Corporation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="en">Corporation</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">This is a comment on the rdfs:label</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -3897,28 +3904,6 @@ Lineage transmissions capture the relationship between lineage holders, sets of 
         <rdfs:comment xml:lang="en">Names are represented by rdfs:label</rdfs:comment>
         <rdfs:label xml:lang="en">Lineage</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://link.springer.com/article/10.1023%2FA%3A1004844115222?LI=true"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/LineageAlternative -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LineageAlternative">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <owl:deprecated xml:lang="en">An Alternative was intended to be used to express a variant of the main lineage &quot;inline&quot; in the same Lineage document rather than creating separate documents for each lineage variation. 
-
-It is modeled on the conventions used in gsan yig for this purpose. So an Alternative will typically have three or more holders: 
-    1) the start holder that mentions a holder in the containing Lineage that is the start point of the variation; 
-    2) then one or more holders that represent the variation; and
-    3) then a final holder that mentions a holder in the containing Lineage that is the end point of the variation. 
-
-The start holder is marked by including a downTo element and the end holder is marked with a downFrom element. If the downTo holder is not present then the variation is a variation on the intial sequence of the lineage. If the downFrom is not present then the variation is a the end of the lineage. 
-
-Generally the Alternatives should appear at the end of the main sequence of holders and there may be as many Alternatives as needed to express the variations in the gsan yig / thob yig.</owl:deprecated>
-        <owl:deprecated xml:lang="en">This feature is not used. There are two empty occurrences of &lt;lin:alternative/&gt; in L1RKL1802.xml and
-L1RKL1822.xml.
-
-The :lineageRef is used instead to refer to a separate :Lineage rather than adding undue complexity to the modeling of :Lineage.</owl:deprecated>
     </owl:Class>
     
 
@@ -4153,6 +4138,17 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/PersonEventFoundsMonastery -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventFoundsMonastery">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:comment xml:lang="en">Migration hint: occurrences of this event in the legacy data are modeled by adding a PlaceEvent of type founded to the Monastery Place and a reference to the founder Person via :placeEventWho predicate</rdfs:comment>
+        <rdfs:label xml:lang="en">Founds Monastery</rdfs:label>
+        <owl:deprecated xml:lang="en">this Person event is deprecated in favor of modeling via PlaceEvent</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/PersonEventGterMaDiscovery -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventGterMaDiscovery">
@@ -4194,15 +4190,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventMarriage">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Marriage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventMonasteryFoundation -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventMonasteryFoundation">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Founds Monastery</rdfs:label>
     </owl:Class>
     
 
