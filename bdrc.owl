@@ -6305,7 +6305,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTaxonomy">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
         <taxElementOfRelation rdf:resource="http://purl.bdrc.io/ontology/core/taxElementOf"/>
-        <taxSubclassRelation rdf:resource="http://purl.bdrc.io/ontology/core/taxSubClass"/>
+        <taxSubclassRelation rdf:resource="http://purl.bdrc.io/ontology/core/taxSubClassOf"/>
         <rdfs:comment xml:lang="en">Taxonomy of Tibetan Buddhist Traditions for use with Place and Person Events</rdfs:comment>
     </owl:NamedIndividual>
     
