@@ -40,11 +40,18 @@ The convention used by BDRC is not to use it when not mandatory.
 
 #### ALA-LC transliteration (all languages)
 
-[ALA-LC](https://www.loc.gov/catdir/cpso/roman.html) is the only transliteration schema that is documented in some specifications. We use alaloc as the name for it, using the same name as the [CLDR data](http://unicode.org/repos/cldr/trunk/common/bcp47/transform.xml) ([doc](http://www.unicode.org/reports/tr35/#BCP47_T_Extension), [source](https://www.iana.org/assignments/language-tag-extensions-registry/language-tag-extensions-registry)). It seems the way to use the CLDR tag would be by adding the suffix `-t-m0-alaloc` to the language (ex: `sa-t-m0-alaloc`).
+[ALA-LC](https://www.loc.gov/catdir/cpso/roman.html) is the only transliteration schema that is documented in some specifications. There are two different standards to specify it:
+
+- the tag standardized in IANA registry: `-alalc97` (ex: `sa-alalc97`)
+- the name `alaloc` is used in the [CLDR data](http://unicode.org/repos/cldr/trunk/common/bcp47/transform.xml) ([doc](http://www.unicode.org/reports/tr35/#BCP47_T_Extension), [source](https://www.iana.org/assignments/language-tag-extensions-registry/language-tag-extensions-registry)). It seems the way to use the CLDR tag would be by adding the suffix `-t-m0-alaloc` to the language (ex: `sa-t-m0-alaloc`).
 
 We opened two tickets on the CLDR data to get some transliteration scheme normalized: [EWTS](http://unicode.org/cldr/trac/ticket/10547) and [IAST](http://unicode.org/cldr/trac/ticket/10548).
 
-The convention BDRC uses is not to use the T extension mechanism, but instead use private tags, so we use `sa-x-alaloc` instead of `sa-t-m0-alaloc`.
+The convention BDRC uses is to use the IANA name.
+
+#### Phonetic transcription
+
+TODO
 
 #### Language mixing
 
@@ -53,31 +60,34 @@ When a string contains multiple languages, we use the [Unicode T extension mecha
 #### Chinese
 Most Chinese tags are all standardized so their choice is easy:
 
-- `zh-Hans` (IANA) for simplified Chinese characters
-- `zh-Hant` (IANA) for traditional Chinese characters
-- `zh-Latn-pinyin` (IANA) for Pinyin transliteration
-- `zh-x-wade` (invented by BDRC) for Wade-Giles transliteration
+- `zh-Hans` for simplified Chinese characters
+- `zh-Hant` for traditional Chinese characters
+- `zh-Latn-pinyin` for Pinyin transliteration
+- `zh-x-wade` for Wade-Giles transliteration
 
 #### Pali
 For Pali our convention is to always use a script tag:
 
 - `pi-Sinh` for Pali written in Sinhalese script
 - `pi-Thai` for Pali written in Thai script
-- `pi-x-iast` (BDRC) for Pali written in IAST
+- `pi-x-iast` (BDRC) for Pali written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
 
 #### Sanskrit
 We also choose to keep the script tag for Sanskrit in Devanagari:
 
 - `sa-Deva` for Sanskrit written in Devanagari
 - `sa-Tibt` for Sanskrit transliterated into Tibetan
-- `sa-x-iast` (BDRC) for Sanskrit written in IAST
-- `sa-x-ndia` (BDRC) for Sanskrit written in IAST with no diacritics
-- `sa-x-slp` (BDRC) for Sanskrit written in SLP1
+- `sa-x-iast` for Sanskrit written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
+- `sa-x-ndia` for Sanskrit written in IAST with no diacritics
+- `sa-x-slp1` for Sanskrit written in [SLP1](http://www.sanskrit-lexicon.uni-koeln.de/talkMay2008/SLP1.pdf)
+- `sa-x-iso` for Sanskrit written in [ISO 15919](https://en.wikipedia.org/wiki/ISO_15919)
+- `sa-Deva-bauddha` for Buddhist Hybrid Sanskrit (*BHS*) written in Devanagari
+- `sa-bauddha-x-iast` for  Buddhist Hybrid Sanskrit (*BHS*) written in IAST
 
 #### Tibetan
-For Tibetan we do not keep the -Tibt script tag, although it would be legitimate to keep it as the IANA registry doesn't specify `Suppress-Script: Tibt` for the bo language. We thus have:
+For Tibetan we do not keep the `-Tibt` script tag, although it would be legitimate to keep it as the IANA registry doesn't specify `Suppress-Script: Tibt` for the bo language. We thus have:
 
 - `bo` for Tibetan written in Tibetan script
-- `bo-x-ewts` (BDRC) for EWTS transliteration
-- `bo-x-gbt` (BDRC) for precomposed Tibetan
-- `bo-x-acip` (BDRC) for ACIP transliteration
+- `bo-x-ewts` for EWTS transliteration
+- `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
+- `bo-x-acip` for ACIP transliteration
