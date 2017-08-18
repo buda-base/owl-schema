@@ -2006,9 +2006,9 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/taxSubClass -->
+    <!-- http://purl.bdrc.io/ontology/core/taxSubClassOf -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/taxSubClass">
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/taxSubClassOf">
         <rdfs:label xml:lang="en">This property identifies the subject as a subclass of a Taxonomy or some other subclass of a Taxonomy</rdfs:label>
         <rdfs:label xml:lang="en">taxonomy subclass</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
@@ -4962,7 +4962,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EightMinorKagyuTraditions">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
         <rdfs:label xml:lang="en">Eight Minor Kagyu Traditions</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4972,7 +4972,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EightPracticeLineages">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">The Eight Practice Lineages</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4982,7 +4982,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/FourMainKagyuTraditions">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
         <rdfs:label xml:lang="en">Four Greater</rdfs:label>
         <rdfs:label xml:lang="en">Main Dagpo Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -6033,7 +6033,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBardrukKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
         <rdfs:label xml:lang="en">Bardruk Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Middle Drukpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -6044,7 +6044,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBaromKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Barom Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6054,7 +6054,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBodong">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Bodong</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6064,7 +6064,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBon">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Bon</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6074,7 +6074,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionChod">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionZhije"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionZhije"/>
         <rdfs:label xml:lang="en">Chod</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6084,7 +6084,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrigungKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Drigung Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6094,7 +6094,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrukpaKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Drukpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6104,7 +6104,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionGeluk">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Geluk</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6114,7 +6114,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionJonang">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Jonang</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6124,7 +6124,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionJordruk">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Jordruk</rdfs:label>
         <rdfs:label xml:lang="en">Kalacakra</rdfs:label>
         <rdfs:label xml:lang="en">Six Branch Vajra Yoga</rdfs:label>
@@ -6136,7 +6136,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKadam">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Kadam</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6146,7 +6146,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6156,7 +6156,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKarmaKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Kamtsang Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Karma Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -6167,7 +6167,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMadrukKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
         <rdfs:label xml:lang="en">Lower Drukpa Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Madruk Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -6178,7 +6178,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMarpaKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
         <rdfs:comment xml:lang="en">Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight.
 
 equiv Dagpo Kagyu?</rdfs:comment>
@@ -6191,7 +6191,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMartsangKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Martsang Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6201,7 +6201,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNedoKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionKarmaKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKarmaKagyu"/>
         <rdfs:label xml:lang="en">Nedo Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6211,7 +6211,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNgorSakya">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionSakya"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionSakya"/>
         <rdfs:comment xml:lang="en">one of sa ngor tsar gsum</rdfs:comment>
         <rdfs:label xml:lang="en">Ngor Sakya</rdfs:label>
     </owl:NamedIndividual>
@@ -6222,7 +6222,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNyingma">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Nyingma</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6232,7 +6232,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionOrgyenNyengyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Orgyen Nyengru</rdfs:label>
         <rdfs:label xml:lang="en">The Three Vajras</rdfs:label>
     </owl:NamedIndividual>
@@ -6243,7 +6243,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionPhagGruKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Phag Gru Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6253,7 +6253,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionRime">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:comment xml:lang="en">Some might not count Rime as a Tradition but since there are Works and Persons who are identified as such it is approapriate to include for purposes of classification</rdfs:comment>
         <rdfs:label xml:lang="en">Rime</rdfs:label>
     </owl:NamedIndividual>
@@ -6264,7 +6264,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionSakya">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Sakya</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6274,7 +6274,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionShangpaKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
         <rdfs:label xml:lang="en">Shangpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6284,7 +6284,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionShugsepKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Shugsep Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6294,7 +6294,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTaklungKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Taklung Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6315,7 +6315,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTodrukKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
         <rdfs:label xml:lang="en">Todruk Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Upper Drukpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -6326,7 +6326,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTsalpaKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Tsalpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6336,7 +6336,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTsarSakya">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionSakya"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionSakya"/>
         <rdfs:comment xml:lang="en">one of     sa ngor tsar gsum</rdfs:comment>
         <rdfs:label xml:lang="en">Tsar Sakya</rdfs:label>
     </owl:NamedIndividual>
@@ -6347,7 +6347,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionYazangKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Yazang Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6357,7 +6357,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionYelpaKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Yelpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6367,7 +6367,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZhalu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Zhalu</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6377,7 +6377,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZhije">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Shije</rdfs:label>
         <rdfs:label xml:lang="en">Zhije</rdfs:label>
     </owl:NamedIndividual>
@@ -6388,7 +6388,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZurmangKagyu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <taxSubClass rdf:resource="http://purl.bdrc.io/resource/TraditionKarmaKagyu"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKarmaKagyu"/>
         <rdfs:label xml:lang="en">Surmang Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Zurmang Kagyu</rdfs:label>
     </owl:NamedIndividual>
