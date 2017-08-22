@@ -12,14 +12,24 @@ A list of standardized BCP-47 tags are available in the [IANA registry](https://
 
 #### Canonical form vs. lower case form
 
-A feature of RDF + BCP-47 is quite surprising: while BCP-47 [specifies](https://tools.ietf.org/html/bcp47#section-2.1.1) that tags case should not carry meaning, the RDF-1.1 spec [specifies](https://www.w3.org/TR/rdf11-concepts/#h3_section-Graph-Literal) that literal term equality requires an equality character by character (thus case sensitive) of their language tags. This can leads to strange results (cf. [some](https://github.com/jsonld-java/jsonld-java/issues/199) bug [reports](https://issues.apache.org/jira/browse/JENA-1377)). 
+A feature of RDF + BCP-47 is quite surprising: while BCP-47 [specifies](https://tools.ietf.org/html/bcp47#section-2.1.1) that tags case should not carry meaning, the RDF-1.1 spec [specifies](https://www.w3.org/TR/rdf11-concepts/#h3_section-Graph-Literal) that literal term equality requires an equality character by character (thus case sensitive) of their language tags. This can leads to strange results (cf. [some](https://github.com/jsonld-java/jsonld-java/issues/199) bug [reports](https://issues.apache.org/jira/browse/JENA-1377)).
 
 So in order to prevent bugs from happening it is important to define a convention on BCP-47 case. Two candidates immediately arise:
 
 - The BCP-47 canonical form (ex: `zh-Latn-pinyin`)
 - The lower-case form (ex: `zh-latn-pinyin`), which seems to have been the preferred one for RDF-1.0.
 
-As the canonical form is well defined and is what RDF softwares (Jena at least) use for normalizing literals, it seems the best choice, so we use it.
+It's important to note that the RDF 1.1 Spec seems to have two modes (indicated by a `MAY`): 
+- one in which lang tags are always converted to lower-case and literal term equality compares lower-cased lang tags (this path is taken by [JSON-LD](https://github.com/json-ld/json-ld.org/issues/533), but not by [Jena](https://issues.apache.org/jira/browse/JENA-1377))
+- one in which lang tags are not converted to lower-case and literal term equality compares the original lang tags
+
+It's also important to note that some triple stores (like Jena Fuseki) only store literal values, not terms, in which case it will only store lower-cased language tags.
+
+This means that you will always retrieve lower-cased language tags when dealing with
+- formats or softwares taking advantage of the possibility offered by the `MAY` clause of RDF 1.1 (like JSON-LD)
+- softwares only storing values and not terms (like Jena Fuseki)
+
+In order to get as few bugs and surprises as possible and to be able to use RDF literal equality in all contexts, it seems thus best to use lower-cased values. The rest of the document will use BCP-47 canonical tags for the sake of readability, but make sure you do use only lower-cased forms in your data.
 
 #### Adding the script tag for transliteration?
 
