@@ -61,7 +61,14 @@ The convention BDRC uses is to use the IANA name.
 
 #### Phonetic transcription
 
-TODO
+There does not seem to be any guideline on the way to encode phonetic transcriptions in BCP-47. We chose the following convention: `A-x-phon-B(-m-C)` where:
+- `A` is the full BCP-47 tag of the source language, without the script tag as this information should be made clear in `B`
+- `B` is the full BCP-47 tag of the language of the pronunciation, it should include a script tag when ambiguous
+- `C` is the type of phonetic transcription, when phonetics follows a particular standard; this part (and the preceding `-m-`) can be omitted
+
+Examples:
+- `bo-x-phon-zh-Latn-pinyin` would be Tibetan transcribed in Chinese written in pinyin (`A` is `bo`, `B` is `zh-Latn-pinyin`, `C` is omitted)
+- `bo-x-phon-en-m-tbrc` would be Tibetan transcribed in English with the TBRC phonetic conventions (`A` is `bo`, `B` is `en`, `C` is `tbrc`)
 
 #### Language mixing
 
