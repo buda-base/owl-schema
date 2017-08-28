@@ -727,72 +727,6 @@ We take the view that the summary or contents statements can be treated in a man
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/StatusType -->
-
-    <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/core/StatusType">
-        <owl:equivalentClass>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>accessioned</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>acquiring</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>editing</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>onHold</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>provisional</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>released</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>scanned</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>seekingOut</rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                        <rdf:first>withdrawn</rdf:first>
-                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </owl:equivalentClass>
-    </rdfs:Datatype>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -6683,21 +6617,6 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkVolume">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/StatusType">
-        <rdfs:label xml:lang="en">status</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates the status of the subject resource</rdfs:comment>
-    </rdf:Description>
 </rdf:RDF>
 
 
