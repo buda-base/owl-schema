@@ -2418,6 +2418,70 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/imageCount -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/imageCount">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/VolumeImageAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">A positive integer indicating the total number of images in the VolumeImageAsset</rdfs:comment>
+        <rdfs:label xml:lang="en">image count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/imageList -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/imageList">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/VolumeImageAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">If this property is present it indicates that digitized images of the volume are present in the archive.
+
+Migration hint: this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
+        <rdfs:comment xml:lang="en">The string value is formatted as a sequence of image-name:image-counts separated by the pipe, &apos;|&apos;, character. In the normal situations the image names are incremented by one to generate image-count names.
+
+The typical case is a collection of tiffs:
+
+    :imageList &quot;020640001.tif:463&quot;
+
+which represents images named:
+
+    020640001.tif, 020640002.tif, 020640003.tif, . . . 020640463.tif
+
+Volumes that have some jpeg color material will appear like:
+
+    :imageList &quot;I1KG9330001.tif:2|&quot;I1KG9330003.jpg:561&quot;
+
+which encodes the first two TBRC metadata pages and the remainder as jpg images.
+
+Sometimes there are volumes that are a mix of color and bitonal images, typical the front matter might be jpg and the remainder tif:
+
+    :imageList &quot;I2PD44320001.tif:2|I2PD44320003.jpg:3|I2PD44320006.tif:606&quot;
+
+There are odd naming situations where a single name stands alone and the next name is explicitly indicated:
+
+    :imageList &quot;1CZ7740001.tif:43|1CZ7740043a.tif|1CZ7740044.tif:472&quot;
+
+when a name standalone the &quot;:1&quot; can be dispensed with.</rdfs:comment>
+        <rdfs:label xml:lang="en">image list</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/imagesMissing -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/imagesMissing">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/VolumeImageAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A comma separated list of image indexes that are missing. For example:
+
+    :imagesMissing &quot;43,77-78,192&apos;
+
+This is a rare situation but needs to be handled.</rdfs:comment>
+        <rdfs:label xml:lang="en">images missing</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/itemBDRCHoldingStatement -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/itemBDRCHoldingStatement">
@@ -2605,19 +2669,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The area in square km of the Place from the World Bank 2010</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/volumeImageList -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/volumeImageList">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/VolumeImageAsset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">If this property is present it indicates that digitized images of the volume are present in the archive.
-
-Migration hint: this property appears as &lt;ig:description type=&quot;onDisk&quot;/&gt; in the source documents</rdfs:comment>
-        <rdfs:label xml:lang="en">image list</rdfs:label>
     </owl:DatatypeProperty>
     
 
