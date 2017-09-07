@@ -1,73 +1,74 @@
-@prefix per: <http://purl.bdrc.io/ontology/person#>.
+@prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 
 #
 # Sister / Brother
 #
 
-[obm: (?a per:hasOlderBrother ?b), (?a per:gender 'male') -> (?b per:hasYoungerBrother ?a)]
-[ybm: (?a per:hasYoungerBrother ?b), (?a per:gender 'male') -> (?b per:hasOlderBrother ?a)]
-[bm: (?a per:hasBrother ?b), (?a per:gender 'male') -> (?b per:hasBrother ?a)]
+[obm: (?a :hasOlderBrother ?b), (?a :personGender bdr:GenderMale) -> (?b :hasYoungerBrother ?a)]
+[ybm: (?a :hasYoungerBrother ?b), (?a :personGender bdr:GenderMale) -> (?b :hasOlderBrother ?a)]
+[bm: (?a :hasBrother ?b), (?a :personGender bdr:GenderMale) -> (?b :hasBrother ?a)]
 
-[obf: (?a per:hasOlderBrother ?b), (?a per:gender 'female') -> (?b per:hasYoungerSister ?a)]
-[ybf: (?a per:hasYoungerBrother ?b), (?a per:gender 'female') -> (?b per:hasOlderSister ?a)]
-[bf: (?a per:hasBrother ?b), (?a per:gender 'female') -> (?b per:hasSister ?a)]
+[obf: (?a :hasOlderBrother ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasYoungerSister ?a)]
+[ybf: (?a :hasYoungerBrother ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasOlderSister ?a)]
+[bf: (?a :hasBrother ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasSister ?a)]
 
-[osm: (?a per:hasOlderSister ?b), (?a per:gender 'male') -> (?b per:hasYoungerBrother ?a)]
-[ysm: (?a per:hasYoungerSister ?b), (?a per:gender 'male') -> (?b per:hasOlderBrother ?a)]
-[sm: (?a per:hasSister ?b), (?a per:gender 'male') -> (?b per:hasBrother ?a)]
+[osm: (?a :hasOlderSister ?b), (?a :personGender bdr:GenderMale) -> (?b :hasYoungerBrother ?a)]
+[ysm: (?a :hasYoungerSister ?b), (?a :personGender bdr:GenderMale) -> (?b :hasOlderBrother ?a)]
+[sm: (?a :hasSister ?b), (?a :personGender bdr:GenderMale) -> (?b :hasBrother ?a)]
 
-[osf: (?a per:hasOlderSister ?b), (?a per:gender 'female') -> (?b per:hasYoungerSister ?a)]
-[ysf: (?a per:hasYoungerSister ?b), (?a per:gender 'female') -> (?b per:hasOlderSister ?a)]
-[sf: (?a per:hasSister ?b), (?a per:gender 'female') -> (?b per:hasSister ?a)]
+[osf: (?a :hasOlderSister ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasYoungerSister ?a)]
+[ysf: (?a :hasYoungerSister ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasOlderSister ?a)]
+[sf: (?a :hasSister ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasSister ?a)]
 
 #
 # Child / Parent
 #
 
-[fm:  (?a per:hasFather ?b), (?a per:gender 'male') -> (?b per:hasSon ?a)]
-[ff:  (?a per:hasFather ?b), (?a per:gender 'female') -> (?b per:hasDaughter ?a)]
-[mm:  (?a per:hasMother ?b), (?a per:gender 'male') -> (?b per:hasSon ?a)]
-[mf:  (?a per:hasMother ?b), (?a per:gender 'female') -> (?b per:hasDaughter ?a)]
+[fm:  (?a :hasFather ?b), (?a :personGender bdr:GenderMale) -> (?b :hasSon ?a)]
+[ff:  (?a :hasFather ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasDaughter ?a)]
+[mm:  (?a :hasMother ?b), (?a :personGender bdr:GenderMale) -> (?b :hasSon ?a)]
+[mf:  (?a :hasMother ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasDaughter ?a)]
 
-[sm:  (?a per:hasSon ?b), (?a per:gender 'male') -> (?b per:hasFather ?a)]
-[sf:  (?a per:hasSon ?b), (?a per:gender 'female') -> (?b per:hasMother ?a)]
-[dm:  (?a per:hasDaughter ?b), (?a per:gender 'male') -> (?b per:hasFather ?a)]
-[df:  (?a per:hasDaughter ?b), (?a per:gender 'female') -> (?b per:hasMother ?a)]
+[sm:  (?a :hasSon ?b), (?a :personGender bdr:GenderMale) -> (?b :hasFather ?a)]
+[sf:  (?a :hasSon ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasMother ?a)]
+[dm:  (?a :hasDaughter ?b), (?a :personGender bdr:GenderMale) -> (?b :hasFather ?a)]
+[df:  (?a :hasDaughter ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasMother ?a)]
 
 #
 # Grandchild / Grandparent
 #
 
-[gfm:  (?a per:hasGrandfather ?b), (?a per:gender 'male') -> (?b per:hasGrandson ?a)]
-[gff:  (?a per:hasGrandfather ?b), (?a per:gender 'female') -> (?b per:hasGranddaughter ?a)]
-[gmm:  (?a per:hasGrandmother ?b), (?a per:gender 'male') -> (?b per:hasGrandson ?a)]
-[gmf:  (?a per:hasGrandmother ?b), (?a per:gender 'female') -> (?b per:hasGranddaughter ?a)]
+[gfm:  (?a :hasGrandfather ?b), (?a :personGender bdr:GenderMale) -> (?b :hasGrandson ?a)]
+[gff:  (?a :hasGrandfather ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasGranddaughter ?a)]
+[gmm:  (?a :hasGrandmother ?b), (?a :personGender bdr:GenderMale) -> (?b :hasGrandson ?a)]
+[gmf:  (?a :hasGrandmother ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasGranddaughter ?a)]
 
-[gsm:  (?a per:hasGrandson ?b), (?a per:gender 'male') -> (?b per:hasGrandfather ?a)]
-[gsf:  (?a per:hasGrandson ?b), (?a per:gender 'female') -> (?b per:hasGrandmother ?a)]
-[gdm:  (?a per:hasGranddaughter ?b), (?a per:gender 'male') -> (?b per:hasGrandfather ?a)]
-[gdf:  (?a per:hasGranddaughter ?b), (?a per:gender 'female') -> (?b per:hasGrandmother ?a)]
+[gsm:  (?a :hasGrandson ?b), (?a :personGender bdr:GenderMale) -> (?b :hasGrandfather ?a)]
+[gsf:  (?a :hasGrandson ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasGrandmother ?a)]
+[gdm:  (?a :hasGranddaughter ?b), (?a :personGender bdr:GenderMale) -> (?b :hasGrandfather ?a)]
+[gdf:  (?a :hasGranddaughter ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasGrandmother ?a)]
 
 
 #
 # Hunsband / Wife (modern version)
 #
 
-[wm:  (?a per:hasWife ?b), (?a per:gender 'male') -> (?b per:hasHusband ?a)]
-[wf:  (?a per:hasWife ?b), (?a per:gender 'female') -> (?b per:hasWife ?a)]
-[hm:  (?a per:hasHusband ?b), (?a per:gender 'male') -> (?b per:hasHusband ?a)]
-[hf:  (?a per:hasHusband ?b), (?a per:gender 'female') -> (?b per:hasWife ?a)]
+[wm:  (?a :hasWife ?b), (?a :personGender bdr:GenderMale) -> (?b :hasHusband ?a)]
+[wf:  (?a :hasWife ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasWife ?a)]
+[hm:  (?a :hasHusband ?b), (?a :personGender bdr:GenderMale) -> (?b :hasHusband ?a)]
+[hf:  (?a :hasHusband ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasWife ?a)]
 
 #
 # Nibling / Parent sibling
 #
 
-[am:  (?a per:hasAunt ?b), (?a per:gender 'male') -> (?b per:hasNephew ?a)]
-[af:  (?a per:hasAunt ?b), (?a per:gender 'female') -> (?b per:hasNiece ?a)]
-[um:  (?a per:hasUncle ?b), (?a per:gender 'male') -> (?b per:hasNephew ?a)]
-[uf:  (?a per:hasUncle ?b), (?a per:gender 'female') -> (?b per:hasNiece ?a)]
+[am:  (?a :hasAunt ?b), (?a :personGender bdr:GenderMale) -> (?b :hasNephew ?a)]
+[af:  (?a :hasAunt ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasNiece ?a)]
+[um:  (?a :hasUncle ?b), (?a :personGender bdr:GenderMale) -> (?b :hasNephew ?a)]
+[uf:  (?a :hasUncle ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasNiece ?a)]
 
-[nem:  (?a per:hasNephew ?b), (?a per:gender 'male') -> (?b per:hasUncle ?a)]
-[nef:  (?a per:hasNephew ?b), (?a per:gender 'female') -> (?b per:hasAunt ?a)]
-[nim:  (?a per:hasNiece ?b), (?a per:gender 'male') -> (?b per:hasUncle ?a)]
-[nif:  (?a per:hasNiece ?b), (?a per:gender 'female') -> (?b per:hasAunt ?a)]
+[nem:  (?a :hasNephew ?b), (?a :personGender bdr:GenderMale) -> (?b :hasUncle ?a)]
+[nef:  (?a :hasNephew ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasAunt ?a)]
+[nim:  (?a :hasNiece ?b), (?a :personGender bdr:GenderMale) -> (?b :hasUncle ?a)]
+[nif:  (?a :hasNiece ?b), (?a :personGender bdr:GenderFemale) -> (?b :hasAunt ?a)]

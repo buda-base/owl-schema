@@ -1109,6 +1109,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">This property is applicable to Persons and Topics (that represent deities or other ahistorical figures).</rdfs:comment>
         <rdfs:label xml:lang="en">has incarnation</rdfs:label>
     </owl:ObjectProperty>
@@ -1487,6 +1488,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">personIsIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary.</rdfs:comment>
         <rdfs:label xml:lang="en">is incarnation</rdfs:label>
     </owl:ObjectProperty>
@@ -3772,6 +3774,7 @@ bdr:Czzzz a :Corporation ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Item">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">ScanRequest for the Work associated with an :Item is migrated as :scan_venue, and the instructions note (if any) attached to the ScanRequest. The work attribute of scanrequest refers to the work for the volumes object  all other fields of scanrequest are ignored for migration</rdfs:comment>
         <rdfs:comment xml:lang="en">The :Item resource collects info from ImageGroups and Scan-Requests. An :Item is a collection of :Volume components for each volume in the associated :Work. Each :Volume MAY have a :onDisk property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive.</rdfs:comment>
         <rdfs:label xml:lang="en">Item</rdfs:label>
@@ -4247,6 +4250,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">represents a name of a Person via an rdfs:label and a subclass of  :PersonName. For example:
 
     bdr:P1583 a :Person ;
@@ -4564,6 +4568,7 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Volume">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
@@ -4831,6 +4836,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">A title for the Work including the title text and title type: full, sub, etc:
 
 
