@@ -82,6 +82,15 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/legacyImageGroupRID -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/legacyImageGroupRID">
+        <rdfs:comment xml:lang="en">records the original imagegroup rid from which the volume information was migrated</rdfs:comment>
+        <rdfs:label xml:lang="en">legacy imagegroup rid</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/logDate -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/logDate">
