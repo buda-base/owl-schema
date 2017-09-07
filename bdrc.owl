@@ -3693,6 +3693,7 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CorporationMember">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Describes a member of the subject Corporation by indicating the :Person that is a member and the :CorporationMemberType of the :Person:
 
 bdr:Czzzz a :Corporation ;
