@@ -7,9 +7,9 @@
      xmlns:tbr="http://purl.bdrc.io/ontology/toberemoved/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:admin="http://purl.bdrc.io/ontology/admin/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:adm="http://purl.bdrc.io/ontology/admin/"
      xmlns:bdo="http://purl.bdrc.io/ontology/core/"
      xmlns:bdr="http://purl.bdrc.io/resource/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -31,6 +31,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/access -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/access">
+        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">permitted access</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -87,6 +99,18 @@ The value of this property should be an explanation of the needed conversion as 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/legacyImageGroupRID">
         <rdfs:comment xml:lang="en">records the original imagegroup rid from which the volume information was migrated</rdfs:comment>
         <rdfs:label xml:lang="en">legacy imagegroup rid</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/license">
+        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
     </owl:AnnotationProperty>
     
 
@@ -335,36 +359,12 @@ The value of this property should be an explanation of the needed conversion as 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/workAccess -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workAccess">
-        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
-        <rdfs:label xml:lang="en">permitted access</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/admin/workInProduct -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workInProduct">
         <rdfs:comment xml:lang="en">This :Work is included in the referenced admin:Product</rdfs:comment>
         <rdfs:label xml:lang="en">in product</rdfs:label>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/workLicense -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLicense">
-        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
-        <rdfs:label xml:lang="en">has license</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
     </owl:AnnotationProperty>
     
@@ -2699,6 +2699,17 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/itemVolumes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/itemVolumes">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The number of volumes in the item</rdfs:comment>
+        <rdfs:label xml:lang="en">volumes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/onOrAbout -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/onOrAbout">
@@ -3108,9 +3119,9 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workIsbn">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ISBN"/>
-        <admin:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Isbn class</admin:convertProperty>
-        <admin:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-        <admin:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Isbn"/>
+        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Isbn class</adm:convertProperty>
+        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Isbn"/>
         <rdfs:comment xml:lang="en">Refers to the International Standard Book Number for the Work</rdfs:comment>
         <rdfs:label xml:lang="en">has ISBN</rdfs:label>
     </owl:DatatypeProperty>
@@ -3263,9 +3274,9 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLcCallNumber">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/LCCallNumber"/>
-        <admin:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe ShelfMarkLcc class</admin:convertProperty>
-        <admin:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-        <admin:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc"/>
+        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe ShelfMarkLcc class</adm:convertProperty>
+        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc"/>
         <rdfs:comment xml:lang="en">Refers to the Library of Congress Shelf mark call number</rdfs:comment>
         <rdfs:label xml:lang="en">has LC Call Number</rdfs:label>
     </owl:DatatypeProperty>
@@ -3277,9 +3288,9 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLccn">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/LCCN"/>
-        <admin:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Lccn class</admin:convertProperty>
-        <admin:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-        <admin:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Lccn"/>
+        <adm:convertProperty xml:lang="en">convert to Bibframe identifiedBy with range Bibframe Lccn class</adm:convertProperty>
+        <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+        <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Lccn"/>
         <rdfs:comment xml:lang="en">Refers to the Library of Congress Control Number</rdfs:comment>
         <rdfs:label xml:lang="en">has LCCN</rdfs:label>
     </owl:DatatypeProperty>
