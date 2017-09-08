@@ -4943,16 +4943,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/WorkIncipit -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkIncipit">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <rdfs:comment xml:lang="en">The first few syllables/words of the Work</rdfs:comment>
-        <rdfs:label xml:lang="en">Incipit</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/WorkLicense -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkLicense">
