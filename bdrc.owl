@@ -3508,6 +3508,17 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workPartLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPartLabel">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Use this property to reflect a label/name for a &quot;synthetic&quot; part of a work such as &quot;Sutra Basket&quot; or &quot;Guhyagarbha Commentaries&quot; that is not identified directly in a composite work such Kangyur or Kama but that helps to highight the organization of composite work</rdfs:comment>
+        <rdfs:label xml:lang="en">part label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workPrintery -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPrintery">
