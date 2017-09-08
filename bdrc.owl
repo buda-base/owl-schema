@@ -40,8 +40,8 @@
         <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
         <rdfs:label xml:lang="en">permitted access</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity"/>
     </owl:AnnotationProperty>
     
 
@@ -109,8 +109,8 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
         <rdfs:label xml:lang="en">has license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity"/>
     </owl:AnnotationProperty>
     
 
@@ -3856,6 +3856,16 @@ The various Works that are contained in the Product include an inProduct element
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/AccessType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AccessType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">The type of access reflects whether and how much of the content of a Work is made available online.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Access Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Corporation -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Corporation">
@@ -4123,6 +4133,34 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
        :itemShelf &quot;ཉ|༣|||001811&quot; ;
        :itemException &quot;དེབ་གཅིག་ཕྱི་ལ་གཡར་ནས་མ་འབྱོར&quot;@bo .</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/License -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/License">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/LicensedAccessedEntity -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Etext"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Item"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The various entities that can have license and access properties attached</rdfs:comment>
+        <rdfs:label xml:lang="en">licensed and access entity</rdfs:label>
     </owl:Class>
     
 
@@ -4896,16 +4934,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/WorkAccessType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkAccessType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">The type of access reflects whether and how much of the content of a Work is made available online.</rdfs:comment>
-        <rdfs:label xml:lang="en">Work Access Type</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/WorkBibliographicTitle -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkBibliographicTitle">
@@ -4974,16 +5002,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkHalfTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
         <rdfs:label xml:lang="en">Half Title</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/WorkLicense -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkLicense">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
-        <rdfs:label xml:lang="en">License</rdfs:label>
     </owl:Class>
     
 
@@ -6732,7 +6750,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessFairUse -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessFairUse">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">A copyrighted Work permits a small portion of its contents to be made available</rdfs:comment>
         <rdfs:label xml:lang="en">Fair Use</rdfs:label>
     </owl:NamedIndividual>
@@ -6742,7 +6760,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessOpen -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessOpen">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">The contents of the Work are freely avaiable in their entirety</rdfs:comment>
         <rdfs:label xml:lang="en">Open Access</rdfs:label>
     </owl:NamedIndividual>
@@ -6752,7 +6770,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedByQuality -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedByQuality">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">The quality of the scanning or eText conversion to poor to warrant making it available online.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted by Quality</rdfs:label>
     </owl:NamedIndividual>
@@ -6762,7 +6780,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedByTbrc -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedByTbrc">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">BDRC is restricting access to the Work.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted by BDRC</rdfs:label>
     </owl:NamedIndividual>
@@ -6772,7 +6790,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedInChina -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedInChina">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">The Work is not to be made available in the PRC.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted in China</rdfs:label>
     </owl:NamedIndividual>
@@ -6782,7 +6800,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedSealed -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedSealed">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">The Work is sealed by tradition.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted Sealed</rdfs:label>
     </owl:NamedIndividual>
@@ -6792,7 +6810,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkAccessRestrictedTemporarily -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkAccessRestrictedTemporarily">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:comment xml:lang="en">The Work is temporarily restricted.</rdfs:comment>
         <rdfs:label xml:lang="en">Temporarily Restricted</rdfs:label>
     </owl:NamedIndividual>
@@ -6810,7 +6828,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkLicenseCCBY -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLicenseCCBY">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:label xml:lang="en">CC-BY</rdfs:label>
         <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC-BY, license with attribution</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://creativecommons.org/licenses/"/>
@@ -6821,7 +6839,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/WorkLicenseCopyrighted -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkLicenseCopyrighted">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:comment xml:lang="en">This work is copyrighted and BDRC will only make at most fairuse access available</rdfs:comment>
         <rdfs:label xml:lang="en">copyrighted</rdfs:label>
     </owl:NamedIndividual>
