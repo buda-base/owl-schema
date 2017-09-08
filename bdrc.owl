@@ -959,17 +959,23 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/eTextInVolume -->
+    <!-- http://purl.bdrc.io/ontology/core/eTextHasChunk -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextInVolume">
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextHasChunk">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/EtextChunk"/>
+        <rdfs:label xml:lang="en">has chunk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eTextInItem -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextInItem">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/VolumeEtextAsset"/>
-        <rdfs:comment xml:lang="en">The reference to the containing :ItemEtext is a URI formed by appending the volume index to the :IremEtext URI, like:
-
-     :eTextInVolume bdr:I1KG443_003/volume/3
-
-this URI refers to a volume blank node contained in the referenced Item.</rdfs:comment>
-        <rdfs:label xml:lang="en">eText is in volume</rdfs:label>
+        <rdfs:comment xml:lang="en">The reference to the :ItemEtext indicates the item that contains the volume that this Etext is contained in</rdfs:comment>
+        <rdfs:label xml:lang="en">eText is in item</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:ObjectProperty>
     
@@ -2511,6 +2517,58 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/eTextDerivedTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextDerivedTitle">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">derived title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eTextDistributor -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextDistributor">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The organization that produced or distributed this Etext.</rdfs:comment>
+        <rdfs:label xml:lang="en">distributor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eTextInVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextInVolume">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">in volume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eTextTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextTitle">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eTextVolumeIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextVolumeIndex">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">position of the eText in the volume that contains it</rdfs:comment>
+        <rdfs:label xml:lang="en">eText volume index</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/imageCount -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/imageCount">
@@ -3883,6 +3941,24 @@ The character counts are in terms of Unicode codepoints in whatever representati
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextChunk">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EtextInput -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextInput">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:label xml:lang="en">Input Etext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EtextOCR -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextOCR">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:label xml:lang="en">OCR Etext</rdfs:label>
     </owl:Class>
     
 
