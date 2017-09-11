@@ -2041,24 +2041,24 @@ bdr:T2423 a Topic, Work ;
       rdfs:label &quot;bka&apos; &apos;gyur&quot;@bo-x-ewts ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label &quot;Kanjur&quot;@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicTitle ]
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
 
 bdr:W9NEW01 a Work ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label &quot;Dege Kanjur&quot;@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicTitle ]
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
       :workExpressionOf bdr:T2423 .
 
 bdr:W22703 a Work ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label &quot;Narthang Kanjur&quot;@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicTitle ]
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
       :workExpressionOf bdr:T2423 .
 
 bdr:W26071 a Work ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label &quot;Lhasa Kanjur&quot;@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicTitle ]
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
       :workExpressionOf bdr:T2423 .</rdfs:comment>
         <rdfs:label xml:lang="en">expression of</rdfs:label>
     </owl:ObjectProperty>
@@ -2680,6 +2680,19 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
         <rdfs:comment xml:lang="en">Exception notes such a missing volume, damage to pages and so on</rdfs:comment>
         <rdfs:label xml:lang="en">exception</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/itemMissingVolumes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/itemMissingVolumes">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A comma separated list of volume numbers and ranges of missing volumes for the Item. For example:
+
+    :itemMissingVolumes &quot;3-4,11,17,81-88,101&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">missing volumes</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -4934,9 +4947,9 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/WorkBibliographicTitle -->
+    <!-- http://purl.bdrc.io/ontology/core/WorkBibliographicalTitle -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkBibliographicTitle">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkBibliographicalTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
         <rdfs:label xml:lang="en">Bibliographic Title</rdfs:label>
     </owl:Class>
@@ -5114,7 +5127,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
 
 bdr:W22083 a :Work ;
-      :workHasTitle [ a :WorkBibliographicTitle ;
+      :workHasTitle [ a :WorkBibliographicalTitle ;
             rdfs:label &quot;bka&apos; &apos;gyur (stog pho brang bris ma/)&quot;@bo-x-ewts ] ,
           [ a :WorkOtherTitle ;
             rdfs:label &quot;la dwags tog mu mkhar bzhugs pa&apos;i bod yig bka&apos; &apos;gyur bris ma/&quot;@bo-x-ewts ] ,
