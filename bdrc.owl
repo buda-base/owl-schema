@@ -39,7 +39,7 @@
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/access">
         <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
         <rdfs:label xml:lang="en">permitted access</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkAccessType"/>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity"/>
     </owl:AnnotationProperty>
@@ -108,7 +108,7 @@ The value of this property should be an explanation of the needed conversion as 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/license">
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
         <rdfs:label xml:lang="en">has license</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkLicense"/>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity"/>
     </owl:AnnotationProperty>
