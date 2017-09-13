@@ -969,6 +969,19 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/eTextHasPage -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextHasPage">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/EtextPage"/>
+        <rdfs:comment xml:lang="en">Refers to a page of an eText corresponding to a physical/image page asset.
+
+Used to provide stand-off markup for the pagination of eText in correspondence with physical/image assets when known such as in OCR or certain cases of manual input where such information has been preserved during input.</rdfs:comment>
+        <rdfs:label xml:lang="en">page</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/eTextInItem -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextInItem">
@@ -1775,6 +1788,17 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/pageHasLine -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/pageHasLine">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextPage"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/EtextLine"/>
+        <rdfs:comment xml:lang="en">Refers to a line of an Etext page</rdfs:comment>
+        <rdfs:label xml:lang="en">line</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/personEvent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personEvent">
@@ -2442,22 +2466,40 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/chunkCharEnd -->
+    <!-- http://purl.bdrc.io/ontology/core/charEnd -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkCharEnd">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextChunk"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/charEnd">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextLine"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextPage"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label xml:lang="en">char end</rdfs:label>
+        <rdfs:comment xml:lang="en">Ending char of a page, line, or segment</rdfs:comment>
+        <rdfs:label xml:lang="en">end char</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/chunkCharStart -->
+    <!-- http://purl.bdrc.io/ontology/core/charStart -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkCharStart">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextChunk"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/charStart">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextLine"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextPage"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Starting char of a page, line, or segment</rdfs:comment>
         <rdfs:label xml:lang="en">start char</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:DatatypeProperty>
@@ -2475,6 +2517,26 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/chunkEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkEnd">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextLine"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextPage"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Ending chunk of a page, line, or segment</rdfs:comment>
+        <rdfs:label xml:lang="en">end chunk</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/chunkId -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkId">
@@ -2486,23 +2548,21 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/chunkPageEnd -->
+    <!-- http://purl.bdrc.io/ontology/core/chunkStart -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkPageEnd">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextChunk"/>
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkStart">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextLine"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextPage"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/EtextSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label xml:lang="en">page end</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/chunkPageStart -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkPageStart">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextChunk"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label xml:lang="en">start page</rdfs:label>
+        <rdfs:comment xml:lang="en">Starting chunk of a page, line, or segment</rdfs:comment>
+        <rdfs:label xml:lang="en">start chunk</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:DatatypeProperty>
     
@@ -2714,12 +2774,33 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/lineId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/lineId">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextLine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Line number on a page</rdfs:comment>
+        <rdfs:label xml:lang="en">line</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/onOrAbout -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/onOrAbout">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">This property replaces the various separate circa properties with a single property that will have a single validator and editor support.</rdfs:comment>
         <rdfs:label xml:lang="en">circa</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/pageId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/pageId">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextPage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">page</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3970,15 +4051,14 @@ Each chunk is a blank node containing the chunk id - which is a virtual id servi
       :eTextChunk 3 ;
       :chunkContents &quot;. . . the text contained in chunk 3 . . .&quot; ]
 
-If the chunk is from an OCR&apos;d text, then there is additional information indicating the starting page and character and ending page and character that the chunk corresponds to in the :ItemImageAsset from which the OCR&apos;d material was derived. For example,
+If the chunk is from an OCR&apos;d text, then there is additional information indicating the starting chunk and character, and ending chunk and character for each page in the :ItemImageAsset from which the OCR&apos;d material was derived. For example,
 
-     [ a EtextChunk ;
-       :eTextChunk 46 ;
-       :chunkContents &quot;. . . chunk 46 contents . . .&quot; ;
-       :chunkPageStart 43 ;
-       :chunkCharStart 17 ;
-       :chunkPageEnd 44 ;
-       :chunkCharEnd 138 ]
+     [ a EtextPage ;
+       :pageId 46 ;
+       :chunkStart 43 ;
+       :charStart 17 ;
+       :chunkEnd 44 ;
+       :charEnd 138 ]
 
 The character counts are in terms of Unicode codepoints in whatever representation is used, typically, UTF-8.</rdfs:comment>
         <rdfs:label xml:lang="en">eText</rdfs:label>
@@ -4003,11 +4083,47 @@ The character counts are in terms of Unicode codepoints in whatever representati
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/EtextLine -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextLine">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <rdfs:comment xml:lang="en">A line of Etext correponding to a line of text on a page of a physical/image asset. Lines are counted from the top of the page oriented in conventional reading orientation. Specified via line id, the starting chunk and char, and ending chunk and char.</rdfs:comment>
+        <rdfs:label xml:lang="en">Etext Line</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/EtextOCR -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextOCR">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
         <rdfs:label xml:lang="en">OCR Etext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EtextPage -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextPage">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <rdfs:comment xml:lang="en">A page of Etext corresponding to a physical/image page. Specified with a page id, starting chunk and char, and ending chunbk and char</rdfs:comment>
+        <rdfs:label xml:lang="en">Etext Page</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EtextSegment -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextSegment">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <rdfs:comment xml:lang="en">A segment of text specified by starting chunk and char, and ending chunk and char.
+
+Segments are used to identify portions of an Etext for any purpose other than pages/lines which are given their own properties.
+
+Segments may indicate a region of text that is being commented on; or that represents a part-of-speech; or a semantic textual structure such as a chapter or paragraph and so on.
+
+Properties/predicates that reference segments will be added to the ontology as use cases for segments are developed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Etext Segment</rdfs:label>
     </owl:Class>
     
 
@@ -4053,10 +4169,35 @@ An Etext item typically will represent an entire published Work. There won&apos;
 
 There are two subclasses: OCR and manually input that are distinguished because there are different stuctural characteristics to these.
 
-:ItemOCREtext have known pagination correspondence to an :ItemImageAsset from which they are derived
+:ItemEtextOCR have known pagination correspondence to an :ItemImageAsset from which they are derived
 
-:ItemInputEtext generally only have a known relationship to a published Work but there is not known page correspondence to the printed published form of the Work and in some cases no known correspondence to the physical volume structure of the printed published Work. It may be possible to derive this information later.</rdfs:comment>
+:ItemEtextInput generally only have a known relationship to a published Work but there is generally not a known page correspondence to the printed published form of the Work and in some cases no known correspondence to the physical volume structure of the printed published Work. It may be possible to derive this information later.</rdfs:comment>
         <rdfs:label xml:lang="en">eText item</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/ItemEtextInput -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextInput">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
+        <rdfs:comment xml:lang="en">An eText created by manual inputting of a text
+
+Input etexts are prepared manually and used to typeset printed versions of texts so these texts are expected to be somewhat less error-prone by comparison with OCR&apos;d materials. On the other hand these texts generally do not provide alignment with digitized pages.</rdfs:comment>
+        <rdfs:label xml:lang="en">Input Etext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/ItemEtextOCR -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextOCR">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
+        <rdfs:comment xml:lang="en">An eText created via OCR of a set of digitized page images
+
+OCR&apos;d etexts are searchable Unicode documents that correspond to image assets in the BUDA archives. OCR&apos;d etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive.</rdfs:comment>
+        <rdfs:label xml:lang="en">OCR&apos;d Etext</rdfs:label>
     </owl:Class>
     
 
@@ -4067,30 +4208,6 @@ There are two subclasses: OCR and manually input that are distinguished because 
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
         <rdfs:comment xml:lang="en">A digitized set of images, one per page (folio side)</rdfs:comment>
         <rdfs:label xml:lang="en">Image Asset</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/ItemInputEtext -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemInputEtext">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
-        <rdfs:comment xml:lang="en">An eText created by manual inputting of a text
-
-Input etexts are prepared manually and used to typeset printed versions of texts so these texts are expected to be somewhat less error-prone by comparison with OCR&apos;d materials. On the other hand these texts generally do not provide alignment with digitized pages.</rdfs:comment>
-        <rdfs:label xml:lang="en">Input Etext</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/ItemOCREtext -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemOCREtext">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
-        <rdfs:comment xml:lang="en">An eText created via OCR of a set of digitized page images
-
-OCR&apos;d etexts are searchable Unicode documents that correspond to image assets in the BUDA archives. OCR&apos;d etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive.</rdfs:comment>
-        <rdfs:label xml:lang="en">OCR&apos;d Etext</rdfs:label>
     </owl:Class>
     
 
