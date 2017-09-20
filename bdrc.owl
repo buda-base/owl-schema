@@ -973,6 +973,17 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/eTextContentProvider -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextContentProvider">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ContentProvider"/>
+        <rdfs:comment xml:lang="en">The organization or person that provided the Etext</rdfs:comment>
+        <rdfs:label xml:lang="en">content provider</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/eTextHasChunk -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextHasChunk">
@@ -1813,6 +1824,16 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/paginatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/paginatedBy">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
+        <rdfs:label xml:lang="en">paginated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/personEvent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personEvent">
@@ -2520,27 +2541,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:comment xml:lang="en">The integer id serves to order the chunks of an Etext</rdfs:comment>
         <rdfs:label xml:lang="en">chunk id</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/eTextDerivedTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextDerivedTitle">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:label xml:lang="en">derived title</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/eTextDistributor -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextDistributor">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">The organization that produced or distributed this Etext.</rdfs:comment>
-        <rdfs:label xml:lang="en">distributor</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -4072,15 +4072,6 @@ The character counts are in terms of Unicode codepoints in whatever representati
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/EtextInput -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextInput">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-        <rdfs:label xml:lang="en">Input Etext</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/EtextLine -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextLine">
@@ -4091,11 +4082,11 @@ The character counts are in terms of Unicode codepoints in whatever representati
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/EtextOCR -->
+    <!-- http://purl.bdrc.io/ontology/core/EtextNonPaginated -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextOCR">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextNonPaginated">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-        <rdfs:label xml:lang="en">OCR Etext</rdfs:label>
+        <rdfs:label xml:lang="en">Non Paginated Etext</rdfs:label>
     </owl:Class>
     
 
@@ -4106,6 +4097,15 @@ The character counts are in terms of Unicode codepoints in whatever representati
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/EtextSlice"/>
         <rdfs:comment xml:lang="en">A page of Etext corresponding to a physical/image page. Specified with a page id, starting chunk and char, and ending chunbk and char</rdfs:comment>
         <rdfs:label xml:lang="en">Etext Page</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EtextPaginated -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextPaginated">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:label xml:lang="en">Paginated Etext</rdfs:label>
     </owl:Class>
     
 
@@ -4174,26 +4174,26 @@ There are two subclasses: OCR and manually input that are distinguished because 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/ItemEtextInput -->
+    <!-- http://purl.bdrc.io/ontology/core/ItemEtextNonPaginated -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextInput">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextNonPaginated">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
         <rdfs:comment xml:lang="en">An eText created by manual inputting of a text
 
-Input etexts are prepared manually and used to typeset printed versions of texts so these texts are expected to be somewhat less error-prone by comparison with OCR&apos;d materials. On the other hand these texts generally do not provide alignment with digitized pages.</rdfs:comment>
-        <rdfs:label xml:lang="en">Input Etext</rdfs:label>
+Input etexts are prepared manually and used to typeset printed versions of texts so these texts are expected to be somewhat less error-prone by comparison with Paginated materials. On the other hand these texts generally do not provide alignment with digitized pages.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non Paginated Etext Item</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/ItemEtextOCR -->
+    <!-- http://purl.bdrc.io/ontology/core/ItemEtextPaginated -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextOCR">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextPaginated">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
-        <rdfs:comment xml:lang="en">An eText created via OCR of a set of digitized page images
+        <rdfs:comment xml:lang="en">An eText created via OCR or manual input where pagination has been maintained in the eText of a set of digitized page images
 
-OCR&apos;d etexts are searchable Unicode documents that correspond to image assets in the BUDA archives. OCR&apos;d etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive.</rdfs:comment>
-        <rdfs:label xml:lang="en">OCR&apos;d Etext</rdfs:label>
+Paginated etexts are searchable Unicode documents that correspond to image assets in the BUDA archives. Paginated etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive.</rdfs:comment>
+        <rdfs:label xml:lang="en">Paginated Etext Item</rdfs:label>
     </owl:Class>
     
 
@@ -4260,24 +4260,6 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
         <rdfs:label xml:lang="en">License</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/LicensedAccessedEntity -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Etext"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Item"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The various entities that can have license and access properties attached</rdfs:comment>
-        <rdfs:label xml:lang="en">licensed and access entity</rdfs:label>
     </owl:Class>
     
 
@@ -4949,6 +4931,24 @@ bdr:OtherTaxonomy a :Taxonomy ;
 
 Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously.</rdfs:comment>
         <rdfs:label xml:lang="en">Taxonomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/TextualEntity -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TextualEntity">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Etext"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Item"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The various entities that are textual sources that can have license and access properties attached along with pagination</rdfs:comment>
+        <rdfs:label xml:lang="en">Textual Entity</rdfs:label>
     </owl:Class>
     
 
