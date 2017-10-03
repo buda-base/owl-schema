@@ -2521,18 +2521,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/chunkEnd -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkEnd">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextSlice"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Ending chunk of a page, line, or segment</rdfs:comment>
-        <rdfs:label xml:lang="en">end chunk</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/chunkId -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/chunkId">
@@ -2896,25 +2884,41 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/sliceEnd -->
+    <!-- http://purl.bdrc.io/ontology/core/sliceEndChar -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/sliceEnd">
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/sliceEndChar">
+        <rdfs:label xml:lang="en">slice end char</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/sliceEndChunk -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/sliceEndChunk">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextSlice"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/SliceLoc"/>
         <rdfs:comment xml:lang="en">Ending chunk:char of a page, line, or other slice</rdfs:comment>
-        <rdfs:label xml:lang="en">end of slice</rdfs:label>
+        <rdfs:label xml:lang="en">slice end chunk</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/sliceStart -->
+    <!-- http://purl.bdrc.io/ontology/core/sliceStartChar -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/sliceStart">
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/sliceStartChar">
+        <rdfs:label xml:lang="en">slice start char</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/sliceStartChunk -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/sliceStartChunk">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextSlice"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/SliceLoc"/>
         <rdfs:comment xml:lang="en">Starting chunk:char of a page, line, or other slice</rdfs:comment>
-        <rdfs:label xml:lang="en">start of slice</rdfs:label>
+        <rdfs:label xml:lang="en">slice start chunk</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:DatatypeProperty>
     
@@ -4056,7 +4060,11 @@ Each chunk is a blank node containing the chunk id - which is a virtual id servi
 
 If the chunk is from an OCR&apos;d text, then there is additional information indicating the starting chunk and character, and ending chunk and character for each page in the :ItemImageAsset from which the OCR&apos;d material was derived. For example,
 
-     [ a EtextPage ; :slice 46 ; :sliceStart &quot;43:17&quot; ; :sliceEnd &quot;44:138&quot; ]
+     [ a EtextPage ; :slice 46 ; 
+       :sliceStartChunk 43 ; 
+       :sliceStartChar 17 ;
+       :sliceEndChunk 44 ;
+       :sliceEndChar 138 ]
 
 The character counts are in terms of Unicode codepoints in whatever representation is used, typically, UTF-8.</rdfs:comment>
         <rdfs:label xml:lang="en">eText</rdfs:label>
