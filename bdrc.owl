@@ -1575,6 +1575,39 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/itemEtextForWork -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemEtextForWork">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/itemForWork"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtext"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
+        <rdfs:label xml:lang="en">eText for work</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/itemEtextNonPaginatedForWork -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemEtextNonPaginatedForWork">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/itemEtextForWork"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtextNonPaginated"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtextNonPaginated"/>
+        <rdfs:label xml:lang="en">non-paginated eText for work</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/itemEtextPaginatedForWork -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemEtextPaginatedForWork">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/itemEtextForWork"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtextPaginated"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtextPaginated"/>
+        <rdfs:label xml:lang="en">paginated eText for work</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/itemForWork -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemForWork">
@@ -1599,6 +1632,17 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/itemImageAssetForWork -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemImageAssetForWork">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/itemForWork"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemImageAsset"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ItemImageAsset"/>
+        <rdfs:label xml:lang="en">image asset for work</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/itemLibrary -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemLibrary">
@@ -1607,6 +1651,17 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         <rdfs:comment xml:lang="en">The Library (Place) that contains the physical holding</rdfs:comment>
         <rdfs:label xml:lang="en">library</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/itemPhysicalAssetForWork -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/itemPhysicalAssetForWork">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/itemForWork"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemPhysicalAsset"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
+        <rdfs:label xml:lang="en">physical asset for work</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2213,6 +2268,56 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItem">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workHasItemEtext -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemEtext">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
+        <rdfs:label xml:lang="en">work has eText</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workHasItemEtextNonPaginated -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemEtextNonPaginated">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtext"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtextNonPaginated"/>
+        <rdfs:label xml:lang="en">work has non-paginated eText</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workHasItemEtextPaginated -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemEtextPaginated">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtext"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtextPaginated"/>
+        <rdfs:label xml:lang="en">work has paginated eText</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workHasItemImageAsset -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemImageAsset">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemImageAsset"/>
+        <rdfs:label xml:lang="en">work has image asset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workHasItemPhysicalAsset -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemPhysicalAsset">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
+        <rdfs:label xml:lang="en">work has physical asset</rdfs:label>
     </owl:ObjectProperty>
     
 
