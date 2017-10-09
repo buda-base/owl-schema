@@ -1011,10 +1011,21 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextInItem">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/VolumeEtextAsset"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
         <rdfs:comment xml:lang="en">The reference to the :ItemEtext indicates the item that contains the volume that this Etext is contained in</rdfs:comment>
         <rdfs:label xml:lang="en">eText is in item</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eTextResource -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextResource">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EtextRef"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
+        <rdfs:comment xml:lang="en">Refers to an :Etext that is contained in a particular :VolumeEtextAsset</rdfs:comment>
+        <rdfs:label xml:lang="en">eText resource</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2038,6 +2049,17 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:label xml:lang="en">This property identifies the subject as a subclass of a Taxonomy or some other subclass of a Taxonomy</rdfs:label>
         <rdfs:label xml:lang="en">taxonomy subclass</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/volumeHasEtext -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/volumeHasEtext">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/VolumeEtextAsset"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/EtextRef"/>
+        <rdfs:comment xml:lang="en">refers to an :EtextRef that identifies an :Etext and the position of that :Etext in a containing :VolumeEtextAsset</rdfs:comment>
+        <rdfs:label xml:lang="en">voume has eText</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -4114,6 +4136,16 @@ The character counts are in terms of Unicode codepoints in whatever representati
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextPaginated">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
         <rdfs:label xml:lang="en">Paginated Etext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EtextRef -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EtextRef">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <rdfs:comment xml:lang="en">Used as a reference from a :VolumeEtextAsset to a particular :Etext, via :eTextResource, and indicating the position, :seqNum, of the :Etext in the volume.</rdfs:comment>
+        <rdfs:label xml:lang="en">Etext Reference</rdfs:label>
     </owl:Class>
     
 
