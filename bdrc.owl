@@ -1614,6 +1614,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">This Item is for the referenced Work, i.e., this Item represents a physical or digital instance of the referenced Work</rdfs:comment>
         <rdfs:label xml:lang="en">for work</rdfs:label>
     </owl:ObjectProperty>
@@ -2268,6 +2269,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItem">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
     </owl:ObjectProperty>
     
 
@@ -4169,6 +4171,7 @@ bdr:Czzzz a :Corporation ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Etext">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">An Etext is a single searchable Unicode text. The RDF representation of an Etext is derived from a master Unicode file and consists of a reference to the volume of the :ItemEtext that contains the Etext and a sequence of chunks. There will also be information such as a URI to the original source file in the case of input etext - these are typically Sambhota Word or Tibet Doc files.
 
 The reference to the containing :ItemEtext is a URI formed by appending the volume index to the :IremEtext URI, like:
