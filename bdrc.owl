@@ -4412,6 +4412,24 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/LicensedAccessedEntity -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Etext"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Item"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The various entities that can have license and access properties attached</rdfs:comment>
+        <rdfs:label xml:lang="en">licensed and access entity</rdfs:label>
+    </owl:Class>
+
+
+
     <!-- http://purl.bdrc.io/ontology/core/Lineage -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Lineage">
