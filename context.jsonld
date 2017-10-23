@@ -72,6 +72,168 @@
     "creatorTranslator" : {
       "@type" : "@id"
     },
+    "eTextContentProvider" : {
+      "@type" : "@id"
+    },
+    "eTextHasChunk" : {
+      "@type" : "@id"
+    },
+    "eTextHasPage" : {
+      "@type" : "@id"
+    },
+    "eTextInItem" : {
+      "@type" : "@id"
+    },
+    "eTextResource" : {
+      "@type" : "@id"
+    },
+    "hasAunt" : {
+      "@type" : "@id"
+    },
+    "hasBrother" : {
+      "@type" : "@id"
+    },
+    "hasBrotherInLaw" : {
+      "@type" : "@id"
+    },
+    "hasChild" : {
+      "@type" : "@id"
+    },
+    "hasCousin" : {
+      "@type" : "@id"
+    },
+    "hasDaughter" : {
+      "@type" : "@id"
+    },
+    "hasFather" : {
+      "@type" : "@id"
+    },
+    "hasFatherInLaw" : {
+      "@type" : "@id"
+    },
+    "hasGrandChild" : {
+      "@type" : "@id"
+    },
+    "hasGrandParent" : {
+      "@type" : "@id"
+    },
+    "hasGranddaughter" : {
+      "@type" : "@id"
+    },
+    "hasGrandfather" : {
+      "@type" : "@id"
+    },
+    "hasGrandmother" : {
+      "@type" : "@id"
+    },
+    "hasGrandson" : {
+      "@type" : "@id"
+    },
+    "hasHusband" : {
+      "@type" : "@id"
+    },
+    "hasInLaw" : {
+      "@type" : "@id"
+    },
+    "hasIncarnation" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationActivities" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationBody" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationGeneral" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationMind" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationQualities" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationSpeech" : {
+      "@type" : "@id"
+    },
+    "hasIncarnationYangtse" : {
+      "@type" : "@id"
+    },
+    "hasMaternalAunt" : {
+      "@type" : "@id"
+    },
+    "hasMaternalUncle" : {
+      "@type" : "@id"
+    },
+    "hasMother" : {
+      "@type" : "@id"
+    },
+    "hasMotherInLaw" : {
+      "@type" : "@id"
+    },
+    "hasNephew" : {
+      "@type" : "@id"
+    },
+    "hasNibling" : {
+      "@type" : "@id"
+    },
+    "hasNiece" : {
+      "@type" : "@id"
+    },
+    "hasOlderBrother" : {
+      "@type" : "@id"
+    },
+    "hasOlderSister" : {
+      "@type" : "@id"
+    },
+    "hasParent" : {
+      "@type" : "@id"
+    },
+    "hasParentInLaw" : {
+      "@type" : "@id"
+    },
+    "hasParentSibling" : {
+      "@type" : "@id"
+    },
+    "hasPaternalAunt" : {
+      "@type" : "@id"
+    },
+    "hasPaternalUncle" : {
+      "@type" : "@id"
+    },
+    "hasSibling" : {
+      "@type" : "@id"
+    },
+    "hasSiblingInLaw" : {
+      "@type" : "@id"
+    },
+    "hasSister" : {
+      "@type" : "@id"
+    },
+    "hasSisterInLaw" : {
+      "@type" : "@id"
+    },
+    "hasSon" : {
+      "@type" : "@id"
+    },
+    "hasSpouse" : {
+      "@type" : "@id"
+    },
+    "hasUncle" : {
+      "@type" : "@id"
+    },
+    "hasUnknownKinship" : {
+      "@type" : "@id"
+    },
+    "hasWife" : {
+      "@type" : "@id"
+    },
+    "hasYoungerBrother" : {
+      "@type" : "@id"
+    },
+    "hasYoungerSister" : {
+      "@type" : "@id"
+    },
     "incarnationActivities" : {
       "@type" : "@id"
     },
@@ -93,16 +255,34 @@
     "incarnationYangtse" : {
       "@type" : "@id"
     },
+    "isIncarnation" : {
+      "@type" : "@id"
+    },
+    "itemEtextForWork" : {
+      "@type" : "@id"
+    },
+    "itemEtextNonPaginatedForWork" : {
+      "@type" : "@id"
+    },
+    "itemEtextPaginatedForWork" : {
+      "@type" : "@id"
+    },
     "itemForWork" : {
       "@type" : "@id"
     },
     "itemHasVolume" : {
       "@type" : "@id"
     },
+    "itemImageAssetForWork" : {
+      "@type" : "@id"
+    },
     "itemLibrary" : {
       "@type" : "@id"
     },
-    "lineageAlternative" : {
+    "itemPhysicalAssetForWork" : {
+      "@type" : "@id"
+    },
+    "kinWith" : {
       "@type" : "@id"
     },
     "lineageDownFrom" : {
@@ -144,6 +324,12 @@
     "noteWork" : {
       "@type" : "@id"
     },
+    "pageHasLine" : {
+      "@type" : "@id"
+    },
+    "paginatedBy" : {
+      "@type" : "@id"
+    },
     "personEvent" : {
       "@type" : "@id"
     },
@@ -160,24 +346,6 @@
       "@type" : "@id"
     },
     "personHasConsort" : {
-      "@type" : "@id"
-    },
-    "personIncarnationOf" : {
-      "@type" : "@id"
-    },
-    "personIncarnationOfType" : {
-      "@type" : "@id"
-    },
-    "personIsIncarnation" : {
-      "@type" : "@id"
-    },
-    "personKin" : {
-      "@type" : "@id"
-    },
-    "personKinType" : {
-      "@type" : "@id"
-    },
-    "personKinWho" : {
       "@type" : "@id"
     },
     "personName" : {
@@ -204,6 +372,9 @@
     "placeEventAffiliation" : {
       "@type" : "@id"
     },
+    "placeEventWho" : {
+      "@type" : "@id"
+    },
     "placeIsNear" : {
       "@type" : "@id"
     },
@@ -216,8 +387,11 @@
     "seeAlso" : {
       "@type" : "@id"
     },
-    "status" : {
-      "@type" : "@id"
+    "sliceEndChunk" : {
+      "@type" : "bdo:SliceLoc"
+    },
+    "sliceStartChunk" : {
+      "@type" : "bdo:SliceLoc"
     },
     "taxElementOf" : {
       "@type" : "@id"
@@ -225,10 +399,13 @@
     "taxElementOfRelation" : {
       "@type" : "@id"
     },
-    "taxSubClass" : {
+    "taxSubClassOf" : {
       "@type" : "@id"
     },
     "taxSubclassRelation" : {
+      "@type" : "@id"
+    },
+    "volumeHasEtext" : {
       "@type" : "@id"
     },
     "volumeOf" : {
@@ -253,6 +430,24 @@
       "@type" : "@id"
     },
     "workHasItem" : {
+      "@type" : "@id"
+    },
+    "workHasItemEtext" : {
+      "@type" : "@id"
+    },
+    "workHasItemEtextNonPaginated" : {
+      "@type" : "@id"
+    },
+    "workHasItemEtextPaginated" : {
+      "@type" : "@id"
+    },
+    "workHasItemImageAsset" : {
+      "@type" : "@id"
+    },
+    "workHasItemPhysicalAsset" : {
+      "@type" : "@id"
+    },
+    "workHasNumber" : {
       "@type" : "@id"
     },
     "workHasPart" : {
@@ -324,7 +519,13 @@
     "workType" : {
       "@type" : "@id"
     },
+    "adm:access" : {
+      "@type" : "@id"
+    },
     "adm:convertToClass" : {
+      "@type" : "@id"
+    },
+    "adm:license" : {
       "@type" : "@id"
     },
     "adm:logDate" : {
@@ -354,13 +555,10 @@
     "adm:productIncludes" : {
       "@type" : "@id"
     },
-    "adm:workAccess" : {
+    "adm:status" : {
       "@type" : "@id"
     },
     "adm:workInProduct" : {
-      "@type" : "@id"
-    },
-    "adm:workLicense" : {
       "@type" : "@id"
     }
   }
