@@ -24,6 +24,75 @@
     "corporationRegion" : {
       "@type" : "@id"
     },
+    "creatorArtist" : {
+      "@type" : "@id"
+    },
+    "creatorAttributedAuthor" : {
+      "@type" : "@id"
+    },
+    "creatorBard" : {
+      "@type" : "@id"
+    },
+    "creatorCalligrapher" : {
+      "@type" : "@id"
+    },
+    "creatorCommentator" : {
+      "@type" : "@id"
+    },
+    "creatorContributingAuthor" : {
+      "@type" : "@id"
+    },
+    "creatorEditor" : {
+      "@type" : "@id"
+    },
+    "creatorGeneralAuthor" : {
+      "@type" : "@id"
+    },
+    "creatorMainAuthor" : {
+      "@type" : "@id"
+    },
+    "creatorPandita" : {
+      "@type" : "@id"
+    },
+    "creatorRecipientOfResponseToQuery" : {
+      "@type" : "@id"
+    },
+    "creatorRequester" : {
+      "@type" : "@id"
+    },
+    "creatorReviserOfTranslation" : {
+      "@type" : "@id"
+    },
+    "creatorScribe" : {
+      "@type" : "@id"
+    },
+    "creatorTerton" : {
+      "@type" : "@id"
+    },
+    "creatorTranslator" : {
+      "@type" : "@id"
+    },
+    "incarnationActivities" : {
+      "@type" : "@id"
+    },
+    "incarnationBody" : {
+      "@type" : "@id"
+    },
+    "incarnationGeneral" : {
+      "@type" : "@id"
+    },
+    "incarnationMind" : {
+      "@type" : "@id"
+    },
+    "incarnationQualities" : {
+      "@type" : "@id"
+    },
+    "incarnationSpeech" : {
+      "@type" : "@id"
+    },
+    "incarnationYangtse" : {
+      "@type" : "@id"
+    },
     "itemForWork" : {
       "@type" : "@id"
     },
@@ -166,12 +235,6 @@
       "@type" : "@id"
     },
     "workCreator" : {
-      "@type" : "@id"
-    },
-    "workCreatorType" : {
-      "@type" : "@id"
-    },
-    "workCreatorWho" : {
       "@type" : "@id"
     },
     "workDerivativeOf" : {
