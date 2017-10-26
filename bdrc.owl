@@ -4427,7 +4427,7 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
         <rdfs:comment xml:lang="en">The various entities that can have license and access properties attached</rdfs:comment>
         <rdfs:label xml:lang="en">licensed and access entity</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.bdrc.io/ontology/core/Lineage -->
@@ -4564,6 +4564,33 @@ Relative pagination uses pagination in the content of the work while absolute co
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/PersonAffiliation -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonAffiliation">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Affiliation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonAssumesOffice -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonAssumesOffice">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Assumes Office</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonAssumesSeat -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonAssumesSeat">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Assumes Seat</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/PersonBodhisattvaVowName -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonBodhisattvaVowName">
@@ -4635,72 +4662,45 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventAffiliation -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonBirth -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventAffiliation">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Affiliation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventAssumesOffice -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventAssumesOffice">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Assumes Office</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventAssumesSeat -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventAssumesSeat">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Assumes Seat</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventBirth -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventBirth">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonBirth">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Birth</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventDeath -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonDeath -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventDeath">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonDeath">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Death</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventDivorce -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonDivorce -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventDivorce">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonDivorce">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Dviorce</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventFinalOrdination -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonFinalOrdination -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventFinalOrdination">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFinalOrdination">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Final Ordination</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventFoundsMonastery -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonFoundsMonastery -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventFoundsMonastery">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFoundsMonastery">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:comment xml:lang="en">Migration hint: occurrences of this event in the legacy data are modeled by adding a PlaceEvent of type founded to the Monastery Place and a reference to the founder Person via :placeEventWho predicate</rdfs:comment>
         <rdfs:label xml:lang="en">Founds Monastery</rdfs:label>
@@ -4709,45 +4709,45 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventGterMaDiscovery -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonGterMaDiscovery -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventGterMaDiscovery">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonGterMaDiscovery">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Discovers Terma</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventInResidence -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonInResidence -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventInResidence">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonInResidence">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">In Residence</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventLeavesOffice -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonLeavesOffice -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventLeavesOffice">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonLeavesOffice">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Leaves Office</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventLeavesSeat -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonLeavesSeat -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventLeavesSeat">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonLeavesSeat">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Leaves Seat</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventMarriage -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonMarriage -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventMarriage">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonMarriage">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Marriage</rdfs:label>
     </owl:Class>
@@ -4763,19 +4763,19 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventOccupiesSeat -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonOccupiesSeat -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventOccupiesSeat">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOccupiesSeat">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:comment xml:lang="en">Migration hint: Rather than a separate :personHasSeat property, the &lt;p:seat/&gt; is modeled as a PersonEventOccupiesSeat with the place and circa as for any other PersonEvent</rdfs:comment>
+        <rdfs:comment xml:lang="en">Migration hint: Rather than a separate :personHasSeat property, the &lt;p:seat/&gt; is modeled as a PersonOccupiesSeat with the place and circa as for any other PersonEvent</rdfs:comment>
         <rdfs:label xml:lang="en">Occupies Seat</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventRabByungOrdination -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonRabByungOrdination -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventRabByungOrdination">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonRabByungOrdination">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Rabjung Ordination</rdfs:label>
     </owl:Class>
