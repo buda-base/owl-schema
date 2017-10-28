@@ -1679,6 +1679,17 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/language -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/language">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:comment xml:lang="en">language of a :LangScript</rdfs:comment>
+        <rdfs:label xml:lang="en">language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/lineageDownFrom -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/lineageDownFrom">
@@ -2087,6 +2098,17 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/script -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/script">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:comment xml:lang="en">The script for a :LangScript</rdfs:comment>
+        <rdfs:label xml:lang="en">script</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/taxElementOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/taxElementOf">
@@ -2105,6 +2127,17 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:label xml:lang="en">This property identifies the subject as a subclass of a Taxonomy or some other subclass of a Taxonomy</rdfs:label>
         <rdfs:label xml:lang="en">taxonomy subclass</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/transliteration -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/transliteration">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:comment xml:lang="en">A transliteration for a :LangScript. Mostly this will apply for Pali situations since texts are always written in a transliteration of Pali in a Romanization or script of a language such as Thai.</rdfs:comment>
+        <rdfs:label xml:lang="en">transliteration</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2435,6 +2468,17 @@ bdr:T354 a :Topic ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workLangScript -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workLangScript">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <rdfs:comment xml:lang="en">Every :Work should have at least one :workLangScript indicating the primary laguage and script in which the language is presented. There may be more than one :workLangScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements</rdfs:comment>
+        <rdfs:label xml:lang="en">work language+script</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workLocation -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocation">
@@ -2469,6 +2513,21 @@ bdr:T354 a :Topic ;
 
 bdr:Wwww :workNumberOf bdr:Wxxx .</rdfs:comment>
         <rdfs:label xml:lang="en">number of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workOtherLangScript -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workOtherLangScript">
+        <rdfs:comment xml:lang="en">The :workOtherLangScript is used to indicate language script combinations that occur in secondary or subsidiary roles within a :Work. For example, a preface in Chinese for a primary Tibetan text could be indicated via:
+
+    :workOtherLangScript bdr:ZhNative
+
+or a text containing handwritten comments in Tibetan might have:
+
+    :workOtherLangScript bdr:BoKyugYig</rdfs:comment>
+        <rdfs:label xml:lang="en">other language+script</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3216,6 +3275,33 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">date of writing</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workDimHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workDimHeight">
+        <rdfs:comment xml:lang="en">height or thickness of the physical item of a :Work in cm</rdfs:comment>
+        <rdfs:label xml:lang="en">height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workDimLength -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workDimLength">
+        <rdfs:comment xml:lang="en">length of the physical item, of this :Work, that is held or scanned in cm</rdfs:comment>
+        <rdfs:label xml:lang="en">length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workDimWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workDimWidth">
+        <rdfs:comment xml:lang="en">width of the physical item, of this :Work, that is held or scanned in cm</rdfs:comment>
+        <rdfs:label xml:lang="en">width</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -4402,6 +4488,26 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/LangScript -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LangScript">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">:LangScript individuals represent combinations of a Language, a script, and possibly a transliteration in which the Language is expressed. For example, bdr:BoEwts represents Tibetan in the Extended Wylie transliteration (which is written in Latin script)</rdfs:comment>
+        <rdfs:label xml:lang="en">Language+Script</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Language -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Language">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/License -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/License">
@@ -4591,6 +4697,15 @@ Relative pagination uses pagination in the content of the work while absolute co
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/PersonBirth -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonBirth">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Birth</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/PersonBodhisattvaVowName -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonBodhisattvaVowName">
@@ -4623,6 +4738,24 @@ Relative pagination uses pagination in the content of the work while absolute co
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonCorporateName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
         <rdfs:label xml:lang="en">Corporate Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonDeath -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonDeath">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Death</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonDivorce -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonDivorce">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Dviorce</rdfs:label>
     </owl:Class>
     
 
@@ -4662,29 +4795,20 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonBirth -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonEventNotSpecified -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonBirth">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventNotSpecified">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Birth</rdfs:label>
+        <rdfs:label xml:lang="en">Not Specified</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonDeath -->
+    <!-- http://purl.bdrc.io/ontology/core/PersonFamilyName -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonDeath">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Death</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonDivorce -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonDivorce">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Dviorce</rdfs:label>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFamilyName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
+        <rdfs:label xml:lang="en">Family Name</rdfs:label>
     </owl:Class>
     
 
@@ -4694,6 +4818,24 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFinalOrdination">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Final Ordination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonFinalOrdinationName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFinalOrdinationName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
+        <rdfs:label xml:lang="en">Final Ordination Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonFirstOrdinationName -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFirstOrdinationName">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
+        <rdfs:label xml:lang="en">First Ordination Name</rdfs:label>
     </owl:Class>
     
 
@@ -4714,6 +4856,15 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonGterMaDiscovery">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:label xml:lang="en">Discovers Terma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonGterStonTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonGterStonTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
+        <rdfs:label xml:lang="en">Terton Title</rdfs:label>
     </owl:Class>
     
 
@@ -4754,70 +4905,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonEventNotSpecified -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonEventNotSpecified">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Not Specified</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonOccupiesSeat -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOccupiesSeat">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:comment xml:lang="en">Migration hint: Rather than a separate :personHasSeat property, the &lt;p:seat/&gt; is modeled as a PersonOccupiesSeat with the place and circa as for any other PersonEvent</rdfs:comment>
-        <rdfs:label xml:lang="en">Occupies Seat</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonRabByungOrdination -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonRabByungOrdination">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
-        <rdfs:label xml:lang="en">Rabjung Ordination</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonFamilyName -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFamilyName">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
-        <rdfs:label xml:lang="en">Family Name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonFinalOrdinationName -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFinalOrdinationName">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
-        <rdfs:label xml:lang="en">Final Ordination Name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonFirstOrdinationName -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFirstOrdinationName">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
-        <rdfs:label xml:lang="en">First Ordination Name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonGterStonTitle -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonGterStonTitle">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
-        <rdfs:label xml:lang="en">Terton Title</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/PersonName -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonName">
@@ -4829,6 +4916,16 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
                :personName [ a bdr:PersonPrimaryName ;
                                        rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ]</rdfs:comment>
         <rdfs:label xml:lang="en">person name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonOccupiesSeat -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOccupiesSeat">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:comment xml:lang="en">Migration hint: Rather than a separate :personHasSeat property, the &lt;p:seat/&gt; is modeled as a PersonOccupiesSeat with the place and circa as for any other PersonEvent</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupies Seat</rdfs:label>
     </owl:Class>
     
 
@@ -4892,6 +4989,15 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonPrimaryTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
         <rdfs:label xml:lang="en">Primary Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonRabByungOrdination -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonRabByungOrdination">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <rdfs:label xml:lang="en">Rabjung Ordination</rdfs:label>
     </owl:Class>
     
 
@@ -5022,6 +5128,16 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/Script -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Script">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">A script in which a language is written. For example, DbuChen, DbuMed, Kyug&apos;Yig, Native (implies Unicode)</rdfs:comment>
+        <rdfs:label xml:lang="en">Script</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/StatusType -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/StatusType">
@@ -5137,6 +5253,16 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">Individuals represent various (Tibetan) Buddhist traditions</rdfs:comment>
         <rdfs:label xml:lang="en">Tradition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Transliteration -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Transliteration">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">A transliteration used to represent a language in a non-native script. For example, ExtendWylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese (in Latin script)</rdfs:comment>
+        <rdfs:label xml:lang="en">Transliteration</rdfs:label>
     </owl:Class>
     
 
@@ -5585,6 +5711,60 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/BoDbuChen -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoDbuChen">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuChen"/>
+        <rdfs:label xml:lang="en">Tibetan in Dbu Chen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/BoDbuMed -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoDbuMed">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuMed"/>
+        <rdfs:label xml:lang="en">Tibetan in Dbu Med</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/BoEwts -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoEwts">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatin"/>
+        <transliteration rdf:resource="http://purl.bdrc.io/resource/EWTS"/>
+        <rdfs:label xml:lang="en">Tibetan in Extended Wylie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/BoKyugYig -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoKyugYig">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptKyugYig"/>
+        <rdfs:label xml:lang="en">Tibetan in Kyug &apos;Yig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/EWTS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EWTS">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">Extended Wylie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/EightMinorKagyuTraditions -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EightMinorKagyuTraditions">
@@ -5636,6 +5816,42 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderNotSpecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangBo -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangBo">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Tibetan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangMn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangMn">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangPli -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangPli">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Pali</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangZh -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangZh">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Chinese</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5857,6 +6073,38 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaginationRelative">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PaginationType"/>
         <rdfs:label xml:lang="en">relative pagination</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PaliThai -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaliThai">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangPli"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptThai"/>
+        <transliteration rdf:resource="http://purl.bdrc.io/resource/PaliTrans"/>
+        <rdfs:comment xml:lang="en">Pali transliterated in Thai script</rdfs:comment>
+        <rdfs:label xml:lang="en">Pali in Thai</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PaliTrans -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaliTrans">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:comment xml:lang="en">Pali transliteration based on the script. When Latin script, the typical case, there is a standard Romanization. When other scripts such as Thai are used then the transliteration will be separately specified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pali</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/Pinyin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Pinyin">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">Pinyin</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6602,6 +6850,50 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeTypeSet">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptDbuChen -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDbuChen">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Dbu Chen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptDbuMed -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDbuMed">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Dbu Med</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptKyugYig -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptKyugYig">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Kyug &apos;Yig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptLatin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptLatin">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">latin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptThai -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptThai">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
     </owl:NamedIndividual>
     
 
