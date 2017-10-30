@@ -4510,6 +4510,7 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese and so on</rdfs:comment>
         <rdfs:label xml:lang="en">Language</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/ontology#Language"/>
     </owl:Class>
     
 
@@ -5140,6 +5141,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">A script in which a language is written. For example, DbuCan, DbuMed, Kyug&apos;Yig, Native (implies Unicode)</rdfs:comment>
         <rdfs:label xml:lang="en">Script</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/ontology#Script"/>
     </owl:Class>
     
 
