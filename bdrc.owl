@@ -5740,8 +5740,8 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoEwts">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
-        <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatin"/>
-        <transliteration rdf:resource="http://purl.bdrc.io/resource/EWTS"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatn"/>
+        <transliteration rdf:resource="http://purl.bdrc.io/resource/TransEWTS"/>
         <rdfs:label xml:lang="en">Tibetan in Extended Wylie</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">wa&apos;i li</rdfs:label>
     </owl:NamedIndividual>
@@ -5772,12 +5772,14 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/EWTS -->
+    <!-- http://purl.bdrc.io/resource/DzTibt -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EWTS">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
-        <rdfs:label xml:lang="en">Extended Wylie</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">wa&apos;i li</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/DzTibt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangDz"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptTibt"/>
+        <rdfs:label xml:lang="en">Dzongkha (Bhutanese)</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rdzong kha</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5798,6 +5800,17 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">The Eight Practice Lineages</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/EnLatn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EnLatn">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangEn"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatn"/>
+        <rdfs:label xml:lang="en">English</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5837,12 +5850,50 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/HiUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/HiUnknown">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangHi"/>
+        <rdfs:label xml:lang="en">Hindi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/LangBo -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangBo">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Tibetan</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangDz -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangDz">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Dzongkha (Bhutanese)</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rdzong kha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangEn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangEn">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangHi -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangHi">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Hindi</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5856,11 +5907,20 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/LangPli -->
+    <!-- http://purl.bdrc.io/resource/LangPi -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangPli">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangPi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Pali</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LangSa -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangSa">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6013,6 +6073,46 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/MnCyrl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnCyrl">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <rdfs:label xml:lang="en">Mongolian (in Cyrillic)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MnLatn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnLatn">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <rdfs:label xml:lang="en">Mongolian in Romanized form</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MnMong -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnMong">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <rdfs:label xml:lang="en">Mongolian (in old Mongolian script)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MnUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnUnknown">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/OutlineTypeCompositeVolume -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/OutlineTypeCompositeVolume">
@@ -6099,30 +6199,10 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaliThai">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
-        <language rdf:resource="http://purl.bdrc.io/resource/LangPli"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangPi"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptThai"/>
-        <transliteration rdf:resource="http://purl.bdrc.io/resource/PaliTrans"/>
         <rdfs:comment xml:lang="en">Pali transliterated in Thai script</rdfs:comment>
         <rdfs:label xml:lang="en">Pali in Thai</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PaliTrans -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaliTrans">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
-        <rdfs:comment xml:lang="en">Pali transliteration based on the script. When Latin script, the typical case, there is a standard Romanization. When other scripts such as Thai are used then the transliteration will be separately specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">Pali</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/Pinyin -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Pinyin">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
-        <rdfs:label xml:lang="en">Pinyin</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6856,6 +6936,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/SaUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaUnknown">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ScriptDbuCan -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDbuCan">
@@ -6886,9 +6976,9 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/ScriptLatin -->
+    <!-- http://purl.bdrc.io/resource/ScriptLatn -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptLatin">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptLatn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:label xml:lang="en">latin</rdfs:label>
     </owl:NamedIndividual>
@@ -7360,6 +7450,47 @@ equiv Dagpo Kagyu?</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/resource/TransAlalc -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransAlalc">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">ALA-LC</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.loc.gov/catdir/cpso/roman.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TransEWTS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransEWTS">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">Extended Wylie</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">wa&apos;i li</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TransIAST -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransIAST">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:comment xml:lang="en">International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">IAST</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TransPinyin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransPinyin">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">Pinyin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/UNKNOWN_Corporation -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/UNKNOWN_Corporation">
@@ -7556,6 +7687,16 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkVolume">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ZhUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ZhUnknown">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
+        <rdfs:label xml:lang="en">Chinese</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
