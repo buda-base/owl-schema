@@ -2526,7 +2526,7 @@ bdr:Wwww :workNumberOf bdr:Wxxx .</rdfs:comment>
 
 or a text containing handwritten comments in Tibetan might have:
 
-    :workOtherLangScript bdr:BoKyugYig</rdfs:comment>
+    :workOtherLangScript bdr:BoKhyugYig</rdfs:comment>
         <rdfs:label xml:lang="en">other language+script</rdfs:label>
     </owl:ObjectProperty>
     
@@ -5132,7 +5132,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Script">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">A script in which a language is written. For example, DbuChen, DbuMed, Kyug&apos;Yig, Native (implies Unicode)</rdfs:comment>
+        <rdfs:comment xml:lang="en">A script in which a language is written. For example, DbuCan, DbuMed, Kyug&apos;Yig, Native (implies Unicode)</rdfs:comment>
         <rdfs:label xml:lang="en">Script</rdfs:label>
     </owl:Class>
     
@@ -5711,13 +5711,14 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/BoDbuChen -->
+    <!-- http://purl.bdrc.io/resource/BoDbuCan -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoDbuChen">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoDbuCan">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
-        <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuChen"/>
-        <rdfs:label xml:lang="en">Tibetan in Dbu Chen</rdfs:label>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuCan"/>
+        <rdfs:label xml:lang="en">Tibetan in uchen script</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">dbu can</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5728,7 +5729,8 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuMed"/>
-        <rdfs:label xml:lang="en">Tibetan in Dbu Med</rdfs:label>
+        <rdfs:label xml:lang="en">Tibetan in ume script</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">dbu med</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5741,16 +5743,18 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatin"/>
         <transliteration rdf:resource="http://purl.bdrc.io/resource/EWTS"/>
         <rdfs:label xml:lang="en">Tibetan in Extended Wylie</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">wa&apos;i li</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/BoKyugYig -->
+    <!-- http://purl.bdrc.io/resource/BoKhyugYig -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoKyugYig">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoKhyugYig">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
-        <script rdf:resource="http://purl.bdrc.io/resource/ScriptKyugYig"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptKhyugYig"/>
+        <rdfs:label xml:lang="bo-x-ewts">&apos;khyug yig</rdfs:label>
         <rdfs:label xml:lang="en">Tibetan in Kyug &apos;Yig</rdfs:label>
     </owl:NamedIndividual>
     
@@ -5761,6 +5765,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EWTS">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
         <rdfs:label xml:lang="en">Extended Wylie</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">wa&apos;i li</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5825,6 +5830,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangBo">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Tibetan</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6814,22 +6820,6 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/PrintTypeDbuCan -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeDbuCan">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeDbuMed -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeDbuMed">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PrintTypeFacsimile -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeFacsimile">
@@ -6854,11 +6844,12 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/ScriptDbuChen -->
+    <!-- http://purl.bdrc.io/resource/ScriptDbuCan -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDbuChen">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDbuCan">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
-        <rdfs:label xml:lang="en">Dbu Chen</rdfs:label>
+        <rdfs:label xml:lang="en">Uchen</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">dbu can</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6867,16 +6858,18 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDbuMed">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
-        <rdfs:label xml:lang="en">Dbu Med</rdfs:label>
+        <rdfs:label xml:lang="en">Ume</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">dbu med</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/ScriptKyugYig -->
+    <!-- http://purl.bdrc.io/resource/ScriptKhyugYig -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptKyugYig">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptKhyugYig">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
-        <rdfs:label xml:lang="en">Kyug &apos;Yig</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">&apos;khyug yig</rdfs:label>
+        <rdfs:label xml:lang="en">Kyug&apos;yig</rdfs:label>
     </owl:NamedIndividual>
     
 
