@@ -5930,6 +5930,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/LangRu -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangRu">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Russian</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/code/ru"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/LangSa -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangSa">
@@ -6952,6 +6962,40 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/RuCyrl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/RuCyrl">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangRu"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptCyrl"/>
+        <rdfs:label xml:lang="en">Russian in Cyrillic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/SaRanj -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaRanj">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanjana"/>
+        <rdfs:label xml:lang="en">Sanskrit in Ranjana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/SaTibt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaTibt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptTibt"/>
+        <transliteration rdf:resource="http://purl.bdrc.io/resource/TransSaTibt"/>
+        <rdfs:label xml:lang="en">Sanskrit in Tibetan transliteration</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/SaUnspecified -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaUnspecified">
@@ -6992,6 +7036,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/ScriptDeva -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptDeva">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Devanagari</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/script/Deva"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ScriptKhyugYig -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptKhyugYig">
@@ -7008,6 +7062,15 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:label xml:lang="en">latin</rdfs:label>
         <owl:sameAs rdf:resource="http://lexvo.org/id/script/Latn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptRanjana -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptRanjana">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Ranjana</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7517,6 +7580,15 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransPinyin">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
         <rdfs:label xml:lang="en">Pinyin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TransSaTibt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransSaTibt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">Sanskrit transliterated in Tibetan</rdfs:label>
     </owl:NamedIndividual>
     
 
