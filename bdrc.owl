@@ -659,6 +659,12 @@ We take the view that the summary or contents statements can be treated in a man
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
@@ -5850,9 +5856,9 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/HiUnknown -->
+    <!-- http://purl.bdrc.io/resource/HiUnspecified -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/HiUnknown">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/HiUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangHi"/>
         <rdfs:label xml:lang="en">Hindi</rdfs:label>
@@ -5866,6 +5872,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Tibetan</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/bod"/>
     </owl:NamedIndividual>
     
 
@@ -5876,6 +5883,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Dzongkha (Bhutanese)</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">rdzong kha</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/dzo"/>
     </owl:NamedIndividual>
     
 
@@ -5885,6 +5893,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangEn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">English</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/eng"/>
     </owl:NamedIndividual>
     
 
@@ -5894,6 +5903,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangHi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Hindi</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/hin"/>
     </owl:NamedIndividual>
     
 
@@ -5903,6 +5913,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangMn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/mon"/>
     </owl:NamedIndividual>
     
 
@@ -5912,6 +5923,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangPi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Pali</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/pli"/>
     </owl:NamedIndividual>
     
 
@@ -5921,6 +5933,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangSa">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/san"/>
     </owl:NamedIndividual>
     
 
@@ -5930,6 +5943,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangZh">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:label xml:lang="en">Chinese</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/iso639-3/zho"/>
     </owl:NamedIndividual>
     
 
@@ -6103,9 +6117,9 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/MnUnknown -->
+    <!-- http://purl.bdrc.io/resource/MnUnspecified -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnUnknown">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
         <rdfs:label xml:lang="en">Mongolian</rdfs:label>
@@ -6936,12 +6950,22 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
-    <!-- http://purl.bdrc.io/resource/SaUnknown -->
+    <!-- http://purl.bdrc.io/resource/SaUnspecified -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaUnknown">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptCyrl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptCyrl">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Cyrillic</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/script/Cyrl"/>
     </owl:NamedIndividual>
     
 
@@ -6981,6 +7005,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptLatn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:label xml:lang="en">latin</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/script/Latn"/>
     </owl:NamedIndividual>
     
 
@@ -6989,6 +7014,8 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptThai">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Thai script</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/script/Thai"/>
     </owl:NamedIndividual>
     
 
@@ -6999,6 +7026,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:label xml:lang="en">Tibetan Script</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
+        <owl:sameAs rdf:resource="http://lexvo.org/id/script/Tibt"/>
     </owl:NamedIndividual>
     
 
@@ -7691,9 +7719,9 @@ equiv Dagpo Kagyu?</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/resource/ZhUnknown -->
+    <!-- http://purl.bdrc.io/resource/ZhUnspecified -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ZhUnknown">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ZhUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
         <rdfs:label xml:lang="en">Chinese</rdfs:label>
