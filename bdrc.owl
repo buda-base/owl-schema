@@ -5760,6 +5760,18 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/BoTibt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoTibt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptTibt"/>
+        <rdfs:label xml:lang="en">Tibetan</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/EWTS -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/EWTS">
@@ -6887,6 +6899,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptThai">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptTibt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptTibt">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Tibetan Script</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
     </owl:NamedIndividual>
     
 
