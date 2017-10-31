@@ -6227,6 +6227,7 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangPi"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptThai"/>
+        <transliteration rdf:resource="http://purl.bdrc.io/resource/TransPaliThai"/>
         <rdfs:comment xml:lang="en">Pali transliterated in Thai script</rdfs:comment>
         <rdfs:label xml:lang="en">Pali in Thai</rdfs:label>
     </owl:NamedIndividual>
@@ -7571,6 +7572,15 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdfs:comment xml:lang="en">International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">IAST</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TransPaliThai -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransPaliThai">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
+        <rdfs:label xml:lang="en">Transliteration of Pali using Thai script</rdfs:label>
     </owl:NamedIndividual>
     
 
