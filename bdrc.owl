@@ -5965,8 +5965,8 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCCBY">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:label xml:lang="en">CC-BY</rdfs:label>
-        <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC-BY, license with attribution</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://creativecommons.org/licenses/"/>
+        <rdfs:label xml:lang="en">The work is made available by its author under Creative Commons, CC-BY 4.0 unported.</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:NamedIndividual>
     
 
@@ -5975,8 +5975,8 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCopyrighted">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:comment xml:lang="en">This work is copyrighted and BDRC will only make at most fairuse access available</rdfs:comment>
-        <rdfs:label xml:lang="en">copyrighted</rdfs:label>
+        <rdfs:comment xml:lang="en">This work is copyrighted and BDRC will only make at most fairuse access available.</rdfs:comment>
+        <rdfs:label xml:lang="en">Copyrighted</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5987,6 +5987,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:comment xml:lang="en">Mixed licensing is used on a Work or Item to indicate that the license on Items or Parts (of the marked Work) may vary, e.g., some part of a Work may be Copyright (a contemporary introduction) and the remaining parts may be CCBY (for content published in the 18th century).</rdfs:comment>
         <rdfs:label xml:lang="en">mixed licensing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LicensePublicDomain -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicensePublicDomain">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
+        <rdfs:comment xml:lang="en">BDRC believes that this work in in the public domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Public Domain</rdfs:label>
     </owl:NamedIndividual>
     
 
