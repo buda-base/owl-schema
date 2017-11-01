@@ -6937,6 +6937,8 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeBlockPrint">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+        <rdfs:comment xml:lang="en">a :Work which content was produced by a method consisting of a relief process in which a design is cut into and printed from the surface of a wood block</rdfs:comment>
+        <rdfs:label xml:lang="en">Blockprint</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6953,6 +6955,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeFacsimile">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeManuscript -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeManuscript">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+        <rdfs:comment xml:lang="en">used with a :Work which content was handwritten and that through some unspecified sequence of further copying actions came to be scanned</rdfs:comment>
+        <rdfs:label xml:lang="en">Manuscript</rdfs:label>
     </owl:NamedIndividual>
     
 
