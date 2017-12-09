@@ -6933,6 +6933,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/PrintTypeAutograph -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeAutograph">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+        <rdfs:comment xml:lang="en">A manuscript written by the hand of the author</rdfs:comment>
+        <rdfs:label xml:lang="en">Autograph Manuscript</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/PrintTypeBlockPrint -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeBlockPrint">
@@ -6973,6 +6983,16 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeOCR">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PrintTypeParPhud -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeParPhud">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
+        <rdfs:comment xml:lang="en">&quot;first fruit&quot; printing from a set of xylographs. par phud</rdfs:comment>
+        <rdfs:label xml:lang="en">First Printing</rdfs:label>
     </owl:NamedIndividual>
     
 
