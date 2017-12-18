@@ -112,3 +112,4 @@ For Tibetan we do not keep the `-Tibt` script tag, although it would be legitima
 
 ## See also
 - [BIBFRAME Conventions](http://connect.ala.org/node/271553) and [this thread](https://listserv.loc.gov/cgi-bin/wa?A1=ind1712&L=BIBFRAME#7)
+- [SARIT Guidelines](http://sarit.indology.info/apps/sarit-pm/docs/encoding-guidelines-simple.html#The-xmlid-and-xmllang-attributes)
