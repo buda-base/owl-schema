@@ -109,3 +109,6 @@ For Tibetan we do not keep the `-Tibt` script tag, although it would be legitima
 - `bo-x-ewts` for EWTS transliteration
 - `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
 - `bo-x-acip` for ACIP transliteration
+
+## See also
+- [BIBFRAME Conventions](http://connect.ala.org/node/271553) and [this thread](https://listserv.loc.gov/cgi-bin/wa?A1=ind1712&L=BIBFRAME#7)
