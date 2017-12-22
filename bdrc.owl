@@ -5175,7 +5175,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/Taxonomy -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Taxonomy">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
 
 Assertions using :taxSubClass and :taxElementOf object properties organize the set of typed individuals into a class/subclass hierarchy. Typed indivduals can be asserted to be :taxSubClass of other individuals or of the :Taxonomy individual itself - the :Taxonomy individual is the root of the class/subclass hierarchy.
