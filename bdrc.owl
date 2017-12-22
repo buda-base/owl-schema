@@ -4152,6 +4152,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/OutlineType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">A legacy outline type</rdfs:comment>
         <rdfs:label xml:lang="en">Outline Type</rdfs:label>
     </owl:Class>
@@ -4162,6 +4163,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Product">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
         <rdfs:comment>An Product represents a collection of works that are distributed together. Historically this has meant on a CDROM, DVDROM or harddrive; nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still harddrive collections prepared from Products.
 
 IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
