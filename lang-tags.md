@@ -57,7 +57,7 @@ The convention used by BDRC is not to use it when not mandatory.
 
 We opened two tickets on the CLDR data to get some transliteration scheme normalized: [EWTS](http://unicode.org/cldr/trac/ticket/10547) and [IAST](http://unicode.org/cldr/trac/ticket/10548).
 
-The convention BDRC uses is to use the IANA name.
+The convention BDRC uses is to use the IANA name (`sa-alalc97`, `bo-alalc97`, etc.).
 
 #### Phonetic transcription
 
@@ -94,6 +94,8 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 
 - `sa-Deva` for Sanskrit written in Devanagari
 - `sa-Tibt` for Sanskrit transliterated into Tibetan
+- `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated in EWTS (`sa-x-dwts`, `sa-x-acip` and `sa-x-gbt` follow the same pattern)
+- `sa-x-Tibt-alalc97` (?) for Sanskrit transliterated into Tibetan, in turn transliterated in ALA-LC
 - `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated as EWTS
 - `sa-x-iast` for Sanskrit written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
 - `sa-x-ndia` for Sanskrit written in IAST with no diacritics
@@ -109,6 +111,7 @@ For Tibetan we do not keep the `-Tibt` script tag, although it would be legitima
 - `bo-x-ewts` for EWTS transliteration
 - `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
 - `bo-x-acip` for ACIP transliteration
+- `bo-x-dts` for a tranliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677)).
 
 ## See also
 - [BIBFRAME Conventions](http://connect.ala.org/node/271553) and [this thread](https://listserv.loc.gov/cgi-bin/wa?A1=ind1712&L=BIBFRAME#7)
