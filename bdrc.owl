@@ -3821,6 +3821,52 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workPartIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPartIndex">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The part index is used to provide a simple way to order the parts of a parent :Work. The direct children parts of a :Work are indexed from 1 to n. The direct children of each of these is similarly indexed from 1 to n.
+
+Schematically:
+
+W1
+   :workHasPart W1_0001, W1_0005 ;
+
+W1_0001
+    :workHasPart W1_0002, W1_0003, W1_0004 ;
+    :workPartOf W1 ;
+    :workIndex 1 ;
+
+W1_0002
+    :workPartOf W1_0001 ;
+    :workIndex 1 ;
+
+W1_0003
+    :workPartOf W1_0001 ;
+    :workIndex 2 ;
+
+W1_0004
+    :workPartOf W1_0001 ;
+    :workIndex 3 ;
+
+W1_0005
+    :workHasPart W1_0006, W1_0007 ;
+    :workPartOf W1 ;
+    :workIndex 2 ;
+
+W1_0006
+    :workPartOf W1_0005 ;
+    :workIndex 1 ;
+
+W1_0007
+    :workPartOf W1_0005 ;
+    :workIndex 2 ;</rdfs:comment>
+        <rdfs:label xml:lang="en">part index</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workPartLabel -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPartLabel">
