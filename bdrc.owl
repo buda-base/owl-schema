@@ -3127,6 +3127,17 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/volumeName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/volumeName">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">In some cases volumes of a :Work are given names. For example, in Tibetan a three volume work might have volumes named O, a, huM or a 10 volume work might have volumes named: ka, kha, ga, nga, ca, cha, ja, nya, ta, a.</rdfs:comment>
+        <rdfs:label xml:lang="en">volume name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/volumeNumber -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/volumeNumber">
