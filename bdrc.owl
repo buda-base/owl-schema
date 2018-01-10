@@ -3715,6 +3715,15 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workLocationEndVolumeName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationEndVolumeName">
+        <rdfs:comment xml:lang="en">refers to the ending volume by name, e.g., ca, ta, nga</rdfs:comment>
+        <rdfs:label xml:lang="en">location ending volume name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workLocationLine -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationLine">
@@ -3806,6 +3815,15 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         </rdfs:range>
         <rdfs:comment xml:lang="en">this should be a positive integer indicating the volume of the Work referenced in this Location</rdfs:comment>
         <rdfs:label xml:lang="en">volume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workLocationVolumeName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationVolumeName">
+        <rdfs:comment xml:lang="en">refers to the volume by name, e.g., ca, ta, nga</rdfs:comment>
+        <rdfs:label xml:lang="en">location volume name</rdfs:label>
     </owl:DatatypeProperty>
     
 
