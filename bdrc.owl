@@ -832,7 +832,6 @@ Both chunk and char number start at one.</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/corporationMember">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/CorporationMember"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
     </owl:ObjectProperty>
     
 
@@ -4293,7 +4292,6 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CorporationMember">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Describes a member of the subject Corporation by indicating the :Person that is a member and the :CorporationMemberType of the :Person:
 
 bdr:Czzzz a :Corporation ;
@@ -4640,7 +4638,6 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Lineage">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Example:
 
 bdr:L8LS15684 a :Lineage ; :status bdr:StatusReleased ;
@@ -4885,7 +4882,6 @@ Relative pagination uses pagination in the content of the work while absolute co
                 <owl:onClass rdf:resource="http://purl.bdrc.io/ontology/core/Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">A Person Event describes place, date and other relevant information related to some significant event such as ordination, marriage, birth, death and so on.
 
 The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
@@ -5009,7 +5005,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">represents a name of a Person via an rdfs:label and a subclass of  :PersonName. For example:
 
     bdr:P1583 a :Person ;
@@ -5063,15 +5058,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonPenName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
         <rdfs:label xml:lang="en">Pen Name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PersonPersonTitle -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonPersonTitle">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
-        <rdfs:label xml:lang="en">Person Title</rdfs:label>
     </owl:Class>
     
 
@@ -5134,7 +5120,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Place">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Names are represented by rdfs:label</rdfs:comment>
         <rdfs:comment xml:lang="en">Places are geographic entities ranging from monasteries, to villages, to counties, provinces and so on. Places are modeled in terms of subclasses that indicate the type of &quot;real world&quot; place that is referred to</rdfs:comment>
         <rdfs:label xml:lang="en">Place</rdfs:label>
@@ -5173,7 +5158,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PlaceEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">An event of some type that occurred at the subject Place around some date, involving some Persons and other entities: founding, destruction etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Place Event</rdfs:label>
     </owl:Class>
@@ -5395,7 +5379,6 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Volume">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
@@ -5530,7 +5513,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkLocation">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage</rdfs:comment>
         <rdfs:comment>The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a &lt;o:location/&gt; element spec&apos;d in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase</rdfs:comment>
         <rdfs:comment>parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location</rdfs:comment>
@@ -5590,7 +5572,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkSite">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Information about the site/Place where a Work was written, edited, completed and so on</rdfs:comment>
         <rdfs:label xml:lang="en">Work Site</rdfs:label>
     </owl:Class>
@@ -5629,7 +5610,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">A title for the Work including the title text and title type: full, sub, etc:
 
 
