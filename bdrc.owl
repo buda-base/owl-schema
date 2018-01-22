@@ -5043,16 +5043,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonOtherTitle -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOtherTitle">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
-        <rdfs:comment xml:lang="en">an otherwise unspecified type of person title</rdfs:comment>
-        <rdfs:label xml:lang="en">other title</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/PersonPenName -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonPenName">
@@ -5103,6 +5093,16 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonSecretInitiatoryName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
         <rdfs:label xml:lang="en">Secret Initiatory Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
+        <rdfs:comment xml:lang="en">an otherwise unspecified type of person title</rdfs:comment>
+        <rdfs:label xml:lang="en">other title</rdfs:label>
     </owl:Class>
     
 
