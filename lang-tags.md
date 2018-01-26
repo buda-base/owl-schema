@@ -113,6 +113,13 @@ For Tibetan we do not keep the `-Tibt` script tag, although it would be legitima
 - `bo-x-acip` for ACIP transliteration
 - `bo-x-dts` for a tranliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677)).
 
+#### Mongolian
+
+- `cmg-Mong` for Classical Mongolian written in Mongolian script
+- `cmg-Cyrl` for Classical Mongolian written in Cyrillic script
+- `cmg-x-poppe` for Classical Mongolian using [Poppe](https://viaf.org/viaf/22157344)'s translitteration (the one used in his [Grammar](http://www.worldcat.org/oclc/888131043))
+- `cmg-x-poppe-simpl` same as previous but with simplifications (`č` -> `c`; `ǰ` -> `j`; `š` -> `sh`; `γ` -> `g`)
+
 ## See also
 - [BIBFRAME Conventions](http://connect.ala.org/node/271553) and [this thread](https://listserv.loc.gov/cgi-bin/wa?A1=ind1712&L=BIBFRAME#7)
 - [SARIT Guidelines](http://sarit.indology.info/apps/sarit-pm/docs/encoding-guidelines-simple.html#The-xmlid-and-xmllang-attributes)
