@@ -2934,6 +2934,7 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     <!-- http://purl.bdrc.io/ontology/core/onOrAbout -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/onOrAbout">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">This property replaces the various separate circa properties with a single property that will have a single validator and editor support.</rdfs:comment>
         <rdfs:label xml:lang="en">circa</rdfs:label>
@@ -4451,6 +4452,24 @@ Slices are used to identify portions of an Etext for any purpose, such as pages,
 
 Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLine and :EtextPage.</rdfs:comment>
         <rdfs:label xml:lang="en">Etext Slice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Event -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Event">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/LineageReceived"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PlaceEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
     
 
