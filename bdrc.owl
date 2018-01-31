@@ -4459,7 +4459,7 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/Event -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Event">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
         <rdfs:comment xml:lang="en">Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
