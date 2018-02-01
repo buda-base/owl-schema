@@ -285,6 +285,9 @@
     "kinWith" : {
       "@type" : "@id"
     },
+    "language" : {
+      "@type" : "@id"
+    },
     "lineageDownFrom" : {
       "@type" : "@id"
     },
@@ -384,6 +387,9 @@
     "placeType" : {
       "@type" : "@id"
     },
+    "script" : {
+      "@type" : "@id"
+    },
     "seeAlso" : {
       "@type" : "@id"
     },
@@ -403,6 +409,9 @@
       "@type" : "@id"
     },
     "taxSubclassRelation" : {
+      "@type" : "@id"
+    },
+    "transliteration" : {
       "@type" : "@id"
     },
     "volumeHasEtext" : {
@@ -474,6 +483,9 @@
     "workIsbn" : {
       "@type" : "bdo:ISBN"
     },
+    "workLangScript" : {
+      "@type" : "@id"
+    },
     "workLcCallNumber" : {
       "@type" : "bdo:LCCallNumber"
     },
@@ -487,6 +499,9 @@
       "@type" : "@id"
     },
     "workNumberOf" : {
+      "@type" : "@id"
+    },
+    "workOtherLangScript" : {
       "@type" : "@id"
     },
     "workPagination" : {
