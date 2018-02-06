@@ -4537,7 +4537,7 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/ItemEtext -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtext">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemImageAsset"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
         <rdfs:comment xml:lang="en">Etext items represent searchable Unicode representations of Works.
 
 An Etext item typically will represent an entire published Work. There won&apos;t be an Etext item for each volume or text within the Work. This is because we generally want to track the entire published Work as a single entity and will use the Work :partOf Work statements along with additional statements to link an individual Etext back to a Work part.
