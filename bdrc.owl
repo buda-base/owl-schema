@@ -4078,6 +4078,28 @@ This is generally not the source printery of the original wood block prints that
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workSideBoxSequenceId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workSideBoxSequenceId">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts. Conventionally appearing in a side box of the textbox</rdfs:comment>
+        <rdfs:label xml:lang="en">side box sequence id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workSideBoxTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workSideBoxTitle">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:label xml:lang="en">a short abbreviated title typically occuring in the left side box of the recto textbox</rdfs:label>
+        <rdfs:label xml:lang="en">side box title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workSourceNote -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workSourceNote">
