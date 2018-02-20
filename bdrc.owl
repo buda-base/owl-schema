@@ -4240,16 +4240,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/Account -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Account">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/Admin -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Admin">
-        <rdfs:comment xml:lang="en">Classes that represent administrative information needed to manage a system with digital assets and metadata.</rdfs:comment>
-        <rdfs:label xml:lang="en">Admin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Entity"/>
     </owl:Class>
     
 
@@ -4257,7 +4248,25 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/ContentProvider -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/ContentProvider">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/Entity -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Entity">
+        <rdfs:comment xml:lang="en">adm:Entity is an administrative entity in the BDRC implementation of the BUDA ontology. These entities are not the subject matter entities that the BUDA ontology is &quot;about&quot;; rather, they are entities that are used to manage the subject metadata</rdfs:comment>
+        <rdfs:label xml:lang="en">administrative entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/Facet -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Facet">
+        <rdfs:comment xml:lang="en">adm:Facet is a facet of an administrative entity in the BDRC implementation of the BUDA ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">administrative facet</rdfs:label>
     </owl:Class>
     
 
@@ -4265,7 +4274,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/LogEntry -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/LogEntry">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Facet"/>
         <rdfs:comment xml:lang="en">Log entries for :Entity updates. Includes the agent, date and message explaing the update.</rdfs:comment>
         <rdfs:label xml:lang="en">Log Entry</rdfs:label>
     </owl:Class>
@@ -4275,7 +4284,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/Outline -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Outline">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Facet"/>
         <rdfs:comment xml:lang="en">Used to hold various root-level Outline information that has no place in the constituent Works.</rdfs:comment>
         <rdfs:label xml:lang="en">Outline root</rdfs:label>
     </owl:Class>
@@ -4285,8 +4294,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/OutlineType -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/OutlineType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
         <rdfs:comment xml:lang="en">A legacy outline type</rdfs:comment>
         <rdfs:label xml:lang="en">Outline Type</rdfs:label>
     </owl:Class>
@@ -4296,8 +4304,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/Product -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Product">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Entity"/>
         <rdfs:comment>An Product represents a collection of works that are distributed together. Historically this has meant on a CDROM, DVDROM or harddrive; nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still harddrive collections prepared from Products.
 
 IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
@@ -4314,9 +4321,17 @@ The various Works that are contained in the Product include an inProduct element
     <!-- http://purl.bdrc.io/ontology/admin/ProductOrg -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Admin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Facet"/>
         <rdfs:comment xml:lang="en">A ProductOrg is a unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access.</rdfs:comment>
         <rdfs:comment xml:lang="en">the name of a ProductOrg is represented by rdfs:label</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/Type -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Type">
+        <rdfs:comment xml:lang="en">adm:Type is a type used in the implementation of an administrative entity in the BDRC implementation of the BUDA ontology.</rdfs:comment>
     </owl:Class>
     
 
