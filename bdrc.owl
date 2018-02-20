@@ -41,7 +41,7 @@
         <rdfs:label xml:lang="en">permitted access</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
     </owl:AnnotationProperty>
     
 
@@ -110,7 +110,7 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:label xml:lang="en">has license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
     </owl:AnnotationProperty>
     
 
@@ -818,6 +818,17 @@ Both chunk and char number start at one.</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/contentProvider -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/contentProvider">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ContentProvider"/>
+        <rdfs:comment xml:lang="en">The organization or person that provided the Etext</rdfs:comment>
+        <rdfs:label xml:lang="en">content provider</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/corporationHasMember -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/corporationHasMember">
@@ -983,17 +994,6 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/eTextContentProvider -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextContentProvider">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ContentProvider"/>
-        <rdfs:comment xml:lang="en">The organization or person that provided the Etext</rdfs:comment>
-        <rdfs:label xml:lang="en">content provider</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -4682,24 +4682,6 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
         <rdfs:label xml:lang="en">License</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/LicensedAccessedEntity -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LicensedAccessedEntity">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Etext"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Item"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The various entities that can have license and access properties attached</rdfs:comment>
-        <rdfs:label xml:lang="en">licensed and access entity</rdfs:label>
     </owl:Class>
     
 
