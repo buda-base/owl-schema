@@ -2517,6 +2517,17 @@ bdr:T354 a :Topic ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workMaterial">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:comment xml:lang="en">the material on which the content is imposed: palm leaf, digital, paper etc</rdfs:comment>
+        <rdfs:label xml:lang="en">material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workNumberOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workNumberOf">
@@ -2527,6 +2538,17 @@ bdr:T354 a :Topic ;
 
 bdr:Wwww :workNumberOf bdr:Wxxx .</rdfs:comment>
         <rdfs:label xml:lang="en">number of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workObjectType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workObjectType">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:comment xml:lang="en">the type of content: manuscript, blockprint, etc</rdfs:comment>
+        <rdfs:label xml:lang="en">object type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2587,15 +2609,6 @@ bdr:SomeKanjurVinayaSection a :Work ;
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
         <rdfs:comment xml:lang="en">If the subject Work :isPartOf another work then the referenced part type reflects the type of part: chapter, section, volume, etc</rdfs:comment>
         <rdfs:label xml:lang="en">part type</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/workPrintType -->
-
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workPrintType">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
     </owl:ObjectProperty>
     
 
@@ -4801,12 +4814,32 @@ bdr:Lwwww a :Lineage ;
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/Material -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Material">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">the material on which the content of a :TextualEntity is imposed</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Note -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Note">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
         <rdfs:comment xml:lang="en">A comment about the subject resource, possibly with a source Work and a location in the Work</rdfs:comment>
         <rdfs:label xml:lang="en">Note</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/ObjectType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ObjectType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">Type print: manuscript, computer, woodblock, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">print type</rdfs:label>
     </owl:Class>
     
 
@@ -5244,16 +5277,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Place Type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/PrintType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PrintType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">Type print: manuscript, computer, woodblock, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">print type</rdfs:label>
     </owl:Class>
     
 
@@ -6239,6 +6262,34 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/MaterialDigital -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialDigital">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:comment xml:lang="en">digital material for content which is held in digital format in the archive (:Etexts)</rdfs:comment>
+        <rdfs:label xml:lang="en">digital material</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MaterialPalmLeaf -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialPalmLeaf">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:label xml:lang="en">palm leaf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MaterialPaper -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialPaper">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:label xml:lang="en">paper</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/MnCyrl -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnCyrl">
@@ -6275,6 +6326,78 @@ FOAF is a project devoted to linking people and information using the Web. Regar
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
         <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeAutograph -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeAutograph">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:comment xml:lang="en">A manuscript written by the hand of the author</rdfs:comment>
+        <rdfs:label xml:lang="en">Autograph Manuscript</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeBlockPrint -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeBlockPrint">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:comment xml:lang="en">a :Work which content was produced by a method consisting of a relief process in which a design is cut into and printed from the surface of a wood block</rdfs:comment>
+        <rdfs:label xml:lang="en">Blockprint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeComputerInput -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeComputerInput">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeFacsimile -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeFacsimile">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeManuscript -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeManuscript">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:comment xml:lang="en">used with a :Work which content was handwritten and that through some unspecified sequence of further copying actions came to be scanned</rdfs:comment>
+        <rdfs:label xml:lang="en">Manuscript</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeOCR -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeOCR">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeParPhud -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeParPhud">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:comment xml:lang="en">&quot;first fruit&quot; printing from a set of xylographs. par phud</rdfs:comment>
+        <rdfs:label xml:lang="en">First Printing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ObjectTypeTypeSet -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeTypeSet">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
     </owl:NamedIndividual>
     
 
@@ -7059,78 +7182,6 @@ FOAF is a project devoted to linking people and information using the Web. Regar
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeZhingChen">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeAutograph -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeAutograph">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-        <rdfs:comment xml:lang="en">A manuscript written by the hand of the author</rdfs:comment>
-        <rdfs:label xml:lang="en">Autograph Manuscript</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeBlockPrint -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeBlockPrint">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-        <rdfs:comment xml:lang="en">a :Work which content was produced by a method consisting of a relief process in which a design is cut into and printed from the surface of a wood block</rdfs:comment>
-        <rdfs:label xml:lang="en">Blockprint</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeComputerInput -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeComputerInput">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeFacsimile -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeFacsimile">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeManuscript -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeManuscript">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-        <rdfs:comment xml:lang="en">used with a :Work which content was handwritten and that through some unspecified sequence of further copying actions came to be scanned</rdfs:comment>
-        <rdfs:label xml:lang="en">Manuscript</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeOCR -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeOCR">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeParPhud -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeParPhud">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
-        <rdfs:comment xml:lang="en">&quot;first fruit&quot; printing from a set of xylographs. par phud</rdfs:comment>
-        <rdfs:label xml:lang="en">First Printing</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PrintTypeTypeSet -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PrintTypeTypeSet">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PrintType"/>
     </owl:NamedIndividual>
     
 
