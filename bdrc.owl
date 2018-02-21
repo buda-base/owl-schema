@@ -7999,9 +7999,9 @@ equiv Dagpo Kagyu?</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/resource/WorkTypeConceptualWork -->
+    <!-- http://purl.bdrc.io/resource/WorkTypeAbstractWork -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeConceptualWork">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeAbstractWork">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
     </owl:NamedIndividual>
     
