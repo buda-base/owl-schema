@@ -3943,6 +3943,19 @@ W1_0007
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workPartTreeIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPartTreeIndex">
+        <rdfs:comment xml:lang="en">the :workPartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For exmaple, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
+
+    5.1.3.2
+
+so go to the fifth child of the root then to the first of its children, then to the third child of that and finally to that child&apos;s second child</rdfs:comment>
+        <rdfs:label xml:lang="en">work part tree index</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workPrintery -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPrintery">
