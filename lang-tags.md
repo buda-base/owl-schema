@@ -94,7 +94,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 
 - `sa-Deva` for Sanskrit written in Devanagari
 - `sa-Tibt` for Sanskrit transliterated into Tibetan
-- `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated in EWTS (`sa-x-dwts`, `sa-x-acip` and `sa-x-gbt` follow the same pattern)
+- `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated in EWTS (`sa-x-dts`, `sa-x-acip` and `sa-x-gbt` follow the same pattern)
 - `sa-x-Tibt-alalc97` (?) for Sanskrit transliterated into Tibetan, in turn transliterated in ALA-LC
 - `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated as EWTS
 - `sa-x-iast` for Sanskrit written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
