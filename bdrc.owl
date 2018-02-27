@@ -5461,7 +5461,7 @@ The set of such individuals may be further organized via :Taxonomy but need not 
     <!-- http://purl.bdrc.io/ontology/core/Volume -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Volume">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
         <rdfs:comment xml:lang="en">There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
