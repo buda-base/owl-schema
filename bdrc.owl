@@ -5745,9 +5745,7 @@ bdr:W22083 a :Work ;
     facets/n-ary properties of the principle concepts
     types of resources such as place events, work titles and so on 
     classes from 3rd party ontologies that are referred to</rdfs:comment>
-    classes from 3rd party ontologies that are referred to
     </rdf:Description>
-    
 
 
     <!-- http://www.w3.org/2006/vcard/ns#Address -->
