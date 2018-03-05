@@ -5739,7 +5739,7 @@ bdr:W22083 a :Work ;
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-        <rdfs:comment xml:lang="en">the set of all Things in the bdrc ontology are factored into subsets that represent @@@@@@@@@@@
+        <rdfs:comment xml:lang="en">the set of all Things in the bdrc ontology are factored into subsets that represent
 
     the principle concepts/entities
     facets/n-ary properties of the principle concepts
