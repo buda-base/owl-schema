@@ -7194,6 +7194,14 @@ FOAF is a project devoted to linking people and information using the Web. Regar
     
 
 
+    <!-- http://purl.bdrc.io/resource/Pracalit -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Pracalit">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/RuCyrl -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/RuCyrl">
