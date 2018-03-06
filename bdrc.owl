@@ -4366,7 +4366,9 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AccessType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">The type of access reflects whether and how much of the content of a Work is made available online.</rdfs:comment>
+        <rdfs:comment xml:lang="en">AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
+
+AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC&apos;s mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers</rdfs:comment>
         <rdfs:label xml:lang="en">Work Access Type</rdfs:label>
     </owl:Class>
     
@@ -4456,7 +4458,9 @@ bdr:Czzzz a :Corporation ;
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Etext">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
-        <rdfs:comment xml:lang="en">An Etext is a single searchable Unicode text. The RDF representation of an Etext is derived from a master Unicode file and consists of a reference to the volume of the :ItemEtext that contains the Etext and a sequence of chunks. There will also be information such as a URI to the original source file in the case of input etext - these are typically Sambhota Word or Tibet Doc files.
+        <rdfs:comment xml:lang="en">:Etext represents a searchable Unicode text file. The RDF representation of :Etext is derived from a base layer Unicode file and consists of a reference to the volume of the :ItemEtext that contains the Etext and a sequence of chunks. 
+
+There will also be information such as a URI to the original source file in the case of input etext - these are typically Sambhota Word or Tibet Doc files.
 
 The reference to the containing :ItemEtext is a URI formed by appending the volume index to the :IremEtext URI, like:
 
@@ -4719,7 +4723,7 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/License">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:comment xml:lang="en">:License defines the legal status of copyright for the Work.  BDRC applies section 108 copyright analyses to its Works.  Copyright protects works from being copied and distributed 70 years after the death of an author in the US and 50 years after the death of an author in China.  If the Work is not under copyright protection, BDRC ascrines CCBY, PublicDomain, or Mixed.</rdfs:comment>
         <rdfs:label xml:lang="en">License</rdfs:label>
     </owl:Class>
     
@@ -5741,7 +5745,7 @@ bdr:W22083 a :Work ;
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-        <rdfs:comment xml:lang="en">The most basic class in the BDRC ontology is owl:thing. BDRC subclasses of owl:thing are (1) the principle concepts (entities) that constitute BDRC&apos;s domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) the types of resources such as place events, work titles, and (4) relevant classes from 3rd party ontologies that BDRC refers to in constructing concepts, facets and types of resources.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA&apos;s domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types.</rdfs:comment>
     </rdf:Description>
     
 
