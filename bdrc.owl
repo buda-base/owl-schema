@@ -4445,7 +4445,7 @@ bdr:Czzzz a :Corporation ;
     <!-- http://purl.bdrc.io/ontology/core/Entity -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Entity">
-        <rdfs:comment xml:lang="en">Entities are the principle types or concepts of the bdrc ontology. Generally individuals of type a subclass of :Entity will correspond to distinct individuals in the domain of discourse of bdrc. So Persons, Places, Works and so on will correspond to historical, mythical or contemporaneous individuals (instances in object-oriented terms).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Entities are the principle types or concepts in the BDRC ontology. Individuals of type subclass of :Entity will correspond to distinct individuals in the domain of discourse of BDRC, such as Persons, Places, and Works.</rdfs:comment>
         <rdfs:label xml:lang="en">Entity</rdfs:label>
     </owl:Class>
     
