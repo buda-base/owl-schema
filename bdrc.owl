@@ -4218,7 +4218,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
 
     <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Identifier">
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Thing"/>
-        <rdfs:comment xml:lang="en">Token or name that is associated with a resource, such as a URI or an ISBN.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Token or name that is associated with a resource, such as a URI or an ISBN.  A resource that is associated with a character string that serves to differentiate one resource from another.</rdfs:comment>
         <rdfs:label xml:lang="en">Bibframe Identifier</rdfs:label>
     </owl:Class>
     
@@ -4257,8 +4257,8 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://id.loc.gov/ontologies/bibframe/Thing -->
 
     <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Thing">
-        <rdfs:comment xml:lang="en">subclasses of bf:Thing are bibframe classes that are referred to in the bdrc ontology</rdfs:comment>
-        <rdfs:label xml:lang="en">Bibframe Thing</rdfs:label>
+        <rdfs:comment xml:lang="en">Subclasses of bf:Thing are BIBFRAME classes that are referred to in the BDRC ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">BIBFRAME Thing</rdfs:label>
     </owl:Class>
     
 
@@ -4282,8 +4282,8 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/Entity -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Entity">
-        <rdfs:comment xml:lang="en">adm:Entity is an administrative entity in the BDRC implementation of the BUDA ontology. These entities are not the subject matter entities that the BUDA ontology is &quot;about&quot;; rather, they are entities that are used to manage the subject metadata</rdfs:comment>
-        <rdfs:label xml:lang="en">administrative entity</rdfs:label>
+        <rdfs:comment xml:lang="en">adm:Entity is an administrative entity in the BDRC ontology. Administrative entities are not the subject matter entities that the BDRC ontology entities are &quot;about&quot;. Rather, they are entities that are used to manage the BUDA information system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Administrative entity</rdfs:label>
     </owl:Class>
     
 
@@ -4291,7 +4291,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/Facet -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Facet">
-        <rdfs:comment xml:lang="en">adm:Facet is a facet of an administrative entity in the BDRC implementation of the BUDA ontology.</rdfs:comment>
+        <rdfs:comment xml:lang="en">adm:Facet is a facet of an administrative entity in the BDRC ontology.</rdfs:comment>
         <rdfs:label xml:lang="en">administrative facet</rdfs:label>
     </owl:Class>
     
@@ -4321,7 +4321,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/OutlineType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
-        <rdfs:comment xml:lang="en">A legacy outline type</rdfs:comment>
+        <rdfs:comment xml:lang="en">Legacy outline type</rdfs:comment>
         <rdfs:label xml:lang="en">Outline Type</rdfs:label>
     </owl:Class>
     
@@ -4331,7 +4331,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Product">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Entity"/>
-        <rdfs:comment>An Product represents a collection of works that are distributed together. Historically this has meant on a CDROM, DVDROM or harddrive; nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still harddrive collections prepared from Products.
+        <rdfs:comment>A collection of Works that are distributed together. Historically this has meant on a CDROM, DVDROM or hard drive. Nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still hard drive collections prepared from Products.
 
 IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
 
@@ -4348,8 +4348,8 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Facet"/>
-        <rdfs:comment xml:lang="en">A ProductOrg is a unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access.</rdfs:comment>
-        <rdfs:comment xml:lang="en">the name of a ProductOrg is represented by rdfs:label</rdfs:comment>
+        <rdfs:comment xml:lang="en">A unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The name of a ProductOrg is represented by rdfs:label</rdfs:comment>
     </owl:Class>
     
 
@@ -4357,7 +4357,7 @@ The various Works that are contained in the Product include an inProduct element
     <!-- http://purl.bdrc.io/ontology/admin/Type -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Type">
-        <rdfs:comment xml:lang="en">adm:Type is a type used in the implementation of an administrative entity in the BDRC implementation of the BUDA ontology.</rdfs:comment>
+        <rdfs:comment xml:lang="en">adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -5748,8 +5748,8 @@ bdr:W22083 a :Work ;
 
     <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Entity"/>
-        <rdfs:comment xml:lang="en">To specify the components of the address for a physical location</rdfs:comment>
-        <rdfs:label xml:lang="en">vcard Address</rdfs:label>
+        <rdfs:comment xml:lang="en">The components of the address for a physical location.</rdfs:comment>
+        <rdfs:label xml:lang="en">VCARD Address</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1292"/>
     </owl:Class>
     
@@ -5758,8 +5758,8 @@ bdr:W22083 a :Work ;
     <!-- http://www.w3.org/2006/vcard/ns#Entity -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Entity">
-        <rdfs:comment xml:lang="en">Entities used from vcard. Primarily for contemporary addresses. There may be a better vocabulary but it has not yet been found. vcard provides the appropriate vocabulary for expressing the address information associated with Libraries in the TLM project.</rdfs:comment>
-        <rdfs:label xml:lang="en">vcard Entity</rdfs:label>
+        <rdfs:comment xml:lang="en">Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled.</rdfs:comment>
+        <rdfs:label xml:lang="en">VCARD Entity</rdfs:label>
         <rdfs:seeAlso>https://www.w3.org/TR/vcard-rdf</rdfs:seeAlso>
     </owl:Class>
     
@@ -5769,9 +5769,7 @@ bdr:W22083 a :Work ;
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Entity"/>
-        <rdfs:comment xml:lang="en">The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
-
-The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
     
@@ -5780,10 +5778,8 @@ The Agent class is useful in a few places in FOAF where Person would have been o
     <!-- http://xmlns.com/foaf/0.1/Entity -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Entity">
-        <rdfs:comment xml:lang="en">foaf classes used in the Buddhist Digital Ontology. Any classes from the foaf vocabulary are used primarily for administrative purposes since foaf is not itself a cultural heritage vocabulary.
-
-FOAF is a project devoted to linking people and information using the Web. Regardless of whether information is in people&apos;s heads, in physical or digital documents, or in the form of factual data, it can be linked.</rdfs:comment>
-        <rdfs:label xml:lang="en">foaf Entity</rdfs:label>
+        <rdfs:comment xml:lang="en">Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people&apos;s heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">FOAF Entity</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/"/>
     </owl:Class>
     
