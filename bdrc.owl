@@ -4590,8 +4590,8 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Item">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
-        <rdfs:comment xml:lang="en">ScanRequest for the Work associated with an :Item is migrated as :scan_venue, and the instructions note (if any) attached to the ScanRequest. The work attribute of scanrequest refers to the work for the volumes object  all other fields of scanrequest are ignored for migration</rdfs:comment>
-        <rdfs:comment xml:lang="en">The :Item resource collects info from ImageGroups and Scan-Requests. An :Item is a collection of :Volume components for each volume in the associated :Work. Each :Volume MAY have a :onDisk property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive.</rdfs:comment>
+        <rdfs:comment xml:lang="en">:Item captures the structural and administrative metadata associated with a digital or physical asset. While the BDRC ontology is primarily concerned with digital assets of texts, :Item could easily be extended to other types of digital assets (as is the case with the Tibetan International Digital Library collaboration) such as audio and video, as well as physical assets, such as the physical holdings of monastic libraries.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The :Item resource collects info from migrated ImageGroups and ScanRequests.  An :Item is a collection of :Volume components (i.e ImageGroups).  A ScanRequest for the Work associated with an :Item is migrated as :scan_venue, and the instructions note (if any) in the ScanRequest. The @work attribute of the ScanRequest refers to the Work of the corresponding volume. All other fields of ScanRequest are ignored for the migration.</rdfs:comment>
         <rdfs:label xml:lang="en">Item</rdfs:label>
     </owl:Class>
     
@@ -4601,15 +4601,11 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtext">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
-        <rdfs:comment xml:lang="en">Etext items represent searchable Unicode representations of Works.
+        <rdfs:comment xml:lang="en">:ItemEtext represent the :Etext items in the archive (i.e the actual digital files). 
 
-An Etext item typically will represent an entire published Work. There won&apos;t be an Etext item for each volume or text within the Work. This is because we generally want to track the entire published Work as a single entity and will use the Work :partOf Work statements along with additional statements to link an individual Etext back to a Work part.
+There are two subclasses of :ItemEtext. (1) :ItemEtextNonPaginated and (2) :ItemEtextPaginated. These are characterized by the presence or lack of pagination information maintained in the :ItemEtext. OCR is considered ItemEtextPaginated and manual input saved in RTF format  considered :ItemEtextNonPaginated. These are distinguished because there are different stuctural characteristics in the :ItemEtext.
 
-There are two subclasses: OCR and manually input that are distinguished because there are different stuctural characteristics to these.
-
-:ItemEtextOCR have known pagination correspondence to an :ItemImageAsset from which they are derived
-
-:ItemEtextInput generally only have a known relationship to a published Work but there is generally not a known page correspondence to the printed published form of the Work and in some cases no known correspondence to the physical volume structure of the printed published Work. It may be possible to derive this information later.</rdfs:comment>
+An :ItemEtext typically will represent an entire published Work. There won&apos;t be an Etext item for each :Volume within the Work. This is because we generally want to track the entire published Work as a single entity and will use the Work :partOf Work statements along with additional statements to link an individual Etext back to a Work part.</rdfs:comment>
         <rdfs:label xml:lang="en">eText item</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:Class>
@@ -4620,9 +4616,9 @@ There are two subclasses: OCR and manually input that are distinguished because 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextNonPaginated">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
-        <rdfs:comment xml:lang="en">An eText created by manual inputting of a text
+        <rdfs:comment xml:lang="en">An eText created by manual inputting. Input etexts are prepared manually and used to typeset printed versions of texts in the case of many contemporary Tibetan publications. :ItemEtextNonPaginated eTexts generally do not provide alignment with digitized pages.
 
-Input etexts are prepared manually and used to typeset printed versions of texts so these texts are expected to be somewhat less error-prone by comparison with Paginated materials. On the other hand these texts generally do not provide alignment with digitized pages.</rdfs:comment>
+:ItemEtextNonPaginated generally only have a known relationship to a Work but there is generally not a known page correspondence to the :Item. In some cases, there is no known correspondence to the physical volume structure of the :Work. It may be possible to derive this information later.</rdfs:comment>
         <rdfs:label xml:lang="en">Non Paginated Etext Item</rdfs:label>
     </owl:Class>
     
@@ -4632,9 +4628,11 @@ Input etexts are prepared manually and used to typeset printed versions of texts
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemEtextPaginated">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
-        <rdfs:comment xml:lang="en">An eText created via OCR or manual input where pagination has been maintained in the eText of a set of digitized page images
+        <rdfs:comment xml:lang="en">An eText created via OCR or manual input where pagination has been maintained in the eText of a set of digitized page images.
 
-Paginated etexts are searchable Unicode documents that correspond to image assets in the BUDA archives. Paginated etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive.</rdfs:comment>
+Paginated etexts are searchable Unicode documents that correspond to image assets in BUDA. Paginated etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive. :ItemEtextPaginated have known pagination correspondence to an :ItemImageAsset from which they are derived.
+
+In some cases, such as texts from the Asian Classics Input Project (ACIP), pagination information is maintained in the :ItemEtextPaginated, even though there might not be a known correspondence to the image asset.</rdfs:comment>
         <rdfs:label xml:lang="en">Paginated Etext Item</rdfs:label>
     </owl:Class>
     
@@ -4644,7 +4642,7 @@ Paginated etexts are searchable Unicode documents that correspond to image asset
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ItemImageAsset">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
-        <rdfs:comment xml:lang="en">A digitized set of images, one per page (folio side)</rdfs:comment>
+        <rdfs:comment xml:lang="en">A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats.</rdfs:comment>
         <rdfs:label xml:lang="en">Image Asset</rdfs:label>
     </owl:Class>
     
@@ -5462,7 +5460,9 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Volume">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
-        <rdfs:comment xml:lang="en">There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.
+
+Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:Class>
     
@@ -5490,7 +5490,9 @@ There is no distinction between OCR&apos;d and input volumes.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Volume"/>
         <rdfs:comment xml:lang="en">The :VolumeImageAsset represents a scanned or otherwise digitized set of page images. These may be from paper hardcopy or microfilm. Digitization may be via scanning or camera. Going forward all of this information should be captured to reflect the provenance of the digital asset.
 
-Each :VolumeImageAsset may have a :volumeImageList property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.</rdfs:comment>
+Each :VolumeImageAsset may have a :volumeImageList property which will have a &apos;|&apos; separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.
+
+Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive.</rdfs:comment>
         <rdfs:label xml:lang="en">Volume Image Asset</rdfs:label>
     </owl:Class>
     
