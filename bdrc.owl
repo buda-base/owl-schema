@@ -7296,6 +7296,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptGilgitBamiyan1">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:comment xml:lang="en">Gilgit Bamiyan Type I</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7304,6 +7305,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptGilgitBamiyan2">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:comment xml:lang="en">Gilgit Bamiyan Type II</rdfs:comment>
     </owl:NamedIndividual>
     
 
