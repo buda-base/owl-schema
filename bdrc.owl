@@ -7317,6 +7317,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptGupta">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Gupta</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7345,6 +7346,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptPracalit">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Pracalit</rdfs:label>
     </owl:NamedIndividual>
     
 
