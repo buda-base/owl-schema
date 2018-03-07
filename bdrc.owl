@@ -5997,6 +5997,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderFemale">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
+        <rdfs:label xml:lang="en">Female</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6005,6 +6006,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderMale">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
+        <rdfs:label xml:lang="en">Male</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6021,6 +6023,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderNotSpecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
+        <rdfs:label xml:lang="en">Not Specified</rdfs:label>
     </owl:NamedIndividual>
     
 
