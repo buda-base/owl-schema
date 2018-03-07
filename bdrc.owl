@@ -4723,11 +4723,7 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/License">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-<<<<<<< HEAD
-        <rdfs:comment xml:lang="en">License defines the legal status of copyright for the Work.  BDRC applies section 108 copyright analyses to its Works. Copyright protects works from being copied and distributed 70 years after the death of an author in the US and 50 years after the death of an author in China. If the Work is not under copyright protection, BDRC ascrines CCBY, PublicDomain, or Mixed.</rdfs:comment>
-=======
         <rdfs:comment xml:lang="en">:License defines the legal status of copyright for the Work.  BDRC applies section 108 copyright analyses to its Works.  Copyright protects works from being copied and distributed 70 years after the death of an author in the US and 50 years after the death of an author in China.  If the Work is not under copyright protection, BDRC ascribes CCBY, PublicDomain, or Mixed.</rdfs:comment>
->>>>>>> 6e968c0457c6358a155e0fdd507a7f81228e4e19
         <rdfs:label xml:lang="en">License</rdfs:label>
     </owl:Class>
     
