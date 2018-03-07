@@ -4723,7 +4723,7 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/License">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">:License defines the legal status of copyright for the Work.  BDRC applies section 108 copyright analyses to its Works.  Copyright protects works from being copied and distributed 70 years after the death of an author in the US and 50 years after the death of an author in China.  If the Work is not under copyright protection, BDRC ascribes CCBY, PublicDomain, or Mixed.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This type defines the legal status of copyright of a Work to the best of the available knowledge. This is a purely informative descritption, as the copyright status can differ according to the country and changes over time. A thorough analysis will have to be performed on a work-per-work basis to determine the status of the copyright in your country. See the different individuals for descritpions of the possible values.</rdfs:comment>
         <rdfs:label xml:lang="en">License</rdfs:label>
     </owl:Class>
     
@@ -5802,7 +5802,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessFairUse">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
-        <rdfs:comment xml:lang="en">A copyrighted Work permits a small portion of its contents to be made available</rdfs:comment>
+        <rdfs:comment xml:lang="en">Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law.</rdfs:comment>
         <rdfs:label xml:lang="en">Fair Use</rdfs:label>
     </owl:NamedIndividual>
     
@@ -5812,7 +5812,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessMixed">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
-        <rdfs:comment xml:lang="en">Mixed access is used on a Work or Item to indicate that the access on Items or Parts (of the marked Work) may vary, e.g., some part of a Work may be Fair Use (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as AccessRestrictedSealed.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition.</rdfs:comment>
         <rdfs:label xml:lang="en">mixed access</rdfs:label>
     </owl:NamedIndividual>
     
@@ -5822,7 +5822,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessOpen">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
-        <rdfs:comment xml:lang="en">The contents of the Work are freely avaiable in their entirety</rdfs:comment>
+        <rdfs:comment xml:lang="en">The contents of the Work are freely avaiable in their entirety.</rdfs:comment>
         <rdfs:label xml:lang="en">Open Access</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6142,7 +6142,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCopyrighted">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:comment xml:lang="en">This work is copyrighted and BDRC will only make at most fairuse access available.</rdfs:comment>
+        <rdfs:comment xml:lang="en">To the best of our knowledge, this work is under copyright and all rights are reserved.</rdfs:comment>
         <rdfs:label xml:lang="en">Copyrighted</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6152,7 +6152,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseMixed">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:comment xml:lang="en">Mixed licensing is used on a Work or Item to indicate that the license on Items or Parts (of the marked Work) may vary, e.g., some part of a Work may be Copyright (a contemporary introduction) and the remaining parts may be CCBY (for content published in the 18th century).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The license varies among the different parts of the work. E.g., some part of a work may be under copyright (a contemporary introduction) and the remaining parts may be in the Public Domain (for content published in the 18th century).</rdfs:comment>
         <rdfs:label xml:lang="en">mixed licensing</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6162,7 +6162,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicensePublicDomain">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:comment xml:lang="en">BDRC believes that this work in in the public domain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">To the best of our knowledge, this work in in the public domain in the US.</rdfs:comment>
         <rdfs:label xml:lang="en">Public Domain</rdfs:label>
     </owl:NamedIndividual>
     
