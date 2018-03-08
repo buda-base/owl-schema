@@ -80,6 +80,7 @@ Most Chinese tags are all standardized so their choice is easy:
 - `zh-Hans` for simplified Chinese characters
 - `zh-Hant` for traditional Chinese characters
 - `zh-Latn-pinyin` for Pinyin transliteration
+- `zh-Latn-pinyin-x-ndia` for Pinyin transliteration with no diacritics
 - `zh-x-wade` for Wade-Giles transliteration
 
 #### Pali
