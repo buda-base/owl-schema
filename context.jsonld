@@ -1,6 +1,5 @@
 {
   "@context" : {
-    "id" : "@id",
     "type" : "@type",
     "@vocab" : "http://purl.bdrc.io/ontology/core/",
     "adm" : "http://purl.bdrc.io/ontology/admin/",
