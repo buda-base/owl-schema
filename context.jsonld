@@ -1,5 +1,7 @@
 {
   "@context" : {
+    "id" : "@id",
+    "type" : "@type",
     "@vocab" : "http://purl.bdrc.io/ontology/core/",
     "adm" : "http://purl.bdrc.io/ontology/admin/",
     "bdd" : "http://purl.bdrc.io/data/",
@@ -12,6 +14,9 @@
     "tbr" : "http://purl.bdrc.io/ontology/toberemoved/",
     "vcard" : "http://www.w3.org/2006/vcard/ns#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "contentProvider" : {
+      "@type" : "@id"
+    },
     "corporationHasMember" : {
       "@type" : "@id"
     },
@@ -70,9 +75,6 @@
       "@type" : "@id"
     },
     "creatorTranslator" : {
-      "@type" : "@id"
-    },
-    "eTextContentProvider" : {
       "@type" : "@id"
     },
     "eTextHasChunk" : {
@@ -498,7 +500,13 @@
     "workLocationWork" : {
       "@type" : "@id"
     },
+    "workMaterial" : {
+      "@type" : "@id"
+    },
     "workNumberOf" : {
+      "@type" : "@id"
+    },
+    "workObjectType" : {
       "@type" : "@id"
     },
     "workOtherLangScript" : {
@@ -511,9 +519,6 @@
       "@type" : "@id"
     },
     "workPartType" : {
-      "@type" : "@id"
-    },
-    "workPrintType" : {
       "@type" : "@id"
     },
     "workReproductionOf" : {
