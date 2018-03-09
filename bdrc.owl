@@ -8112,6 +8112,15 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
         <rdfs:label xml:lang="en">Mūlasarvāstivāda</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/traditionTheravāda -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/traditionTheravāda">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdfs:label xml:lang="en">Theravāda</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
