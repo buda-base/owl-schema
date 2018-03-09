@@ -7513,6 +7513,15 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/TraditionDharmaguptaka -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDharmaguptaka">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdfs:label xml:lang="en">Dharmaguptaka</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/TraditionDrigungKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrigungKagyu">
@@ -7626,6 +7635,15 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Martsang Kagyu</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionMūlasarvāstivāda -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMūlasarvāstivāda">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdfs:label xml:lang="en">Mūlasarvāstivāda</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7749,6 +7767,15 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <taxElementOfRelation rdf:resource="http://purl.bdrc.io/ontology/core/taxElementOf"/>
         <taxSubclassRelation rdf:resource="http://purl.bdrc.io/ontology/core/taxSubClassOf"/>
         <rdfs:comment xml:lang="en">Taxonomy of Tibetan Buddhist Traditions for use with Place and Person Events</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TraditionTheravāda -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTheravāda">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdfs:label xml:lang="en">Theravāda</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8102,24 +8129,6 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
         <rdfs:label xml:lang="en">Chinese</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/traditionMūlasarvāstivāda -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/traditionMūlasarvāstivāda">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <rdfs:label xml:lang="en">Mūlasarvāstivāda</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/traditionTheravāda -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/traditionTheravāda">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
-        <rdfs:label xml:lang="en">Theravāda</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
