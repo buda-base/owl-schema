@@ -44,7 +44,7 @@ The arguments against its use in our case would be that ewts is always in Latn s
 
 The arguments for using it are that it seems to be kept in some IANA standard tags where it adds no information neither, like `zh-Latn-pinyin`.
 
-The convention used by BDRC is not to use it when not mandatory.
+The convention used by BDRC is not to use it when not mandatory. See parts of [this thread](https://www.ietf.org/mail-archive/web/ietf-languages/current/msg00210.html) for some elements on this issue.
 
 ## Specific Tag conventions
 
