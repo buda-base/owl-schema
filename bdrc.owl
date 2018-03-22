@@ -4287,6 +4287,18 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/AccessType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/AccessType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
+        <rdfs:comment xml:lang="en">AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
+
+AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC&apos;s mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Access Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/Account -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Account">
@@ -4317,6 +4329,16 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Facet">
         <rdfs:comment xml:lang="en">adm:Facet is a facet of an administrative entity in the BDRC ontology.</rdfs:comment>
         <rdfs:label xml:lang="en">administrative facet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/License -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/License">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
+        <rdfs:comment xml:lang="en">License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright.</rdfs:comment>
+        <rdfs:label xml:lang="en">License</rdfs:label>
     </owl:Class>
     
 
@@ -4378,22 +4400,20 @@ The various Works that are contained in the Product include an inProduct element
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/Type -->
+    <!-- http://purl.bdrc.io/ontology/admin/TermsOfUse -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Type">
-        <rdfs:comment xml:lang="en">adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology.</rdfs:comment>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/TermsOfUse">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
+        <rdfs:comment xml:lang="en">Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources</rdfs:comment>
+        <rdfs:label xml:lang="en">Terms of Use</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/AccessType -->
+    <!-- http://purl.bdrc.io/ontology/admin/Type -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AccessType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
-
-AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC&apos;s mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers</rdfs:comment>
-        <rdfs:label xml:lang="en">Work Access Type</rdfs:label>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/Type">
+        <rdfs:comment xml:lang="en">adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -4741,16 +4761,6 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
         <rdfs:comment xml:lang="en">A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese, bdr:Sa for Sanskrit, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/ontology#Language"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/License -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/License">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright.</rdfs:comment>
-        <rdfs:label xml:lang="en">License</rdfs:label>
     </owl:Class>
     
 
@@ -5827,7 +5837,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessFairUse -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessFairUse">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law.</rdfs:comment>
         <rdfs:label xml:lang="en">Fair Use</rdfs:label>
     </owl:NamedIndividual>
@@ -5837,7 +5847,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessMixed -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessMixed">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition.</rdfs:comment>
         <rdfs:label xml:lang="en">mixed access</rdfs:label>
     </owl:NamedIndividual>
@@ -5847,7 +5857,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessOpen -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessOpen">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">The contents of the Work are freely avaiable in their entirety.</rdfs:comment>
         <rdfs:label xml:lang="en">Open Access</rdfs:label>
     </owl:NamedIndividual>
@@ -5857,7 +5867,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessRestrictedByQuality -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessRestrictedByQuality">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">The quality of the scanning or eText conversion to poor to warrant making it available online.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted by Quality</rdfs:label>
     </owl:NamedIndividual>
@@ -5867,7 +5877,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessRestrictedByTbrc -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessRestrictedByTbrc">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">BDRC is restricting access to the Work.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted by BDRC</rdfs:label>
     </owl:NamedIndividual>
@@ -5877,7 +5887,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessRestrictedInChina -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessRestrictedInChina">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">The Work is not to be made available in the PRC.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted in China</rdfs:label>
     </owl:NamedIndividual>
@@ -5887,7 +5897,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessRestrictedSealed -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessRestrictedSealed">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">The Work is sealed by tradition.</rdfs:comment>
         <rdfs:label xml:lang="en">Restricted Sealed</rdfs:label>
     </owl:NamedIndividual>
@@ -5897,7 +5907,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/AccessRestrictedTemporarily -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessRestrictedTemporarily">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">The Work is temporarily restricted.</rdfs:comment>
         <rdfs:label xml:lang="en">Temporarily Restricted</rdfs:label>
     </owl:NamedIndividual>
@@ -6156,13 +6166,13 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LicenseCCBY -->
+    <!-- http://purl.bdrc.io/resource/LicenseCC0 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCCBY">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:label xml:lang="en">CC-BY</rdfs:label>
-        <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC-BY 4.0 unported.</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCC0">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
+        <rdfs:label xml:lang="en">CC0</rdfs:label>
+        <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC0 1.0.</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/share-your-work/public-domain/cc0/"/>
     </owl:NamedIndividual>
     
 
@@ -6170,7 +6180,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LicenseCopyrighted -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCopyrighted">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:comment xml:lang="en">BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on.</rdfs:comment>
         <rdfs:label xml:lang="en">Copyrighted</rdfs:label>
     </owl:NamedIndividual>
@@ -6180,7 +6190,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LicenseMixed -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseMixed">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:comment xml:lang="en">The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed).</rdfs:comment>
         <rdfs:label xml:lang="en">mixed licensing</rdfs:label>
     </owl:NamedIndividual>
@@ -6190,7 +6200,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LicensePublicDomain -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicensePublicDomain">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:comment xml:lang="en">Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws.</rdfs:comment>
         <rdfs:label xml:lang="en">Public Domain</rdfs:label>
     </owl:NamedIndividual>
@@ -7484,6 +7494,45 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusWithdrawn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
         <rdfs:label xml:lang="en">withdrawn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TermsOfUseEtexts -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TermsOfUseEtexts">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/TermsOfUse"/>
+        <rdfs:comment xml:lang="en">Terms of use of Etexts goes here</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TermsOfUseImages -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TermsOfUseImages">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/TermsOfUse"/>
+        <rdfs:comment xml:lang="en">Terms of use for scanned images goes here</rdfs:comment>
+        <rdfs:label xml:lang="en">Scanned images terms of use</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TermsOfUseMetadata -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TermsOfUseMetadata">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/TermsOfUse"/>
+        <rdfs:comment xml:lang="en">The terms of use of the metadata shoud be spelled out here</rdfs:comment>
+        <rdfs:label xml:lang="en">Metadata Terms of Use</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/TermsOfUseSourceCode -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TermsOfUseSourceCode">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/TermsOfUse"/>
+        <rdfs:comment xml:lang="en">Terms of use for source code goes here</rdfs:comment>
+        <rdfs:label xml:lang="en">Source code Terms of Use</rdfs:label>
     </owl:NamedIndividual>
     
 
