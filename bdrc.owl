@@ -6203,6 +6203,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:comment xml:lang="en">Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws.</rdfs:comment>
         <rdfs:label xml:lang="en">Public Domain</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/publicdomain/mark/1.0/deed"/>
     </owl:NamedIndividual>
     
 
