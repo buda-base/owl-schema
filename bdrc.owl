@@ -4405,8 +4405,7 @@ The various Works that are contained in the Product include an inProduct element
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/TermsOfUse">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
         <rdfs:comment xml:lang="en">Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources</rdfs:comment>
-        <rdfs:comment xml:lang="tbrc.org.
-
+        <rdfs:comment xml:lang="en">
 Public Domain Policy
 This policy applies only to content in the Public Domain, additional restrictions can apply to Public Domain content, see Restricted Content Policy.
 
