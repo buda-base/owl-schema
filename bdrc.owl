@@ -426,7 +426,7 @@ The value of this property should be an explanation of the needed conversion as 
     <!-- http://purl.bdrc.io/ontology/core/note -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/note">
-        <rdfs:comment>the :note annotation adds language tagged string and optionally a reference to a Work and a simpe text description of a location in a Work, e.g., &quot;pp. 231-3&quot;.
+        <rdfs:comment>the :note annotation adds language (test) tagged string and optionally a reference to a Work and a simpe text description of a location in a Work, e.g., &quot;pp. 231-3&quot;.
 
 In the XML db the notes are restricted to a limited set of items such as top-level resources and Outline Nodes, Place Events and so on. In this model there are no limitations on where notes can be attached. They can be attached directly to any owl:NamedIndividual or property. In particular one could add a note to the per:name property on an individual that provides evidence for the particular per:name assertion.</rdfs:comment>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Note"/>
