@@ -106,7 +106,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 - `sa-bauddha-x-iast` for  Buddhist Hybrid Sanskrit (*BHS*) written in IAST
 
 #### Tibetan
-For Tibetan we do not keep the `-Tibt` script tag, although it would be legitimate to keep it as the IANA registry doesn't specify `Suppress-Script: Tibt` for the bo language. We thus have:
+For Tibetan we do not keep the `-Tibt` script tag, although it would be legitimate to keep it as the IANA registry doesn't specify `Suppress-Script: Tibt` for the bo language. See [this thread](https://www.ietf.org/mail-archive/web/ietf-languages/current/msg00278.html) for more about this issue. We thus have:
 
 - `bo` for Tibetan written in Tibetan script
 - `bo-x-ewts` for EWTS transliteration
