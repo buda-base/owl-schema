@@ -31,7 +31,8 @@ This means that you will always retrieve lower-cased language tags when dealing 
 
 In order to get as few bugs and surprises as possible and to be able to use RDF literal equality in all contexts, it seems thus best to use lower-cased values. The rest of the document will use BCP-47 canonical tags for the sake of readability, but make sure you do use only lower-cased forms in your data.
 
-#### Adding the script tag for transliteration?
+### Specifying the script tag?
+#### In transliterations
 
 For some transliterations, the question of the script tag arises. Let’s take the EWTS as an example. If we take ewts as the private tag, two well-formed choices can be used:
 
@@ -45,6 +46,14 @@ The arguments against its use in our case would be that ewts is always in Latn s
 The arguments for using it are that it seems to be kept in some IANA standard tags where it adds no information neither, like `zh-Latn-pinyin`.
 
 The convention used by BDRC is not to use it when not mandatory. See parts of [this thread](https://www.ietf.org/mail-archive/web/ietf-languages/current/msg00210.html) for some elements on this issue.
+
+#### In more obvious cases
+
+The two main sources to take the decision in the more common cases (such as `bo` vs. `bo-Tibt`) are:
+- the `Suppress-Script` tags of the IANA registry
+- the [Likely Subtags](https://www.unicode.org/cldr/charts/latest/supplemental/likely_subtags.html) list of CLDR
+
+See [this thread](https://www.ietf.org/mail-archive/web/ietf-languages/current/msg00278.html) for more information on this. We do not follow any strict rule here, but tend to prefer simple tags over complex ones.
 
 ## Specific Tag conventions
 
@@ -106,7 +115,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 - `sa-bauddha-x-iast` for  Buddhist Hybrid Sanskrit (*BHS*) written in IAST
 
 #### Tibetan
-For Tibetan we do not keep the `-Tibt` script tag, although it would be legitimate to keep it as the IANA registry doesn't specify `Suppress-Script: Tibt` for the bo language. See [this thread](https://www.ietf.org/mail-archive/web/ietf-languages/current/msg00278.html) for more about this issue. We thus have:
+For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 
 - `bo` for Tibetan written in Tibetan script
 - `bo-x-ewts` for EWTS transliteration
