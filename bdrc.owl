@@ -4530,12 +4530,6 @@ We welcome your input. Please contact us with any comments or questions at inqui
         <rdfs:comment xml:lang="en">The Names of individual Corporations are represented by rdfs:label</rdfs:comment>
         <rdfs:label xml:lang="en">Corporation</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.bdrc.io/ontology/core/Corporation"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="en">Corporation</owl:annotatedTarget>
-        <rdfs:comment xml:lang="en">This is a comment on the rdfs:label</rdfs:comment>
-    </owl:Axiom>
     
 
 
