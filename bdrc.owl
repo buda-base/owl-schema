@@ -4404,7 +4404,6 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/TermsOfUse">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
-        <rdfs:comment xml:lang="en">Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources</rdfs:comment>
         <rdfs:comment xml:lang="en">
 Public Domain Policy
 This policy applies only to content in the Public Domain, additional restrictions can apply to Public Domain content, see Restricted Content Policy.
@@ -4475,7 +4474,7 @@ Disclaimer of Warranties and Limitation of Liability
 
 1. BDRC offers content as-is and as-available, and makes no representations or warranties of any kind concerning the content, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to you.
 
-2. To the extent possible, in no event will BDRC be liable on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of use of the content, even if BDRC has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to you.">Terms of Use
+2. To the extent possible, in no event will BDRC be liable on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of use of the content, even if BDRC has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to you.&quot;&gt;Terms of Use
 
 Buddhist Digital Resource Center believes strongly in unfettered access to the riches of Buddhist cultural heritage. To enable and enhance this access, we have adopted standardized rights vocabulary developed at Harvard University (http://library.harvard.edu/open-metadata) and RightsStatements.org. Additional access policies defined herein are born out of BDRC’s commitment to stakeholders and are intended to (1) maximize access of Buddhist works to sustain living traditions and (2) protect the legal and cultural rights of Buddhist authors and publishers.  As a public charity, BDRC’s mission is to make the results of its work widely available. BDRC requests that our users, where appropriate, attribute BDRC. The purpose of this Terms of Use is to orient the user on the use of the three central domains of BDRC’s archive: textual resources, metadata and source code.
 
@@ -4509,6 +4508,7 @@ BDRC may immediately deactivate any password it has issued to you and bar you fr
 BDRC may modify this Agreement from time to time, and your continued use of the content constitutes your acceptance of any and all modifications. BDRC will attempt to notify you of substantial modifications via the email address that you have registered with us, if any.
 
 We welcome your input. Please contact us with any comments or questions at inquiry</rdfs:comment>
+        <rdfs:comment xml:lang="en">Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources</rdfs:comment>
         <rdfs:label xml:lang="en">Terms of Use</rdfs:label>
     </owl:Class>
     
@@ -6042,6 +6042,18 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/BoDeva -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoDeva">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptDeva"/>
+        <rdfs:comment xml:lang="en">This combination is extremely rare but at least one occurence was found.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tibetan in Devanagari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/BoEwts -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoEwts">
@@ -7363,6 +7375,39 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/SaBeng -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaBeng">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptBeng"/>
+        <rdfs:label xml:lang="en">Sanskrit in Bengali</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/SaDeva -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaDeva">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanjana"/>
+        <rdfs:label xml:lang="en">Sanskrit in Devanagari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/SaNewa -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaNewa">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptNewa"/>
+        <rdfs:label xml:lang="en">Sanskrit in Pracalit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/SaRanj -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaRanj">
@@ -7392,6 +7437,16 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptBeng -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptBeng">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Bengali</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.lexvo.org/page/script/Beng"/>
     </owl:NamedIndividual>
     
 
@@ -7483,11 +7538,13 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/ScriptPracalit -->
+    <!-- http://purl.bdrc.io/resource/ScriptNewa -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptPracalit">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptNewa">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:comment xml:lang="en">ISO 15924 &quot;Newa&quot;, 333</rdfs:comment>
         <rdfs:label xml:lang="en">Pracalit</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Prachalit_Nepal_alphabet"/>
     </owl:NamedIndividual>
     
 
@@ -8314,5 +8371,5 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.2.3.20160319-0906) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
