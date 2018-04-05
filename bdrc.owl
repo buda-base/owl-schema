@@ -6242,6 +6242,16 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/LangNew -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangNew">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <rdfs:label xml:lang="en">Newari (Nepal Bhasa)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.lexvo.org/page/iso639-3/new"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/LangPi -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangPi">
@@ -6504,6 +6514,28 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
         <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/NewDeva -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/NewDeva">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangNew"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptDeva"/>
+        <rdfs:label xml:lang="en">Newari in Devanagari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/NewNewa -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/NewNewa">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangNew"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptNewa"/>
+        <rdfs:label xml:lang="en">Newari in Pracalit</rdfs:label>
     </owl:NamedIndividual>
     
 
