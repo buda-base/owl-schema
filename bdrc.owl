@@ -2944,6 +2944,28 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/notAfter -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/notAfter">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Indicates that the event is known to have not occurred after to the year given</rdfs:comment>
+        <rdfs:label xml:lang="en">not after</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/notBefore -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/notBefore">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Indicates that the event is known to have not occurred prior to the year given</rdfs:comment>
+        <rdfs:label xml:lang="en">not before</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/onOrAbout -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/onOrAbout">
@@ -2951,6 +2973,18 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">This property replaces the various separate circa properties with a single property that will have a single validator and editor support.</rdfs:comment>
         <rdfs:label xml:lang="en">circa</rdfs:label>
+        <owl:deprecated xml:lang="en">:onYear, :notBefore, and :notAfter will replace :onOrAbout</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/onYear -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/onYear">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The event is known to have occurred during the year given</rdfs:comment>
+        <rdfs:label xml:lang="en">on year</rdfs:label>
     </owl:DatatypeProperty>
     
 
