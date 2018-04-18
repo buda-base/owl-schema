@@ -4624,6 +4624,8 @@ We welcome your input. Please contact us with any comments or questions at inqui
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CompletedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">When, where and by whom production of a :Work was completed</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Completed</rdfs:label>
     </owl:Class>
     
 
@@ -5149,6 +5151,8 @@ bdr:Lwwww a :Lineage ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/OriginatedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">When, where and by whom the production of a :Work was originated</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Originated</rdfs:label>
     </owl:Class>
     
 
@@ -5610,6 +5614,8 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/RequestedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">When, where and by whom a :Work as requested to be produced</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Requested</rdfs:label>
     </owl:Class>
     
 
@@ -5972,6 +5978,16 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">Migration hint: represents the Work related outline:node/@type</rdfs:comment>
         <rdfs:label xml:lang="en">Work Part Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/WorkPublished -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkPublished">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">When, where, and by whom or what corporation a :Work was published</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Published</rdfs:label>
     </owl:Class>
     
 
