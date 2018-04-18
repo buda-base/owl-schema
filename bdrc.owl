@@ -1044,6 +1044,37 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/eventPeriod -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eventPeriod">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/TimePeriod"/>
+        <rdfs:comment xml:lang="en">associates an event with a time period</rdfs:comment>
+        <rdfs:label xml:lang="en">when event occured</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eventWhere -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eventWhere">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
+        <rdfs:label xml:lang="en">where event occurred</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/eventWho -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eventWho">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:label xml:lang="en">person associated with event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/hasAunt -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasAunt">
@@ -1953,6 +1984,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:comment xml:lang="en">The place where the event took place</rdfs:comment>
         <rdfs:label xml:lang="en">place</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :eventWhere</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -2074,6 +2106,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:comment xml:lang="en">who founded or otherwise was involved in the place event</rdfs:comment>
         <rdfs:label xml:lang="en">who</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :eventWho</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -2204,6 +2237,17 @@ bdr:W30532 :workDerivativeOf bdr:W22084
 
 bdr:W30532 is a printing based on woodblocks that have a variety of &quot;corrections&quot; made via plugs in the original woodblocks and W22084 is a printing from the original sde dge Kanjur woodblocks so it makes sense to indicate that bdr:W30532 is a derivative of bdr:W22084.</rdfs:comment>
         <rdfs:label xml:lang="en">derivative of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workEvent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workEvent">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">A description of the what, when and where of an event in the life of a work</rdfs:comment>
+        <rdfs:label xml:lang="en">work has event</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2947,7 +2991,7 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     <!-- http://purl.bdrc.io/ontology/core/notAfter -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/notAfter">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EventOrPeriod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Indicates that the event is known to have not occurred after to the year given</rdfs:comment>
         <rdfs:label xml:lang="en">not after</rdfs:label>
@@ -2958,7 +3002,7 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     <!-- http://purl.bdrc.io/ontology/core/notBefore -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/notBefore">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EventOrPeriod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Indicates that the event is known to have not occurred prior to the year given</rdfs:comment>
         <rdfs:label xml:lang="en">not before</rdfs:label>
@@ -4556,6 +4600,44 @@ We welcome your input. Please contact us with any comments or questions at inqui
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/CarvedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CarvedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">The event of carving a set of woodblocks for a :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Woodblocks Carved</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/ChineseDynasty -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ChineseDynasty">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/TimePeriod"/>
+        <rdfs:label xml:lang="en">Chinese Dynasty</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">王朝</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/CompletedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CompletedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/CopyEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CopyEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">An event of copying a :Work by some means such as manual enscribing, photocopying, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Copied</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Corporation -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Corporation">
@@ -4616,6 +4698,26 @@ bdr:Czzzz a :Corporation ;
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CorporationMemberNotSpecified">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CorporationMember"/>
         <rdfs:label xml:lang="en">Unspecified Member</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EditedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EditedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">An event of editing a :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Edited</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EnscribedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EnscribedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">An event of preparing a written manuscript of a Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Enscribed</rdfs:label>
     </owl:Class>
     
 
@@ -4744,6 +4846,22 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
         <rdfs:comment xml:lang="en">Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/EventOrPeriod -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EventOrPeriod">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Event"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/TimePeriod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Event or TimePeriod</rdfs:label>
     </owl:Class>
     
 
@@ -5023,6 +5141,14 @@ bdr:Lwwww a :Lineage ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">ObjectType describes the nature of the witness. For example, it could be manuscript, computer, woodblock, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">print type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/OriginatedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/OriginatedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
     </owl:Class>
     
 
@@ -5460,6 +5586,34 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/PrintingEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PrintingEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">An event of printing one or more :Items of a :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Printed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/QuarterCentury -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/QuarterCentury">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/TimePeriod"/>
+        <rdfs:label xml:lang="en">Quarter Century</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">四分之一世纪</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/RequestedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/RequestedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Role -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Role">
@@ -5579,6 +5733,16 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/TimePeriod -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TimePeriod">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
+        <rdfs:comment xml:lang="en">Timer periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western &quot;Common Era&quot; reckoning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Period</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Topic -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Topic">
@@ -5597,6 +5761,16 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">Individuals represent various (Tibetan) Buddhist traditions</rdfs:comment>
         <rdfs:label xml:lang="en">Tradition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/TranslationEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TranslationEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">An event of translating one :Work to another :Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Translated</rdfs:label>
     </owl:Class>
     
 
@@ -5740,6 +5914,16 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkDkarChagTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
         <rdfs:label xml:lang="en">Table of Contents Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/WorkEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
+        <rdfs:comment xml:lang="en">An event associated with the production of a :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Event</rdfs:label>
     </owl:Class>
     
 
@@ -6119,6 +6303,18 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/C8Q1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/C8Q1">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/QuarterCentury"/>
+        <notAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">724</notAfter>
+        <notBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</notBefore>
+        <rdfs:comment xml:lang="en">700 - 724</rdfs:comment>
+        <rdfs:label xml:lang="en">1st quarter of the 8th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/DzTibt -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/DzTibt">
@@ -6158,6 +6354,21 @@ bdr:W22083 a :Work ;
         <language rdf:resource="http://purl.bdrc.io/resource/LangEn"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatn"/>
         <rdfs:label xml:lang="en">English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/FormerQinDynasty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/FormerQinDynasty">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ChineseDynasty"/>
+        <notAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">394</notAfter>
+        <notBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</notBefore>
+        <rdfs:comment xml:lang="en">Former Qin (350-394) was one of the 16 countries</rdfs:comment>
+        <rdfs:label xml:lang="en">Former Qin Dynasty</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">前秦代</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">&lt;https://translate.google.com/translate?hl=en&amp;sl=zh-TW&amp;u=https://zh.wikipedia.org/zh/%25E5%2589%258D%25E7%25A7%25A6&amp;prev=search&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="zh-hans">&lt;https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwj30Ijx-MPaAhVGY6wKHUzFDRwQFggpMAA&amp;url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2589%258D%25E7%25A7%25A6&amp;usg=AOvVaw07mPIu0PcnCySbo0auaBWp&gt;</rdfs:seeAlso>
     </owl:NamedIndividual>
     
 
@@ -7720,6 +7931,21 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/TangDynasty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TangDynasty">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ChineseDynasty"/>
+        <notAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">907</notAfter>
+        <notBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">618</notBefore>
+        <rdfs:comment xml:lang="en">In the Tang Dynasty (618-907), the Chinese dynasty and the national dynasty shared a total of 289 years with 21 emperors</rdfs:comment>
+        <rdfs:label xml:lang="en">Tang Dynasty</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">唐代</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">&lt;https://translate.google.com/translate?hl=en&amp;sl=zh-TW&amp;u=https://zh.wikipedia.org/zh/%25E5%2594%2590%25E6%259C%259D&amp;prev=search&gt;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="zh-hans">&lt;https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwih_avD_cPaAhVFbK0KHWJdCvMQFggpMAA&amp;url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2594%2590%25E6%259C%259D&amp;usg=AOvVaw0WPfem1oSvcsj1-xc6T5qd&gt;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/TermsOfUseEtexts -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TermsOfUseEtexts">
@@ -8426,6 +8652,18 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
         <rdfs:label xml:lang="en">Chinese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/18C18Q2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/18C18Q2">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/QuarterCentury"/>
+        <notAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1749</notAfter>
+        <notBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1725</notBefore>
+        <rdfs:comment xml:lang="en">1725 - 1749</rdfs:comment>
+        <rdfs:label xml:lang="en">2nd quarter of the 18th century</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
