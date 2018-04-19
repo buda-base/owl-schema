@@ -2456,6 +2456,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkSite"/>
         <rdfs:comment xml:lang="en">A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)</rdfs:comment>
         <rdfs:label xml:lang="en">has site</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of the various :WorkEvents.</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -2681,6 +2682,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:comment xml:lang="en">The place where some aspect of a Work occurred, such as the completion, editing, revelation and so on.</rdfs:comment>
         <rdfs:label xml:lang="en">work site place</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of the various :WorkEvents.</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -2692,6 +2694,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkSiteType"/>
         <rdfs:comment xml:lang="en">The type of activity regarding a work that occurred at the indicated site. For example, the work was completed, edited, or started at the given site/place.</rdfs:comment>
         <rdfs:label xml:lang="en">work site type</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of the various :WorkEvents.</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -3375,8 +3378,9 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Migration hint: from &lt;o:description type=&quot;completionDate&quot;/&gt;</rdfs:comment>
-        <rdfs:comment xml:lang="en">Records the declared date of completion for the Work - typically from the colophon</rdfs:comment>
+        <rdfs:comment xml:lang="en">Records the declared date of completion for the Work - typically from the colophon; however, it is not used at all in the xml dataset</rdfs:comment>
         <rdfs:label xml:lang="en">completion date</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :CompletedEvent</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -3398,7 +3402,9 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workDateOfWriting">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">this property is migrated from the pubinfo.xsd and is sparsely used in the xml dataset (546 occurrences).</rdfs:comment>
         <rdfs:label xml:lang="en">date of writing</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :CompletedEvent.</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -4041,6 +4047,7 @@ This is generally not the source printery of the original wood block prints that
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The date of publication of the form of the Work that has been digitized. This date is typically taken from the printed material in the Work</rdfs:comment>
         <rdfs:label xml:lang="en">publisher date</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :PublishedEvent</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -4052,6 +4059,7 @@ This is generally not the source printery of the original wood block prints that
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Loction of the publisher of the form of the Work that has been digitized.</rdfs:comment>
         <rdfs:label xml:lang="en">publisher location</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :PublishedEvent</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -4063,6 +4071,7 @@ This is generally not the source printery of the original wood block prints that
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">The name of the publisher transcribed from the Work</rdfs:comment>
         <rdfs:label xml:lang="en">publisher name</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :PublishedEvent</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -4630,9 +4639,9 @@ We welcome your input. Please contact us with any comments or questions at inqui
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/CopyEvent -->
+    <!-- http://purl.bdrc.io/ontology/core/CopiedEvent -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CopyEvent">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CopiedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
         <rdfs:comment xml:lang="en">An event of copying a :Work by some means such as manual enscribing, photocopying, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Work Copied</rdfs:label>
@@ -5607,12 +5616,22 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PrintingEvent -->
+    <!-- http://purl.bdrc.io/ontology/core/PrintedEvent -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PrintingEvent">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PrintedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
         <rdfs:comment xml:lang="en">An event of printing one or more :Items of a :Work</rdfs:comment>
         <rdfs:label xml:lang="en">Work Printed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PublishedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PublishedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:comment xml:lang="en">When, where, and by whom or what corporation a :Work was published</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Published</rdfs:label>
     </owl:Class>
     
 
@@ -5788,9 +5807,9 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/TranslationEvent -->
+    <!-- http://purl.bdrc.io/ontology/core/TranslatedEvent -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TranslationEvent">
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TranslatedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
         <rdfs:comment xml:lang="en">An event of translating one :Work to another :Work.</rdfs:comment>
         <rdfs:label xml:lang="en">Work Translated</rdfs:label>
@@ -5945,7 +5964,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
-        <rdfs:comment xml:lang="en">An event associated with the production of a :Work</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts</rdfs:comment>
         <rdfs:label xml:lang="en">Work Event</rdfs:label>
     </owl:Class>
     
@@ -5999,16 +6018,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/WorkPublished -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkPublished">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
-        <rdfs:comment xml:lang="en">When, where, and by whom or what corporation a :Work was published</rdfs:comment>
-        <rdfs:label xml:lang="en">Work Published</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/WorkRefs -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkRefs">
@@ -6044,6 +6053,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
         <rdfs:comment xml:lang="en">Information about the site/Place where a Work was written, edited, completed and so on</rdfs:comment>
         <rdfs:label xml:lang="en">Work Site</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of the various :WorkEvents. This was used sparsely with Outline nodes that are now subsumed as :Works</owl:deprecated>
     </owl:Class>
     
 
