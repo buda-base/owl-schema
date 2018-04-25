@@ -5717,6 +5717,15 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/RevealedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/RevealedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:label xml:lang="en">Work revealed</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Role -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Role">
@@ -6129,6 +6138,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">Indicates what type of activity, e.g., completed, edited, printed, etc., regarding a work occurred at some site (:WorkSite)</rdfs:comment>
         <rdfs:label xml:lang="en">Site what</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated for the various subclasses of :WorkEvent</owl:deprecated>
     </owl:Class>
     
 
