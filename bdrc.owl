@@ -1901,6 +1901,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:comment>where the receiving occurred</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/LineageReceived"/>
+        <owl:deprecated xml:lang="en">deprecated for :eventWhere</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1986,6 +1987,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personEventCorporation">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Corporation"/>
+        <rdfs:label xml:lang="en">associated corporation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2007,6 +2009,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personEventRole">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Role"/>
+        <rdfs:label xml:lang="en">associated role</rdfs:label>
     </owl:ObjectProperty>
     
 
