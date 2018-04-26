@@ -88,6 +88,15 @@
     "eTextResource" : {
       "@type" : "@id"
     },
+    "eventPeriod" : {
+      "@type" : "@id"
+    },
+    "eventWhere" : {
+      "@type" : "@id"
+    },
+    "eventWho" : {
+      "@type" : "@id"
+    },
     "hasAunt" : {
       "@type" : "@id"
     },
@@ -105,6 +114,9 @@
     },
     "hasDaughter" : {
       "@type" : "@id"
+    },
+    "hasDimensions" : {
+      "@type" : "xsd:anyURI"
     },
     "hasFather" : {
       "@type" : "@id"
@@ -158,6 +170,9 @@
       "@type" : "@id"
     },
     "hasIncarnationYangtse" : {
+      "@type" : "@id"
+    },
+    "hasManifest" : {
       "@type" : "@id"
     },
     "hasMaternalAunt" : {
@@ -310,9 +325,6 @@
     "lineageRef" : {
       "@type" : "@id"
     },
-    "lineageSite" : {
-      "@type" : "@id"
-    },
     "lineageType" : {
       "@type" : "@id"
     },
@@ -338,9 +350,6 @@
       "@type" : "@id"
     },
     "personEventCorporation" : {
-      "@type" : "@id"
-    },
-    "personEventPlace" : {
       "@type" : "@id"
     },
     "personEventRole" : {
@@ -374,9 +383,6 @@
       "@type" : "@id"
     },
     "placeEventAffiliation" : {
-      "@type" : "@id"
-    },
-    "placeEventWho" : {
       "@type" : "@id"
     },
     "placeIsNear" : {
@@ -425,6 +431,9 @@
       "@type" : "@id"
     },
     "workDerivativeOf" : {
+      "@type" : "@id"
+    },
+    "workEvent" : {
       "@type" : "@id"
     },
     "workExpressionOf" : {
@@ -521,12 +530,6 @@
       "@type" : "@id"
     },
     "workReproductionOf" : {
-      "@type" : "@id"
-    },
-    "workSitePlace" : {
-      "@type" : "@id"
-    },
-    "workSiteType" : {
       "@type" : "@id"
     },
     "workTitle" : {
