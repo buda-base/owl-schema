@@ -632,10 +632,10 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
-        <rdfs:label xml:lang="en">As a convention in the BDRC ontology, use rdfs:comment for summary and contents statements about a resource rather than adding additional properties.
+        <rdfs:comment xml:lang="en">As a convention in the BDRC ontology, use rdfs:comment for summary and contents statements about a resource rather than adding additional properties.
 
-We take the view that the summary or contents statements can be treated in a manner similar to the use of rdfs:label as a way of providing a short description of a resource</rdfs:label>
-        <rdfs:label xml:lang="en">Migration hint: map &lt;?:description type=&quot;summary&quot;/&gt; and &lt;?:description type=&quot;contents&quot;/&gt; to rdfs:comment</rdfs:label>
+We take the view that the summary or contents statements can be treated in a manner similar to the use of rdfs:label as a way of providing a short description of a resource</rdfs:comment>
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
     </rdf:Description>
     
 
