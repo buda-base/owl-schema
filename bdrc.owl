@@ -864,6 +864,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorArtist">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has artist</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -872,6 +873,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorAttributedAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has attributed author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -880,6 +882,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorBard">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has bard</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -888,6 +891,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCalligrapher">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has calligrapher</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -896,6 +900,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCommentator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has commentator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -904,6 +909,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorContributingAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has contributing author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -912,6 +918,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorEditor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has editor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -920,6 +927,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorGeneralAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has general author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -928,6 +936,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorMainAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has main author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -936,6 +945,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorPandita">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has pandita</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -944,6 +954,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRecipientOfResponseToQuery">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has recipient of response to query</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -952,6 +963,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRequester">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has requester</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -960,6 +972,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReviserOfTranslation">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has reviser of translation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -968,6 +981,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorScribe">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has scribe</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -976,6 +990,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTerton">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has tertön</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -984,6 +999,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">has translator</rdfs:label>
     </owl:ObjectProperty>
     
 
