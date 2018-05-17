@@ -3532,7 +3532,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">From Paul Hackett&apos;s catalogue</rdfs:comment>
-        <rdfs:label xml:lang="en">dpe bsdur ma catalogue number</rdfs:label>
+        <rdfs:label xml:lang="en">Pedurma catalogue number</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.worldcat.org/oclc/756377542"/>
     </owl:DatatypeProperty>
     
@@ -3557,7 +3557,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">from Mibu&apos;s catalogue</rdfs:comment>
-        <rdfs:label xml:lang="en">co ne catalogue number</rdfs:label>
+        <rdfs:label xml:lang="en">Cone catalogue number</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.worldcat.org/oclc/603601029"/>
     </owl:DatatypeProperty>
     
@@ -3570,7 +3570,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Dergé Kangyur and Tengyur reference numbers, from the Tohoku Catalogue</rdfs:comment>
-        <rdfs:label xml:lang="en">sde dge catalogue number</rdfs:label>
+        <rdfs:label xml:lang="en">Tohoku catalogue number</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.worldcat.org/oclc/976594525"/>
     </owl:DatatypeProperty>
     
@@ -3643,7 +3643,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">pe cing Kangyur Reference number from the Otani catalogue</rdfs:comment>
-        <rdfs:label xml:lang="en">pe cing reference</rdfs:label>
+        <rdfs:label xml:lang="en">Otani catalogue reference</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3655,7 +3655,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Reference number from Skorupski&apos;s catalogue</rdfs:comment>
-        <rdfs:label xml:lang="en">stog catalogue number</rdfs:label>
+        <rdfs:label xml:lang="en">Stog catalogue number</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.worldcat.org/oclc/461960048"/>
     </owl:DatatypeProperty>
     
@@ -3668,7 +3668,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Urga Kangyur reference number</rdfs:comment>
-        <rdfs:label xml:lang="en">ur ga catalogue number</rdfs:label>
+        <rdfs:label xml:lang="en">Urga catalogue number</rdfs:label>
     </owl:DatatypeProperty>
     
 
