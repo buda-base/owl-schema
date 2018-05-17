@@ -6873,7 +6873,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeAutograph">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
         <rdfs:comment xml:lang="en">A manuscript written by the hand of the author</rdfs:comment>
-        <rdfs:label xml:lang="en">Autograph Manuscript</rdfs:label>
+        <rdfs:label xml:lang="en">autograph manuscript</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6883,7 +6883,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeBlockPrint">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
         <rdfs:comment xml:lang="en">a :Work which content was produced by a method consisting of a relief process in which a design is cut into and printed from the surface of a wood block</rdfs:comment>
-        <rdfs:label xml:lang="en">Blockprint</rdfs:label>
+        <rdfs:label xml:lang="en">blockprint</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6892,6 +6892,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeComputerInput">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:label xml:lang="en">computer input</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6900,6 +6901,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeFacsimile">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:comment xml:lang="en">facsimile</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6909,7 +6911,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeManuscript">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
         <rdfs:comment xml:lang="en">used with a :Work which content was handwritten and that through some unspecified sequence of further copying actions came to be scanned</rdfs:comment>
-        <rdfs:label xml:lang="en">Manuscript</rdfs:label>
+        <rdfs:label xml:lang="en">manuscript</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6918,6 +6920,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeOCR">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:label xml:lang="en">OCR</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6927,7 +6930,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeParPhud">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
         <rdfs:comment xml:lang="en">&quot;first fruit&quot; printing from a set of xylographs. par phud</rdfs:comment>
-        <rdfs:label xml:lang="en">First Printing</rdfs:label>
+        <rdfs:label xml:lang="en">first printing</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6936,6 +6939,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ObjectTypeTypeSet">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/ObjectType"/>
+        <rdfs:label xml:lang="en">typeset</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8626,6 +8630,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkChapter">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
+        <rdfs:label xml:lang="en">chapter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8634,6 +8639,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkSection">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
+        <rdfs:label xml:lang="en">section</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8642,6 +8648,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkText">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
+        <rdfs:label xml:lang="en">text</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8650,6 +8657,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeAbstractWork">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
+        <rdfs:label xml:lang="en">abstract work</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8658,6 +8666,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypePublishedWork">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
+        <rdfs:label xml:lang="en">published work</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8666,6 +8675,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeSeries">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
+        <rdfs:label xml:lang="en">series</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8674,6 +8684,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkTypeUnicodeText">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
+        <rdfs:label xml:lang="en">unicode text</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8682,6 +8693,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/WorkVolume">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/WorkPartType"/>
+        <rdfs:label xml:lang="en">volume</rdfs:label>
     </owl:NamedIndividual>
     
 
