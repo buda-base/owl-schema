@@ -804,6 +804,7 @@ Both chunk and char number start at one.</rdfs:comment>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
         <rdfs:comment xml:lang="en">Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on</rdfs:comment>
+        <rdfs:comment xml:lang="en">organization</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -824,6 +825,7 @@ Both chunk and char number start at one.</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/corporationHasMember">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Corporation"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/CorporationMember"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -833,6 +835,7 @@ Both chunk and char number start at one.</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/corporationMember">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/CorporationMember"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:label xml:lang="en">person</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -841,6 +844,7 @@ Both chunk and char number start at one.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/corporationMemberType">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/CorporationMember"/>
+        <rdfs:label xml:lang="en">type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -856,6 +860,7 @@ for @start, C71, and a different instance, C13, for @endCirca. The uses are not 
 
 Thus crp:region maps crp:Corporation directly to plc:Place without any additional chaff</rdfs:comment>
         <rdfs:comment xml:lang="en">This property records a Place characterizing the region in which the Corporation occured/occurs.</rdfs:comment>
+        <rdfs:label xml:lang="en">region</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -864,7 +869,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorArtist">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has artist</rdfs:label>
+        <rdfs:label xml:lang="en">artist</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -873,7 +878,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorAttributedAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has attributed author</rdfs:label>
+        <rdfs:label xml:lang="en">attributed author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -882,7 +887,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorBard">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has bard</rdfs:label>
+        <rdfs:label xml:lang="en">bard</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -891,7 +896,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCalligrapher">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has calligrapher</rdfs:label>
+        <rdfs:label xml:lang="en">calligrapher</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -900,7 +905,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCommentator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has commentator</rdfs:label>
+        <rdfs:label xml:lang="en">commentator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -909,7 +914,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorContributingAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has contributing author</rdfs:label>
+        <rdfs:label xml:lang="en">contributing author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -918,7 +923,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorEditor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has editor</rdfs:label>
+        <rdfs:label xml:lang="en">editor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -927,7 +932,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorGeneralAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has general author</rdfs:label>
+        <rdfs:label xml:lang="en">general author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -936,7 +941,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorMainAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has main author</rdfs:label>
+        <rdfs:label xml:lang="en">main author</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -945,7 +950,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorPandita">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has pandita</rdfs:label>
+        <rdfs:label xml:lang="en">pandita</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -954,7 +959,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRecipientOfResponseToQuery">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has recipient of response to query</rdfs:label>
+        <rdfs:label xml:lang="en">recipient of response to query</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -963,7 +968,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRequester">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has requester</rdfs:label>
+        <rdfs:label xml:lang="en">requester</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -972,7 +977,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReviserOfTranslation">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has reviser of translation</rdfs:label>
+        <rdfs:label xml:lang="en">reviser of translation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -981,7 +986,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorScribe">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has scribe</rdfs:label>
+        <rdfs:label xml:lang="en">scribe</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -990,7 +995,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTerton">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has tertön</rdfs:label>
+        <rdfs:label xml:lang="en">tertön</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -999,7 +1004,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:label xml:lang="en">has translator</rdfs:label>
+        <rdfs:label xml:lang="en">translator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1033,7 +1038,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
         <rdfs:comment xml:lang="en">The reference to the :ItemEtext indicates the item that contains the volume that this Etext is contained in</rdfs:comment>
-        <rdfs:label xml:lang="en">eText is in item</rdfs:label>
+        <rdfs:label xml:lang="en">in item</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Etext"/>
     </owl:ObjectProperty>
     
@@ -1056,7 +1061,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/TimePeriod"/>
         <rdfs:comment xml:lang="en">associates an event with a time period</rdfs:comment>
-        <rdfs:label xml:lang="en">when event occured</rdfs:label>
+        <rdfs:label xml:lang="en">period</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1066,7 +1071,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eventWhere">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
-        <rdfs:label xml:lang="en">where event occurred</rdfs:label>
+        <rdfs:label xml:lang="en">place</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1076,7 +1081,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/eventWho">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/PersonOrCorporation"/>
-        <rdfs:label xml:lang="en">person associated with event</rdfs:label>
+        <rdfs:label xml:lang="en">who</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1569,7 +1574,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationActivities">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">activities incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">activities incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1578,7 +1583,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationBody">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">body incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">body incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1587,7 +1592,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationGeneral">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">general incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">general incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1596,7 +1601,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationMind">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">mind incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">mind incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1605,7 +1610,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationQualities">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">qualities incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">qualities incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1614,7 +1619,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationSpeech">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">speech incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">speech incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1623,7 +1628,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/incarnationYangtse">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:label xml:lang="en">yangtse</rdfs:label>
+        <rdfs:label xml:lang="en">yangtse of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1642,7 +1647,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         </rdfs:range>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">personIsIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary.</rdfs:comment>
-        <rdfs:label xml:lang="en">is incarnation</rdfs:label>
+        <rdfs:label xml:lang="en">is incarnation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2030,7 +2035,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
         <rdfs:comment xml:lang="en">describe a name for a Person. Needed to include the type of the name as well as the rdf:LangString value for the name</rdfs:comment>
-        <rdfs:label xml:lang="en">has name</rdfs:label>
+        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2040,6 +2045,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personOfSect">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Topic"/>
+        <rdfs:label xml:lang="en">of sect</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2050,13 +2056,16 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personTeacherOf"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:label xml:lang="en">student of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- http://purl.bdrc.io/ontology/core/personTeacherOf -->
 
-    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personTeacherOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personTeacherOf">
+        <rdfs:label xml:lang="en">teacher of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -2186,7 +2195,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/VolumeEtextAsset"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/EtextRef"/>
         <rdfs:comment xml:lang="en">refers to an :EtextRef that identifies an :Etext and the position of that :Etext in a containing :VolumeEtextAsset</rdfs:comment>
-        <rdfs:label xml:lang="en">voume has eText</rdfs:label>
+        <rdfs:label xml:lang="en">eText</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2209,7 +2218,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Identifies the type and person that are a creator of the work</rdfs:comment>
-        <rdfs:label xml:lang="en">has creator</rdfs:label>
+        <rdfs:label xml:lang="en">creator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2238,7 +2247,7 @@ bdr:W30532 is a printing based on woodblocks that have a variety of &quot;correc
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
         <rdfs:comment xml:lang="en">A description of the what, when and where of an event in the life of a work</rdfs:comment>
-        <rdfs:label xml:lang="en">work has event</rdfs:label>
+        <rdfs:label xml:lang="en">event</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2318,7 +2327,7 @@ bdr:T354 a :Topic ;
       rdfs:label &quot;rdzogs chen&quot;@bo-x-ewts .
 
 This suggests that bdr:W12827 contains some commentaries and some instructions regarding dzogchen and so forth.</rdfs:comment>
-        <rdfs:label xml:lang="en">has genre</rdfs:label>
+        <rdfs:label xml:lang="en">genre</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2352,6 +2361,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
+        <rdfs:label xml:lang="en">has item</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2361,7 +2371,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemEtext">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtext"/>
-        <rdfs:label xml:lang="en">work has eText</rdfs:label>
+        <rdfs:label xml:lang="en">has eText</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2371,7 +2381,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemEtextNonPaginated">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtext"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtextNonPaginated"/>
-        <rdfs:label xml:lang="en">work has non-paginated eText</rdfs:label>
+        <rdfs:label xml:lang="en">non-paginated eText</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2381,7 +2391,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemEtextPaginated">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItemEtext"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemEtextPaginated"/>
-        <rdfs:label xml:lang="en">work has paginated eText</rdfs:label>
+        <rdfs:label xml:lang="en">paginated eText</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2391,7 +2401,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemImageAsset">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemImageAsset"/>
-        <rdfs:label xml:lang="en">work has image asset</rdfs:label>
+        <rdfs:label xml:lang="en">has image asset</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2401,7 +2411,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasItemPhysicalAsset">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workHasItem"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
-        <rdfs:label xml:lang="en">work has physical asset</rdfs:label>
+        <rdfs:label xml:lang="en">has physical asset</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2411,7 +2421,7 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasNumber">
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workNumberOf"/>
         <rdfs:comment xml:lang="en">used with a Series to reference a number of the series</rdfs:comment>
-        <rdfs:label xml:lang="en">work has number</rdfs:label>
+        <rdfs:label xml:lang="en">number in series</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2546,7 +2556,7 @@ bdr:T354 a :Topic ;
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationWork">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
-        <rdfs:label xml:lang="en">work location</rdfs:label>
+        <rdfs:label xml:lang="en">in work</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
     </owl:ObjectProperty>
     
@@ -2671,7 +2681,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
         <rdfs:comment xml:lang="en">Asserts that the subject Work has a particular title.</rdfs:comment>
-        <rdfs:label xml:lang="en">has title</rdfs:label>
+        <rdfs:label xml:lang="en">title</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
     </owl:ObjectProperty>
     
@@ -2694,7 +2704,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
         <rdfs:comment xml:lang="en">Migration info: This is the &lt;work:info @nodeType/&gt; attribute NOT the unused @type attribute</rdfs:comment>
-        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="en">work type</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/WorkType"/>
     </owl:ObjectProperty>
     
@@ -2824,7 +2834,7 @@ For an OCR file this should refer to the file generated by the OCR process which
         <rdfs:comment xml:lang="en">This property is a URI referring to a json object that is an array the name, height and width of each image in a volume.
 
 This data is used to construct IIIF Manifests for volume presentation</rdfs:comment>
-        <rdfs:label xml:lang="en">has dimensions</rdfs:label>
+        <rdfs:label xml:lang="en">dimensions</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2913,7 +2923,7 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The number of copies of the :Work in this holding</rdfs:comment>
-        <rdfs:label xml:lang="en">copies</rdfs:label>
+        <rdfs:label xml:lang="en">nb. copies</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/ItemPhysicalAsset"/>
     </owl:DatatypeProperty>
     
@@ -2965,7 +2975,7 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The number of volumes in the item</rdfs:comment>
-        <rdfs:label xml:lang="en">volumes</rdfs:label>
+        <rdfs:label xml:lang="en">nb. volumes</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3496,7 +3506,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">True if this Work is part of a series. In which case it should have a :workSeriesNumber</rdfs:comment>
-        <rdfs:label xml:lang="en">is numbered</rdfs:label>
+        <rdfs:label xml:lang="en">number in serie</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3510,7 +3520,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
         <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Isbn"/>
         <rdfs:comment xml:lang="en">Refers to the International Standard Book Number for the Work</rdfs:comment>
-        <rdfs:label xml:lang="en">has ISBN</rdfs:label>
+        <rdfs:label xml:lang="en">ISBN</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3709,7 +3719,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
         <adm:convertToProperty rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
         <adm:convertValueToClass rdf:resource="http://id.loc.gov/ontologies/bibframe/Lccn"/>
         <rdfs:comment xml:lang="en">Refers to the Library of Congress Control Number</rdfs:comment>
-        <rdfs:label xml:lang="en">has LCCN</rdfs:label>
+        <rdfs:label xml:lang="en">LCCN</rdfs:label>
     </owl:DatatypeProperty>
     
 
