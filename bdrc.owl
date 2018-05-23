@@ -36,14 +36,26 @@
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/access -->
+    <!-- http://purl.bdrc.io/ontology/admin/attributionName -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/access">
-        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
-        <rdfs:label xml:lang="en">permitted access</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/attributionName">
+        <rdfs:comment xml:lang="en">The name the creator of metadata about an :Entity resource would like used when attributing re-use.</rdfs:comment>
+        <rdfs:label xml:lang="en">attribution name</rdfs:label>
+        <owl:sameAs rdf:resource="http://creativecommons.org/ns#attributionName"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/attributionURL -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/attributionURL">
+        <rdfs:comment xml:lang="en">The URL the creator of metadata about an :Entity resource would like used when attributing re-use.</rdfs:comment>
+        <rdfs:label xml:lang="en">attribution URL</rdfs:label>
+        <owl:sameAs rdf:resource="http://creativecommons.org/ns#attributionURL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
     </owl:AnnotationProperty>
     
 
@@ -108,11 +120,11 @@ The value of this property should be an explanation of the needed conversion as 
     <!-- http://purl.bdrc.io/ontology/admin/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/license">
-        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:comment xml:lang="en">The license under which access to the metadata representation of the :Entity resource is provided</rdfs:comment>
         <rdfs:label xml:lang="en">has license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
     </owl:AnnotationProperty>
     
 
@@ -805,6 +817,18 @@ Both chunk and char number start at one.</rdfs:comment>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
         <rdfs:comment xml:lang="en">Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on</rdfs:comment>
         <rdfs:comment xml:lang="en">organization</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/access -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/access">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
+        <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
+        <rdfs:label xml:lang="en">permitted access</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
     </owl:ObjectProperty>
     
 
@@ -1763,6 +1787,18 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:comment xml:lang="en">language of a :LangScript</rdfs:comment>
         <rdfs:label xml:lang="en">language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/license -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/license">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
+        <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
     </owl:ObjectProperty>
     
 
@@ -2744,6 +2780,30 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site.</rdfs:comment>
         <rdfs:label xml:lang="en">has legacy node</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/attributionName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/attributionName">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The name the holder of a Work resource would like used when attributing re-use.</rdfs:comment>
+        <rdfs:label xml:lang="en">attribution name</rdfs:label>
+        <owl:sameAs xml:lang="en">http://creativecommons.org/ns#attributionName</owl:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/attributionURL -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/attributionURL">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The URL the holder of a Work would like used when attributing re-use.</rdfs:comment>
+        <rdfs:label xml:lang="en">attribution URL</rdfs:label>
+        <owl:sameAs rdf:resource="http://creativecommons.org/ns#attributionURL"/>
     </owl:DatatypeProperty>
     
 
