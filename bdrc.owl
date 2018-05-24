@@ -2480,6 +2480,30 @@ This suggests that bdr:W12827 contains some commentaries and some instructions r
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workHasRoot -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasRoot">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:comment xml:lang="en">:workHasRoot is typically &quot;inferred&quot; via a path expression such as:
+
+    ?hEx bdo:workPartOf+ ?hExW .
+    optional { ?hExW bdo:workPartOf ?hExWP }
+    FILTER (!bound(?hExWP))
+    ?hExW skos:prefLabel ?hExO .
+
+which can then be constructed to:
+
+    ?hEx :workHasRoot ?hExW .
+
+rather than storing the triple explicitly for every part of a large composite :Work such as a Kanjur or Tengyur.
+
+Adding this &quot;virtual&quot; property to the ontology provides a place to add the labels needed to localization of applications</rdfs:comment>
+        <rdfs:label xml:lang="en">has root</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workHasSite -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasSite">
@@ -4257,17 +4281,6 @@ This is generally not the source printery of the original wood block prints that
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts. Conventionally appearing in a side box of the textbox</rdfs:comment>
         <rdfs:label xml:lang="en">side box sequence id</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/workSideBoxTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workSideBoxTitle">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:label xml:lang="en">a short abbreviated title typically occuring in the left side box of the recto textbox</rdfs:label>
-        <rdfs:label xml:lang="en">side box title</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -6169,6 +6182,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkRunningTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">for Tibetan pecha this is typically the short title appearing in the left side textbox of the recto side of the page</rdfs:comment>
         <rdfs:label xml:lang="en">Running Title</rdfs:label>
     </owl:Class>
     
