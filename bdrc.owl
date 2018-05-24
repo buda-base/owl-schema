@@ -2599,7 +2599,7 @@ bdr:T354 a :Topic ;
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
         <rdfs:comment xml:lang="en">This is the location of the source information for this :Lineage in a specified gsan / thob yig.</rdfs:comment>
         <rdfs:comment xml:lang="en">the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note</rdfs:comment>
-        <rdfs:label xml:lang="en">source text</rdfs:label>
+        <rdfs:label xml:lang="en">location</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Lineage"/>
     </owl:ObjectProperty>
     
@@ -6059,6 +6059,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkBibliographicalTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">This is the main title of a work, the title by which it is the most known. If a work has only one title, it must be of type Bibliographic Title. There should be only one bibliographical title per work.</rdfs:comment>
         <rdfs:label xml:lang="en">Bibliographic Title</rdfs:label>
     </owl:Class>
     
@@ -6077,6 +6078,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkColophonTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">Use this title type for titles that appear specifically in the colophon when they differ from the main title.</rdfs:comment>
         <rdfs:label xml:lang="en">Colophon Title</rdfs:label>
     </owl:Class>
     
@@ -6086,6 +6088,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkCopyrightPageTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">use for the title on the copyright page when it differs from the bibliographical title.</rdfs:comment>
         <rdfs:label xml:lang="en">Copyright page Title</rdfs:label>
     </owl:Class>
     
@@ -6095,6 +6098,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkCoverTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">Use this title for the cover page titles when they differ from the bibliographical title.</rdfs:comment>
         <rdfs:label xml:lang="en">Cover Title</rdfs:label>
     </owl:Class>
     
@@ -6104,6 +6108,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkDkarChagTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">Use this type for titles in table of contents when they differ from the bibliographical title.</rdfs:comment>
         <rdfs:label xml:lang="en">Table of Contents Title</rdfs:label>
     </owl:Class>
     
@@ -6152,6 +6157,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkOtherTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">when a work is known by different titles, the main one is recorded by :WorkBibliographicalTitle and the others with :WorkOtherTitle. This should mainly be used with abstract works.</rdfs:comment>
         <rdfs:label xml:lang="en">Other Title</rdfs:label>
     </owl:Class>
     
@@ -6201,6 +6207,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkSpineTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">use for titles indicated on the spine of a book when it differs from the bibliographical title.</rdfs:comment>
         <rdfs:label xml:lang="en">Spine Title</rdfs:label>
     </owl:Class>
     
@@ -6238,6 +6245,7 @@ bdr:W22083 a :Work ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkTitlePageTitle">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+        <rdfs:comment xml:lang="en">use for the main title on the title page (not the cover page) when it differs from the bibliographical title.</rdfs:comment>
         <rdfs:label xml:lang="en">Title page Title</rdfs:label>
     </owl:Class>
     
