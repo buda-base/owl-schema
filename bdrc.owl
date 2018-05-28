@@ -36,6 +36,16 @@
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/access -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/access">
+        <rdfs:label xml:lang="en">record access</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/attributionName -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/attributionName">
@@ -115,7 +125,7 @@ The value of this property should be an explanation of the needed conversion as 
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/license">
         <rdfs:comment xml:lang="en">The license under which access to the metadata representation of the :Entity resource is provided</rdfs:comment>
-        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <rdfs:label xml:lang="en">record license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
@@ -474,6 +484,55 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/sameAsToL -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/sameAsToL">
+        <rdfs:label xml:lang="en">Treasury of Lives</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/sameAsVIAF -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/sameAsVIAF">
+        <rdfs:label xml:lang="en">VIAF</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/sameAsWikidata -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/sameAsWikidata">
+        <rdfs:label xml:lang="en">wikidata</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/sameAsWorldCat -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/sameAsWorldCat">
+        <rdfs:label xml:lang="en">WorldCat</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/sameAsrKTs -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/sameAsrKTs">
+        <rdfs:label xml:lang="en">rKTs</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/seeAlso">
@@ -657,7 +716,10 @@ We take the view that the summary or contents statements can be treated in a man
 
     <!-- http://www.w3.org/2002/07/owl#sameAs -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+        <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
+        <rdfs:label xml:lang="en">same as</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -821,7 +883,7 @@ Both chunk and char number start at one.</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
         <rdfs:comment xml:lang="en">The type of online access permitted for the subject Work.</rdfs:comment>
-        <rdfs:label xml:lang="en">permitted access</rdfs:label>
+        <rdfs:label xml:lang="en">text access</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/AccessType"/>
     </owl:ObjectProperty>
     
@@ -1791,7 +1853,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:comment xml:lang="en">The license under which access to the Work is provided</rdfs:comment>
-        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <rdfs:label xml:lang="en">text license</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/License"/>
     </owl:ObjectProperty>
     
@@ -2798,6 +2860,26 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site.</rdfs:comment>
         <rdfs:label xml:lang="en">has legacy node</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/DDBCAId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/DDBCAId">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Buddhist Studies Authority ID</rdfs:comment>
+        <rdfs:comment xml:lang="en">ID used by the Dharma Drum College Buddhist Studied Authorities databases, for places and persons. It should be just the ID starting with A (ex: A017001), not the full URL.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://authority.dila.edu.tw/person/"/>
+        <rdfs:seeAlso rdf:resource="http://authority.dila.edu.tw/place/"/>
     </owl:DatatypeProperty>
     
 
