@@ -6147,15 +6147,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/WorkCaptionTitle -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkCaptionTitle">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
-        <rdfs:label xml:lang="en">Caption Title</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/WorkColophonTitle -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkColophonTitle">
@@ -6272,15 +6263,6 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
         <rdfs:comment xml:lang="en">for Tibetan pecha this is typically the short title appearing in the left side textbox of the recto side of the page</rdfs:comment>
         <rdfs:label xml:lang="en">Running Title</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/WorkSectionTitle -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkSectionTitle">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkTitle"/>
-        <rdfs:label xml:lang="en">Section Title</rdfs:label>
     </owl:Class>
     
 
