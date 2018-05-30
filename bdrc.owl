@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/core/"
      xml:base="http://purl.bdrc.io/ontology/core/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:bdd="http://purl.bdrc.io/data/"
      xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -49,6 +50,7 @@
     <!-- http://purl.bdrc.io/ontology/admin/attributionName -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/attributionName">
+        <rdfs:label xml:lang="en">attribution name</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
     </owl:AnnotationProperty>
@@ -58,6 +60,7 @@
     <!-- http://purl.bdrc.io/ontology/admin/attributionURL -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/attributionURL">
+        <rdfs:label xml:lang="en">attribution url</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
     </owl:AnnotationProperty>
@@ -2837,15 +2840,6 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
-    <!-- http://purl.bdrc.io/ontology/admin/resourceStatement -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/admin/resourceStatement">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/ContentProvider"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/admin/workLegacyNode -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLegacyNode">
@@ -2891,7 +2885,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">The name the holder of a Work resource would like used when attributing re-use.</rdfs:comment>
         <rdfs:label xml:lang="en">attribution name</rdfs:label>
-        <owl:sameAs xml:lang="en">http://creativecommons.org/ns#attributionName</owl:sameAs>
+        <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#attributionName"/>
     </owl:DatatypeProperty>
     
 
@@ -2901,6 +2895,8 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/attributionURL">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">attribution url</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#attributionURL"/>
     </owl:DatatypeProperty>
     
 
@@ -4564,6 +4560,8 @@ AccessTypes desigations are intended to serve two distinct purposes: (1) maximiz
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/ContentProvider">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Entity"/>
+        <rdfs:comment xml:lang="en">A content provider is a source of content (images or metadata)</rdfs:comment>
+        <rdfs:label xml:lang="en">Content provider</rdfs:label>
     </owl:Class>
     
 
@@ -6386,41 +6384,6 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://creativecommons.org/ns#attributionName -->
-
-    <owl:NamedIndividual rdf:about="http://creativecommons.org/ns#attributionName">
-        <owl:sameAs rdf:resource="http://purl.bdrc.io/ontology/admin/attributionName"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://creativecommons.org/ns#attributionURL -->
-
-    <owl:NamedIndividual rdf:about="http://creativecommons.org/ns#attributionURL">
-        <owl:sameAs rdf:resource="http://purl.bdrc.io/ontology/admin/attributionURL"/>
-        <owl:sameAs rdf:resource="http://purl.bdrc.io/ontology/core/attributionURL"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/attributionName -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/admin/attributionName"/>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/admin/attributionURL -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/admin/attributionURL"/>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/attributionURL -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/ontology/core/attributionURL"/>
-    
-
-
     <!-- http://purl.bdrc.io/resource/AccessFairUse -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/AccessFairUse">
@@ -6809,6 +6772,15 @@ bdr:W22083 a :Work ;
         <rdfs:label xml:lang="en">CC0</rdfs:label>
         <rdfs:label xml:lang="en">The work is made available under Creative Commons, CC0 1.0.</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://creativecommons.org/share-your-work/public-domain/cc0/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LicenseCCBYSA3U -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCCBYSA3U">
+        <rdfs:label xml:lang="en">Creative Commons BY-SA 3.0 Unported</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/"/>
     </owl:NamedIndividual>
     
 
@@ -8910,21 +8882,6 @@ equiv Dagpo Kagyu?</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/attributionName">
-        <rdfs:label xml:lang="en">attribution name</rdfs:label>
-        <owl:sameAs rdf:resource="http://creativecommons.org/ns#attributionName"/>
-        <rdfs:comment xml:lang="en">The name the creator of metadata about an :Entity resource would like used when attributing re-use.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/attributionURL">
-        <rdfs:comment xml:lang="en">The URL the creator of metadata about an :Entity resource would like used when attributing re-use.</rdfs:comment>
-        <owl:sameAs rdf:resource="http://creativecommons.org/ns#attributionURL"/>
-        <rdfs:label xml:lang="en">attribution URL</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/attributionURL">
-        <rdfs:label xml:lang="en">attribution URL</rdfs:label>
-        <owl:sameAs rdf:resource="http://creativecommons.org/ns#attributionURL"/>
-        <rdfs:comment xml:lang="en">The URL the holder of a Work would like used when attributing re-use.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:comment xml:lang="en">The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA&apos;s domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types.</rdfs:comment>
     </rdf:Description>
