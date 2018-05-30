@@ -6464,12 +6464,23 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/Bo -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Bo">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
+        <rdfs:label xml:lang="en">Tibetan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/BoDbuCan -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/BoDbuCan">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuCan"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/BoTibt"/>
         <rdfs:label xml:lang="en">Tibetan in uchen script</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">dbu can</rdfs:label>
     </owl:NamedIndividual>
@@ -6482,6 +6493,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptDbuMed"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/BoTibt"/>
         <rdfs:label xml:lang="en">Tibetan in ume script</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">dbu med</rdfs:label>
     </owl:NamedIndividual>
@@ -6494,6 +6506,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptDeva"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Bo"/>
         <rdfs:comment xml:lang="en">This combination is extremely rare but at least one occurence was found.</rdfs:comment>
         <rdfs:label xml:lang="en">Tibetan in Devanagari</rdfs:label>
     </owl:NamedIndividual>
@@ -6506,6 +6519,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatn"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Bo"/>
         <transliteration rdf:resource="http://purl.bdrc.io/resource/TransEWTS"/>
         <rdfs:label xml:lang="en">Tibetan in Extended Wylie</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">wa&apos;i li</rdfs:label>
@@ -6519,6 +6533,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptKhyugYig"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/BoTibt"/>
         <rdfs:label xml:lang="bo-x-ewts">&apos;khyug yig</rdfs:label>
         <rdfs:label xml:lang="en">Tibetan in Kyug &apos;Yig</rdfs:label>
     </owl:NamedIndividual>
@@ -6531,6 +6546,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangBo"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptTibt"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Bo"/>
         <rdfs:label xml:lang="en">Tibetan</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
     </owl:NamedIndividual>
@@ -6555,6 +6571,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangDz"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptTibt"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
         <rdfs:label xml:lang="en">Dzongkha (Bhutanese)</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">rdzong kha</rdfs:label>
     </owl:NamedIndividual>
@@ -6587,6 +6604,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangEn"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatn"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
         <rdfs:label xml:lang="en">English</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6765,6 +6783,16 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/LanguageTaxonomy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LanguageTaxonomy">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <taxSubclassRelation rdf:resource="http://purl.bdrc.io/ontology/core/taxSubClassOf"/>
+        <rdfs:seeAlso xml:lang="en">Language taxonomy</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/LicenseCC0 -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCC0">
@@ -6779,6 +6807,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LicenseCCBYSA3U -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCCBYSA3U">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
         <rdfs:label xml:lang="en">Creative Commons BY-SA 3.0 Unported</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/"/>
     </owl:NamedIndividual>
@@ -6960,11 +6989,23 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/Mn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Mn">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
+        <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/MnCyrl -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnCyrl">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptCyrl"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Mn"/>
         <rdfs:label xml:lang="en">Mongolian (in Cyrillic)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6975,6 +7016,8 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnLatn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptLatn"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Mn"/>
         <rdfs:label xml:lang="en">Mongolian in Romanized form</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6985,6 +7028,8 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnMong">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptMong"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Mn"/>
         <rdfs:label xml:lang="en">Mongolian (in old Mongolian script)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -6995,7 +7040,18 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MnUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangMn"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Mn"/>
         <rdfs:label xml:lang="en">Mongolian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/New -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/New">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
+        <rdfs:label xml:lang="en">Newari</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7006,6 +7062,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangNew"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptDeva"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/New"/>
         <rdfs:label xml:lang="en">Newari in Devanagari</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7017,6 +7074,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangNew"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptNewa"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/New"/>
         <rdfs:label xml:lang="en">Newari in Pracalit</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7180,14 +7238,47 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PaliThai -->
+    <!-- http://purl.bdrc.io/resource/Pi -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PaliThai">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Pi">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
+        <rdfs:label xml:lang="en">Pali</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PiMymr -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PiMymr">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangPi"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptMymr"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Pi"/>
+        <rdfs:label xml:lang="en">Pali (Burmese)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PiSinh -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PiSinh">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangPi"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptSinh"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Pi"/>
+        <rdfs:label xml:lang="en">Pali (Sinhalese)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PiThai -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PiThai">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangPi"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptThai"/>
-        <transliteration rdf:resource="http://purl.bdrc.io/resource/TransPaliThai"/>
-        <rdfs:comment xml:lang="en">Pali transliterated in Thai script</rdfs:comment>
+        <rdfs:comment xml:lang="en">Pali in Thai script</rdfs:comment>
         <rdfs:label xml:lang="en">Pali in Thai</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7888,7 +7979,18 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangRu"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptCyrl"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
         <rdfs:label xml:lang="en">Russian in Cyrillic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/Sa -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Sa">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
+        <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7899,6 +8001,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptBeng"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Bengali</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7910,6 +8013,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanjana"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Devanagari</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7921,6 +8025,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptNewa"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Pracalit</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7932,6 +8037,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanjana"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Ranjana</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7943,6 +8049,7 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptTibt"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <transliteration rdf:resource="http://purl.bdrc.io/resource/TransSaTibt"/>
         <rdfs:label xml:lang="en">Sanskrit in Tibetan transliteration</rdfs:label>
     </owl:NamedIndividual>
@@ -7954,7 +8061,8 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
-        <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
+        <rdfs:label xml:lang="en">Sanskrit (unspecified script)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8036,6 +8144,24 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/ScriptHans -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptHans">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Simplified Chinese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptHant -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptHant">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Traditional Chinese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ScriptKhyugYig -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptKhyugYig">
@@ -8056,6 +8182,24 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/ScriptMong -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptMong">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Classical Mongolian script</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptMymr -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptMymr">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Burmese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ScriptNewa -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptNewa">
@@ -8072,6 +8216,15 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptRanjana">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:label xml:lang="en">Ranjana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptSinh -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptSinh">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Sinhalese</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8665,15 +8818,6 @@ equiv Dagpo Kagyu?</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/resource/TransPaliThai -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransPaliThai">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Transliteration"/>
-        <rdfs:label xml:lang="en">Transliteration of Pali using Thai script</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/TransPinyin -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TransPinyin">
@@ -8852,12 +8996,47 @@ equiv Dagpo Kagyu?</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/resource/Zh -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Zh">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
+        <rdfs:label xml:lang="en">Chinese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ZhHans -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ZhHans">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptHans"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Zh"/>
+        <rdfs:label xml:lang="en">Chinese (Simplified)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ZhHant -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ZhHant">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptHant"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Zh"/>
+        <rdfs:label xml:lang="en">Chinese (Traditional)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ZhUnspecified -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ZhUnspecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangZh"/>
-        <rdfs:label xml:lang="en">Chinese</rdfs:label>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Zh"/>
+        <rdfs:label xml:lang="en">Chinese (unspecified script)</rdfs:label>
     </owl:NamedIndividual>
     
 
