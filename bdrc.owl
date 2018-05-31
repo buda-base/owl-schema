@@ -6671,9 +6671,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/HiUnspecified -->
+    <!-- http://purl.bdrc.io/resource/Hi -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/HiUnspecified">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Hi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangHi"/>
         <rdfs:label xml:lang="en">Hindi</rdfs:label>
