@@ -112,7 +112,8 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 - `sa-x-slp1` for Sanskrit written in [SLP1](http://www.sanskrit-lexicon.uni-koeln.de/talkMay2008/SLP1.pdf)
 - `sa-x-iso` for Sanskrit written in [ISO 15919](https://en.wikipedia.org/wiki/ISO_15919)
 - `sa-Deva-bauddha` for Buddhist Hybrid Sanskrit (*BHS*) written in Devanagari
-- `sa-bauddha-x-iast` for  Buddhist Hybrid Sanskrit (*BHS*) written in IAST
+- `sa-bauddha-x-iast` for Buddhist Hybrid Sanskrit (*BHS*) written in IAST
+- `sa-x-phon-zh-Hant` for Sanskrit written in Traditional Chinese characters
 
 #### Tibetan
 For Tibetan we do not keep the `-Tibt` script tag. We thus have:
@@ -121,7 +122,8 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `bo-x-ewts` for EWTS transliteration
 - `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
 - `bo-x-acip` for ACIP transliteration
-- `bo-x-dts` for a transliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677)).
+- `bo-x-dts` for a transliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677))
+- `bo-x-phon-zh-Hant` for Tibetan written in Traditional Chinese characters
 
 #### Mongolian
 
