@@ -6814,6 +6814,16 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/LicenseCCBYSA4U -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCCBYSA4U">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
+        <rdfs:comment xml:lang="en">Creative Commons BY-SA 4.0 Unported</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/LicenseCopyrighted -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCopyrighted">
