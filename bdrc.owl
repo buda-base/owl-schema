@@ -5465,6 +5465,7 @@ Relative pagination uses pagination in the content of the work while absolute co
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonChineseName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonName"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdfs:comment>
         <rdfs:label xml:lang="en">Chinese Name</rdfs:label>
     </owl:Class>
     
