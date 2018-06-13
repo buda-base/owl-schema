@@ -8043,7 +8043,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaDeva">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
-        <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanjana"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanj"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Devanagari</rdfs:label>
     </owl:NamedIndividual>
@@ -8067,7 +8067,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaRanj">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
         <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
-        <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanjana"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptRanj"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Ranjana</rdfs:label>
     </owl:NamedIndividual>
@@ -8242,12 +8242,14 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/ScriptRanjana -->
+    <!-- http://purl.bdrc.io/resource/ScriptRanj -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptRanjana">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptRanj">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:comment xml:lang="en">This script is not normalized in ISO 15924 (yet?)</rdfs:comment>
-        <rdfs:label xml:lang="en">Ranjana</rdfs:label>
+        <rdfs:label xml:lang="en">Ranjana (Kutila, Lantsa)</rdfs:label>
+        <rdfs:label xml:lang="sa-x-iast">Rañjanā</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">lany+dza</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://scriptsource.org/scr/Qabb"/>
     </owl:NamedIndividual>
     
