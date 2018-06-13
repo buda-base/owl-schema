@@ -8246,7 +8246,9 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptRanjana">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:comment xml:lang="en">This script is not normalized in ISO 15924 (yet?)</rdfs:comment>
         <rdfs:label xml:lang="en">Ranjana</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://scriptsource.org/scr/Qabb"/>
     </owl:NamedIndividual>
     
 
