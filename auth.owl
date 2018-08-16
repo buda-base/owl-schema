@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.bdrc.io/ontology/ext/auth#"
+     xml:base="http://purl.bdrc.io/ontology/ext/auth"
+     xmlns:aut="http://purl.bdrc.io/ontology/ext/auth/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:adr="http://purl.bdrc.io/resource-auth/">
+    <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/ext/auth">
+        <rdfs:label xml:lang="en">BDRC&apos;s authentication ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/AuthId -->
+
+    <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/ext/auth/AuthId">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/forGroup -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/forGroup">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
+        <rdfs:label xml:lang="en">for group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/forPermission -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/forPermission">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
+        <rdfs:label xml:lang="en">for permission</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/forRole -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/forRole">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
+        <rdfs:label xml:lang="en">for role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/hasMember">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/hasPermission -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/hasPermission">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
+        <rdfs:label xml:lang="en">has permission</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/hasRole">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/authId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/authId">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unique id given to the user by the authorization provider</rdfs:comment>
+        <rdfs:label xml:lang="en">authentification id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/desc -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/desc">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Application"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">A group, Role or Permission description</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/path -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/path">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unique path of a given Endpoint or web service</rdfs:comment>
+        <rdfs:label xml:lang="en">path</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/Application -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Application">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:comment xml:lang="en">represent a application that provides a set of web services or exposes endpoints</rdfs:comment>
+        <rdfs:label xml:lang="en">application</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/Endpoint -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Endpoint">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:comment xml:lang="en">The Endpoint object represents any secured web or REST service provided accross the whole organization</rdfs:comment>
+        <rdfs:label xml:lang="en">endpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/Entity -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/Group -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Group">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:comment xml:lang="en">The Group objects represent a specific category of users</rdfs:comment>
+        <rdfs:label xml:lang="en">group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/Permission -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Permission">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:comment xml:lang="en">The Permission object represent fine grained authorization policies. It may be associated with a Role object.</rdfs:comment>
+        <rdfs:label xml:lang="en">permission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/Role -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Role">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:comment xml:lang="en">A Role object is associated to an application and possibly various Permission objects</rdfs:comment>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/User -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/User">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">The User object represents any person registered to the system. A user instance may belong to a Group and may have a Role</rdfs:comment>
+        <rdfs:label xml:lang="en">user</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment xml:lang="en">The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
