@@ -52,6 +52,7 @@
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Application"/>
+        <rdfs:comment xml:lang="en">This property links permissions, roles and endpoints to their associated application resources.</rdfs:comment>
         <rdfs:label xml:lang="en">application ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -63,6 +64,7 @@
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
+        <rdfs:comment xml:lang="en">Besides linking a User to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources.</rdfs:comment>
         <rdfs:label xml:lang="en">for group</rdfs:label>
     </owl:ObjectProperty>
     
@@ -74,6 +76,7 @@
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/ResourceAccess"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
+        <rdfs:comment xml:lang="en">Links ResourceAccess and Endpoints to the required permissions resources. This is used in bdrc specific auth model (i.e ResourceAccess and Endpoints are not modelizations of auth0 objects).</rdfs:comment>
         <rdfs:label xml:lang="en">for permission</rdfs:label>
     </owl:ObjectProperty>
     
@@ -84,6 +87,8 @@
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/forRole">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
+        <rdfs:comment xml:lang="en">Links Endpoints to their authorized auth0 roles, allowing request filters to give or deny access to endpoints according to a specific user profile. 
+Note that this property also links Endpoints (implicitly) to permissions associated to auth0 corresponding roles</rdfs:comment>
         <rdfs:label xml:lang="en">for role</rdfs:label>
     </owl:ObjectProperty>
     
@@ -94,6 +99,7 @@
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/hasMember">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
+        <rdfs:comment xml:lang="en">Links Users and Groups following auth0 model</rdfs:comment>
         <rdfs:label xml:lang="en">has member</rdfs:label>
     </owl:ObjectProperty>
     
@@ -104,6 +110,7 @@
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/hasPermission">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
+        <rdfs:comment xml:lang="en">Links Roles and permissions, following Auth0 model.</rdfs:comment>
         <rdfs:label xml:lang="en">has permission</rdfs:label>
     </owl:ObjectProperty>
     
@@ -115,7 +122,8 @@
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
-        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <rdfs:comment xml:lang="en">Links Groups or Users to Roles, following auth0 model.</rdfs:comment>
+        <rdfs:comment xml:lang="en">has role</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -125,6 +133,8 @@
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/policy">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/ResourceAccess"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
+        <rdfs:comment xml:lang="en">Links ResourceAccess objects to bdrc AccessType.
+This property is used for checking access rights against protected resources available at secured or open endpoints. It corresponds to the finest grained authorization in bdrc auth implementation.</rdfs:comment>
         <rdfs:label xml:lang="en">policy</rdfs:label>
     </owl:ObjectProperty>
     
@@ -171,7 +181,8 @@
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/path">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The unique path of a given Endpoint or web service</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unique path of a given Endpoint or web service. This path is unique for the application associated with this Endpoint.
+Important: note that other endpoints of different applications may have the same path.</rdfs:comment>
         <rdfs:label xml:lang="en">path</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -190,7 +201,9 @@
 
     <!-- http://purl.bdrc.io/ontology/admin/AccessType -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/AccessType"/>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/AccessType">
+        <rdfs:comment xml:lang="en">a bdrc AccessType as defined at http://purl.bdrc.io/ontology/admin/AccessType</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -198,7 +211,7 @@
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Application">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
-        <rdfs:comment xml:lang="en">represent a application that provides a set of web services or exposes endpoints</rdfs:comment>
+        <rdfs:comment xml:lang="en">represent a application that provides a set of web services or exposes endpoints. For instance, bdrc  Linked Data server is one app and bdrc IIIF Image server is another one.</rdfs:comment>
         <rdfs:label xml:lang="en">application</rdfs:label>
     </owl:Class>
     
@@ -208,7 +221,8 @@
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Endpoint">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
-        <rdfs:comment xml:lang="en">The Endpoint object represents any secured web or REST service provided accross the whole organization</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Endpoint object represents any secured web or REST service provided accross the whole organization. Endpoints are associated with a given app (Linked data server, Image server, etc...).
+Any application implementing bdrc auth0 security can therefore filter its own secured endpoints and check against user credentials to allow or deny access to these endpoints.</rdfs:comment>
         <rdfs:label xml:lang="en">endpoint</rdfs:label>
     </owl:Class>
     
@@ -224,7 +238,11 @@
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Group">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
-        <rdfs:comment xml:lang="en">The Group objects represent a specific category of users</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Group objects represent a specific category of users. 
+Following auth0 model, Groups are also associated with roles, i.e that each member of the group inherits the roles associated with that group. 
+Therefore, the role associated to a specific user are of two types: 
+1) Specific roles associated with the user outside of a group; 
+2) Roles inherited from all groups (and eventuelly nested groups) the user may belong to.</rdfs:comment>
         <rdfs:label xml:lang="en">group</rdfs:label>
     </owl:Class>
     
@@ -234,7 +252,8 @@
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Permission">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
-        <rdfs:comment xml:lang="en">The Permission object represent fine grained authorization policies. It may be associated with a Role object.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Permission object represent fine grained authorization policies. It may be associated with a Role object and is therefore restricted to the application associated with that role.
+For instance, a permission associated to bdrc Linked Data Server application can only be associated to a role defined for that same Linked Data server app.</rdfs:comment>
         <rdfs:label xml:lang="en">permission</rdfs:label>
     </owl:Class>
     
@@ -244,6 +263,7 @@
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/ResourceAccess">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:comment xml:lang="en">The ResourceAccess object defines a mapping between Permissions and bdrc AccessType. The auth mechanism looks for a match between User permissions and the specific AccessType of a requested resource.</rdfs:comment>
         <rdfs:label xml:lang="en">resource access</rdfs:label>
     </owl:Class>
     
@@ -253,7 +273,8 @@
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Role">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
-        <rdfs:comment xml:lang="en">A Role object is associated to an application and possibly various Permission objects</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Role object is associated to an application and possibly various Permission objects.
+It is important to notice that roles are used for application level access control while groups can be used accross all applications.</rdfs:comment>
         <rdfs:label xml:lang="en">role</rdfs:label>
     </owl:Class>
     
@@ -264,7 +285,8 @@
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/User">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment xml:lang="en">The User object represents any person registered to the system. A user instance may belong to a Group and may have a Role</rdfs:comment>
+        <rdfs:comment xml:lang="en">The User object represents any person registered to the system. A user instance may belong to a Group and may have a Role.
+It is worth noticing that permissions are not associated directly to a User but instead, through its various roles.</rdfs:comment>
         <rdfs:label xml:lang="en">user</rdfs:label>
     </owl:Class>
     
