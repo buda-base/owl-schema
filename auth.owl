@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.bdrc.io/ontology/ext/auth#"
      xml:base="http://purl.bdrc.io/ontology/ext/auth"
      xmlns:aut="http://purl.bdrc.io/ontology/ext/auth/"
+     xmlns:bdr="http://purl.bdrc.io/resource/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -44,10 +45,23 @@
     
 
 
+    <!-- http://purl.bdrc.io/ontology/ext/auth/appId -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/appId">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Application"/>
+        <rdfs:label xml:lang="en">application ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/ext/auth/forGroup -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/forGroup">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Group"/>
         <rdfs:label xml:lang="en">for group</rdfs:label>
     </owl:ObjectProperty>
@@ -58,6 +72,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/forPermission">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Endpoint"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/ResourceAccess"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Permission"/>
         <rdfs:label xml:lang="en">for permission</rdfs:label>
     </owl:ObjectProperty>
@@ -101,6 +116,16 @@
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/User"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Role"/>
         <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/policy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/ext/auth/policy">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/ext/auth/ResourceAccess"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/AccessType"/>
+        <rdfs:label xml:lang="en">policy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -163,6 +188,12 @@
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/AccessType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/AccessType"/>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/ext/auth/Application -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/Application">
@@ -205,6 +236,15 @@
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
         <rdfs:comment xml:lang="en">The Permission object represent fine grained authorization policies. It may be associated with a Role object.</rdfs:comment>
         <rdfs:label xml:lang="en">permission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/ext/auth/ResourceAccess -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/ext/auth/ResourceAccess">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/ext/auth/Entity"/>
+        <rdfs:label xml:lang="en">resource access</rdfs:label>
     </owl:Class>
     
 
