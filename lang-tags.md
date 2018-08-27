@@ -132,6 +132,10 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `cmg-x-poppe` for Classical Mongolian using [Poppe](https://viaf.org/viaf/22157344)'s translitteration (the one used in his [Grammar](http://www.worldcat.org/oclc/888131043))
 - `cmg-x-poppe-simpl` same as previous but with simplifications (`č` -> `c`; `ǰ` -> `j`; `š` -> `sh`; `γ` -> `g`)
 
+#### Rare languages
+
+Some Burushaski titles appear from time to time in the Tibetan canon (see Derge Kangyur, vol. 97, p. 86b, l. 1). When written in Tibetan, they can be recorded with the tag `bsk-Tibt`. Zhangzhung language written in Tibetan script is `xzh-Tibt`.
+
 ## See also
 - [BIBFRAME Conventions](http://connect.ala.org/node/271553) and [this thread](https://listserv.loc.gov/cgi-bin/wa?A1=ind1712&L=BIBFRAME#7)
 - [SARIT Guidelines](http://sarit.indology.info/apps/sarit-pm/docs/encoding-guidelines-simple.html#The-xmlid-and-xmllang-attributes)
