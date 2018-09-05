@@ -5417,6 +5417,13 @@ bdr:Lwwww a :Lineage ;
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Note">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
         <rdfs:comment xml:lang="en">A comment about the subject resource, possibly with a source Work and a location in the Work</rdfs:comment>
+        <rdfs:comment xml:lang="en">Notes with content &quot;Old TSD Schools table tree:&quot; are legacy data from the earliest days of Gene Smith&apos;s efforts to create a database about Tibetan texts. These notes are on Person resources.
+
+Gene originally used a simple database called AskSam and when he added a Person he would mark them with one or more labels such as &quot;Rnying-ma&quot;, &quot;Indian Panditas&quot;, &quot;Ruler&quot;, &quot;Aristocracy&quot;, &quot;Bka&apos;-gdams-pa -- Dga&apos;-ldan-pa&quot;, and so on. 
+
+When this data was migrated to XML (by way of a Tsadra db and then TBRCDat) no schema was developed for these labels and the content been preserved as free text notes with the tag &quot;Old TSD Schools table tree:&quot;
+
+TSD stands for Tibetan Schools Data. TSD data was only entered by Gene and is no longer used in cataloging.</rdfs:comment>
         <rdfs:label xml:lang="en">Note</rdfs:label>
     </owl:Class>
     
