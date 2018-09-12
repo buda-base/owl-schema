@@ -20,8 +20,25 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/core/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</owl:versionInfo>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+        <rdfs:comment>20180911 v 1.1
+
+Update comment for :ObjectType
+
+provided documentation for :workCreator properties
+
+added creatorReciter
+added creatorIndicScholar
+added creatorForger
+added creatorHeadTranslator
+added creatorOralTranslator
+added creatorUnspecified
+added creatorAmanuensis
+
+deprecated :creatorGeneralAuthor
+deprecated :creatorPandita
+deprecated :creatorRequester</rdfs:comment>
     </owl:Ontology>
     
 
@@ -998,10 +1015,21 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/creatorAmanuensis -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorAmanuensis">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">the person who writes down a translation in Chinese, in a capacity something like a scribe; Chn. bishou 筆受</rdfs:comment>
+        <rdfs:label xml:lang="en">amanuensis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/creatorArtist -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorArtist">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like</rdfs:comment>
         <rdfs:label xml:lang="en">artist</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1011,6 +1039,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorAttributedAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">A creator identified by a separate source as an author of the Work</rdfs:comment>
         <rdfs:label xml:lang="en">attributed author</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1020,6 +1049,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorBard">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">for a Work of verse a poet who composed the verse</rdfs:comment>
         <rdfs:label xml:lang="en">bard</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1029,6 +1059,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCalligrapher">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">For a handwritten Work an individual that drew the text or carved it on woord blocks</rdfs:comment>
         <rdfs:label xml:lang="en">calligrapher</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1038,6 +1069,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCommentator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries.</rdfs:comment>
         <rdfs:label xml:lang="en">commentator</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1047,6 +1079,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorContributingAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280</rdfs:comment>
         <rdfs:label xml:lang="en">contributing author</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1056,7 +1089,21 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorEditor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
+
+Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
+a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
         <rdfs:label xml:lang="en">editor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorForger -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorForger">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was &quot;translated&quot; by a person other than the forger (i.e. with a false ascription attached); Chn. weizuo 偽作 etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">forger</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1066,6 +1113,27 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorGeneralAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
         <rdfs:label xml:lang="en">general author</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :creatorMainAuthor</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorHeadTranslator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorHeadTranslator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">the person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation; such persons may be explicitly identified by the tradition as Chn. yizhu 譯主, but often our knowledge that this was in fact a person&apos;s role is implicit or inferred from other knowledge about the composition of the translation group</rdfs:comment>
+        <rdfs:label xml:lang="en">head translator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorIndicScholar -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorIndicScholar">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as &quot;head translator&quot;; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states &quot;handled the Indic text&quot;, Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of &quot;reciter&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Indic Scholar</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1074,7 +1142,18 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorMainAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the &quot;author&quot; of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the &quot;author&quot; of a commentary</rdfs:comment>
         <rdfs:label xml:lang="en">main author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorOralTranslator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorOralTranslator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">oral translator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1084,6 +1163,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorPandita">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
         <rdfs:label xml:lang="en">pandita</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :creatorIndicScholar</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1092,7 +1172,20 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRecipientOfResponseToQuery">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An individual to whom answers in a Work are addressed. Cf., W22146:
+
+Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order.</rdfs:comment>
         <rdfs:label xml:lang="en">recipient of response to query</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorReciter -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReciter">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with &quot;IndicScholar&quot; (see below)</rdfs:comment>
+        <rdfs:label xml:lang="en">reciter</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1101,7 +1194,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRequester">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An individual who requested the author to write the Work</rdfs:comment>
         <rdfs:label xml:lang="en">requester</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated - not used</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1110,6 +1205,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReviserOfTranslation">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An individual who is known to have revised a previoius translation. Cf., W3CN4970:
+
+The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen.</rdfs:comment>
         <rdfs:label xml:lang="en">reviser of translation</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1119,6 +1217,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorScribe">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An individual that wrote the text typically during recitation by the author. Cf., W8145</rdfs:comment>
         <rdfs:label xml:lang="en">scribe</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1128,6 +1227,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTerton">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">An individual who revealed the Work as treasure texts. Cf., W25816:
+
+Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak</rdfs:comment>
         <rdfs:label xml:lang="en">tertön</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1137,7 +1239,20 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">A translator of the Work. Cf., W8LS25412:
+
+The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup</rdfs:comment>
         <rdfs:label xml:lang="en">translator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorUnspecified -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorUnspecified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person</rdfs:comment>
+        <rdfs:label xml:lang="en">unspecified</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -5433,7 +5548,7 @@ TSD stands for Tibetan Schools Data. TSD data was only entered by Gene and is no
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ObjectType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">ObjectType describes the nature of the witness. For example, it could be manuscript, computer, woodblock, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">ObjectType describes how the witness came to be. For example, it could have been written by the author, an Autograph; it could have been printed from wood blocks, a BlockPrint; it could have been OCR&apos;d from some other witness; and so on.</rdfs:comment>
         <rdfs:label xml:lang="en">print type</rdfs:label>
     </owl:Class>
     
