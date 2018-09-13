@@ -20,7 +20,12 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/core/">
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180913 v 1.1.01
+
+added credatorCompiler
+
+deprecated creatorEditor</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.01</owl:versionInfo>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
         <rdfs:comment>20180911 v 1.1
 
@@ -1075,6 +1080,19 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/creatorCompiler -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCompiler">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:comment xml:lang="en">a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
+
+Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
+a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
+        <rdfs:label xml:lang="en">compiler</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/creatorContributingAuthor -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorContributingAuthor">
@@ -1089,11 +1107,8 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorEditor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:comment xml:lang="en">a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
-
-Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
-a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
         <rdfs:label xml:lang="en">editor</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of creatorCompiler</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1251,7 +1266,7 @@ The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, t
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorUnspecified">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:comment xml:lang="en">a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person</rdfs:comment>
+        <rdfs:comment xml:lang="en">a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known</rdfs:comment>
         <rdfs:label xml:lang="en">unspecified</rdfs:label>
     </owl:ObjectProperty>
     
