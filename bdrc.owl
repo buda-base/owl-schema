@@ -20,7 +20,6 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/core/">
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.00</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
 revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
@@ -30,6 +29,7 @@ added adm:replaceWithClass
 added adm:replaceWithDataProperty
 added adm:replaceWithIndividual
 added adm:replaceWithObjectProperty</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.01</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
@@ -53,6 +53,9 @@ added creatorCompiler
 
 deprecated creatorEditor</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.01
+
+added :dateApproximate</rdfs:comment>
     </owl:Ontology>
     
 
@@ -3168,6 +3171,17 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/dateApproximate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/dateApproximate">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/EventOrPeriod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">set to true to indicate that the date information in an :Event or :Period is approximate or uncertain</rdfs:comment>
+        <rdfs:label xml:lang="en">date is approximate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/eTextInVolume -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/eTextInVolume">
@@ -6161,7 +6175,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Role">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
         <rdfs:comment xml:lang="en">Names are represented by rdfs:label</rdfs:comment>
-        <rdfs:comment xml:lang="en">Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly concept in libraries.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly used concept in libraries.</rdfs:comment>
         <rdfs:label xml:lang="en">Role</rdfs:label>
     </owl:Class>
     
