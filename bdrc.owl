@@ -20,14 +20,17 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/core/">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180913 v 1.1.01
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.00</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
-added credatorCompiler
+revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
 
-deprecated creatorEditor</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.01</owl:versionInfo>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
-        <rdfs:comment>20180911 v 1.1
+added adm:deprecatedComment
+added adm:replaceWithClass
+added adm:replaceWithDataProperty
+added adm:replaceWithIndividual
+added adm:replaceWithObjectProperty</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
 
@@ -44,6 +47,12 @@ added creatorAmanuensis
 deprecated :creatorGeneralAuthor
 deprecated :creatorPandita
 deprecated :creatorRequester</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180913 v 1.1.01
+
+added creatorCompiler
+
+deprecated creatorEditor</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
     </owl:Ontology>
     
 
@@ -142,6 +151,15 @@ The value of this property should be an explanation of the needed conversion as 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/convertValueToClass">
         <rdfs:comment xml:lang="en">Indicates that the value of the property being converted is to be an instance of the designated class</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/admin/conversionAnnotations"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/deprecatedComment -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/deprecatedComment">
+        <rdfs:comment xml:lang="en">short explanation of why a vocabulary item is being deprecated</rdfs:comment>
+        <rdfs:label xml:lang="en">deprecation comment</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -370,6 +388,42 @@ The value of this property should be an explanation of the needed conversion as 
         <rdfs:label xml:lang="en">includes</rdfs:label>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/admin/Product"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/replaceWithClass -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/replaceWithClass">
+        <rdfs:comment xml:lang="en">used when deprecating a vocabulary item in favor of a Class</rdfs:comment>
+        <rdfs:label xml:lang="en">replace with a Class</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/replaceWithDataProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/replaceWithDataProperty">
+        <rdfs:comment xml:lang="en">used when deprecating a vocabulary item in favor of a Data property</rdfs:comment>
+        <rdfs:label xml:lang="en">replace with a Data property</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/replaceWithIndividual -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/replaceWithIndividual">
+        <rdfs:comment xml:lang="en">used when deprecating a vocabulary item in favor of an Individual</rdfs:comment>
+        <rdfs:label xml:lang="en">replace with an Individual</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/admin/replaceWithObjectProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/replaceWithObjectProperty">
+        <rdfs:comment xml:lang="en">used when deprecating a vocabulary item in favor of an Object property</rdfs:comment>
+        <rdfs:label xml:lang="en">replace with Object property</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -1107,8 +1161,10 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorEditor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of creatorCompiler</adm:deprecatedComment>
+        <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorCompiler"/>
         <rdfs:label xml:lang="en">editor</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of creatorCompiler</owl:deprecated>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1127,8 +1183,10 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorGeneralAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of :creatorMainAuthor</adm:deprecatedComment>
+        <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorMainAuthor"/>
         <rdfs:label xml:lang="en">general author</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of :creatorMainAuthor</owl:deprecated>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1177,8 +1235,10 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorPandita">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of :creatorIndicScholar</adm:deprecatedComment>
+        <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorIndicScholar"/>
         <rdfs:label xml:lang="en">pandita</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of :creatorIndicScholar</owl:deprecated>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1209,9 +1269,10 @@ Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Y
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRequester">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <adm:deprecatedComment xml:lang="en">deprecated - not used</adm:deprecatedComment>
         <rdfs:comment xml:lang="en">An individual who requested the author to write the Work</rdfs:comment>
         <rdfs:label xml:lang="en">requester</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated - not used</owl:deprecated>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -2395,8 +2456,9 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
+        <adm:deprecatedComment xml:lang="en">not actually used in legacy data and not well defined</adm:deprecatedComment>
         <rdfs:comment xml:lang="en">Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions.</rdfs:comment>
-        <owl:deprecated xml:lang="en">not actually used in legacy data and not well defined</owl:deprecated>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -2753,9 +2815,11 @@ Adding this &quot;virtual&quot; property to the ontology provides a place to add
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workHasSite">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of the various :WorkEvents.</adm:deprecatedComment>
+        <adm:replaceWithClass rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
         <rdfs:comment xml:lang="en">A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)</rdfs:comment>
         <rdfs:label xml:lang="en">has site</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of the various :WorkEvents.</owl:deprecated>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -3340,9 +3404,13 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/onOrAbout">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <adm:deprecatedComment xml:lang="en">:onYear, :notBefore, and :notAfter will replace :onOrAbout</adm:deprecatedComment>
+        <adm:replaceWithDataProperty rdf:resource="http://purl.bdrc.io/ontology/core/notAfter"/>
+        <adm:replaceWithDataProperty rdf:resource="http://purl.bdrc.io/ontology/core/notBefore"/>
+        <adm:replaceWithDataProperty rdf:resource="http://purl.bdrc.io/ontology/core/onYear"/>
         <rdfs:comment xml:lang="en">This property replaces the various separate circa properties with a single property that will have a single validator and editor support.</rdfs:comment>
         <rdfs:label xml:lang="en">circa</rdfs:label>
-        <owl:deprecated xml:lang="en">:onYear, :notBefore, and :notAfter will replace :onOrAbout</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -3711,9 +3779,11 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workDateOfWriting">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of :CompletedEvent.</adm:deprecatedComment>
         <rdfs:comment xml:lang="en">this property is migrated from the pubinfo.xsd and is sparsely used in the xml dataset (546 occurrences).</rdfs:comment>
         <rdfs:label xml:lang="en">date of writing</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of :CompletedEvent.</owl:deprecated>
+        <owl:deprecated rdf:resource="http://purl.bdrc.io/ontology/core/CompletedEvent"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -4374,9 +4444,11 @@ This is generally not the source printery of the original wood block prints that
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPublisherLocation">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of :PublishedEvent</adm:deprecatedComment>
+        <adm:replaceWithClass rdf:resource="http://purl.bdrc.io/ontology/core/PublishedEvent"/>
         <rdfs:comment xml:lang="en">Loction of the publisher of the form of the Work that has been digitized.</rdfs:comment>
         <rdfs:label xml:lang="en">publisher location</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of :PublishedEvent</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -4386,9 +4458,11 @@ This is generally not the source printery of the original wood block prints that
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workPublisherName">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <adm:deprecatedComment xml:lang="en">deprecated in favor of :PublishedEvent</adm:deprecatedComment>
+        <adm:replaceWithClass rdf:resource="http://purl.bdrc.io/ontology/core/PublishedEvent"/>
         <rdfs:comment xml:lang="en">The name of the publisher transcribed from the Work</rdfs:comment>
         <rdfs:label xml:lang="en">publisher name</rdfs:label>
-        <owl:deprecated xml:lang="en">deprecated in favor of :PublishedEvent</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -5756,9 +5830,11 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonFoundsMonastery">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/PersonEvent"/>
+        <adm:deprecatedComment xml:lang="en">this Person event is deprecated in favor of modeling via PlaceEvent</adm:deprecatedComment>
+        <adm:replaceWithClass rdf:resource="http://purl.bdrc.io/ontology/core/PlaceFounded"/>
         <rdfs:comment xml:lang="en">Migration hint: occurrences of this event in the legacy data are modeled by adding a PlaceEvent of type founded to the Monastery Place and a reference to the founder Person via :placeEventWho predicate</rdfs:comment>
         <rdfs:label xml:lang="en">Founds Monastery</rdfs:label>
-        <owl:deprecated xml:lang="en">this Person event is deprecated in favor of modeling via PlaceEvent</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
