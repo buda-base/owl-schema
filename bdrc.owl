@@ -1167,7 +1167,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
         <adm:deprecatedComment xml:lang="en">deprecated in favor of creatorCompiler</adm:deprecatedComment>
         <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorCompiler"/>
         <rdfs:label xml:lang="en">editor</rdfs:label>
-        <owl:deprecated xml:lang="en">true</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1189,7 +1189,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
         <adm:deprecatedComment xml:lang="en">deprecated in favor of :creatorMainAuthor</adm:deprecatedComment>
         <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorMainAuthor"/>
         <rdfs:label xml:lang="en">general author</rdfs:label>
-        <owl:deprecated xml:lang="en">true</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1241,7 +1241,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
         <adm:deprecatedComment xml:lang="en">deprecated in favor of :creatorIndicScholar</adm:deprecatedComment>
         <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorIndicScholar"/>
         <rdfs:label xml:lang="en">pandita</rdfs:label>
-        <owl:deprecated xml:lang="en">true</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1275,7 +1275,19 @@ Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Y
         <adm:deprecatedComment xml:lang="en">deprecated - not used</adm:deprecatedComment>
         <rdfs:comment xml:lang="en">An individual who requested the author to write the Work</rdfs:comment>
         <rdfs:label xml:lang="en">requester</rdfs:label>
-        <owl:deprecated xml:lang="en">true</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creatorReviser -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReviser">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:label xml:lang="en">An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
+
+The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen.</rdfs:label>
+        <rdfs:label xml:lang="en">reviser</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1284,10 +1296,12 @@ Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Y
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReviserOfTranslation">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <adm:replaceWithObjectProperty rdf:resource="http://purl.bdrc.io/ontology/core/creatorReviser"/>
         <rdfs:comment xml:lang="en">An individual who is known to have revised a previoius translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen.</rdfs:comment>
         <rdfs:label xml:lang="en">reviser of translation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -5081,6 +5095,15 @@ We welcome your input. Please contact us with any comments or questions at inqui
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/CompiledEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CompiledEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:label xml:lang="en">compiled</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/CompletedEvent -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CompletedEvent">
@@ -5169,8 +5192,10 @@ bdr:Czzzz a :Corporation ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EditedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <adm:replaceWithClass rdf:resource="http://purl.bdrc.io/ontology/core/CompiledEvent"/>
         <rdfs:comment xml:lang="en">An event of editing a :Work</rdfs:comment>
         <rdfs:label xml:lang="en">Work Edited</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -6170,6 +6195,15 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/RevisedEvent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/RevisedEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <rdfs:label xml:lang="en">revised</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/Role -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Role">
@@ -6335,7 +6369,9 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TranslationRevisedEvent">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+        <adm:replaceWithClass rdf:resource="http://purl.bdrc.io/ontology/core/RevisedEvent"/>
         <rdfs:label xml:lang="en">Revision of a translation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
