@@ -122,6 +122,7 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `bo-x-ewts` for EWTS transliteration
 - `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
 - `bo-x-acip` for ACIP transliteration
+- `bo-x-pinyin` for Pinyin phonetic transcription
 - `bo-x-dts` for a transliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677))
 - `bo-x-phon-zh-Hant` for Tibetan written in Traditional Chinese characters
 
