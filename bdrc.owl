@@ -1440,6 +1440,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasBrother">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/hasSibling"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:label xml:lang="en">has brother</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1468,6 +1469,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasCousin">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/kinWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:label xml:lang="en">has cousin</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1833,6 +1835,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasSister">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/hasSibling"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:label xml:lang="en">has sister</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1879,6 +1882,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasUnknownKinship">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/kinWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:label xml:lang="en">has unknown kinship with</rdfs:label>
     </owl:ObjectProperty>
     
