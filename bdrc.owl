@@ -834,7 +834,8 @@ We take the view that the summary or contents statements can be treated in a man
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <rdfs:label xml:lang="en">The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle</rdfs:label>
+        <rdfs:comment xml:lang="en">The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle</rdfs:comment>
+        <rdfs:label xml:lang="en">label</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </rdf:Description>
     
