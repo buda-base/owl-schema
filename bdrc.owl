@@ -36,7 +36,7 @@ added adm:replaceWithClass
 added adm:replaceWithDataProperty
 added adm:replaceWithIndividual
 added adm:replaceWithObjectProperty</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.03</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.04</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
@@ -63,6 +63,10 @@ deprecated creatorEditor</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.01
 
 added :dateApproximate</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.04
+
+added domain and range for personTeacherOf
+added :personConsortOf as inverse of :personHasConsort</rdfs:comment>
     </owl:Ontology>
     
 
@@ -2343,6 +2347,18 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/personConsortOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personConsortOf">
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personHasConsort"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:comment xml:lang="en">The subject :Person is a consort of the target :Person</rdfs:comment>
+        <rdfs:label xml:lang="en">consort of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/personEvent -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personEvent">
@@ -2389,6 +2405,8 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personHasConsort">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:comment xml:lang="en">the target :Person is a consort of the subject :Person</rdfs:comment>
+        <rdfs:label xml:lang="en">has consort</rdfs:label>
     </owl:ObjectProperty>
     
 
