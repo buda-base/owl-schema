@@ -2426,6 +2426,8 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <!-- http://purl.bdrc.io/ontology/core/personTeacherOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personTeacherOf">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:label xml:lang="en">teacher of</rdfs:label>
     </owl:ObjectProperty>
     
