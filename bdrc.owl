@@ -7173,6 +7173,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangBo">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tib</langMARCCode>
         <rdfs:label xml:lang="en">Tibetan</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">bod yig</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/bod"/>
@@ -7184,6 +7185,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangDz">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dzo</langMARCCode>
         <rdfs:label xml:lang="en">Dzongkha (Bhutanese)</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">rdzong kha</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/dzo"/>
@@ -7195,6 +7197,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangEn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eng</langMARCCode>
         <rdfs:label xml:lang="en">English</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/eng"/>
     </owl:NamedIndividual>
@@ -7205,6 +7208,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangHi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hin</langMARCCode>
         <rdfs:label xml:lang="en">Hindi</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/hin"/>
     </owl:NamedIndividual>
@@ -7215,6 +7219,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangMn">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mon</langMARCCode>
         <rdfs:label xml:lang="en">Mongolian</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/mon"/>
     </owl:NamedIndividual>
@@ -7225,6 +7230,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangNew">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</langMARCCode>
         <rdfs:label xml:lang="en">Newari (Nepal Bhasa)</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.lexvo.org/page/iso639-3/new"/>
     </owl:NamedIndividual>
@@ -7235,6 +7241,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangPi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pli</langMARCCode>
         <rdfs:label xml:lang="en">Pali</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/pli"/>
     </owl:NamedIndividual>
@@ -7245,6 +7252,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangRu">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rus</langMARCCode>
         <rdfs:label xml:lang="en">Russian</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/code/ru"/>
     </owl:NamedIndividual>
@@ -7255,6 +7263,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangSa">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">san</langMARCCode>
         <rdfs:label xml:lang="en">Sanskrit</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/san"/>
     </owl:NamedIndividual>
@@ -7265,6 +7274,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangZh">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
+        <langMARCCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chi</langMARCCode>
         <rdfs:label xml:lang="en">Chinese</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/id/iso639-3/zho"/>
     </owl:NamedIndividual>
