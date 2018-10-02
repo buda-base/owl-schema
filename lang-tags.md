@@ -125,6 +125,7 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `bo-Latn-pinyin` for Pinyin phonetic transcription
 - `bo-x-dts` for a transliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677))
 - `bo-x-phon-zh-Hant` for Tibetan written in Traditional Chinese characters
+- `bo-alalc97` for Tibetan transliterated following ALA-LC rules
 
 #### Mongolian
 

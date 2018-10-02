@@ -36,7 +36,13 @@ added adm:replaceWithClass
 added adm:replaceWithDataProperty
 added adm:replaceWithIndividual
 added adm:replaceWithObjectProperty</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.04</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v  1.2.05
+
+added :langMARCCode
+added :placeMARCCountryCode
+added :restored
+added :restoredAlt</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.05</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
@@ -3437,6 +3443,18 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/langMARCCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/langMARCCode">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">three-character alphabetic codes for languages encode in MARC records</rdfs:comment>
+        <rdfs:label xml:lang="en">MARC language code</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.loc.gov/marc/languages/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/notAfter -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/notAfter">
@@ -3570,6 +3588,18 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/placeMARCCountryCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/placeMARCCountryCode">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)</rdfs:comment>
+        <rdfs:label xml:lang="en">MARC Country Code</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/countries/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/placeRegionPoly -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/placeRegionPoly">
@@ -3610,6 +3640,68 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The area in square km of the Place from the World Bank 2010</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/restored -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/restored">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The :restored property is used to add a restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit) and the original language name or title is not manifest in the material being cataloged so that the cataloger prepares a restoration.
+
+For example in:
+
+    cbc:person_18 a :Person ;
+    :personName [
+        rdfs:label &quot;阿地瞿多&quot;@sa-Hant ;
+        :restored &quot;Atikūṭa&quot;@sa-x-iast
+     ] .
+
+the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, and the :restored is a reconstruction of the original Sanskrit encoded as IAST. 
+
+Such reconstructions are typically approximations to the original and there will often be a primary or preferred form of the name or title in which case the :restored property should be used.</rdfs:comment>
+        <rdfs:label xml:lang="en">restored</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/restoredAlt -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/restoredAlt">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">The :restoredAlt property is used to add an alternative restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit).
+
+For example in:
+
+    cbc:person_18 a :Person ;
+    :personName [
+        rdfs:label &quot;阿地瞿多&quot;@sa-Hant ;
+        :restored &quot;Atikūṭa&quot;@sa-x-iast ;
+        :restoredAtl &quot;Atigupta&quot;@sa-x-iast
+     ] .
+
+the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, and the :restoredAlt is a reconstruction of the original Sanskrit encoded as IAST. 
+
+Such reconstructions are typically approximations to the original and there may be alternatives to the preferred form of the name or title in which case :restoredAlt literals may be recorded.</rdfs:comment>
+        <rdfs:label xml:lang="en">restored alternative</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/restored"/>
     </owl:DatatypeProperty>
     
 
@@ -5968,8 +6060,28 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonName">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Facet"/>
-        <rdfs:comment xml:lang="en">:PersonName is one or many authority names of :Person. :PersonName is represented by an rdfs:label and a subclass of :PersonName (which signifies the type of person name). For example: bdr:P1583 a :Person ; :personName [ a bdr:PersonPrimaryName ; rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ]</rdfs:comment>
+        <rdfs:comment xml:lang="en">:PersonName is one or many authority names of :Person. :PersonName is represented by an rdfs:label and a subclass of :PersonName (which signifies the type of person name). For example: 
+
+    bdr:P1583 a :Person ; 
+        :personName 
+            [ a bdr:PersonPrimaryName ; 
+              rdfs:label &quot;dri med &apos;od zer&quot;@bo-x-ewts ] .</rdfs:comment>
         <rdfs:label xml:lang="en">person name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
