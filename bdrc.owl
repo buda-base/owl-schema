@@ -20,10 +20,10 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/core/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.08</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.03
 
 Updated label and comment for rdfs:label</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.07</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180920 v 1.2.02
 
 updated label for :onYear
@@ -37,6 +37,9 @@ added adm:replaceWithClass
 added adm:replaceWithDataProperty
 added adm:replaceWithIndividual
 added adm:replaceWithObjectProperty</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.08
+
+add marc code to language individuals</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v  1.2.05
 
 added :langMARCCode
