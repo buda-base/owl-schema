@@ -42,7 +42,10 @@ added :langMARCCode
 added :placeMARCCountryCode
 added :restored
 added :restoredAlt</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.05</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.06
+
+corrected domain of :langMARCCode</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.06</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
@@ -3446,7 +3449,7 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
     <!-- http://purl.bdrc.io/ontology/core/langMARCCode -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/langMARCCode">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Language"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">three-character alphabetic codes for languages encode in MARC records</rdfs:comment>
         <rdfs:label xml:lang="en">MARC language code</rdfs:label>
