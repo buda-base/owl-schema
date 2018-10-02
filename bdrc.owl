@@ -23,6 +23,7 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.03
 
 Updated label and comment for rdfs:label</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.07</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180920 v 1.2.02
 
 updated label for :onYear
@@ -45,7 +46,6 @@ added :restoredAlt</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.06
 
 corrected domain of :langMARCCode</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.06</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
@@ -72,6 +72,10 @@ deprecated creatorEditor</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.01
 
 added :dateApproximate</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.07
+
+added seeAlso :langMARCCode
+added seeAlso :placeMARCCountryCode</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.04
 
 added domain and range for personTeacherOf
@@ -3453,6 +3457,8 @@ This might require creating an otherwise empty Item to stand-in for a Work that 
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">three-character alphabetic codes for languages encode in MARC records</rdfs:comment>
         <rdfs:label xml:lang="en">MARC language code</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/languages.html"/>
+        <rdfs:seeAlso rdf:resource="http://lexvo.org/ontology#marcCode"/>
         <rdfs:seeAlso rdf:resource="https://www.loc.gov/marc/languages/"/>
     </owl:DatatypeProperty>
     
@@ -3598,6 +3604,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)</rdfs:comment>
         <rdfs:label xml:lang="en">MARC Country Code</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/countries.html"/>
         <rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/countries/"/>
     </owl:DatatypeProperty>
     
@@ -5667,7 +5674,7 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese, bdr:Sa for Sanskrit, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Language</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://lexvo.org/ontology#Language"/>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/languages.html"/>
     </owl:Class>
     
 
