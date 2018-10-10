@@ -88,10 +88,10 @@ Most Chinese tags are all standardized so their choice is easy:
 
 - `zh-Hans` for simplified Chinese characters
 - `zh-Hant` for traditional Chinese characters
-- `zh-latn-pinyin` for Pinyin transliteration
-- `zh-latn-pinyin-x-ndia` for Pinyin transliteration with no diacritics
+- `zh-Latn-pinyin` for Pinyin transliteration
+- `zh-Latn-pinyin-x-ndia` for Pinyin transliteration with no diacritics
 - `zh-x-wade` for Wade-Giles transliteration
-- `zh-x-phon-en` for phonetic English
+- `zh-x-phon-en` for Chinese in phonetics with an English style
 
 #### Pali
 For Pali our convention is to always use a script tag:
