@@ -8530,6 +8530,30 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/SaEasternNagari -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaEasternNagari">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptEasternNagari"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/ScriptEasternNagari"/>
+        <rdfs:label xml:lang="en">Sanskrit in Eastern Nāgārī script</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/SaNepaleseHooked -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaNepaleseHooked">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptNepaleseHooked"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
+        <rdfs:label xml:lang="en">Sanskrit in Nepali Hooked Script</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/SaNewa -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaNewa">
@@ -8538,6 +8562,18 @@ bdr:W22083 a :Work ;
         <script rdf:resource="http://purl.bdrc.io/resource/ScriptNewa"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
         <rdfs:label xml:lang="en">Sanskrit in Pracalit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/SaPostGupta -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaPostGupta">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptPostGupta"/>
+        <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/Sa"/>
+        <rdfs:label xml:lang="en">Sanskrit in Post-Gupta script</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8628,6 +8664,15 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/ScriptEasternNagari -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptEasternNagari">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Eastern Nāgārī</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ScriptGilgitBamiyan1 -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptGilgitBamiyan1">
@@ -8711,6 +8756,15 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/ScriptNepaleseHooked -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptNepaleseHooked">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Nepalese hooked script</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/ScriptNewa -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptNewa">
@@ -8718,6 +8772,15 @@ bdr:W22083 a :Work ;
         <rdfs:comment xml:lang="en">ISO 15924 &quot;Newa&quot;, 333</rdfs:comment>
         <rdfs:label xml:lang="en">Pracalit</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Prachalit_Nepal_alphabet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/ScriptPostGupta -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptPostGupta">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:label xml:lang="en">Post-gupta</rdfs:label>
     </owl:NamedIndividual>
     
 
