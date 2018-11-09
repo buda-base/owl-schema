@@ -7753,6 +7753,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/Pi">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Taxonomy"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangPi"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/LanguageTaxonomy"/>
         <rdfs:label xml:lang="en">Pali</rdfs:label>
     </owl:NamedIndividual>
