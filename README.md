@@ -1,6 +1,6 @@
 # BDRC Ontology Schema
 
-This repository contains the files associated with the BDRC OWL ontology. You can use [Protege](http://protege.stanford.edu/) to edit it.
+This repository contains the files associated with the BDRC OWL ontology. You can use [Protege] (http://protege.stanford.edu/) to edit it.
 
 The `bdrc-migration.owl` ontology was used in the initial conversion from the XML metadata documents used in the legacy system. This ontology should not be modified without considering the impacts on the `xmltoldmigration` and `fusekicouchdb` projects.
 
