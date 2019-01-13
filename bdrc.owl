@@ -7200,7 +7200,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderFemale">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
-        <rdfs:label xml:lang="en">Female</rdfs:label>
+        <rdfs:label xml:lang="en">female</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7209,7 +7209,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderMale">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
-        <rdfs:label xml:lang="en">Male</rdfs:label>
+        <rdfs:label xml:lang="en">male</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7218,6 +7218,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderMixed">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
+        <rdfs:label xml:lang="en">mixed gender</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7226,7 +7227,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/GenderNotSpecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Gender"/>
-        <rdfs:label xml:lang="en">Not Specified</rdfs:label>
+        <rdfs:label xml:lang="en">gender not specified</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9490,7 +9491,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Corporation"/>
         <adm:status rdf:resource="http://purl.bdrc.io/resource/StatusReleased"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.bdrc.io/data/UNKNOWN_Corporation"/>
-        <rdfs:label xml:lang="en">Unkown</rdfs:label>
+        <rdfs:label xml:lang="en">unkown corporation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9501,7 +9502,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Lineage"/>
         <adm:status rdf:resource="http://purl.bdrc.io/resource/StatusReleased"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.bdrc.io/data/UNKNOWN_Lineage"/>
-        <rdfs:label xml:lang="en">Unknown</rdfs:label>
+        <rdfs:label xml:lang="en">unknown lineage</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9510,6 +9511,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/UNKNOWN_Organization">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Organization"/>
+        <rdfs:label xml:lang="en">unknown organization</rdfs:label>
     </owl:NamedIndividual>
     
 
