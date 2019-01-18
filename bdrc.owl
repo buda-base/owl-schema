@@ -7926,6 +7926,17 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCanyon -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCanyon">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">canyon</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rong</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">峡谷</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/PlaceTypeCholKha -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCholKha">
@@ -7934,25 +7945,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeChuBo -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeChuBo">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PlaceTypeChuMig -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeChuMig">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeChuRgyud -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeChuRgyud">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
     </owl:NamedIndividual>
     
@@ -8161,10 +8156,32 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/PlaceTypeLake -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLake">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">lake</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">mtsho</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">湖</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/PlaceTypeLhaKhang -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLhaKhang">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeLowerValley -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLowerValley">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">lower valley</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">mda&apos;</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">下河谷</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8185,14 +8202,6 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeMda -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMda">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PlaceTypeMkharRnying -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMkharRnying">
@@ -8201,10 +8210,24 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeMtsho -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMountain -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMtsho">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMountain">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">mountain</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">ri bo</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">山</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMountainRange -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMountainRange">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">mountain range</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">ri rgyud</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">山脉</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8213,6 +8236,18 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeNagsTshal">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeNaturalFeatures -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeNaturalFeatures">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:comment xml:lang="en">Natural features such as rivers, caves, mountain passes and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">Natural Features</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rang byung &apos;khor yug</rdfs:label>
+        <rdfs:label xml:lang="zh">自然地域</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8243,22 +8278,13 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypePhu -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypePlain -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePhu">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePlain">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRangByungKhorYug -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRangByungKhorYug">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-        <rdfs:comment xml:lang="en">Natural features such as rivers, caves, mountain passes and so on</rdfs:comment>
-        <rdfs:label xml:lang="en">Natural Features</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">rang byung &apos;khor yug</rdfs:label>
-        <rdfs:label xml:lang="zh">自然地域</rdfs:label>
+        <rdfs:label xml:lang="en">plain</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">thang</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">平川</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8279,6 +8305,18 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/PlaceTypeRange -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRange">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:comment xml:lang="en">between region and large mountain range (ex: the Alps)</rdfs:comment>
+        <rdfs:label xml:lang="en">range</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sgang</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">岗</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/PlaceTypeRdoRing -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRdoRing">
@@ -8291,6 +8329,18 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRdzong">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeRegions -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRegions">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:comment xml:lang="en">Various kinds of semi-formal and historical references to extended geographic areas such as administrative districts, isolated areas, premodern counties and so on.</rdfs:comment>
+        <rdfs:label xml:lang="en">Regions</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rten gzhi yul lung</rdfs:label>
+        <rdfs:label xml:lang="zh">区域</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8311,14 +8361,6 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRiBo -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRiBo">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PlaceTypeRiKhrod -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRiKhrod">
@@ -8327,30 +8369,24 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRiRgyud -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeRiver -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRiRgyud">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRiver">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">chu bo</rdfs:label>
+        <rdfs:label xml:lang="en">river</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">江河</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRong -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeRiverBasin -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRong">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRiverBasin">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRtenGzhiYulLung -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRtenGzhiYulLung">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-        <rdfs:comment xml:lang="en">Various kinds of semi-formal and historical references to extended geographic areas such as administrative districts, isolated areas, premodern counties and so on.</rdfs:comment>
-        <rdfs:label xml:lang="en">Regions</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">rten gzhi yul lung</rdfs:label>
-        <rdfs:label xml:lang="zh">区域</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">chu rgyud</rdfs:label>
+        <rdfs:label xml:lang="en">river basin</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">流域</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8398,14 +8434,6 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/PlaceTypeSdeTsho -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSdeTsho">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSgang -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSgang">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
     </owl:NamedIndividual>
     
@@ -8491,14 +8519,6 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeThang -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeThang">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PlaceTypeTshoBa -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTshoBa">
@@ -8511,6 +8531,28 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTshongDus">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeUpperValley -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeUpperValley">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">phu</rdfs:label>
+        <rdfs:label xml:lang="en">upper valley</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">上河谷</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeValley -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeValley">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">lung pa</rdfs:label>
+        <rdfs:label xml:lang="en">valley</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">河谷</rdfs:label>
     </owl:NamedIndividual>
     
 
