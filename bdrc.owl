@@ -27,7 +27,6 @@ Updated label and comment for rdfs:label</rdfs:comment>
 
 updated label for :onYear
 set some kinship properties as owl:SymmetricProperty</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.09</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
 revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
@@ -37,9 +36,16 @@ added adm:replaceWithClass
 added adm:replaceWithDataProperty
 added adm:replaceWithIndividual
 added adm:replaceWithObjectProperty</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.10</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.08
 
 add marc code to language individuals</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190118 v 1.2.10
+
+labels on individuals; 
+place type names to en; 
+add Chinese canon sigla; 
+add material types</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v  1.2.05
 
 added :langMARCCode
