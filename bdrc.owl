@@ -3946,6 +3946,207 @@ Such reconstructions are typically approximations to the original and there may 
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaA -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaA">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">趙城金藏</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaB -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaB">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">大藏經補編</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaC -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaC">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">中華大藏經-中華書局版</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaD -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaD">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">國圖善本</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaF -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaF">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">房山石經</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaG -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaG">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">佛教大藏經</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaGA -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaGA">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">中國佛寺史志彙刊</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaGB -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaGB">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">中國佛寺志叢刊</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaI -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaI">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">北朝佛教石刻拓片百品</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaJ -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaJ">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">嘉興藏</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaK -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaK">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">高麗大藏經-新文豐版</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaL -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaL">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">乾隆大藏經-新文豐版</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaM -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaM">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">卍正藏經-新文豐版</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaN -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaN">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">南傳大藏經</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaP -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaP">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">永樂北藏</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaS -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaS">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">宋藏遺珍-新文豐版</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaT -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaT">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Taisho reference number</rdfs:label>
+        <rdfs:label xml:lang="zh-hant">大正藏</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaU -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaU">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">洪武南藏</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaX -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaX">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">卍續藏</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaY -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaY">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">印順法師佛學著作集</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaZS -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaZS">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">正史佛教資料類編</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/workCBCSiglaZW -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCBCSiglaZW">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
+        <rdfs:label xml:lang="zh-hant">藏外佛教文獻</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/workCatalogInfo -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workCatalogInfo">
@@ -4702,19 +4903,6 @@ This is generally not the source printery of the original wood block prints that
         <rdfs:comment xml:lang="en">Catalog of the Tucci Tibetan fund in the library of ISMEO</rdfs:comment>
         <rdfs:label xml:lang="en">IsIAO reference</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.tbrc.org/#!rid=W19841"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/workRefTaisho -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workRefTaisho">
-        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workRefs"/>
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkRefs"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">From CBETA</rdfs:comment>
-        <rdfs:label xml:lang="en">Taisho reference number</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://cbetaonline.dila.edu.tw/en/T0001_001"/>
     </owl:DatatypeProperty>
     
 
