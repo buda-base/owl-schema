@@ -8083,62 +8083,46 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBangSo -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeAdmDistrict -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBangSo">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeAdmDistrict">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">administrative district</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">yul sde</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">地区（古）</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBeHu -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeAutonomousPrefecture -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBeHu">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeAutonomousPrefecture">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">autonomous prefecture</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rang skyong khul</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">自治州</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBlaBrang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeAutonomousRegion -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBlaBrang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeAutonomousRegion">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">autonomous region</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rang skyong ljongs</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">自治区</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBrogSde -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeBridge -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBrogSde">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBridge">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBrtenPaGnasKhang -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBrtenPaGnasKhang">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-        <rdfs:comment xml:lang="en">Sites of interest such as monasteries, temples and so on</rdfs:comment>
-        <rdfs:label xml:lang="en">Sites</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">brten pa gnas khang</rdfs:label>
-        <rdfs:label xml:lang="zh">场所</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBshadGrwa -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBshadGrwa">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeBtsunDgon -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeBtsunDgon">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">bridge</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">zam pa</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">桥</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8154,33 +8138,42 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeCholKha -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCharnelGround -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCholKha">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCharnelGround">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">charnel ground</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">dur khrod</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">石经堆</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeChuMig -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCircuit -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeChuMig">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCircuit">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">circuit</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">skor</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">围</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeChus -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCity -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeChus">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCity">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">city</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">grong khyer</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">城市</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeDengRabsSaGnas -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeContemporaryPlace -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeDengRabsSaGnas">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeContemporaryPlace">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
         <rdfs:comment xml:lang="en">Modern or contemporary places defined in terms of current political control such as Chinese counties, provinces and so on</rdfs:comment>
         <rdfs:label xml:lang="en">Contemporary Places</rdfs:label>
@@ -8189,186 +8182,200 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeDgonPa -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCountry -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeDgonPa">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCountry">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rgyal khab</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">国家</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeDpeMdzodKhang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCounty -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeDpeMdzodKhang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCounty">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">county (modern)</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rdzong</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">县</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeDurKhrod -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCountyArea -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeDurKhrod">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCountyArea">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">chus</rdfs:label>
+        <rdfs:label xml:lang="en">county area</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">区</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGling -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeCulturalDomain -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGling">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeCulturalDomain">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">chol kha</rdfs:label>
+        <rdfs:label xml:lang="en">cultural domain</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">文化区域</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGlingKha -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeDistrict -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGlingKha">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeDistrict">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">district</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sa khul</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">地区（专区）</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGnasChen -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeEstate -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGnasChen">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeEstate">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">estate</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">gzhis ka</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">庄园</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGrongKhyer -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeFerryRoute -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGrongKhyer">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeFerryRoute">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">ferry route</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">gru kha</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">渡口</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGrongRdal -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeForest -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGrongRdal">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeForest">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">forest</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">nags tshal</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">森林</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGrongSde -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeFortress -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGrongSde">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeFortress">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">fortress</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">mkhar rnying</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">城堡</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGrongTsho -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHHDistrict -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGrongTsho">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHHDistrict">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">be hu</rdfs:label>
+        <rdfs:label xml:lang="en">hundred household district</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">百户区</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGruKha -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHamlet -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGruKha">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHamlet">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">hamlet</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sde tsho</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">村落</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGrwaTshang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHermitage -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGrwaTshang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHermitage">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">hermitage</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">ri khrod</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">隐修地</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGterGnas -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHiddenLand -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGterGnas">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHiddenLand">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">hidden land</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sbas yul</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">秘境</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGtsugLagKhang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHospital -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGtsugLagKhang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHospital">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">hospital</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sman khang</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">医院</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGzhisKa -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHouse -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGzhisKa">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHouse">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gzims khang</rdfs:label>
+        <rdfs:label xml:lang="en">house</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">住宅</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGzimsKhang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeHousehold -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGzimsKhang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeHousehold">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">household</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">khyim tshang</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">家庭</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeGzimsShag -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeIsolatedRegion -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeGzimsShag">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeIsolatedRegion">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gling</rdfs:label>
+        <rdfs:label xml:lang="en">isolated region</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">州</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeKhamsTshan -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeKingdom -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeKhamsTshan">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeKingdom">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeKhriSde -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeKhriSde">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeKhriSkor -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeKhriSkor">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeKhul -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeKhul">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeKhyimTshang -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeKhyimTshang">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeLaKha -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLaKha">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">kingdom</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rgyal phran</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">王国</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8384,10 +8391,24 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeLhaKhang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeLargeArea -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLhaKhang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLargeArea">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">large area</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">yul chen</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">大区</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeLibrary -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeLibrary">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">dpe mdzod khang</rdfs:label>
+        <rdfs:label xml:lang="en">library</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">书馆</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8403,26 +8424,112 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeMaNiRdoPhung -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMHDistrict -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMaNiRdoPhung">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMHDistrict">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">khri sde</rdfs:label>
+        <rdfs:label xml:lang="en">million household district</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">万户区</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeMchodRten -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeManiStone -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMchodRten">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeManiStone">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">Mani stone</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">ma Ni rdo phung</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">石经堆</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeMkharRnying -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeManor -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMkharRnying">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeManor">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gzims shag</rdfs:label>
+        <rdfs:label xml:lang="en">manor</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">府邸</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMarket -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMarket">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">market</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">tshong &apos;dus</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">集市（市场）</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMeditationCave -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMeditationCave">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">meditation cave</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sgrub phug</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">修行洞</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMonastery -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMonastery">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">dgon pa</rdfs:label>
+        <rdfs:label xml:lang="en">monastery</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">寺院</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMonasticCollege -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMonasticCollege">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">bshad grwa</rdfs:label>
+        <rdfs:label xml:lang="en">monastic college</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">讲经院</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMonasticDormitory -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMonasticDormitory">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">khams tshan</rdfs:label>
+        <rdfs:label xml:lang="en">monastic dormitory</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">僧舍</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMonasticQuarters -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMonasticQuarters">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">grwa tshang</rdfs:label>
+        <rdfs:label xml:lang="en">monastic quarters</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">扎仓（僧院）</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMonasticResidence -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMonasticResidence">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">bla brang</rdfs:label>
+        <rdfs:label xml:lang="en">monastic residence</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">喇嘛行宫</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8438,6 +8545,17 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMountainPass -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMountainPass">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">la kha</rdfs:label>
+        <rdfs:label xml:lang="en">mountain pass</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">山口</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/PlaceTypeMountainRange -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMountainRange">
@@ -8449,10 +8567,24 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeNagsTshal -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMunicipality -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeNagsTshal">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMunicipality">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">grong rdal</rdfs:label>
+        <rdfs:label xml:lang="en">municipality</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">城镇</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeMyriarchy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeMyriarchy">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">khri skor</rdfs:label>
+        <rdfs:label xml:lang="en">myriarchy</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">万户区</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8469,28 +8601,80 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/PlaceTypeNomadCamp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeNomadCamp">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">&apos;brog sde</rdfs:label>
+        <rdfs:label xml:lang="en">nomad camp</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">牧营</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/PlaceTypeNotSpecified -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeNotSpecified">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
         <rdfs:comment xml:lang="en">Places of unspecified type</rdfs:comment>
         <rdfs:label xml:lang="en">Not Specified</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rigs dbye byas med pa</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">未分类</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeParKhang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeNunnery -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeParKhang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeNunnery">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">btsun dgon</rdfs:label>
+        <rdfs:label xml:lang="en">nunnery</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">尼姑庵</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypePhoBrang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypePalace -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePhoBrang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePalace">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">palace</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">pho brang</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">宫殿</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypePark -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePark">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gling kha</rdfs:label>
+        <rdfs:label xml:lang="en">park</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">公园</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypePilgrimageSite -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePilgrimageSite">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gnas chen</rdfs:label>
+        <rdfs:label xml:lang="en">pilgrimage site</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">圣地</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypePillar -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePillar">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">pillar</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">rdo ring</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">石碑</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8506,18 +8690,68 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRangSkyongKhul -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypePreModernCountry -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRangSkyongKhul">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePreModernCountry">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">pre-modern country</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sngar gyi rdzong</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">宗（旧制）</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRangSkyongLjongs -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypePrefecture -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRangSkyongLjongs">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePrefecture">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">khul</rdfs:label>
+        <rdfs:label xml:lang="en">prefecture</rdfs:label>
+        <rdfs:label xml:lang="en">传统地区</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypePrincipality -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePrincipality">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">principality</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sde dpon mnga&apos; ris</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">郡国</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypePrintery -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypePrintery">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">par khang</rdfs:label>
+        <rdfs:label xml:lang="en">printery</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">印经院</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeProvince -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeProvince">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">province</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">zhing chen</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">省</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/PlaceTypeProvincialDivision -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeProvincialDivision">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">provincial divisions</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">ru</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">茹</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8534,22 +8768,6 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRdoRing -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRdoRing">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRdzong -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRdzong">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.bdrc.io/resource/PlaceTypeRegions -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRegions">
@@ -8562,26 +8780,13 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRgyalKhab -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeRetreatCenter -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRgyalKhab">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRetreatCenter">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRgyalPhran -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRgyalPhran">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRiKhrod -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRiKhrod">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">retreat center</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sgrub grwa</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">闭关院</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8608,146 +8813,167 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRu -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeSchool -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRu">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSchool">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">school</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">slob grwa</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">学校</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeRuSde -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeSettlement -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeRuSde">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSettlement">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">settlement</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">tsho ba</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">氏族部落</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSaKhul -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeSite -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSaKhul">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSite">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:comment xml:lang="en">Sites of interest such as monasteries, temples and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">Sites</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">brten pa gnas khang</rdfs:label>
+        <rdfs:label xml:lang="zh">场所</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSbasYul -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeSmallArea -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSbasYul">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSmallArea">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">small area</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">yul phran</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">小乡</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSdeDponMngaRis -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeSpring -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSdeDponMngaRis">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSpring">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">chu mig</rdfs:label>
+        <rdfs:label xml:lang="en">spring</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">圣泉</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSdeTsho -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeStupa -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSdeTsho">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeStupa">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">mchod rten</rdfs:label>
+        <rdfs:label xml:lang="en">stupa</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">佛塔</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSgrubGrwa -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTHDistrict -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSgrubGrwa">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTHDistrict">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">stong sde</rdfs:label>
+        <rdfs:label xml:lang="en">thousand household district</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">千户区</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSgrubPhug -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTemple -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSgrubPhug">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTemple">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en">lha khang</rdfs:label>
+        <rdfs:label xml:lang="en">temple</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">宇</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeShang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTempleComplex -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeShang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTempleComplex">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gtsug lag khang</rdfs:label>
+        <rdfs:label xml:lang="en">temple complex</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">寺庙</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSkor -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTomb -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSkor">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTomb">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">bang so</rdfs:label>
+        <rdfs:label xml:lang="en">tomb</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">陵墓</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSlobGrwa -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTownship -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSlobGrwa">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTownship">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">shang_(zhang)</rdfs:label>
+        <rdfs:label xml:lang="en">township</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSmanKhang -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTraditional -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSmanKhang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTraditional">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">srol rgyun sa ming</rdfs:label>
+        <rdfs:label xml:lang="en">traditional</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">传统地名</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSngarGyiRdzong -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTraditionalRegion -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSngarGyiRdzong">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTraditionalRegion">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">srol rgyun sa khul</rdfs:label>
+        <rdfs:label xml:lang="en">traditional region</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">传统地区</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSrolRgyunGyiSaMing -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTreasureSite -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSrolRgyunGyiSaMing">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTreasureSite">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gter gnas</rdfs:label>
+        <rdfs:label xml:lang="en">treasure site</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">伏藏地</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeSrolRgyunSaKhul -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeTribalTerritory -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeSrolRgyunSaKhul">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTribalTerritory">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeStongSde -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeStongSde">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeTshoBa -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTshoBa">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeTshongDus -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeTshongDus">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="en"></rdfs:label>
+        <rdfs:label xml:lang="en">ru sde</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">联盟部落</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8774,42 +9000,24 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeYulChen -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeVillage -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeYulChen">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeVillage">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">grong tsho</rdfs:label>
+        <rdfs:label xml:lang="en">village</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">村（现代）</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/PlaceTypeYulPhran -->
+    <!-- http://purl.bdrc.io/resource/PlaceTypeVillageDistrict -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeYulPhran">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeVillageDistrict">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeYulSde -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeYulSde">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeZamPa -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeZamPa">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/PlaceTypeZhingChen -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/PlaceTypeZhingChen">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/PlaceType"/>
+        <rdfs:label xml:lang="bo-x-ewts">grong sde</rdfs:label>
+        <rdfs:label xml:lang="en">village district</rdfs:label>
+        <rdfs:label xml:lang="zh-hans">村镇</rdfs:label>
     </owl:NamedIndividual>
     
 
