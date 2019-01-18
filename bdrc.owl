@@ -7726,6 +7726,16 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialBirchBark">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:label xml:lang="en">birch bark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MaterialCoryphaPalmLeaf -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialCoryphaPalmLeaf">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:label xml:lang="en">palm leaf (corypha)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7736,6 +7746,16 @@ bdr:W22083 a :Work ;
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
         <rdfs:comment xml:lang="en">digital material for content which is held in digital format in the archive (:Etexts)</rdfs:comment>
         <rdfs:label xml:lang="en">digital material</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MaterialMultiLayerPaper -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialMultiLayerPaper">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:comment xml:lang="en">used for some manuscripts in Nepal</rdfs:comment>
+        <rdfs:label xml:lang="en">multi-layer paper</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7754,6 +7774,15 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialPaper">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
         <rdfs:label xml:lang="en">paper</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/MaterialRicePaper -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialRicePaper">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:label xml:lang="en">rice paper</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9095,6 +9124,7 @@ bdr:W22083 a :Work ;
         <rdfs:label xml:lang="sa-x-iast">Rañjanā</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">lany+dza</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://scriptsource.org/scr/Qabb"/>
+        <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q2385276"/>
     </owl:NamedIndividual>
     
 
