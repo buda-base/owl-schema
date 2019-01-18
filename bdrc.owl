@@ -6341,21 +6341,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bdrc.io/ontology/core/PersonOccupiesSeat -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOccupiesSeat">
@@ -9332,7 +9317,6 @@ bdr:W22083 a :Work ;
         <rdfs:label xml:lang="sa-x-iast">Rañjanā</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">lany+dza</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://scriptsource.org/scr/Qabb"/>
-        <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q2385276"/>
     </owl:NamedIndividual>
     
 
