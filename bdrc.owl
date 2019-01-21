@@ -7576,8 +7576,8 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LicenseCopyrighted">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/License"/>
-        <rdfs:comment xml:lang="en">BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on.</rdfs:comment>
-        <rdfs:label xml:lang="en">Copyrighted</rdfs:label>
+        <rdfs:comment xml:lang="en">Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved.</rdfs:comment>
+        <rdfs:label xml:lang="en">All Rights Reserved</rdfs:label>
     </owl:NamedIndividual>
     
 
