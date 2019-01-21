@@ -7774,6 +7774,14 @@ bdr:W22083 a :Work ;
         <rdfs:label xml:lang="en">rice paper</rdfs:label>
     </owl:NamedIndividual>
     
+    
+    <!-- http://purl.bdrc.io/resource/MaterialMixed -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/MaterialMixed">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Material"/>
+        <rdfs:label xml:lang="en">mixed materials</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://purl.bdrc.io/resource/Mn -->
