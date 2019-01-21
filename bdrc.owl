@@ -9113,6 +9113,18 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/SaSinh -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaSinh">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LangScript"/>
+        <language rdf:resource="http://purl.bdrc.io/resource/LangSa"/>
+        <script rdf:resource="http://purl.bdrc.io/resource/ScriptSinh"/>
+        <rdfs:comment xml:lang="en">rare</rdfs:comment>
+        <rdfs:label xml:lang="en">Sanskrit in Sinhalese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/SaTibt -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/SaTibt">
@@ -9283,6 +9295,7 @@ bdr:W22083 a :Work ;
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptNepaleseHooked">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
+        <rdfs:comment xml:lang="en">also referred to as Bhujimol</rdfs:comment>
         <rdfs:label xml:lang="en">Nepalese hooked script</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9313,6 +9326,7 @@ bdr:W22083 a :Work ;
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/ScriptRanj">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Script"/>
         <rdfs:comment xml:lang="en">This script is not normalized in ISO 15924 (yet?)</rdfs:comment>
+        <rdfs:comment xml:lang="en">also referred to as Pāla, as it was developped during the Pāla dynasty</rdfs:comment>
         <rdfs:label xml:lang="en">Ranjana (Kutila, Lantsa)</rdfs:label>
         <rdfs:label xml:lang="sa-x-iast">Rañjanā</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">lany+dza</rdfs:label>
