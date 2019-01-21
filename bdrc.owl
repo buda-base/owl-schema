@@ -27,7 +27,7 @@ Updated label and comment for rdfs:label</rdfs:comment>
 
 updated label for :onYear
 set some kinship properties as owl:SymmetricProperty</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.09</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.11</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
 revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
@@ -37,9 +37,22 @@ added adm:replaceWithClass
 added adm:replaceWithDataProperty
 added adm:replaceWithIndividual
 added adm:replaceWithObjectProperty</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190118 v 1.2.11
+
+added :Unions for all named unions
+added more named unions
+added named datatype range unions
+added several named datatype range unions
+update properties to refer to named unions and datatype range unions</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.08
 
 add marc code to language individuals</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190118 v 1.2.10
+
+labels on individuals; 
+place type names to en; 
+add Chinese canon sigla; 
+add material types</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v  1.2.05
 
 added :langMARCCode
@@ -949,6 +962,21 @@ We take the view that the summary or contents statements can be treated in a man
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/IntegerOrString -->
+
+    <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/core/IntegerOrString">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/LCCN -->
 
     <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/core/LCCN">
@@ -967,6 +995,21 @@ We take the view that the summary or contents statements can be treated in a man
         <rdfs:isDefinedBy rdf:resource="https://www.loc.gov/aba/publications/FreeCSM/freecsm.html"/>
         <rdfs:label xml:lang="en">Library of Congress Call Number</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.loc.gov/catdir/cpso/lcco/"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/LangStringOrNoColophon -->
+
+    <rdfs:Datatype rdf:about="http://purl.bdrc.io/ontology/core/LangStringOrNoColophon">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/NoColophon"/>
+                    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
     </rdfs:Datatype>
     
 
@@ -1033,14 +1076,7 @@ Both chunk and char number start at one.</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/admin/productHasOrg -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/admin/productHasOrg">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/ProductOrProductOrg"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
         <rdfs:comment xml:lang="en">Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on</rdfs:comment>
         <rdfs:comment xml:lang="en">organization</rdfs:comment>
@@ -1509,14 +1545,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasContentProvider">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Organization"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Organization"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AnyOrganization"/>
         <rdfs:comment xml:lang="en">The organization (or person) that provided the subject :TextualEntity. In this context, providing can mean originating the enscribing, carving or woodblocks and printing, or creating a collection of texts from other providers. For example, the sde dge par khang can be recorded as the :Organization that provided the sde dge bka&apos; &apos;gyur.</rdfs:comment>
         <rdfs:label xml:lang="en">has content provider</rdfs:label>
     </owl:ObjectProperty>
@@ -1658,14 +1687,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasIncarnation">
         <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/isIncarnation"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Topic"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PersonOrTopic"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">This property is applicable to Persons and Topics (that represent deities or other ahistorical figures).</rdfs:comment>
@@ -1931,14 +1953,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/hasSteward">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/TextualEntity"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Organization"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Organization"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AnyOrganization"/>
         <rdfs:comment xml:lang="en">A steward of (a Collection of) Textual Item(s) is an organization that preserves and makes metadata and images/etexts available digitally.  A steward may be an :Organization or an adm:Organization.</rdfs:comment>
         <rdfs:label xml:lang="en">has steward</rdfs:label>
     </owl:ObjectProperty>
@@ -2058,14 +2073,7 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/isIncarnation">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Topic"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/PersonOrTopic"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">personIsIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary.</rdfs:comment>
         <rdfs:label xml:lang="en">is incarnation of</rdfs:label>
@@ -2279,14 +2287,7 @@ This illustrates that while bdr:P3094 received the :Lineage from bdr:P502 in bot
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/lineageFrom">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LineageEvent"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Topic"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/PersonOrTopic"/>
         <rdfs:comment>Range should be unionOf Person and Deity(Topics)</rdfs:comment>
         <rdfs:comment xml:lang="en">Who did this &quot;LineageHolder receive the :Lineage from?</rdfs:comment>
         <rdfs:comment>original XSD has &quot;RID&quot; attr in &quot;Received&quot;</rdfs:comment>
@@ -2363,14 +2364,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/lineageWho">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/LineageHolder"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Topic"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/PersonOrTopic"/>
         <rdfs:comment xml:lang="en">identifies who this :LineageHolder is, :Person or a being represented via a :Topic.</rdfs:comment>
         <rdfs:label xml:lang="en">is holder</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/LineageHolder"/>
@@ -3200,14 +3194,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     <!-- http://purl.bdrc.io/ontology/admin/workLegacyNode -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/admin/workLegacyNode">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Outline"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkOrAdmOutline"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site.</rdfs:comment>
         <rdfs:label xml:lang="en">has legacy node</rdfs:label>
@@ -3218,14 +3205,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
     <!-- http://purl.bdrc.io/ontology/core/DDBCAId -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/DDBCAId">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Place"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PersonOrPlace"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">Buddhist Studies Authority ID</rdfs:comment>
         <rdfs:comment xml:lang="en">ID used by the Dharma Drum College Buddhist Studied Authorities databases, for places and persons. It should be just the ID starting with A (ex: A017001), not the full URL.</rdfs:comment>
@@ -3708,14 +3688,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
     <!-- http://purl.bdrc.io/ontology/core/restored -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/restored">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">The :restored property is used to add a restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit) and the original language name or title is not manifest in the material being cataloged so that the cataloger prepares a restoration.
 
@@ -3738,14 +3711,7 @@ Such reconstructions are typically approximations to the original and there will
     <!-- http://purl.bdrc.io/ontology/core/restoredAlt -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/restoredAlt">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">The :restoredAlt property is used to add an alternative restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit).
 
@@ -3770,14 +3736,7 @@ Such reconstructions are typically approximations to the original and there may 
     <!-- http://purl.bdrc.io/ontology/core/seqNum -->
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/seqNum">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">A :seqNum may be a page number, line number or other id as appropriate to the use of the :EtextSlice or other contexts such as the sequence of eTexts in a Volume and so on.</rdfs:comment>
         <rdfs:label xml:lang="en">sequence number</rdfs:label>
     </owl:DatatypeProperty>
@@ -3839,14 +3798,7 @@ Such reconstructions are typically approximations to the original and there may 
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/volumeNumber">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Volume"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">The number of the volume in the Item. There is no implied order in RDF and there may be missing volumes so it is necessary to explicitly indicate the volume number.</rdfs:comment>
         <rdfs:label xml:lang="en">volume number</rdfs:label>
     </owl:DatatypeProperty>
@@ -4162,14 +4114,7 @@ Such reconstructions are typically approximations to the original and there may 
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workColophon">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/NoColophon"/>
-                    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/LangStringOrNoColophon"/>
         <rdfs:comment xml:lang="en">This was the description of type colophon which was used primarily (exclusively?) on &lt;outline:node/&gt;s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon</rdfs:comment>
         <rdfs:label xml:lang="en">colophon</rdfs:label>
     </owl:DatatypeProperty>
@@ -4556,14 +4501,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationEndLine">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">The ending line on the ending page that is referenced</rdfs:comment>
         <rdfs:label xml:lang="en">end line</rdfs:label>
     </owl:DatatypeProperty>
@@ -4574,14 +4512,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationEndPage">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">The ending page in the volume of the Work indicated by the other statements for this :WorkLocation</rdfs:comment>
         <rdfs:label xml:lang="en">end page</rdfs:label>
     </owl:DatatypeProperty>
@@ -4592,14 +4523,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationEndPhrase">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationEndLine specified as well.</rdfs:comment>
         <rdfs:label xml:lang="en">end phrase</rdfs:label>
     </owl:DatatypeProperty>
@@ -4621,14 +4545,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationEndVolume">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">this should be a positive integer indicating the ending volume (if different from the starting volume) of the Work referenced in this Location</rdfs:comment>
         <rdfs:label xml:lang="en">end volume</rdfs:label>
     </owl:DatatypeProperty>
@@ -4648,14 +4565,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationLine">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">The line on the page that is referenced</rdfs:comment>
         <rdfs:label xml:lang="en">line</rdfs:label>
     </owl:DatatypeProperty>
@@ -4666,14 +4576,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationPage">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">The page in the volume of the Work indicated by the other statements for this :WorkLocation</rdfs:comment>
         <rdfs:label xml:lang="en">page</rdfs:label>
     </owl:DatatypeProperty>
@@ -4684,14 +4587,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
 
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationPhrase">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationLine specified as well.</rdfs:comment>
         <rdfs:label xml:lang="en">phrase</rdfs:label>
     </owl:DatatypeProperty>
@@ -4725,14 +4621,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
     <owl:DatatypeProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocationVolume">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/IntegerOrString"/>
         <rdfs:comment xml:lang="en">this should be a positive integer indicating the volume of the Work referenced in this Location</rdfs:comment>
         <rdfs:label xml:lang="en">volume</rdfs:label>
     </owl:DatatypeProperty>
@@ -5459,6 +5348,22 @@ We welcome your input. Please contact us with any comments or questions at inqui
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/AnyOrganization -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AnyOrganization">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Organization"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/CarvedEvent -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CarvedEvent">
@@ -5725,6 +5630,7 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/EventOrPeriod -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EventOrPeriod">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -5757,18 +5663,35 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/IIIFCollection -->
+    <!-- http://purl.bdrc.io/ontology/core/IIIF2Or3Collection -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIFCollection">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIF2Or3Collection">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/IIIF2Or3Manifest -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIF2Or3Manifest">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://iiif.io/api/presentation/2#Collection"/>
-                    <rdf:Description rdf:about="http://iiif.io/api/presentation/3#Collection"/>
+                    <rdf:Description rdf:about="http://iiif.io/api/presentation/2#Manifest"/>
+                    <rdf:Description rdf:about="http://iiif.io/api/presentation/3#Manifest"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/IIIFCollection -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIFCollection">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIF2Or3Collection"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
         <rdfs:comment xml:lang="en">can be v2.1.* or v3.0.*</rdfs:comment>
         <rdfs:label xml:lang="en">IIIF Collection</rdfs:label>
     </owl:Class>
@@ -5784,15 +5707,8 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/IIIFManifest -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIFManifest">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIF2Or3Manifest"/>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://iiif.io/api/presentation/2#Manifest"/>
-                    <rdf:Description rdf:about="http://iiif.io/api/presentation/3#Manifest"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">can be v2.1.* or v3.0.*</rdfs:comment>
         <rdfs:label xml:lang="en">IIIF Manifest</rdfs:label>
     </owl:Class>
@@ -6341,6 +6257,22 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/PersonName"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkTitle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/PersonOccupiesSeat -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOccupiesSeat">
@@ -6363,6 +6295,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/PersonOrCorporation -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOrCorporation">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6373,6 +6306,38 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event</rdfs:comment>
         <rdfs:label xml:lang="en">Person or Coporation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonOrPlace -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOrPlace">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/PersonOrTopic -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOrTopic">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Person"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -6554,6 +6519,22 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/ProductOrProductOrg -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ProductOrProductOrg">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Product"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/ProductOrg"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/PublishedEvent -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PublishedEvent">
@@ -6707,6 +6688,7 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
     <!-- http://purl.bdrc.io/ontology/core/TextualEntity -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TextualEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6795,6 +6777,12 @@ An owl:subClassOf :Type, e.g., :KinType, will have some set of individuals that 
 The set of such individuals may be further organized via :Taxonomy but need not be.</rdfs:comment>
         <rdfs:label xml:lang="en">Type</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Unions -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Unions"/>
     
 
 
@@ -6953,6 +6941,22 @@ The Works also included some structural metadata in the volumeMap but that is mo
         <rdfs:comment xml:lang="en">The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage</rdfs:comment>
         <rdfs:comment>The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a &lt;o:location/&gt; element spec&apos;d in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase</rdfs:comment>
         <rdfs:comment>parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/WorkOrAdmOutline -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkOrAdmOutline">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Outline"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
