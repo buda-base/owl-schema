@@ -3011,7 +3011,15 @@ bdr:T354 a :Topic ;
     <!-- http://purl.bdrc.io/ontology/core/workLocation -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workLocation">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Lineage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Lineage"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Note"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/WorkLocation"/>
         <rdfs:comment xml:lang="en">This is the location of the source information for this :Lineage in a specified gsan / thob yig.</rdfs:comment>
         <rdfs:comment xml:lang="en">the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note</rdfs:comment>
