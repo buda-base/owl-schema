@@ -626,6 +626,24 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/noteLocationStatementCBC -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/noteLocationStatementCBC">
+        <rdfs:comment xml:lang="en">Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
+
+T52n2103_p0264c18
+
+means:
+
+Taisho, Volume 52, Text 2103, page 264, register c, line 18
+
+(line counting start at 1 and goes from right to left)</rdfs:comment>
+        <rdfs:label xml:lang="en">location statement (in the Chinese Buddhist Canon)</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/noteLocationStatement"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/noteText -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/noteText">
