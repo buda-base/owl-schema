@@ -1175,8 +1175,10 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorAmanuensis">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:comment xml:lang="en">the person who writes down a translation in Chinese, in a capacity something like a scribe; Chn. bishou 筆受</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personAmanuensisOf"/>
+        <rdfs:comment xml:lang="en">the person who writes down a translation in Chinese, in a capacity something like a scribe.</rdfs:comment>
         <rdfs:label xml:lang="en">amanuensis</rdfs:label>
+        <rdfs:label xml:lang="zh-hant">筆受</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1185,6 +1187,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorArtist">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personArtistOf"/>
         <rdfs:comment xml:lang="en">An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like</rdfs:comment>
         <rdfs:label xml:lang="en">artist</rdfs:label>
     </owl:ObjectProperty>
@@ -1195,6 +1198,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorAttributedAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personAttributedAuthorOf"/>
         <rdfs:comment xml:lang="en">A creator identified by a separate source as an author of the Work</rdfs:comment>
         <rdfs:label xml:lang="en">attributed author</rdfs:label>
     </owl:ObjectProperty>
@@ -1205,6 +1209,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorBard">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personBardOf"/>
         <rdfs:comment xml:lang="en">for a Work of verse a poet who composed the verse</rdfs:comment>
         <rdfs:label xml:lang="en">bard</rdfs:label>
     </owl:ObjectProperty>
@@ -1215,6 +1220,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCalligrapher">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personCalligrapherOf"/>
         <rdfs:comment xml:lang="en">For a handwritten Work an individual that drew the text or carved it on woord blocks</rdfs:comment>
         <rdfs:label xml:lang="en">calligrapher</rdfs:label>
     </owl:ObjectProperty>
@@ -1225,6 +1231,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCommentator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personCommentatorOf"/>
         <rdfs:comment xml:lang="en">A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries.</rdfs:comment>
         <rdfs:label xml:lang="en">commentator</rdfs:label>
     </owl:ObjectProperty>
@@ -1235,6 +1242,7 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorCompiler">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personCompilerOf"/>
         <rdfs:comment xml:lang="en">a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
 
 Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
@@ -1248,6 +1256,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorContributingAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personContributingAuthorOf"/>
         <rdfs:comment xml:lang="en">An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280</rdfs:comment>
         <rdfs:label xml:lang="en">contributing author</rdfs:label>
     </owl:ObjectProperty>
@@ -1270,8 +1279,9 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorForger">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:comment xml:lang="en">a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was &quot;translated&quot; by a person other than the forger (i.e. with a false ascription attached); Chn. weizuo 偽作 etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was &quot;translated&quot; by a person other than the forger (i.e. with a false ascription attached).</rdfs:comment>
         <rdfs:label xml:lang="en">forger</rdfs:label>
+        <rdfs:label xml:lang="zh-hant">偽作</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1292,8 +1302,10 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorHeadTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
-        <rdfs:comment xml:lang="en">the person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation; such persons may be explicitly identified by the tradition as Chn. yizhu 譯主, but often our knowledge that this was in fact a person&apos;s role is implicit or inferred from other knowledge about the composition of the translation group</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personHeadTranslatorOf"/>
+        <rdfs:comment xml:lang="en">The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person&apos;s role is implicit or inferred from other knowledge about the composition of the translation group.</rdfs:comment>
         <rdfs:label xml:lang="en">head translator</rdfs:label>
+        <rdfs:label xml:lang="zh-hant">譯主</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1302,6 +1314,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorIndicScholar">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personIndicScholarOf"/>
         <rdfs:comment xml:lang="en">in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as &quot;head translator&quot;; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states &quot;handled the Indic text&quot;, Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of &quot;reciter&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">Indic Scholar</rdfs:label>
     </owl:ObjectProperty>
@@ -1312,6 +1325,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorMainAuthor">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personMainAuthorOf"/>
         <rdfs:comment xml:lang="en">the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the &quot;author&quot; of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the &quot;author&quot; of a commentary</rdfs:comment>
         <rdfs:label xml:lang="en">main author</rdfs:label>
     </owl:ObjectProperty>
@@ -1322,6 +1336,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorOralTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personOralTranslatorOf"/>
         <rdfs:comment xml:lang="en">a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc.</rdfs:comment>
         <rdfs:label xml:lang="en">oral translator</rdfs:label>
     </owl:ObjectProperty>
@@ -1344,6 +1359,7 @@ a ti bstan pa&apos;i rgyal mtshan, rdzogs chen 03 (P7404)</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorRecipientOfResponseToQuery">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personRecipientOfResponseToQueryOf"/>
         <rdfs:comment xml:lang="en">An individual to whom answers in a Work are addressed. Cf., W22146:
 
 Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order.</rdfs:comment>
@@ -1356,6 +1372,7 @@ Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Y
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReciter">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personReciterOf"/>
         <rdfs:comment xml:lang="en">a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with &quot;IndicScholar&quot; (see below)</rdfs:comment>
         <rdfs:label xml:lang="en">reciter</rdfs:label>
     </owl:ObjectProperty>
@@ -1378,6 +1395,7 @@ Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Y
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorReviser">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personReviserOf"/>
         <rdfs:label xml:lang="en">An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen.</rdfs:label>
@@ -1404,6 +1422,7 @@ The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalp
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorScribe">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personScribeOf"/>
         <rdfs:comment xml:lang="en">An individual that wrote the text typically during recitation by the author. Cf., W8145</rdfs:comment>
         <rdfs:label xml:lang="en">scribe</rdfs:label>
     </owl:ObjectProperty>
@@ -1414,6 +1433,7 @@ The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalp
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTerton">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personTertonOf"/>
         <rdfs:comment xml:lang="en">An individual who revealed the Work as treasure texts. Cf., W25816:
 
 Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak</rdfs:comment>
@@ -1426,6 +1446,7 @@ Practice text for the secret sadhana of Ganapati according to revelations by Dir
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creatorTranslator">
         <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/personTranslatorOf"/>
         <rdfs:comment xml:lang="en">A translator of the Work. Cf., W8LS25412:
 
 The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup</rdfs:comment>
@@ -2423,6 +2444,69 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/personAmanuensisOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personAmanuensisOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">amanuensis of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personArtistOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personArtistOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">artist of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personAttributedAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personAttributedAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">attributed author of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personBardOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personBardOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">bard of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personCalligrapherOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personCalligrapherOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">calligrapher of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personCommentatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personCommentatorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">commentator of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personCompilerOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personCompilerOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">compiler of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/personConsortOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personConsortOf">
@@ -2431,6 +2515,26 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:comment xml:lang="en">The subject :Person is a consort of the target :Person</rdfs:comment>
         <rdfs:label xml:lang="en">consort of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personContributingAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personContributingAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">contributing author of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personCreatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personCreatorOf">
+        <owl:inverseOf rdf:resource="http://purl.bdrc.io/ontology/core/workCreator"/>
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:label xml:lang="en">creator of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2466,6 +2570,15 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/personForgerOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personForgerOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">forger of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/personGender -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personGender">
@@ -2483,6 +2596,33 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:comment xml:lang="en">the target :Person is a consort of the subject :Person</rdfs:comment>
         <rdfs:label xml:lang="en">has consort</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personHeadTranslatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personHeadTranslatorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">head translator of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personIndicScholarOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personIndicScholarOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">Indic scholar of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personMainAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personMainAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">main author of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2509,6 +2649,51 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/personOralTranslatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personOralTranslatorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">oral translator of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personRecipientOfResponseToQueryOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personRecipientOfResponseToQueryOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">recipient of response to query of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personReciterOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personReciterOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">reciter of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personReviserOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personReviserOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">reviser of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personScribeOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personScribeOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">scribe of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/personStudentOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personStudentOf">
@@ -2526,6 +2711,24 @@ The object should be restricted to Persons or to Topics that represent a Deity o
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <rdfs:label xml:lang="en">teacher of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personTertonOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personTertonOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">terton of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/personTranslatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/personTranslatorOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.bdrc.io/ontology/core/personCreatorOf"/>
+        <rdfs:label xml:lang="en">translator of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2676,7 +2879,14 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <!-- http://purl.bdrc.io/ontology/core/workCreator -->
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/workCreator">
-        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Work"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/WorkEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Person"/>
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Identifies the type and person that are a creator of the work</rdfs:comment>
