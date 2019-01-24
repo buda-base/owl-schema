@@ -27,7 +27,12 @@ Updated label and comment for rdfs:label</rdfs:comment>
 
 updated label for :onYear
 set some kinship properties as owl:SymmetricProperty</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.11</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190124 v 1.2.12
+
+clearer individuals for Terms of Useclearer individuals for Terms of Use
+fix #82
+add :noteLocationStatementCBC
+add inverse of workCreator</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
 revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
@@ -62,6 +67,7 @@ added :restoredAlt</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.06
 
 corrected domain of :langMARCCode</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.12</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
 
 Update comment for :ObjectType
