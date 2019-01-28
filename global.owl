@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.bdrc.io/ontology/global/"
-     xml:base="http://purl.bdrc.io/ontology/global/"
-     xmlns:core="http://purl.bdrc.io/ontology/core/"
-     xmlns:toberemoved="http://purl.bdrc.io/ontology/toberemoved/"
+<rdf:RDF xmlns="http://purl.bdrc.io/ontology/core/"
+     xml:base="http://purl.bdrc.io/ontology/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:tbr="http://purl.bdrc.io/ontology/toberemoved/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:admin="http://purl.bdrc.io/ontology/admin/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://purl.bdrc.io/ont/global">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:adm="http://purl.bdrc.io/ontology/admin/"
+     xmlns:bdo="http://purl.bdrc.io/ontology/core/">
+    <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/BuddhistDigitalResourceCenter/owl-schema/master/bdrc.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/BuddhistDigitalResourceCenter/owl-schema/master/auth.owl"/>
     </owl:Ontology>
