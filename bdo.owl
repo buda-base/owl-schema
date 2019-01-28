@@ -23,10 +23,6 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.03
 
 Updated label and comment for rdfs:label</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190128 v 1.2.14
-
-use opaque names for :PlaceType
-rename bdrc.owl to bdo.owl</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180920 v 1.2.02
 
 updated label for :onYear
@@ -37,6 +33,12 @@ clearer individuals for Terms of Useclearer individuals for Terms of Use
 fix #82
 add :noteLocationStatementCBC
 add inverse of workCreator</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190128 v 1.2.14
+
+use opaque names for :PlaceType
+rename bdrc.owl to bdo.owl
+update bdr:LicenseCC0 label and comment
+rename bdr:LicenseCopyrighted to bdr:LicenseAllRightsReserved</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
 revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
@@ -71,7 +73,7 @@ added :restoredAlt</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.06
 
 corrected domain of :langMARCCode</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.14</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.15</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190125 v 1.2.13
 
 added :LineageOrNoteOrWork
@@ -103,6 +105,11 @@ deprecated creatorEditor</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.01
 
 added :dateApproximate</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190128 v 1.2.15
+
+subclasses for TibetaTradition and TibetanLineqageType
+added :Agent subclass of :Entity with :Person and :Organization as subclasses
+added :AhistoricalAgent</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.07
 
@@ -2406,7 +2413,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/lineageType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Lineage"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:comment xml:lang="en">Identifies the type of :Lineage such as empowerment, reading transmission, various sorts of instructions and so on</rdfs:comment>
         <rdfs:label xml:lang="en">lineage type</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/Lineage"/>
@@ -2786,7 +2793,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
 
     <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/placeEventAffiliation">
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/PlaceEvent"/>
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <rdfs:comment xml:lang="en">Refers to the Tradition that the place event is affiliated with.</rdfs:comment>
         <rdfs:label xml:lang="en">affiliated tradition</rdfs:label>
     </owl:ObjectProperty>
@@ -5290,7 +5297,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://iiif.io/api/presentation/2#Collection -->
 
     <owl:Class rdf:about="http://iiif.io/api/presentation/2#Collection">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFCollection"/>
         <rdfs:label xml:lang="en">IIIF Collection (v2.*)</rdfs:label>
     </owl:Class>
     
@@ -5299,7 +5306,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://iiif.io/api/presentation/2#Manifest -->
 
     <owl:Class rdf:about="http://iiif.io/api/presentation/2#Manifest">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFManifest"/>
         <rdfs:label xml:lang="en">IIIF v2 Manifest</rdfs:label>
     </owl:Class>
     
@@ -5308,7 +5315,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://iiif.io/api/presentation/3#Collection -->
 
     <owl:Class rdf:about="http://iiif.io/api/presentation/3#Collection">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFCollection"/>
         <rdfs:label xml:lang="en">IIIF Collection (v3.*)</rdfs:label>
     </owl:Class>
     
@@ -5317,7 +5324,7 @@ Should be converted to a reference to a Place resource</rdfs:comment>
     <!-- http://iiif.io/api/presentation/3#Manifest -->
 
     <owl:Class rdf:about="http://iiif.io/api/presentation/3#Manifest">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFManifest"/>
         <rdfs:label xml:lang="en">IIIF v3 Manifest</rdfs:label>
     </owl:Class>
     
@@ -5487,10 +5494,59 @@ The various Works that are contained in the Product include an inProduct element
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/AdmUnion -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AdmUnion">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Union"/>
+        <rdfs:comment xml:lang="en">a union of adm classes</rdfs:comment>
+        <rdfs:label xml:lang="en">adm union</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Agent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Agent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <rdfs:comment xml:lang="en">an entity that performs actions, e.g., creating works, teaching other agents, founding artificial places and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Agents -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Agents">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/MixedUnion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/admin/Organization"/>
+                    <rdf:Description rdf:about="http://purl.bdrc.io/ontology/core/Agent"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The various sorts of agents represented in the ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Agents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/AhistoricalAgent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AhistoricalAgent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/SingleAgent"/>
+        <rdfs:comment xml:lang="en">An ahistorical agent may be a deity or other non-human agent that is said to exist outside of human history</rdfs:comment>
+        <rdfs:label xml:lang="en">an ahistorical agent</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/AnyOrganization -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AnyOrganization">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/MixedUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -5499,6 +5555,8 @@ The various Works that are contained in the Product include an inProduct element
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any sort of organization</rdfs:comment>
+        <rdfs:label xml:lang="en">any organization</rdfs:label>
     </owl:Class>
     
 
@@ -5548,6 +5606,16 @@ The various Works that are contained in the Product include an inProduct element
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/WorkEvent"/>
         <rdfs:comment xml:lang="en">An event of copying a :Work by some means such as manual enscribing, photocopying, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Work Copied</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/CoreUnion -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CoreUnion">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Union"/>
+        <rdfs:comment xml:lang="en">a union of core ontology classes</rdfs:comment>
+        <rdfs:label xml:lang="en">core union</rdfs:label>
     </owl:Class>
     
 
@@ -5641,7 +5709,7 @@ bdr:Czzzz a :Corporation ;
     <!-- http://purl.bdrc.io/ontology/core/EntitiesOrFacets -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EntitiesOrFacets">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/MixedUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -5653,6 +5721,8 @@ bdr:Czzzz a :Corporation ;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">class of various resources that may have :Note attached</rdfs:comment>
+        <rdfs:label xml:lang="en">entity or facet</rdfs:label>
     </owl:Class>
     
 
@@ -5788,7 +5858,7 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/EventOrPeriod -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/EventOrPeriod">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -5797,7 +5867,8 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Event or TimePeriod</rdfs:label>
+        <rdfs:comment xml:lang="en">domain of various date properties</rdfs:comment>
+        <rdfs:label xml:lang="en">event or timePeriod</rdfs:label>
     </owl:Class>
     
 
@@ -5824,7 +5895,16 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/IIIF2Or3Collection -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIF2Or3Collection">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFUnion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iiif.io/api/presentation/2#Collection"/>
+                    <rdf:Description rdf:about="http://iiif.io/api/presentation/3#Collection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">iiif v2 or v3 collection</rdfs:label>
     </owl:Class>
     
 
@@ -5832,7 +5912,7 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/IIIF2Or3Manifest -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIF2Or3Manifest">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -5841,6 +5921,7 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">iiif v2 or v3 manifest</rdfs:label>
     </owl:Class>
     
 
@@ -5848,7 +5929,6 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/IIIFCollection -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIFCollection">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIF2Or3Collection"/>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
         <rdfs:comment xml:lang="en">can be v2.1.* or v3.0.*</rdfs:comment>
         <rdfs:label xml:lang="en">IIIF Collection</rdfs:label>
@@ -5865,10 +5945,19 @@ Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLi
     <!-- http://purl.bdrc.io/ontology/core/IIIFManifest -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIFManifest">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIF2Or3Manifest"/>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/IIIFEntity"/>
         <rdfs:comment xml:lang="en">can be v2.1.* or v3.0.*</rdfs:comment>
         <rdfs:label xml:lang="en">IIIF Manifest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/IIIFUnion -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/IIIFUnion">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Union"/>
+        <rdfs:comment xml:lang="en">a union of iiif classes</rdfs:comment>
+        <rdfs:label xml:lang="en">iiif union</rdfs:label>
     </owl:Class>
     
 
@@ -6096,7 +6185,7 @@ bdr:Lwwww a :Lineage ;
     <!-- http://purl.bdrc.io/ontology/core/LineageOrNoteOrWork -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LineageOrNoteOrWork">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6106,6 +6195,8 @@ bdr:Lwwww a :Lineage ;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">the domain of :workLocation for use on :Lineage, or ;Note, or :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">lineage or note or work</rdfs:label>
     </owl:Class>
     
 
@@ -6114,8 +6205,8 @@ bdr:Lwwww a :Lineage ;
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/LineageType">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">LineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Lineage type</rdfs:label>
+        <rdfs:comment xml:lang="en">Subclasses record different lineage types by culture, e.g., Tibetan or Chinese</rdfs:comment>
+        <rdfs:label xml:lang="en">lineage type</rdfs:label>
     </owl:Class>
     
 
@@ -6126,6 +6217,16 @@ bdr:Lwwww a :Lineage ;
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
         <rdfs:comment xml:lang="en">This describes the material on which the content of a :TextualEntity is imposed.</rdfs:comment>
         <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/MixedUnion -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/MixedUnion">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Union"/>
+        <rdfs:comment xml:lang="en">a union of core and adm classes</rdfs:comment>
+        <rdfs:label xml:lang="en">mixed union</rdfs:label>
     </owl:Class>
     
 
@@ -6160,8 +6261,10 @@ TSD stands for Tibetan Schools Data. TSD data was only entered by Gene and is no
     <!-- http://purl.bdrc.io/ontology/core/Organization -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Organization">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
-        <rdfs:comment xml:lang="en">An administrative organization is one that is not a subject of the domain of discourse. For example, the British Library&apos;s Endangered Archives Programme (EAP) is an administrative organization and the sde dge par khang can be considered an :Organization since it is an entity within the domain of Asian Buddhism.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Agent"/>
+        <rdfs:comment xml:lang="en">An :Organization is a collection of agents that may be considered act in concert as a single agent, e.g., the kashag or the dzogchen protectors taken together: Ekazati, Rahulla, and Dorje Drollo
+
+An administrative organization is one that is not a subject of the domain of discourse. For example, the British Library&apos;s Endangered Archives Programme (EAP) is an administrative organization and the sde dge par khang can be considered an :Organization since it is an entity within the domain of Asian Buddhism.</rdfs:comment>
         <rdfs:label xml:lang="en">organization</rdfs:label>
     </owl:Class>
     
@@ -6193,7 +6296,7 @@ Relative pagination uses pagination in the content of the work while absolute co
     <!-- http://purl.bdrc.io/ontology/core/Person -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Person">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/SingleAgent"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Person object tracks biographical data such as kinship relations, birth and death dates, administrative offices  and seats held, important events and known name variants.  Instances of Person objects are not created for historical and quasi-historical personages, including legendary and mythical figures. Deities are defined as Topics.</rdfs:comment>
         <rdfs:comment xml:lang="en">names are represented via bdo:PersonName</rdfs:comment>
         <rdfs:label xml:lang="en">Person</rdfs:label>
@@ -6435,7 +6538,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonNameOrWorkTitle">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6444,6 +6547,8 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">domain of :restored and :reswtoredAlt that area used to name and title variants restored from corrupt textual content</rdfs:comment>
+        <rdfs:label xml:lang="en">person name or work title</rdfs:label>
     </owl:Class>
     
 
@@ -6470,7 +6575,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/PersonOrCorporation -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOrCorporation">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6480,7 +6585,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event</rdfs:comment>
-        <rdfs:label xml:lang="en">Person or Coporation</rdfs:label>
+        <rdfs:label xml:lang="en">person or coporation</rdfs:label>
     </owl:Class>
     
 
@@ -6488,7 +6593,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/PersonOrPlace -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOrPlace">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6497,6 +6602,8 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">domain of :DDBCAId which is used to record ids of Dharma Drum authority resources</rdfs:comment>
+        <rdfs:label xml:lang="en">person or place</rdfs:label>
     </owl:Class>
     
 
@@ -6504,7 +6611,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/PersonOrTopic -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/PersonOrTopic">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6513,6 +6620,9 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Used as the domain for several properties that may refer to either a :Person or an ahistorical agent represented as a :Topic</rdfs:comment>
+        <rdfs:label xml:lang="en">person or topic</rdfs:label>
+        <owl:deprecated xml:lang="en">deprecated in favor of :SingleAgent. The domains of the affected properties will be adjusted to :SingleAgent</owl:deprecated>
     </owl:Class>
     
 
@@ -6697,7 +6807,7 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
     <!-- http://purl.bdrc.io/ontology/core/ProductOrProductOrg -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/ProductOrProductOrg">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/AdmUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6706,6 +6816,8 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">used as domain for properties recording CTC subscriber info</rdfs:comment>
+        <rdfs:label xml:lang="en">product or product organization</rdfs:label>
     </owl:Class>
     
 
@@ -6777,6 +6889,16 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
         <rdfs:comment xml:lang="en">A script in which a language is written. For example, DbuCan, DbuMed, Kyug&apos;Yig, Native (implies Unicode)</rdfs:comment>
         <rdfs:label xml:lang="en">Script</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lexvo.org/ontology#Script"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/SingleAgent -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/SingleAgent">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Agent"/>
+        <rdfs:comment xml:lang="en">single agents include ahistorical and historical (human) agents</rdfs:comment>
+        <rdfs:label xml:lang="en">single agent</rdfs:label>
     </owl:Class>
     
 
@@ -6863,7 +6985,7 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
     <!-- http://purl.bdrc.io/ontology/core/TextualEntity -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TextualEntity">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CoreUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6874,7 +6996,27 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">:TextualEntity is a subclass of :Work, or :Item or :Etext that is constructed so that the adm:license range can be applied across</rdfs:comment>
-        <rdfs:label xml:lang="en">Textual Entity</rdfs:label>
+        <rdfs:label xml:lang="en">textual entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/TibetanLineageType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TibetanLineageType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdfs:comment xml:lang="en">TibetanLineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tibetan Lineage type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/TibetanTradition -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/TibetanTradition">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdfs:comment xml:lang="en">Individuals represent various (Tibetan) Buddhist traditions, e.g., Karma Kagyu, Bon, or Nyingma</rdfs:comment>
+        <rdfs:label xml:lang="en">Tibetan Tradition</rdfs:label>
     </owl:Class>
     
 
@@ -6905,8 +7047,8 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Tradition">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
-        <rdfs:comment xml:lang="en">Individuals represent various (Tibetan) Buddhist traditions</rdfs:comment>
-        <rdfs:label xml:lang="en">Tradition</rdfs:label>
+        <rdfs:comment xml:lang="en">subclasses record different types of tradition by culture, e.g., Tibetan or Chinese</rdfs:comment>
+        <rdfs:label xml:lang="en">type of tradition</rdfs:label>
     </owl:Class>
     
 
@@ -6955,9 +7097,9 @@ The set of such individuals may be further organized via :Taxonomy but need not 
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/Unions -->
+    <!-- http://purl.bdrc.io/ontology/core/Union -->
 
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Unions"/>
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Union"/>
     
 
 
@@ -7123,7 +7265,7 @@ The Works also included some structural metadata in the volumeMap but that is mo
     <!-- http://purl.bdrc.io/ontology/core/WorkOrAdmOutline -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/WorkOrAdmOutline">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Unions"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/MixedUnion"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -7132,6 +7274,8 @@ The Works also included some structural metadata in the volumeMap but that is mo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">domain for :workLegacyNode as part of migration - not a core ontology concept</rdfs:comment>
+        <rdfs:label xml:lang="en">work or adm:Outline</rdfs:label>
     </owl:Class>
     
 
@@ -7781,7 +7925,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageDbang -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageDbang">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">empowerment</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7790,7 +7934,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageDmarKhrid -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageDmarKhrid">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">essential instruction</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7799,7 +7943,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageGdamsNgag -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageGdamsNgag">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">oral instruction</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7808,7 +7952,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageKhrid -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageKhrid">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">instruction</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7817,7 +7961,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageLung -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageLung">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">reading transmission</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7826,7 +7970,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageManNgag -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageManNgag">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">quintessential instruction</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7835,7 +7979,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageNotSpecified -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageNotSpecified">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">not specified</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7844,7 +7988,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageNyeBrgyud -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageNyeBrgyud">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">direct transmission</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7853,7 +7997,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageRingBrgyud -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageRingBrgyud">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">long lineage transmission</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7862,7 +8006,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageRjesGnang -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageRjesGnang">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">short empowerment</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7871,7 +8015,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageSdomBrgyud -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageSdomBrgyud">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">lineage of vows</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7880,7 +8024,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/LineageSnyanBrgyud -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageSnyanBrgyud">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/LineageType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">oral lineage</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9802,7 +9946,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionBardrukKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBardrukKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
         <rdfs:label xml:lang="en">Bardruk Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Middle Drukpa Kagyu</rdfs:label>
@@ -9813,7 +9957,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionBaromKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBaromKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Barom Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -9823,7 +9967,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionBodong -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBodong">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Bodong</rdfs:label>
     </owl:NamedIndividual>
@@ -9833,7 +9977,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionBon -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionBon">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Bon</rdfs:label>
     </owl:NamedIndividual>
@@ -9843,7 +9987,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionChod -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionChod">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionZhije"/>
         <rdfs:label xml:lang="en">Chod</rdfs:label>
     </owl:NamedIndividual>
@@ -9853,7 +9997,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionDharmaguptaka -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDharmaguptaka">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <rdfs:label xml:lang="en">Dharmaguptaka</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9862,7 +10006,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionDrigungKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrigungKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Drigung Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -9872,7 +10016,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionDrukpaKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionDrukpaKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Drukpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -9882,7 +10026,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionGeluk -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionGeluk">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Geluk</rdfs:label>
     </owl:NamedIndividual>
@@ -9892,7 +10036,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionJonang -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionJonang">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Jonang</rdfs:label>
     </owl:NamedIndividual>
@@ -9902,7 +10046,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionJordruk -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionJordruk">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Jordruk</rdfs:label>
         <rdfs:label xml:lang="en">Kalacakra</rdfs:label>
@@ -9914,7 +10058,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionKadam -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKadam">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Kadam</rdfs:label>
     </owl:NamedIndividual>
@@ -9924,7 +10068,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -9934,7 +10078,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionKarmaKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionKarmaKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Kamtsang Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Karma Kagyu</rdfs:label>
@@ -9945,7 +10089,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionMadrukKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMadrukKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
         <rdfs:label xml:lang="en">Lower Drukpa Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Madruk Kagyu</rdfs:label>
@@ -9956,7 +10100,7 @@ We welcome your input. Please contact us with any comments or questions at inqui
     <!-- http://purl.bdrc.io/resource/TraditionMarpaKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMarpaKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
         <rdfs:comment xml:lang="en">Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight.
 
@@ -9969,7 +10113,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionMartsangKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMartsangKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Martsang Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -9979,7 +10123,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionMulasarvastivada -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionMulasarvastivada">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <rdfs:label xml:lang="en">Mūlasarvāstivāda</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9988,7 +10132,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionNedoKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNedoKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKarmaKagyu"/>
         <rdfs:label xml:lang="en">Nedo Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -9998,7 +10142,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionNgorSakya -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNgorSakya">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionSakya"/>
         <rdfs:comment xml:lang="en">one of sa ngor tsar gsum</rdfs:comment>
         <rdfs:label xml:lang="en">Ngor Sakya</rdfs:label>
@@ -10009,7 +10153,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionNyingma -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionNyingma">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Nyingma</rdfs:label>
     </owl:NamedIndividual>
@@ -10019,7 +10163,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionOrgyenNyengyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionOrgyenNyengyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Orgyen Nyengru</rdfs:label>
         <rdfs:label xml:lang="en">The Three Vajras</rdfs:label>
@@ -10030,7 +10174,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionPhagGruKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionPhagGruKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Phag Gru Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10040,7 +10184,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionRime -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionRime">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:comment xml:lang="en">Some might not count Rime as a Tradition but since there are Works and Persons who are identified as such it is approapriate to include for purposes of classification</rdfs:comment>
         <rdfs:label xml:lang="en">Rime</rdfs:label>
@@ -10051,7 +10195,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionSakya -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionSakya">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Sakya</rdfs:label>
     </owl:NamedIndividual>
@@ -10061,7 +10205,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionSarvastivada -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionSarvastivada">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <rdfs:label xml:lang="en">Sarvāstivāda</rdfs:label>
     </owl:NamedIndividual>
     
@@ -10070,7 +10214,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionShangpaKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionShangpaKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKagyu"/>
         <rdfs:label xml:lang="en">Shangpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10080,7 +10224,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionShugsepKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionShugsepKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Shugsep Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10090,7 +10234,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionTaklungKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTaklungKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Taklung Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10110,7 +10254,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionTheravada -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTheravada">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <rdfs:label xml:lang="en">Theravāda</rdfs:label>
     </owl:NamedIndividual>
     
@@ -10119,7 +10263,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionTodrukKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTodrukKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionDrukpaKagyu"/>
         <rdfs:label xml:lang="en">Todruk Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Upper Drukpa Kagyu</rdfs:label>
@@ -10130,7 +10274,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionTsalpaKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTsalpaKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/FourMainKagyuTraditions"/>
         <rdfs:label xml:lang="en">Tsalpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10140,7 +10284,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionTsarSakya -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionTsarSakya">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionSakya"/>
         <rdfs:comment xml:lang="en">one of     sa ngor tsar gsum</rdfs:comment>
         <rdfs:label xml:lang="en">Tsar Sakya</rdfs:label>
@@ -10151,7 +10295,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionYazangKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionYazangKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Yazang Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10161,7 +10305,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionYelpaKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionYelpaKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightMinorKagyuTraditions"/>
         <rdfs:label xml:lang="en">Yelpa Kagyu</rdfs:label>
     </owl:NamedIndividual>
@@ -10171,7 +10315,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionZhalu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZhalu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionTaxonomy"/>
         <rdfs:label xml:lang="en">Zhalu</rdfs:label>
     </owl:NamedIndividual>
@@ -10181,7 +10325,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionZhije -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZhije">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/EightPracticeLineages"/>
         <rdfs:label xml:lang="en">Shije</rdfs:label>
         <rdfs:label xml:lang="en">Zhije</rdfs:label>
@@ -10192,7 +10336,7 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <!-- http://purl.bdrc.io/resource/TraditionZurmangKagyu -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/TraditionZurmangKagyu">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/Tradition"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanTradition"/>
         <taxSubClassOf rdf:resource="http://purl.bdrc.io/resource/TraditionKarmaKagyu"/>
         <rdfs:label xml:lang="en">Surmang Kagyu</rdfs:label>
         <rdfs:label xml:lang="en">Zurmang Kagyu</rdfs:label>
