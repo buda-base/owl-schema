@@ -8016,9 +8016,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageDbang -->
+    <!-- http://purl.bdrc.io/resource/LT0001 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageDbang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0001">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="bo-x-ewts">dbang</rdfs:label>
         <rdfs:label xml:lang="en">empowerment</rdfs:label>
@@ -8026,9 +8026,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageDmarKhrid -->
+    <!-- http://purl.bdrc.io/resource/LT0002 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageDmarKhrid">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0002">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="bo-x-ewts">dmar khrid</rdfs:label>
         <rdfs:label xml:lang="en">essential instruction</rdfs:label>
@@ -8036,9 +8036,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageGdamsNgag -->
+    <!-- http://purl.bdrc.io/resource/LT0003 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageGdamsNgag">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0003">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="bo-x-ewts">gdams ngag</rdfs:label>
         <rdfs:label xml:lang="en">oral instruction</rdfs:label>
@@ -8046,9 +8046,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageKhrid -->
+    <!-- http://purl.bdrc.io/resource/LT0004 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageKhrid">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0004">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">instruction</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">khrid</rdfs:label>
@@ -8056,9 +8056,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageLung -->
+    <!-- http://purl.bdrc.io/resource/LT0005 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageLung">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0005">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="bo-x-ewts">lung</rdfs:label>
         <rdfs:label xml:lang="en">reading transmission</rdfs:label>
@@ -8066,9 +8066,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageManNgag -->
+    <!-- http://purl.bdrc.io/resource/LT0006 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageManNgag">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0006">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="bo-x-ewts">man ngag</rdfs:label>
         <rdfs:label xml:lang="en">quintessential instruction</rdfs:label>
@@ -8076,18 +8076,19 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageNotSpecified -->
+    <!-- http://purl.bdrc.io/resource/LT0007 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageNotSpecified">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0007">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gsal kha ma</rdfs:label>
         <rdfs:label xml:lang="en">not specified</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageNyeBrgyud -->
+    <!-- http://purl.bdrc.io/resource/LT0008 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageNyeBrgyud">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0008">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">direct transmission</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">nye brgyud</rdfs:label>
@@ -8095,9 +8096,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageRingBrgyud -->
+    <!-- http://purl.bdrc.io/resource/LT0009 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageRingBrgyud">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0009">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">long lineage transmission</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">ring brgyud</rdfs:label>
@@ -8105,9 +8106,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageRjesGnang -->
+    <!-- http://purl.bdrc.io/resource/LT0010 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageRjesGnang">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0010">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="bo-x-ewts">rjes gnang</rdfs:label>
         <rdfs:label xml:lang="en">short empowerment</rdfs:label>
@@ -8115,9 +8116,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageSdomBrgyud -->
+    <!-- http://purl.bdrc.io/resource/LT0011 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageSdomBrgyud">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0011">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">lineage of vows</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">sdom brgyud</rdfs:label>
@@ -8125,9 +8126,9 @@ bdr:W22083 a :Work ;
     
 
 
-    <!-- http://purl.bdrc.io/resource/LineageSnyanBrgyud -->
+    <!-- http://purl.bdrc.io/resource/LT0012 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LineageSnyanBrgyud">
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0012">
         <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
         <rdfs:label xml:lang="en">oral lineage</rdfs:label>
         <rdfs:label xml:lang="bo-x-ewts">snyan brgyud</rdfs:label>
