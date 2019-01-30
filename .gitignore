@@ -8,6 +8,12 @@ catalog-v001.xml
 #
 .DS_Store
 
+#
+# Eclipse
+#
+
+.project
+
 bdrc-rdf11.owl
 /bdrc-2.owl
 /bdrc-3.owl
