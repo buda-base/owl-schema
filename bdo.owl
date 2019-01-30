@@ -20,13 +20,11 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/core/">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.03
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190129 v 1.2.18
 
-Updated label and comment for rdfs:label</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180920 v 1.2.02
-
-updated label for :onYear
-set some kinship properties as owl:SymmetricProperty</rdfs:comment>
+add :AgentAsCreator rdfs:subClassOf :AgentInRole
+add :Creator rdfs:subClassOf :Role
+add :creator to replace :workCreator</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190124 v 1.2.12
 
 clearer individuals for Terms of Useclearer individuals for Terms of Use
@@ -39,6 +37,73 @@ use opaque names for :PlaceType
 rename bdrc.owl to bdo.owl
 update bdr:LicenseCC0 label and comment
 rename bdr:LicenseCopyrighted to bdr:LicenseAllRightsReserved</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190129 v 1.2.17
+
+add labels for lineages
+:TibetanLineageType opaque ids</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.06
+
+corrected domain of :langMARCCode</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
+
+Update comment for :ObjectType
+
+provided documentation for :workCreator properties
+
+added creatorReciter
+added creatorIndicScholar
+added creatorForger
+added creatorHeadTranslator
+added creatorOralTranslator
+added creatorUnspecified
+added creatorAmanuensis
+
+deprecated :creatorGeneralAuthor
+deprecated :creatorPandita
+deprecated :creatorRequester</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180913 v 1.1.01
+
+added creatorCompiler
+
+deprecated creatorEditor</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.01
+
+added :dateApproximate</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190128 v 1.2.15
+
+subclasses for TibetaTradition and TibetanLineqageType
+added :Agent subclass of :Entity with :Person and :Organization as subclasses
+added :AhistoricalAgent
+added :Union hierarchy and documented various unions
+cleaned up iiif2 or 3 collections and manifests subclassing
+deprecates :PersonOrTopic in favor of :SingleAgent
+refined :IIIFEntity hierarchy</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.07
+
+added seeAlso :langMARCCode
+added seeAlso :placeMARCCountryCode</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181218 v 1.2.09
+
+deprecated :contentProvider in favor of :hasContentProvider - name change
+
+added :Organization and made :Corporation rdfs:subClassOf :Organization
+
+added adm:Organization; deprecated adm:ContentProvider
+
+added :hasSteward</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.04
+
+added domain and range for personTeacherOf
+added :personConsortOf as inverse of :personHasConsort</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.03
+
+Updated label and comment for rdfs:label</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.18</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180920 v 1.2.02
+
+updated label for :onYear
+set some kinship properties as owl:SymmetricProperty</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.00
 
 revised use of owl:deprecated to follow OWL 2 semantics, and implement detailed deprecation model
@@ -70,72 +135,16 @@ added :langMARCCode
 added :placeMARCCountryCode
 added :restored
 added :restoredAlt</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.06
-
-corrected domain of :langMARCCode</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.16</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190125 v 1.2.13
 
 added :LineageOrNoteOrWork
 added :EntitiesOrFacets
 :note rdfs:domain :EntitiesOrFacets</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180911 v 1.1.00
-
-Update comment for :ObjectType
-
-provided documentation for :workCreator properties
-
-added creatorReciter
-added creatorIndicScholar
-added creatorForger
-added creatorHeadTranslator
-added creatorOralTranslator
-added creatorUnspecified
-added creatorAmanuensis
-
-deprecated :creatorGeneralAuthor
-deprecated :creatorPandita
-deprecated :creatorRequester</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180913 v 1.1.01
-
-added creatorCompiler
-
-deprecated creatorEditor</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDRC Ontology</rdfs:label>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180917 v 1.2.01
-
-added :dateApproximate</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190128 v 1.2.15
-
-subclasses for TibetaTradition and TibetanLineqageType
-added :Agent subclass of :Entity with :Person and :Organization as subclasses
-added :AhistoricalAgent
-added :Union hierarchy and documented various unions
-cleaned up iiif2 or 3 collections and manifests subclassing
-deprecates :PersonOrTopic in favor of :SingleAgent
-refined :IIIFEntity hierarchy</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190128 v 1.2.16
 
 added :onDate and (xsd:integer or xsd:date) for :notBefore and :notAfter ranges
 added :AgentInRole, :agent, and :role.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181002 v 1.2.07
-
-added seeAlso :langMARCCode
-added seeAlso :placeMARCCountryCode</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20181218 v 1.2.09
-
-deprecated :contentProvider in favor of :hasContentProvider - name change
-
-added :Organization and made :Corporation rdfs:subClassOf :Organization
-
-added adm:Organization; deprecated adm:ContentProvider
-
-added :hasSteward</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.04
-
-added domain and range for personTeacherOf
-added :personConsortOf as inverse of :personHasConsort</rdfs:comment>
     </owl:Ontology>
     
 
@@ -1231,6 +1240,17 @@ for @start, C71, and a different instance, C13, for @endCirca. The uses are not 
 Thus crp:region maps crp:Corporation directly to plc:Place without any additional chaff</rdfs:comment>
         <rdfs:comment xml:lang="en">This property records a Place characterizing the region in which the Corporation occured/occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.bdrc.io/ontology/core/creator">
+        <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Work"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/AgentAsCreator"/>
+        <rdfs:comment xml:lang="en">:creator associates a Work with an Agent and a Creator Role that participated in the creation of the Work</rdfs:comment>
+        <rdfs:label xml:lang="en">has creator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -5582,6 +5602,16 @@ The various Works that are contained in the Product include an inProduct element
     
 
 
+    <!-- http://purl.bdrc.io/ontology/core/AgentAsCreator -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AgentAsCreator">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/AgentInRole"/>
+        <rdfs:comment xml:lang="en">:AgentAsCreator has :role that is restricted to instances of :Creator (rdfs:subClassOf :Role)</rdfs:comment>
+        <rdfs:label xml:lang="en">agent as creator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/core/AgentInRole -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AgentInRole">
@@ -5774,6 +5804,16 @@ bdr:Czzzz a :Corporation ;
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/CorporationMemberNotSpecified">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/CorporationMember"/>
         <rdfs:label xml:lang="en">Unspecified Member</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bdrc.io/ontology/core/Creator -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/Creator">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Role"/>
+        <rdfs:comment xml:lang="en">Individuals of class :Creator describe the various roles that :Agents play in creating a :Work</rdfs:comment>
+        <rdfs:label xml:lang="en">creator role</rdfs:label>
     </owl:Class>
     
 
@@ -7832,6 +7872,126 @@ bdr:W22083 a :Work ;
     
 
 
+    <!-- http://purl.bdrc.io/resource/LT0001 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0001">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">dbang</rdfs:label>
+        <rdfs:label xml:lang="en">empowerment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0002 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0002">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">dmar khrid</rdfs:label>
+        <rdfs:label xml:lang="en">essential instruction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0003 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0003">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gdams ngag</rdfs:label>
+        <rdfs:label xml:lang="en">oral instruction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0004 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0004">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="en">instruction</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">khrid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0005 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0005">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">lung</rdfs:label>
+        <rdfs:label xml:lang="en">reading transmission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0006 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0006">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">man ngag</rdfs:label>
+        <rdfs:label xml:lang="en">quintessential instruction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0007 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0007">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">gsal kha ma</rdfs:label>
+        <rdfs:label xml:lang="en">not specified</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0008 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0008">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="en">direct transmission</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">nye brgyud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0009 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0009">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="en">long lineage transmission</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">ring brgyud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0010 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0010">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="bo-x-ewts">rjes gnang</rdfs:label>
+        <rdfs:label xml:lang="en">short empowerment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0011 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0011">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="en">lineage of vows</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">sdom brgyud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.bdrc.io/resource/LT0012 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0012">
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
+        <rdfs:label xml:lang="en">oral lineage</rdfs:label>
+        <rdfs:label xml:lang="bo-x-ewts">snyan brgyud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.bdrc.io/resource/LangBo -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LangBo">
@@ -8012,126 +8172,6 @@ bdr:W22083 a :Work ;
         <rdfs:comment xml:lang="en">Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws.</rdfs:comment>
         <rdfs:label xml:lang="en">Public Domain</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://creativecommons.org/publicdomain/mark/1.0/deed"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0001 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0001">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">dbang</rdfs:label>
-        <rdfs:label xml:lang="en">empowerment</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0002 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0002">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">dmar khrid</rdfs:label>
-        <rdfs:label xml:lang="en">essential instruction</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0003 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0003">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">gdams ngag</rdfs:label>
-        <rdfs:label xml:lang="en">oral instruction</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0004 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0004">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="en">instruction</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">khrid</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0005 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0005">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">lung</rdfs:label>
-        <rdfs:label xml:lang="en">reading transmission</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0006 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0006">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">man ngag</rdfs:label>
-        <rdfs:label xml:lang="en">quintessential instruction</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0007 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0007">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">gsal kha ma</rdfs:label>
-        <rdfs:label xml:lang="en">not specified</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0008 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0008">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="en">direct transmission</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">nye brgyud</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0009 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0009">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="en">long lineage transmission</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">ring brgyud</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0010 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0010">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="bo-x-ewts">rjes gnang</rdfs:label>
-        <rdfs:label xml:lang="en">short empowerment</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0011 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0011">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="en">lineage of vows</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">sdom brgyud</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.bdrc.io/resource/LT0012 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/LT0012">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/TibetanLineageType"/>
-        <rdfs:label xml:lang="en">oral lineage</rdfs:label>
-        <rdfs:label xml:lang="bo-x-ewts">snyan brgyud</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -10738,6 +10778,22 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:comment xml:lang="en">The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA&apos;s domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types.</rdfs:comment>
     </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/core/role"/>
+        <owl:someValuesFrom rdf:resource="http://purl.bdrc.io/ontology/core/Creator"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/AgentAsCreator"/>
+    </owl:Restriction>
 </rdf:RDF>
 
 
