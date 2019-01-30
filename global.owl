@@ -12,8 +12,8 @@
      xmlns:adm="http://purl.bdrc.io/ontology/admin/"
      xmlns:bdo="http://purl.bdrc.io/ontology/core/">
     <owl:Ontology rdf:about="http://purl.bdrc.io/ontology/">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/BuddhistDigitalResourceCenter/owl-schema/master/bdo.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/BuddhistDigitalResourceCenter/owl-schema/master/auth.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/bdo.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/auth.owl"/>
     </owl:Ontology>
 </rdf:RDF>
 
