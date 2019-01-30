@@ -26,4 +26,4 @@ $ sed 's,http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral,http://www.w3.o
 
 ### License
 
-The `bdo.owl` file and associated documentation are distributed under the [CC0](LICENSE) license.
+The `bdo.owl` file and associated documentation are distributed under the [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/).
