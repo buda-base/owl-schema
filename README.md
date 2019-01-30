@@ -1,4 +1,4 @@
-# BDRC Ontology Schema
+# Buddhist Digital Ontology vocabulary
 
 This repository contains the files associated with the Buddhist Digital Ontology (BDO). You can use [Protege](http://protege.stanford.edu/) to edit it. The main file is `bdo.owl`.
 
