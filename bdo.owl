@@ -61,6 +61,11 @@ added creatorAmanuensis
 deprecated :creatorGeneralAuthor
 deprecated :creatorPandita
 deprecated :creatorRequester</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20190131 v 1.2.19
+
+added sh prefix
+added constraints on :Work
+corrected constraint on :AgentAsCreator</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180913 v 1.1.01
 
 added creatorCompiler
@@ -96,10 +101,10 @@ added :hasSteward</rdfs:comment>
 
 added domain and range for personTeacherOf
 added :personConsortOf as inverse of :personHasConsort</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.19</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180925 v 1.2.03
 
 Updated label and comment for rdfs:label</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.18</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20180920 v 1.2.02
 
 updated label for :onYear
@@ -2990,6 +2995,8 @@ When used in an :AgentInRole, the associated :Agents is performing in the target
         <inferSubTree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inferSubTree>
         <rdfs:comment xml:lang="en">Identifies the type and person that are a creator of the work</rdfs:comment>
         <rdfs:label xml:lang="en">creator</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.bdrc.io/ontology/core/creator"/>
+        <owl:deprecated xml:lang="en">deprecated in favor of :creator and associated :AgentAsCreator</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -5606,6 +5613,12 @@ The various Works that are contained in the Product include an inProduct element
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/AgentAsCreator">
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/AgentInRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/core/role"/>
+                <owl:someValuesFrom rdf:resource="http://purl.bdrc.io/ontology/core/Creator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">:AgentAsCreator has :role that is restricted to instances of :Creator (rdfs:subClassOf :Role)</rdfs:comment>
         <rdfs:label xml:lang="en">agent as creator</rdfs:label>
     </owl:Class>
@@ -10778,22 +10791,6 @@ equiv Dagpo Kagyu?</rdfs:comment>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:comment xml:lang="en">The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA&apos;s domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types.</rdfs:comment>
     </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.bdrc.io/ontology/core/role"/>
-        <owl:someValuesFrom rdf:resource="http://purl.bdrc.io/ontology/core/Creator"/>
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/AgentAsCreator"/>
-    </owl:Restriction>
 </rdf:RDF>
 
 
