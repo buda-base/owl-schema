@@ -539,7 +539,7 @@ The value of this property should be an explanation of the needed conversion as 
     <!-- http://purl.bdrc.io/ontology/admin/status -->
 
     <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/admin/status">
-        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdfs:range rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:domain rdf:resource="http://purl.bdrc.io/ontology/core/Entity"/>
     </owl:AnnotationProperty>
     
@@ -5571,6 +5571,14 @@ The various Works that are contained in the Product include an inProduct element
     
 
 
+    <!-- http://purl.bdrc.io/ontology/admin/StatusType -->
+
+    <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/StatusType">
+        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/admin/Type"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bdrc.io/ontology/admin/TermsOfUse -->
 
     <owl:Class rdf:about="http://purl.bdrc.io/ontology/admin/TermsOfUse">
@@ -7046,14 +7054,6 @@ The type of event is represented as a subclass of :PersonEvent</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Agent"/>
         <rdfs:comment xml:lang="en">single agents include ahistorical and historical (human) agents</rdfs:comment>
         <rdfs:label xml:lang="en">single agent</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.bdrc.io/ontology/core/StatusType -->
-
-    <owl:Class rdf:about="http://purl.bdrc.io/ontology/core/StatusType">
-        <rdfs:subClassOf rdf:resource="http://purl.bdrc.io/ontology/core/Type"/>
     </owl:Class>
     
 
@@ -9859,7 +9859,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusAccessioned -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusAccessioned">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">accessioned</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9868,7 +9868,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusAcquiring -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusAcquiring">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">acquiring</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9877,7 +9877,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusEditing -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusEditing">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">editing</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9886,7 +9886,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusOnHold -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusOnHold">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">on hold</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9895,7 +9895,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusProvisional -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusProvisional">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">provisional</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9904,7 +9904,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusReleased -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusReleased">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">released</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9913,7 +9913,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusScanned -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusScanned">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">scanned</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9922,7 +9922,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusSeekingOut -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusSeekingOut">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">seeking out</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9931,7 +9931,7 @@ bdr:W22083 a :Work ;
     <!-- http://purl.bdrc.io/resource/StatusWithdrawn -->
 
     <owl:NamedIndividual rdf:about="http://purl.bdrc.io/resource/StatusWithdrawn">
-        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/core/StatusType"/>
+        <rdf:type rdf:resource="http://purl.bdrc.io/ontology/admin/StatusType"/>
         <rdfs:label xml:lang="en">withdrawn</rdfs:label>
     </owl:NamedIndividual>
     
