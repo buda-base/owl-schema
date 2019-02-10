@@ -1,0 +1,108 @@
+# baseURI: http://purl.bdrc.io/ontology/core/shapes/
+# imports: http://datashapes.org/dash
+# imports: http://purl.bdrc.io/ontology/core/
+# prefix: bds
+
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/core/shapes/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bds:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports bdo: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bds:EntityShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Entity shape"@en ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path adm:status ;
+      sh:class adm:StatusType ;
+      sh:description "must be exactly one adm:status of value adm:StatusType" ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "status" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path skos:prefLabel ;
+      sh:datatype rdf:langString ;
+      sh:description "require unique language from among the listed choices" ;
+      sh:languageIn (
+          "en"
+          "zh"
+          "bo"
+          "bo-x-ewts"
+        ) ;
+      sh:minCount 1 ;
+      sh:name "pref label"@en ;
+      sh:order "1"^^xsd:decimal ;
+      sh:uniqueLang true ;
+    ] ;
+  sh:targetClass bdo:Entity ;
+.
+bds:WorkShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Work shape"@en ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:creator ;
+      sh:class bdo:AgentAsCreator ;
+      sh:description "usually there will be one or more creator/author for a bdo:Work but there are occasionally none known in which case the bdo:agent should be bdr:UNKNOWN_Person. For the words of the buddha we need a designation either as a person or Ahistorical agent" ;
+      sh:minCount 1 ;
+      sh:name "creator" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "3"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:workTitle ;
+      sh:class bdo:WorkBibliographicalTitle ;
+      sh:description "there must be a single bibliographic title for a work" ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "title" ;
+      sh:order "2"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:workTitle ;
+      sh:class bdo:WorkTitle ;
+      sh:description "there can be 0 or more bdo:WorkTitle other than bdo:WorkBibliographicTitle" ;
+      sh:minCount 0 ;
+      sh:name "title" ;
+      sh:not [
+          a sh:NodeShape ;
+          sh:class bdo:WorkBibliographicalTitle ;
+        ] ;
+      sh:order 2.1 ;
+    ] ;
+  sh:targetClass bdo:Work ;
+.
