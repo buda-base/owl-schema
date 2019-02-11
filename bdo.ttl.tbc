@@ -13,19 +13,11 @@
   a visual:Graph ;
   visual:child [
       a visual:Box ;
-      visual:depicts <http://purl.bdrc.io/ontology/admin/Facet> ;
-      visual:height "18"^^xsd:int ;
-      visual:width "108"^^xsd:int ;
-      visual:x "520"^^xsd:int ;
-      visual:y "35"^^xsd:int ;
-    ] ;
-  visual:child [
-      a visual:Box ;
       visual:depicts <http://purl.bdrc.io/ontology/admin/LogEntry> ;
       visual:height "18"^^xsd:int ;
       visual:width "126"^^xsd:int ;
-      visual:x "335"^^xsd:int ;
-      visual:y "88"^^xsd:int ;
+      visual:x "385"^^xsd:int ;
+      visual:y "251"^^xsd:int ;
     ] ;
   visual:child [
       a visual:Box ;
@@ -40,8 +32,8 @@
       visual:depicts <http://purl.bdrc.io/ontology/admin/logDate> ;
       visual:height "18"^^xsd:int ;
       visual:width "120"^^xsd:int ;
-      visual:x "632"^^xsd:int ;
-      visual:y "313"^^xsd:int ;
+      visual:x "533"^^xsd:int ;
+      visual:y "515"^^xsd:int ;
     ] ;
   visual:child [
       a visual:Box ;
@@ -56,16 +48,16 @@
       visual:depicts <http://purl.bdrc.io/ontology/admin/logMessage> ;
       visual:height "18"^^xsd:int ;
       visual:width "142"^^xsd:int ;
-      visual:x "632"^^xsd:int ;
-      visual:y "224"^^xsd:int ;
+      visual:x "564"^^xsd:int ;
+      visual:y "426"^^xsd:int ;
     ] ;
   visual:child [
       a visual:Box ;
       visual:depicts <http://purl.bdrc.io/ontology/admin/logWho> ;
       visual:height "18"^^xsd:int ;
       visual:width "119"^^xsd:int ;
-      visual:x "630"^^xsd:int ;
-      visual:y "149"^^xsd:int ;
+      visual:x "585"^^xsd:int ;
+      visual:y "344"^^xsd:int ;
     ] ;
   visual:child [
       a visual:Box ;
@@ -88,32 +80,24 @@
       visual:depicts rdf:PlainLiteral ;
       visual:height "18"^^xsd:int ;
       visual:width "130"^^xsd:int ;
-      visual:x "869"^^xsd:int ;
-      visual:y "222"^^xsd:int ;
+      visual:x "801"^^xsd:int ;
+      visual:y "424"^^xsd:int ;
     ] ;
   visual:child [
       a visual:Box ;
       visual:depicts xsd:dateTime ;
       visual:height "18"^^xsd:int ;
       visual:width "123"^^xsd:int ;
-      visual:x "869"^^xsd:int ;
-      visual:y "312"^^xsd:int ;
-    ] ;
-  visual:child [
-      a visual:Box ;
-      visual:depicts owl:Class ;
-      visual:height "18"^^xsd:int ;
-      visual:width "103"^^xsd:int ;
-      visual:x "400"^^xsd:int ;
-      visual:y "14"^^xsd:int ;
+      visual:x "770"^^xsd:int ;
+      visual:y "514"^^xsd:int ;
     ] ;
   visual:child [
       a visual:Box ;
       visual:depicts <http://xmlns.com/foaf/0.1/Agent> ;
       visual:height "18"^^xsd:int ;
       visual:width "108"^^xsd:int ;
-      visual:x "867"^^xsd:int ;
-      visual:y "147"^^xsd:int ;
+      visual:x "822"^^xsd:int ;
+      visual:y "342"^^xsd:int ;
     ] ;
   visual:depicts <http://purl.bdrc.io/ontology/admin/logEntry> ;
   rdfs:label "adm:logEntry Graph" ;
