@@ -1,0 +1,120 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  a visual:Graph ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/Facet> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "108"^^xsd:int ;
+      visual:x "520"^^xsd:int ;
+      visual:y "35"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/LogEntry> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "126"^^xsd:int ;
+      visual:x "335"^^xsd:int ;
+      visual:y "88"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/Outline> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "117"^^xsd:int ;
+      visual:x "4"^^xsd:int ;
+      visual:y "182"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/logDate> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "120"^^xsd:int ;
+      visual:x "632"^^xsd:int ;
+      visual:y "313"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/logEntry> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "123"^^xsd:int ;
+      visual:x "210"^^xsd:int ;
+      visual:y "11"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/logMessage> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "142"^^xsd:int ;
+      visual:x "632"^^xsd:int ;
+      visual:y "224"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/logWho> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "119"^^xsd:int ;
+      visual:x "630"^^xsd:int ;
+      visual:y "149"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/admin/outlineLogEntry> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "162"^^xsd:int ;
+      visual:x "193"^^xsd:int ;
+      visual:y "184"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://purl.bdrc.io/ontology/core/Entity> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "107"^^xsd:int ;
+      visual:x "5"^^xsd:int ;
+      visual:y "13"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts rdf:PlainLiteral ;
+      visual:height "18"^^xsd:int ;
+      visual:width "130"^^xsd:int ;
+      visual:x "869"^^xsd:int ;
+      visual:y "222"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts xsd:dateTime ;
+      visual:height "18"^^xsd:int ;
+      visual:width "123"^^xsd:int ;
+      visual:x "869"^^xsd:int ;
+      visual:y "312"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts owl:Class ;
+      visual:height "18"^^xsd:int ;
+      visual:width "103"^^xsd:int ;
+      visual:x "400"^^xsd:int ;
+      visual:y "14"^^xsd:int ;
+    ] ;
+  visual:child [
+      a visual:Box ;
+      visual:depicts <http://xmlns.com/foaf/0.1/Agent> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "108"^^xsd:int ;
+      visual:x "867"^^xsd:int ;
+      visual:y "147"^^xsd:int ;
+    ] ;
+  visual:depicts <http://purl.bdrc.io/ontology/admin/logEntry> ;
+  rdfs:label "adm:logEntry Graph" ;
+].
