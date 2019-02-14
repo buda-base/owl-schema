@@ -670,9 +670,9 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
     
 
 
-    <!-- http://purl.bdrc.io/ontology/core/noteLocationStatementCBC -->
+    <!-- http://purl.bdrc.io/ontology/core/noteLocationStatementCBETA -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/noteLocationStatementCBC">
+    <owl:AnnotationProperty rdf:about="http://purl.bdrc.io/ontology/core/noteLocationStatementCBETA">
         <rdfs:comment xml:lang="en">Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
 
 T52n2103_p0264c18
