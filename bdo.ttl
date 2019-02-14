@@ -2937,7 +2937,7 @@ bdo:noteLocationStatement
   rdfs:label "location"@en ;
   rdfs:range xsd:string ;
 .
-bdo:noteLocationStatementCBC
+bdo:noteLocationStatementCBETA
   a owl:AnnotationProperty ;
   rdfs:comment """Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
 
