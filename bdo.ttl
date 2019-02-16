@@ -652,7 +652,7 @@ bdo:DDBCAId
 bdo:DateType
   a owl:Class ;
   rdfs:comment "The type of various sorts of date individuals such as DILA's Chinese date individuals - see subclass bdo:ChineseDateType"@en ;
-  rdfs:label "Date type" ;
+  rdfs:label "Date type"^^rdf:langString ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:EditedEvent
@@ -852,7 +852,7 @@ bdo:ISBN
 bdo:IntegerOrDate
   a rdfs:Datatype ;
   rdfs:comment "may be either an integer year or a YYYY-MM-DD date" ;
-  rdfs:label "on date" ;
+  rdfs:label "on date"^^rdf:langString ;
   owl:equivalentClass [
       a owl:Class ;
       owl:unionOf (
@@ -960,13 +960,13 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
 bdo:JapaneseDateType
   a owl:Class ;
   rdfs:comment "DILA dates corresponding to Japanese dynasties, rulers and month/day"@en ;
-  rdfs:label "Japanese date type" ;
+  rdfs:label "Japanese date type"^^rdf:langString ;
   rdfs:subClassOf bdo:DateType ;
 .
 bdo:KoreanDateType
   a owl:Class ;
   rdfs:comment "DILA dates corresponding to Korean dynasties, rulers and month/day"@en ;
-  rdfs:label "Korean date type" ;
+  rdfs:label "Korean date type"^^rdf:langString ;
   rdfs:subClassOf bdo:DateType ;
 .
 bdo:LCCN
@@ -1497,7 +1497,7 @@ bdo:QuarterCentury
 .
 bdo:ReignOfRuler
   a owl:Class ;
-  rdfs:label "Reign of ruler" ;
+  rdfs:label "Reign of ruler"^^rdf:langString ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:RequestedEvent
@@ -1545,7 +1545,7 @@ bdo:SliceLoc
     chunk number + \":\" + char number within chunk
 
 Both chunk and char number start at one."""@en ;
-  rdfs:label "Slice Loc" ;
+  rdfs:label "Slice Loc"^^rdf:langString ;
 .
 bdo:Taxonomy
   a owl:Class ;
@@ -4872,7 +4872,16 @@ bdr:C8Q1
 .
 bdr:ChineseDateNotSpecified
   a bdo:ChineseDateType ;
-  rdfs:label "Chinese date Not specified" ;
+  rdfs:label "Chinese date Not specified"@en ;
+.
+bdr:ChineseDateQinShiOctober
+  a bdo:ChineseDateType ;
+  bdo:duringDynasty bdr:QinDynasty ;
+  bdo:duringReign bdr:ReignOfQinShihuang ;
+  bdo:notAfter "-0221-12-16^^xsd:date"^^bdo:IntegerOrDate ;
+  bdo:notBefore "-0221-11-18^^xsd:date"^^bdo:IntegerOrDate ;
+  rdfs:label "Qin Shi 27 years october"@en ;
+  rdfs:label "秦 始皇帝（無年號） 二十七年（辛巳）十 月 戊寅 朔"@zh-hans ;
 .
 bdr:DzTibt
   a bdo:LangScript ;
@@ -5958,12 +5967,14 @@ bdr:QinDynasty
   bdo:notAfter "-206"^^bdo:IntegerOrDate ;
   bdo:notBefore "-220"^^bdo:IntegerOrDate ;
   rdfs:label "Qin dynasty"@en ;
+  rdfs:label "秦王朝"@zh-hans ;
 .
 bdr:ReignOfQinShihuang
   a bdo:ReignOfRuler ;
   bdo:notAfter "-208-11-18^^xsd:date"^^bdo:IntegerOrDate ;
   bdo:notBefore "-221-08-11^^xsd:date"^^bdo:IntegerOrDate ;
-  skos:prefLabel "Reign of Emperor Qin Shihuang"@zh-hans ;
+  rdfs:label "Reign of Emperor Qin Shihuang"@en ;
+  rdfs:label "秦	始皇帝	共 11 年"@zh-hans ;
 .
 bdr:RuCyrl
   a bdo:LangScript ;
@@ -6791,7 +6802,6 @@ We take the view that the summary or contents statements can be treated in a man
 rdfs:label
   rdfs:comment "The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle"@en ;
   rdfs:label "label"@en ;
-  rdfs:range rdf:PlainLiteral ;
 .
 rdfs:seeAlso
   rdfs:domain bdo:Entity ;
@@ -6820,14 +6830,12 @@ skos:hiddenLabel
   a owl:AnnotationProperty ;
   rdfs:comment "Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset"@en ;
   rdfs:label "hidden label"@en ;
-  rdfs:range rdf:PlainLiteral ;
   rdfs:subPropertyOf rdfs:label ;
 .
 skos:prefLabel
   a owl:AnnotationProperty ;
   rdfs:comment "The preferred human-readable label for a resource. For a Work this is typically the bibliographic title and will be repeated in a WorkTitle, similarly for Persons"@en ;
-  rdfs:label "label"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:label "preferred label"@en ;
   rdfs:subPropertyOf rdfs:label ;
 .
 vcard:Address
