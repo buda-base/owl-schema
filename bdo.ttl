@@ -652,7 +652,7 @@ bdo:DDBCAId
 bdo:DateType
   a owl:Class ;
   rdfs:comment "The type of various sorts of date individuals such as DILA's Chinese date individuals - see subclass bdo:ChineseDateType"@en ;
-  rdfs:label "Date type"^^rdf:langString ;
+  rdfs:label "Date type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:EditedEvent
@@ -852,7 +852,7 @@ bdo:ISBN
 bdo:IntegerOrDate
   a rdfs:Datatype ;
   rdfs:comment "may be either an integer year or a YYYY-MM-DD date" ;
-  rdfs:label "on date"^^rdf:langString ;
+  rdfs:label "integer or date or bdo:DateType"@en ;
   owl:equivalentClass [
       a owl:Class ;
       owl:unionOf (
@@ -960,13 +960,13 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
 bdo:JapaneseDateType
   a owl:Class ;
   rdfs:comment "DILA dates corresponding to Japanese dynasties, rulers and month/day"@en ;
-  rdfs:label "Japanese date type"^^rdf:langString ;
+  rdfs:label "Japanese date type"@en ;
   rdfs:subClassOf bdo:DateType ;
 .
 bdo:KoreanDateType
   a owl:Class ;
   rdfs:comment "DILA dates corresponding to Korean dynasties, rulers and month/day"@en ;
-  rdfs:label "Korean date type"^^rdf:langString ;
+  rdfs:label "Korean date type"@en ;
   rdfs:subClassOf bdo:DateType ;
 .
 bdo:LCCN
@@ -1497,7 +1497,7 @@ bdo:QuarterCentury
 .
 bdo:ReignOfRuler
   a owl:Class ;
-  rdfs:label "Reign of ruler"^^rdf:langString ;
+  rdfs:label "Reign of ruler"@en ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:RequestedEvent
