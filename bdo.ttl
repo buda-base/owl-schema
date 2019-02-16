@@ -559,6 +559,12 @@ bdo:CarvedEvent
   rdfs:label "Work Woodblocks Carved"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
+bdo:ChineseDateType
+  a owl:Class ;
+  rdfs:comment "The class of DILA Chinese date individuals"@en ;
+  rdfs:label "Chinese date type"@en ;
+  rdfs:subClassOf bdo:DateType ;
+.
 bdo:ChineseDynasty
   a owl:Class ;
   rdfs:label "Chinese Dynasty"@en ;
@@ -642,6 +648,12 @@ bdo:DDBCAId
   rdfs:range xsd:anyURI ;
   rdfs:seeAlso <http://authority.dila.edu.tw/person/> ;
   rdfs:seeAlso <http://authority.dila.edu.tw/place/> ;
+.
+bdo:DateType
+  a owl:Class ;
+  rdfs:comment "The type of various sorts of date individuals such as DILA's Chinese date individuals - see subclass bdo:ChineseDateType"@en ;
+  rdfs:label "Date type" ;
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:EditedEvent
   a owl:Class ;
@@ -842,10 +854,11 @@ bdo:IntegerOrDate
   rdfs:comment "may be either an integer year or a YYYY-MM-DD date" ;
   rdfs:label "on date" ;
   owl:equivalentClass [
-      a rdfs:Datatype ;
+      a owl:Class ;
       owl:unionOf (
           xsd:date
           xsd:integer
+          bdo:DateType
         ) ;
     ] ;
 .
@@ -943,6 +956,18 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
        :itemException \"དེབ་གཅིག་ཕྱི་ལ་གཡར་ནས་མ་འབྱོར\"@bo ."""@en ;
   rdfs:label "Physical Asset"@en ;
   rdfs:subClassOf bdo:Item ;
+.
+bdo:JapaneseDateType
+  a owl:Class ;
+  rdfs:comment "DILA dates corresponding to Japanese dynasties, rulers and month/day"@en ;
+  rdfs:label "Japanese date type" ;
+  rdfs:subClassOf bdo:DateType ;
+.
+bdo:KoreanDateType
+  a owl:Class ;
+  rdfs:comment "DILA dates corresponding to Korean dynasties, rulers and month/day"@en ;
+  rdfs:label "Korean date type" ;
+  rdfs:subClassOf bdo:DateType ;
 .
 bdo:LCCN
   a rdfs:Datatype ;
@@ -1468,6 +1493,11 @@ bdo:QuarterCentury
   a owl:Class ;
   rdfs:label "Quarter Century"@en ;
   rdfs:label "四分之一世纪"@zh-hans ;
+  rdfs:subClassOf bdo:TimePeriod ;
+.
+bdo:ReignOfRuler
+  a owl:Class ;
+  rdfs:label "Reign of ruler" ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:RequestedEvent
@@ -2137,6 +2167,18 @@ bdo:dateApproximate
   rdfs:domain bdo:EventOrPeriod ;
   rdfs:label "date is approximate"@en ;
   rdfs:range xsd:boolean ;
+.
+bdo:duringDynasty
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:DateType ;
+  rdfs:label "during dynasty"@en ;
+  rdfs:range bdo:ChineseDynasty ;
+.
+bdo:duringReign
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:DateType ;
+  rdfs:label "during reign"@en ;
+  rdfs:range bdo:ReignOfRuler ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -4828,6 +4870,10 @@ bdr:C8Q1
   rdfs:comment "700 - 724"@en ;
   rdfs:label "1st quarter of the 8th century"@en ;
 .
+bdr:ChineseDateNotSpecified
+  a bdo:ChineseDateType ;
+  rdfs:label "Chinese date Not specified" ;
+.
 bdr:DzTibt
   a bdo:LangScript ;
   a owl:NamedIndividual ;
@@ -5905,6 +5951,19 @@ bdr:PiThai
   bdo:script bdr:ScriptThai ;
   rdfs:comment "Pali in Thai script"@en ;
   rdfs:label "Pali in Thai"@en ;
+.
+bdr:QinDynasty
+  a bdo:ChineseDynasty ;
+  a owl:NamedIndividual ;
+  bdo:notAfter "-206"^^bdo:IntegerOrDate ;
+  bdo:notBefore "-220"^^bdo:IntegerOrDate ;
+  rdfs:label "Qin dynasty"@en ;
+.
+bdr:ReignOfQinShihuang
+  a bdo:ReignOfRuler ;
+  bdo:notAfter "-208-11-18^^xsd:date"^^bdo:IntegerOrDate ;
+  bdo:notBefore "-221-08-11^^xsd:date"^^bdo:IntegerOrDate ;
+  skos:prefLabel "Reign of Emperor Qin Shihuang"@zh-hans ;
 .
 bdr:RuCyrl
   a bdo:LangScript ;
