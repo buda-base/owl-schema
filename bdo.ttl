@@ -553,6 +553,21 @@ bdo:AnyOrganization
         ) ;
     ] ;
 .
+bdo:Binding
+  a owl:Class ;
+  rdfs:label "Binding" ;
+  rdfs:subClassOf bdo:Type ;
+.
+bdo:Binding_Codex
+  a owl:Class ;
+  rdfs:label "Binding Codex" ;
+  rdfs:subClassOf bdo:Binding ;
+.
+bdo:Binding_LooseLeaf
+  a owl:Class ;
+  rdfs:label "Binding Loose leaf" ;
+  rdfs:subClassOf bdo:Binding ;
+.
 bdo:CarvedEvent
   a owl:Class ;
   rdfs:comment "The event of carving a set of woodblocks for a :Work"@en ;
@@ -848,6 +863,11 @@ bdo:ISBN
   rdfs:comment "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
   rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
   rdfs:label "International Standard Book Number"@en ;
+.
+bdo:ImpressionSubstance
+  a owl:Class ;
+  rdfs:label "Impression substance"@en ;
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:IntegerOrDate
   a rdfs:Datatype ;
@@ -1451,6 +1471,31 @@ bdo:PlaceType
   rdfs:comment "The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc."@en ;
   rdfs:label "Place Type"@en ;
   rdfs:subClassOf bdo:Type ;
+.
+bdo:PrintMethod
+  a owl:Class ;
+  rdfs:label "Print method" ;
+  rdfs:subClassOf bdo:Type ;
+.
+bdo:PrintMethod_Intaglio
+  a owl:Class ;
+  rdfs:label "Print method Intaglio" ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+bdo:PrintMethod_Manuscript
+  a owl:Class ;
+  rdfs:label "Print method Manuscript"@en ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+bdo:PrintMethod_Offset
+  a owl:Class ;
+  rdfs:label "Print method Offset"@en ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+bdo:PrintMethod_Relief
+  a owl:Class ;
+  rdfs:label "Print method Relief" ;
+  rdfs:subClassOf bdo:PrintMethod ;
 .
 bdo:PrintedEvent
   a owl:Class ;
@@ -4764,6 +4809,26 @@ bdr:AccessRestrictedTemporarily
   rdfs:comment "The Work is temporarily restricted."@en ;
   rdfs:label "Temporarily Restricted"@en ;
 .
+bdr:Binding_Codex_Perfect
+  a bdo:Binding_Codex ;
+  rdfs:comment "thermally activated glued paperback binding"@en ;
+  rdfs:label "Binding Codex Perfect" ;
+.
+bdr:Binding_Codex_Sewn
+  a bdo:Binding_Codex ;
+  rdfs:comment "conventional hardbound book other manuscript"@en ;
+  rdfs:label "sewn binding"@en ;
+.
+bdr:Binding_LooseLeaf_Pecha
+  a bdo:Binding_LooseLeaf ;
+  rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
+  rdfs:label "pecha"@en ;
+.
+bdr:Binding_LooseLeaf_Pothi
+  a bdo:Binding_LooseLeaf ;
+  rdfs:comment "loose leaves with holes for string to keep the leaves together and wrapped in cloth"@en ;
+  rdfs:label "pothi"@en ;
+.
 bdr:Bo
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
@@ -4917,6 +4982,22 @@ bdr:Hi
   a owl:NamedIndividual ;
   bdo:language bdr:LangHi ;
   rdfs:label "Hindi"@en ;
+.
+bdr:ImpressionSubstance_BlackInk
+  a bdo:ImpressionSubstance ;
+  rdfs:label "Impression substance Black ink"@en ;
+.
+bdr:ImpressionSubstance_GoldLeaf
+  a bdo:ImpressionSubstance ;
+  rdfs:label "Impression substance Gold leaf"@en ;
+.
+bdr:ImpressionSubstance_RedInk
+  a bdo:ImpressionSubstance ;
+  rdfs:label "Impression substance Red ink"@en ;
+.
+bdr:ImpressionSubstance_SilverLeaf
+  a bdo:ImpressionSubstance ;
+  rdfs:label "Impression substance Silver leaf"@en ;
 .
 bdr:LT0001
   a bdo:TibetanLineageType ;
@@ -5924,6 +6005,37 @@ bdr:PiThai
   rdfs:comment "Pali in Thai script"@en ;
   rdfs:label "Pali in Thai"@en ;
 .
+bdr:PrintMethod_Intaglio_Copper
+  a bdo:PrintMethod_Intaglio ;
+  rdfs:label "copper intaglio"@en ;
+.
+bdr:PrintMethod_Intaglio_Zinc
+  a bdo:PrintMethod_Intaglio ;
+  rdfs:label "zinc intaglio"@en ;
+.
+bdr:PrintMethod_Manuscript_Autograph
+  a bdo:PrintMethod_Manuscript ;
+  rdfs:label "autograph"@en ;
+.
+bdr:PrintMethod_Manuscript_Scribe
+  a bdo:PrintMethod_Manuscript ;
+  rdfs:label "scribed manuscript"@en ;
+.
+bdr:PrintMethod_Relief_Letterpress
+  a bdo:PrintMethod_Relief ;
+  rdfs:comment "mechanical relief printing typically via wood"@en ;
+  rdfs:label "letterpress"@en ;
+.
+bdr:PrintMethod_Relief_WoodBlock
+  a bdo:PrintMethod_Relief ;
+  rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
+  rdfs:label "woodblock"@en ;
+  skos:altLabel "xylograph"@en ;
+.
+bdr:PrintMethod_Xerography
+  a bdo:PrintMethod ;
+  rdfs:label "xerography"@en ;
+.
 bdr:RuCyrl
   a bdo:LangScript ;
   a owl:NamedIndividual ;
@@ -6771,7 +6883,6 @@ skos:altLabel
   a owl:AnnotationProperty ;
   rdfs:comment "A variant label for entities such as :Place, :Corporation and so on"@en ;
   rdfs:label "variant label"@en ;
-  rdfs:range rdf:PlainLiteral ;
   rdfs:subPropertyOf rdfs:label ;
 .
 skos:hiddenLabel
