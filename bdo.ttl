@@ -957,18 +957,6 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
   rdfs:label "Physical Asset"@en ;
   rdfs:subClassOf bdo:Item ;
 .
-bdo:JapaneseDateType
-  a owl:Class ;
-  rdfs:comment "DILA dates corresponding to Japanese dynasties, rulers and month/day"@en ;
-  rdfs:label "Japanese date type"@en ;
-  rdfs:subClassOf bdo:DateType ;
-.
-bdo:KoreanDateType
-  a owl:Class ;
-  rdfs:comment "DILA dates corresponding to Korean dynasties, rulers and month/day"@en ;
-  rdfs:label "Korean date type"@en ;
-  rdfs:subClassOf bdo:DateType ;
-.
 bdo:LCCN
   a rdfs:Datatype ;
   bdo:dataTypeExpression "[[a-z]|[[a-z][a-z]|dd]|[a-z][[a-z][a-z]|dd]|[a-z][a-z]dd]dddddddd" ;
@@ -1493,11 +1481,6 @@ bdo:QuarterCentury
   a owl:Class ;
   rdfs:label "Quarter Century"@en ;
   rdfs:label "四分之一世纪"@zh-hans ;
-  rdfs:subClassOf bdo:TimePeriod ;
-.
-bdo:ReignOfRuler
-  a owl:Class ;
-  rdfs:label "Reign of ruler"@en ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:RequestedEvent
@@ -2167,18 +2150,6 @@ bdo:dateApproximate
   rdfs:domain bdo:EventOrPeriod ;
   rdfs:label "date is approximate"@en ;
   rdfs:range xsd:boolean ;
-.
-bdo:duringDynasty
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:DateType ;
-  rdfs:label "during dynasty"@en ;
-  rdfs:range bdo:ChineseDynasty ;
-.
-bdo:duringReign
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:DateType ;
-  rdfs:label "during reign"@en ;
-  rdfs:range bdo:ReignOfRuler ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -4874,15 +4845,6 @@ bdr:ChineseDateNotSpecified
   a bdo:ChineseDateType ;
   rdfs:label "Chinese date Not specified"@en ;
 .
-bdr:ChineseDateQinShiOctober
-  a bdo:ChineseDateType ;
-  bdo:duringDynasty bdr:QinDynasty ;
-  bdo:duringReign bdr:ReignOfQinShihuang ;
-  bdo:notAfter "-0221-12-16^^xsd:date"^^bdo:IntegerOrDate ;
-  bdo:notBefore "-0221-11-18^^xsd:date"^^bdo:IntegerOrDate ;
-  rdfs:label "Qin Shi 27 years october"@en ;
-  rdfs:label "秦 始皇帝（無年號） 二十七年（辛巳）十 月 戊寅 朔"@zh-hans ;
-.
 bdr:DzTibt
   a bdo:LangScript ;
   a owl:NamedIndividual ;
@@ -5266,6 +5228,7 @@ bdr:ObjectTypeFacsimile
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
   rdfs:comment "facsimile"@en ;
+  rdfs:label "facsimile"@en ;
 .
 bdr:ObjectTypeManuscript
   a bdo:ObjectType ;
@@ -5960,21 +5923,6 @@ bdr:PiThai
   bdo:script bdr:ScriptThai ;
   rdfs:comment "Pali in Thai script"@en ;
   rdfs:label "Pali in Thai"@en ;
-.
-bdr:QinDynasty
-  a bdo:ChineseDynasty ;
-  a owl:NamedIndividual ;
-  bdo:notAfter "-206"^^bdo:IntegerOrDate ;
-  bdo:notBefore "-220"^^bdo:IntegerOrDate ;
-  rdfs:label "Qin dynasty"@en ;
-  rdfs:label "秦王朝"@zh-hans ;
-.
-bdr:ReignOfQinShihuang
-  a bdo:ReignOfRuler ;
-  bdo:notAfter "-208-11-18^^xsd:date"^^bdo:IntegerOrDate ;
-  bdo:notBefore "-221-08-11^^xsd:date"^^bdo:IntegerOrDate ;
-  rdfs:label "Reign of Emperor Qin Shihuang"@en ;
-  rdfs:label "秦	始皇帝	共 11 年"@zh-hans ;
 .
 bdr:RuCyrl
   a bdo:LangScript ;
