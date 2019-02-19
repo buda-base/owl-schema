@@ -2805,6 +2805,13 @@ bdo:kinWith
   rdfs:label "kin with"@en ;
   rdfs:range bdo:Person ;
 .
+bdo:langBCP47Lang
+  a owl:DatatypeProperty ;
+  rdfs:comment "The 2-letter iso code for the langauge. To be used in creating the full BCP47 language+script+encoding tags"@en ;
+  rdfs:domain bdo:Language ;
+  rdfs:label "lang BCP47Lang"@en ;
+  rdfs:range xsd:string ;
+.
 bdo:langMARCCode
   a owl:DatatypeProperty ;
   rdfs:comment "three-character alphabetic codes for languages encode in MARC records"@en ;
@@ -5094,6 +5101,7 @@ bdr:LT0012
 bdr:LangBo
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "bo" ;
   bdo:langMARCCode "tib" ;
   rdfs:label "Tibetan"@en ;
   rdfs:label "bod yig"@bo-x-ewts ;
@@ -5102,6 +5110,7 @@ bdr:LangBo
 bdr:LangDz
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "dz" ;
   bdo:langMARCCode "dzo" ;
   rdfs:label "Dzongkha (Bhutanese)"@en ;
   rdfs:label "rdzong kha"@bo-x-ewts ;
@@ -5110,6 +5119,7 @@ bdr:LangDz
 bdr:LangEn
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "en" ;
   bdo:langMARCCode "eng" ;
   rdfs:label "English"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/eng> ;
@@ -5117,6 +5127,7 @@ bdr:LangEn
 bdr:LangHi
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "hi" ;
   bdo:langMARCCode "hin" ;
   rdfs:label "Hindi"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/hin> ;
@@ -5124,6 +5135,7 @@ bdr:LangHi
 bdr:LangMn
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "mn" ;
   bdo:langMARCCode "mon" ;
   rdfs:label "Mongolian"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/mon> ;
@@ -5131,6 +5143,7 @@ bdr:LangMn
 bdr:LangNew
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "ne" ;
   bdo:langMARCCode "new" ;
   rdfs:label "Newari (Nepal Bhasa)"@en ;
   rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
@@ -5138,6 +5151,7 @@ bdr:LangNew
 bdr:LangPi
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "pi" ;
   bdo:langMARCCode "pli" ;
   rdfs:label "Pali"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/pli> ;
@@ -5145,6 +5159,7 @@ bdr:LangPi
 bdr:LangRu
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "ru" ;
   bdo:langMARCCode "rus" ;
   rdfs:label "Russian"@en ;
   rdfs:seeAlso <http://lexvo.org/id/code/ru> ;
@@ -5152,6 +5167,7 @@ bdr:LangRu
 bdr:LangSa
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "sa" ;
   bdo:langMARCCode "san" ;
   rdfs:label "Sanskrit"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
@@ -5159,6 +5175,7 @@ bdr:LangSa
 bdr:LangZh
   a bdo:Language ;
   a owl:NamedIndividual ;
+  bdo:langBCP47Lang "zh" ;
   bdo:langMARCCode "chi" ;
   rdfs:label "Chinese"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/zho> ;
@@ -6033,10 +6050,6 @@ bdr:PrintMethod_Intaglio_Zinc
   a bdo:PrintMethod_Intaglio ;
   rdfs:label "zinc intaglio"@en ;
 .
-bdr:PrintMethod_Manuscript_Autograph
-  a bdo:PrintMethod_Manuscript ;
-  rdfs:label "autograph"@en ;
-.
 bdr:PrintMethod_Manuscript_Scribe
   a bdo:PrintMethod_Manuscript ;
   rdfs:label "scribed manuscript"@en ;
@@ -6785,7 +6798,7 @@ bdr:UNKNOWN_Role
   a owl:NamedIndividual ;
   adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Role ;
-  rdfs:label "Unknown"@en ;
+  rdfs:label "Unknown Role"@en ;
 .
 bdr:UNKNOWN_Topic
   a bdo:Topic ;
