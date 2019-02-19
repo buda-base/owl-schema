@@ -10,7 +10,7 @@ The [lang-tags.md](lang-tags.md) file documents language tag conventions BDRC is
 
 ### Features
 
-See [reasoning](reasoning/) directory for reasoning rules, and [i18n](i18n/) directory for string translations.
+See [reasoning] (reasoning/) directory for reasoning rules, and [i18n](i18n/) directory for string translations.
 
 ### Changes
 
