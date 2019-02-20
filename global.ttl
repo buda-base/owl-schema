@@ -13,6 +13,6 @@
 
 <http://purl.bdrc.io/ontology/>
   a owl:Ontology ;
-  owl:imports <https://raw.githubusercontent.com/buda-base/owl-schema/master/auth.ttl> ;
-  owl:imports <https://raw.githubusercontent.com/buda-base/owl-schema/master/bdo.ttl> ;
+  owl:imports <https://raw.githubusercontent.com/buda-base/owl-schema/master/ext/auth/auth.ttl> ;
+  owl:imports <https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl> ;
 .
