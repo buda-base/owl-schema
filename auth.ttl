@@ -1,0 +1,169 @@
+# baseURI: http://purl.bdrc.io/ontology/ext/auth
+
+@prefix : <http://purl.bdrc.io/ontology/ext/auth#> .
+@prefix adr: <http://purl.bdrc.io/resource-auth/> .
+@prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/admin/AccessType>
+  a owl:Class ;
+  rdfs:comment "a bdrc AccessType as defined at http://purl.bdrc.io/ontology/admin/AccessType"@en ;
+.
+<http://purl.bdrc.io/ontology/ext/auth>
+  a owl:Ontology ;
+  rdfs:label "BDRC's authentication ontology"@en ;
+.
+aut:Application
+  a owl:Class ;
+  rdfs:comment "represent a application that provides a set of web services or exposes endpoints. For instance, bdrc  Linked Data server is one app and bdrc IIIF Image server is another one."@en ;
+  rdfs:label "application"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:AuthId
+  a rdfs:Datatype ;
+  owl:equivalentClass xsd:string ;
+.
+aut:Endpoint
+  a owl:Class ;
+  rdfs:comment """The Endpoint object represents any secured web or REST service provided accross the whole organization. Endpoints are associated with a given app (Linked data server, Image server, etc...).
+Any application implementing bdrc auth0 security can therefore filter its own secured endpoints and check against user credentials to allow or deny access to these endpoints."""@en ;
+  rdfs:label "endpoint"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:Entity
+  a owl:Class ;
+.
+aut:Group
+  a owl:Class ;
+  rdfs:comment """The Group objects represent a specific category of users. 
+Following auth0 model, Groups are also associated with roles, i.e that each member of the group inherits the roles associated with that group. 
+Therefore, the role associated to a specific user are of two types: 
+1) Specific roles associated with the user outside of a group; 
+2) Roles inherited from all groups (and eventuelly nested groups) the user may belong to."""@en ;
+  rdfs:label "group"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:Permission
+  a owl:Class ;
+  rdfs:comment """The Permission object represent fine grained authorization policies. It may be associated with a Role object and is therefore restricted to the application associated with that role.
+For instance, a permission associated to bdrc Linked Data Server application can only be associated to a role defined for that same Linked Data server app."""@en ;
+  rdfs:label "permission"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:ResourceAccess
+  a owl:Class ;
+  rdfs:comment "The ResourceAccess object defines a mapping between Permissions and bdrc AccessType. The auth mechanism looks for a match between User permissions and the specific AccessType of a requested resource."@en ;
+  rdfs:label "resource access"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:Role
+  a owl:Class ;
+  rdfs:comment """A Role object is associated to an application and possibly various Permission objects.
+It is important to notice that roles are used for application level access control while groups can be used accross all applications."""@en ;
+  rdfs:label "role"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:User
+  a owl:Class ;
+  rdfs:comment """The User object represents any person registered to the system. A user instance may belong to a Group and may have a Role.
+It is worth noticing that permissions are not associated directly to a User but instead, through its various roles."""@en ;
+  rdfs:label "user"@en ;
+  rdfs:subClassOf aut:Entity ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+.
+aut:appId
+  a owl:ObjectProperty ;
+  rdfs:comment "This property links permissions, roles and endpoints to their associated application resources."@en ;
+  rdfs:domain aut:Endpoint ;
+  rdfs:domain aut:Permission ;
+  rdfs:domain aut:Role ;
+  rdfs:label "application ID"@en ;
+  rdfs:range aut:Application ;
+.
+aut:authId
+  a owl:DatatypeProperty ;
+  rdfs:comment "The unique id given to the user by the authorization provider"@en ;
+  rdfs:domain aut:User ;
+  rdfs:label "authentification id"@en ;
+  rdfs:range xsd:string ;
+.
+aut:desc
+  a owl:DatatypeProperty ;
+  rdfs:comment "A group, Role or Permission description"@en ;
+  rdfs:domain aut:Application ;
+  rdfs:domain aut:Group ;
+  rdfs:domain aut:Permission ;
+  rdfs:domain aut:Role ;
+  rdfs:label "description"@en ;
+  rdfs:range rdf:PlainLiteral ;
+.
+aut:forGroup
+  a owl:ObjectProperty ;
+  rdfs:comment "Besides linking a User to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
+  rdfs:domain aut:Endpoint ;
+  rdfs:domain aut:User ;
+  rdfs:label "for group"@en ;
+  rdfs:range aut:Group ;
+.
+aut:forPermission
+  a owl:ObjectProperty ;
+  rdfs:comment "Links ResourceAccess and Endpoints to the required permissions resources. This is used in bdrc specific auth model (i.e ResourceAccess and Endpoints are not modelizations of auth0 objects)."@en ;
+  rdfs:domain aut:Endpoint ;
+  rdfs:domain aut:ResourceAccess ;
+  rdfs:label "for permission"@en ;
+  rdfs:range aut:Permission ;
+.
+aut:forRole
+  a owl:ObjectProperty ;
+  rdfs:comment """Links Endpoints to their authorized auth0 roles, allowing request filters to give or deny access to endpoints according to a specific user profile. 
+Note that this property also links Endpoints (implicitly) to permissions associated to auth0 corresponding roles"""@en ;
+  rdfs:domain aut:Endpoint ;
+  rdfs:label "for role"@en ;
+  rdfs:range aut:Role ;
+.
+aut:hasMember
+  a owl:ObjectProperty ;
+  rdfs:comment "Links Users and Groups following auth0 model"@en ;
+  rdfs:domain aut:Group ;
+  rdfs:label "has member"@en ;
+  rdfs:range aut:User ;
+.
+aut:hasPermission
+  a owl:ObjectProperty ;
+  rdfs:comment "Links Roles and permissions, following Auth0 model."@en ;
+  rdfs:domain aut:Role ;
+  rdfs:label "has permission"@en ;
+  rdfs:range aut:Permission ;
+.
+aut:hasRole
+  a owl:ObjectProperty ;
+  rdfs:comment "Links Groups or Users to Roles, following auth0 model."@en ;
+  rdfs:comment "has role"@en ;
+  rdfs:domain aut:Group ;
+  rdfs:domain aut:User ;
+  rdfs:range aut:Role ;
+.
+aut:path
+  a owl:DatatypeProperty ;
+  rdfs:comment """The unique path of a given Endpoint or web service. This path is unique for the application associated with this Endpoint.
+Important: note that other endpoints of different applications may have the same path."""@en ;
+  rdfs:domain aut:Endpoint ;
+  rdfs:label "path"@en ;
+  rdfs:range xsd:string ;
+.
+aut:policy
+  a owl:ObjectProperty ;
+  rdfs:comment """Links ResourceAccess objects to bdrc AccessType.
+This property is used for checking access rights against protected resources available at secured or open endpoints. It corresponds to the finest grained authorization in bdrc auth implementation."""@en ;
+  rdfs:domain aut:ResourceAccess ;
+  rdfs:label "policy"@en ;
+  rdfs:range <http://purl.bdrc.io/ontology/admin/AccessType> ;
+.
+<http://xmlns.com/foaf/0.1/Agent>
+  a owl:Class ;
+  rdfs:comment "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
+.

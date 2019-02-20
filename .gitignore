@@ -4,6 +4,11 @@
 catalog-v001.xml
 
 #
+# TopBraid Compopser
+#
+*.tbc
+
+#
 # OSX
 #
 .DS_Store
