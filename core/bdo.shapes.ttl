@@ -26,6 +26,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://purl.bdrc.io/ontology/core/shapes/> .
 
 bds:
   a owl:Ontology ;

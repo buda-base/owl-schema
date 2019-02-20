@@ -20,7 +20,13 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://purl.bdrc.io/ontology/core/> .
 
+bdo: 
+  a owl:Ontology ;
+  rdfs:label "Buda core ontology"@en ;
+  rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
+.
 bf:Identifier
   a owl:Class ;
   rdfs:comment "Token or name that is associated with a resource, such as a URI or an ISBN.  A resource that is associated with a character string that serves to differentiate one resource from another."@en ;

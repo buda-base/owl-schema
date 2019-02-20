@@ -1,8 +1,11 @@
 # baseURI: http://purl.bdrc.io/ontology/global/
+# prefix bdgo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdgo: <http://purl.bdrc.io/ontology/global/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,9 +13,10 @@
 @prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://purl.bdrc.io/ontology/global/> .
 
-<http://purl.bdrc.io/ontology/>
+bdgo:
   a owl:Ontology ;
-  owl:imports <https://raw.githubusercontent.com/buda-base/owl-schema/master/ext/auth/auth.ttl> ;
-  owl:imports <https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl> ;
+  owl:imports aut: ;
+  owl:imports bdo: ;
 .

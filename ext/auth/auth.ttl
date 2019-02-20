@@ -1,21 +1,21 @@
-# baseURI: http://purl.bdrc.io/ontology/ext/auth
+# baseURI: http://purl.bdrc.io/ontology/ext/auth/
+# prefix: aut
 
-@prefix : <http://purl.bdrc.io/ontology/ext/auth#> .
+@prefix : <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix adr: <http://purl.bdrc.io/resource-auth/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://purl.bdrc.io/ontology/ext/auth/> .
 
-<http://purl.bdrc.io/ontology/admin/AccessType>
-  a owl:Class ;
-  rdfs:comment "a bdrc AccessType as defined at http://purl.bdrc.io/ontology/admin/AccessType"@en ;
-.
-<http://purl.bdrc.io/ontology/ext/auth>
+aut:
   a owl:Ontology ;
-  rdfs:label "BDRC's authentication ontology"@en ;
+  rdfs:label "Buda authentication ontology"@en ;
 .
 aut:Application
   a owl:Class ;
@@ -73,7 +73,7 @@ aut:User
 It is worth noticing that permissions are not associated directly to a User but instead, through its various roles."""@en ;
   rdfs:label "user"@en ;
   rdfs:subClassOf aut:Entity ;
-  rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+  rdfs:subClassOf foaf:Agent ;
 .
 aut:appId
   a owl:ObjectProperty ;
@@ -161,9 +161,13 @@ aut:policy
 This property is used for checking access rights against protected resources available at secured or open endpoints. It corresponds to the finest grained authorization in bdrc auth implementation."""@en ;
   rdfs:domain aut:ResourceAccess ;
   rdfs:label "policy"@en ;
-  rdfs:range <http://purl.bdrc.io/ontology/admin/AccessType> ;
+  rdfs:range adm:Access ;
 .
-<http://xmlns.com/foaf/0.1/Agent>
+adm:Access
+  a owl:Class ;
+  rdfs:comment "a bdrc AccessType as defined at http://purl.bdrc.io/ontology/admin/AccessType"@en ;
+.
+foaf:Agent
   a owl:Class ;
   rdfs:comment "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
 .
