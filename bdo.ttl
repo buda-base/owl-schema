@@ -673,7 +673,7 @@ bdo:Date
   a owl:Class ;
   rdfs:comment "The type of various sorts of date individuals such as DILA's Chinese date individuals - see subclass bdo:ChineseDateType"@en ;
   rdfs:label "Date type"@en ;
-  rdfs:subClassOf bdo:Type ;
+  rdfs:subClassOf bdo:Facet ;
 .
 bdo:EditedEvent
   a owl:Class ;
