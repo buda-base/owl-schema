@@ -84,7 +84,7 @@ iiif3:Manifest
   rdfs:label "IIIF v3 Manifest"@en ;
   rdfs:subClassOf bdo:IIIFManifest ;
 .
-adm:AccessType
+adm:Access
   a owl:Class ;
   rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
 
@@ -174,7 +174,7 @@ adm:StatementAnnotationBody
   rdfs:label "statement annotation body"@en ;
   rdfs:subClassOf adm:Entity ;
 .
-adm:StatusType
+adm:Status
   a owl:Class ;
   rdfs:subClassOf adm:Type ;
 .
@@ -192,7 +192,7 @@ adm:access
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
   rdfs:label "record access"@en ;
-  rdfs:range adm:AccessType ;
+  rdfs:range adm:Access ;
 .
 adm:attributionName
   a owl:AnnotationProperty ;
@@ -426,7 +426,7 @@ adm:statementScore
 adm:status
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
-  rdfs:range adm:StatusType ;
+  rdfs:range adm:Status ;
 .
 adm:supportedBy
   a owl:AnnotationProperty ;
@@ -579,11 +579,11 @@ bdo:CarvedEvent
   rdfs:label "Work Woodblocks Carved"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:ChineseDateType
+bdo:ChineseDate
   a owl:Class ;
   rdfs:comment "The class of DILA Chinese date individuals"@en ;
   rdfs:label "Chinese date type"@en ;
-  rdfs:subClassOf bdo:DateType ;
+  rdfs:subClassOf bdo:Date ;
 .
 bdo:ChineseDynasty
   a owl:Class ;
@@ -669,7 +669,7 @@ bdo:DDBCAId
   rdfs:seeAlso <http://authority.dila.edu.tw/person/> ;
   rdfs:seeAlso <http://authority.dila.edu.tw/place/> ;
 .
-bdo:DateType
+bdo:Date
   a owl:Class ;
   rdfs:comment "The type of various sorts of date individuals such as DILA's Chinese date individuals - see subclass bdo:ChineseDateType"@en ;
   rdfs:label "Date type"@en ;
@@ -883,7 +883,7 @@ bdo:IntegerOrDate
       owl:unionOf (
           xsd:date
           xsd:integer
-          bdo:DateType
+          bdo:Date
         ) ;
     ] ;
 .
@@ -1913,7 +1913,7 @@ bdo:access
   rdfs:comment "The type of online access permitted for the subject Work."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "text access"@en ;
-  rdfs:range adm:AccessType ;
+  rdfs:range adm:Access ;
   rdfs:seeAlso bdo:AccessType ;
 .
 bdo:agent
@@ -4774,49 +4774,49 @@ tbr:place_town_syl
   rdfs:range xsd:string ;
 .
 bdr:AccessFairUse
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
   rdfs:label "Fair Use"@en ;
 .
 bdr:AccessMixed
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
   rdfs:label "mixed access"@en ;
 .
 bdr:AccessOpen
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "The contents of the Work are freely avaiable in their entirety."@en ;
   rdfs:label "Open Access"@en ;
 .
 bdr:AccessRestrictedByQuality
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "The quality of the scanning or eText conversion to poor to warrant making it available online."@en ;
   rdfs:label "Restricted by Quality"@en ;
 .
 bdr:AccessRestrictedByTbrc
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "BDRC is restricting access to the Work."@en ;
   rdfs:label "Restricted by BDRC"@en ;
 .
 bdr:AccessRestrictedInChina
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "The Work is not to be made available in the PRC."@en ;
   rdfs:label "Restricted in China"@en ;
 .
 bdr:AccessRestrictedSealed
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "The Work is sealed by tradition."@en ;
   rdfs:label "Restricted Sealed"@en ;
 .
 bdr:AccessRestrictedTemporarily
-  a adm:AccessType ;
+  a adm:Access ;
   a owl:NamedIndividual ;
   rdfs:comment "The Work is temporarily restricted."@en ;
   rdfs:label "Temporarily Restricted"@en ;
@@ -4934,7 +4934,7 @@ bdr:C8Q1
   rdfs:label "1st quarter of the 8th century"@en ;
 .
 bdr:ChineseDateNotSpecified
-  a bdo:ChineseDateType ;
+  a bdo:ChineseDate ;
   rdfs:label "Chinese date Not specified"@en ;
 .
 bdr:DzTibt
@@ -6292,47 +6292,47 @@ bdr:ScriptTibt
   rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
 .
 bdr:StatusAccessioned
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "accessioned"@en ;
 .
 bdr:StatusAcquiring
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "acquiring"@en ;
 .
 bdr:StatusEditing
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "editing"@en ;
 .
 bdr:StatusOnHold
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "on hold"@en ;
 .
 bdr:StatusProvisional
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "provisional"@en ;
 .
 bdr:StatusReleased
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "released"@en ;
 .
 bdr:StatusScanned
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "scanned"@en ;
 .
 bdr:StatusSeekingOut
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "seeking out"@en ;
 .
 bdr:StatusWithdrawn
-  a adm:StatusType ;
+  a adm:Status ;
   a owl:NamedIndividual ;
   rdfs:label "withdrawn"@en ;
 .

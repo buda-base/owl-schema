@@ -41,7 +41,7 @@ bds:EntityShape
   sh:property [
       a sh:PropertyShape ;
       sh:path adm:status ;
-      sh:class adm:StatusType ;
+      sh:class adm:Status ;
       sh:description "must be exactly one adm:status of value adm:StatusType" ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
