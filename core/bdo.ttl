@@ -204,7 +204,7 @@ adm:attributionName
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
   rdfs:label "attribution name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 adm:attributionURL
   a owl:AnnotationProperty ;
@@ -225,7 +225,7 @@ adm:convertProperty
   rdfs:comment """this annotation indicates that the annotated property is to be converted to some other expression, typically to a form that is expressed in terms of a common 3rd-party ontology such as bibframe or foaf.
 
 The value of this property should be an explanation of the needed conversion as an rdf:langString"""@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   rdfs:subPropertyOf adm:conversionAnnotations ;
 .
 adm:convertToClass
@@ -283,7 +283,7 @@ adm:logMessage
   rdfs:comment "Explanation of the update"@en ;
   rdfs:domain adm:LogEntry ;
   rdfs:label "message"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 adm:logWho
   a owl:AnnotationProperty ;
@@ -1014,7 +1014,7 @@ bdo:LangStringOrNoColophon
       a rdfs:Datatype ;
       owl:unionOf (
           bdo:NoColophon
-          rdf:PlainLiteral
+          rdf:langString
         ) ;
     ] ;
 .
@@ -1934,7 +1934,7 @@ bdo:attributionName
   rdfs:comment "The name the holder of a Work resource would like used when attributing re-use."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "attribution name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   rdfs:seeAlso cc:attributionName ;
 .
 bdo:attributionURL
@@ -1948,7 +1948,7 @@ bdo:chunkContents
   a owl:DatatypeProperty ;
   rdfs:domain bdo:EtextChunk ;
   rdfs:label "contents"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:Etext ;
 .
 bdo:chunkId
@@ -2263,7 +2263,7 @@ bdo:eTextTitle
   a owl:DatatypeProperty ;
   rdfs:domain bdo:Etext ;
   rdfs:label "title"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:eTextVolumeIndex
   a owl:DatatypeProperty ;
@@ -2734,7 +2734,7 @@ bdo:itemException
   rdfs:comment "Exception notes such a missing volume, damage to pages and so on"@en ;
   rdfs:domain bdo:ItemPhysicalAsset ;
   rdfs:label "exception"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
 .
 bdo:itemForWork
@@ -3031,7 +3031,7 @@ bdo:noteText
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Note ;
   rdfs:label ""@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:noteWork
   a owl:AnnotationProperty ;
@@ -3416,7 +3416,7 @@ the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, 
 Such reconstructions are typically approximations to the original and there will often be a primary or preferred form of the name or title in which case the :restored property should be used."""@en ;
   rdfs:domain bdo:PersonNameOrWorkTitle ;
   rdfs:label "restored"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:restoredAlt
   a owl:DatatypeProperty ;
@@ -3436,7 +3436,7 @@ the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, 
 Such reconstructions are typically approximations to the original and there may be alternatives to the preferred form of the name or title in which case :restoredAlt literals may be recorded."""@en ;
   rdfs:domain bdo:PersonNameOrWorkTitle ;
   rdfs:label "restored alternative"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:restored ;
 .
 bdo:role
@@ -3561,7 +3561,7 @@ bdo:volumeName
   rdfs:comment "In some cases volumes of a :Work are given names. For example, in Tibetan a three volume work might have volumes named O, a, huM or a 10 volume work might have volumes named: ka, kha, ga, nga, ca, cha, ja, nya, ta, a."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "volume name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:volumeNumber
   a owl:DatatypeProperty ;
@@ -3613,7 +3613,7 @@ bdo:volumePhysicalDescription
   rdfs:comment "Migration hint: for FPL Works map the <work:description type=\"remarks\"/>to :volumePhysicalDescription with string with language tag \"en\""@en ;
   rdfs:domain bdo:VolumePhysicalAsset ;
   rdfs:label "physical description"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workAuthorshipStatement
   a owl:DatatypeProperty ;
@@ -3621,14 +3621,14 @@ bdo:workAuthorshipStatement
   rdfs:comment "Migration hint: Use this when migrating <o:description type=\"authorship\"/>"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "authorship statement"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workBiblioNote
   a owl:DatatypeProperty ;
   rdfs:comment "A note regarding a bibliographic feature of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "bibliographic note"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workBiblioStatus
   a owl:DatatypeProperty ;
@@ -3636,7 +3636,7 @@ bdo:workBiblioStatus
   rdfs:comment "Migration hint: this is used for <o:description type=\"status\"/>"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "bibliographic status statement"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workCBCSiglaA
   a owl:DatatypeProperty ;
@@ -3756,7 +3756,7 @@ bdo:workCatalogInfo
   rdfs:comment "Summary information about the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "catalog info"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workColophon
   a owl:DatatypeProperty ;
@@ -3838,7 +3838,7 @@ bdo:workEditionStatement
   a owl:DatatypeProperty ;
   rdfs:domain bdo:Work ;
   rdfs:label "edition statement"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workEncoding
   a owl:DatatypeProperty ;
@@ -3852,7 +3852,7 @@ bdo:workErrata
   rdfs:comment "Indicates a statement of error in the content"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "errata"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workEvent
   a owl:ObjectProperty ;
@@ -4077,7 +4077,7 @@ bdo:workIncipit
   rdfs:comment "The opening words of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "incipit"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workIsAbout
   a owl:ObjectProperty ;
@@ -4489,7 +4489,7 @@ bdo:workPartLabel
   rdfs:comment "Use this property to reflect a label/name for a \"synthetic\" part of a work such as \"Sutra Basket\" or \"Guhyagarbha Commentaries\" that is not identified directly in a composite work such Kangyur or Kama but that helps to highight the organization of composite work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "part label"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workPartOf
   a owl:ObjectProperty ;
@@ -4533,7 +4533,7 @@ bdo:workPrintery
 This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "printery"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
@@ -4542,7 +4542,7 @@ bdo:workPublisherLocation
   rdfs:comment "Loction of the publisher of the form of the Work that has been digitized."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher location"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   owl:deprecated true ;
 .
 bdo:workPublisherName
@@ -4552,7 +4552,7 @@ bdo:workPublisherName
   rdfs:comment "The name of the publisher transcribed from the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
   owl:deprecated true ;
 .
 bdo:workRefChokLing
@@ -4623,7 +4623,7 @@ bdo:workScanInfo
   rdfs:comment "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "scan info"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workSeeHarvard
   a owl:DatatypeProperty ;
@@ -4635,13 +4635,13 @@ bdo:workSeriesContent
   a owl:DatatypeProperty ;
   rdfs:domain bdo:Work ;
   rdfs:label "series content"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workSeriesName
   a owl:DatatypeProperty ;
   rdfs:domain bdo:Work ;
   rdfs:label "series name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workSeriesNumber
   a owl:DatatypeProperty ;
@@ -4655,13 +4655,13 @@ bdo:workSideBoxSequenceId
   rdfs:comment "An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts. Conventionally appearing in a side box of the textbox"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "side box sequence id"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workSourceNote
   a owl:DatatypeProperty ;
   rdfs:domain bdo:Work ;
   rdfs:label "source note"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 bdo:workSourcePrintery_string
   a owl:DatatypeProperty ;
@@ -4707,7 +4707,7 @@ tbr:place_dist_py
   rdfs:comment "The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavec and Lex Berman."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "district"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 tbr:place_gb_dist
   a owl:AnnotationProperty ;
@@ -4756,21 +4756,21 @@ tbr:place_prov_py
   rdfs:comment "Name of containing province in pinyin per Karl Ryavec for import of historical places"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "province name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 tbr:place_town_ch
   a owl:AnnotationProperty ;
   rdfs:comment "Name of the containing town in Chinese unicode per Karl Ryavec for import of historical Tibetan places"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "town name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 tbr:place_town_py
   a owl:AnnotationProperty ;
   rdfs:comment "Name of containing town in pinyin per Karl Ryavec for import of historical Tibetan places"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "town name"@en ;
-  rdfs:range rdf:PlainLiteral ;
+  rdfs:range rdf:langString ;
 .
 tbr:place_town_syl
   a owl:AnnotationProperty ;
