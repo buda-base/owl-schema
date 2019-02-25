@@ -488,9 +488,6 @@ adm:work_desc_date
   rdfs:label "date from description"@en ;
   rdfs:range xsd:string ;
 .
-bdo:
-  a owl:Ontology ;
-.
 bdo:AdmUnion
   a owl:Class ;
   rdfs:comment "a union of adm classes"@en ;
@@ -822,6 +819,11 @@ bdo:Gender
   rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
   rdfs:label "Gender"@en ;
   rdfs:subClassOf bdo:Type ;
+.
+bdo:GeneralNote
+  a owl:Class ;
+  rdfs:label "General note"@en ;
+  rdfs:subClassOf bdo:Note ;
 .
 bdo:IIIF2Or3Collection
   a owl:Class ;
@@ -1526,6 +1528,11 @@ bdo:ProductOrProductOrg
           adm:ProductOrg
         ) ;
     ] ;
+.
+bdo:ProvenanceNote
+  a owl:Class ;
+  rdfs:label "Provenance note"@en ;
+  rdfs:subClassOf bdo:Note ;
 .
 bdo:PublishedEvent
   a owl:Class ;
@@ -4512,7 +4519,7 @@ bdr:SomeKanjurVinayaSection a :Work ;
 .
 bdo:workPartTreeIndex
   a owl:DatatypeProperty ;
-  rdfs:comment """the :workPartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For exmaple, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
+  rdfs:comment """the :workPartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For example, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
 
     5.1.3.2
 
@@ -6056,9 +6063,9 @@ bdr:PrintMethod_Intaglio_Zinc
   a bdo:PrintMethod_Intaglio ;
   rdfs:label "zinc intaglio"@en ;
 .
-bdr:PrintMethod_Manuscript_Scribe
+bdr:PrintMethod_Manuscript
   a bdo:PrintMethod_Manuscript ;
-  rdfs:label "scribed manuscript"@en ;
+  rdfs:label "manuscript"@en ;
 .
 bdr:PrintMethod_Relief_Letterpress
   a bdo:PrintMethod_Relief ;
