@@ -20,13 +20,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://purl.bdrc.io/ontology/core/> .
 
-bdo: 
-  a owl:Ontology ;
-  rdfs:label "Buda core ontology"@en ;
-  rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
-.
 bf:Identifier
   a owl:Class ;
   rdfs:comment "Token or name that is associated with a resource, such as a URI or an ISBN.  A resource that is associated with a character string that serves to differentiate one resource from another."@en ;
@@ -487,6 +481,11 @@ adm:work_desc_date
   rdfs:domain bdo:Work ;
   rdfs:label "date from description"@en ;
   rdfs:range xsd:string ;
+.
+bdo:
+  a owl:Ontology ;
+  rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
+  rdfs:label "Buda core ontology"@en ;
 .
 bdo:AdmUnion
   a owl:Class ;
@@ -1577,6 +1576,16 @@ bdo:Script
   rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
   rdfs:subClassOf bdo:Type ;
 .
+bdo:SecondRevisedEvent
+  a owl:Class ;
+  rdfs:label "Second revised event" ;
+  rdfs:subClassOf bdo:WorkEvent ;
+.
+bdo:SecondTranslatedEvent
+  a owl:Class ;
+  rdfs:label "Second translated event" ;
+  rdfs:subClassOf bdo:WorkEvent ;
+.
 bdo:SingleAgent
   a owl:Class ;
   rdfs:comment "single agents include ahistorical and historical (human) agents"@en ;
@@ -1673,6 +1682,16 @@ bdo:TextualEntity
           bdo:Work
         ) ;
     ] ;
+.
+bdo:ThirdRevisedEvent
+  a owl:Class ;
+  rdfs:label "Third revised event" ;
+  rdfs:subClassOf bdo:WorkEvent ;
+.
+bdo:ThirdTranslatedEvent
+  a owl:Class ;
+  rdfs:label "Third translated event" ;
+  rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:TibetanLineageType
   a owl:Class ;
