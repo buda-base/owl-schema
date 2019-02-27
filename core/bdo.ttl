@@ -2938,9 +2938,9 @@ bdo:lineageDownTo
 .
 bdo:lineageFrom
   a owl:ObjectProperty ;
-  rdfs:comment "Range should be unionOf Person and Deity(Topics)" ;
+  rdfs:comment "Range should be unionOf Person and Deity(Topics)"@en ;
   rdfs:comment "Who did this \"LineageHolder receive the :Lineage from?"@en ;
-  rdfs:comment "original XSD has \"RID\" attr in \"Received\"" ;
+  rdfs:comment "original XSD has \"RID\" attr in \"Received\""@en ;
   rdfs:domain bdo:LineageEvent ;
   rdfs:label "received from"@en ;
   rdfs:range bdo:PersonOrTopic ;
