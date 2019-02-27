@@ -793,7 +793,7 @@ bdo:Event
   a owl:Class ;
   rdfs:comment "Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc"@en ;
   rdfs:label "Event"@en ;
-  rdfs:subClassOf bdo:Facet ;
+  rdfs:subClassOf owl:Thing ;
 .
 bdo:EventOrPeriod
   a owl:Class ;
@@ -3161,9 +3161,11 @@ bdo:personContributingAuthorOf
 .
 bdo:personCreatorOf
   a owl:ObjectProperty ;
+  rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "creator of"@en ;
   rdfs:range bdo:Work ;
+  owl:deprecated true ;
   owl:inverseOf bdo:workCreator ;
 .
 bdo:personEvent
@@ -3803,6 +3805,7 @@ bdo:workCreator
   a owl:ObjectProperty ;
   bdo:inferSubTree true ;
   rdfs:comment "Identifies the type and person that are a creator of the work"@en ;
+  rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
@@ -3813,7 +3816,8 @@ bdo:workCreator
   rdfs:label "creator"@en ;
   rdfs:range bdo:Person ;
   rdfs:seeAlso bdo:creator ;
-  owl:deprecated "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
+  owl:deprecated "true" ;
+  owl:inverseOf bdo:personCreatorOf ;
 .
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
