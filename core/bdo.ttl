@@ -555,6 +555,19 @@ bdo:AnyOrganization
         ) ;
     ] ;
 .
+bdo:AppliedMaterial
+  a owl:Class ;
+  rdfs:label "applied material"@en ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30084"^^xsd:anyURI ;
+  rdfs:subClassOf bdo:Material ;
+.
+bdo:BaseMaterial
+  a owl:Class ;
+  rdfs:comment "underlying physical material of a manifestation"@en ;
+  rdfs:label "Base material" ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30208"^^xsd:anyURI ;
+  rdfs:subClassOf bdo:Material ;
+.
 bdo:Binding
   a owl:Class ;
   rdfs:label "Binding" ;
@@ -876,11 +889,6 @@ bdo:ISBN
   rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
   rdfs:label "International Standard Book Number"@en ;
 .
-bdo:ImpressionSubstance
-  a owl:Class ;
-  rdfs:label "Impression substance"@en ;
-  rdfs:subClassOf bdo:Type ;
-.
 bdo:IntegerOrDate
   a rdfs:Datatype ;
   rdfs:comment "may be either an integer year or a YYYY-MM-DD date" ;
@@ -1126,8 +1134,10 @@ bdo:LineageType
 .
 bdo:Material
   a owl:Class ;
-  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed."@en ;
-  rdfs:label "Material"@en ;
+  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed. A physical or chemical substance used to create a manifestation"@en ;
+  rdfs:label "material"@en ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30304"^^xsd:anyURI ;
+  rdfs:seeAlso "https://www.rdaregistry.info/termList/RDAMaterial/"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:MixedUnion
@@ -4857,6 +4867,22 @@ bdr:AccessRestrictedTemporarily
   rdfs:comment "The Work is temporarily restricted."@en ;
   rdfs:label "Temporarily Restricted"@en ;
 .
+bdr:AppliedMaterial_BlackInk
+  a bdo:AppliedMaterial ;
+  rdfs:label "black ink"@en ;
+.
+bdr:AppliedMaterial_GoldLeaf
+  a bdo:AppliedMaterial ;
+  rdfs:label "gold leaf"@en ;
+.
+bdr:AppliedMaterial_RedInk
+  a bdo:AppliedMaterial ;
+  rdfs:label "red ink"@en ;
+.
+bdr:AppliedMaterial_SilverLeaf
+  a bdo:AppliedMaterial ;
+  rdfs:label "silver leaf"@en ;
+.
 bdr:Binding_Codex_Perfect
   a bdo:Binding_Codex ;
   rdfs:comment "thermally activated glued paperback binding"@en ;
@@ -5045,22 +5071,6 @@ bdr:Hi
   a owl:NamedIndividual ;
   bdo:language bdr:LangHi ;
   rdfs:label "Hindi"@en ;
-.
-bdr:ImpressionSubstance_BlackInk
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Black ink"@en ;
-.
-bdr:ImpressionSubstance_GoldLeaf
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Gold leaf"@en ;
-.
-bdr:ImpressionSubstance_RedInk
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Red ink"@en ;
-.
-bdr:ImpressionSubstance_SilverLeaf
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Silver leaf"@en ;
 .
 bdr:LT0001
   a bdo:TibetanLineageType ;
@@ -5261,45 +5271,37 @@ bdr:LicensePublicDomain
   rdfs:seeAlso <https://creativecommons.org/publicdomain/mark/1.0/deed> ;
 .
 bdr:MaterialBirchBark
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:label "birch bark"@en ;
 .
 bdr:MaterialCoryphaPalmLeaf
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:label "palm leaf (corypha)"@en ;
 .
 bdr:MaterialDigital
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
   rdfs:label "digital material"@en ;
 .
 bdr:MaterialMixed
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:label "mixed materials"@en ;
 .
 bdr:MaterialMultiLayerPaper
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:comment "used for some manuscripts in Nepal"@en ;
   rdfs:label "multi-layer paper"@en ;
 .
 bdr:MaterialPalmLeaf
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:label "palm leaf"@en ;
 .
 bdr:MaterialPaper
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:label "paper"@en ;
 .
 bdr:MaterialRicePaper
-  a bdo:Material ;
-  a owl:NamedIndividual ;
+  a bdo:BaseMaterial ;
   rdfs:label "rice paper"@en ;
 .
 bdr:Mn
