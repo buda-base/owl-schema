@@ -487,6 +487,11 @@ bdo:
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
 .
+bdo:AbstractWork
+  a owl:Class ;
+  rdfs:label "Abstract work" ;
+  rdfs:subClassOf bdo:Work ;
+.
 bdo:AdmUnion
   a owl:Class ;
   rdfs:comment "a union of adm classes"@en ;
@@ -511,17 +516,6 @@ bdo:AgentInRole
   rdfs:label "agent in role"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
-bdo:AgentOrAgentInRole
-  a owl:Class ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:AgentInRole
-          bdo:Agents
-        ) ;
-    ] ;
-.
 bdo:Agents
   a owl:Class ;
   rdfs:comment "The various sorts of agents represented in the ontology"@en ;
@@ -536,6 +530,17 @@ bdo:Agents
         ) ;
     ] ;
 .
+bdo:AgentsOrAgentInRole
+  a owl:Class ;
+  rdfs:subClassOf bdo:MixedUnion ;
+  rdfs:subClassOf [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:AgentInRole
+          bdo:Agents
+        ) ;
+    ] ;
+.
 bdo:AhistoricalAgent
   a owl:Class ;
   rdfs:comment "An ahistorical agent may be a deity or other non-human agent that is said to exist outside of human history"@en ;
@@ -545,6 +550,7 @@ bdo:AhistoricalAgent
 bdo:AnyOrganization
   a owl:Class ;
   rdfs:comment "Any sort of organization"@en ;
+  rdfs:comment "deprecated in favor of setting the range of :agent to :Agents"@en ;
   rdfs:label "any organization"@en ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
@@ -554,6 +560,7 @@ bdo:AnyOrganization
           bdo:Organization
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 bdo:AppliedMaterial
   a owl:Class ;
@@ -1362,6 +1369,7 @@ bdo:PersonOfficeTitle
 bdo:PersonOrCorporation
   a owl:Class ;
   rdfs:comment "Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event"@en ;
+  rdfs:comment "deprecated in favor of :Agent"@en ;
   rdfs:label "person or coporation"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
@@ -1371,6 +1379,7 @@ bdo:PersonOrCorporation
           bdo:Person
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 bdo:PersonOrPlace
   a owl:Class ;
@@ -1549,6 +1558,11 @@ bdo:PublishedEvent
   rdfs:label "Work Published"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
+bdo:PublishedWork
+  a owl:Class ;
+  rdfs:label "Published work" ;
+  rdfs:subClassOf bdo:Work ;
+.
 bdo:QuarterCentury
   a owl:Class ;
   rdfs:label "Quarter Century"@en ;
@@ -1595,6 +1609,11 @@ bdo:SecondTranslatedEvent
   a owl:Class ;
   rdfs:label "Second translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
+.
+bdo:SerialWork
+  a owl:Class ;
+  rdfs:label "Serial work" ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:SingleAgent
   a owl:Class ;
@@ -1763,8 +1782,18 @@ An owl:subClassOf :Type, e.g., :KinType, will have some set of individuals that 
 The set of such individuals may be further organized via :Taxonomy but need not be."""@en ;
   rdfs:label "Type"@en ;
 .
+bdo:UnicodeWork
+  a owl:Class ;
+  rdfs:label "Unicode work" ;
+  rdfs:subClassOf bdo:Work ;
+.
 bdo:Union
   a owl:Class ;
+.
+bdo:VirtualWork
+  a owl:Class ;
+  rdfs:label "Virtual work" ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:Volume
   a owl:Class ;
@@ -1851,6 +1880,12 @@ bdo:WorkEvent
   rdfs:comment "An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
   rdfs:label "Work Event"@en ;
   rdfs:subClassOf bdo:Event ;
+.
+bdo:WorkFragment
+  a bdo:WorkPartType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "A :WorkFragment is a portion of a \"whole\" work. A :WorkFragment commonly occurs when some pages have been extracted from a \"complete\" :Work and inserted improperly into a different :Work which has then been copied. A fragment is specified as a part of a containing :Work via a :WorkLocation as with any similar :workPartOf"@en ;
+  rdfs:label "fragment"@en ;
 .
 bdo:WorkFullTitle
   a owl:Class ;
@@ -1947,8 +1982,17 @@ bdo:WorkTitlePortion
 bdo:WorkType
   a owl:Class ;
   rdfs:comment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
+  rdfs:comment "deprecated in favor of using appropriate subclasses of :Work"@en ;
   rdfs:label "type of work"@en ;
   rdfs:subClassOf bdo:Type ;
+  owl:deprecated true ;
+.
+bdo:WorkTypeVirtualWork
+  a bdo:WorkType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
+  rdfs:label "virtual work"@en ;
+  owl:deprecated true ;
 .
 bdo:access
   a owl:ObjectProperty ;
@@ -2310,22 +2354,24 @@ bdo:eTextVolumeIndex
 .
 bdo:eventPeriod
   a owl:ObjectProperty ;
-  rdfs:comment "associates an event with a time period"@en ;
+  rdfs:comment "associates an event with at most one time period"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "period"@en ;
   rdfs:range bdo:TimePeriod ;
 .
 bdo:eventWhere
   a owl:ObjectProperty ;
+  rdfs:comment "associates an :Event with at most one :Place"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "place"@en ;
   rdfs:range bdo:Place ;
 .
 bdo:eventWho
   a owl:ObjectProperty ;
+  rdfs:comment ":eventWho associates one or more :AgentsOrAgentInRole to a given :Event"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "who"@en ;
-  rdfs:range bdo:PersonOrCorporation ;
+  rdfs:range bdo:AgentsOrAgentInRole ;
 .
 bdo:hasAunt
   a owl:ObjectProperty ;
@@ -2354,7 +2400,7 @@ bdo:hasContentProvider
   rdfs:comment "The organization (or person) that provided the subject :TextualEntity. In this context, providing can mean originating the enscribing, carving or woodblocks and printing, or creating a collection of texts from other providers. For example, the sde dge par khang can be recorded as the :Organization that provided the sde dge bka' 'gyur."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has content provider"@en ;
-  rdfs:range bdo:AnyOrganization ;
+  rdfs:range bdo:Agents ;
 .
 bdo:hasCousin
   a owl:ObjectProperty ;
@@ -2599,7 +2645,7 @@ bdo:hasSteward
   rdfs:comment "A steward of (a Collection of) Textual Item(s) is an organization that preserves and makes metadata and images/etexts available digitally.  A steward may be an :Organization or an adm:Organization."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has steward"@en ;
-  rdfs:range bdo:AnyOrganization ;
+  rdfs:range bdo:Agents ;
 .
 bdo:hasUncle
   a owl:ObjectProperty ;
@@ -3484,7 +3530,7 @@ bdo:role
 When used with an :Agents the triple is asserting that the subject is commonly found performing in the target :Role
 
 When used in an :AgentInRole, the associated :Agents is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
-  rdfs:domain bdo:AgentOrAgentInRole ;
+  rdfs:domain bdo:Agents ;
   rdfs:label "role"@en ;
   rdfs:range bdo:Role ;
 .
@@ -4315,6 +4361,20 @@ bdo:workLccn
   rdfs:label "LCCN"@en ;
   rdfs:range bdo:LCCN ;
 .
+bdo:workLinkTo
+  a owl:InverseFunctionalProperty ;
+  rdfs:domain bdo:VirtualWork ;
+  rdfs:label "work link to"@en ;
+  rdfs:range bdo:Work ;
+  owl:inverseOf bdo:workLinkedAt ;
+.
+bdo:workLinkedAt
+  a owl:InverseFunctionalProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "work linked at"@en ;
+  rdfs:range bdo:VirtualWork ;
+  owl:inverseOf bdo:workLinkTo ;
+.
 bdo:workLocation
   a owl:ObjectProperty ;
   rdfs:comment "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
@@ -4730,10 +4790,12 @@ bdo:workTranslationOf
 bdo:workType
   a owl:ObjectProperty ;
   rdfs:comment "Migration info: This is the <work:info @nodeType/> attribute NOT the unused @type attribute"@en ;
+  rdfs:comment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "work type"@en ;
   rdfs:range bdo:WorkType ;
   rdfs:seeAlso bdo:WorkType ;
+  owl:deprecated true ;
 .
 tbr:outlineName
   a owl:AnnotationProperty ;
@@ -6871,21 +6933,25 @@ bdr:WorkTypeAbstractWork
   a bdo:WorkType ;
   a owl:NamedIndividual ;
   rdfs:label "abstract work"@en ;
+  owl:deprecated true ;
 .
 bdr:WorkTypePublishedWork
   a bdo:WorkType ;
   a owl:NamedIndividual ;
   rdfs:label "published work"@en ;
+  owl:deprecated true ;
 .
 bdr:WorkTypeSeries
   a bdo:WorkType ;
   a owl:NamedIndividual ;
   rdfs:label "series"@en ;
+  owl:deprecated true ;
 .
 bdr:WorkTypeUnicodeText
   a bdo:WorkType ;
   a owl:NamedIndividual ;
   rdfs:label "unicode text"@en ;
+  owl:deprecated true ;
 .
 bdr:WorkVolume
   a bdo:WorkPartType ;
