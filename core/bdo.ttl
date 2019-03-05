@@ -547,6 +547,19 @@ bdo:AhistoricalAgent
   rdfs:label "an ahistorical agent"@en ;
   rdfs:subClassOf bdo:SingleAgent ;
 .
+bdo:AnyDate
+  a rdfs:Datatype ;
+  rdfs:comment "may be either an integer year or a YYYY-MM-DD xsd:date or a bdo:Date instance"@en ;
+  rdfs:label "integer or date or bdo:Date"@en ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:unionOf (
+          xsd:date
+          xsd:integer
+          bdo:Date
+        ) ;
+    ] ;
+.
 bdo:AnyOrganization
   a owl:Class ;
   rdfs:comment "Any sort of organization"@en ;
@@ -624,7 +637,7 @@ bdo:CompletedEvent
   rdfs:label "Work Completed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:CopiedEvent
+bdo:CopyEvent
   a owl:Class ;
   rdfs:comment "An event of copying a :Work by some means such as manual enscribing, photocopying, etc."@en ;
   rdfs:label "Work Copied"@en ;
@@ -817,6 +830,7 @@ bdo:Event
 .
 bdo:EventOrPeriod
   a owl:Class ;
+  adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
   rdfs:comment "domain of various date properties"@en ;
   rdfs:label "event or timePeriod"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
@@ -827,6 +841,7 @@ bdo:EventOrPeriod
           bdo:TimePeriod
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 bdo:Facet
   a owl:Class ;
@@ -895,19 +910,6 @@ bdo:ISBN
   rdfs:comment "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
   rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
   rdfs:label "International Standard Book Number"@en ;
-.
-bdo:IntegerOrDate
-  a rdfs:Datatype ;
-  rdfs:comment "may be either an integer year or a YYYY-MM-DD date" ;
-  rdfs:label "integer or date or bdo:DateType"@en ;
-  owl:equivalentClass [
-      a owl:Class ;
-      owl:unionOf (
-          xsd:date
-          xsd:integer
-          bdo:Date
-        ) ;
-    ] ;
 .
 bdo:IntegerOrString
   a rdfs:Datatype ;
@@ -1736,8 +1738,10 @@ bdo:TibetanTradition
 .
 bdo:TimePeriod
   a owl:Class ;
-  rdfs:comment "Timer periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
+  rdfs:comment "Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ;
+  rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
   rdfs:label "Time Period"@en ;
+  rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Topic
@@ -2283,9 +2287,16 @@ bdo:dataTypeExpression
 bdo:dateApproximate
   a owl:DatatypeProperty ;
   rdfs:comment "set to true to indicate that the date information in an :Event or :Period is approximate or uncertain"@en ;
-  rdfs:domain bdo:EventOrPeriod ;
+  rdfs:domain bdo:Date ;
   rdfs:label "date is approximate"@en ;
   rdfs:range xsd:boolean ;
+.
+bdo:datePeriod
+  a owl:ObjectProperty ;
+  rdfs:comment "associates a :Date with at most one :TimePeriod such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :TimePeriod metadata"@en ;
+  rdfs:domain bdo:Date ;
+  rdfs:label "period"@en ;
+  rdfs:range bdo:TimePeriod ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -2352,12 +2363,12 @@ bdo:eTextVolumeIndex
   rdfs:label "eText volume index"@en ;
   rdfs:range xsd:integer ;
 .
-bdo:eventPeriod
-  a owl:ObjectProperty ;
-  rdfs:comment "associates an event with at most one time period"@en ;
+bdo:eventWhen
+  a owl:DatatypeProperty ;
+  rdfs:comment "Indicates that the event is known to have occurred in relation to a given :AnyDate"@en ;
   rdfs:domain bdo:Event ;
-  rdfs:label "period"@en ;
-  rdfs:range bdo:TimePeriod ;
+  rdfs:label "event when"@en ;
+  rdfs:range bdo:AnyDate ;
 .
 bdo:eventWhere
   a owl:ObjectProperty ;
@@ -3068,16 +3079,18 @@ bdo:migration_exception
 bdo:notAfter
   a owl:DatatypeProperty ;
   rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given"@en ;
-  rdfs:domain bdo:EventOrPeriod ;
+  rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
-  rdfs:range bdo:IntegerOrDate ;
+  rdfs:range bdo:AnyDate ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:notBefore
   a owl:DatatypeProperty ;
   rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given"@en ;
-  rdfs:domain bdo:EventOrPeriod ;
+  rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
-  rdfs:range bdo:IntegerOrDate ;
+  rdfs:range bdo:AnyDate ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:note
   a owl:AnnotationProperty ;
@@ -3124,16 +3137,18 @@ bdo:noteWork
 .
 bdo:onDate
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year  or on the date given"@en ;
+  rdfs:comment "The event is known to have occurred during the year or date given"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
-  rdfs:range bdo:IntegerOrDate ;
+  rdfs:range bdo:AnyDate ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:onOrAbout
   a owl:DatatypeProperty ;
-  adm:deprecatedComment ":onYear, :notBefore, and :notAfter will replace :onOrAbout"@en ;
+  adm:deprecatedComment ":onDate, :onYear, :notBefore, and :notAfter will replace :onOrAbout"@en ;
   adm:replaceWithDataProperty bdo:notAfter ;
   adm:replaceWithDataProperty bdo:notBefore ;
+  adm:replaceWithDataProperty bdo:onDate ;
   adm:replaceWithDataProperty bdo:onYear ;
   rdfs:comment "This property replaces the various separate circa properties with a single property that will have a single validator and editor support."@en ;
   rdfs:domain bdo:Event ;
@@ -3147,6 +3162,7 @@ bdo:onYear
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
   rdfs:range xsd:integer ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:originalRecord
   a owl:AnnotationProperty ;
