@@ -626,6 +626,12 @@ bdo:ChineseDynasty
   rdfs:label "王朝"@zh-hans ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
+bdo:ChineseMonastic
+  a owl:Class ;
+  rdfs:comment "Roles referred to in various Chinese Gaosengzhuan 高僧傳 \"Biographies of eminent monks\""@en ;
+  rdfs:label "Chinese monastic role"@en ;
+  rdfs:subClassOf bdo:Role ;
+.
 bdo:CompiledEvent
   a owl:Class ;
   rdfs:label "compiled"@en ;
@@ -6185,6 +6191,115 @@ bdr:PrintMethod_Xerography
   a bdo:PrintMethod ;
   rdfs:label "xerography"@en ;
 .
+bdr:R0ER0001
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T09:43:05-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "self-immolator"@en ;
+  skos:altLabel "燒身"@zh-hant ;
+  skos:altLabel "燒身供養"@zh-hant ;
+  skos:altLabel "遺身"@zh-hant ;
+  skos:prefLabel "self-immolator"@en ;
+  skos:prefLabel "亡身"@zh-hant ;
+.
+bdr:R0ER0002
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:48:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "public preacher"@en ;
+  skos:prefLabel "self-immolator"@en ;
+  skos:prefLabel "唱導"@zh-hant ;
+.
+bdr:R0ER0003
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:50:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "miracle worker"@en ;
+  skos:altLabel "神異"@zh-hant ;
+  skos:prefLabel "miracle worker"@en ;
+  skos:prefLabel "感通"@zh-hant ;
+.
+bdr:R0ER0004
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:52:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "Vinaya expert"@en ;
+  skos:prefLabel "Vinaya expert"@en ;
+  skos:prefLabel "明律"@zh-hant ;
+.
+bdr:R0ER0005
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:53:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "sutra recitator and chanter"@en ;
+  skos:altLabel "誦經"@zh-hant ;
+  skos:prefLabel "sutra recitator and chanter"@en ;
+  skos:prefLabel "經師"@zh-hant ;
+.
+bdr:R0ER0006
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "meditator"@en ;
+  skos:prefLabel "meditator"@en ;
+  skos:prefLabel "習禪"@zh-hant ;
+.
+bdr:R0ER0007
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "Monks arousing happiness and fortune"@en ;
+  skos:prefLabel "Monks arousing happiness and fortune"@en ;
+  skos:prefLabel "興福"@zh-hant ;
+.
+bdr:R0ER0008
+  a bdo:ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T11:03:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U000CT ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:label "Dharma protector (human)"@en ;
+  skos:prefLabel "Dharma protector (human)"@en ;
+  skos:prefLabel "護法"@zh-hant ;
+.
 bdr:RuCyrl
   a bdo:LangScript ;
   a owl:NamedIndividual ;
@@ -6868,6 +6983,11 @@ bdr:TransSaTibt
   a bdo:Transliteration ;
   a owl:NamedIndividual ;
   rdfs:label "Sanskrit transliterated in Tibetan"@en ;
+.
+bdr:U000CT
+  a foaf:Agent ;
+  rdfs:label "U000CT"@en ;
+  skos:prefLabel "U000CT"@en ;
 .
 bdr:UNKNOWN_Corporation
   a bdo:Corporation ;
