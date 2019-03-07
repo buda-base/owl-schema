@@ -1,0 +1,48 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Binding
+# prefix: Binding
+
+@prefix Binding: <http://purl.bdrc.io/ontology/types/Binding#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/Binding>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/Binding_Codex_Perfect>
+  a <http://purl.bdrc.io/ontology/core/Binding_Codex> ;
+  rdfs:comment "thermally activated glued paperback binding"@en ;
+  rdfs:label "Binding Codex Perfect" ;
+.
+<http://purl.bdrc.io/resource/Binding_Codex_Sewn>
+  a <http://purl.bdrc.io/ontology/core/Binding_Codex> ;
+  rdfs:comment "conventional hardbound book other manuscript"@en ;
+  rdfs:label "sewn binding"@en ;
+.
+<http://purl.bdrc.io/resource/Binding_Continuous_Folded>
+  a <http://purl.bdrc.io/ontology/core/Binding_Continuous> ;
+  rdfs:comment "folded concertina or accordion style"@en ;
+  rdfs:label "folded"@en ;
+.
+<http://purl.bdrc.io/resource/Binding_Continuous_Leporello>
+  a <http://purl.bdrc.io/ontology/core/Binding_Continuous> ;
+  rdfs:comment "folded and bound between front and back boards"@en ;
+  rdfs:label "leporello"@en ;
+.
+<http://purl.bdrc.io/resource/Binding_Continuous_Scroll>
+  a <http://purl.bdrc.io/ontology/core/Binding_Continuous> ;
+  rdfs:comment "continuous sheet written on oneside and rolled up"@en ;
+  rdfs:label "scroll"@en ;
+.
+<http://purl.bdrc.io/resource/Binding_LooseLeaf_Pecha>
+  a <http://purl.bdrc.io/ontology/core/Binding_LooseLeaf> ;
+  rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
+  rdfs:label "pecha"@en ;
+.
+<http://purl.bdrc.io/resource/Binding_LooseLeaf_Pothi>
+  a <http://purl.bdrc.io/ontology/core/Binding_LooseLeaf> ;
+  rdfs:comment "loose leaves with holes for string to keep the leaves together and wrapped in cloth"@en ;
+  rdfs:label "pothi"@en ;
+.

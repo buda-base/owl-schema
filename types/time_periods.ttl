@@ -1,0 +1,51 @@
+# baseURI: http://purl.bdrc.io/ontology/types/TimePeriod
+# prefix: TimePeriod
+
+@prefix TimePeriod: <http://purl.bdrc.io/ontology/types/TimePeriod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/TimePeriod>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/C18Q2>
+  a <http://purl.bdrc.io/ontology/core/QuarterCentury> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/notAfter> 1749 ;
+  <http://purl.bdrc.io/ontology/core/notBefore> 1725 ;
+  rdfs:comment "1725 - 1749"@en ;
+  rdfs:label "2nd quarter of the 18th century"@en ;
+.
+<http://purl.bdrc.io/resource/C8Q1>
+  a <http://purl.bdrc.io/ontology/core/QuarterCentury> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/notAfter> 724 ;
+  <http://purl.bdrc.io/ontology/core/notBefore> 700 ;
+  rdfs:comment "700 - 724"@en ;
+  rdfs:label "1st quarter of the 8th century"@en ;
+.
+<http://purl.bdrc.io/resource/FormerQinDynasty>
+  a <http://purl.bdrc.io/ontology/core/ChineseDynasty> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/notAfter> 394 ;
+  <http://purl.bdrc.io/ontology/core/notBefore> 350 ;
+  rdfs:comment "Former Qin (350-394) was one of the 16 countries"@en ;
+  rdfs:label "Former Qin Dynasty"@en ;
+  rdfs:label "前秦代"@zh-hans ;
+  rdfs:seeAlso "<https://translate.google.com/translate?hl=en&sl=zh-TW&u=https://zh.wikipedia.org/zh/%25E5%2589%258D%25E7%25A7%25A6&prev=search>"@en ;
+  rdfs:seeAlso "<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj30Ijx-MPaAhVGY6wKHUzFDRwQFggpMAA&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2589%258D%25E7%25A7%25A6&usg=AOvVaw07mPIu0PcnCySbo0auaBWp>"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/TangDynasty>
+  a <http://purl.bdrc.io/ontology/core/ChineseDynasty> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/notAfter> 907 ;
+  <http://purl.bdrc.io/ontology/core/notBefore> 618 ;
+  rdfs:comment "In the Tang Dynasty (618-907), the Chinese dynasty and the national dynasty shared a total of 289 years with 21 emperors"@en ;
+  rdfs:label "Tang Dynasty"@en ;
+  rdfs:label "唐代"@zh-hans ;
+  rdfs:seeAlso "<https://translate.google.com/translate?hl=en&sl=zh-TW&u=https://zh.wikipedia.org/zh/%25E5%2594%2590%25E6%259C%259D&prev=search>"@en ;
+  rdfs:seeAlso "<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwih_avD_cPaAhVFbK0KHWJdCvMQFggpMAA&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2594%2590%25E6%259C%259D&usg=AOvVaw0WPfem1oSvcsj1-xc6T5qd>"@zh-hans ;
+.

@@ -1,0 +1,44 @@
+# baseURI: http://purl.bdrc.io/ontology/types/WorkType
+# prefix: WorkType
+
+@prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/core/WorkTypeVirtualWork>
+  a <http://purl.bdrc.io/ontology/core/WorkType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
+  rdfs:label "virtual work"@en ;
+  owl:deprecated true ;
+.
+<http://purl.bdrc.io/ontology/types/WorkType>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/WorkTypeAbstractWork>
+  a <http://purl.bdrc.io/ontology/core/WorkType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "abstract work"@en ;
+  owl:deprecated true ;
+.
+<http://purl.bdrc.io/resource/WorkTypePublishedWork>
+  a <http://purl.bdrc.io/ontology/core/WorkType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "published work"@en ;
+  owl:deprecated true ;
+.
+<http://purl.bdrc.io/resource/WorkTypeSeries>
+  a <http://purl.bdrc.io/ontology/core/WorkType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "series"@en ;
+  owl:deprecated true ;
+.
+<http://purl.bdrc.io/resource/WorkTypeUnicodeText>
+  a <http://purl.bdrc.io/ontology/core/WorkType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "unicode text"@en ;
+  owl:deprecated true ;
+.

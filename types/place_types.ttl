@@ -1,0 +1,612 @@
+# baseURI: http://purl.bdrc.io/ontology/types/PlaceType
+# prefix: PlaceType
+
+@prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/PlaceType>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/PT0001>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "administrative district"@en ;
+  rdfs:label "yul sde"@bo-x-ewts ;
+  rdfs:label "地区（古）"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0002>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "autonomous prefecture"@en ;
+  rdfs:label "rang skyong khul"@bo-x-ewts ;
+  rdfs:label "自治州"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0003>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "autonomous region"@en ;
+  rdfs:label "rang skyong ljongs"@bo-x-ewts ;
+  rdfs:label "自治区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0004>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "bridge"@en ;
+  rdfs:label "zam pa"@bo-x-ewts ;
+  rdfs:label "桥"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0005>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "canyon"@en ;
+  rdfs:label "rong"@bo-x-ewts ;
+  rdfs:label "峡谷"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0006>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "charnel ground"@en ;
+  rdfs:label "dur khrod"@bo-x-ewts ;
+  rdfs:label "石经堆"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0007>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "circuit"@en ;
+  rdfs:label "skor"@bo-x-ewts ;
+  rdfs:label "围"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0008>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "city"@en ;
+  rdfs:label "grong khyer"@bo-x-ewts ;
+  rdfs:label "城市"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0009>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "Modern or contemporary places defined in terms of current political control such as Chinese counties, provinces and so on"@en ;
+  rdfs:label "Contemporary Places"@en ;
+  rdfs:label "deng rabs sa gnas"@bo-x-ewts ;
+.
+<http://purl.bdrc.io/resource/PT0010>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "country"@en ;
+  rdfs:label "rgyal khab"@bo-x-ewts ;
+  rdfs:label "国家"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0011>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "county (modern)"@en ;
+  rdfs:label "rdzong"@bo-x-ewts ;
+  rdfs:label "县"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0012>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "chus"@bo-x-ewts ;
+  rdfs:label "county area"@en ;
+  rdfs:label "区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0013>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "chol kha"@bo-x-ewts ;
+  rdfs:label "cultural domain"@en ;
+  rdfs:label "文化区域"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0014>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "district"@en ;
+  rdfs:label "sa khul"@bo-x-ewts ;
+  rdfs:label "地区（专区）"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0015>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "estate"@en ;
+  rdfs:label "gzhis ka"@bo-x-ewts ;
+  rdfs:label "庄园"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0016>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "ferry route"@en ;
+  rdfs:label "gru kha"@bo-x-ewts ;
+  rdfs:label "渡口"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0017>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "forest"@en ;
+  rdfs:label "nags tshal"@bo-x-ewts ;
+  rdfs:label "森林"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0018>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "fortress"@en ;
+  rdfs:label "mkhar rnying"@bo-x-ewts ;
+  rdfs:label "城堡"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0019>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "be hu"@bo-x-ewts ;
+  rdfs:label "hundred household district"@en ;
+  rdfs:label "百户区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0020>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "hamlet"@en ;
+  rdfs:label "sde tsho"@bo-x-ewts ;
+  rdfs:label "村落"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0021>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "hermitage"@en ;
+  rdfs:label "ri khrod"@bo-x-ewts ;
+  rdfs:label "隐修地"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0022>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "hidden land"@en ;
+  rdfs:label "sbas yul"@bo-x-ewts ;
+  rdfs:label "秘境"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0023>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "hospital"@en ;
+  rdfs:label "sman khang"@bo-x-ewts ;
+  rdfs:label "医院"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0024>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gzims khang"@bo-x-ewts ;
+  rdfs:label "house"@en ;
+  rdfs:label "住宅"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0025>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "household"@en ;
+  rdfs:label "khyim tshang"@bo-x-ewts ;
+  rdfs:label "家庭"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0026>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gling"@bo-x-ewts ;
+  rdfs:label "isolated region"@en ;
+  rdfs:label "州"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0027>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "kingdom"@en ;
+  rdfs:label "rgyal phran"@bo-x-ewts ;
+  rdfs:label "王国"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0028>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "lake"@en ;
+  rdfs:label "mtsho"@bo-x-ewts ;
+  rdfs:label "湖"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0029>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "large area"@en ;
+  rdfs:label "yul chen"@bo-x-ewts ;
+  rdfs:label "大区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0030>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "dpe mdzod khang"@bo-x-ewts ;
+  rdfs:label "library"@en ;
+  rdfs:label "书馆"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0031>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "lower valley"@en ;
+  rdfs:label "mda'"@bo-x-ewts ;
+  rdfs:label "下河谷"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0032>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "khri sde"@bo-x-ewts ;
+  rdfs:label "million household district"@en ;
+  rdfs:label "万户区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0033>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "Mani stone"@en ;
+  rdfs:label "ma Ni rdo phung"@bo-x-ewts ;
+  rdfs:label "石经堆"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0034>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gzims shag"@bo-x-ewts ;
+  rdfs:label "manor"@en ;
+  rdfs:label "府邸"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0035>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "market"@en ;
+  rdfs:label "tshong 'dus"@bo-x-ewts ;
+  rdfs:label "集市（市场）"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0036>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "meditation cave"@en ;
+  rdfs:label "sgrub phug"@bo-x-ewts ;
+  rdfs:label "修行洞"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0037>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "dgon pa"@bo-x-ewts ;
+  rdfs:label "monastery"@en ;
+  rdfs:label "寺院"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0038>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "bshad grwa"@bo-x-ewts ;
+  rdfs:label "monastic college"@en ;
+  rdfs:label "讲经院"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0039>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "khams tshan"@bo-x-ewts ;
+  rdfs:label "monastic dormitory"@en ;
+  rdfs:label "僧舍"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0040>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "grwa tshang"@bo-x-ewts ;
+  rdfs:label "monastic quarters"@en ;
+  rdfs:label "扎仓（僧院）"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0041>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "bla brang"@bo-x-ewts ;
+  rdfs:label "monastic residence"@en ;
+  rdfs:label "喇嘛行宫"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0042>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "mountain"@en ;
+  rdfs:label "ri bo"@bo-x-ewts ;
+  rdfs:label "山"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0043>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "la kha"@bo-x-ewts ;
+  rdfs:label "mountain pass"@en ;
+  rdfs:label "山口"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0044>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "mountain range"@en ;
+  rdfs:label "ri rgyud"@bo-x-ewts ;
+  rdfs:label "山脉"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0045>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "grong rdal"@bo-x-ewts ;
+  rdfs:label "municipality"@en ;
+  rdfs:label "城镇"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0046>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "khri skor"@bo-x-ewts ;
+  rdfs:label "myriarchy"@en ;
+  rdfs:label "万户区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0047>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "Natural features such as rivers, caves, mountain passes and so on"@en ;
+  rdfs:label "Natural Features"@en ;
+  rdfs:label "rang byung 'khor yug"@bo-x-ewts ;
+  rdfs:label "自然地域"@zh ;
+.
+<http://purl.bdrc.io/resource/PT0048>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "'brog sde"@bo-x-ewts ;
+  rdfs:label "nomad camp"@en ;
+  rdfs:label "牧营"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0049>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "Places of unspecified type"@en ;
+  rdfs:label "Not Specified"@en ;
+  rdfs:label "rigs dbye byas med pa"@bo-x-ewts ;
+  rdfs:label "未分类"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0050>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "btsun dgon"@bo-x-ewts ;
+  rdfs:label "nunnery"@en ;
+  rdfs:label "尼姑庵"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0051>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "palace"@en ;
+  rdfs:label "pho brang"@bo-x-ewts ;
+  rdfs:label "宫殿"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0052>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gling kha"@bo-x-ewts ;
+  rdfs:label "park"@en ;
+  rdfs:label "公园"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0053>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gnas chen"@bo-x-ewts ;
+  rdfs:label "pilgrimage site"@en ;
+  rdfs:label "圣地"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0054>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "pillar"@en ;
+  rdfs:label "rdo ring"@bo-x-ewts ;
+  rdfs:label "石碑"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0055>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "plain"@en ;
+  rdfs:label "thang"@bo-x-ewts ;
+  rdfs:label "平川"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0056>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "pre-modern country"@en ;
+  rdfs:label "sngar gyi rdzong"@bo-x-ewts ;
+  rdfs:label "宗（旧制）"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0057>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "khul"@bo-x-ewts ;
+  rdfs:label "prefecture"@en ;
+  rdfs:label "传统地区"@en ;
+.
+<http://purl.bdrc.io/resource/PT0058>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "principality"@en ;
+  rdfs:label "sde dpon mnga' ris"@bo-x-ewts ;
+  rdfs:label "郡国"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0059>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "par khang"@bo-x-ewts ;
+  rdfs:label "printery"@en ;
+  rdfs:label "印经院"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0060>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "province"@en ;
+  rdfs:label "zhing chen"@bo-x-ewts ;
+  rdfs:label "省"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0061>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "provincial divisions"@en ;
+  rdfs:label "ru"@bo-x-ewts ;
+  rdfs:label "茹"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0062>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "between region and large mountain range (ex: the Alps)"@en ;
+  rdfs:label "range"@en ;
+  rdfs:label "sgang"@bo-x-ewts ;
+  rdfs:label "岗"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0063>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "Various kinds of semi-formal and historical references to extended geographic areas such as administrative districts, isolated areas, premodern counties and so on."@en ;
+  rdfs:label "Regions"@en ;
+  rdfs:label "rten gzhi yul lung"@bo-x-ewts ;
+  rdfs:label "区域"@zh ;
+.
+<http://purl.bdrc.io/resource/PT0064>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "retreat center"@en ;
+  rdfs:label "sgrub grwa"@bo-x-ewts ;
+  rdfs:label "闭关院"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0065>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "chu bo"@bo-x-ewts ;
+  rdfs:label "river"@en ;
+  rdfs:label "江河"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0066>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "chu rgyud"@bo-x-ewts ;
+  rdfs:label "river basin"@en ;
+  rdfs:label "流域"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0067>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "school"@en ;
+  rdfs:label "slob grwa"@bo-x-ewts ;
+  rdfs:label "学校"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0068>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "settlement"@en ;
+  rdfs:label "tsho ba"@bo-x-ewts ;
+  rdfs:label "氏族部落"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0069>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "Sites of interest such as monasteries, temples and so on"@en ;
+  rdfs:label "Sites"@en ;
+  rdfs:label "brten pa gnas khang"@bo-x-ewts ;
+  rdfs:label "场所"@zh ;
+.
+<http://purl.bdrc.io/resource/PT0070>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "small area"@en ;
+  rdfs:label "yul phran"@bo-x-ewts ;
+  rdfs:label "小乡"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0071>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "chu mig"@bo-x-ewts ;
+  rdfs:label "spring"@en ;
+  rdfs:label "圣泉"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0072>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "mchod rten"@bo-x-ewts ;
+  rdfs:label "stupa"@en ;
+  rdfs:label "佛塔"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0073>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "stong sde"@bo-x-ewts ;
+  rdfs:label "thousand household district"@en ;
+  rdfs:label "千户区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0074>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "lha khang"@en ;
+  rdfs:label "temple"@en ;
+  rdfs:label "宇"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0075>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gtsug lag khang"@bo-x-ewts ;
+  rdfs:label "temple complex"@en ;
+  rdfs:label "寺庙"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0076>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "bang so"@bo-x-ewts ;
+  rdfs:label "tomb"@en ;
+  rdfs:label "陵墓"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0077>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "shang_(zhang)"@bo-x-ewts ;
+  rdfs:label "township"@en ;
+.
+<http://purl.bdrc.io/resource/PT0078>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "srol rgyun sa ming"@bo-x-ewts ;
+  rdfs:label "traditional"@en ;
+  rdfs:label "传统地名"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0079>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "srol rgyun sa khul"@bo-x-ewts ;
+  rdfs:label "traditional region"@en ;
+  rdfs:label "传统地区"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0080>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "gter gnas"@bo-x-ewts ;
+  rdfs:label "treasure site"@en ;
+  rdfs:label "伏藏地"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0081>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label ""@en ;
+  rdfs:label "ru sde"@en ;
+  rdfs:label "联盟部落"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0082>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "phu"@bo-x-ewts ;
+  rdfs:label "upper valley"@en ;
+  rdfs:label "上河谷"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0083>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "lung pa"@bo-x-ewts ;
+  rdfs:label "valley"@en ;
+  rdfs:label "河谷"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0084>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "grong tsho"@bo-x-ewts ;
+  rdfs:label "village"@en ;
+  rdfs:label "村（现代）"@zh-hans ;
+.
+<http://purl.bdrc.io/resource/PT0085>
+  a <http://purl.bdrc.io/ontology/core/PlaceType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "grong sde"@bo-x-ewts ;
+  rdfs:label "village district"@en ;
+  rdfs:label "村镇"@zh-hans ;
+.

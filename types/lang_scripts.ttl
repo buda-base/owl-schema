@@ -1,0 +1,284 @@
+# baseURI: http://purl.bdrc.io/ontology/types/LangScript
+# prefix: LangScript
+
+@prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/LangScript>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:BoDbuCan
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangBo ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptDbuCan ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:BoTibt ;
+  rdfs:label "Tibetan in uchen script"@en ;
+  rdfs:label "dbu can"@bo-x-ewts ;
+.
+bdr:BoDbuMed
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangBo ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptDbuMed ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:BoTibt ;
+  rdfs:label "Tibetan in ume script"@en ;
+  rdfs:label "dbu med"@bo-x-ewts ;
+.
+bdr:BoDeva
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangBo ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptDeva ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Bo ;
+  rdfs:comment "This combination is extremely rare but at least one occurence was found."@en ;
+  rdfs:label "Tibetan in Devanagari"@en ;
+.
+bdr:BoEwts
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangBo ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptLatn ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Bo ;
+  <http://purl.bdrc.io/ontology/core/transliteration> bdr:TransEWTS ;
+  rdfs:label "Tibetan in Extended Wylie"@en ;
+  rdfs:label "wa'i li"@bo-x-ewts ;
+.
+bdr:BoKhyugYig
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangBo ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptKhyugYig ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:BoTibt ;
+  rdfs:label "'khyug yig"@bo-x-ewts ;
+  rdfs:label "Tibetan in Kyug 'Yig"@en ;
+.
+bdr:BoTibt
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangBo ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptTibt ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Bo ;
+  rdfs:label "Tibetan"@en ;
+  rdfs:label "bod yig"@bo-x-ewts ;
+.
+bdr:DzTibt
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangDz ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptTibt ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:LanguageTaxonomy ;
+  rdfs:label "Dzongkha (Bhutanese)"@en ;
+  rdfs:label "rdzong kha"@bo-x-ewts ;
+.
+bdr:EnLatn
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangEn ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptLatn ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:LanguageTaxonomy ;
+  rdfs:label "English"@en ;
+.
+bdr:Hi
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangHi ;
+  rdfs:label "Hindi"@en ;
+.
+bdr:MnCyrl
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangMn ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptCyrl ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Mn ;
+  rdfs:label "Mongolian (in Cyrillic)"@en ;
+.
+bdr:MnLatn
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangMn ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptLatn ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Mn ;
+  rdfs:label "Mongolian in Romanized form"@en ;
+.
+bdr:MnMong
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangMn ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptMong ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Mn ;
+  rdfs:label "Mongolian (in old Mongolian script)"@en ;
+.
+bdr:MnUnspecified
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangMn ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Mn ;
+  rdfs:label "Mongolian"@en ;
+.
+bdr:New
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:LanguageTaxonomy ;
+  rdfs:label "Newari"@en ;
+.
+bdr:NewDeva
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangNew ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptDeva ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:New ;
+  rdfs:label "Newari in Devanagari"@en ;
+.
+bdr:NewNewa
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangNew ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptNewa ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:New ;
+  rdfs:label "Newari in Pracalit"@en ;
+.
+bdr:Pi
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangPi ;
+.
+bdr:PiMymr
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangPi ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptMymr ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Pi ;
+  rdfs:label "Pali (Burmese)"@en ;
+.
+bdr:PiSinh
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangPi ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptSinh ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Pi ;
+  rdfs:label "Pali (Sinhalese)"@en ;
+.
+bdr:PiThai
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangPi ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptThai ;
+  rdfs:comment "Pali in Thai script"@en ;
+  rdfs:label "Pali in Thai"@en ;
+.
+bdr:RuCyrl
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangRu ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptCyrl ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:LanguageTaxonomy ;
+  rdfs:label "Russian in Cyrillic"@en ;
+.
+bdr:SaBeng
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptBeng ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit in Bengali"@en ;
+.
+bdr:SaDeva
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptRanj ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit in Devanagari"@en ;
+.
+bdr:SaEasternNagari
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptEasternNagari ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:ScriptEasternNagari ;
+  rdfs:label "Sanskrit in Eastern Nāgārī script"@en ;
+.
+bdr:SaNepaleseHooked
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptNepaleseHooked ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit in Nepali Hooked Script"@en ;
+.
+bdr:SaNewa
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptNewa ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit in Pracalit"@en ;
+.
+bdr:SaPostGupta
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptPostGupta ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit in Post-Gupta script"@en ;
+.
+bdr:SaRanj
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptRanj ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit in Ranjana"@en ;
+.
+bdr:SaSinh
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptSinh ;
+  rdfs:comment "rare"@en ;
+  rdfs:label "Sanskrit in Sinhalese"@en ;
+.
+bdr:SaTibt
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptTibt ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  <http://purl.bdrc.io/ontology/core/transliteration> bdr:TransSaTibt ;
+  rdfs:label "Sanskrit in Tibetan transliteration"@en ;
+.
+bdr:SaUnspecified
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangSa ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Sa ;
+  rdfs:label "Sanskrit (unspecified script)"@en ;
+.
+bdr:ZhHans
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangZh ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptHans ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Zh ;
+  rdfs:label "Chinese (Simplified)"@en ;
+.
+bdr:ZhHant
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangZh ;
+  <http://purl.bdrc.io/ontology/core/script> bdr:ScriptHant ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Zh ;
+  rdfs:label "Chinese (Traditional)"@en ;
+.
+bdr:ZhUnspecified
+  a <http://purl.bdrc.io/ontology/core/LangScript> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/language> bdr:LangZh ;
+  <http://purl.bdrc.io/ontology/core/taxSubClassOf> bdr:Zh ;
+  rdfs:label "Chinese (unspecified script)"@en ;
+.

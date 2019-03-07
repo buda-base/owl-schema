@@ -1,0 +1,39 @@
+# baseURI: http://purl.bdrc.io/ontology/types/WorkPartType
+# prefix: WorkPartType
+
+@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/core/WorkFragment>
+  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
+  a owl:NamedIndividual ;
+  rdfs:comment "A :WorkFragment is a portion of a \"whole\" work. A :WorkFragment commonly occurs when some pages have been extracted from a \"complete\" :Work and inserted improperly into a different :Work which has then been copied. A fragment is specified as a part of a containing :Work via a :WorkLocation as with any similar :workPartOf"@en ;
+  rdfs:label "fragment"@en ;
+.
+<http://purl.bdrc.io/ontology/types/WorkPartType>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/WorkChapter>
+  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "chapter"@en ;
+.
+<http://purl.bdrc.io/resource/WorkSection>
+  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "section"@en ;
+.
+<http://purl.bdrc.io/resource/WorkText>
+  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "text"@en ;
+.
+<http://purl.bdrc.io/resource/WorkVolume>
+  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
+  a owl:NamedIndividual ;
+  rdfs:label "volume"@en ;
+.

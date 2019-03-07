@@ -1,0 +1,95 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Language
+# prefix: Language
+
+@prefix Language: <http://purl.bdrc.io/ontology/types/Language#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/Language>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/LangBo>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "bo" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "tib" ;
+  rdfs:label "Tibetan"@en ;
+  rdfs:label "bod yig"@bo-x-ewts ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
+.
+<http://purl.bdrc.io/resource/LangDz>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "dz" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "dzo" ;
+  rdfs:label "Dzongkha (Bhutanese)"@en ;
+  rdfs:label "rdzong kha"@bo-x-ewts ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/dzo> ;
+.
+<http://purl.bdrc.io/resource/LangEn>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "en" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "eng" ;
+  rdfs:label "English"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/eng> ;
+.
+<http://purl.bdrc.io/resource/LangHi>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "hi" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "hin" ;
+  rdfs:label "Hindi"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/hin> ;
+.
+<http://purl.bdrc.io/resource/LangMn>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "mn" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "mon" ;
+  rdfs:label "Mongolian"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/mon> ;
+.
+<http://purl.bdrc.io/resource/LangNew>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "ne" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "new" ;
+  rdfs:label "Newari (Nepal Bhasa)"@en ;
+  rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
+.
+<http://purl.bdrc.io/resource/LangPi>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "pi" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "pli" ;
+  rdfs:label "Pali"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/pli> ;
+.
+<http://purl.bdrc.io/resource/LangRu>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "ru" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "rus" ;
+  rdfs:label "Russian"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/code/ru> ;
+.
+<http://purl.bdrc.io/resource/LangSa>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "sa" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "san" ;
+  rdfs:label "Sanskrit"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
+.
+<http://purl.bdrc.io/resource/LangZh>
+  a <http://purl.bdrc.io/ontology/core/Language> ;
+  a owl:NamedIndividual ;
+  <http://purl.bdrc.io/ontology/core/langBCP47Lang> "zh" ;
+  <http://purl.bdrc.io/ontology/core/langMARCCode> "chi" ;
+  rdfs:label "Chinese"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/zho> ;
+.

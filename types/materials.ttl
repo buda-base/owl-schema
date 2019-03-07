@@ -1,0 +1,63 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Material
+# prefix: Material
+
+@prefix Material: <http://purl.bdrc.io/ontology/types/Material#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/Material>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/AppliedMaterial_BlackInk>
+  a <http://purl.bdrc.io/ontology/core/AppliedMaterial> ;
+  rdfs:label "black ink"@en ;
+.
+<http://purl.bdrc.io/resource/AppliedMaterial_GoldLeaf>
+  a <http://purl.bdrc.io/ontology/core/AppliedMaterial> ;
+  rdfs:label "gold leaf"@en ;
+.
+<http://purl.bdrc.io/resource/AppliedMaterial_RedInk>
+  a <http://purl.bdrc.io/ontology/core/AppliedMaterial> ;
+  rdfs:label "red ink"@en ;
+.
+<http://purl.bdrc.io/resource/AppliedMaterial_SilverLeaf>
+  a <http://purl.bdrc.io/ontology/core/AppliedMaterial> ;
+  rdfs:label "silver leaf"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialBirchBark>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:label "birch bark"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialCoryphaPalmLeaf>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:label "palm leaf (corypha)"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialDigital>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
+  rdfs:label "digital material"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialMixed>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:label "mixed materials"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialMultiLayerPaper>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:comment "used for some manuscripts in Nepal"@en ;
+  rdfs:label "multi-layer paper"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialPalmLeaf>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:label "palm leaf"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialPaper>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:label "paper"@en ;
+.
+<http://purl.bdrc.io/resource/MaterialRicePaper>
+  a <http://purl.bdrc.io/ontology/core/BaseMaterial> ;
+  rdfs:label "rice paper"@en ;
+.

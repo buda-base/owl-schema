@@ -1,0 +1,40 @@
+# baseURI: http://purl.bdrc.io/ontology/types/PrintMethod
+# prefix: PrintMethod
+
+@prefix PrintMethod: <http://purl.bdrc.io/ontology/types/PrintMethod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/PrintMethod>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://purl.bdrc.io/resource/PrintMethod_Intaglio_Copper>
+  a <http://purl.bdrc.io/ontology/core/PrintMethod_Intaglio> ;
+  rdfs:label "copper intaglio"@en ;
+.
+<http://purl.bdrc.io/resource/PrintMethod_Intaglio_Zinc>
+  a <http://purl.bdrc.io/ontology/core/PrintMethod_Intaglio> ;
+  rdfs:label "zinc intaglio"@en ;
+.
+<http://purl.bdrc.io/resource/PrintMethod_Manuscript>
+  a <http://purl.bdrc.io/ontology/core/PrintMethod_Manuscript> ;
+  rdfs:label "manuscript"@en ;
+.
+<http://purl.bdrc.io/resource/PrintMethod_Relief_Letterpress>
+  a <http://purl.bdrc.io/ontology/core/PrintMethod_Relief> ;
+  rdfs:comment "mechanical relief printing typically via wood"@en ;
+  rdfs:label "letterpress"@en ;
+.
+<http://purl.bdrc.io/resource/PrintMethod_Relief_WoodBlock>
+  a <http://purl.bdrc.io/ontology/core/PrintMethod_Relief> ;
+  rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
+  rdfs:label "woodblock"@en ;
+  <http://www.w3.org/2004/02/skos/core#altLabel> "xylograph"@en ;
+.
+<http://purl.bdrc.io/resource/PrintMethod_Xerography>
+  a <http://purl.bdrc.io/ontology/core/PrintMethod> ;
+  rdfs:label "xerography"@en ;
+.
