@@ -1,5 +1,10 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/IGNORE/userProfiles/
+# imports: http://purl.bdrc.io/ontology/adm/types/Access
+# imports: http://purl.bdrc.io/ontology/adm/types/License
+# imports: http://purl.bdrc.io/ontology/adm/types/OutlineType
+# imports: http://purl.bdrc.io/ontology/adm/types/Status
+# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/types/Binding
 # imports: http://purl.bdrc.io/ontology/types/Gender
@@ -504,6 +509,11 @@ bdo:
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/IGNORE/userProfiles/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/License> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
@@ -4924,54 +4934,6 @@ tbr:place_town_syl
   rdfs:label "town name"@en ;
   rdfs:range xsd:string ;
 .
-bdr:AccessFairUse
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
-  rdfs:label "Fair Use"@en ;
-.
-bdr:AccessMixed
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
-  rdfs:label "mixed access"@en ;
-.
-bdr:AccessOpen
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The contents of the Work are freely avaiable in their entirety."@en ;
-  rdfs:label "Open Access"@en ;
-.
-bdr:AccessRestrictedByQuality
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The quality of the scanning or eText conversion to poor to warrant making it available online."@en ;
-  rdfs:label "Restricted by Quality"@en ;
-.
-bdr:AccessRestrictedByTbrc
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "BDRC is restricting access to the Work."@en ;
-  rdfs:label "Restricted by BDRC"@en ;
-.
-bdr:AccessRestrictedInChina
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The Work is not to be made available in the PRC."@en ;
-  rdfs:label "Restricted in China"@en ;
-.
-bdr:AccessRestrictedSealed
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The Work is sealed by tradition."@en ;
-  rdfs:label "Restricted Sealed"@en ;
-.
-bdr:AccessRestrictedTemporarily
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The Work is temporarily restricted."@en ;
-  rdfs:label "Temporarily Restricted"@en ;
-.
 bdr:Bo
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
@@ -5004,44 +4966,6 @@ bdr:LanguageTaxonomy
   a owl:NamedIndividual ;
   bdo:taxSubclassRelation bdo:taxSubClassOf ;
   rdfs:seeAlso "Language taxonomy"@en ;
-.
-bdr:LicenseAllRightsReserved
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved."@en ;
-  rdfs:label "All Rights Reserved"@en ;
-.
-bdr:LicenseCC0
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The work is made available under Creative Commons, CC0 1.0."@en ;
-  rdfs:label "Creative Commons CC0"@en ;
-  rdfs:seeAlso <https://creativecommons.org/share-your-work/public-domain/cc0/> ;
-.
-bdr:LicenseCCBYSA3U
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:label "Creative Commons BY-SA 3.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/3.0/> ;
-.
-bdr:LicenseCCBYSA4U
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:label "Creative Commons BY-SA 4.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
-.
-bdr:LicenseMixed
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed)."@en ;
-  rdfs:label "mixed licensing"@en ;
-.
-bdr:LicensePublicDomain
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws."@en ;
-  rdfs:label "Public Domain"@en ;
-  rdfs:seeAlso <https://creativecommons.org/publicdomain/mark/1.0/deed> ;
 .
 bdr:Mn
   a bdo:Taxonomy ;
@@ -5094,38 +5018,6 @@ bdr:ObjectTypeTypeSet
   a owl:NamedIndividual ;
   rdfs:label "typeset"@en ;
 .
-bdr:OutlineTypeCompositeVolume
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeGsungBum
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeGterChos
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeMultiVolumeCollection
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeNotAssigned
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypePartialCollectedWorks
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeSaBcad
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeSubjectCollection
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
 bdr:Pi
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
@@ -5138,181 +5030,6 @@ bdr:Sa
   bdo:taxSubClassOf bdr:LanguageTaxonomy ;
   rdfs:label "Sanskrit"@en ;
 .
-bdr:StatusAccessioned
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "accessioned"@en ;
-.
-bdr:StatusAcquiring
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "acquiring"@en ;
-.
-bdr:StatusEditing
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "editing"@en ;
-.
-bdr:StatusOnHold
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "on hold"@en ;
-.
-bdr:StatusProvisional
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "provisional"@en ;
-.
-bdr:StatusReleased
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "released"@en ;
-.
-bdr:StatusScanned
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "scanned"@en ;
-.
-bdr:StatusSeekingOut
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "seeking out"@en ;
-.
-bdr:StatusWithdrawn
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "withdrawn"@en ;
-.
-bdr:TermsOfUseBDRCEtexts
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Terms of use of BDRC Etexts"@en ;
-.
-bdr:TermsOfUseBDRCGeneral
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment """Public Domain Policy
-This policy applies only to content in the Public Domain, additional restrictions can apply to Public Domain content, see Restricted Content Policy.
-
-Public domain means, the work has been identified as being free of known restrictions under copyright law, including all related and neighboring rights. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.  See https://creativecommons.org/publicdomain/mark/1.0/
-BDRC’s Public Domain Mark enables works that are no longer restricted by copyright to be marked as such in a standard and simple way, making them easily discoverable and available to others. Many cultural heritage institutions including museums, libraries and other curators are knowledgeable about the copyright status of paintings, books and manuscripts, photographs and other works in their collections, many of which are old and no longer under copyright.  The Public Domain Mark operates as a tag or a label, allowing institutions like those as well as others with such knowledge to communicate that a work is no longer restricted by copyright and can be freely used by others.  The mark can also be an important source of information, allowing others to verify a work’s copyright status and learn more about the work.
-
-Although BDRC does not impose any legally binding conditions on access to the Public Domain content, BDRC requests that it is given attribution as a source of the content, to the extent it is technologically feasible to do so.
-
-Definitions are available in BDRC’s ontology service: http://purl.bdrc.io/resource/LicensePublicDomain 
-
-Copyright Policy
-BDRC applies section 108 copyright analyses to its works.
-
-BDRC indicates the copyright status of a book in its Metadata. This status is purely informational and BDRC cannot be held liable of its accuracy.
-
-BDRC considers reproductions (digital images, textual reproductions produced from OCR and manual input) to have the same copyright as the original work.
-Some of the content available through BDRC may be governed by local, national, and/or international laws and regulations, and your use of such content is solely at your own risk. You agree to abide by all applicable laws and regulations, including intellectual property laws, in connection with your use of BDRC.
-
-Definitions are available in BDRC’s ontology service: http://purl.bdrc.io/resource/LicenseAllRightsReserved 
-
-Restricted Access Policy
-For content marked as restricted by tradition, you agree to access only content that you have been authorized to access by a lineage holder, and for which you understand the restrictions. You agree to fully respect the conditions under which you have been provided access to the material.
-
-For content marked as restricted in a particular country, you agree not to transfer the material by any mean (paper, electronic) to this country.
-
-For content marked as restricted to scholarly use, you agree not to have.
-
-In addition to other applying restrictions, you agree to share the material solely under the agreement to respect these restrictions.
-
-In addition to licensing, BDRC assigns access designations to works published on its online library at tbrc.org based on cultural commitments to stakeholders. The following access designations are used:
-● Restricted Sealed (tib: rgya can) – Some works of the types listed below are restricted because of the nature of their content. The owners of the traditions request these restrictions. Note that if these works appear in the collected works (tib: gsung ‘bum) of the author, they are not restricted as they appear in context.
-○ Sealed Texts (tib: bka' rgya ma)
-○ Esoteric Collections (tib: be'u 'bum and sngags 'bum)
-○ Secret Practice or Oral Instruction (tib: mkhyud dpyad)
-○ Tantric Sexual Practice (tib: thabs lam)
-○ Secret Sealed (tib: gsang ba rgya can)
-○ Secret Biographies (tib: gsang ba'i rnam thar)
-○ Ear-Whispered Lineage (tib: snyan brgyud)
-○ Esoteric Instructions (tib: khrid yig)
-● Temporarily Restricted – works marked as temporarily restricted, until at some time BDRC is instructed to release the restriction. Unless otherwise specified, the time duration is 3 years from the date of publication.
-● Restricted by Quality – works marked restricted by quality in cases where the scanned source is of poor quality or incomplete. BDRC reserves the right to restrict access to these works and may direct users to a better quality edition.
-● Restricted by BDRC – works marked generally as restricted by BDRC for whatever purpose BDRC deems necessary.
-● Restricted in China – works marked restricted where heightened sensitivity in China precludes access in China. Note: these works will be available on our website outside of China.
-
-Specific definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/AccessType 
-
-CC0 Policy
-BDRC makes its set of metadata available for public use under the CC0 1.0 Public Domain Designation.
-
-CC0 enables scientists, educators, artists and other creators and owners of copyright- or database-protected content to waive those interests in their works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright or database law.
-
-In contrast to CC’s licenses that allow copyright holders to choose from a range of permissions while retaining their copyright, CC0 empowers yet another choice altogether – the choice to opt out of copyright and database protection, and the exclusive rights automatically granted to creators – the “no rights reserved” alternative to our licenses.
-
-Although BDRC does not impose any legally binding conditions on access to the 
-Metadata, BDRC requests that you act in accordance with the following Community 
-
-Norms of BDRC with respect to the Metadata:
-
-First, BDRC requests that it is given attribution as a source of the Metadata, to the extent it is technologically feasible to do so.
-
-Second, BDRC requests that you make the Metadata and any improvements thereto freely available on the same terms as BDRC has done, i.e., without claiming any legal right in, or imposing any legally binding conditions on access to, the Metadata or your improvements, and with a request to act in accordance with these Community Norms.
-As a database in the sense of EU Protection of Databases, it is also provided under CC0 license. Extractions of the database of BDRC are considered to be under the same license as the database itself.
-
-Specific definition is available in BDRC’s ontology service: http://purl.bdrc.io/resource/LicenseCC0 
-
-Disclaimer of Warranties and Limitation of Liability
-
-1. BDRC offers content as-is and as-available, and makes no representations or warranties of any kind concerning the content, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to you.
-
-2. To the extent possible, in no event will BDRC be liable on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of use of the content, even if BDRC has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to you.\">Terms of Use
-
-Buddhist Digital Resource Center believes strongly in unfettered access to the riches of Buddhist cultural heritage. To enable and enhance this access, we have adopted standardized rights vocabulary developed at Harvard University (http://library.harvard.edu/open-metadata) and RightsStatements.org. Additional access policies defined herein are born out of BDRC’s commitment to stakeholders and are intended to (1) maximize access of Buddhist works to sustain living traditions and (2) protect the legal and cultural rights of Buddhist authors and publishers.  As a public charity, BDRC’s mission is to make the results of its work widely available. BDRC requests that our users, where appropriate, attribute BDRC. The purpose of this Terms of Use is to orient the user on the use of the three central domains of BDRC’s archive: textual resources, metadata and source code.
-
-The latest version of the Terms of Use can be found at:
-
-http://purl.bdrc.io/resource/TermsOfUseBDRCGeneral
-
-Text Resources
-BDRC indicates two license types to text resources with several possible access restrictions.  For works whose rights have expired, BDRC uses Public Domain (see Public Domain Policy below). For copyright works, BDRC applies section 108 copyright analyses to its works (see Copyright Policy below). Finally, BDRC applies access restrictions to works based on cultural commitments to authors (see Restricted Access Policy below).
-License definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/License. Access definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/AccessType 
-
-Metadata
-In order to facilitate use and reuse in machine environments, BDRC makes its metadata available for public use under the CC0 1.0 Public Domain Designation. See CC0 Policy below for more details.  We ask that machine harvesting attribute BDRC wherever possible.  License definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/License 
-
-Source Code
-BDRC releases all the source code it produces under free licenses. The licenses vary according to the different software communities, the Apache 2.0 and MIT License are the most used. See BDRC’s code repository for specific licenses used.
-
-Additional Terms
-This terms of use agreement (the \"Agreement\") governs your use of the content available through the Buddhist Digital Resource Center (\"BDRC\"). When accessing content, you will be presented with the terms of use agreement. If you do not agree to these terms, please do not use the BDRC’s content or its Web site.
-
-Nothing in the Agreement constitutes or may be construed as permission to assert or imply that you are, or that your use of the content is, connected with, or sponsored, endorsed, or granted official status by BDRC.
-
-Some of the content available through BDRC might be deemed offensive, disturbing, pornographic, racist, sexist, bizarre, or otherwise objectionable. BDRC does not endorse or sponsor any content, nor does it guarantee or warrant that the content made available is accurate, complete, noninfringing, or legally accessible in your jurisdiction, and you agree that you are solely responsible for abiding by all laws and regulations that may be applicable to the viewing of the content.
-
-You agree to indemnify and hold harmless BDRC and its parents, subsidiaries, affiliates, agents, officers, directors, and employees from and against any and all liability, loss, claims, damages, costs, and/or actions (including attorneys’ fees) arising from your use of its content and services. You agree that this Agreement is governed by Massachusetts law and that any suit arising from this Agreement will be brought in Boston, Massachusetts, and you further agree that on the election and reasonable notice of either party any litigation shall be referred to arbitration pursuant to the Massachusetts Rules of Civil Procedure. In addition, you agree that should any provision in the Agreement be found invalid, unlawful, or unenforceable, that provision shall not affect the validity or enforceability of the remaining provisions.
-
-BDRC may immediately terminate this Agreement at its sole discretion at any time upon written notice (including via email) to you. Upon termination, you agree that 
-
-BDRC may immediately deactivate any password it has issued to you and bar you from accessing its content. 
-
-BDRC may modify this Agreement from time to time, and your continued use of the content constitutes your acceptance of any and all modifications. BDRC will attempt to notify you of substantial modifications via the email address that you have registered with us, if any.
-
-We welcome your input. Please contact us with any comments or questions at inquiry"""@en ;
-  rdfs:label "BDRC General Terms of Use"@en ;
-.
-bdr:TermsOfUseBDRCImages
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:label "BDRC scanned images terms of use"@en ;
-.
-bdr:TermsOfUseBDRCMetadata
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The terms of use of the metadata shoud be spelled out here"@en ;
-  rdfs:label "Metadata Terms of Use"@en ;
-.
-bdr:TermsOfUseBDRCSourceCode
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Terms of use for source code goes here"@en ;
-  rdfs:label "Source code Terms of Use"@en ;
-.
 bdr:TraditionTaxonomy
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
@@ -5322,14 +5039,12 @@ bdr:TraditionTaxonomy
 bdr:UNKNOWN_Corporation
   a bdo:Corporation ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Corporation ;
   rdfs:label "unkown corporation"@en ;
 .
 bdr:UNKNOWN_Lineage
   a bdo:Lineage ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Lineage ;
   rdfs:label "unknown lineage"@en ;
 .
@@ -5341,42 +5056,36 @@ bdr:UNKNOWN_Organization
 bdr:UNKNOWN_Person
   a bdo:Person ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Person ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Place
   a bdo:Place ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Place ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Product
   a adm:Product ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Product ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Role
   a bdo:Role ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Role ;
   rdfs:label "Unknown Role"@en ;
 .
 bdr:UNKNOWN_Topic
   a bdo:Topic ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Topic ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Work
   a bdo:Work ;
   a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Work ;
   rdfs:label "Unknown"@en ;
 .

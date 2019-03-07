@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/core/owl/
+# imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: bdor
 
@@ -32,5 +33,6 @@ bdo:AgentAsCreator
 .
 bdor:
   a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
   owl:imports bdo: ;
 .
