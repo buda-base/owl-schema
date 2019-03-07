@@ -1,5 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/IGNORE/userProfiles/
+# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -488,6 +489,7 @@ bdo:
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/IGNORE/userProfiles/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
 .
 bdo:AbstractWork
   a owl:Class ;
@@ -6192,107 +6194,6 @@ bdr:PrintMethod_Relief_WoodBlock
 bdr:PrintMethod_Xerography
   a bdo:PrintMethod ;
   rdfs:label "xerography"@en ;
-.
-bdr:R0ER0001
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T09:43:05-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:altLabel "燒身"@zh-hant ;
-  skos:altLabel "燒身供養"@zh-hant ;
-  skos:altLabel "遺身"@zh-hant ;
-  skos:prefLabel "self-immolator"@en ;
-  skos:prefLabel "亡身"@zh-hant ;
-.
-bdr:R0ER0002
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:48:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:prefLabel "public preacher"@en ;
-  skos:prefLabel "唱導"@zh-hant ;
-.
-bdr:R0ER0003
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:50:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:altLabel "神異"@zh-hant ;
-  skos:prefLabel "miracle worker"@en ;
-  skos:prefLabel "感通"@zh-hant ;
-.
-bdr:R0ER0004
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:52:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:prefLabel "Vinaya expert"@en ;
-  skos:prefLabel "明律"@zh-hant ;
-.
-bdr:R0ER0005
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:53:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:altLabel "誦經"@zh-hant ;
-  skos:prefLabel "sutra recitator and chanter"@en ;
-  skos:prefLabel "經師"@zh-hant ;
-.
-bdr:R0ER0006
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:prefLabel "meditator"@en ;
-  skos:prefLabel "習禪"@zh-hant ;
-.
-bdr:R0ER0007
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:prefLabel "Monks arousing happiness and fortune"@en ;
-  skos:prefLabel "興福"@zh-hant ;
-.
-bdr:R0ER0008
-  a bdo:ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T11:03:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
-  skos:prefLabel "Dharma protector (human)"@en ;
-  skos:prefLabel "護法"@zh-hant ;
 .
 bdr:RuCyrl
   a bdo:LangScript ;
