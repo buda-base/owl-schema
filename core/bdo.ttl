@@ -6976,9 +6976,298 @@ bdr:TransSaTibt
   a owl:NamedIndividual ;
   rdfs:label "Sanskrit transliterated in Tibetan"@en ;
 .
+bdr:U00001
+  a foaf:Agent ;
+  skos:prefLabel "Gene Smith"@en ;
+.
+bdr:U00002
+  a foaf:Agent ;
+  skos:altLabel "Alexander Gardner"@en ;
+  skos:altLabel "agardner@sdrubin.org"@en ;
+  skos:prefLabel "Alex Gardner"@en ;
+.
+bdr:U00003
+  a foaf:Agent ;
+  skos:altLabel "Bumu Dega"@en ;
+  skos:prefLabel "Dega Bumu"@en ;
+.
+bdr:U00004
+  a foaf:Agent ;
+  skos:prefLabel "Catherine Tsuji"@en ;
+.
 bdr:U00006
   a foaf:Agent ;
+  skos:altLabel "Code Feret"@en ;
+  skos:altLabel "Code Ferret"@en ;
+  skos:altLabel "CodeFerret"@en ;
+  skos:altLabel "chris"@en ;
+  skos:altLabel "ct"@en ;
   skos:prefLabel "Chris Tomlinson"@en ;
+.
+bdr:U00007
+  a foaf:Agent ;
+  skos:altLabel "Chungdak Nangpa"@en ;
+  skos:altLabel "Chungdak Ngakpa"@en ;
+  skos:altLabel "cnakpa"@en ;
+  skos:prefLabel "Chungdak Ngagpa"@en ;
+.
+bdr:U00008
+  a foaf:Agent ;
+  skos:prefLabel "Cuilan Liu"@en ;
+.
+bdr:U00009
+  a foaf:Agent ;
+  skos:prefLabel "Gabi Coura"@en ;
+.
+bdr:U00010
+  a foaf:Agent ;
+  skos:prefLabel "Harry Einhorn"@en ;
+.
+bdr:U00011
+  a foaf:Agent ;
+  skos:altLabel "jann ronis"@en ;
+  skos:prefLabel "Jann Ronis"@en ;
+.
+bdr:U00012
+  a foaf:Agent ;
+  skos:altLabel "jw"@en ;
+  skos:altLabel "places-ensure-contains-has-name"@en ;
+  skos:prefLabel "Jeff Wallman"@en ;
+.
+bdr:U00013
+  a foaf:Agent ;
+  skos:prefLabel "Jigme Namgyal"@en ;
+.
+bdr:U00015
+  a foaf:Agent ;
+  skos:altLabel "Joseph McClellan"@en ;
+  skos:altLabel "jm"@en ;
+  skos:prefLabel "Joe McClellan"@en ;
+.
+bdr:U00016
+  a foaf:Agent ;
+  skos:altLabel "kgongde"@en ;
+  skos:prefLabel "Karma Gongde"@en ;
+.
+bdr:U00017
+  a foaf:Agent ;
+  skos:altLabel "Chozin"@en ;
+  skos:altLabel "Kelsang"@en ;
+  skos:altLabel "chozin"@en ;
+  skos:altLabel "kelsang"@en ;
+  skos:altLabel "klhamo"@en ;
+  skos:prefLabel "Kelsang Lhamo"@en ;
+.
+bdr:U00018
+  a foaf:Agent ;
+  skos:prefLabel "Konchok Tsering"@en ;
+.
+bdr:U00019
+  a foaf:Agent ;
+  skos:altLabel "lshastri"@en ;
+  skos:prefLabel "Lobsang Shastri"@en ;
+.
+bdr:U00020
+  a foaf:Agent ;
+  skos:altLabel "Michael R. Sheehy"@en ;
+  skos:altLabel "msheehy"@en ;
+  skos:prefLabel "Michael Sheehy"@en ;
+.
+bdr:U00021
+  a foaf:Agent ;
+  skos:altLabel "pal dor"@en ;
+  skos:altLabel "paldor"@en ;
+  skos:prefLabel "Paldor"@en ;
+.
+bdr:U00022
+  a foaf:Agent ;
+  skos:prefLabel "Penghao Sun"@en ;
+.
+bdr:U00023
+  a foaf:Agent ;
+  skos:prefLabel "Ralf Kramer"@en ;
+.
+bdr:U00024
+  a foaf:Agent ;
+  skos:prefLabel "Ramon Prats"@en ;
+.
+bdr:U00025
+  a foaf:Agent ;
+  skos:prefLabel "Rory Lindsay"@en ;
+.
+bdr:U00026
+  a foaf:Agent ;
+  skos:prefLabel "Tendzin Parsons"@en ;
+.
+bdr:U00027
+  a foaf:Agent ;
+  skos:prefLabel "Tenzin Dickyi"@en ;
+.
+bdr:U00028
+  a foaf:Agent ;
+  skos:prefLabel "Arya Moallem"@en ;
+.
+bdr:U00029
+  a foaf:Agent ;
+  skos:prefLabel "Awang Ciren"@en ;
+.
+bdr:U00030
+  a foaf:Agent ;
+  skos:prefLabel "Chen Lai"@en ;
+.
+bdr:U00031
+  a foaf:Agent ;
+  skos:prefLabel "Dennis Johnson"@en ;
+.
+bdr:U00032
+  a foaf:Agent ;
+  skos:altLabel "dorjee choden"@en ;
+  skos:prefLabel "Dorjee Choden"@en ;
+.
+bdr:U00033
+  a foaf:Agent ;
+  skos:prefLabel "dzongsarlibrary"@en ;
+.
+bdr:U00034
+  a foaf:Agent ;
+  skos:prefLabel "Erdene Baatar"@en ;
+.
+bdr:U00035
+  a foaf:Agent ;
+  skos:altLabel "Gyurme Chograg"@en ;
+  skos:prefLabel "Gyurmed Chodrak"@en ;
+.
+bdr:U00036
+  a foaf:Agent ;
+  skos:altLabel "Haschuluu"@en ;
+  skos:prefLabel "Hachuluu"@en ;
+.
+bdr:U00037
+  a foaf:Agent ;
+  skos:altLabel "Jamyang.Lodoe"@en ;
+  skos:prefLabel "Jamyang Lodoe"@en ;
+.
+bdr:U00038
+  a foaf:Agent ;
+  skos:prefLabel "Jigme Tashi"@en ;
+.
+bdr:U00039
+  a foaf:Agent ;
+  skos:prefLabel "John Canti"@en ;
+.
+bdr:U00040
+  a foaf:Agent ;
+  skos:prefLabel "Khedup Gyatso"@en ;
+.
+bdr:U00041
+  a foaf:Agent ;
+  skos:prefLabel "Legacy Converter"@en ;
+.
+bdr:U00042
+  a foaf:Agent ;
+  skos:prefLabel "mangaram"@en ;
+.
+bdr:U00043
+  a foaf:Agent ;
+  skos:altLabel "mara canizzaro"@en ;
+  skos:prefLabel "Mara Canizzaro"@en ;
+.
+bdr:U00044
+  a foaf:Agent ;
+  skos:prefLabel "Morris Hopkins"@en ;
+.
+bdr:U00045
+  a foaf:Agent ;
+  skos:altLabel "tenzang"@en ;
+  skos:prefLabel "Ngawang Trinley"@en ;
+.
+bdr:U00046
+  a foaf:Agent ;
+  skos:prefLabel "pbaduo"@en ;
+.
+bdr:U00047
+  a foaf:Agent ;
+  skos:prefLabel "topic reclassify"@en ;
+.
+bdr:U00048
+  a foaf:Agent ;
+  skos:prefLabel "zhangning"@en ;
+.
+bdr:U00049
+  a foaf:Agent ;
+  skos:prefLabel "Arthur McKeown"@en ;
+.
+bdr:U00050
+  a foaf:Agent ;
+  skos:prefLabel "Bruno Laine"@en ;
+.
+bdr:U00051
+  a foaf:Agent ;
+  skos:altLabel "chengdu"@en ;
+  skos:prefLabel "Chengdu"@en ;
+.
+bdr:U00052
+  a foaf:Agent ;
+  skos:prefLabel "Chojor Radha"@en ;
+.
+bdr:U00053
+  a foaf:Agent ;
+  skos:prefLabel "Elie Roux"@en ;
+.
+bdr:U00054
+  a foaf:Agent ;
+  skos:altLabel "Gelek.Gyatso"@en ;
+  skos:prefLabel "Gelek Gyatso"@en ;
+.
+bdr:U00055
+  a foaf:Agent ;
+  skos:prefLabel "Georgia Kashnig"@en ;
+.
+bdr:U00057
+  a foaf:Agent ;
+  skos:prefLabel "monastery import"@en ;
+.
+bdr:U00058
+  a foaf:Agent ;
+  skos:prefLabel "mongol import"@en ;
+.
+bdr:U00059
+  a foaf:Agent ;
+  skos:altLabel "Palri Nepal"@en ;
+  skos:altLabel "Palri Parkhang Nepal"@en ;
+  skos:altLabel "Palri"@en ;
+  skos:altLabel "Palris"@en ;
+  skos:altLabel "palris"@en ;
+  skos:prefLabel "Palri Parkhang"@en ;
+.
+bdr:U00061
+  a foaf:Agent ;
+  skos:prefLabel "Shallima Dellefant"@en ;
+.
+bdr:U00062
+  a foaf:Agent ;
+  skos:prefLabel "sherabling"@en ;
+.
+bdr:U00063
+  a foaf:Agent ;
+  skos:prefLabel "Shoko Mekata"@en ;
+.
+bdr:U00064
+  a foaf:Agent ;
+  skos:prefLabel "Stacey Van Vleet"@en ;
+.
+bdr:U00065
+  a foaf:Agent ;
+  skos:altLabel "Tsering Dondrup"@en ;
+  skos:prefLabel "Tsering Dhondup"@en ;
+.
+bdr:U00066
+  a foaf:Agent ;
+  skos:prefLabel "Travis DeTour"@en ;
+.
+bdr:U00067
+  a foaf:Agent ;
+  skos:prefLabel "Tserings Wangdag"@en ;
 .
 bdr:UNKNOWN_Corporation
   a bdo:Corporation ;
