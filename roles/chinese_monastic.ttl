@@ -30,7 +30,7 @@ ChineseMonastic:
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
   <http://purl.bdrc.io/ontology/admin/logEntry> [
       a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:48:00-06:00"^^xsd:dateTime ;
+      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:48:17-06:00"^^xsd:dateTime ;
       <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
       <http://purl.bdrc.io/ontology/admin/logWho> <http://purl.bdrc.io/resource/U00006> ;
     ] ;
