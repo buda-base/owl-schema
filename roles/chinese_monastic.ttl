@@ -26,7 +26,7 @@ bdr:R0ER0001
   skos:altLabel "亡身"@zh-hant ;
   skos:altLabel "燒身"@zh-hant ;
   skos:altLabel "燒身供養"@zh-hant ;
-  skos:prefLabel "Yíshēn"@zh-pinyin ;
+  skos:prefLabel "Yíshēn"@zh-latn-pinyin ;
   skos:prefLabel "self-immolator"@en ;
   skos:prefLabel "遺身"@zh-hant ;
 .
@@ -39,7 +39,7 @@ bdr:R0ER0002
       adm:logWho bdr:U00006 ;
     ] ;
   adm:status bdr:StatusReleased ;
-  skos:prefLabel "Chàngdǎo"@zh-pinyin ;
+  skos:prefLabel "Chàngdǎo"@zh-latn-pinyin ;
   skos:prefLabel "public preacher"@en ;
   skos:prefLabel "唱導"@zh-hant ;
 .
@@ -53,7 +53,7 @@ bdr:R0ER0003
     ] ;
   adm:status bdr:StatusReleased ;
   skos:altLabel "神異"@zh-hant ;
-  skos:prefLabel "Gǎntōng"@zh-pinyin ;
+  skos:prefLabel "Gǎntōng"@zh-latn-pinyin ;
   skos:prefLabel "miracle worker"@en ;
   skos:prefLabel "感通"@zh-hant ;
 .
@@ -66,7 +66,7 @@ bdr:R0ER0004
       adm:logWho bdr:U00006 ;
     ] ;
   adm:status bdr:StatusReleased ;
-  skos:prefLabel "Mínglǜ"@zh-pinyin ;
+  skos:prefLabel "Mínglǜ"@zh-latn-pinyin ;
   skos:prefLabel "Vinaya expert"@en ;
   skos:prefLabel "明律"@zh-hant ;
 .
@@ -80,7 +80,7 @@ bdr:R0ER0005
     ] ;
   adm:status bdr:StatusReleased ;
   skos:altLabel "誦經"@zh-hant ;
-  skos:prefLabel "Jīng shī"@zh-pinyin ;
+  skos:prefLabel "Jīng shī"@zh-latn-pinyin ;
   skos:prefLabel "sutra recitator and chanter"@en ;
   skos:prefLabel "經師"@zh-hant ;
 .
@@ -93,7 +93,7 @@ bdr:R0ER0006
       adm:logWho bdr:U00006 ;
     ] ;
   adm:status bdr:StatusReleased ;
-  skos:prefLabel "Xíchán"@zh-pinyin ;
+  skos:prefLabel "Xíchán"@zh-latn-pinyin ;
   skos:prefLabel "meditator"@en ;
   skos:prefLabel "習禪"@zh-hant ;
 .
@@ -107,7 +107,7 @@ bdr:R0ER0007
     ] ;
   adm:status bdr:StatusReleased ;
   rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
-  skos:prefLabel "Xīngfú"@zh-pinyin ;
+  skos:prefLabel "Xīngfú"@zh-latn-pinyin ;
   skos:prefLabel "promoter of merit"@en ;
   skos:prefLabel "興福"@zh-hant ;
 .
@@ -121,6 +121,6 @@ bdr:R0ER0008
     ] ;
   adm:status bdr:StatusReleased ;
   skos:prefLabel "Dharma protector (human)"@en ;
-  skos:prefLabel "Hùfǎ"@zh-pinyin ;
+  skos:prefLabel "Hùfǎ"@zh-latn-pinyin ;
   skos:prefLabel "護法"@zh-hant ;
 .
