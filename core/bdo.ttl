@@ -5201,3 +5201,27 @@ foaf:Entity
   rdfs:label "FOAF Entity"@en ;
   rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
 .
+<http://purl.bdrc.io/resource/UNKNOWN_Corporation>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Lineage>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Person>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Place>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Product>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Role>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Topic>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
+<http://purl.bdrc.io/resource/UNKNOWN_Work>
+  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
+.
