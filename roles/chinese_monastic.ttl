@@ -39,7 +39,7 @@ bdr:R0ER0002
       adm:logWho bdr:U00006 ;
     ] ;
   adm:status bdr:StatusReleased ;
-  skos:prefLabel "Shōdō"@zh-pinyin ;
+  skos:prefLabel "Chàngdǎo"@zh-pinyin ;
   skos:prefLabel "public preacher"@en ;
   skos:prefLabel "唱導"@zh-hant ;
 .
@@ -108,7 +108,7 @@ bdr:R0ER0007
   adm:status bdr:StatusReleased ;
   rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
   skos:prefLabel "Xīngfú"@zh-pinyin ;
-  skos:prefLabel "promoters of merit"@en ;
+  skos:prefLabel "promoter of merit"@en ;
   skos:prefLabel "興福"@zh-hant ;
 .
 bdr:R0ER0008
