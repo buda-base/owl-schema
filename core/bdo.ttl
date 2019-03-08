@@ -5039,12 +5039,14 @@ bdr:TraditionTaxonomy
 bdr:UNKNOWN_Corporation
   a bdo:Corporation ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Corporation ;
   rdfs:label "unkown corporation"@en ;
 .
 bdr:UNKNOWN_Lineage
   a bdo:Lineage ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Lineage ;
   rdfs:label "unknown lineage"@en ;
 .
@@ -5056,36 +5058,42 @@ bdr:UNKNOWN_Organization
 bdr:UNKNOWN_Person
   a bdo:Person ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Person ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Place
   a bdo:Place ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Place ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Product
   a adm:Product ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Product ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Role
   a bdo:Role ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Role ;
   rdfs:label "Unknown Role"@en ;
 .
 bdr:UNKNOWN_Topic
   a bdo:Topic ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Topic ;
   rdfs:label "Unknown"@en ;
 .
 bdr:UNKNOWN_Work
   a bdo:Work ;
   a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Work ;
   rdfs:label "Unknown"@en ;
 .
@@ -5200,28 +5208,4 @@ foaf:Entity
   rdfs:comment "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
   rdfs:label "FOAF Entity"@en ;
   rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Corporation>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Lineage>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Person>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Place>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Product>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Role>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Topic>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
-.
-<http://purl.bdrc.io/resource/UNKNOWN_Work>
-  <http://purl.bdrc.io/ontology/admin/status> <http://purl.bdrc.io/resource/StatusReleased> ;
 .

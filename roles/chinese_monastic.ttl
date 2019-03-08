@@ -2,10 +2,12 @@
 # prefix: ChineseMonastic
 
 @prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ChineseMonastic:
@@ -14,102 +16,111 @@ ChineseMonastic:
 .
 bdr:R0ER0001
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T09:43:05-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T09:43:05-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "燒身"@zh-hant ;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "燒身供養"@zh-hant ;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "遺身"@zh-hant ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "self-immolator"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "亡身"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:altLabel "亡身"@zh-hant ;
+  skos:altLabel "燒身"@zh-hant ;
+  skos:altLabel "燒身供養"@zh-hant ;
+  skos:prefLabel "Yíshēn"@zh-pinyin ;
+  skos:prefLabel "self-immolator"@en ;
+  skos:prefLabel "遺身"@zh-hant ;
 .
 bdr:R0ER0002
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:48:17-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:48:17-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "public preacher"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "唱導"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Shōdō"@zh-pinyin ;
+  skos:prefLabel "public preacher"@en ;
+  skos:prefLabel "唱導"@zh-hant ;
 .
 bdr:R0ER0003
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:50:00-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:50:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "神異"@zh-hant ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "miracle worker"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "感通"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:altLabel "神異"@zh-hant ;
+  skos:prefLabel "Gǎntōng"@zh-pinyin ;
+  skos:prefLabel "miracle worker"@en ;
+  skos:prefLabel "感通"@zh-hant ;
 .
 bdr:R0ER0004
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:52:00-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:52:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Vinaya expert"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "明律"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Mínglǜ"@zh-pinyin ;
+  skos:prefLabel "Vinaya expert"@en ;
+  skos:prefLabel "明律"@zh-hant ;
 .
 bdr:R0ER0005
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:53:00-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:53:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "誦經"@zh-hant ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "sutra recitator and chanter"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "經師"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:altLabel "誦經"@zh-hant ;
+  skos:prefLabel "Jīng shī"@zh-pinyin ;
+  skos:prefLabel "sutra recitator and chanter"@en ;
+  skos:prefLabel "經師"@zh-hant ;
 .
 bdr:R0ER0006
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "meditator"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "習禪"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Xíchán"@zh-pinyin ;
+  skos:prefLabel "meditator"@en ;
+  skos:prefLabel "習禪"@zh-hant ;
 .
 bdr:R0ER0007
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Monks arousing happiness and fortune"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "興福"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
+  skos:prefLabel "Xīngfú"@zh-pinyin ;
+  skos:prefLabel "promoters of merit"@en ;
+  skos:prefLabel "興福"@zh-hant ;
 .
 bdr:R0ER0008
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
-  <http://purl.bdrc.io/ontology/admin/logEntry> [
-      a <http://purl.bdrc.io/ontology/admin/LogEntry> ;
-      <http://purl.bdrc.io/ontology/admin/logDate> "2019-03-06T11:03:00-06:00"^^xsd:dateTime ;
-      <http://purl.bdrc.io/ontology/admin/logMessage> "added Chinese monastic role"@en ;
-      <http://purl.bdrc.io/ontology/admin/logWho> bdr:U00006 ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T11:03:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
     ] ;
-  <http://purl.bdrc.io/ontology/admin/status> bdr:StatusReleased ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Dharma protector (human)"@en ;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "護法"@zh-hant ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Dharma protector (human)"@en ;
+  skos:prefLabel "Hùfǎ"@zh-pinyin ;
+  skos:prefLabel "護法"@zh-hant ;
 .
