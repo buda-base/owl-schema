@@ -2,140 +2,129 @@
 # prefix: Script
 
 @prefix Script: <http://purl.bdrc.io/ontology/types/Script#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Script
+  a owl:Class ;
+  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Kyug'Yig, Native (implies Unicode)"@en ;
+  rdfs:label "Script"@en ;
+  rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
+.
 <http://purl.bdrc.io/ontology/types/Script>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/ScriptBeng>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Bengali"@en ;
+bdr:ScriptBeng
+  a bdo:Script ;
+  skos:prefLabel "Bengali"@en ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Beng> ;
 .
-<http://purl.bdrc.io/resource/ScriptCyrl>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Cyrillic"@en ;
+bdr:ScriptCyrl
+  a bdo:Script ;
+  skos:prefLabel "Cyrillic"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Cyrl> ;
 .
-<http://purl.bdrc.io/resource/ScriptDbuCan>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Uchen"@en ;
-  rdfs:label "dbu can"@bo-x-ewts ;
+bdr:ScriptDbuCan
+  a bdo:Script ;
+  skos:prefLabel "Uchen"@en ;
+  skos:prefLabel "dbu can"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/ScriptDbuMed>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Ume"@en ;
-  rdfs:label "dbu med"@bo-x-ewts ;
+bdr:ScriptDbuMed
+  a bdo:Script ;
+  skos:prefLabel "Ume"@en ;
+  skos:prefLabel "dbu med"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/ScriptDeva>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Devanagari"@en ;
+bdr:ScriptDeva
+  a bdo:Script ;
+  skos:prefLabel "Devanagari"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Deva> ;
 .
-<http://purl.bdrc.io/resource/ScriptEasternNagari>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Eastern Nāgārī"@en ;
+bdr:ScriptEasternNagari
+  a bdo:Script ;
+  skos:prefLabel "Eastern Nāgārī"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptGilgitBamiyan1>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Gilgit Bamiyan Type I"@en ;
+bdr:ScriptGilgitBamiyan1
+  a bdo:Script ;
+  skos:prefLabel "Gilgit Bamiyan Type I"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptGilgitBamiyan2>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Gilgit Bamiyan Type II"@en ;
+bdr:ScriptGilgitBamiyan2
+  a bdo:Script ;
+  skos:prefLabel "Gilgit Bamiyan Type II"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptGupta>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Gupta"@en ;
+bdr:ScriptGupta
+  a bdo:Script ;
+  skos:prefLabel "Gupta"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptHans>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Simplified Chinese"@en ;
+bdr:ScriptHans
+  a bdo:Script ;
+  skos:prefLabel "Simplified Chinese"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptHant>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Traditional Chinese"@en ;
+bdr:ScriptHant
+  a bdo:Script ;
+  skos:prefLabel "Traditional Chinese"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptKhyugYig>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "'khyug yig"@bo-x-ewts ;
-  rdfs:label "Kyug'yig"@en ;
+bdr:ScriptKhyugYig
+  a bdo:Script ;
+  skos:prefLabel "'khyug yig"@bo-x-ewts ;
+  skos:prefLabel "Kyug'yig"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptLatn>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "latin"@en ;
+bdr:ScriptLatn
+  a bdo:Script ;
+  skos:prefLabel "latin"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
 .
-<http://purl.bdrc.io/resource/ScriptMong>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Classical Mongolian script"@en ;
+bdr:ScriptMong
+  a bdo:Script ;
+  skos:prefLabel "Classical Mongolian script"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptMymr>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Burmese"@en ;
+bdr:ScriptMymr
+  a bdo:Script ;
+  skos:prefLabel "Burmese"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptNepaleseHooked>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
+bdr:ScriptNepaleseHooked
+  a bdo:Script ;
   rdfs:comment "also referred to as Bhujimol"@en ;
-  rdfs:label "Nepalese hooked script"@en ;
+  skos:prefLabel "Nepalese hooked script"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptNewa>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
+bdr:ScriptNewa
+  a bdo:Script ;
   rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
-  rdfs:label "Pracalit"@en ;
+  skos:prefLabel "Pracalit"@en ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Prachalit_Nepal_alphabet> ;
 .
-<http://purl.bdrc.io/resource/ScriptPostGupta>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Post-gupta"@en ;
+bdr:ScriptPostGupta
+  a bdo:Script ;
+  skos:prefLabel "Post-gupta"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptRanj>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
+bdr:ScriptRanj
+  a bdo:Script ;
   rdfs:comment "This script is not normalized in ISO 15924 (yet?)"@en ;
   rdfs:comment "also referred to as Pāla, as it was developped during the Pāla dynasty"@en ;
-  rdfs:label "Ranjana (Kutila, Lantsa)"@en ;
-  rdfs:label "Rañjanā"@sa-x-iast ;
-  rdfs:label "lany+dza"@bo-x-ewts ;
+  skos:prefLabel "Ranjana (Kutila, Lantsa)"@en ;
+  skos:prefLabel "Rañjanā"@sa-x-iast ;
+  skos:prefLabel "lany+dza"@bo-x-ewts ;
   rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
 .
-<http://purl.bdrc.io/resource/ScriptSinh>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Sinhalese"@en ;
+bdr:ScriptSinh
+  a bdo:Script ;
+  skos:prefLabel "Sinhalese"@en ;
 .
-<http://purl.bdrc.io/resource/ScriptThai>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Thai script"@en ;
+bdr:ScriptThai
+  a bdo:Script ;
+  skos:prefLabel "Thai script"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;
 .
-<http://purl.bdrc.io/resource/ScriptTibt>
-  a <http://purl.bdrc.io/ontology/core/Script> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Tibetan Script"@en ;
-  rdfs:label "bod yig"@bo-x-ewts ;
+bdr:ScriptTibt
+  a bdo:Script ;
+  skos:prefLabel "Tibetan Script"@en ;
+  skos:prefLabel "bod yig"@bo-x-ewts ;
   rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
 .

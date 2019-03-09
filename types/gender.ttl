@@ -2,32 +2,38 @@
 # prefix: Gender
 
 @prefix Gender: <http://purl.bdrc.io/ontology/types/Gender#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Gender
+  a owl:Class ;
+  rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
+  rdfs:label "Gender"@en ;
+.
 <http://purl.bdrc.io/ontology/types/Gender>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/GenderFemale>
-  a <http://purl.bdrc.io/ontology/core/Gender> ;
-  a owl:NamedIndividual ;
-  rdfs:label "female"@en ;
+bdr:GenderFemale
+  a bdo:Gender ;
+  skos:prefLabel "female"@en ;
 .
-<http://purl.bdrc.io/resource/GenderMale>
-  a <http://purl.bdrc.io/ontology/core/Gender> ;
-  a owl:NamedIndividual ;
-  rdfs:label "male"@en ;
+bdr:GenderMale
+  a bdo:Gender ;
+  skos:prefLabel "male"@en ;
 .
-<http://purl.bdrc.io/resource/GenderMixed>
-  a <http://purl.bdrc.io/ontology/core/Gender> ;
-  a owl:NamedIndividual ;
-  rdfs:label "mixed gender"@en ;
+bdr:GenderMixed
+  a bdo:Gender ;
+  skos:prefLabel "mixed gender"@en ;
 .
-<http://purl.bdrc.io/resource/GenderNotSpecified>
-  a <http://purl.bdrc.io/ontology/core/Gender> ;
-  a owl:NamedIndividual ;
-  rdfs:label "gender not specified"@en ;
+bdr:GenderNotSpecified
+  a bdo:Gender ;
+  skos:prefLabel "gender not specified"@en ;
 .

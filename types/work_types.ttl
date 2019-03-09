@@ -2,43 +2,50 @@
 # prefix: WorkType
 
 @prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/core/WorkTypeVirtualWork>
-  a <http://purl.bdrc.io/ontology/core/WorkType> ;
-  a owl:NamedIndividual ;
-  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
-  rdfs:label "virtual work"@en ;
+bdo:WorkType
+  a owl:Class ;
+  rdfs:comment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
+  rdfs:comment "deprecated in favor of using appropriate subclasses of :Work"@en ;
+  rdfs:label "type of work"@en ;
   owl:deprecated true ;
+.
+bdo:WorkTypeVirtualWork
+  a bdo:WorkType ;
+  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
+  owl:deprecated true ;
+  skos:prefLabel "virtual work"@en ;
 .
 <http://purl.bdrc.io/ontology/types/WorkType>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/WorkTypeAbstractWork>
-  a <http://purl.bdrc.io/ontology/core/WorkType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "abstract work"@en ;
+bdr:WorkTypeAbstractWork
+  a bdo:WorkType ;
   owl:deprecated true ;
+  skos:prefLabel "abstract work"@en ;
 .
-<http://purl.bdrc.io/resource/WorkTypePublishedWork>
-  a <http://purl.bdrc.io/ontology/core/WorkType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "published work"@en ;
+bdr:WorkTypePublishedWork
+  a bdo:WorkType ;
   owl:deprecated true ;
+  skos:prefLabel "published work"@en ;
 .
-<http://purl.bdrc.io/resource/WorkTypeSeries>
-  a <http://purl.bdrc.io/ontology/core/WorkType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "series"@en ;
+bdr:WorkTypeSeries
+  a bdo:WorkType ;
   owl:deprecated true ;
+  skos:prefLabel "series"@en ;
 .
-<http://purl.bdrc.io/resource/WorkTypeUnicodeText>
-  a <http://purl.bdrc.io/ontology/core/WorkType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "unicode text"@en ;
+bdr:WorkTypeUnicodeText
+  a bdo:WorkType ;
   owl:deprecated true ;
+  skos:prefLabel "unicode text"@en ;
 .

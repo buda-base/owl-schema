@@ -2,38 +2,43 @@
 # prefix: WorkPartType
 
 @prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/core/WorkFragment>
-  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
-  a owl:NamedIndividual ;
+bdo:WorkFragment
+  a bdo:WorkPartType ;
   rdfs:comment "A :WorkFragment is a portion of a \"whole\" work. A :WorkFragment commonly occurs when some pages have been extracted from a \"complete\" :Work and inserted improperly into a different :Work which has then been copied. A fragment is specified as a part of a containing :Work via a :WorkLocation as with any similar :workPartOf"@en ;
-  rdfs:label "fragment"@en ;
+  skos:prefLabel "fragment"@en ;
+.
+bdo:WorkPartType
+  a owl:Class ;
+  rdfs:comment "Migration hint: represents the Work related outline:node/@type"@en ;
+  rdfs:label "Work Part Type"@en ;
 .
 <http://purl.bdrc.io/ontology/types/WorkPartType>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/WorkChapter>
-  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "chapter"@en ;
+bdr:WorkChapter
+  a bdo:WorkPartType ;
+  skos:prefLabel "chapter"@en ;
 .
-<http://purl.bdrc.io/resource/WorkSection>
-  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "section"@en ;
+bdr:WorkSection
+  a bdo:WorkPartType ;
+  skos:prefLabel "section"@en ;
 .
-<http://purl.bdrc.io/resource/WorkText>
-  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "text"@en ;
+bdr:WorkText
+  a bdo:WorkPartType ;
+  skos:prefLabel "text"@en ;
 .
-<http://purl.bdrc.io/resource/WorkVolume>
-  a <http://purl.bdrc.io/ontology/core/WorkPartType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "volume"@en ;
+bdr:WorkVolume
+  a bdo:WorkPartType ;
+  skos:prefLabel "volume"@en ;
 .

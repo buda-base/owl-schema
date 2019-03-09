@@ -17,7 +17,7 @@ adm:Access
   a owl:Class ;
   rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
 
-AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
+AccessTypes designations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
   rdfs:label "Work Access Type"@en ;
 .
 bdr:AccessFairUse

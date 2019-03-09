@@ -2,258 +2,236 @@
 # prefix: Tradition
 
 @prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:TibetanTradition
+  a owl:Class ;
+  rdfs:comment "Individuals represent various (Tibetan) Buddhist traditions, e.g., Karma Kagyu, Bon, or Nyingma"@en ;
+  rdfs:label "Tibetan Tradition"@en ;
+  rdfs:subClassOf bdo:Tradition ;
+.
+bdo:Tradition
+  a owl:Class ;
+  rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
+  rdfs:label "type of tradition"@en ;
+.
 <http://purl.bdrc.io/ontology/types/Tradition>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/EightMinorKagyuTraditions>
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionKagyu> ;
+bdr:EightMinorKagyuTraditions
+  bdo:taxSubClassOf bdr:TraditionKagyu ;
 .
-<http://purl.bdrc.io/resource/FourMainKagyuTraditions>
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionKagyu> ;
+bdr:FourMainKagyuTraditions
+  bdo:taxSubClassOf bdr:TraditionKagyu ;
 .
-<http://purl.bdrc.io/resource/TraditionBardrukKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionDrukpaKagyu> ;
-  rdfs:label "Bardruk Kagyu"@en ;
-  rdfs:label "Middle Drukpa Kagyu"@en ;
+bdr:TraditionBardrukKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
+  skos:prefLabel "Bardruk Kagyu"@en ;
+  skos:prefLabel "Middle Drukpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionBaromKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/FourMainKagyuTraditions> ;
-  rdfs:label "Barom Kagyu"@en ;
+bdr:TraditionBaromKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
+  skos:prefLabel "Barom Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionBodong>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionTaxonomy> ;
-  rdfs:label "Bodong"@en ;
+bdr:TraditionBodong
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
+  skos:prefLabel "Bodong"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionBon>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionTaxonomy> ;
-  rdfs:label "Bon"@en ;
+bdr:TraditionBon
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
+  skos:prefLabel "Bon"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionChod>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionZhije> ;
-  rdfs:label "Chod"@en ;
+bdr:TraditionChod
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionZhije ;
+  skos:prefLabel "Chod"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionDharmaguptaka>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Dharmaguptaka"@en ;
+bdr:TraditionDharmaguptaka
+  a bdo:TibetanTradition ;
+  skos:prefLabel "Dharmaguptaka"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionDrigungKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Drigung Kagyu"@en ;
+bdr:TraditionDrigungKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Drigung Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionDrukpaKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Drukpa Kagyu"@en ;
+bdr:TraditionDrukpaKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Drukpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionGeluk>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionTaxonomy> ;
-  rdfs:label "Geluk"@en ;
+bdr:TraditionGeluk
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
+  skos:prefLabel "Geluk"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionJonang>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionTaxonomy> ;
-  rdfs:label "Jonang"@en ;
+bdr:TraditionJonang
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
+  skos:prefLabel "Jonang"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionJordruk>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Jordruk"@en ;
-  rdfs:label "Kalacakra"@en ;
-  rdfs:label "Six Branch Vajra Yoga"@en ;
+bdr:TraditionJordruk
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Jordruk"@en ;
+  skos:prefLabel "Kalacakra"@en ;
+  skos:prefLabel "Six Branch Vajra Yoga"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionKadam>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Kadam"@en ;
+bdr:TraditionKadam
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Kadam"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Kagyu"@en ;
-  rdfs:label "bka' brgyud"@bo-x-ewts ;
+bdr:TraditionKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Kagyu"@en ;
+  skos:prefLabel "bka' brgyud"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/TraditionKarmaKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/FourMainKagyuTraditions> ;
-  rdfs:label "Kamtsang Kagyu"@en ;
-  rdfs:label "Karma Kagyu"@en ;
+bdr:TraditionKarmaKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
+  skos:prefLabel "Kamtsang Kagyu"@en ;
+  skos:prefLabel "Karma Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionMadrukKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionDrukpaKagyu> ;
-  rdfs:label "Lower Drukpa Kagyu"@en ;
-  rdfs:label "Madruk Kagyu"@en ;
+bdr:TraditionMadrukKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
+  skos:prefLabel "Lower Drukpa Kagyu"@en ;
+  skos:prefLabel "Madruk Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionMarpaKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionKagyu> ;
+bdr:TraditionMarpaKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionKagyu ;
   rdfs:comment """Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight.
 
 equiv Dagpo Kagyu?"""@en ;
-  rdfs:label "Marpa Kagyu"@en ;
+  skos:prefLabel "Marpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionMartsangKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Martsang Kagyu"@en ;
+bdr:TraditionMartsangKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Martsang Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionMulasarvastivada>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Mūlasarvāstivāda"@en ;
+bdr:TraditionMulasarvastivada
+  a bdo:TibetanTradition ;
+  skos:prefLabel "Mūlasarvāstivāda"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionNedoKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionKarmaKagyu> ;
-  rdfs:label "Nedo Kagyu"@en ;
+bdr:TraditionNedoKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
+  skos:prefLabel "Nedo Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionNgorSakya>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionSakya> ;
+bdr:TraditionNgorSakya
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionSakya ;
   rdfs:comment "one of sa ngor tsar gsum"@en ;
-  rdfs:label "Ngor Sakya"@en ;
+  skos:prefLabel "Ngor Sakya"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionNyingma>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Nyingma"@en ;
+bdr:TraditionNyingma
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Nyingma"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionOrgyenNyengyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Orgyen Nyengru"@en ;
-  rdfs:label "The Three Vajras"@en ;
+bdr:TraditionOrgyenNyengyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Orgyen Nyengru"@en ;
+  skos:prefLabel "The Three Vajras"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionPhagGruKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/FourMainKagyuTraditions> ;
-  rdfs:label "Phag Gru Kagyu"@en ;
+bdr:TraditionPhagGruKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
+  skos:prefLabel "Phag Gru Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionRime>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionTaxonomy> ;
+bdr:TraditionRime
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
   rdfs:comment "Some might not count Rime as a Tradition but since there are Works and Persons who are identified as such it is approapriate to include for purposes of classification"@en ;
-  rdfs:label "Rime"@en ;
+  skos:prefLabel "Rime"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionSakya>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Sakya"@en ;
+bdr:TraditionSakya
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Sakya"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionSarvastivada>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Sarvāstivāda"@en ;
+bdr:TraditionSarvastivada
+  a bdo:TibetanTradition ;
+  skos:prefLabel "Sarvāstivāda"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionShangpaKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionKagyu> ;
-  rdfs:label "Shangpa Kagyu"@en ;
+bdr:TraditionShangpaKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionKagyu ;
+  skos:prefLabel "Shangpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionShugsepKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Shugsep Kagyu"@en ;
+bdr:TraditionShugsepKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Shugsep Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionTaklungKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Taklung Kagyu"@en ;
+bdr:TraditionTaklungKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Taklung Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionTheravada>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  rdfs:label "Theravāda"@en ;
+bdr:TraditionTheravada
+  a bdo:TibetanTradition ;
+  skos:prefLabel "Theravāda"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionTodrukKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionDrukpaKagyu> ;
-  rdfs:label "Todruk Kagyu"@en ;
-  rdfs:label "Upper Drukpa Kagyu"@en ;
+bdr:TraditionTodrukKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
+  skos:prefLabel "Todruk Kagyu"@en ;
+  skos:prefLabel "Upper Drukpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionTsalpaKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/FourMainKagyuTraditions> ;
-  rdfs:label "Tsalpa Kagyu"@en ;
+bdr:TraditionTsalpaKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
+  skos:prefLabel "Tsalpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionTsarSakya>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionSakya> ;
+bdr:TraditionTsarSakya
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionSakya ;
   rdfs:comment "one of     sa ngor tsar gsum"@en ;
-  rdfs:label "Tsar Sakya"@en ;
+  skos:prefLabel "Tsar Sakya"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionYazangKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Yazang Kagyu"@en ;
+bdr:TraditionYazangKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Yazang Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionYelpaKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightMinorKagyuTraditions> ;
-  rdfs:label "Yelpa Kagyu"@en ;
+bdr:TraditionYelpaKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
+  skos:prefLabel "Yelpa Kagyu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionZhalu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionTaxonomy> ;
-  rdfs:label "Zhalu"@en ;
+bdr:TraditionZhalu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
+  skos:prefLabel "Zhalu"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionZhije>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/EightPracticeLineages> ;
-  rdfs:label "Shije"@en ;
-  rdfs:label "Zhije"@en ;
+bdr:TraditionZhije
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Shije"@en ;
+  skos:prefLabel "Zhije"@en ;
 .
-<http://purl.bdrc.io/resource/TraditionZurmangKagyu>
-  a <http://purl.bdrc.io/ontology/core/TibetanTradition> ;
-  a owl:NamedIndividual ;
-  <http://purl.bdrc.io/ontology/core/taxSubClassOf> <http://purl.bdrc.io/resource/TraditionKarmaKagyu> ;
-  rdfs:label "Surmang Kagyu"@en ;
-  rdfs:label "Zurmang Kagyu"@en ;
+bdr:TraditionZurmangKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
+  skos:prefLabel "Surmang Kagyu"@en ;
+  skos:prefLabel "Zurmang Kagyu"@en ;
 .

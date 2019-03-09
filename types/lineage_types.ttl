@@ -2,84 +2,88 @@
 # prefix: LineageType
 
 @prefix LineageType: <http://purl.bdrc.io/ontology/types/LineageType#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:LineageType
+  a owl:Class ;
+  rdfs:comment "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
+  rdfs:label "lineage type"@en ;
+.
+bdo:TibetanLineageType
+  a owl:Class ;
+  rdfs:comment "TibetanLineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc."@en ;
+  rdfs:label "Tibetan Lineage type"@en ;
+  rdfs:subClassOf bdo:LineageType ;
+.
 <http://purl.bdrc.io/ontology/types/LineageType>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/LT0001>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "dbang"@bo-x-ewts ;
-  rdfs:label "empowerment"@en ;
+bdr:LT0001
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "dbang"@bo-x-ewts ;
+  skos:prefLabel "empowerment"@en ;
 .
-<http://purl.bdrc.io/resource/LT0002>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "dmar khrid"@bo-x-ewts ;
-  rdfs:label "essential instruction"@en ;
+bdr:LT0002
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "dmar khrid"@bo-x-ewts ;
+  skos:prefLabel "essential instruction"@en ;
 .
-<http://purl.bdrc.io/resource/LT0003>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "gdams ngag"@bo-x-ewts ;
-  rdfs:label "oral instruction"@en ;
+bdr:LT0003
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "gdams ngag"@bo-x-ewts ;
+  skos:prefLabel "oral instruction"@en ;
 .
-<http://purl.bdrc.io/resource/LT0004>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "instruction"@en ;
-  rdfs:label "khrid"@bo-x-ewts ;
+bdr:LT0004
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "instruction"@en ;
+  skos:prefLabel "khrid"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/LT0005>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "lung"@bo-x-ewts ;
-  rdfs:label "reading transmission"@en ;
+bdr:LT0005
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "lung"@bo-x-ewts ;
+  skos:prefLabel "reading transmission"@en ;
 .
-<http://purl.bdrc.io/resource/LT0006>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "man ngag"@bo-x-ewts ;
-  rdfs:label "quintessential instruction"@en ;
+bdr:LT0006
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "man ngag"@bo-x-ewts ;
+  skos:prefLabel "quintessential instruction"@en ;
 .
-<http://purl.bdrc.io/resource/LT0007>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "gsal kha ma"@bo-x-ewts ;
-  rdfs:label "not specified"@en ;
+bdr:LT0007
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "gsal kha ma"@bo-x-ewts ;
+  skos:prefLabel "not specified"@en ;
 .
-<http://purl.bdrc.io/resource/LT0008>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "direct transmission"@en ;
-  rdfs:label "nye brgyud"@bo-x-ewts ;
+bdr:LT0008
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "direct transmission"@en ;
+  skos:prefLabel "nye brgyud"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/LT0009>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "long lineage transmission"@en ;
-  rdfs:label "ring brgyud"@bo-x-ewts ;
+bdr:LT0009
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "long lineage transmission"@en ;
+  skos:prefLabel "ring brgyud"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/LT0010>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "rjes gnang"@bo-x-ewts ;
-  rdfs:label "short empowerment"@en ;
+bdr:LT0010
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "rjes gnang"@bo-x-ewts ;
+  skos:prefLabel "short empowerment"@en ;
 .
-<http://purl.bdrc.io/resource/LT0011>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "lineage of vows"@en ;
-  rdfs:label "sdom brgyud"@bo-x-ewts ;
+bdr:LT0011
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "lineage of vows"@en ;
+  skos:prefLabel "sdom brgyud"@bo-x-ewts ;
 .
-<http://purl.bdrc.io/resource/LT0012>
-  a <http://purl.bdrc.io/ontology/core/TibetanLineageType> ;
-  a owl:NamedIndividual ;
-  rdfs:label "oral lineage"@en ;
-  rdfs:label "snyan brgyud"@bo-x-ewts ;
+bdr:LT0012
+  a bdo:TibetanLineageType ;
+  skos:prefLabel "oral lineage"@en ;
+  skos:prefLabel "snyan brgyud"@bo-x-ewts ;
 .

@@ -604,38 +604,8 @@ bdo:AnyOrganization
     ] ;
   owl:deprecated true ;
 .
-bdo:AppliedMaterial
-  a owl:Class ;
-  rdfs:label "applied material"@en ;
-  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30084"^^xsd:anyURI ;
-  rdfs:subClassOf bdo:Material ;
-.
-bdo:BaseMaterial
-  a owl:Class ;
-  rdfs:comment "underlying physical material of a manifestation"@en ;
-  rdfs:label "Base material" ;
-  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30208"^^xsd:anyURI ;
-  rdfs:subClassOf bdo:Material ;
-.
 bdo:Binding
-  a owl:Class ;
-  rdfs:label "Binding" ;
   rdfs:subClassOf bdo:Type ;
-.
-bdo:Binding_Codex
-  a owl:Class ;
-  rdfs:label "Binding Codex" ;
-  rdfs:subClassOf bdo:Binding ;
-.
-bdo:Binding_Continuous
-  a owl:Class ;
-  rdfs:label "continuous binding"@en ;
-  rdfs:subClassOf bdo:Binding ;
-.
-bdo:Binding_LooseLeaf
-  a owl:Class ;
-  rdfs:label "Binding Loose leaf" ;
-  rdfs:subClassOf bdo:Binding ;
 .
 bdo:CarvedEvent
   a owl:Class ;
@@ -648,12 +618,6 @@ bdo:ChineseDate
   rdfs:comment "The class of DILA Chinese date individuals"@en ;
   rdfs:label "Chinese date type"@en ;
   rdfs:subClassOf bdo:Date ;
-.
-bdo:ChineseDynasty
-  a owl:Class ;
-  rdfs:label "Chinese Dynasty"@en ;
-  rdfs:label "王朝"@zh-hans ;
-  rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:ChineseMonastic
   rdfs:subClassOf bdo:Role ;
@@ -881,9 +845,6 @@ bdo:Facet
   rdfs:label "Facet"@en ;
 .
 bdo:Gender
-  a owl:Class ;
-  rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
-  rdfs:label "Gender"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:GeneralNote
@@ -1053,9 +1014,6 @@ bdo:LCCallNumber
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
 .
 bdo:LangScript
-  a owl:Class ;
-  rdfs:comment ":LangScript individuals represent combinations of a Language, a script, and possibly a transliteration in which the Language is expressed. For example, bdr:BoEwts represents Tibetan in the Extended Wylie transliteration (which is written in Latin script)"@en ;
-  rdfs:label "Language+Script"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:LangStringOrNoColophon
@@ -1069,10 +1027,6 @@ bdo:LangStringOrNoColophon
     ] ;
 .
 bdo:Language
-  a owl:Class ;
-  rdfs:comment "A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese, bdr:Sa for Sanskrit, etc."@en ;
-  rdfs:label "Language"@en ;
-  rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Lineage
@@ -1168,17 +1122,9 @@ bdo:LineageOrNoteOrWork
     ] ;
 .
 bdo:LineageType
-  a owl:Class ;
-  rdfs:comment "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
-  rdfs:label "lineage type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Material
-  a owl:Class ;
-  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed. A physical or chemical substance used to create a manifestation"@en ;
-  rdfs:label "material"@en ;
-  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30304"^^xsd:anyURI ;
-  rdfs:seeAlso "https://www.rdaregistry.info/termList/RDAMaterial/"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:MixedUnion
@@ -1226,12 +1172,6 @@ bdo:OriginatedEvent
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:PaginationType
-  a owl:Class ;
-  rdfs:comment """Indicates whether the outlining is relative or absolute. This refers to the convention for WorkLocation information. Almost all outlining is done with absolute pagination.
-
-Relative pagination uses pagination in the content of the work while absolute counts from the first image of a scanned volume an since there are 2 scanned pages of metadata in each volume, absolute pagination generally starts at 3."""@en ;
-  rdfs:comment "Migration info: The pagination information affects the interpretation of the :WorkLocation(s) that occur in the original outline. The migration should add the pagination information to each WorkLocation since there will no longer be an Outline document"@en ;
-  rdfs:label "pagination type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Person
@@ -1532,35 +1472,10 @@ bdo:PlaceRebuilt
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceType
-  a owl:Class ;
-  rdfs:comment "The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc."@en ;
-  rdfs:label "Place Type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:PrintMethod
-  a owl:Class ;
-  rdfs:label "Print method" ;
   rdfs:subClassOf bdo:Type ;
-.
-bdo:PrintMethod_Intaglio
-  a owl:Class ;
-  rdfs:label "Print method Intaglio" ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod_Manuscript
-  a owl:Class ;
-  rdfs:label "Print method Manuscript"@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod_Offset
-  a owl:Class ;
-  rdfs:label "Print method Offset"@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod_Relief
-  a owl:Class ;
-  rdfs:label "Print method Relief" ;
-  rdfs:subClassOf bdo:PrintMethod ;
 .
 bdo:PrintedEvent
   a owl:Class ;
@@ -1597,12 +1512,6 @@ bdo:PublishedWork
   rdfs:label "Published work" ;
   rdfs:subClassOf bdo:Work ;
 .
-bdo:QuarterCentury
-  a owl:Class ;
-  rdfs:label "Quarter Century"@en ;
-  rdfs:label "四分之一世纪"@zh-hans ;
-  rdfs:subClassOf bdo:TimePeriod ;
-.
 bdo:RequestedEvent
   a owl:Class ;
   rdfs:comment "When, where and by whom a :Work as requested to be produced"@en ;
@@ -1628,10 +1537,6 @@ bdo:Role
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:Script
-  a owl:Class ;
-  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Kyug'Yig, Native (implies Unicode)"@en ;
-  rdfs:label "Script"@en ;
-  rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:SecondRevisedEvent
@@ -1756,24 +1661,7 @@ bdo:ThirdTranslatedEvent
   rdfs:label "Third translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:TibetanLineageType
-  a owl:Class ;
-  rdfs:comment "TibetanLineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc."@en ;
-  rdfs:label "Tibetan Lineage type"@en ;
-  rdfs:subClassOf bdo:LineageType ;
-.
-bdo:TibetanTradition
-  a owl:Class ;
-  rdfs:comment "Individuals represent various (Tibetan) Buddhist traditions, e.g., Karma Kagyu, Bon, or Nyingma"@en ;
-  rdfs:label "Tibetan Tradition"@en ;
-  rdfs:subClassOf bdo:Tradition ;
-.
 bdo:TimePeriod
-  a owl:Class ;
-  rdfs:comment "Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ;
-  rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
-  rdfs:label "Time Period"@en ;
-  rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Topic
@@ -1785,9 +1673,6 @@ bdo:Topic
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:Tradition
-  a owl:Class ;
-  rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
-  rdfs:label "type of tradition"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:TranslatedEvent
@@ -1804,9 +1689,6 @@ bdo:TranslationRevisedEvent
   owl:deprecated true ;
 .
 bdo:Transliteration
-  a owl:Class ;
-  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, ExtendWylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese (in Latin script)"@en ;
-  rdfs:label "Transliteration"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Type
@@ -1954,9 +1836,6 @@ bdo:WorkOtherTitle
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkPartType
-  a owl:Class ;
-  rdfs:comment "Migration hint: represents the Work related outline:node/@type"@en ;
-  rdfs:label "Work Part Type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:WorkRefs
@@ -2010,12 +1889,7 @@ bdo:WorkTitlePortion
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkType
-  a owl:Class ;
-  rdfs:comment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
-  rdfs:comment "deprecated in favor of using appropriate subclasses of :Work"@en ;
-  rdfs:label "type of work"@en ;
   rdfs:subClassOf bdo:Type ;
-  owl:deprecated true ;
 .
 bdo:access
   a owl:ObjectProperty ;
