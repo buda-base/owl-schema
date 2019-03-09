@@ -10,6 +10,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Gender
 # imports: http://purl.bdrc.io/ontology/types/LangScript
 # imports: http://purl.bdrc.io/ontology/types/Language
+# imports: http://purl.bdrc.io/ontology/types/LanguageTaxonomy
 # imports: http://purl.bdrc.io/ontology/types/LineageType
 # imports: http://purl.bdrc.io/ontology/types/Material
 # imports: http://purl.bdrc.io/ontology/types/PaginationType
@@ -4707,27 +4708,12 @@ tbr:place_town_syl
   rdfs:label "town name"@en ;
   rdfs:range xsd:string ;
 .
-bdr:Bo
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Tibetan"@en ;
-.
 bdr:ChineseDateNotSpecified
   a bdo:ChineseDate ;
   rdfs:label "Chinese date Not specified"@en ;
 .
 bdr:LanguageTaxonomy
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubclassRelation bdo:taxSubClassOf ;
-  rdfs:seeAlso "Language taxonomy"@en ;
-.
-bdr:Mn
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Mongolian"@en ;
+  a bdo:Type ;
 .
 bdr:ObjectTypeAutograph
   a bdo:ObjectType ;
@@ -4773,18 +4759,6 @@ bdr:ObjectTypeTypeSet
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
   rdfs:label "typeset"@en ;
-.
-bdr:Pi
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Pali"@en ;
-.
-bdr:Sa
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Sanskrit"@en ;
 .
 bdr:UNKNOWN_Corporation
   a bdo:Corporation ;
@@ -4846,12 +4820,6 @@ bdr:UNKNOWN_Work
   adm:status bdr:StatusReleased ;
   rdfs:isDefinedBy bdd:UNKNOWN_Work ;
   rdfs:label "Unknown"@en ;
-.
-bdr:Zh
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Chinese"@en ;
 .
 dcterms:modified
   a owl:AnnotationProperty ;
