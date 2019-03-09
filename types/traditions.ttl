@@ -1,5 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Tradition
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: Tradition
 
 @prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition#> .
@@ -24,38 +25,44 @@ bdo:Tradition
   rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
   rdfs:label "type of tradition"@en ;
 .
-bdr:TraditionTaxonomy
-  a bdo:Taxonomy ;
-  bdo:taxSubclassRelation bdo:taxSubClassOf ;
-  rdfs:comment "Taxonomy of Tibetan Buddhist Traditions for use with Place and Person Events"@en ;
-  skos:prefLabel "tradition taxonomy"@en
-.
 <http://purl.bdrc.io/ontology/types/Tradition>
   a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+Tradition:ChineseTradition
+  a owl:Class ;
+  rdfs:label "Chinese tradition"@en ;
+  rdfs:subClassOf bdo:Tradition ;
+.
+bdr:EightMinorKagyuTraditions
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:TraditionKagyu ;
+  skos:prefLabel "Eight Minor Kagyu Traditions"@en ;
 .
 bdr:EightPracticeLineages
   a bdo:Taxonomy ;
   bdo:taxSubClassOf bdr:TraditionTaxonomy ;
   skos:prefLabel "The Eight Practice Lineages"@en ;
 .
-bdr:TraditionKagyu
-  a bdo:TibetanTradition ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  skos:prefLabel "Kagyu"@en ;
-  skos:prefLabel "bka' brgyud"@bo-x-ewts ;
-.
 bdr:FourMainKagyuTraditions
   a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:TraditionKagyu ;
   skos:prefLabel "Four Greater"@en ;
   skos:prefLabel "Main Dagpo Kagyu"@en ;
-  bdo:taxSubClassOf bdr:TraditionKagyu ;
 .
-bdr:EightMinorKagyuTraditions
-  a bdo:Taxonomy ;
-  skos:prefLabel "Eight Minor Kagyu Traditions"@en ;
-  bdo:taxSubClassOf bdr:TraditionKagyu ;
+bdr:ThreeStagesSchool
+  a Tradition:ChineseTradition ;
+  skos:prefLabel "Sānjiējiào"@zh-latn-pinyin ;
+  skos:prefLabel "Three stages school"@en ;
+  skos:prefLabel "三階教"@zh-hant ;
+.
+bdr:TiantaiSchool
+  a Tradition:ChineseTradition ;
+  skos:prefLabel "Tiantai school"@en ;
+  skos:prefLabel "Tiāntáizōng"@zh-latn-pinyin ;
+  skos:prefLabel "天台宗"@zh-hant ;
 .
 bdr:TraditionBardrukKagyu
   a bdo:TibetanTradition ;
@@ -118,6 +125,12 @@ bdr:TraditionKadam
   a bdo:TibetanTradition ;
   bdo:taxSubClassOf bdr:EightPracticeLineages ;
   skos:prefLabel "Kadam"@en ;
+.
+bdr:TraditionKagyu
+  a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:EightPracticeLineages ;
+  skos:prefLabel "Kagyu"@en ;
+  skos:prefLabel "bka' brgyud"@bo-x-ewts ;
 .
 bdr:TraditionKarmaKagyu
   a bdo:TibetanTradition ;
@@ -205,6 +218,12 @@ bdr:TraditionTaklungKagyu
   bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
   skos:prefLabel "Taklung Kagyu"@en ;
 .
+bdr:TraditionTaxonomy
+  a bdo:Taxonomy ;
+  bdo:taxSubclassRelation bdo:taxSubClassOf ;
+  rdfs:comment "Taxonomy of Tibetan Buddhist Traditions for use with Place and Person Events"@en ;
+  skos:prefLabel "tradition taxonomy"@en ;
+.
 bdr:TraditionTheravada
   a bdo:TibetanTradition ;
   skos:prefLabel "Theravāda"@en ;
@@ -252,4 +271,10 @@ bdr:TraditionZurmangKagyu
   bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
   skos:prefLabel "Surmang Kagyu"@en ;
   skos:prefLabel "Zurmang Kagyu"@en ;
+.
+bdr:ZenSchool
+  a Tradition:ChineseTradition ;
+  skos:prefLabel "Chánzōng"@zh-latn-pinyin ;
+  skos:prefLabel "Zen school"@en ;
+  skos:prefLabel "禪宗"@en ;
 .

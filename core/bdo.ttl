@@ -10,7 +10,6 @@
 # imports: http://purl.bdrc.io/ontology/types/Gender
 # imports: http://purl.bdrc.io/ontology/types/LangScript
 # imports: http://purl.bdrc.io/ontology/types/Language
-# imports: http://purl.bdrc.io/ontology/types/LanguageTaxonomy
 # imports: http://purl.bdrc.io/ontology/types/LineageType
 # imports: http://purl.bdrc.io/ontology/types/Material
 # imports: http://purl.bdrc.io/ontology/types/PaginationType
@@ -3144,6 +3143,12 @@ bdo:personOfSect
   rdfs:domain bdo:Person ;
   rdfs:label "of sect"@en ;
   rdfs:range bdo:Topic ;
+.
+bdo:personOfTradition
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Person ;
+  rdfs:label "person of tradition" ;
+  rdfs:range bdo:Tradition ;
 .
 bdo:personOralTranslatorOf
   a owl:ObjectProperty ;
