@@ -671,9 +671,6 @@ bdo:ChineseDynasty
   rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:ChineseMonastic
-  a owl:Class ;
-  rdfs:comment "Roles referred to in various Chinese Gaosengzhuan 高僧傳 \"Biographies of eminent monks\""@en ;
-  rdfs:label "Chinese monastic role"@en ;
   rdfs:subClassOf bdo:Role ;
 .
 bdo:CompiledEvent

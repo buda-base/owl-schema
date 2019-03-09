@@ -1,6 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # prefix: ChineseMonastic
 
+@prefix :   <http://purl.bdrc.io/ontology/core/> .
 @prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -14,6 +15,12 @@ ChineseMonastic:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
+:ChineseMonastic
+  rdf:type owl:Class ;
+  rdfs:comment "Roles referred to in various Chinese Gaosengzhuan 高僧傳 \"Biographies of eminent monks\""@en ;
+  rdfs:label "Chinese monastic role"@en ;
+.
+
 bdr:R0ER0001
   a <http://purl.bdrc.io/ontology/core/ChineseMonastic> ;
   adm:logEntry [
