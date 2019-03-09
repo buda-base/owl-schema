@@ -2,57 +2,56 @@
 # prefix: Status
 
 @prefix Status: <http://purl.bdrc.io/ontology/adm/types/Status#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://purl.bdrc.io/ontology/adm/types/Status>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/StatusAccessioned>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "accessioned"@en ;
+adm:Status
+  a owl:Class ;
 .
-<http://purl.bdrc.io/resource/StatusAcquiring>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "acquiring"@en ;
+bdr:StatusAccessioned
+  a adm:Status ;
+  skos:prefLabel "accessioned"@en ;
 .
-<http://purl.bdrc.io/resource/StatusEditing>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "editing"@en ;
+bdr:StatusAcquiring
+  a adm:Status ;
+  skos:prefLabel "acquiring"@en ;
 .
-<http://purl.bdrc.io/resource/StatusOnHold>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "on hold"@en ;
+bdr:StatusEditing
+  a adm:Status ;
+  skos:prefLabel "editing"@en ;
 .
-<http://purl.bdrc.io/resource/StatusProvisional>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "provisional"@en ;
+bdr:StatusOnHold
+  a adm:Status ;
+  skos:prefLabel "on hold"@en ;
 .
-<http://purl.bdrc.io/resource/StatusReleased>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "released"@en ;
+bdr:StatusProvisional
+  a adm:Status ;
+  skos:prefLabel "provisional"@en ;
 .
-<http://purl.bdrc.io/resource/StatusScanned>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "scanned"@en ;
+bdr:StatusReleased
+  a adm:Status ;
+  skos:prefLabel "released"@en ;
 .
-<http://purl.bdrc.io/resource/StatusSeekingOut>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "seeking out"@en ;
+bdr:StatusScanned
+  a adm:Status ;
+  skos:prefLabel "scanned"@en ;
 .
-<http://purl.bdrc.io/resource/StatusWithdrawn>
-  a <http://purl.bdrc.io/ontology/admin/Status> ;
-  a owl:NamedIndividual ;
-  rdfs:label "withdrawn"@en ;
+bdr:StatusSeekingOut
+  a adm:Status ;
+  skos:prefLabel "seeking out"@en ;
+.
+bdr:StatusWithdrawn
+  a adm:Status ;
+  skos:prefLabel "withdrawn"@en ;
 .

@@ -1,60 +1,62 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/Access
 
 @prefix Access: <http://purl.bdrc.io/ontology/types/Access#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://purl.bdrc.io/ontology/adm/types/Access>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://purl.bdrc.io/resource/AccessFairUse>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+adm:Access
+  a owl:Class ;
+  rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
+
+AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
+  rdfs:label "Work Access Type"@en ;
+.
+bdr:AccessFairUse
+  a adm:Access ;
   rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
-  rdfs:label "Fair Use"@en ;
+  skos:prefLabel "Fair Use"@en ;
 .
-<http://purl.bdrc.io/resource/AccessMixed>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessMixed
+  a adm:Access ;
   rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
-  rdfs:label "mixed access"@en ;
+  skos:prefLabel "mixed access"@en ;
 .
-<http://purl.bdrc.io/resource/AccessOpen>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessOpen
+  a adm:Access ;
   rdfs:comment "The contents of the Work are freely avaiable in their entirety."@en ;
-  rdfs:label "Open Access"@en ;
+  skos:prefLabel "Open Access"@en ;
 .
-<http://purl.bdrc.io/resource/AccessRestrictedByQuality>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessRestrictedByQuality
+  a adm:Access ;
   rdfs:comment "The quality of the scanning or eText conversion to poor to warrant making it available online."@en ;
-  rdfs:label "Restricted by Quality"@en ;
+  skos:prefLabel "Restricted by Quality"@en ;
 .
-<http://purl.bdrc.io/resource/AccessRestrictedByTbrc>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessRestrictedByTbrc
+  a adm:Access ;
   rdfs:comment "BDRC is restricting access to the Work."@en ;
-  rdfs:label "Restricted by BDRC"@en ;
+  skos:prefLabel "Restricted by BDRC"@en ;
 .
-<http://purl.bdrc.io/resource/AccessRestrictedInChina>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessRestrictedInChina
+  a adm:Access ;
   rdfs:comment "The Work is not to be made available in the PRC."@en ;
-  rdfs:label "Restricted in China"@en ;
+  skos:prefLabel "Restricted in China"@en ;
 .
-<http://purl.bdrc.io/resource/AccessRestrictedSealed>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessRestrictedSealed
+  a adm:Access ;
   rdfs:comment "The Work is sealed by tradition."@en ;
-  rdfs:label "Restricted Sealed"@en ;
+  skos:prefLabel "Restricted Sealed"@en ;
 .
-<http://purl.bdrc.io/resource/AccessRestrictedTemporarily>
-  a <http://purl.bdrc.io/ontology/admin/Access> ;
-  a owl:NamedIndividual ;
+bdr:AccessRestrictedTemporarily
+  a adm:Access ;
   rdfs:comment "The Work is temporarily restricted."@en ;
-  rdfs:label "Temporarily Restricted"@en ;
+  skos:prefLabel "Temporarily Restricted"@en ;
 .

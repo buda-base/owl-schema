@@ -107,11 +107,6 @@ iiif3:Manifest
   rdfs:subClassOf bdo:IIIFManifest ;
 .
 adm:Access
-  a owl:Class ;
-  rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
-
-AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
-  rdfs:label "Work Access Type"@en ;
   rdfs:subClassOf adm:Type ;
 .
 adm:Account
@@ -142,9 +137,6 @@ adm:Facet
   rdfs:label "administrative facet"@en ;
 .
 adm:License
-  a owl:Class ;
-  rdfs:comment "License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright."@en ;
-  rdfs:label "License"@en ;
   rdfs:subClassOf adm:Type ;
 .
 adm:LogEntry
@@ -166,9 +158,6 @@ adm:Outline
   rdfs:subClassOf adm:Facet ;
 .
 adm:OutlineType
-  a owl:Class ;
-  rdfs:comment "Legacy outline type"@en ;
-  rdfs:label "Outline Type"@en ;
   rdfs:subClassOf adm:Type ;
 .
 adm:Product
@@ -197,13 +186,9 @@ adm:StatementAnnotationBody
   rdfs:subClassOf adm:Entity ;
 .
 adm:Status
-  a owl:Class ;
   rdfs:subClassOf adm:Type ;
 .
 adm:TermsOfUse
-  a owl:Class ;
-  rdfs:comment "Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources"@en ;
-  rdfs:label "Terms of Use"@en ;
   rdfs:subClassOf adm:Type ;
 .
 adm:Type
