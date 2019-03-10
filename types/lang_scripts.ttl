@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/LangScript
+# imports: http://purl.bdrc.io/ontology/types/Taxonomy
 # prefix: LangScript
 
 @prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript#> .
@@ -20,6 +21,7 @@ bdo:LangScript
 <http://purl.bdrc.io/ontology/types/LangScript>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
 .
 bdr:BoDbuCan
   a bdo:LangScript ;

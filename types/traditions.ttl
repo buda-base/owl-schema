@@ -31,35 +31,38 @@ bdo:Tradition
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-Tradition:ChineseTradition
+bdo:ChineseTradition
   a owl:Class ;
   rdfs:label "Chinese tradition"@en ;
   rdfs:subClassOf bdo:Tradition ;
 .
 bdr:EightMinorKagyuTraditions
+  a bdo:TibetanTradition ;
   a bdo:Taxonomy ;
   bdo:taxSubClassOf bdr:TraditionKagyu ;
   skos:prefLabel "Eight Minor Kagyu Traditions"@en ;
 .
 bdr:EightPracticeLineages
+  a bdo:TibetanTradition ;
   a bdo:Taxonomy ;
   bdo:taxSubClassOf bdr:TraditionTaxonomy ;
   skos:prefLabel "The Eight Practice Lineages"@en ;
 .
 bdr:FourMainKagyuTraditions
+  a bdo:TibetanTradition ;
   a bdo:Taxonomy ;
   bdo:taxSubClassOf bdr:TraditionKagyu ;
   skos:prefLabel "Four Greater"@en ;
   skos:prefLabel "Main Dagpo Kagyu"@en ;
 .
 bdr:ThreeStagesSchool
-  a Tradition:ChineseTradition ;
+  a bdo:ChineseTradition ;
   skos:prefLabel "Sānjiējiào"@zh-latn-pinyin ;
   skos:prefLabel "Three stages school"@en ;
   skos:prefLabel "三階教"@zh-hant ;
 .
 bdr:TiantaiSchool
-  a Tradition:ChineseTradition ;
+  a bdo:ChineseTradition ;
   skos:prefLabel "Tiantai school"@en ;
   skos:prefLabel "Tiāntáizōng"@zh-latn-pinyin ;
   skos:prefLabel "天台宗"@zh-hant ;
@@ -92,6 +95,7 @@ bdr:TraditionChod
 .
 bdr:TraditionDharmaguptaka
   a bdo:TibetanTradition ;
+  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
   skos:prefLabel "Dharmaguptaka"@en ;
 .
 bdr:TraditionDrigungKagyu
@@ -273,7 +277,7 @@ bdr:TraditionZurmangKagyu
   skos:prefLabel "Zurmang Kagyu"@en ;
 .
 bdr:ZenSchool
-  a Tradition:ChineseTradition ;
+  a bdo:ChineseTradition ;
   skos:prefLabel "Chánzōng"@zh-latn-pinyin ;
   skos:prefLabel "Zen school"@en ;
   skos:prefLabel "禪宗"@en ;

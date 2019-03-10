@@ -1,96 +1,64 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Language
-# prefix: Language
+# imports: http://purl.bdrc.io/ontology/types/Taxonomy
+# prefix: LanguageTaxonomy
 
 @prefix Language: <http://purl.bdrc.io/ontology/types/Language#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdo:Language
   a owl:Class ;
-  rdfs:comment "A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese, bdr:Sa for Sanskrit, etc."@en ;
+  rdfs:comment "A natural Language such as Tibetan, Chinese, Sanskrit, etc."@en ;
   rdfs:label "Language"@en ;
   rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
+  rdfs:seeAlso "LangCode"@en ;
 .
 <http://purl.bdrc.io/ontology/types/Language>
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
 .
-bdr:LangBo
+bdr:LanuageTaxonomy
   a bdo:Language ;
-  bdo:langBCP47Lang "bo" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
+  a bdo:Taxonomy ;
+  bdo:taxSubclassRelation bdo:taxSubClassOf ;
+  rdfs:comment "Taxonomy of natural languages"@en ;
+  skos:prefLabel "languages taxonomy"@en ;
+.
+bdr:Bo
+  a bdo:Language ;
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
   skos:prefLabel "Tibetan"@en ;
-  skos:prefLabel "bod yig"@bo-x-ewts ;
 .
-bdr:LangDz
+bdr:Mn
   a bdo:Language ;
-  bdo:langBCP47Lang "dz" ;
-  bdo:langMARCCode "dzo" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/dzo> ;
-  skos:prefLabel "Dzongkha (Bhutanese)"@en ;
-  skos:prefLabel "rdzong kha"@bo-x-ewts ;
-.
-bdr:LangEn
-  a bdo:Language ;
-  bdo:langBCP47Lang "en" ;
-  bdo:langMARCCode "eng" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/eng> ;
-  skos:prefLabel "English"@en ;
-.
-bdr:LangHi
-  a bdo:Language ;
-  bdo:langBCP47Lang "hi" ;
-  bdo:langMARCCode "hin" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/hin> ;
-  skos:prefLabel "Hindi"@en ;
-.
-bdr:LangMn
-  a bdo:Language ;
-  bdo:langBCP47Lang "mn" ;
-  bdo:langMARCCode "mon" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/mon> ;
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
   skos:prefLabel "Mongolian"@en ;
 .
-bdr:LangNew
+bdr:Pi
   a bdo:Language ;
-  bdo:langBCP47Lang "ne" ;
-  bdo:langMARCCode "new" ;
-  rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
-  skos:prefLabel "Newari (Nepal Bhasa)"@en ;
-.
-bdr:LangPi
-  a bdo:Language ;
-  bdo:langBCP47Lang "pi" ;
-  bdo:langMARCCode "pli" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/pli> ;
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
   skos:prefLabel "Pali"@en ;
 .
-bdr:LangRu
+bdr:Sa
   a bdo:Language ;
-  bdo:langBCP47Lang "ru" ;
-  bdo:langMARCCode "rus" ;
-  rdfs:seeAlso <http://lexvo.org/id/code/ru> ;
-  skos:prefLabel "Russian"@en ;
-.
-bdr:LangSa
-  a bdo:Language ;
-  bdo:langBCP47Lang "sa" ;
-  bdo:langMARCCode "san" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
   skos:prefLabel "Sanskrit"@en ;
 .
-bdr:LangZh
+bdr:Zh
   a bdo:Language ;
-  bdo:langBCP47Lang "zh" ;
-  bdo:langMARCCode "chi" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/zho> ;
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
   skos:prefLabel "Chinese"@en ;
 .

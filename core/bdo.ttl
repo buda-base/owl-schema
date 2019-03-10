@@ -8,6 +8,7 @@
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/types/Binding
 # imports: http://purl.bdrc.io/ontology/types/Gender
+# imports: http://purl.bdrc.io/ontology/types/LangCode
 # imports: http://purl.bdrc.io/ontology/types/LangScript
 # imports: http://purl.bdrc.io/ontology/types/Language
 # imports: http://purl.bdrc.io/ontology/types/LineageType
@@ -502,6 +503,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LangCode> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LangScript> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LineageType> ;
@@ -1012,6 +1014,9 @@ bdo:LCCallNumber
   rdfs:isDefinedBy <https://www.loc.gov/aba/publications/FreeCSM/freecsm.html> ;
   rdfs:label "Library of Congress Call Number"@en ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
+.
+bdo:LangCode
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:LangScript
   rdfs:subClassOf bdo:Type ;
@@ -2736,14 +2741,14 @@ bdo:kinWith
 bdo:langBCP47Lang
   a owl:DatatypeProperty ;
   rdfs:comment "The 2-letter iso code for the langauge. To be used in creating the full BCP47 language+script+encoding tags"@en ;
-  rdfs:domain bdo:Language ;
+  rdfs:domain bdo:LangCode ;
   rdfs:label "lang BCP47Lang"@en ;
   rdfs:range xsd:string ;
 .
 bdo:langMARCCode
   a owl:DatatypeProperty ;
   rdfs:comment "three-character alphabetic codes for languages encode in MARC records"@en ;
-  rdfs:domain bdo:Language ;
+  rdfs:domain bdo:LangCode ;
   rdfs:label "MARC language code"@en ;
   rdfs:range xsd:string ;
   rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
@@ -2755,7 +2760,7 @@ bdo:language
   rdfs:comment "language of a :LangScript"@en ;
   rdfs:domain bdo:LangScript ;
   rdfs:label "language"@en ;
-  rdfs:range bdo:Language ;
+  rdfs:range bdo:LangCode ;
 .
 bdo:license
   a owl:ObjectProperty ;
