@@ -1,29 +1,35 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Language
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy
-# prefix: LanguageTaxonomy
+# prefix: Language
 
 @prefix Language: <http://purl.bdrc.io/ontology/types/Language#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdo:Language
   a owl:Class ;
   rdfs:comment "A natural Language such as Tibetan, Chinese, Sanskrit, etc."@en ;
   rdfs:label "Language"@en ;
   rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
-  rdfs:seeAlso "LangCode"@en ;
+  rdfs:seeAlso <http://purl.bdrc.io/ontology/types/LangCode> ;
 .
 <http://purl.bdrc.io/ontology/types/Language>
   a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:Bo
+  a bdo:Language ;
+  a bdo:Taxonomy ;
+  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
+  skos:prefLabel "Tibetan"@en ;
 .
 bdr:LanuageTaxonomy
   a bdo:Language ;
@@ -31,12 +37,6 @@ bdr:LanuageTaxonomy
   bdo:taxSubclassRelation bdo:taxSubClassOf ;
   rdfs:comment "Taxonomy of natural languages"@en ;
   skos:prefLabel "languages taxonomy"@en ;
-.
-bdr:Bo
-  a bdo:Language ;
-  a bdo:Taxonomy ;
-  bdo:taxSubClassOf bdr:LanuageTaxonomy ;
-  skos:prefLabel "Tibetan"@en ;
 .
 bdr:Mn
   a bdo:Language ;

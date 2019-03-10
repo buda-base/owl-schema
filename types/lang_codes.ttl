@@ -17,6 +17,7 @@ bdo:LangCode
   rdfs:comment "A Language code such as \"bo\" or \"tib\" for Tibetan, \"zh\" or \"chi\" for Chinese, \"sa\" for Sanskrit, etc."@en ;
   rdfs:label "Language Code"@en ;
   rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
+  rdfs:seeAlso <http://purl.bdrc.io/ontology/types/Language> ;
 .
 <http://purl.bdrc.io/ontology/types/LangCode>
   a owl:Ontology ;
