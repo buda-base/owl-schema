@@ -275,14 +275,14 @@ bdr:TraditionZhalu
   a owl:Class ;
   rdfs:comment """term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala
  	
-འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།""" ;
+འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།"""@en ;
   rdfs:seeAlso <bdr:G1180> ;
   rdfs:seeAlso <bdr:T1198> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Shalu_Monastery> ;
   rdfs:subClassOf bdr:TraditionKadam ;
   skos:altLabel "zha lu"@bo-x-ewts ;
   skos:prefLabel "Zhalu"@en ;
-  skos:prefLabel "zhwa lu"@b-x-ewts ;
+  skos:prefLabel "zhwa lu"@bo-x-ewts ;
   skos:prefLabel "ཞྭ་ལུ་"@bo ;
 .
 bdr:TraditionZhije
