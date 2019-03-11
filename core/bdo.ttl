@@ -3244,7 +3244,7 @@ bdo:placeEventAffiliation
   rdfs:comment "Refers to the Tradition that the place event is affiliated with."@en ;
   rdfs:domain bdo:PlaceEvent ;
   rdfs:label "affiliated tradition"@en ;
-  rdfs:range bdo:TibetanTradition ;
+  rdfs:range bdo:Tradition ;
 .
 bdo:placeGB2260-2013
   a owl:DatatypeProperty ;
