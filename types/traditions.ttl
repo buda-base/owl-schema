@@ -35,9 +35,9 @@ bdo:Tradition
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:EightMinorKagyuTraditions
-  a bdr:TraditionMarpaKagyu ;
+  a bdr:TraditionDakpoKagyu ;
   a owl:Class ;
-  rdfs:subClassOf bdr:TraditionMarpaKagyu ;
+  rdfs:subClassOf bdr:TraditionDakpoKagyu ;
   skos:prefLabel "Eight Minor Kagyu Traditions"@en ;
 .
 bdr:EightPracticeLineages
@@ -47,9 +47,9 @@ bdr:EightPracticeLineages
   skos:prefLabel "The Eight Practice Lineages"@en ;
 .
 bdr:FourMainKagyuTraditions
-  a bdr:TraditionMarpaKagyu ;
+  a bdr:TraditionDakpoKagyu ;
   a owl:Class ;
-  rdfs:subClassOf bdr:TraditionMarpaKagyu ;
+  rdfs:subClassOf bdr:TraditionDakpoKagyu ;
   skos:prefLabel "Four Greater"@en ;
   skos:prefLabel "Main Dagpo Kagyu"@en ;
 .
@@ -90,6 +90,24 @@ bdr:TraditionBon
 bdr:TraditionChod
   a bdr:TraditionZhije ;
   skos:prefLabel "Chod"@en ;
+.
+bdr:TraditionDakpoKagyu
+  a bdr:EightPracticeLineages ;
+  a owl:Class ;
+  rdfs:comment """A note is in order regarding the two forms Dkar brgyud pa and Bka' brgyud pa. The term Bka' brgyud pa simply applies to any line of transmission of an esoteric teaching from teacher to disciple. We can properly speak of a Jo nang Bka' brgyud pa or Dge ldan Bka' brgyud pa for the Jo nang pa and Dge lugs pa sects. The adherents of the sects that practice the teachings centering around the Phyag rgya chm po and the Na ro chos drug are properly referred to as the Dwags po Bka' brgyud pa because these teachings were all transmitted through Sgam po pa. Similar teachings and practices centering around the Ni gu chos drug are distinctive of the Shangs pa Bka' brgyud pa. These traditions with their offshoots are often incorrectly referred to two simply as Bka' brgyud pa. 
+
+Some of the more careful Tibetan scholars suggested that the term Dkar brgyud pa be used to refer to the Dwags po Bka' brgyud pa, Shangs pa Bka' brgyud pa, and a few minor traditions transmitted by Naropa, Mar pa, Mi Ia ras pa, or Ras chung but did not pass through Sgam po pa. The term Dkar brgyud pa refers to the use of the white cotton meditation garment by all of these lineages. This complex is what is normally known, inaccurately, as the Bka' brgyud pa. Thu'u bkwan Blo bzang chos kyi nyi rna sums up the mat ter: \"In some later 'Brug pa texts the written form 'Dkar brgyud' indeed appears, because Mar pa, Mi Ia, Gling ras, and others wore only white cotton cloth. Nevertheless, it is fine if [they] are all called Bka' brgyud. ,,., At Thu'u bkwan's suggestion, then, we will side with convention and use the term \"Bka' brgyud.\"
+
+See page 40, E.Gene Smith, \"Among Tibetan Texts\"""" ;
+  rdfs:comment "Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight." ;
+  rdfs:seeAlso <bdr:T1187> ;
+  rdfs:subClassOf bdr:EightPracticeLineages ;
+  skos:altLabel "Marpa Kargyu"@en ;
+  skos:altLabel "dmar pa bka' brgyud"@bo-x-ewts ;
+  skos:altLabel "དམར་པ་བཀའ་བརྒྱུད་"@bo ;
+  skos:prefLabel "Dagpo Kagyu"@en ;
+  skos:prefLabel "dwags po bka' brgyud"@bo-x-ewts ;
+  skos:prefLabel "དྭགས་པོ་བཀའ་བརྒྱུད་"@bo ;
 .
 bdr:TraditionDharmaguptaka
   a bdo:Tradition ;
@@ -149,15 +167,6 @@ bdr:TraditionMadrukKagyu
   bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
   skos:prefLabel "Lower Drukpa Kagyu"@en ;
   skos:prefLabel "Madruk Kagyu"@en ;
-.
-bdr:TraditionMarpaKagyu
-  a bdr:EightPracticeLineages ;
-  a owl:Class ;
-  rdfs:comment """Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight.
-
-equiv Dagpo Kagyu?"""@en ;
-  rdfs:subClassOf bdr:EightPracticeLineages ;
-  skos:prefLabel "Marpa Kagyu"@en ;
 .
 bdr:TraditionMartsangKagyu
   a bdr:EightMinorKagyuTraditions ;
