@@ -98,16 +98,14 @@ bdr:TraditionDakpoKagyu
 
 Some of the more careful Tibetan scholars suggested that the term Dkar brgyud pa be used to refer to the Dwags po Bka' brgyud pa, Shangs pa Bka' brgyud pa, and a few minor traditions transmitted by Naropa, Mar pa, Mi Ia ras pa, or Ras chung but did not pass through Sgam po pa. The term Dkar brgyud pa refers to the use of the white cotton meditation garment by all of these lineages. This complex is what is normally known, inaccurately, as the Bka' brgyud pa. Thu'u bkwan Blo bzang chos kyi nyi rna sums up the mat ter: \"In some later 'Brug pa texts the written form 'Dkar brgyud' indeed appears, because Mar pa, Mi Ia, Gling ras, and others wore only white cotton cloth. Nevertheless, it is fine if [they] are all called Bka' brgyud. ,,., At Thu'u bkwan's suggestion, then, we will side with convention and use the term \"Bka' brgyud.\"
 
-See page 40, E.Gene Smith, \"Among Tibetan Texts\"""" ;
-  rdfs:comment "Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight." ;
+See page 40, E.Gene Smith, \"Among Tibetan Texts\""""@en ;
+  rdfs:comment "Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight."@en ;
   rdfs:seeAlso <bdr:T1187> ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
   skos:altLabel "Marpa Kargyu"@en ;
   skos:altLabel "dmar pa bka' brgyud"@bo-x-ewts ;
-  skos:altLabel "དམར་པ་བཀའ་བརྒྱུད་"@bo ;
   skos:prefLabel "Dagpo Kagyu"@en ;
   skos:prefLabel "dwags po bka' brgyud"@bo-x-ewts ;
-  skos:prefLabel "དྭགས་པོ་བཀའ་བརྒྱུད་"@bo ;
 .
 bdr:TraditionDharmaguptaka
   a bdo:Tradition ;
