@@ -36,6 +36,7 @@ bdr:BoDbuCan
   a bdr:BoTibt ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptDbuCan ;
+  rdfs:subClassOf bdr:BoTibt ;
   skos:prefLabel "Tibetan in uchen script"@en ;
   skos:prefLabel "dbu can"@bo-x-ewts ;
 .
@@ -53,6 +54,7 @@ bdr:BoDeva
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptDeva ;
   rdfs:comment "This combination is extremely rare but at least one occurence was found."@en ;
+  rdfs:subClassOf bdr:Bo ;
   skos:prefLabel "Tibetan in Devanagari"@en ;
 .
 bdr:BoEwts
@@ -60,6 +62,7 @@ bdr:BoEwts
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptLatn ;
   bdo:transliteration bdr:TransEWTS ;
+  rdfs:subClassOf bdr:Bo ;
   skos:prefLabel "Tibetan in Extended Wylie"@en ;
   skos:prefLabel "wa'i li"@bo-x-ewts ;
 .
@@ -67,6 +70,7 @@ bdr:BoKhyugYig
   a bdr:BoDbuMed ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptKhyugYig ;
+  rdfs:subClassOf bdr:BoDbuMed ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
   skos:prefLabel "Tibetan in Kyug 'Yig"@en ;
 .
@@ -103,6 +107,7 @@ bdr:EnLatn
   a bdr:En ;
   bdo:language bdr:LangEn ;
   bdo:script bdr:ScriptLatn ;
+  rdfs:subClassOf bdr:En ;
   skos:prefLabel "English (in Roman)"@en ;
 .
 bdr:Hi
@@ -115,6 +120,7 @@ bdr:HiDeva
   a bdr:Hi ;
   bdo:language bdr:LangHi ;
   bdo:script bdr:ScriptDeva ;
+  rdfs:subClassOf bdr:Hi ;
   skos:prefLabel "Hindi (in Devanagari)"@en ;
 .
 bdr:Mn
@@ -127,23 +133,27 @@ bdr:MnCyrl
   a bdr:Mn ;
   bdo:language bdr:LangMn ;
   bdo:script bdr:ScriptCyrl ;
+  rdfs:subClassOf bdr:Mn ;
   skos:prefLabel "Mongolian (in Cyrillic)"@en ;
 .
 bdr:MnLatn
   a bdr:Mn ;
   bdo:language bdr:LangMn ;
   bdo:script bdr:ScriptLatn ;
+  rdfs:subClassOf bdr:Mn ;
   skos:prefLabel "Mongolian (in Romanized form)"@en ;
 .
 bdr:MnMong
   a bdr:Mn ;
   bdo:language bdr:LangMn ;
   bdo:script bdr:ScriptMong ;
+  rdfs:subClassOf bdr:Mn ;
   skos:prefLabel "Mongolian (in old Mongolian script)"@en ;
 .
 bdr:MnUnspecified
   a bdr:Mn ;
   bdo:language bdr:LangMn ;
+  rdfs:subClassOf bdr:Mn ;
   skos:prefLabel "Mongolian (otherwise unspecified)"@en ;
 .
 bdr:New
@@ -156,12 +166,14 @@ bdr:NewDeva
   a bdr:New ;
   bdo:language bdr:LangNew ;
   bdo:script bdr:ScriptDeva ;
+  rdfs:subClassOf bdr:New ;
   skos:prefLabel "Newari in Devanagari"@en ;
 .
 bdr:NewNewa
   a bdr:New ;
   bdo:language bdr:LangNew ;
   bdo:script bdr:ScriptNewa ;
+  rdfs:subClassOf bdr:New ;
   skos:prefLabel "Newari in Pracalit"@en ;
 .
 bdr:Pi
@@ -175,12 +187,14 @@ bdr:PiMymr
   bdo:language bdr:LangPi ;
   bdo:script bdr:ScriptMymr ;
   bdo:taxSubClassOf bdr:Pi ;
+  rdfs:subClassOf bdr:Pi ;
   skos:prefLabel "Pali (Burmese)"@en ;
 .
 bdr:PiSinh
   a bdr:Pi ;
   bdo:language bdr:LangPi ;
   bdo:script bdr:ScriptSinh ;
+  rdfs:subClassOf bdr:Pi ;
   skos:prefLabel "Pali (Sinhalese)"@en ;
 .
 bdr:PiThai
@@ -188,6 +202,7 @@ bdr:PiThai
   bdo:language bdr:LangPi ;
   bdo:script bdr:ScriptThai ;
   rdfs:comment "Pali in Thai script"@en ;
+  rdfs:subClassOf bdr:Pi ;
   skos:prefLabel "Pali (Thai)"@en ;
 .
 bdr:Ru
@@ -200,6 +215,7 @@ bdr:RuCyrl
   a bdr:Ru ;
   bdo:language bdr:LangRu ;
   bdo:script bdr:ScriptCyrl ;
+  rdfs:subClassOf bdr:Ru ;
   skos:prefLabel "Russian in Cyrillic"@en ;
 .
 bdr:Sa
@@ -212,42 +228,49 @@ bdr:SaBeng
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptBeng ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Bengali"@en ;
 .
 bdr:SaDeva
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptRanj ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Devanagari"@en ;
 .
 bdr:SaEasternNagari
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptEasternNagari ;
-  skos:prefLabel "Sanskrit in Eastern Nāgārī script"@en ;
+  rdfs:subClassOf bdr:Sa ;
+  skos:prefLabel "Sanskrit in Eastern Ngr+ script"@en ;
 .
 bdr:SaNepaleseHooked
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptNepaleseHooked ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Nepali Hooked Script"@en ;
 .
 bdr:SaNewa
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptNewa ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Pracalit"@en ;
 .
 bdr:SaPostGupta
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptPostGupta ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Post-Gupta script"@en ;
 .
 bdr:SaRanj
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptRanj ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Ranjana"@en ;
 .
 bdr:SaSinh
@@ -255,6 +278,7 @@ bdr:SaSinh
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptSinh ;
   rdfs:comment "rare"@en ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Sinhalese"@en ;
 .
 bdr:SaTibt
@@ -262,11 +286,13 @@ bdr:SaTibt
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptTibt ;
   bdo:transliteration bdr:TransSaTibt ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Tibetan transliteration"@en ;
 .
 bdr:SaUnspecified
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
+  rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit (unspecified script)"@en ;
 .
 bdr:Zh
@@ -279,16 +305,19 @@ bdr:ZhHans
   a bdr:Zh ;
   bdo:language bdr:LangZh ;
   bdo:script bdr:ScriptHans ;
+  rdfs:subClassOf bdr:Zh ;
   skos:prefLabel "Chinese (Simplified)"@en ;
 .
 bdr:ZhHant
   a bdr:Zh ;
   bdo:language bdr:LangZh ;
   bdo:script bdr:ScriptHant ;
+  rdfs:subClassOf bdr:Zh ;
   skos:prefLabel "Chinese (Traditional)"@en ;
 .
 bdr:ZhUnspecified
   a bdr:Zh ;
   bdo:language bdr:LangZh ;
+  rdfs:subClassOf bdr:Zh ;
   skos:prefLabel "Chinese (unspecified script)"@en ;
 .
