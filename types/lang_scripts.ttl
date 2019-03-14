@@ -25,11 +25,10 @@ bdo:LangScript
   owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-bdr:BoTibt
+bdr:Bo
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptTibt ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Tibetan"@en ;
   skos:prefLabel "bod yig"@bo-x-ewts ;
 .
@@ -42,20 +41,22 @@ bdr:BoDbuCan
 .
 bdr:BoDbuMed
   a bdr:BoTibt ;
+  a owl:Class ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptDbuMed ;
+  rdfs:subClassOf bdr:BoTibt ;
   skos:prefLabel "Tibetan in ume script"@en ;
   skos:prefLabel "dbu med"@bo-x-ewts ;
 .
 bdr:BoDeva
-  a bdr:BoTibt ;
+  a bdr:Bo ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptDeva ;
   rdfs:comment "This combination is extremely rare but at least one occurence was found."@en ;
   skos:prefLabel "Tibetan in Devanagari"@en ;
 .
 bdr:BoEwts
-  a bdr:BoTibt ;
+  a bdr:Bo ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptLatn ;
   bdo:transliteration bdr:TransEWTS ;
@@ -63,24 +64,39 @@ bdr:BoEwts
   skos:prefLabel "wa'i li"@bo-x-ewts ;
 .
 bdr:BoKhyugYig
-  a bdr:BoTibt ;
+  a bdr:BoDbuMed ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptKhyugYig ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
   skos:prefLabel "Tibetan in Kyug 'Yig"@en ;
 .
-bdr:DzTibt
+bdr:BoTibt
   a owl:Class ;
+  bdo:language bdr:LangBo ;
+  bdo:script bdr:ScriptTibt ;
+  rdfs:subClassOf bdr:Bo ;
+  skos:prefLabel "Tibetan"@en ;
+  skos:prefLabel "bod yig"@bo-x-ewts ;
+.
+bdr:Dz
+  a owl:Class ;
+  bdo:language bdr:LangDz ;
   rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Dzongkha (Bhutanese)"@en ;
+  skos:prefLabel "rdzong kha"@bo-x-ewts ;
+.
+bdr:DzTibt
+  a bdr:Dz ;
   bdo:language bdr:LangDz ;
   bdo:script bdr:ScriptTibt ;
+  rdfs:subClassOf bdr:Dz ;
   skos:prefLabel "Dzongkha (Bhutanese)"@en ;
   skos:prefLabel "rdzong kha"@bo-x-ewts ;
 .
 bdr:En
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangEn ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "English"@en ;
 .
 bdr:EnLatn
@@ -91,8 +107,8 @@ bdr:EnLatn
 .
 bdr:Hi
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangHi ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Hindi"@en ;
 .
 bdr:HiDeva
@@ -103,8 +119,8 @@ bdr:HiDeva
 .
 bdr:Mn
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangMn ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Mongolian"@en ;
 .
 bdr:MnCyrl
@@ -132,8 +148,8 @@ bdr:MnUnspecified
 .
 bdr:New
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangNew ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Newari"@en ;
 .
 bdr:NewDeva
@@ -150,8 +166,8 @@ bdr:NewNewa
 .
 bdr:Pi
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangPi ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Pali"@en ;
 .
 bdr:PiMymr
@@ -176,8 +192,8 @@ bdr:PiThai
 .
 bdr:Ru
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangRu ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Russian"@en ;
 .
 bdr:RuCyrl
@@ -188,8 +204,8 @@ bdr:RuCyrl
 .
 bdr:Sa
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangSa ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Sanskrit"@en ;
 .
 bdr:SaBeng
@@ -255,8 +271,8 @@ bdr:SaUnspecified
 .
 bdr:Zh
   a owl:Class ;
-  rdfs:subClassOf bdo:LangScript ;
   bdo:language bdr:LangZh ;
+  rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Chinese"@en ;
 .
 bdr:ZhHans

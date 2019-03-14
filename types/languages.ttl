@@ -73,7 +73,7 @@ bdr:LangMn
 bdr:LangNew
   a bdo:Language ;
   a owl:Class ;
-  bdo:langBCP47Lang "ne" ;
+  bdo:langBCP47Lang "new" ;
   bdo:langMARCCode "new" ;
   rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
   rdfs:subClassOf bdo:Language ;
