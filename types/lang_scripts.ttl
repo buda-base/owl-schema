@@ -123,6 +123,45 @@ bdr:HiDeva
   rdfs:subClassOf bdr:Hi ;
   skos:prefLabel "Hindi (in Devanagari)"@en ;
 .
+bdr:LangAmdoTib
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "adx" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Amdo Tibetan"@en ;
+.
+bdr:LangBo
+  rdfs:seeAlso <https://github.com/buda-base/owl-schema/issues/98> ;
+.
+bdr:LangKhamba
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "khg" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Khamba"@en ;
+.
+bdr:LangKhamsTib
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "khg" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Khams Tibetan"@en ;
+.
+bdr:LangTseku
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "tsk" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Tseku"@en ;
+.
 bdr:Mn
   a owl:Class ;
   bdo:language bdr:LangMn ;

@@ -278,7 +278,7 @@ bdr:TraditionYelpaKagyu
   skos:prefLabel "Yelpa Kagyu"@en ;
 .
 bdr:TraditionZhalu
-  a bdo:TibetanTradition ;
+  a bdr:TraditionKadam ;
   a owl:Class ;
   rdfs:comment """term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala
  	
