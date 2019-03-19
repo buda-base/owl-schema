@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/PrintMethod
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: PrintMethod
 
 @prefix PrintMethod: <http://purl.bdrc.io/ontology/types/PrintMethod#> .
@@ -38,6 +39,7 @@ bdo:PrintMethod_Relief
 .
 <http://purl.bdrc.io/ontology/types/PrintMethod>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:PrintMethod_Intaglio_Copper

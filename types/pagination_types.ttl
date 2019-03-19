@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/PaginationType
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: PaginationType
 
 @prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType#> .
@@ -22,6 +23,7 @@ Relative pagination uses pagination in the content of the work while absolute co
 .
 <http://purl.bdrc.io/ontology/types/PaginationType>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:PaginationAbsolute

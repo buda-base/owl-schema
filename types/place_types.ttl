@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/PlaceType
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: PlaceType
 
 @prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType#> .
@@ -19,6 +20,7 @@ bdo:PlaceType
 .
 <http://purl.bdrc.io/ontology/types/PlaceType>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:PT0001

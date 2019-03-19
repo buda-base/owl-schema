@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Binding
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: Binding
 
 @prefix Binding: <http://purl.bdrc.io/ontology/types/Binding#> .
@@ -33,6 +34,7 @@ bdo:Binding_LooseLeaf
 .
 <http://purl.bdrc.io/ontology/types/Binding>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:Binding_Codex_Perfect

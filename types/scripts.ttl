@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Script
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: Script
 
 @prefix Script: <http://purl.bdrc.io/ontology/types/Script#> .
@@ -14,38 +15,39 @@
 
 bdo:Script
   a owl:Class ;
-  rdfs:comment "A script in which a language is written. For example, Uchen, Devanagari, Latin, etc."@en ;
+  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Kyug'Yig, Native (implies Unicode)"@en ;
   rdfs:label "Script"@en ;
   rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
 .
 <http://purl.bdrc.io/ontology/types/Script>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:ScriptBeng
   a bdo:Script ;
-  skos:prefLabel "Bengali"@en ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Beng> ;
+  skos:prefLabel "Bengali"@en ;
 .
 bdr:ScriptCyrl
   a bdo:Script ;
-  skos:prefLabel "Cyrillic"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Cyrl> ;
+  skos:prefLabel "Cyrillic"@en ;
 .
 bdr:ScriptDbuCan
   a bdo:Script ;
   skos:prefLabel "Uchen"@en ;
-  skos:prefLabel "dbu can/"@bo-x-ewts ;
+  skos:prefLabel "dbu can"@bo-x-ewts ;
 .
 bdr:ScriptDbuMed
   a bdo:Script ;
   skos:prefLabel "Ume"@en ;
-  skos:prefLabel "dbu med/"@bo-x-ewts ;
+  skos:prefLabel "dbu med"@bo-x-ewts ;
 .
 bdr:ScriptDeva
   a bdo:Script ;
-  skos:prefLabel "Devanagari"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Deva> ;
+  skos:prefLabel "Devanagari"@en ;
 .
 bdr:ScriptEasternNagari
   a bdo:Script ;
@@ -73,17 +75,17 @@ bdr:ScriptHant
 .
 bdr:ScriptKhyugYig
   a bdo:Script ;
-  skos:prefLabel "'khyug yig/"@bo-x-ewts ;
-  skos:prefLabel "Kyug yig"@en ;
+  skos:prefLabel "'khyug yig"@bo-x-ewts ;
+  skos:prefLabel "Kyug'yig"@en ;
 .
 bdr:ScriptLatn
   a bdo:Script ;
-  skos:prefLabel "Latin"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
+  skos:prefLabel "latin"@en ;
 .
 bdr:ScriptMong
   a bdo:Script ;
-  skos:prefLabel "Classical Mongolian"@en ;
+  skos:prefLabel "Classical Mongolian script"@en ;
 .
 bdr:ScriptMymr
   a bdo:Script ;
@@ -91,13 +93,14 @@ bdr:ScriptMymr
 .
 bdr:ScriptNepaleseHooked
   a bdo:Script ;
-  skos:altLabel "Nepalese hooked script"@en ;
-  skos:prefLabel "Bhujimol"@en ;
+  rdfs:comment "also referred to as Bhujimol"@en ;
+  skos:prefLabel "Nepalese hooked script"@en ;
 .
 bdr:ScriptNewa
   a bdo:Script ;
-  skos:prefLabel "Pracalit"@en ;
+  rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Prachalit_Nepal_alphabet> ;
+  skos:prefLabel "Pracalit"@en ;
 .
 bdr:ScriptPostGupta
   a bdo:Script ;
@@ -107,12 +110,10 @@ bdr:ScriptRanj
   a bdo:Script ;
   rdfs:comment "This script is not normalized in ISO 15924 (yet?)"@en ;
   rdfs:comment "also referred to as Pāla, as it was developped during the Pāla dynasty"@en ;
-  skos:prefLabel "Ranjana"@en ;
-  skos:altLabel "Kutila"@en ;
-  skos:altLabel "Lantsa"@en ;
-  skos:prefLabel "Rañjanā"@sa-x-iast ;
-  skos:prefLabel "lany+dza/"@bo-x-ewts ;
   rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
+  skos:prefLabel "Ranjana (Kutila, Lantsa)"@en ;
+  skos:prefLabel "Rañjanā"@sa-x-iast ;
+  skos:prefLabel "lany+dza"@bo-x-ewts ;
 .
 bdr:ScriptSinh
   a bdo:Script ;
@@ -120,12 +121,12 @@ bdr:ScriptSinh
 .
 bdr:ScriptThai
   a bdo:Script ;
-  skos:prefLabel "Thai"@en ;
   rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;
+  skos:prefLabel "Thai script"@en ;
 .
 bdr:ScriptTibt
   a bdo:Script ;
-  skos:prefLabel "Tibetan"@en ;
-  skos:prefLabel "bod yig"@bo-x-ewts ;
   rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
+  skos:prefLabel "Tibetan Script"@en ;
+  skos:prefLabel "bod yig"@bo-x-ewts ;
 .

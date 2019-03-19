@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Transliteration
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: Transliteration
 
 @prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration#> .
@@ -14,11 +15,12 @@
 
 bdo:Transliteration
   a owl:Class ;
-  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
+  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, ExtendWylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese (in Latin script)"@en ;
   rdfs:label "Transliteration"@en ;
 .
 <http://purl.bdrc.io/ontology/types/Transliteration>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:TransAlalc

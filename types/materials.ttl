@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Material
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: Material
 
 @prefix Material: <http://purl.bdrc.io/ontology/types/Material#> .
@@ -34,6 +35,7 @@ bdo:Material
 .
 <http://purl.bdrc.io/ontology/types/Material>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:AppliedMaterial_BlackInk

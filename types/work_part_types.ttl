@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/WorkPartType
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: WorkPartType
 
 @prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType#> .
@@ -24,6 +25,7 @@ bdo:WorkPartType
 .
 <http://purl.bdrc.io/ontology/types/WorkPartType>
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:WorkChapter
