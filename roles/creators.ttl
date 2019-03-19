@@ -2,7 +2,6 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: creator
 
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix creator: <http://purl.bdrc.io/ontology/roles/creator#> .
@@ -12,11 +11,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-adm:deprecatedComment
-  a owl:AnnotationProperty ;
-  rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
-  rdfs:label "deprecation comment"@en ;
-.
 bdo:Creator
   a owl:Class ;
   rdfs:comment "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
@@ -50,7 +44,7 @@ bdr:Bard
 .
 bdr:Calligrapher
   a bdo:Creator ;
-  rdfs:comment "For a handwritten Work an individual that drew the text or carved it on woord blocks"@en ;
+  rdfs:comment "For a handwritten Work an individual that drew the text or carved it on wood blocks"@en ;
   skos:prefLabel "calligrapher"@en ;
 .
 bdr:Commentator
@@ -71,23 +65,11 @@ bdr:ContributingAuthor
   rdfs:comment "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
   skos:prefLabel "contributing author"@en ;
 .
-bdr:Editor
-  a bdo:Creator ;
-  adm:deprecatedComment "deprecated in favor of bdr:Compiler"@en ;
-  owl:deprecated true ;
-  skos:prefLabel "editor"@en ;
-.
 bdr:Forger
   a bdo:Creator ;
   rdfs:comment "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
   skos:prefLabel "forger"@en ;
   skos:prefLabel "偽作"@zh-hant ;
-.
-bdr:GeneralAuthor
-  a bdo:Creator ;
-  adm:deprecatedComment "deprecated in favor of :creatorMainAuthor"@en ;
-  owl:deprecated true ;
-  skos:prefLabel "general author"@en ;
 .
 bdr:HeadTranslator
   a bdo:Creator ;
@@ -110,13 +92,6 @@ bdr:OralTranslator
   rdfs:comment "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
   skos:prefLabel "oral translator"@en ;
 .
-bdr:Pandita
-  a bdo:Creator ;
-  adm:deprecatedComment "deprecated in favor of :creatorIndicScholar"@en ;
-  adm:replaceWithObjectProperty bdr:creatorIndicScholar ;
-  owl:deprecated true ;
-  skos:prefLabel "pandita"@en ;
-.
 bdr:RecipientOfResponseToQuery
   a bdo:Creator ;
   rdfs:comment """An individual to whom answers in a Work are addressed. Cf., W22146:
@@ -129,28 +104,12 @@ bdr:Reciter
   rdfs:comment "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
   skos:prefLabel "reciter"@en ;
 .
-bdr:Requester
-  a bdo:Creator ;
-  adm:deprecatedComment "deprecated - not used"@en ;
-  rdfs:comment "An individual who requested the author to write the Work"@en ;
-  owl:deprecated true ;
-  skos:prefLabel "requester"@en ;
-.
 bdr:Reviser
   a bdo:Creator ;
   rdfs:comment """An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
   skos:prefLabel "reviser"@en ;
-.
-bdr:ReviserOfTranslation
-  a bdo:Creator ;
-  adm:deprecatedComment "replace with bdr:Reviser"@en ;
-  rdfs:comment """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
-
-The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-  owl:deprecated true ;
-  skos:prefLabel "reviser of translation"@en ;
 .
 bdr:Scribe
   a bdo:Creator ;
