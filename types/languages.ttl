@@ -40,7 +40,8 @@ bdr:LangDz
   bdo:langMARCCode "dzo" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/dzo> ;
   rdfs:subClassOf bdo:Language ;
-  skos:prefLabel "Dzongkha (Bhutanese)"@en ;
+  skos:prefLabel "Dzongkha"@en ;
+  skos:altLabel "Bhutanese"@en ;
   skos:prefLabel "rdzong kha"@bo-x-ewts ;
 .
 bdr:LangEn
@@ -77,7 +78,8 @@ bdr:LangNew
   bdo:langMARCCode "new" ;
   rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
   rdfs:subClassOf bdo:Language ;
-  skos:prefLabel "Newari (Nepal Bhasa)"@en ;
+  skos:prefLabel "Newari"@en ;
+  skos:altLabel "Nepal Bhasa"@en ;
 .
 bdr:LangPi
   a bdo:Language ;
