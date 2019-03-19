@@ -88,16 +88,18 @@ bdr:Dz
   a owl:Class ;
   bdo:language bdr:LangDz ;
   rdfs:subClassOf bdo:LangScript ;
-  skos:prefLabel "Dzongkha (Bhutanese)"@en ;
-  skos:prefLabel "rdzong kha"@bo-x-ewts ;
+  skos:altLabel "Bhutanese"@en ;
+  skos:prefLabel "Dzongkha"@en ;
+  skos:prefLabel "rdzong kha/"@bo-x-ewts ;
 .
 bdr:DzTibt
   a bdr:Dz ;
   bdo:language bdr:LangDz ;
   bdo:script bdr:ScriptTibt ;
   rdfs:subClassOf bdr:Dz ;
-  skos:prefLabel "Dzongkha (Bhutanese)"@en ;
-  skos:prefLabel "rdzong kha"@bo-x-ewts ;
+  skos:altLabel "Bhutanese"@en ;
+  skos:prefLabel "Dzongkha"@en ;
+  skos:prefLabel "rdzong kha/"@bo-x-ewts ;
 .
 bdr:En
   a owl:Class ;
@@ -124,45 +126,6 @@ bdr:HiDeva
   bdo:script bdr:ScriptDeva ;
   rdfs:subClassOf bdr:Hi ;
   skos:prefLabel "Hindi (in Devanagari)"@en ;
-.
-bdr:LangAmdoTib
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "adx" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Amdo Tibetan"@en ;
-.
-bdr:LangBo
-  rdfs:seeAlso <https://github.com/buda-base/owl-schema/issues/98> ;
-.
-bdr:LangKhamba
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "khg" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Khamba"@en ;
-.
-bdr:LangKhamsTib
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "khg" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Khams Tibetan"@en ;
-.
-bdr:LangTseku
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "tsk" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Tseku"@en ;
 .
 bdr:Mn
   a owl:Class ;
@@ -275,7 +238,7 @@ bdr:SaBeng
 bdr:SaDeva
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptRanj ;
+  bdo:script bdr:ScriptDeva ;
   rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Devanagari"@en ;
 .
@@ -284,14 +247,14 @@ bdr:SaEasternNagari
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptEasternNagari ;
   rdfs:subClassOf bdr:Sa ;
-  skos:prefLabel "Sanskrit in Eastern Ngr+ script"@en ;
+  skos:prefLabel "Sanskrit in Eastern Nāgārī script"@en ;
 .
 bdr:SaNepaleseHooked
   a bdr:Sa ;
   bdo:language bdr:LangSa ;
   bdo:script bdr:ScriptNepaleseHooked ;
   rdfs:subClassOf bdr:Sa ;
-  skos:prefLabel "Sanskrit in Nepali Hooked Script"@en ;
+  skos:prefLabel "Sanskrit in Bhujimol"@en ;
 .
 bdr:SaNewa
   a bdr:Sa ;
