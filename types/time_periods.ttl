@@ -17,14 +17,14 @@ bdo:ChineseDynasty
   a owl:Class ;
   rdfs:label "Chinese Dynasty"@en ;
   rdfs:label "王朝"@zh-hans ;
-  rdfs:subClassOf bdo:CinesePeriods ;
+  rdfs:subClassOf bdo:ChinesePeriods ;
 .
 bdo:ChineseEra
   a owl:Class ;
   rdfs:label "Chinese reign" ;
-  rdfs:subClassOf bdo:CinesePeriods ;
+  rdfs:subClassOf bdo:ChinesePeriods ;
 .
-bdo:CinesePeriods
+bdo:ChinesePeriods
   a owl:Class ;
   rdfs:label "Cinese periods" ;
   rdfs:subClassOf bdo:TimePeriod ;
@@ -83,20 +83,20 @@ bdr:TangDynasty
 .
 bdr:WudeEra
   a bdo:ChineseEra ;
+  bdo:notAfter "626"^^bdo:AnyDate ;
+  bdo:notBefore "618"^^bdo:AnyDate ;
   skos:prefLabel "Wude era"@en ;
   skos:prefLabel "Wǔ dé zhī zhì"@zh-latn-pinyin ;
   skos:prefLabel "武德之治"@zh-hant ;
-  bdo:notAfter "626"^^bdo:AnyDate ;
-  bdo:notBefore "618"^^bdo:AnyDate ;
 .
 bdr:ZhiguanEra
   a bdo:ChineseEra ;
+  bdo:notAfter "649"^^bdo:AnyDate ;
+  bdo:notBefore "627"^^bdo:AnyDate ;
   skos:altLabel "Golden Years"@en ;
   skos:altLabel "Zhèng guān zhī zhì"@zh-latn-pinyin ;
   skos:altLabel "正觀之治"@zh-hant ;
   skos:prefLabel "Zhiguan era"@en ;
   skos:prefLabel "Zhēnguàn zhī zhì"@zh-latn-pinyin ;
   skos:prefLabel "貞觀之治"@zh-hant ;
-  bdo:notAfter "649"^^bdo:AnyDate ;
-  bdo:notBefore "627"^^bdo:AnyDate ;
 .
