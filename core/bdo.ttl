@@ -6,6 +6,7 @@
 # imports: http://purl.bdrc.io/ontology/adm/types/Status
 # imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# imports: http://purl.bdrc.io/ontology/roles/creator
 # imports: http://purl.bdrc.io/ontology/types/Binding
 # imports: http://purl.bdrc.io/ontology/types/Gender
 # imports: http://purl.bdrc.io/ontology/types/LangScript
@@ -515,6 +516,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/creator> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LangScript> ;
@@ -702,9 +704,6 @@ bdo:CorporationMemberNotSpecified
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:Creator
-  a owl:Class ;
-  rdfs:comment "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
-  rdfs:label "creator role"@en ;
   rdfs:subClassOf bdo:Role ;
 .
 bdo:DDBCAId
@@ -1550,7 +1549,7 @@ bdo:Role
   rdfs:comment "Names are represented by rdfs:label"@en ;
   rdfs:comment "Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly used concept in libraries."@en ;
   rdfs:label "Role"@en ;
-  rdfs:subClassOf bdo:Entity ;
+  rdfs:subClassOf bdo:Facet ;
 .
 bdo:Script
   rdfs:subClassOf bdo:Type ;
@@ -3104,6 +3103,7 @@ bdo:personContributingAuthorOf
 .
 bdo:personCreatorOf
   a owl:ObjectProperty ;
+  adm:deprecatedComment "deprecated in favor of bod:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "creator of"@en ;
@@ -3733,6 +3733,7 @@ bdo:workContainsChapters
 .
 bdo:workCreator
   a owl:ObjectProperty ;
+  adm:deprecatedComment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   bdo:inferSubTree true ;
   rdfs:comment "Identifies the type and person that are a creator of the work"@en ;
   rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
