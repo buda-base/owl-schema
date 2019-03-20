@@ -6889,6 +6889,7 @@ bdr:WorkVolume
 bdr:Zh
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
+  bdo:language bdr:LangZh ;
   bdo:taxSubClassOf bdr:LanguageTaxonomy ;
   rdfs:label "Chinese"@en ;
 .
