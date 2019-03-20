@@ -5301,6 +5301,7 @@ bdr:MaterialRicePaper
 bdr:Mn
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
+  bdo:language bdr:LangMn ;
   bdo:taxSubClassOf bdr:LanguageTaxonomy ;
   rdfs:label "Mongolian"@en ;
 .
@@ -5338,6 +5339,7 @@ bdr:MnUnspecified
 bdr:New
   a bdo:LangScript ;
   a owl:NamedIndividual ;
+  bdo:language bdr:LangNew ;
   bdo:taxSubClassOf bdr:LanguageTaxonomy ;
   rdfs:label "Newari"@en ;
 .
@@ -6112,6 +6114,7 @@ bdr:RuCyrl
 bdr:Sa
   a bdo:Taxonomy ;
   a owl:NamedIndividual ;
+  bdo:language bdr:LangSa ;
   bdo:taxSubClassOf bdr:LanguageTaxonomy ;
   rdfs:label "Sanskrit"@en ;
 .
