@@ -1,0 +1,45 @@
+# baseURI: http://purl.bdrc.io/ontology/adm/types/OutlineType
+# prefix: OutlineType
+
+@prefix OutlineType: <http://purl.bdrc.io/ontology/adm/types/OutlineType#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/adm/types/OutlineType>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+adm:OutlineType
+  a owl:Class ;
+  rdfs:comment "Legacy outline type"@en ;
+  rdfs:label "Outline Type"@en ;
+.
+bdr:OutlineTypeCompositeVolume
+  a adm:OutlineType ;
+.
+bdr:OutlineTypeGsungBum
+  a adm:OutlineType ;
+.
+bdr:OutlineTypeGterChos
+  a adm:OutlineType ;
+.
+bdr:OutlineTypeMultiVolumeCollection
+  a adm:OutlineType ;
+.
+bdr:OutlineTypeNotAssigned
+  a adm:OutlineType ;
+.
+bdr:OutlineTypePartialCollectedWorks
+  a adm:OutlineType ;
+.
+bdr:OutlineTypeSaBcad
+  a adm:OutlineType ;
+.
+bdr:OutlineTypeSubjectCollection
+  a adm:OutlineType ;
+.

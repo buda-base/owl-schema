@@ -1,0 +1,74 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Binding
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: Binding
+
+@prefix Binding: <http://purl.bdrc.io/ontology/types/Binding#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:Binding
+  a owl:Class ;
+  rdfs:label "Binding" ;
+.
+bdo:Binding_Codex
+  a owl:Class ;
+  rdfs:label "Binding Codex" ;
+  rdfs:subClassOf bdo:Binding ;
+.
+bdo:Binding_Continuous
+  a owl:Class ;
+  rdfs:label "continuous binding"@en ;
+  rdfs:subClassOf bdo:Binding ;
+.
+bdo:Binding_LooseLeaf
+  a owl:Class ;
+  rdfs:label "Binding Loose leaf" ;
+  rdfs:subClassOf bdo:Binding ;
+.
+<http://purl.bdrc.io/ontology/types/Binding>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:Binding_Codex_Perfect
+  a bdo:Binding_Codex ;
+  rdfs:comment "thermally activated glued paperback binding"@en ;
+  skos:prefLabel "perfect bound"@en ;
+.
+bdr:Binding_Codex_Sewn
+  a bdo:Binding_Codex ;
+  rdfs:comment "conventional hardbound book other manuscript"@en ;
+  skos:prefLabel "sewn binding"@en ;
+.
+bdr:Binding_Continuous_Folded
+  a bdo:Binding_Continuous ;
+  rdfs:comment "folded concertina or accordion style"@en ;
+  skos:prefLabel "folded"@en ;
+.
+bdr:Binding_Continuous_Leporello
+  a bdo:Binding_Continuous ;
+  rdfs:comment "folded and bound between front and back boards"@en ;
+  skos:prefLabel "leporello"@en ;
+.
+bdr:Binding_Continuous_Scroll
+  a bdo:Binding_Continuous ;
+  rdfs:comment "continuous sheet written on oneside and rolled up"@en ;
+  skos:prefLabel "scroll"@en ;
+.
+bdr:Binding_LooseLeaf_Pecha
+  a bdo:Binding_LooseLeaf ;
+  rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
+  skos:prefLabel "pecha"@en ;
+.
+bdr:Binding_LooseLeaf_Pothi
+  a bdo:Binding_LooseLeaf ;
+  rdfs:comment "loose leaves with holes for string to keep the leaves together and wrapped in cloth"@en ;
+  skos:prefLabel "pothi"@en ;
+.

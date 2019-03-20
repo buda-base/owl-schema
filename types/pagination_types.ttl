@@ -1,0 +1,36 @@
+# baseURI: http://purl.bdrc.io/ontology/types/PaginationType
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: PaginationType
+
+@prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:PaginationType
+  a owl:Class ;
+  rdfs:comment """Indicates whether the outlining is relative or absolute. This refers to the convention for WorkLocation information. Almost all outlining is done with absolute pagination.
+
+Relative pagination uses pagination in the content of the work while absolute counts from the first image of a scanned volume an since there are 2 scanned pages of metadata in each volume, absolute pagination generally starts at 3."""@en ;
+  rdfs:comment "Migration info: The pagination information affects the interpretation of the :WorkLocation(s) that occur in the original outline. The migration should add the pagination information to each WorkLocation since there will no longer be an Outline document"@en ;
+  rdfs:label "pagination type"@en ;
+.
+<http://purl.bdrc.io/ontology/types/PaginationType>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:PaginationAbsolute
+  a bdo:PaginationType ;
+  skos:prefLabel "absolute pagination"@en ;
+.
+bdr:PaginationRelative
+  a bdo:PaginationType ;
+  skos:prefLabel "relative pagination"@en ;
+.

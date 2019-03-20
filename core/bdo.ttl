@@ -1,8 +1,26 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/IGNORE/userProfiles/
+# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# imports: http://purl.bdrc.io/ontology/roles/creator
+# imports: http://purl.bdrc.io/ontology/types/Binding
+# imports: http://purl.bdrc.io/ontology/types/Gender
+# imports: http://purl.bdrc.io/ontology/types/LangScript
+# imports: http://purl.bdrc.io/ontology/types/Language
+# imports: http://purl.bdrc.io/ontology/types/LineageType
+# imports: http://purl.bdrc.io/ontology/types/Material
+# imports: http://purl.bdrc.io/ontology/types/PaginationType
+# imports: http://purl.bdrc.io/ontology/types/PlaceType
+# imports: http://purl.bdrc.io/ontology/types/PrintMethod
+# imports: http://purl.bdrc.io/ontology/types/Script
+# imports: http://purl.bdrc.io/ontology/types/Taxonomy
+# imports: http://purl.bdrc.io/ontology/types/TimePeriod
+# imports: http://purl.bdrc.io/ontology/types/Tradition
+# imports: http://purl.bdrc.io/ontology/types/Transliteration
+# imports: http://purl.bdrc.io/ontology/types/WorkPartType
+# imports: http://purl.bdrc.io/ontology/types/WorkType
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -84,414 +102,34 @@ iiif3:Manifest
   rdfs:label "IIIF v3 Manifest"@en ;
   rdfs:subClassOf bdo:IIIFManifest ;
 .
-adm:Access
-  a owl:Class ;
-  rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
-
-AccessTypes desigations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
-  rdfs:label "Work Access Type"@en ;
-  rdfs:subClassOf adm:Type ;
-.
-adm:Account
-  a owl:Class ;
-  rdfs:subClassOf adm:Entity ;
-.
-adm:Assertion
-  a owl:Class ;
-  rdfs:comment "An assertion represents a statement made in a source. It contains a comment summarizing the statement in plain language and a location indicating the source."@en ;
-  rdfs:label "Assertion"@en ;
-  rdfs:subClassOf adm:Entity ;
-.
-adm:ContentProvider
-  a owl:Class ;
-  rdfs:comment "A content provider is a source of content (images or metadata)"@en ;
-  rdfs:label "Content provider"@en ;
-  rdfs:subClassOf adm:Entity ;
-  owl:deprecated "deprecated in favor of the more general adm:Organization. This type is currently not used in the dataset" ;
-.
-adm:Entity
-  a owl:Class ;
-  rdfs:comment "adm:Entity is an administrative entity in the BDRC ontology. Administrative entities are not the subject matter entities that the BDRC ontology entities are \"about\". Rather, they are entities that are used to manage the BUDA information system."@en ;
-  rdfs:label "Administrative entity"@en ;
-.
-adm:Facet
-  a owl:Class ;
-  rdfs:comment "adm:Facet is a facet of an administrative entity in the BDRC ontology."@en ;
-  rdfs:label "administrative facet"@en ;
-.
-adm:License
-  a owl:Class ;
-  rdfs:comment "License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright."@en ;
-  rdfs:label "License"@en ;
-  rdfs:subClassOf adm:Type ;
-.
-adm:LogEntry
-  a owl:Class ;
-  rdfs:comment "Log entries for :Entity updates. Includes the agent, date and message explaing the update."@en ;
-  rdfs:label "Log Entry"@en ;
-  rdfs:subClassOf adm:Facet ;
-.
-adm:Organization
-  a owl:Class ;
-  rdfs:comment "An administrative organization is one that is not a subject of the domain of discourse. For example, the British Library's Endangered Archives Programme (EAP) is an administrative organization and the sde dge par khang can be considered an :Organization since it is an entity within the domain of Asian Buddhism."@en ;
-  rdfs:label "administrative organization"@en ;
-  rdfs:subClassOf adm:Entity ;
-.
-adm:Outline
-  a owl:Class ;
-  rdfs:comment "Used to hold various root-level Outline information that has no place in the constituent Works."@en ;
-  rdfs:label "Outline root"@en ;
-  rdfs:subClassOf adm:Facet ;
-.
-adm:OutlineType
-  a owl:Class ;
-  rdfs:comment "Legacy outline type"@en ;
-  rdfs:label "Outline Type"@en ;
-  rdfs:subClassOf adm:Type ;
-.
-adm:Product
-  a owl:Class ;
-  rdfs:comment """A collection of Works that are distributed together. Historically this has meant on a CDROM, DVDROM or hard drive. Nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still hard drive collections prepared from Products.
-
-IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
-
-Products have decs:contents rather than a :name (but this can be added during normalization). 
-
-The various Works that are contained in the Product include an inProduct element that refers back to the Product. So to find all the Works that are contained in a Product is a simple query. to locate all Works that refer to a given Product via wrk:inProduct.""" ;
-  rdfs:comment "Names are represented by rdfs:label"@en ;
-  rdfs:label "Product"@en ;
-  rdfs:subClassOf adm:Entity ;
-.
-adm:ProductOrg
-  a owl:Class ;
-  rdfs:comment "A unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access."@en ;
-  rdfs:comment "The name of a ProductOrg is represented by rdfs:label"@en ;
-  rdfs:subClassOf adm:Facet ;
-.
-adm:StatementAnnotationBody
-  a owl:Class ;
-  rdfs:comment "This class is used for the body of annotations related with RDF statements."@en ;
-  rdfs:label "statement annotation body"@en ;
-  rdfs:subClassOf adm:Entity ;
-.
-adm:Status
-  a owl:Class ;
-  rdfs:subClassOf adm:Type ;
-.
-adm:TermsOfUse
-  a owl:Class ;
-  rdfs:comment "Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources"@en ;
-  rdfs:label "Terms of Use"@en ;
-  rdfs:subClassOf adm:Type ;
-.
-adm:Type
-  a owl:Class ;
-  rdfs:comment "adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology."@en ;
-.
-adm:access
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "record access"@en ;
-  rdfs:range adm:Access ;
-.
-adm:attributionName
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "attribution name"@en ;
-  rdfs:range rdf:langString ;
-.
-adm:attributionURL
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "attribution url"@en ;
-  rdfs:range xsd:anyURI ;
-.
-adm:contradictedBy
-  a owl:AnnotationProperty ;
-  rdfs:domain adm:StatementAnnotationBody ;
-  rdfs:label "contradicted by"@en ;
-.
-adm:conversionAnnotations
-  a owl:AnnotationProperty ;
-.
-adm:convertProperty
-  a owl:AnnotationProperty ;
-  rdfs:comment """this annotation indicates that the annotated property is to be converted to some other expression, typically to a form that is expressed in terms of a common 3rd-party ontology such as bibframe or foaf.
-
-The value of this property should be an explanation of the needed conversion as an rdf:langString"""@en ;
-  rdfs:range rdf:langString ;
-  rdfs:subPropertyOf adm:conversionAnnotations ;
-.
-adm:convertToClass
-  a owl:AnnotationProperty ;
-  rdfs:comment "this annotation is used to indicate that uses of the annotated class are to be replaced by the inidcated class"@en ;
-  rdfs:domain owl:Thing ;
-  rdfs:label "convert to Class"@en ;
-  rdfs:range owl:Thing ;
-  rdfs:subPropertyOf adm:conversionAnnotations ;
-.
-adm:convertToProperty
-  a owl:AnnotationProperty ;
-  rdfs:comment "Indicates that the annotated property is to be converted directly to a statement in terms of another property. The value of this annotation is the target property to convert to."@en ;
-  rdfs:subPropertyOf adm:conversionAnnotations ;
-.
-adm:convertValueToClass
-  a owl:AnnotationProperty ;
-  rdfs:comment "Indicates that the value of the property being converted is to be an instance of the designated class"@en ;
-  rdfs:subPropertyOf adm:conversionAnnotations ;
-.
-adm:deprecatedComment
-  a owl:AnnotationProperty ;
-  rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
-  rdfs:label "deprecation comment"@en ;
-.
-adm:legacyImageGroupRID
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the original imagegroup rid from which the volume information was migrated"@en ;
-  rdfs:label "legacy imagegroup rid"@en ;
-.
-adm:license
-  a owl:AnnotationProperty ;
-  rdfs:comment "The license under which access to the metadata representation of the :Entity resource is provided"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "record license"@en ;
-  rdfs:range adm:License ;
-  rdfs:seeAlso bdo:License ;
-.
-adm:logDate
-  a owl:AnnotationProperty ;
-  rdfs:comment "When the update was performed"@en ;
-  rdfs:domain adm:LogEntry ;
-  rdfs:label "date"@en ;
-  rdfs:range xsd:dateTime ;
-.
-adm:logEntry
-  a owl:AnnotationProperty ;
-  rdfs:comment "Log entry for updates to BDRC resources"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "log entry"@en ;
-  rdfs:range adm:LogEntry ;
-.
-adm:logMessage
-  a owl:AnnotationProperty ;
-  rdfs:comment "Explanation of the update"@en ;
-  rdfs:domain adm:LogEntry ;
-  rdfs:label "message"@en ;
-  rdfs:range rdf:langString ;
-.
-adm:logWho
-  a owl:AnnotationProperty ;
-  rdfs:comment "who performed the updated being logged"@en ;
-  rdfs:domain adm:LogEntry ;
-  rdfs:label "who"@en ;
-  rdfs:range foaf:Agent ;
-.
-adm:outline
-  a owl:AnnotationProperty ;
-  rdfs:comment "The referenced admin:Outline contains the root-level information from an Outline for this Work"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "had outline"@en ;
-  rdfs:range adm:Outline ;
-.
-adm:outlineAuthorStatement
-  a owl:AnnotationProperty ;
-  rdfs:comment "A statement of the authorship of the outline of this Work"@en ;
-  rdfs:comment "Migration hint: use this for <outline:creator/>"@en ;
-  rdfs:domain adm:Outline ;
-  rdfs:label "outline author"@en ;
-  rdfs:range xsd:string ;
-.
-adm:outlineLogEntry
-  a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works"@en ;
-  rdfs:domain adm:Outline ;
-  rdfs:label "outline log entry"@en ;
-  rdfs:range adm:LogEntry ;
-.
-adm:outlineType
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the legacy outline type"@en ;
-  rdfs:domain adm:Outline ;
-  rdfs:label "outline type"@en ;
-  rdfs:range adm:OutlineType ;
-.
-adm:place_TLM_accession
-  a owl:AnnotationProperty ;
-  rdfs:comment "The accession attribute records the next accession number to be allocated for the Library. The num should be a 6 digit zero filled string initialized to \"000001\". This number is incremented each time a new holdng is added for this library." ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "accession"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_admin
-  a owl:AnnotationProperty ;
-  rdfs:comment "The admin property records the name of the group of users that are permitted to update the Library and Monastery profiles for the Library. The group name will conventionally be named by lower-casing the hasTLM_code property value and appending \"Admin\". For example, \"dzlAdmin\"" ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "tlm admin group"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_adminEmail
-  a owl:AnnotationProperty ;
-  rdfs:comment "The admin email is used to send requests for new users to be added to the Library." ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "tlm admin email"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_code
-  a owl:AnnotationProperty ;
-  rdfs:comment "the code attribute records a unique 3-latin-letter code for the Library. For example, DZL would be reasonable for Dzongsar Library. The code along with the num attribute are used to create RIDs for Works that are added by the library. RIDs will take the form of: W1TLMDZL000001" ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "tlm code"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_librarian
-  a owl:AnnotationProperty ;
-  rdfs:comment "The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/code and appending \"librarian\". for example, \"dzllibrarian\""@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "tlm librarian group"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_librarianEmail
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "The librarian email is used to send requests to the library staff."@en ;
-  rdfs:label "tlm librarian email"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_num
-  a owl:AnnotationProperty ;
-  rdfs:comment "The num attribute records the last RID suffix allocated for the Library. The num should be a 6 digit zero filled string initialized to \"000001\"." ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "tlm num"@en ;
-  rdfs:range xsd:string ;
-.
-adm:place_TLM_taxonomy
-  a owl:AnnotationProperty ;
-  rdfs:comment "Identifies a Taxonomy that specifies the Library's shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design."@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "TLM taxonomy"@en ;
-  rdfs:range bdo:Taxonomy ;
-.
-adm:productAllowByAddr
-  a owl:AnnotationProperty ;
-  rdfs:comment "The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works"@en ;
-  rdfs:domain adm:ProductOrg ;
-  rdfs:range xsd:string ;
-.
-adm:productHasOrg
-  a owl:ObjectProperty ;
-  rdfs:comment "Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on"@en ;
-  rdfs:comment "organization"@en ;
-  rdfs:domain bdo:ProductOrProductOrg ;
-  rdfs:range adm:ProductOrg ;
-.
-adm:productHasWork
-  a owl:AnnotationProperty ;
-  rdfs:comment "the admin:Product contains the referenced :Work"@en ;
-  rdfs:label "has work"@en ;
-.
-adm:productIncludes
-  a owl:AnnotationProperty ;
-  rdfs:comment "A Product may include another Product for the purpose of including access information in support of the subscription service."@en ;
-  rdfs:domain adm:Product ;
-  rdfs:label "includes"@en ;
-  rdfs:range adm:Product ;
-.
-adm:replaceWithClass
-  a owl:AnnotationProperty ;
-  rdfs:comment "used when deprecating a vocabulary item in favor of a Class"@en ;
-  rdfs:label "replace with a Class"@en ;
-.
-adm:replaceWithDataProperty
-  a owl:AnnotationProperty ;
-  rdfs:comment "used when deprecating a vocabulary item in favor of a Data property"@en ;
-  rdfs:label "replace with a Data property"@en ;
-.
-adm:replaceWithIndividual
-  a owl:AnnotationProperty ;
-  rdfs:comment "used when deprecating a vocabulary item in favor of an Individual"@en ;
-  rdfs:label "replace with an Individual"@en ;
-.
-adm:replaceWithObjectProperty
-  a owl:AnnotationProperty ;
-  rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
-  rdfs:label "replace with Object property"@en ;
-.
-adm:statementScore
-  a owl:AnnotationProperty ;
-  rdfs:comment "The score associated with a statement, assessing its likelihood. Unlikely statements should have a negative score."@en ;
-  rdfs:domain adm:StatementAnnotationBody ;
-  rdfs:label "score"@en ;
-  rdfs:range xsd:integer ;
-.
-adm:status
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:range adm:Status ;
-.
-adm:supportedBy
-  a owl:AnnotationProperty ;
-  rdfs:domain adm:StatementAnnotationBody ;
-  rdfs:label "supported by"@en ;
-.
-adm:volumeQcDate
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Volume ;
-  rdfs:range xsd:string ;
-.
-adm:volumeQcNote
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Volume ;
-  rdfs:range xsd:string ;
-.
-adm:volumeQcPerson
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Volume ;
-  rdfs:range xsd:string ;
-.
-adm:volumeScanVenue
-  a owl:AnnotationProperty ;
-  rdfs:comment "this property is used to migrate the venue attribute from scanrequest. it records where the scanning was to take place"@en ;
-  rdfs:domain bdo:Item ;
-  rdfs:range xsd:string ;
-.
-adm:workInProduct
-  a owl:AnnotationProperty ;
-  rdfs:comment "This :Work is included in the referenced admin:Product"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "in product"@en ;
-  rdfs:range adm:Product ;
-.
-adm:workLegacyNode
-  a owl:DatatypeProperty ;
-  rdfs:comment "The value is the legacy Outline Node RID so that redirection can be implemented for purls referencing nodes on the old www.tbrc.org site."@en ;
-  rdfs:domain bdo:WorkOrAdmOutline ;
-  rdfs:label "has legacy node"@en ;
-  rdfs:range xsd:string ;
-.
-adm:workVolumesNote
-  a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: When not empty the <pubinfo:volumes/> is a note regarding how many and which volumes have been acquired, scanned and so on."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "volumes note"@en ;
-  rdfs:range xsd:string ;
-.
-adm:work_desc_date
-  a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: Used only in O01CT0001 to record some sort of date information from the colophons of various texts. The format is non-standard will require further examination"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "date from description"@en ;
-  rdfs:range xsd:string ;
-.
 bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
+  owl:imports <http://purl.bdrc.io/ontology/IGNORE/userProfiles/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/creator> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LangScript> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LineageType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Material> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PaginationType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PlaceType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PrintMethod> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Script> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/TimePeriod> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Tradition> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Transliteration> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/WorkType> ;
 .
-bdo:AdmUnion
+bdo:AbstractWork
   a owl:Class ;
-  rdfs:comment "a union of adm classes"@en ;
-  rdfs:label "adm union"@en ;
-  rdfs:subClassOf bdo:Union ;
+  rdfs:label "Abstract work" ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:Agent
   a owl:Class ;
@@ -511,7 +149,20 @@ bdo:AgentInRole
   rdfs:label "agent in role"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
-bdo:AgentOrAgentInRole
+bdo:Agents
+  a owl:Class ;
+  rdfs:comment "The various sorts of agents represented in the ontology"@en ;
+  rdfs:label "Agents"@en ;
+  rdfs:subClassOf bdo:MixedUnion ;
+  rdfs:subClassOf [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Agent
+          foaf:Agent
+        ) ;
+    ] ;
+.
+bdo:AgentsOrAgentInRole
   a owl:Class ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
@@ -522,58 +173,41 @@ bdo:AgentOrAgentInRole
         ) ;
     ] ;
 .
-bdo:Agents
-  a owl:Class ;
-  rdfs:comment "The various sorts of agents represented in the ontology"@en ;
-  rdfs:label "Agents"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          adm:Organization
-          bdo:Agent
-          foaf:Agent
-        ) ;
-    ] ;
-.
 bdo:AhistoricalAgent
   a owl:Class ;
   rdfs:comment "An ahistorical agent may be a deity or other non-human agent that is said to exist outside of human history"@en ;
   rdfs:label "an ahistorical agent"@en ;
   rdfs:subClassOf bdo:SingleAgent ;
 .
+bdo:AnyDate
+  a rdfs:Datatype ;
+  rdfs:comment "may be either an integer year or a YYYY-MM-DD xsd:date or a bdo:Date instance"@en ;
+  rdfs:label "integer or date or bdo:Date"@en ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:unionOf (
+          xsd:date
+          xsd:integer
+          bdo:Date
+        ) ;
+    ] ;
+.
 bdo:AnyOrganization
   a owl:Class ;
   rdfs:comment "Any sort of organization"@en ;
+  rdfs:comment "deprecated in favor of setting the range of :agent to :Agents"@en ;
   rdfs:label "any organization"@en ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
       a owl:Class ;
       owl:unionOf (
-          adm:Organization
           bdo:Organization
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 bdo:Binding
-  a owl:Class ;
-  rdfs:label "Binding" ;
   rdfs:subClassOf bdo:Type ;
-.
-bdo:Binding_Codex
-  a owl:Class ;
-  rdfs:label "Binding Codex" ;
-  rdfs:subClassOf bdo:Binding ;
-.
-bdo:Binding_Continuous
-  a owl:Class ;
-  rdfs:label "continuous binding"@en ;
-  rdfs:subClassOf bdo:Binding ;
-.
-bdo:Binding_LooseLeaf
-  a owl:Class ;
-  rdfs:label "Binding Loose leaf" ;
-  rdfs:subClassOf bdo:Binding ;
 .
 bdo:CarvedEvent
   a owl:Class ;
@@ -587,11 +221,8 @@ bdo:ChineseDate
   rdfs:label "Chinese date type"@en ;
   rdfs:subClassOf bdo:Date ;
 .
-bdo:ChineseDynasty
-  a owl:Class ;
-  rdfs:label "Chinese Dynasty"@en ;
-  rdfs:label "王朝"@zh-hans ;
-  rdfs:subClassOf bdo:TimePeriod ;
+bdo:ChineseMonastic
+  rdfs:subClassOf bdo:Role ;
 .
 bdo:CompiledEvent
   a owl:Class ;
@@ -604,7 +235,7 @@ bdo:CompletedEvent
   rdfs:label "Work Completed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:CopiedEvent
+bdo:CopyEvent
   a owl:Class ;
   rdfs:comment "An event of copying a :Work by some means such as manual enscribing, photocopying, etc."@en ;
   rdfs:label "Work Copied"@en ;
@@ -657,9 +288,6 @@ bdo:CorporationMemberNotSpecified
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:Creator
-  a owl:Class ;
-  rdfs:comment "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
-  rdfs:label "creator role"@en ;
   rdfs:subClassOf bdo:Role ;
 .
 bdo:DDBCAId
@@ -679,7 +307,7 @@ bdo:Date
 .
 bdo:EditedEvent
   a owl:Class ;
-  adm:replaceWithClass bdo:CompiledEvent ;
+  rdfs:comment " deprecated in favor of :CompiledEvent"@en ;
   rdfs:comment "An event of editing a :Work"@en ;
   rdfs:label "Work Edited"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
@@ -699,8 +327,6 @@ bdo:EntitiesOrFacets
   rdfs:subClassOf [
       a owl:Class ;
       owl:unionOf (
-          adm:Entity
-          adm:Facet
           bdo:Entity
           bdo:Facet
           bdo:IIIFEntity
@@ -793,7 +419,7 @@ bdo:Event
   a owl:Class ;
   rdfs:comment "Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc"@en ;
   rdfs:label "Event"@en ;
-  rdfs:subClassOf bdo:Facet ;
+  rdfs:subClassOf owl:Thing ;
 .
 bdo:EventOrPeriod
   a owl:Class ;
@@ -807,6 +433,7 @@ bdo:EventOrPeriod
           bdo:TimePeriod
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 bdo:Facet
   a owl:Class ;
@@ -814,9 +441,6 @@ bdo:Facet
   rdfs:label "Facet"@en ;
 .
 bdo:Gender
-  a owl:Class ;
-  rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
-  rdfs:label "Gender"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:GeneralNote
@@ -875,24 +499,6 @@ bdo:ISBN
   rdfs:comment "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
   rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
   rdfs:label "International Standard Book Number"@en ;
-.
-bdo:ImpressionSubstance
-  a owl:Class ;
-  rdfs:label "Impression substance"@en ;
-  rdfs:subClassOf bdo:Type ;
-.
-bdo:IntegerOrDate
-  a rdfs:Datatype ;
-  rdfs:comment "may be either an integer year or a YYYY-MM-DD date" ;
-  rdfs:label "integer or date or bdo:DateType"@en ;
-  owl:equivalentClass [
-      a owl:Class ;
-      owl:unionOf (
-          xsd:date
-          xsd:integer
-          bdo:Date
-        ) ;
-    ] ;
 .
 bdo:IntegerOrString
   a rdfs:Datatype ;
@@ -1004,9 +610,6 @@ bdo:LCCallNumber
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
 .
 bdo:LangScript
-  a owl:Class ;
-  rdfs:comment ":LangScript individuals represent combinations of a Language, a script, and possibly a transliteration in which the Language is expressed. For example, bdr:BoEwts represents Tibetan in the Extended Wylie transliteration (which is written in Latin script)"@en ;
-  rdfs:label "Language+Script"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:LangStringOrNoColophon
@@ -1020,10 +623,6 @@ bdo:LangStringOrNoColophon
     ] ;
 .
 bdo:Language
-  a owl:Class ;
-  rdfs:comment "A natural Language such as bdr:Bo for Tibetan, bdr:Zh for Chinese, bdr:Sa for Sanskrit, etc."@en ;
-  rdfs:label "Language"@en ;
-  rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Lineage
@@ -1119,15 +718,9 @@ bdo:LineageOrNoteOrWork
     ] ;
 .
 bdo:LineageType
-  a owl:Class ;
-  rdfs:comment "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
-  rdfs:label "lineage type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Material
-  a owl:Class ;
-  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed."@en ;
-  rdfs:label "Material"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:MixedUnion
@@ -1175,12 +768,6 @@ bdo:OriginatedEvent
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:PaginationType
-  a owl:Class ;
-  rdfs:comment """Indicates whether the outlining is relative or absolute. This refers to the convention for WorkLocation information. Almost all outlining is done with absolute pagination.
-
-Relative pagination uses pagination in the content of the work while absolute counts from the first image of a scanned volume an since there are 2 scanned pages of metadata in each volume, absolute pagination generally starts at 3."""@en ;
-  rdfs:comment "Migration info: The pagination information affects the interpretation of the :WorkLocation(s) that occur in the original outline. The migration should add the pagination information to each WorkLocation since there will no longer be an Outline document"@en ;
-  rdfs:label "pagination type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Person
@@ -1277,8 +864,6 @@ bdo:PersonFirstOrdinationName
 .
 bdo:PersonFoundsMonastery
   a owl:Class ;
-  adm:deprecatedComment "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
-  adm:replaceWithClass bdo:PlaceFounded ;
   rdfs:comment "Migration hint: occurrences of this event in the legacy data are modeled by adding a PlaceEvent of type founded to the Monastery Place and a reference to the founder Person via :placeEventWho predicate"@en ;
   rdfs:label "Founds Monastery"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
@@ -1352,6 +937,7 @@ bdo:PersonOfficeTitle
 bdo:PersonOrCorporation
   a owl:Class ;
   rdfs:comment "Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event"@en ;
+  rdfs:comment "deprecated in favor of :Agent"@en ;
   rdfs:label "person or coporation"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
@@ -1361,6 +947,7 @@ bdo:PersonOrCorporation
           bdo:Person
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 bdo:PersonOrPlace
   a owl:Class ;
@@ -1479,54 +1066,16 @@ bdo:PlaceRebuilt
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceType
-  a owl:Class ;
-  rdfs:comment "The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc."@en ;
-  rdfs:label "Place Type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:PrintMethod
-  a owl:Class ;
-  rdfs:label "Print method" ;
   rdfs:subClassOf bdo:Type ;
-.
-bdo:PrintMethod_Intaglio
-  a owl:Class ;
-  rdfs:label "Print method Intaglio" ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod_Manuscript
-  a owl:Class ;
-  rdfs:label "Print method Manuscript"@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod_Offset
-  a owl:Class ;
-  rdfs:label "Print method Offset"@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod_Relief
-  a owl:Class ;
-  rdfs:label "Print method Relief" ;
-  rdfs:subClassOf bdo:PrintMethod ;
 .
 bdo:PrintedEvent
   a owl:Class ;
   rdfs:comment "An event of printing one or more :Items of a :Work"@en ;
   rdfs:label "Work Printed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
-.
-bdo:ProductOrProductOrg
-  a owl:Class ;
-  rdfs:comment "used as domain for properties recording CTC subscriber info"@en ;
-  rdfs:label "product or product organization"@en ;
-  rdfs:subClassOf bdo:AdmUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          adm:Product
-          adm:ProductOrg
-        ) ;
-    ] ;
 .
 bdo:ProvenanceNote
   a owl:Class ;
@@ -1539,11 +1088,10 @@ bdo:PublishedEvent
   rdfs:label "Work Published"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:QuarterCentury
+bdo:PublishedWork
   a owl:Class ;
-  rdfs:label "Quarter Century"@en ;
-  rdfs:label "四分之一世纪"@zh-hans ;
-  rdfs:subClassOf bdo:TimePeriod ;
+  rdfs:label "Published work" ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:RequestedEvent
   a owl:Class ;
@@ -1567,13 +1115,9 @@ bdo:Role
   rdfs:comment "Names are represented by rdfs:label"@en ;
   rdfs:comment "Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly used concept in libraries."@en ;
   rdfs:label "Role"@en ;
-  rdfs:subClassOf bdo:Entity ;
+  rdfs:subClassOf bdo:Facet ;
 .
 bdo:Script
-  a owl:Class ;
-  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Kyug'Yig, Native (implies Unicode)"@en ;
-  rdfs:label "Script"@en ;
-  rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:SecondRevisedEvent
@@ -1585,6 +1129,11 @@ bdo:SecondTranslatedEvent
   a owl:Class ;
   rdfs:label "Second translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
+.
+bdo:SerialWork
+  a owl:Class ;
+  rdfs:label "Serial work" ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:SingleAgent
   a owl:Class ;
@@ -1603,70 +1152,6 @@ Both chunk and char number start at one."""@en ;
   rdfs:label "Slice Loc"^^rdf:langString ;
 .
 bdo:Taxonomy
-  a owl:Class ;
-  rdfs:comment """A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
-
-Assertions using :taxSubClass and :taxElementOf object properties organize the set of typed individuals into a class/subclass hierarchy. Typed indivduals can be asserted to be :taxSubClass of other individuals or of the :Taxonomy individual itself - the :Taxonomy individual is the root of the class/subclass hierarchy.
-
-Typed individuals are asserted to be :taxElementOf other typed individuals that are :taxSubClass related to the :Taxonomy individual.
-
-This approach allows for typed individuals to be elements or subclass as needed for the given taxonomy. For example, 
-
-    :Tradition owl:subClassOf :Type .
-
-    bdr:TraditionTaxonomy a :Taxonomy .
-    bdr:EightPracticeLineages a :Taxonomy ;
-        :taxSubClass bdr:TraditionTaxonomy .
-
-    bdr:TraditionGeluk a :Tradition ;
-        :taxSubClass bdr:TraditionTaxonomy .
-
-    bdr:TraditionNyingma a :Tradition ;
-        :taxSubClass bdr:EightPracticeLineages .
-
-    bdr:TraditionKagyu a :Tradition ;
-        :taxSubClass bdr:EightPracticeLineages .
-
-permits one to assert that
-
-    bdr:G521 :placeEvent 
-                    [ a :PlaceFounded ;
-                      :onOrAbout  \"1150\" ;
-                      :placeEventAffiliation bdr:TraditionKagyu ] ,
-                    [ a :PlaceConverted ;
-                      :placeEventAffiliation bdr:TraditionNyingma ] .
-
-and
-
-    bdr:G1KR781 :placeEvent
-                    [ a :PlaceFounded ;
-                      :onOrAbout  \"1660\" ;
-                      :placeEventAffiliation bdr:TraditionKagyu ] ,
-                    [ a :PlaceConverted ;
-                      :onOrAbout  \"1674\" ;
-                      :placeEventAffiliation bdr:TraditionGeluk ] .
-
-
-Using typed individuals provides a straightforward approach to localization by simply attaching rdfs:label in the various languages to eah of the typed individuals so that bdr:TraditionNyingms will have the zh, bo, and en labels needed to display in an application.
-
-Using typed individuals allows to provide a uniform approach to typing names, events, groups and so on rather than using owl:class/subclass relations in some cases and sub-properties (data or object) in other cases."""@en ;
-  rdfs:comment """Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a \"coherent\" set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
-
-Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:TraditionDrukpaKagyu find also instances of bdr:TraditionTodrukKagyu and so on."""@en ;
-  rdfs:comment """Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
-
-bdr:TraditionTaxonomy a :Taxonomy ;
-      :taxSubclassProperty :taxSubclass ;
-      :taxElementOfProperty :taxElementOf .
-
-If there were an alternative Taxonomy of Traditions, e.g.,  bdr:OtherTaxonomy:
-
-bdr:OtherTaxonomy a :Taxonomy ;
-      :taxSubclassProperty :taxSubclass02 ;
-      :taxElementOfProperty :taxElementOf02 .
-
-Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously."""@en ;
-  rdfs:label "Taxonomy"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:TextualEntity
@@ -1693,22 +1178,7 @@ bdo:ThirdTranslatedEvent
   rdfs:label "Third translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:TibetanLineageType
-  a owl:Class ;
-  rdfs:comment "TibetanLineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc."@en ;
-  rdfs:label "Tibetan Lineage type"@en ;
-  rdfs:subClassOf bdo:LineageType ;
-.
-bdo:TibetanTradition
-  a owl:Class ;
-  rdfs:comment "Individuals represent various (Tibetan) Buddhist traditions, e.g., Karma Kagyu, Bon, or Nyingma"@en ;
-  rdfs:label "Tibetan Tradition"@en ;
-  rdfs:subClassOf bdo:Tradition ;
-.
 bdo:TimePeriod
-  a owl:Class ;
-  rdfs:comment "Timer periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
-  rdfs:label "Time Period"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Topic
@@ -1720,9 +1190,6 @@ bdo:Topic
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:Tradition
-  a owl:Class ;
-  rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
-  rdfs:label "type of tradition"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:TranslatedEvent
@@ -1733,15 +1200,11 @@ bdo:TranslatedEvent
 .
 bdo:TranslationRevisedEvent
   a owl:Class ;
-  adm:replaceWithClass bdo:RevisedEvent ;
   rdfs:label "Revision of a translation"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
   owl:deprecated true ;
 .
 bdo:Transliteration
-  a owl:Class ;
-  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, ExtendWylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese (in Latin script)"@en ;
-  rdfs:label "Transliteration"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Type
@@ -1753,8 +1216,18 @@ An owl:subClassOf :Type, e.g., :KinType, will have some set of individuals that 
 The set of such individuals may be further organized via :Taxonomy but need not be."""@en ;
   rdfs:label "Type"@en ;
 .
+bdo:UnicodeWork
+  a owl:Class ;
+  rdfs:label "Unicode work" ;
+  rdfs:subClassOf bdo:Work ;
+.
 bdo:Union
   a owl:Class ;
+.
+bdo:VirtualWork
+  a owl:Class ;
+  rdfs:label "Virtual work" ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:Volume
   a owl:Class ;
@@ -1808,13 +1281,13 @@ The Works also included some structural metadata in the volumeMap but that is mo
 .
 bdo:WorkBibliographicalTitle
   a owl:Class ;
-  rdfs:comment "This is the main title of a work, the title by which it is the most known. If a work has only one title, it must be of type Bibliographic Title. There should be only one bibliographical title per work."@en ;
+  rdfs:comment "The main title of a work, the title by which it is the most often known." ;
   rdfs:label "Bibliographic Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkColophonTitle
   a owl:Class ;
-  rdfs:comment "Use this title type for titles that appear specifically in the colophon when they differ from the main title."@en ;
+  rdfs:comment "Title given in the colophon of a Work or text"@en ;
   rdfs:label "Colophon Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1822,11 +1295,13 @@ bdo:WorkCopyrightPageTitle
   a owl:Class ;
   rdfs:comment "use for the title on the copyright page when it differs from the bibliographical title."@en ;
   rdfs:label "Copyright page Title"@en ;
+  rdfs:seeAlso "http://cip.loc.gov/cipman/"^^xsd:anyURI ;
+  rdfs:seeAlso "https://www.loc.gov/publish/cip/news/lccn_art.html"^^xsd:anyURI ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkCoverTitle
   a owl:Class ;
-  rdfs:comment "Use this title for the cover page titles when they differ from the bibliographical title."@en ;
+  rdfs:comment "Title printed on the cover of a Work or text as issued"@en ;
   rdfs:label "Cover Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1844,11 +1319,13 @@ bdo:WorkEvent
 .
 bdo:WorkFullTitle
   a owl:Class ;
+  rdfs:comment "Title on the first page of the text of the Tibetan traditional Pecha format."@en ;
   rdfs:label "Full Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkHalfTitle
   a owl:Class ;
+  rdfs:comment "Title of a publication appearing on a page or folio preceding the title page."@en ;
   rdfs:label "Half Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1859,29 +1336,13 @@ bdo:WorkLocation
   rdfs:comment "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
   rdfs:subClassOf bdo:Facet ;
 .
-bdo:WorkOrAdmOutline
-  a owl:Class ;
-  rdfs:comment "domain for :workLegacyNode as part of migration - not a core ontology concept"@en ;
-  rdfs:label "work or adm:Outline"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          adm:Outline
-          bdo:Work
-        ) ;
-    ] ;
-.
 bdo:WorkOtherTitle
   a owl:Class ;
-  rdfs:comment "when a work is known by different titles, the main one is recorded by :WorkBibliographicalTitle and the others with :WorkOtherTitle. This should mainly be used with abstract works."@en ;
+  rdfs:comment "Ttitle that a work is known by other than one of the defined title types"@en ;
   rdfs:label "Other Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkPartType
-  a owl:Class ;
-  rdfs:comment "Migration hint: represents the Work related outline:node/@type"@en ;
-  rdfs:label "Work Part Type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:WorkRefs
@@ -1893,18 +1354,20 @@ bdo:WorkRefs
 .
 bdo:WorkRunningTitle
   a owl:Class ;
-  rdfs:comment "for Tibetan pecha this is typically the short title appearing in the left side textbox of the recto side of the page"@en ;
+  rdfs:comment "Title as it appears in the table of contents of a Work"@en ;
   rdfs:label "Running Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkSpineTitle
   a owl:Class ;
+  rdfs:comment "title indicated on the spine of a book"@en ;
   rdfs:comment "use for titles indicated on the spine of a book when it differs from the bibliographical title."@en ;
   rdfs:label "Spine Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkSubtitle
   a owl:Class ;
+  rdfs:comment "Title that is explanatory. Typically following the main Title Page Title or Cover Title"@en ;
   rdfs:label "Sibtitle"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1925,19 +1388,17 @@ bdr:W22083 a :Work ;
 .
 bdo:WorkTitlePageTitle
   a owl:Class ;
-  rdfs:comment "use for the main title on the title page (not the cover page) when it differs from the bibliographical title."@en ;
-  rdfs:label "Title page Title"@en ;
+  rdfs:comment "Title that appears on the title page of a Work"@en ;
+  rdfs:label "Title page title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkTitlePortion
   a owl:Class ;
+  rdfs:comment "Title that is abbreviated, condensed, divided from the main title"@en ;
   rdfs:label "Title portion"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkType
-  a owl:Class ;
-  rdfs:comment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
-  rdfs:label "type of work"@en ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:access
@@ -1945,8 +1406,8 @@ bdo:access
   rdfs:comment "The type of online access permitted for the subject Work."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "text access"@en ;
-  rdfs:range adm:Access ;
   rdfs:seeAlso bdo:AccessType ;
+  owl:deprecated true ;
 .
 bdo:agent
   a owl:ObjectProperty ;
@@ -1990,8 +1451,8 @@ bdo:contentProvider
   rdfs:comment "The organization or person that provided the Etext"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "content provider"@en ;
-  rdfs:range adm:ContentProvider ;
-  owl:deprecated "deprecated in favor of :hasContentProvider - name change"@en ;
+  owl:deprecated true ;
+  rdfs:comment "see adm:contentProvider"@en ;
 .
 bdo:corporationHasMember
   a owl:ObjectProperty ;
@@ -2091,8 +1552,7 @@ bdo:creatorContributingAuthor
 .
 bdo:creatorEditor
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of creatorCompiler"@en ;
-  adm:replaceWithObjectProperty bdo:creatorCompiler ;
+  rdfs:comment "deprecated in favor of bdo:Compiler"@en ;
   rdfs:label "editor"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
@@ -2106,8 +1566,7 @@ bdo:creatorForger
 .
 bdo:creatorGeneralAuthor
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of :creatorMainAuthor"@en ;
-  adm:replaceWithObjectProperty bdo:creatorMainAuthor ;
+  rdfs:comment "deprecated in favor of :MainAuthor"@en ;
   rdfs:label "general author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
@@ -2143,8 +1602,7 @@ bdo:creatorOralTranslator
 .
 bdo:creatorPandita
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of :creatorIndicScholar"@en ;
-  adm:replaceWithObjectProperty bdo:creatorIndicScholar ;
+  rdfs:comment "deprecated in favor of :IndicScholar"@en ;
   rdfs:label "pandita"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
@@ -2167,7 +1625,7 @@ bdo:creatorReciter
 .
 bdo:creatorRequester
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated - not used"@en ;
+  rdfs:comment "deprecated - not used"@en ;
   rdfs:comment "An individual who requested the author to write the Work"@en ;
   rdfs:label "requester"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
@@ -2175,7 +1633,7 @@ bdo:creatorRequester
 .
 bdo:creatorReviser
   a owl:ObjectProperty ;
-  rdfs:label """An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
+  rdfs:comment """An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
   rdfs:label "reviser"@en ;
@@ -2184,7 +1642,6 @@ The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalp
 .
 bdo:creatorReviserOfTranslation
   a owl:ObjectProperty ;
-  adm:replaceWithObjectProperty bdo:creatorReviser ;
   rdfs:comment """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
@@ -2229,9 +1686,16 @@ bdo:dataTypeExpression
 bdo:dateApproximate
   a owl:DatatypeProperty ;
   rdfs:comment "set to true to indicate that the date information in an :Event or :Period is approximate or uncertain"@en ;
-  rdfs:domain bdo:EventOrPeriod ;
+  rdfs:domain bdo:Date ;
   rdfs:label "date is approximate"@en ;
   rdfs:range xsd:boolean ;
+.
+bdo:datePeriod
+  a owl:ObjectProperty ;
+  rdfs:comment "associates a :Date with at most one :TimePeriod such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :TimePeriod metadata"@en ;
+  rdfs:domain bdo:Date ;
+  rdfs:label "period"@en ;
+  rdfs:range bdo:TimePeriod ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -2298,24 +1762,26 @@ bdo:eTextVolumeIndex
   rdfs:label "eText volume index"@en ;
   rdfs:range xsd:integer ;
 .
-bdo:eventPeriod
-  a owl:ObjectProperty ;
-  rdfs:comment "associates an event with a time period"@en ;
+bdo:eventWhen
+  a owl:DatatypeProperty ;
+  rdfs:comment "Indicates that the event is known to have occurred in relation to a given :AnyDate"@en ;
   rdfs:domain bdo:Event ;
-  rdfs:label "period"@en ;
-  rdfs:range bdo:TimePeriod ;
+  rdfs:label "event when"@en ;
+  rdfs:range bdo:AnyDate ;
 .
 bdo:eventWhere
   a owl:ObjectProperty ;
+  rdfs:comment "associates an :Event with at most one :Place"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "place"@en ;
   rdfs:range bdo:Place ;
 .
 bdo:eventWho
   a owl:ObjectProperty ;
+  rdfs:comment ":eventWho associates one or more :AgentsOrAgentInRole to a given :Event"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "who"@en ;
-  rdfs:range bdo:PersonOrCorporation ;
+  rdfs:range bdo:AgentsOrAgentInRole ;
 .
 bdo:hasAunt
   a owl:ObjectProperty ;
@@ -2344,7 +1810,7 @@ bdo:hasContentProvider
   rdfs:comment "The organization (or person) that provided the subject :TextualEntity. In this context, providing can mean originating the enscribing, carving or woodblocks and printing, or creating a collection of texts from other providers. For example, the sde dge par khang can be recorded as the :Organization that provided the sde dge bka' 'gyur."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has content provider"@en ;
-  rdfs:range bdo:AnyOrganization ;
+  rdfs:range bdo:Agents ;
 .
 bdo:hasCousin
   a owl:ObjectProperty ;
@@ -2589,7 +2055,7 @@ bdo:hasSteward
   rdfs:comment "A steward of (a Collection of) Textual Item(s) is an organization that preserves and makes metadata and images/etexts available digitally.  A steward may be an :Organization or an adm:Organization."@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has steward"@en ;
-  rdfs:range bdo:AnyOrganization ;
+  rdfs:range bdo:Agents ;
 .
 bdo:hasUncle
   a owl:ObjectProperty ;
@@ -2866,8 +2332,9 @@ bdo:license
   rdfs:comment "The license under which access to the Work is provided"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "text license"@en ;
-  rdfs:range adm:License ;
   rdfs:seeAlso bdo:License ;
+  rdfs:comment "deprecated by adm:license"@en ;
+  owl:deprecated true ;
 .
 bdo:lineageDownFrom
   a owl:ObjectProperty ;
@@ -3012,16 +2479,18 @@ bdo:migration_exception
 bdo:notAfter
   a owl:DatatypeProperty ;
   rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given"@en ;
-  rdfs:domain bdo:EventOrPeriod ;
+  rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
-  rdfs:range bdo:IntegerOrDate ;
+  rdfs:range bdo:AnyDate ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:notBefore
   a owl:DatatypeProperty ;
   rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given"@en ;
-  rdfs:domain bdo:EventOrPeriod ;
+  rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
-  rdfs:range bdo:IntegerOrDate ;
+  rdfs:range bdo:AnyDate ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:note
   a owl:AnnotationProperty ;
@@ -3068,17 +2537,15 @@ bdo:noteWork
 .
 bdo:onDate
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year  or on the date given"@en ;
+  rdfs:comment "The event is known to have occurred during the year or date given"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
-  rdfs:range bdo:IntegerOrDate ;
+  rdfs:range bdo:AnyDate ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:onOrAbout
   a owl:DatatypeProperty ;
-  adm:deprecatedComment ":onYear, :notBefore, and :notAfter will replace :onOrAbout"@en ;
-  adm:replaceWithDataProperty bdo:notAfter ;
-  adm:replaceWithDataProperty bdo:notBefore ;
-  adm:replaceWithDataProperty bdo:onYear ;
+  rdfs:comment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
   rdfs:comment "This property replaces the various separate circa properties with a single property that will have a single validator and editor support."@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "circa"@en ;
@@ -3091,6 +2558,7 @@ bdo:onYear
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
   rdfs:range xsd:integer ;
+  rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:originalRecord
   a owl:AnnotationProperty ;
@@ -3161,9 +2629,12 @@ bdo:personContributingAuthorOf
 .
 bdo:personCreatorOf
   a owl:ObjectProperty ;
+  rdfs:comment "deprecated in favor of bod:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
+  rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "creator of"@en ;
   rdfs:range bdo:Work ;
+  owl:deprecated true ;
   owl:inverseOf bdo:workCreator ;
 .
 bdo:personEvent
@@ -3240,6 +2711,12 @@ bdo:personOfSect
   rdfs:domain bdo:Person ;
   rdfs:label "of sect"@en ;
   rdfs:range bdo:Topic ;
+.
+bdo:personOfTradition
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Person ;
+  rdfs:label "person of tradition" ;
+  rdfs:range bdo:Tradition ;
 .
 bdo:personOralTranslatorOf
   a owl:ObjectProperty ;
@@ -3330,7 +2807,7 @@ bdo:placeEventAffiliation
   rdfs:comment "Refers to the Tradition that the place event is affiliated with."@en ;
   rdfs:domain bdo:PlaceEvent ;
   rdfs:label "affiliated tradition"@en ;
-  rdfs:range bdo:TibetanTradition ;
+  rdfs:range bdo:Tradition ;
 .
 bdo:placeGB2260-2013
   a owl:DatatypeProperty ;
@@ -3352,11 +2829,11 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 bdo:placeIsNear
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  adm:deprecatedComment "not actually used in legacy data and not well defined"@en ;
+  rdfs:comment "deprecated because not actually used in legacy data and not well defined"@en ;
   rdfs:comment "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
   rdfs:domain bdo:Place ;
   rdfs:range bdo:Place ;
-  owl:deprecated "true"@en ;
+  owl:deprecated true ;
 .
 bdo:placeLat
   a owl:DatatypeProperty ;
@@ -3472,7 +2949,7 @@ bdo:role
 When used with an :Agents the triple is asserting that the subject is commonly found performing in the target :Role
 
 When used in an :AgentInRole, the associated :Agents is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
-  rdfs:domain bdo:AgentOrAgentInRole ;
+  rdfs:domain bdo:Agents ;
   rdfs:label "role"@en ;
   rdfs:range bdo:Role ;
 .
@@ -3548,25 +3025,6 @@ bdo:sliceStartChunk
   rdfs:label "slice start chunk"@en ;
   rdfs:range bdo:SliceLoc ;
   rdfs:seeAlso bdo:Etext ;
-.
-bdo:taxHasSubClass
-  a owl:ObjectProperty ;
-  rdfs:label "taxonomy has subclass"@en ;
-  owl:inverseOf bdo:taxSubClassOf ;
-.
-bdo:taxSubClassOf
-  a owl:ObjectProperty ;
-  rdfs:label "This property identifies the subject as a subclass of a Taxonomy or some other subclass of a Taxonomy"@en ;
-  rdfs:label "taxonomy is subclass of"@en ;
-  rdfs:seeAlso bdo:Taxonomy ;
-.
-bdo:taxSubclassRelation
-  a owl:AnnotationProperty ;
-  rdfs:comment "This identifies a property that is used in a custom taxonomy to represent the subclass relation for the taxonomy"@en ;
-  rdfs:domain bdo:Taxonomy ;
-  rdfs:label "taxonomy subclass relation"@en ;
-  rdfs:range owl:ObjectProperty ;
-  rdfs:seeAlso bdo:Taxonomy ;
 .
 bdo:transliteration
   a owl:ObjectProperty ;
@@ -3801,8 +3259,10 @@ bdo:workContainsChapters
 .
 bdo:workCreator
   a owl:ObjectProperty ;
+  rdfs:comment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   bdo:inferSubTree true ;
   rdfs:comment "Identifies the type and person that are a creator of the work"@en ;
+  rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
@@ -3813,11 +3273,12 @@ bdo:workCreator
   rdfs:label "creator"@en ;
   rdfs:range bdo:Person ;
   rdfs:seeAlso bdo:creator ;
-  owl:deprecated "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
+  owl:deprecated "true" ;
+  owl:inverseOf bdo:personCreatorOf ;
 .
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :CompletedEvent."@en ;
+  rdfs:comment "deprecated in favor of :CompletedEvent."@en ;
   rdfs:comment "this property is migrated from the pubinfo.xsd and is sparsely used in the xml dataset (546 occurrences)."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "date of writing"@en ;
@@ -4063,8 +3524,7 @@ Adding this \"virtual\" property to the ontology provides a place to add the lab
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of the various :WorkEvents."@en ;
-  adm:replaceWithClass bdo:WorkEvent ;
+  rdfs:comment "deprecated in favor of the various :WorkEvents."@en ;
   rdfs:comment "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has site"@en ;
@@ -4151,13 +3611,12 @@ bdo:workIsSimilarTo
 .
 bdo:workIsbn
   a owl:DatatypeProperty ;
-  adm:convertProperty "convert to Bibframe identifiedBy with range Bibframe Isbn class"@en ;
-  adm:convertToProperty bf:identifiedBy ;
-  adm:convertValueToClass bf:Isbn ;
+  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:Isbn class"@en ;
   rdfs:comment "Refers to the International Standard Book Number for the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "ISBN"@en ;
   rdfs:range bdo:ISBN ;
+  owl:deprecated true ;
 .
 bdo:workKaTenSiglaA
   a owl:DatatypeProperty ;
@@ -4283,23 +3742,35 @@ bdo:workLangScript
 .
 bdo:workLcCallNumber
   a owl:DatatypeProperty ;
-  adm:convertProperty "convert to Bibframe identifiedBy with range Bibframe ShelfMarkLcc class"@en ;
-  adm:convertToProperty bf:identifiedBy ;
-  adm:convertValueToClass bf:ShelfMarkLcc ;
+  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:ShelfMarkLcc class"@en ;
   rdfs:comment "Refers to the Library of Congress Shelf mark call number"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has LC Call Number"@en ;
   rdfs:range bdo:LCCallNumber ;
+  owl:deprecated true ;
 .
 bdo:workLccn
   a owl:DatatypeProperty ;
-  adm:convertProperty "convert to Bibframe identifiedBy with range Bibframe Lccn class"@en ;
-  adm:convertToProperty bf:identifiedBy ;
-  adm:convertValueToClass bf:Lccn ;
+  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:Lccn class"@en ;
   rdfs:comment "Refers to the Library of Congress Control Number"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "LCCN"@en ;
   rdfs:range bdo:LCCN ;
+  owl:deprecated true ;
+.
+bdo:workLinkTo
+  a owl:InverseFunctionalProperty ;
+  rdfs:domain bdo:VirtualWork ;
+  rdfs:label "work link to"@en ;
+  rdfs:range bdo:Work ;
+  owl:inverseOf bdo:workLinkedAt ;
+.
+bdo:workLinkedAt
+  a owl:InverseFunctionalProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "work linked at"@en ;
+  rdfs:range bdo:VirtualWork ;
+  owl:inverseOf bdo:workLinkTo ;
 .
 bdo:workLocation
   a owl:ObjectProperty ;
@@ -4563,8 +4034,7 @@ This is generally not the source printery of the original wood block prints that
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
-  adm:replaceWithClass bdo:PublishedEvent ;
+  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:comment "Loction of the publisher of the form of the Work that has been digitized."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher location"@en ;
@@ -4573,8 +4043,7 @@ bdo:workPublisherLocation
 .
 bdo:workPublisherName
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
-  adm:replaceWithClass bdo:PublishedEvent ;
+  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:comment "The name of the publisher transcribed from the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher name"@en ;
@@ -4716,10 +4185,12 @@ bdo:workTranslationOf
 bdo:workType
   a owl:ObjectProperty ;
   rdfs:comment "Migration info: This is the <work:info @nodeType/> attribute NOT the unused @type attribute"@en ;
+  rdfs:comment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "work type"@en ;
   rdfs:range bdo:WorkType ;
   rdfs:seeAlso bdo:WorkType ;
+  owl:deprecated true ;
 .
 tbr:outlineName
   a owl:AnnotationProperty ;
@@ -4805,559 +4276,12 @@ tbr:place_town_syl
   rdfs:label "town name"@en ;
   rdfs:range xsd:string ;
 .
-bdr:AccessFairUse
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
-  rdfs:label "Fair Use"@en ;
-.
-bdr:AccessMixed
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
-  rdfs:label "mixed access"@en ;
-.
-bdr:AccessOpen
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The contents of the Work are freely avaiable in their entirety."@en ;
-  rdfs:label "Open Access"@en ;
-.
-bdr:AccessRestrictedByQuality
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The quality of the scanning or eText conversion to poor to warrant making it available online."@en ;
-  rdfs:label "Restricted by Quality"@en ;
-.
-bdr:AccessRestrictedByTbrc
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "BDRC is restricting access to the Work."@en ;
-  rdfs:label "Restricted by BDRC"@en ;
-.
-bdr:AccessRestrictedInChina
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The Work is not to be made available in the PRC."@en ;
-  rdfs:label "Restricted in China"@en ;
-.
-bdr:AccessRestrictedSealed
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The Work is sealed by tradition."@en ;
-  rdfs:label "Restricted Sealed"@en ;
-.
-bdr:AccessRestrictedTemporarily
-  a adm:Access ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The Work is temporarily restricted."@en ;
-  rdfs:label "Temporarily Restricted"@en ;
-.
-bdr:Binding_Codex_Perfect
-  a bdo:Binding_Codex ;
-  rdfs:comment "thermally activated glued paperback binding"@en ;
-  rdfs:label "Binding Codex Perfect" ;
-.
-bdr:Binding_Codex_Sewn
-  a bdo:Binding_Codex ;
-  rdfs:comment "conventional hardbound book other manuscript"@en ;
-  rdfs:label "sewn binding"@en ;
-.
-bdr:Binding_Continuous_Folded
-  a bdo:Binding_Continuous ;
-  rdfs:comment "folded concertina or accordion style"@en ;
-  rdfs:label "folded"@en ;
-.
-bdr:Binding_Continuous_Leporello
-  a bdo:Binding_Continuous ;
-  rdfs:comment "folded and bound between front and back boards"@en ;
-  rdfs:label "leporello"@en ;
-.
-bdr:Binding_Continuous_Scroll
-  a bdo:Binding_Continuous ;
-  rdfs:comment "continuous sheet written on oneside and rolled up"@en ;
-  rdfs:label "scroll"@en ;
-.
-bdr:Binding_LooseLeaf_Pecha
-  a bdo:Binding_LooseLeaf ;
-  rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
-  rdfs:label "pecha"@en ;
-.
-bdr:Binding_LooseLeaf_Pothi
-  a bdo:Binding_LooseLeaf ;
-  rdfs:comment "loose leaves with holes for string to keep the leaves together and wrapped in cloth"@en ;
-  rdfs:label "pothi"@en ;
-.
-bdr:Bo
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Tibetan"@en ;
-.
-bdr:BoDbuCan
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptDbuCan ;
-  bdo:taxSubClassOf bdr:BoTibt ;
-  rdfs:label "Tibetan in uchen script"@en ;
-  rdfs:label "dbu can"@bo-x-ewts ;
-.
-bdr:BoDbuMed
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptDbuMed ;
-  bdo:taxSubClassOf bdr:BoTibt ;
-  rdfs:label "Tibetan in ume script"@en ;
-  rdfs:label "dbu med"@bo-x-ewts ;
-.
-bdr:BoDeva
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptDeva ;
-  bdo:taxSubClassOf bdr:Bo ;
-  rdfs:comment "This combination is extremely rare but at least one occurence was found."@en ;
-  rdfs:label "Tibetan in Devanagari"@en ;
-.
-bdr:BoEwts
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptLatn ;
-  bdo:taxSubClassOf bdr:Bo ;
-  bdo:transliteration bdr:TransEWTS ;
-  rdfs:label "Tibetan in Extended Wylie"@en ;
-  rdfs:label "wa'i li"@bo-x-ewts ;
-.
-bdr:BoKhyugYig
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptKhyugYig ;
-  bdo:taxSubClassOf bdr:BoTibt ;
-  rdfs:label "'khyug yig"@bo-x-ewts ;
-  rdfs:label "Tibetan in Kyug 'Yig"@en ;
-.
-bdr:BoTibt
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangBo ;
-  bdo:script bdr:ScriptTibt ;
-  bdo:taxSubClassOf bdr:Bo ;
-  rdfs:label "Tibetan"@en ;
-  rdfs:label "bod yig"@bo-x-ewts ;
-.
-bdr:C18Q2
-  a bdo:QuarterCentury ;
-  a owl:NamedIndividual ;
-  bdo:notAfter 1749 ;
-  bdo:notBefore 1725 ;
-  rdfs:comment "1725 - 1749"@en ;
-  rdfs:label "2nd quarter of the 18th century"@en ;
-.
-bdr:C8Q1
-  a bdo:QuarterCentury ;
-  a owl:NamedIndividual ;
-  bdo:notAfter 724 ;
-  bdo:notBefore 700 ;
-  rdfs:comment "700 - 724"@en ;
-  rdfs:label "1st quarter of the 8th century"@en ;
-.
 bdr:ChineseDateNotSpecified
   a bdo:ChineseDate ;
   rdfs:label "Chinese date Not specified"@en ;
 .
-bdr:DzTibt
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangDz ;
-  bdo:script bdr:ScriptTibt ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Dzongkha (Bhutanese)"@en ;
-  rdfs:label "rdzong kha"@bo-x-ewts ;
-.
-bdr:EightMinorKagyuTraditions
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionKagyu ;
-  rdfs:label "Eight Minor Kagyu Traditions"@en ;
-.
-bdr:EightPracticeLineages
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:label "The Eight Practice Lineages"@en ;
-.
-bdr:EnLatn
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangEn ;
-  bdo:script bdr:ScriptLatn ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "English"@en ;
-.
-bdr:FormerQinDynasty
-  a bdo:ChineseDynasty ;
-  a owl:NamedIndividual ;
-  bdo:notAfter 394 ;
-  bdo:notBefore 350 ;
-  rdfs:comment "Former Qin (350-394) was one of the 16 countries"@en ;
-  rdfs:label "Former Qin Dynasty"@en ;
-  rdfs:label "前秦代"@zh-hans ;
-  rdfs:seeAlso "<https://translate.google.com/translate?hl=en&sl=zh-TW&u=https://zh.wikipedia.org/zh/%25E5%2589%258D%25E7%25A7%25A6&prev=search>"@en ;
-  rdfs:seeAlso "<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj30Ijx-MPaAhVGY6wKHUzFDRwQFggpMAA&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2589%258D%25E7%25A7%25A6&usg=AOvVaw07mPIu0PcnCySbo0auaBWp>"@zh-hans ;
-.
-bdr:FourMainKagyuTraditions
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionKagyu ;
-  rdfs:label "Four Greater"@en ;
-  rdfs:label "Main Dagpo Kagyu"@en ;
-.
-bdr:GenderFemale
-  a bdo:Gender ;
-  a owl:NamedIndividual ;
-  rdfs:label "female"@en ;
-.
-bdr:GenderMale
-  a bdo:Gender ;
-  a owl:NamedIndividual ;
-  rdfs:label "male"@en ;
-.
-bdr:GenderMixed
-  a bdo:Gender ;
-  a owl:NamedIndividual ;
-  rdfs:label "mixed gender"@en ;
-.
-bdr:GenderNotSpecified
-  a bdo:Gender ;
-  a owl:NamedIndividual ;
-  rdfs:label "gender not specified"@en ;
-.
-bdr:Hi
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangHi ;
-  rdfs:label "Hindi"@en ;
-.
-bdr:ImpressionSubstance_BlackInk
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Black ink"@en ;
-.
-bdr:ImpressionSubstance_GoldLeaf
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Gold leaf"@en ;
-.
-bdr:ImpressionSubstance_RedInk
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Red ink"@en ;
-.
-bdr:ImpressionSubstance_SilverLeaf
-  a bdo:ImpressionSubstance ;
-  rdfs:label "Impression substance Silver leaf"@en ;
-.
-bdr:LT0001
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "dbang"@bo-x-ewts ;
-  rdfs:label "empowerment"@en ;
-.
-bdr:LT0002
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "dmar khrid"@bo-x-ewts ;
-  rdfs:label "essential instruction"@en ;
-.
-bdr:LT0003
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gdams ngag"@bo-x-ewts ;
-  rdfs:label "oral instruction"@en ;
-.
-bdr:LT0004
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "instruction"@en ;
-  rdfs:label "khrid"@bo-x-ewts ;
-.
-bdr:LT0005
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "lung"@bo-x-ewts ;
-  rdfs:label "reading transmission"@en ;
-.
-bdr:LT0006
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "man ngag"@bo-x-ewts ;
-  rdfs:label "quintessential instruction"@en ;
-.
-bdr:LT0007
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gsal kha ma"@bo-x-ewts ;
-  rdfs:label "not specified"@en ;
-.
-bdr:LT0008
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "direct transmission"@en ;
-  rdfs:label "nye brgyud"@bo-x-ewts ;
-.
-bdr:LT0009
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "long lineage transmission"@en ;
-  rdfs:label "ring brgyud"@bo-x-ewts ;
-.
-bdr:LT0010
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "rjes gnang"@bo-x-ewts ;
-  rdfs:label "short empowerment"@en ;
-.
-bdr:LT0011
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "lineage of vows"@en ;
-  rdfs:label "sdom brgyud"@bo-x-ewts ;
-.
-bdr:LT0012
-  a bdo:TibetanLineageType ;
-  a owl:NamedIndividual ;
-  rdfs:label "oral lineage"@en ;
-  rdfs:label "snyan brgyud"@bo-x-ewts ;
-.
-bdr:LangBo
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "bo" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:label "Tibetan"@en ;
-  rdfs:label "bod yig"@bo-x-ewts ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
-.
-bdr:LangDz
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "dz" ;
-  bdo:langMARCCode "dzo" ;
-  rdfs:label "Dzongkha (Bhutanese)"@en ;
-  rdfs:label "rdzong kha"@bo-x-ewts ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/dzo> ;
-.
-bdr:LangEn
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "en" ;
-  bdo:langMARCCode "eng" ;
-  rdfs:label "English"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/eng> ;
-.
-bdr:LangHi
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "hi" ;
-  bdo:langMARCCode "hin" ;
-  rdfs:label "Hindi"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/hin> ;
-.
-bdr:LangMn
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "mn" ;
-  bdo:langMARCCode "mon" ;
-  rdfs:label "Mongolian"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/mon> ;
-.
-bdr:LangNew
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "ne" ;
-  bdo:langMARCCode "new" ;
-  rdfs:label "Newari (Nepal Bhasa)"@en ;
-  rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
-.
-bdr:LangPi
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "pi" ;
-  bdo:langMARCCode "pli" ;
-  rdfs:label "Pali"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/pli> ;
-.
-bdr:LangRu
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "ru" ;
-  bdo:langMARCCode "rus" ;
-  rdfs:label "Russian"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/code/ru> ;
-.
-bdr:LangSa
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "sa" ;
-  bdo:langMARCCode "san" ;
-  rdfs:label "Sanskrit"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
-.
-bdr:LangZh
-  a bdo:Language ;
-  a owl:NamedIndividual ;
-  bdo:langBCP47Lang "zh" ;
-  bdo:langMARCCode "chi" ;
-  rdfs:label "Chinese"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/zho> ;
-.
 bdr:LanguageTaxonomy
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubclassRelation bdo:taxSubClassOf ;
-  rdfs:seeAlso "Language taxonomy"@en ;
-.
-bdr:LicenseAllRightsReserved
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved."@en ;
-  rdfs:label "All Rights Reserved"@en ;
-.
-bdr:LicenseCC0
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The work is made available under Creative Commons, CC0 1.0."@en ;
-  rdfs:label "Creative Commons CC0"@en ;
-  rdfs:seeAlso <https://creativecommons.org/share-your-work/public-domain/cc0/> ;
-.
-bdr:LicenseCCBYSA3U
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:label "Creative Commons BY-SA 3.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/3.0/> ;
-.
-bdr:LicenseCCBYSA4U
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:label "Creative Commons BY-SA 4.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
-.
-bdr:LicenseMixed
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed)."@en ;
-  rdfs:label "mixed licensing"@en ;
-.
-bdr:LicensePublicDomain
-  a adm:License ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws."@en ;
-  rdfs:label "Public Domain"@en ;
-  rdfs:seeAlso <https://creativecommons.org/publicdomain/mark/1.0/deed> ;
-.
-bdr:MaterialBirchBark
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:label "birch bark"@en ;
-.
-bdr:MaterialCoryphaPalmLeaf
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:label "palm leaf (corypha)"@en ;
-.
-bdr:MaterialDigital
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
-  rdfs:label "digital material"@en ;
-.
-bdr:MaterialMixed
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:label "mixed materials"@en ;
-.
-bdr:MaterialMultiLayerPaper
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:comment "used for some manuscripts in Nepal"@en ;
-  rdfs:label "multi-layer paper"@en ;
-.
-bdr:MaterialPalmLeaf
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:label "palm leaf"@en ;
-.
-bdr:MaterialPaper
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:label "paper"@en ;
-.
-bdr:MaterialRicePaper
-  a bdo:Material ;
-  a owl:NamedIndividual ;
-  rdfs:label "rice paper"@en ;
-.
-bdr:Mn
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangMn ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Mongolian"@en ;
-.
-bdr:MnCyrl
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangMn ;
-  bdo:script bdr:ScriptCyrl ;
-  bdo:taxSubClassOf bdr:Mn ;
-  rdfs:label "Mongolian (in Cyrillic)"@en ;
-.
-bdr:MnLatn
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangMn ;
-  bdo:script bdr:ScriptLatn ;
-  bdo:taxSubClassOf bdr:Mn ;
-  rdfs:label "Mongolian in Romanized form"@en ;
-.
-bdr:MnMong
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangMn ;
-  bdo:script bdr:ScriptMong ;
-  bdo:taxSubClassOf bdr:Mn ;
-  rdfs:label "Mongolian (in old Mongolian script)"@en ;
-.
-bdr:MnUnspecified
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangMn ;
-  bdo:taxSubClassOf bdr:Mn ;
-  rdfs:label "Mongolian"@en ;
-.
-bdr:New
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangNew ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Newari"@en ;
-.
-bdr:NewDeva
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangNew ;
-  bdo:script bdr:ScriptDeva ;
-  bdo:taxSubClassOf bdr:New ;
-  rdfs:label "Newari in Devanagari"@en ;
-.
-bdr:NewNewa
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangNew ;
-  bdo:script bdr:ScriptNewa ;
-  bdo:taxSubClassOf bdr:New ;
-  rdfs:label "Newari in Pracalit"@en ;
+  a bdo:Type ;
 .
 bdr:ObjectTypeAutograph
   a bdo:ObjectType ;
@@ -5403,1521 +4327,6 @@ bdr:ObjectTypeTypeSet
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
   rdfs:label "typeset"@en ;
-.
-bdr:OutlineTypeCompositeVolume
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeGsungBum
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeGterChos
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeMultiVolumeCollection
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeNotAssigned
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypePartialCollectedWorks
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeSaBcad
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:OutlineTypeSubjectCollection
-  a adm:OutlineType ;
-  a owl:NamedIndividual ;
-.
-bdr:PT0001
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "administrative district"@en ;
-  rdfs:label "yul sde"@bo-x-ewts ;
-  rdfs:label "地区（古）"@zh-hans ;
-.
-bdr:PT0002
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "autonomous prefecture"@en ;
-  rdfs:label "rang skyong khul"@bo-x-ewts ;
-  rdfs:label "自治州"@zh-hans ;
-.
-bdr:PT0003
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "autonomous region"@en ;
-  rdfs:label "rang skyong ljongs"@bo-x-ewts ;
-  rdfs:label "自治区"@zh-hans ;
-.
-bdr:PT0004
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "bridge"@en ;
-  rdfs:label "zam pa"@bo-x-ewts ;
-  rdfs:label "桥"@zh-hans ;
-.
-bdr:PT0005
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "canyon"@en ;
-  rdfs:label "rong"@bo-x-ewts ;
-  rdfs:label "峡谷"@zh-hans ;
-.
-bdr:PT0006
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "charnel ground"@en ;
-  rdfs:label "dur khrod"@bo-x-ewts ;
-  rdfs:label "石经堆"@zh-hans ;
-.
-bdr:PT0007
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "circuit"@en ;
-  rdfs:label "skor"@bo-x-ewts ;
-  rdfs:label "围"@zh-hans ;
-.
-bdr:PT0008
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "city"@en ;
-  rdfs:label "grong khyer"@bo-x-ewts ;
-  rdfs:label "城市"@zh-hans ;
-.
-bdr:PT0009
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Modern or contemporary places defined in terms of current political control such as Chinese counties, provinces and so on"@en ;
-  rdfs:label "Contemporary Places"@en ;
-  rdfs:label "deng rabs sa gnas"@bo-x-ewts ;
-.
-bdr:PT0010
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "country"@en ;
-  rdfs:label "rgyal khab"@bo-x-ewts ;
-  rdfs:label "国家"@zh-hans ;
-.
-bdr:PT0011
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "county (modern)"@en ;
-  rdfs:label "rdzong"@bo-x-ewts ;
-  rdfs:label "县"@zh-hans ;
-.
-bdr:PT0012
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "chus"@bo-x-ewts ;
-  rdfs:label "county area"@en ;
-  rdfs:label "区"@zh-hans ;
-.
-bdr:PT0013
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "chol kha"@bo-x-ewts ;
-  rdfs:label "cultural domain"@en ;
-  rdfs:label "文化区域"@zh-hans ;
-.
-bdr:PT0014
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "district"@en ;
-  rdfs:label "sa khul"@bo-x-ewts ;
-  rdfs:label "地区（专区）"@zh-hans ;
-.
-bdr:PT0015
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "estate"@en ;
-  rdfs:label "gzhis ka"@bo-x-ewts ;
-  rdfs:label "庄园"@zh-hans ;
-.
-bdr:PT0016
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "ferry route"@en ;
-  rdfs:label "gru kha"@bo-x-ewts ;
-  rdfs:label "渡口"@zh-hans ;
-.
-bdr:PT0017
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "forest"@en ;
-  rdfs:label "nags tshal"@bo-x-ewts ;
-  rdfs:label "森林"@zh-hans ;
-.
-bdr:PT0018
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "fortress"@en ;
-  rdfs:label "mkhar rnying"@bo-x-ewts ;
-  rdfs:label "城堡"@zh-hans ;
-.
-bdr:PT0019
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "be hu"@bo-x-ewts ;
-  rdfs:label "hundred household district"@en ;
-  rdfs:label "百户区"@zh-hans ;
-.
-bdr:PT0020
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "hamlet"@en ;
-  rdfs:label "sde tsho"@bo-x-ewts ;
-  rdfs:label "村落"@zh-hans ;
-.
-bdr:PT0021
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "hermitage"@en ;
-  rdfs:label "ri khrod"@bo-x-ewts ;
-  rdfs:label "隐修地"@zh-hans ;
-.
-bdr:PT0022
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "hidden land"@en ;
-  rdfs:label "sbas yul"@bo-x-ewts ;
-  rdfs:label "秘境"@zh-hans ;
-.
-bdr:PT0023
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "hospital"@en ;
-  rdfs:label "sman khang"@bo-x-ewts ;
-  rdfs:label "医院"@zh-hans ;
-.
-bdr:PT0024
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gzims khang"@bo-x-ewts ;
-  rdfs:label "house"@en ;
-  rdfs:label "住宅"@zh-hans ;
-.
-bdr:PT0025
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "household"@en ;
-  rdfs:label "khyim tshang"@bo-x-ewts ;
-  rdfs:label "家庭"@zh-hans ;
-.
-bdr:PT0026
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gling"@bo-x-ewts ;
-  rdfs:label "isolated region"@en ;
-  rdfs:label "州"@zh-hans ;
-.
-bdr:PT0027
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "kingdom"@en ;
-  rdfs:label "rgyal phran"@bo-x-ewts ;
-  rdfs:label "王国"@zh-hans ;
-.
-bdr:PT0028
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "lake"@en ;
-  rdfs:label "mtsho"@bo-x-ewts ;
-  rdfs:label "湖"@zh-hans ;
-.
-bdr:PT0029
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "large area"@en ;
-  rdfs:label "yul chen"@bo-x-ewts ;
-  rdfs:label "大区"@zh-hans ;
-.
-bdr:PT0030
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "dpe mdzod khang"@bo-x-ewts ;
-  rdfs:label "library"@en ;
-  rdfs:label "书馆"@zh-hans ;
-.
-bdr:PT0031
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "lower valley"@en ;
-  rdfs:label "mda'"@bo-x-ewts ;
-  rdfs:label "下河谷"@zh-hans ;
-.
-bdr:PT0032
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "khri sde"@bo-x-ewts ;
-  rdfs:label "million household district"@en ;
-  rdfs:label "万户区"@zh-hans ;
-.
-bdr:PT0033
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "Mani stone"@en ;
-  rdfs:label "ma Ni rdo phung"@bo-x-ewts ;
-  rdfs:label "石经堆"@zh-hans ;
-.
-bdr:PT0034
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gzims shag"@bo-x-ewts ;
-  rdfs:label "manor"@en ;
-  rdfs:label "府邸"@zh-hans ;
-.
-bdr:PT0035
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "market"@en ;
-  rdfs:label "tshong 'dus"@bo-x-ewts ;
-  rdfs:label "集市（市场）"@zh-hans ;
-.
-bdr:PT0036
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "meditation cave"@en ;
-  rdfs:label "sgrub phug"@bo-x-ewts ;
-  rdfs:label "修行洞"@zh-hans ;
-.
-bdr:PT0037
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "dgon pa"@bo-x-ewts ;
-  rdfs:label "monastery"@en ;
-  rdfs:label "寺院"@zh-hans ;
-.
-bdr:PT0038
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "bshad grwa"@bo-x-ewts ;
-  rdfs:label "monastic college"@en ;
-  rdfs:label "讲经院"@zh-hans ;
-.
-bdr:PT0039
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "khams tshan"@bo-x-ewts ;
-  rdfs:label "monastic dormitory"@en ;
-  rdfs:label "僧舍"@zh-hans ;
-.
-bdr:PT0040
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "grwa tshang"@bo-x-ewts ;
-  rdfs:label "monastic quarters"@en ;
-  rdfs:label "扎仓（僧院）"@zh-hans ;
-.
-bdr:PT0041
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "bla brang"@bo-x-ewts ;
-  rdfs:label "monastic residence"@en ;
-  rdfs:label "喇嘛行宫"@zh-hans ;
-.
-bdr:PT0042
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "mountain"@en ;
-  rdfs:label "ri bo"@bo-x-ewts ;
-  rdfs:label "山"@zh-hans ;
-.
-bdr:PT0043
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "la kha"@bo-x-ewts ;
-  rdfs:label "mountain pass"@en ;
-  rdfs:label "山口"@zh-hans ;
-.
-bdr:PT0044
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "mountain range"@en ;
-  rdfs:label "ri rgyud"@bo-x-ewts ;
-  rdfs:label "山脉"@zh-hans ;
-.
-bdr:PT0045
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "grong rdal"@bo-x-ewts ;
-  rdfs:label "municipality"@en ;
-  rdfs:label "城镇"@zh-hans ;
-.
-bdr:PT0046
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "khri skor"@bo-x-ewts ;
-  rdfs:label "myriarchy"@en ;
-  rdfs:label "万户区"@zh-hans ;
-.
-bdr:PT0047
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Natural features such as rivers, caves, mountain passes and so on"@en ;
-  rdfs:label "Natural Features"@en ;
-  rdfs:label "rang byung 'khor yug"@bo-x-ewts ;
-  rdfs:label "自然地域"@zh ;
-.
-bdr:PT0048
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "'brog sde"@bo-x-ewts ;
-  rdfs:label "nomad camp"@en ;
-  rdfs:label "牧营"@zh-hans ;
-.
-bdr:PT0049
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Places of unspecified type"@en ;
-  rdfs:label "Not Specified"@en ;
-  rdfs:label "rigs dbye byas med pa"@bo-x-ewts ;
-  rdfs:label "未分类"@zh-hans ;
-.
-bdr:PT0050
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "btsun dgon"@bo-x-ewts ;
-  rdfs:label "nunnery"@en ;
-  rdfs:label "尼姑庵"@zh-hans ;
-.
-bdr:PT0051
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "palace"@en ;
-  rdfs:label "pho brang"@bo-x-ewts ;
-  rdfs:label "宫殿"@zh-hans ;
-.
-bdr:PT0052
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gling kha"@bo-x-ewts ;
-  rdfs:label "park"@en ;
-  rdfs:label "公园"@zh-hans ;
-.
-bdr:PT0053
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gnas chen"@bo-x-ewts ;
-  rdfs:label "pilgrimage site"@en ;
-  rdfs:label "圣地"@zh-hans ;
-.
-bdr:PT0054
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "pillar"@en ;
-  rdfs:label "rdo ring"@bo-x-ewts ;
-  rdfs:label "石碑"@zh-hans ;
-.
-bdr:PT0055
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "plain"@en ;
-  rdfs:label "thang"@bo-x-ewts ;
-  rdfs:label "平川"@zh-hans ;
-.
-bdr:PT0056
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "pre-modern country"@en ;
-  rdfs:label "sngar gyi rdzong"@bo-x-ewts ;
-  rdfs:label "宗（旧制）"@zh-hans ;
-.
-bdr:PT0057
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "khul"@bo-x-ewts ;
-  rdfs:label "prefecture"@en ;
-  rdfs:label "传统地区"@en ;
-.
-bdr:PT0058
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "principality"@en ;
-  rdfs:label "sde dpon mnga' ris"@bo-x-ewts ;
-  rdfs:label "郡国"@zh-hans ;
-.
-bdr:PT0059
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "par khang"@bo-x-ewts ;
-  rdfs:label "printery"@en ;
-  rdfs:label "印经院"@zh-hans ;
-.
-bdr:PT0060
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "province"@en ;
-  rdfs:label "zhing chen"@bo-x-ewts ;
-  rdfs:label "省"@zh-hans ;
-.
-bdr:PT0061
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "provincial divisions"@en ;
-  rdfs:label "ru"@bo-x-ewts ;
-  rdfs:label "茹"@zh-hans ;
-.
-bdr:PT0062
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "between region and large mountain range (ex: the Alps)"@en ;
-  rdfs:label "range"@en ;
-  rdfs:label "sgang"@bo-x-ewts ;
-  rdfs:label "岗"@zh-hans ;
-.
-bdr:PT0063
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Various kinds of semi-formal and historical references to extended geographic areas such as administrative districts, isolated areas, premodern counties and so on."@en ;
-  rdfs:label "Regions"@en ;
-  rdfs:label "rten gzhi yul lung"@bo-x-ewts ;
-  rdfs:label "区域"@zh ;
-.
-bdr:PT0064
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "retreat center"@en ;
-  rdfs:label "sgrub grwa"@bo-x-ewts ;
-  rdfs:label "闭关院"@zh-hans ;
-.
-bdr:PT0065
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "chu bo"@bo-x-ewts ;
-  rdfs:label "river"@en ;
-  rdfs:label "江河"@zh-hans ;
-.
-bdr:PT0066
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "chu rgyud"@bo-x-ewts ;
-  rdfs:label "river basin"@en ;
-  rdfs:label "流域"@zh-hans ;
-.
-bdr:PT0067
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "school"@en ;
-  rdfs:label "slob grwa"@bo-x-ewts ;
-  rdfs:label "学校"@zh-hans ;
-.
-bdr:PT0068
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "settlement"@en ;
-  rdfs:label "tsho ba"@bo-x-ewts ;
-  rdfs:label "氏族部落"@zh-hans ;
-.
-bdr:PT0069
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Sites of interest such as monasteries, temples and so on"@en ;
-  rdfs:label "Sites"@en ;
-  rdfs:label "brten pa gnas khang"@bo-x-ewts ;
-  rdfs:label "场所"@zh ;
-.
-bdr:PT0070
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "small area"@en ;
-  rdfs:label "yul phran"@bo-x-ewts ;
-  rdfs:label "小乡"@zh-hans ;
-.
-bdr:PT0071
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "chu mig"@bo-x-ewts ;
-  rdfs:label "spring"@en ;
-  rdfs:label "圣泉"@zh-hans ;
-.
-bdr:PT0072
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "mchod rten"@bo-x-ewts ;
-  rdfs:label "stupa"@en ;
-  rdfs:label "佛塔"@zh-hans ;
-.
-bdr:PT0073
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "stong sde"@bo-x-ewts ;
-  rdfs:label "thousand household district"@en ;
-  rdfs:label "千户区"@zh-hans ;
-.
-bdr:PT0074
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "lha khang"@en ;
-  rdfs:label "temple"@en ;
-  rdfs:label "宇"@zh-hans ;
-.
-bdr:PT0075
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gtsug lag khang"@bo-x-ewts ;
-  rdfs:label "temple complex"@en ;
-  rdfs:label "寺庙"@zh-hans ;
-.
-bdr:PT0076
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "bang so"@bo-x-ewts ;
-  rdfs:label "tomb"@en ;
-  rdfs:label "陵墓"@zh-hans ;
-.
-bdr:PT0077
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "shang_(zhang)"@bo-x-ewts ;
-  rdfs:label "township"@en ;
-.
-bdr:PT0078
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "srol rgyun sa ming"@bo-x-ewts ;
-  rdfs:label "traditional"@en ;
-  rdfs:label "传统地名"@zh-hans ;
-.
-bdr:PT0079
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "srol rgyun sa khul"@bo-x-ewts ;
-  rdfs:label "traditional region"@en ;
-  rdfs:label "传统地区"@zh-hans ;
-.
-bdr:PT0080
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "gter gnas"@bo-x-ewts ;
-  rdfs:label "treasure site"@en ;
-  rdfs:label "伏藏地"@zh-hans ;
-.
-bdr:PT0081
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label ""@en ;
-  rdfs:label "ru sde"@en ;
-  rdfs:label "联盟部落"@zh-hans ;
-.
-bdr:PT0082
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "phu"@bo-x-ewts ;
-  rdfs:label "upper valley"@en ;
-  rdfs:label "上河谷"@zh-hans ;
-.
-bdr:PT0083
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "lung pa"@bo-x-ewts ;
-  rdfs:label "valley"@en ;
-  rdfs:label "河谷"@zh-hans ;
-.
-bdr:PT0084
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "grong tsho"@bo-x-ewts ;
-  rdfs:label "village"@en ;
-  rdfs:label "村（现代）"@zh-hans ;
-.
-bdr:PT0085
-  a bdo:PlaceType ;
-  a owl:NamedIndividual ;
-  rdfs:label "grong sde"@bo-x-ewts ;
-  rdfs:label "village district"@en ;
-  rdfs:label "村镇"@zh-hans ;
-.
-bdr:PaginationAbsolute
-  a bdo:PaginationType ;
-  a owl:NamedIndividual ;
-  rdfs:label "absolute pagination"@en ;
-.
-bdr:PaginationRelative
-  a bdo:PaginationType ;
-  a owl:NamedIndividual ;
-  rdfs:label "relative pagination"@en ;
-.
-bdr:Pi
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangPi ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Pali"@en ;
-.
-bdr:PiMymr
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangPi ;
-  bdo:script bdr:ScriptMymr ;
-  bdo:taxSubClassOf bdr:Pi ;
-  rdfs:label "Pali (Burmese)"@en ;
-.
-bdr:PiSinh
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangPi ;
-  bdo:script bdr:ScriptSinh ;
-  bdo:taxSubClassOf bdr:Pi ;
-  rdfs:label "Pali (Sinhalese)"@en ;
-.
-bdr:PiThai
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangPi ;
-  bdo:script bdr:ScriptThai ;
-  rdfs:comment "Pali in Thai script"@en ;
-  rdfs:label "Pali in Thai"@en ;
-.
-bdr:PrintMethod_Intaglio_Copper
-  a bdo:PrintMethod_Intaglio ;
-  rdfs:label "copper intaglio"@en ;
-.
-bdr:PrintMethod_Intaglio_Zinc
-  a bdo:PrintMethod_Intaglio ;
-  rdfs:label "zinc intaglio"@en ;
-.
-bdr:PrintMethod_Manuscript
-  a bdo:PrintMethod_Manuscript ;
-  rdfs:label "manuscript"@en ;
-.
-bdr:PrintMethod_Relief_Letterpress
-  a bdo:PrintMethod_Relief ;
-  rdfs:comment "mechanical relief printing typically via wood"@en ;
-  rdfs:label "letterpress"@en ;
-.
-bdr:PrintMethod_Relief_WoodBlock
-  a bdo:PrintMethod_Relief ;
-  rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
-  rdfs:label "woodblock"@en ;
-  skos:altLabel "xylograph"@en ;
-.
-bdr:PrintMethod_Xerography
-  a bdo:PrintMethod ;
-  rdfs:label "xerography"@en ;
-.
-bdr:RuCyrl
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangRu ;
-  bdo:script bdr:ScriptCyrl ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Russian in Cyrillic"@en ;
-.
-bdr:Sa
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Sanskrit"@en ;
-.
-bdr:SaBeng
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptBeng ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit in Bengali"@en ;
-.
-bdr:SaDeva
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptRanj ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit in Devanagari"@en ;
-.
-bdr:SaEasternNagari
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptEasternNagari ;
-  bdo:taxSubClassOf bdr:ScriptEasternNagari ;
-  rdfs:label "Sanskrit in Eastern Nāgārī script"@en ;
-.
-bdr:SaNepaleseHooked
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptNepaleseHooked ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit in Nepali Hooked Script"@en ;
-.
-bdr:SaNewa
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptNewa ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit in Pracalit"@en ;
-.
-bdr:SaPostGupta
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptPostGupta ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit in Post-Gupta script"@en ;
-.
-bdr:SaRanj
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptRanj ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit in Ranjana"@en ;
-.
-bdr:SaSinh
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptSinh ;
-  rdfs:comment "rare"@en ;
-  rdfs:label "Sanskrit in Sinhalese"@en ;
-.
-bdr:SaTibt
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:script bdr:ScriptTibt ;
-  bdo:taxSubClassOf bdr:Sa ;
-  bdo:transliteration bdr:TransSaTibt ;
-  rdfs:label "Sanskrit in Tibetan transliteration"@en ;
-.
-bdr:SaUnspecified
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangSa ;
-  bdo:taxSubClassOf bdr:Sa ;
-  rdfs:label "Sanskrit (unspecified script)"@en ;
-.
-bdr:ScriptBeng
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Bengali"@en ;
-  rdfs:seeAlso <http://www.lexvo.org/page/script/Beng> ;
-.
-bdr:ScriptCyrl
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Cyrillic"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Cyrl> ;
-.
-bdr:ScriptDbuCan
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Uchen"@en ;
-  rdfs:label "dbu can"@bo-x-ewts ;
-.
-bdr:ScriptDbuMed
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Ume"@en ;
-  rdfs:label "dbu med"@bo-x-ewts ;
-.
-bdr:ScriptDeva
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Devanagari"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Deva> ;
-.
-bdr:ScriptEasternNagari
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Eastern Nāgārī"@en ;
-.
-bdr:ScriptGilgitBamiyan1
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Gilgit Bamiyan Type I"@en ;
-.
-bdr:ScriptGilgitBamiyan2
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Gilgit Bamiyan Type II"@en ;
-.
-bdr:ScriptGupta
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Gupta"@en ;
-.
-bdr:ScriptHans
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Simplified Chinese"@en ;
-.
-bdr:ScriptHant
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Traditional Chinese"@en ;
-.
-bdr:ScriptKhyugYig
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "'khyug yig"@bo-x-ewts ;
-  rdfs:label "Kyug'yig"@en ;
-.
-bdr:ScriptLatn
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "latin"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
-.
-bdr:ScriptMong
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Classical Mongolian script"@en ;
-.
-bdr:ScriptMymr
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Burmese"@en ;
-.
-bdr:ScriptNepaleseHooked
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:comment "also referred to as Bhujimol"@en ;
-  rdfs:label "Nepalese hooked script"@en ;
-.
-bdr:ScriptNewa
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
-  rdfs:label "Pracalit"@en ;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/Prachalit_Nepal_alphabet> ;
-.
-bdr:ScriptPostGupta
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Post-gupta"@en ;
-.
-bdr:ScriptRanj
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:comment "This script is not normalized in ISO 15924 (yet?)"@en ;
-  rdfs:comment "also referred to as Pāla, as it was developped during the Pāla dynasty"@en ;
-  rdfs:label "Ranjana (Kutila, Lantsa)"@en ;
-  rdfs:label "Rañjanā"@sa-x-iast ;
-  rdfs:label "lany+dza"@bo-x-ewts ;
-  rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
-.
-bdr:ScriptSinh
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Sinhalese"@en ;
-.
-bdr:ScriptThai
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Thai script"@en ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;
-.
-bdr:ScriptTibt
-  a bdo:Script ;
-  a owl:NamedIndividual ;
-  rdfs:label "Tibetan Script"@en ;
-  rdfs:label "bod yig"@bo-x-ewts ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
-.
-bdr:StatusAccessioned
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "accessioned"@en ;
-.
-bdr:StatusAcquiring
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "acquiring"@en ;
-.
-bdr:StatusEditing
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "editing"@en ;
-.
-bdr:StatusOnHold
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "on hold"@en ;
-.
-bdr:StatusProvisional
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "provisional"@en ;
-.
-bdr:StatusReleased
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "released"@en ;
-.
-bdr:StatusScanned
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "scanned"@en ;
-.
-bdr:StatusSeekingOut
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "seeking out"@en ;
-.
-bdr:StatusWithdrawn
-  a adm:Status ;
-  a owl:NamedIndividual ;
-  rdfs:label "withdrawn"@en ;
-.
-bdr:TangDynasty
-  a bdo:ChineseDynasty ;
-  a owl:NamedIndividual ;
-  bdo:notAfter 907 ;
-  bdo:notBefore 618 ;
-  rdfs:comment "In the Tang Dynasty (618-907), the Chinese dynasty and the national dynasty shared a total of 289 years with 21 emperors"@en ;
-  rdfs:label "Tang Dynasty"@en ;
-  rdfs:label "唐代"@zh-hans ;
-  rdfs:seeAlso "<https://translate.google.com/translate?hl=en&sl=zh-TW&u=https://zh.wikipedia.org/zh/%25E5%2594%2590%25E6%259C%259D&prev=search>"@en ;
-  rdfs:seeAlso "<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwih_avD_cPaAhVFbK0KHWJdCvMQFggpMAA&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2594%2590%25E6%259C%259D&usg=AOvVaw0WPfem1oSvcsj1-xc6T5qd>"@zh-hans ;
-.
-bdr:TermsOfUseBDRCEtexts
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Terms of use of BDRC Etexts"@en ;
-.
-bdr:TermsOfUseBDRCGeneral
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment """Public Domain Policy
-This policy applies only to content in the Public Domain, additional restrictions can apply to Public Domain content, see Restricted Content Policy.
-
-Public domain means, the work has been identified as being free of known restrictions under copyright law, including all related and neighboring rights. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.  See https://creativecommons.org/publicdomain/mark/1.0/
-BDRC’s Public Domain Mark enables works that are no longer restricted by copyright to be marked as such in a standard and simple way, making them easily discoverable and available to others. Many cultural heritage institutions including museums, libraries and other curators are knowledgeable about the copyright status of paintings, books and manuscripts, photographs and other works in their collections, many of which are old and no longer under copyright.  The Public Domain Mark operates as a tag or a label, allowing institutions like those as well as others with such knowledge to communicate that a work is no longer restricted by copyright and can be freely used by others.  The mark can also be an important source of information, allowing others to verify a work’s copyright status and learn more about the work.
-
-Although BDRC does not impose any legally binding conditions on access to the Public Domain content, BDRC requests that it is given attribution as a source of the content, to the extent it is technologically feasible to do so.
-
-Definitions are available in BDRC’s ontology service: http://purl.bdrc.io/resource/LicensePublicDomain 
-
-Copyright Policy
-BDRC applies section 108 copyright analyses to its works.
-
-BDRC indicates the copyright status of a book in its Metadata. This status is purely informational and BDRC cannot be held liable of its accuracy.
-
-BDRC considers reproductions (digital images, textual reproductions produced from OCR and manual input) to have the same copyright as the original work.
-Some of the content available through BDRC may be governed by local, national, and/or international laws and regulations, and your use of such content is solely at your own risk. You agree to abide by all applicable laws and regulations, including intellectual property laws, in connection with your use of BDRC.
-
-Definitions are available in BDRC’s ontology service: http://purl.bdrc.io/resource/LicenseAllRightsReserved 
-
-Restricted Access Policy
-For content marked as restricted by tradition, you agree to access only content that you have been authorized to access by a lineage holder, and for which you understand the restrictions. You agree to fully respect the conditions under which you have been provided access to the material.
-
-For content marked as restricted in a particular country, you agree not to transfer the material by any mean (paper, electronic) to this country.
-
-For content marked as restricted to scholarly use, you agree not to have.
-
-In addition to other applying restrictions, you agree to share the material solely under the agreement to respect these restrictions.
-
-In addition to licensing, BDRC assigns access designations to works published on its online library at tbrc.org based on cultural commitments to stakeholders. The following access designations are used:
-● Restricted Sealed (tib: rgya can) – Some works of the types listed below are restricted because of the nature of their content. The owners of the traditions request these restrictions. Note that if these works appear in the collected works (tib: gsung ‘bum) of the author, they are not restricted as they appear in context.
-○ Sealed Texts (tib: bka' rgya ma)
-○ Esoteric Collections (tib: be'u 'bum and sngags 'bum)
-○ Secret Practice or Oral Instruction (tib: mkhyud dpyad)
-○ Tantric Sexual Practice (tib: thabs lam)
-○ Secret Sealed (tib: gsang ba rgya can)
-○ Secret Biographies (tib: gsang ba'i rnam thar)
-○ Ear-Whispered Lineage (tib: snyan brgyud)
-○ Esoteric Instructions (tib: khrid yig)
-● Temporarily Restricted – works marked as temporarily restricted, until at some time BDRC is instructed to release the restriction. Unless otherwise specified, the time duration is 3 years from the date of publication.
-● Restricted by Quality – works marked restricted by quality in cases where the scanned source is of poor quality or incomplete. BDRC reserves the right to restrict access to these works and may direct users to a better quality edition.
-● Restricted by BDRC – works marked generally as restricted by BDRC for whatever purpose BDRC deems necessary.
-● Restricted in China – works marked restricted where heightened sensitivity in China precludes access in China. Note: these works will be available on our website outside of China.
-
-Specific definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/AccessType 
-
-CC0 Policy
-BDRC makes its set of metadata available for public use under the CC0 1.0 Public Domain Designation.
-
-CC0 enables scientists, educators, artists and other creators and owners of copyright- or database-protected content to waive those interests in their works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright or database law.
-
-In contrast to CC’s licenses that allow copyright holders to choose from a range of permissions while retaining their copyright, CC0 empowers yet another choice altogether – the choice to opt out of copyright and database protection, and the exclusive rights automatically granted to creators – the “no rights reserved” alternative to our licenses.
-
-Although BDRC does not impose any legally binding conditions on access to the 
-Metadata, BDRC requests that you act in accordance with the following Community 
-
-Norms of BDRC with respect to the Metadata:
-
-First, BDRC requests that it is given attribution as a source of the Metadata, to the extent it is technologically feasible to do so.
-
-Second, BDRC requests that you make the Metadata and any improvements thereto freely available on the same terms as BDRC has done, i.e., without claiming any legal right in, or imposing any legally binding conditions on access to, the Metadata or your improvements, and with a request to act in accordance with these Community Norms.
-As a database in the sense of EU Protection of Databases, it is also provided under CC0 license. Extractions of the database of BDRC are considered to be under the same license as the database itself.
-
-Specific definition is available in BDRC’s ontology service: http://purl.bdrc.io/resource/LicenseCC0 
-
-Disclaimer of Warranties and Limitation of Liability
-
-1. BDRC offers content as-is and as-available, and makes no representations or warranties of any kind concerning the content, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to you.
-
-2. To the extent possible, in no event will BDRC be liable on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of use of the content, even if BDRC has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to you.\">Terms of Use
-
-Buddhist Digital Resource Center believes strongly in unfettered access to the riches of Buddhist cultural heritage. To enable and enhance this access, we have adopted standardized rights vocabulary developed at Harvard University (http://library.harvard.edu/open-metadata) and RightsStatements.org. Additional access policies defined herein are born out of BDRC’s commitment to stakeholders and are intended to (1) maximize access of Buddhist works to sustain living traditions and (2) protect the legal and cultural rights of Buddhist authors and publishers.  As a public charity, BDRC’s mission is to make the results of its work widely available. BDRC requests that our users, where appropriate, attribute BDRC. The purpose of this Terms of Use is to orient the user on the use of the three central domains of BDRC’s archive: textual resources, metadata and source code.
-
-The latest version of the Terms of Use can be found at:
-
-http://purl.bdrc.io/resource/TermsOfUseBDRCGeneral
-
-Text Resources
-BDRC indicates two license types to text resources with several possible access restrictions.  For works whose rights have expired, BDRC uses Public Domain (see Public Domain Policy below). For copyright works, BDRC applies section 108 copyright analyses to its works (see Copyright Policy below). Finally, BDRC applies access restrictions to works based on cultural commitments to authors (see Restricted Access Policy below).
-License definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/License. Access definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/AccessType 
-
-Metadata
-In order to facilitate use and reuse in machine environments, BDRC makes its metadata available for public use under the CC0 1.0 Public Domain Designation. See CC0 Policy below for more details.  We ask that machine harvesting attribute BDRC wherever possible.  License definitions are available in BDRC’s ontology service: http://purl.bdrc.io/ontology/admin/License 
-
-Source Code
-BDRC releases all the source code it produces under free licenses. The licenses vary according to the different software communities, the Apache 2.0 and MIT License are the most used. See BDRC’s code repository for specific licenses used.
-
-Additional Terms
-This terms of use agreement (the \"Agreement\") governs your use of the content available through the Buddhist Digital Resource Center (\"BDRC\"). When accessing content, you will be presented with the terms of use agreement. If you do not agree to these terms, please do not use the BDRC’s content or its Web site.
-
-Nothing in the Agreement constitutes or may be construed as permission to assert or imply that you are, or that your use of the content is, connected with, or sponsored, endorsed, or granted official status by BDRC.
-
-Some of the content available through BDRC might be deemed offensive, disturbing, pornographic, racist, sexist, bizarre, or otherwise objectionable. BDRC does not endorse or sponsor any content, nor does it guarantee or warrant that the content made available is accurate, complete, noninfringing, or legally accessible in your jurisdiction, and you agree that you are solely responsible for abiding by all laws and regulations that may be applicable to the viewing of the content.
-
-You agree to indemnify and hold harmless BDRC and its parents, subsidiaries, affiliates, agents, officers, directors, and employees from and against any and all liability, loss, claims, damages, costs, and/or actions (including attorneys’ fees) arising from your use of its content and services. You agree that this Agreement is governed by Massachusetts law and that any suit arising from this Agreement will be brought in Boston, Massachusetts, and you further agree that on the election and reasonable notice of either party any litigation shall be referred to arbitration pursuant to the Massachusetts Rules of Civil Procedure. In addition, you agree that should any provision in the Agreement be found invalid, unlawful, or unenforceable, that provision shall not affect the validity or enforceability of the remaining provisions.
-
-BDRC may immediately terminate this Agreement at its sole discretion at any time upon written notice (including via email) to you. Upon termination, you agree that 
-
-BDRC may immediately deactivate any password it has issued to you and bar you from accessing its content. 
-
-BDRC may modify this Agreement from time to time, and your continued use of the content constitutes your acceptance of any and all modifications. BDRC will attempt to notify you of substantial modifications via the email address that you have registered with us, if any.
-
-We welcome your input. Please contact us with any comments or questions at inquiry"""@en ;
-  rdfs:label "BDRC General Terms of Use"@en ;
-.
-bdr:TermsOfUseBDRCImages
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:label "BDRC scanned images terms of use"@en ;
-.
-bdr:TermsOfUseBDRCMetadata
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment "The terms of use of the metadata shoud be spelled out here"@en ;
-  rdfs:label "Metadata Terms of Use"@en ;
-.
-bdr:TermsOfUseBDRCSourceCode
-  a adm:TermsOfUse ;
-  a owl:NamedIndividual ;
-  rdfs:comment "Terms of use for source code goes here"@en ;
-  rdfs:label "Source code Terms of Use"@en ;
-.
-bdr:TraditionBardrukKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
-  rdfs:label "Bardruk Kagyu"@en ;
-  rdfs:label "Middle Drukpa Kagyu"@en ;
-.
-bdr:TraditionBaromKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
-  rdfs:label "Barom Kagyu"@en ;
-.
-bdr:TraditionBodong
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:label "Bodong"@en ;
-.
-bdr:TraditionBon
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:label "Bon"@en ;
-.
-bdr:TraditionChod
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionZhije ;
-  rdfs:label "Chod"@en ;
-.
-bdr:TraditionDharmaguptaka
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  rdfs:label "Dharmaguptaka"@en ;
-.
-bdr:TraditionDrigungKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Drigung Kagyu"@en ;
-.
-bdr:TraditionDrukpaKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Drukpa Kagyu"@en ;
-.
-bdr:TraditionGeluk
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:label "Geluk"@en ;
-.
-bdr:TraditionJonang
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:label "Jonang"@en ;
-.
-bdr:TraditionJordruk
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Jordruk"@en ;
-  rdfs:label "Kalacakra"@en ;
-  rdfs:label "Six Branch Vajra Yoga"@en ;
-.
-bdr:TraditionKadam
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Kadam"@en ;
-.
-bdr:TraditionKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Kagyu"@en ;
-  rdfs:label "bka' brgyud"@bo-x-ewts ;
-.
-bdr:TraditionKarmaKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
-  rdfs:label "Kamtsang Kagyu"@en ;
-  rdfs:label "Karma Kagyu"@en ;
-.
-bdr:TraditionMadrukKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
-  rdfs:label "Lower Drukpa Kagyu"@en ;
-  rdfs:label "Madruk Kagyu"@en ;
-.
-bdr:TraditionMarpaKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionKagyu ;
-  rdfs:comment """Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight.
-
-equiv Dagpo Kagyu?"""@en ;
-  rdfs:label "Marpa Kagyu"@en ;
-.
-bdr:TraditionMartsangKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Martsang Kagyu"@en ;
-.
-bdr:TraditionMulasarvastivada
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  rdfs:label "Mūlasarvāstivāda"@en ;
-.
-bdr:TraditionNedoKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
-  rdfs:label "Nedo Kagyu"@en ;
-.
-bdr:TraditionNgorSakya
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionSakya ;
-  rdfs:comment "one of sa ngor tsar gsum"@en ;
-  rdfs:label "Ngor Sakya"@en ;
-.
-bdr:TraditionNyingma
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Nyingma"@en ;
-.
-bdr:TraditionOrgyenNyengyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Orgyen Nyengru"@en ;
-  rdfs:label "The Three Vajras"@en ;
-.
-bdr:TraditionPhagGruKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
-  rdfs:label "Phag Gru Kagyu"@en ;
-.
-bdr:TraditionRime
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:comment "Some might not count Rime as a Tradition but since there are Works and Persons who are identified as such it is approapriate to include for purposes of classification"@en ;
-  rdfs:label "Rime"@en ;
-.
-bdr:TraditionSakya
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Sakya"@en ;
-.
-bdr:TraditionSarvastivada
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  rdfs:label "Sarvāstivāda"@en ;
-.
-bdr:TraditionShangpaKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionKagyu ;
-  rdfs:label "Shangpa Kagyu"@en ;
-.
-bdr:TraditionShugsepKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Shugsep Kagyu"@en ;
-.
-bdr:TraditionTaklungKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Taklung Kagyu"@en ;
-.
-bdr:TraditionTaxonomy
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:taxSubclassRelation bdo:taxSubClassOf ;
-  rdfs:comment "Taxonomy of Tibetan Buddhist Traditions for use with Place and Person Events"@en ;
-.
-bdr:TraditionTheravada
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  rdfs:label "Theravāda"@en ;
-.
-bdr:TraditionTodrukKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
-  rdfs:label "Todruk Kagyu"@en ;
-  rdfs:label "Upper Drukpa Kagyu"@en ;
-.
-bdr:TraditionTsalpaKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:FourMainKagyuTraditions ;
-  rdfs:label "Tsalpa Kagyu"@en ;
-.
-bdr:TraditionTsarSakya
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionSakya ;
-  rdfs:comment "one of     sa ngor tsar gsum"@en ;
-  rdfs:label "Tsar Sakya"@en ;
-.
-bdr:TraditionYazangKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Yazang Kagyu"@en ;
-.
-bdr:TraditionYelpaKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightMinorKagyuTraditions ;
-  rdfs:label "Yelpa Kagyu"@en ;
-.
-bdr:TraditionZhalu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionTaxonomy ;
-  rdfs:label "Zhalu"@en ;
-.
-bdr:TraditionZhije
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:EightPracticeLineages ;
-  rdfs:label "Shije"@en ;
-  rdfs:label "Zhije"@en ;
-.
-bdr:TraditionZurmangKagyu
-  a bdo:TibetanTradition ;
-  a owl:NamedIndividual ;
-  bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
-  rdfs:label "Surmang Kagyu"@en ;
-  rdfs:label "Zurmang Kagyu"@en ;
-.
-bdr:TransAlalc
-  a bdo:Transliteration ;
-  a owl:NamedIndividual ;
-  rdfs:label "ALA-LC"@en ;
-  rdfs:seeAlso <https://www.loc.gov/catdir/cpso/roman.html> ;
-.
-bdr:TransEWTS
-  a bdo:Transliteration ;
-  a owl:NamedIndividual ;
-  rdfs:label "Extended Wylie"@en ;
-  rdfs:label "wa'i li"@bo-x-ewts ;
-  rdfs:seeAlso <http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/> ;
-.
-bdr:TransIAST
-  a bdo:Transliteration ;
-  a owl:NamedIndividual ;
-  rdfs:comment "International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc."@en ;
-  rdfs:label "IAST"@en ;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration> ;
-.
-bdr:TransPinyin
-  a bdo:Transliteration ;
-  a owl:NamedIndividual ;
-  rdfs:label "Pinyin"@en ;
-.
-bdr:TransSaTibt
-  a bdo:Transliteration ;
-  a owl:NamedIndividual ;
-  rdfs:label "Sanskrit transliterated in Tibetan"@en ;
-.
-bdr:UNKNOWN_Corporation
-  a bdo:Corporation ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Corporation ;
-  rdfs:label "unkown corporation"@en ;
-.
-bdr:UNKNOWN_Lineage
-  a bdo:Lineage ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Lineage ;
-  rdfs:label "unknown lineage"@en ;
-.
-bdr:UNKNOWN_Organization
-  a bdo:Organization ;
-  a owl:NamedIndividual ;
-  rdfs:label "unknown organization"@en ;
-.
-bdr:UNKNOWN_Person
-  a bdo:Person ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Person ;
-  rdfs:label "Unknown"@en ;
-.
-bdr:UNKNOWN_Place
-  a bdo:Place ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Place ;
-  rdfs:label "Unknown"@en ;
-.
-bdr:UNKNOWN_Product
-  a adm:Product ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Product ;
-  rdfs:label "Unknown"@en ;
-.
-bdr:UNKNOWN_Role
-  a bdo:Role ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Role ;
-  rdfs:label "Unknown Role"@en ;
-.
-bdr:UNKNOWN_Topic
-  a bdo:Topic ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Topic ;
-  rdfs:label "Unknown"@en ;
-.
-bdr:UNKNOWN_Work
-  a bdo:Work ;
-  a owl:NamedIndividual ;
-  adm:status bdr:StatusReleased ;
-  rdfs:isDefinedBy bdd:UNKNOWN_Work ;
-  rdfs:label "Unknown"@en ;
-.
-bdr:WorkChapter
-  a bdo:WorkPartType ;
-  a owl:NamedIndividual ;
-  rdfs:label "chapter"@en ;
-.
-bdr:WorkSection
-  a bdo:WorkPartType ;
-  a owl:NamedIndividual ;
-  rdfs:label "section"@en ;
-.
-bdr:WorkText
-  a bdo:WorkPartType ;
-  a owl:NamedIndividual ;
-  rdfs:label "text"@en ;
-.
-bdr:WorkTypeAbstractWork
-  a bdo:WorkType ;
-  a owl:NamedIndividual ;
-  rdfs:label "abstract work"@en ;
-.
-bdr:WorkTypePublishedWork
-  a bdo:WorkType ;
-  a owl:NamedIndividual ;
-  rdfs:label "published work"@en ;
-.
-bdr:WorkTypeSeries
-  a bdo:WorkType ;
-  a owl:NamedIndividual ;
-  rdfs:label "series"@en ;
-.
-bdr:WorkTypeUnicodeText
-  a bdo:WorkType ;
-  a owl:NamedIndividual ;
-  rdfs:label "unicode text"@en ;
-.
-bdr:WorkVolume
-  a bdo:WorkPartType ;
-  a owl:NamedIndividual ;
-  rdfs:label "volume"@en ;
-.
-bdr:Zh
-  a bdo:Taxonomy ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangZh ;
-  bdo:taxSubClassOf bdr:LanguageTaxonomy ;
-  rdfs:label "Chinese"@en ;
-.
-bdr:ZhHans
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangZh ;
-  bdo:script bdr:ScriptHans ;
-  bdo:taxSubClassOf bdr:Zh ;
-  rdfs:label "Chinese (Simplified)"@en ;
-.
-bdr:ZhHant
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangZh ;
-  bdo:script bdr:ScriptHant ;
-  bdo:taxSubClassOf bdr:Zh ;
-  rdfs:label "Chinese (Traditional)"@en ;
-.
-bdr:ZhUnspecified
-  a bdo:LangScript ;
-  a owl:NamedIndividual ;
-  bdo:language bdr:LangZh ;
-  bdo:taxSubClassOf bdr:Zh ;
-  rdfs:label "Chinese (unspecified script)"@en ;
 .
 dcterms:modified
   a owl:AnnotationProperty ;

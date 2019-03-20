@@ -1,0 +1,85 @@
+# baseURI: http://purl.bdrc.io/ontology/adm/unknown/
+# imports: http://purl.bdrc.io/ontology/adm/types/Status
+# imports: http://purl.bdrc.io/ontology/core/
+# prefix: unknown
+
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix unknown: <http://purl.bdrc.io/ontology/adm/unknown/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+unknown:
+  a owl:Ontology ;
+  rdfs:comment "These are various unknown entities"@en ;
+  rdfs:label "Buda unknown entities"@en ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/> ;
+.
+bdr:UNKNOWN_Corporation
+  a bdo:Corporation ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Corporation ;
+  rdfs:label "unkown corporation"@en ;
+.
+bdr:UNKNOWN_Lineage
+  a bdo:Lineage ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Lineage ;
+  rdfs:label "unknown lineage"@en ;
+.
+bdr:UNKNOWN_Organization
+  a bdo:Organization ;
+  a owl:NamedIndividual ;
+  rdfs:label "unknown organization"@en ;
+.
+bdr:UNKNOWN_Person
+  a bdo:Person ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Person ;
+  rdfs:label "Unknown"@en ;
+.
+bdr:UNKNOWN_Place
+  a bdo:Place ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Place ;
+  rdfs:label "Unknown"@en ;
+.
+bdr:UNKNOWN_Product
+  a adm:Product ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Product ;
+  rdfs:label "Unknown"@en ;
+.
+bdr:UNKNOWN_Role
+  a bdo:Role ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Role ;
+  rdfs:label "Unknown Role"@en ;
+.
+bdr:UNKNOWN_Topic
+  a bdo:Topic ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Topic ;
+  rdfs:label "Unknown"@en ;
+.
+bdr:UNKNOWN_Work
+  a bdo:Work ;
+  a owl:NamedIndividual ;
+  adm:status bdr:StatusReleased ;
+  rdfs:isDefinedBy bdd:UNKNOWN_Work ;
+  rdfs:label "Unknown"@en ;
+.

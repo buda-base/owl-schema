@@ -1,9 +1,10 @@
 # baseURI: http://purl.bdrc.io/ontology/ext/auth/
+# imports: http://purl.bdrc.io/ontology/admin/
 # prefix: aut
 
 @prefix : <http://purl.bdrc.io/ontology/ext/auth/> .
-@prefix adr: <http://purl.bdrc.io/resource-auth/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix adr: <http://purl.bdrc.io/resource-auth/> .
 @prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -11,11 +12,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://purl.bdrc.io/ontology/ext/auth/> .
 
 aut:
   a owl:Ontology ;
   rdfs:label "Buda authentication ontology"@en ;
+  owl:imports adm: ;
 .
 aut:Application
   a owl:Class ;
@@ -162,12 +163,4 @@ This property is used for checking access rights against protected resources ava
   rdfs:domain aut:ResourceAccess ;
   rdfs:label "policy"@en ;
   rdfs:range adm:Access ;
-.
-adm:Access
-  a owl:Class ;
-  rdfs:comment "a bdrc AccessType as defined at http://purl.bdrc.io/ontology/admin/AccessType"@en ;
-.
-foaf:Agent
-  a owl:Class ;
-  rdfs:comment "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
 .

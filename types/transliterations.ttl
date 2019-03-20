@@ -1,0 +1,50 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Transliteration
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: Transliteration
+
+@prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:Transliteration
+  a owl:Class ;
+  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
+  rdfs:label "Transliteration"@en ;
+.
+<http://purl.bdrc.io/ontology/types/Transliteration>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:TransAlalc
+  a bdo:Transliteration ;
+  rdfs:seeAlso <https://www.loc.gov/catdir/cpso/roman.html> ;
+  skos:prefLabel "ALA-LC"@en ;
+.
+bdr:TransEWTS
+  a bdo:Transliteration ;
+  rdfs:seeAlso <http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/> ;
+  skos:prefLabel "Extended Wylie"@en ;
+  skos:prefLabel "wa'i li"@bo-x-ewts ;
+.
+bdr:TransIAST
+  a bdo:Transliteration ;
+  rdfs:comment "International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc."@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration> ;
+  skos:prefLabel "IAST"@en ;
+.
+bdr:TransPinyin
+  a bdo:Transliteration ;
+  skos:prefLabel "Pinyin"@en ;
+.
+bdr:TransSaTibt
+  a bdo:Transliteration ;
+  skos:prefLabel "Sanskrit transliterated in Tibetan"@en ;
+.

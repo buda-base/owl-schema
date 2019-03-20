@@ -1,5 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/core/shapes/
 # imports: http://datashapes.org/dash
+# imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: bds
 
@@ -26,11 +27,11 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://purl.bdrc.io/ontology/core/shapes/> .
 
 bds:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
   owl:imports bdo: ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .

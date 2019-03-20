@@ -1,0 +1,90 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Material
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: Material
+
+@prefix Material: <http://purl.bdrc.io/ontology/types/Material#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:AppliedMaterial
+  a owl:Class ;
+  rdfs:label "applied material"@en ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30084"^^xsd:anyURI ;
+  rdfs:subClassOf bdo:Material ;
+.
+bdo:BaseMaterial
+  a owl:Class ;
+  rdfs:comment "underlying physical material of a manifestation"@en ;
+  rdfs:label "Base material" ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30208"^^xsd:anyURI ;
+  rdfs:subClassOf bdo:Material ;
+.
+bdo:Material
+  a owl:Class ;
+  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed. A physical or chemical substance used to create a manifestation"@en ;
+  rdfs:label "material"@en ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30304"^^xsd:anyURI ;
+  rdfs:seeAlso "https://www.rdaregistry.info/termList/RDAMaterial/"^^xsd:anyURI ;
+.
+<http://purl.bdrc.io/ontology/types/Material>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:AppliedMaterial_BlackInk
+  a bdo:AppliedMaterial ;
+  skos:prefLabel "black ink"@en ;
+.
+bdr:AppliedMaterial_GoldLeaf
+  a bdo:AppliedMaterial ;
+  skos:prefLabel "gold leaf"@en ;
+.
+bdr:AppliedMaterial_RedInk
+  a bdo:AppliedMaterial ;
+  skos:prefLabel "red ink"@en ;
+.
+bdr:AppliedMaterial_SilverLeaf
+  a bdo:AppliedMaterial ;
+  skos:prefLabel "silver leaf"@en ;
+.
+bdr:MaterialBirchBark
+  a bdo:BaseMaterial ;
+  skos:prefLabel "birch bark"@en ;
+.
+bdr:MaterialCoryphaPalmLeaf
+  a bdo:BaseMaterial ;
+  skos:prefLabel "palm leaf (corypha)"@en ;
+.
+bdr:MaterialDigital
+  a bdo:BaseMaterial ;
+  rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
+  skos:prefLabel "digital material"@en ;
+.
+bdr:MaterialMixed
+  a bdo:BaseMaterial ;
+  skos:prefLabel "mixed materials"@en ;
+.
+bdr:MaterialMultiLayerPaper
+  a bdo:BaseMaterial ;
+  rdfs:comment "used for some manuscripts in Nepal"@en ;
+  skos:prefLabel "multi-layer paper"@en ;
+.
+bdr:MaterialPalmLeaf
+  a bdo:BaseMaterial ;
+  skos:prefLabel "palm leaf"@en ;
+.
+bdr:MaterialPaper
+  a bdo:BaseMaterial ;
+  skos:prefLabel "paper"@en ;
+.
+bdr:MaterialRicePaper
+  a bdo:BaseMaterial ;
+  skos:prefLabel "rice paper"@en ;
+.

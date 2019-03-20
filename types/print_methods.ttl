@@ -1,0 +1,71 @@
+# baseURI: http://purl.bdrc.io/ontology/types/PrintMethod
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: PrintMethod
+
+@prefix PrintMethod: <http://purl.bdrc.io/ontology/types/PrintMethod#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:PrintMethod
+  a owl:Class ;
+  rdfs:label "Print method" ;
+.
+bdo:PrintMethod_Intaglio
+  a owl:Class ;
+  rdfs:label "Print method Intaglio" ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+bdo:PrintMethod_Manuscript
+  a owl:Class ;
+  rdfs:label "Print method Manuscript"@en ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+bdo:PrintMethod_Offset
+  a owl:Class ;
+  rdfs:label "Print method Offset"@en ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+bdo:PrintMethod_Relief
+  a owl:Class ;
+  rdfs:label "Print method Relief" ;
+  rdfs:subClassOf bdo:PrintMethod ;
+.
+<http://purl.bdrc.io/ontology/types/PrintMethod>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:PrintMethod_Intaglio_Copper
+  a bdo:PrintMethod_Intaglio ;
+  skos:prefLabel "copper intaglio"@en ;
+.
+bdr:PrintMethod_Intaglio_Zinc
+  a bdo:PrintMethod_Intaglio ;
+  skos:prefLabel "zinc intaglio"@en ;
+.
+bdr:PrintMethod_Manuscript
+  a bdo:PrintMethod_Manuscript ;
+  skos:prefLabel "manuscript"@en ;
+.
+bdr:PrintMethod_Relief_Letterpress
+  a bdo:PrintMethod_Relief ;
+  rdfs:comment "mechanical relief printing typically via wood"@en ;
+  skos:prefLabel "letterpress"@en ;
+.
+bdr:PrintMethod_Relief_WoodBlock
+  a bdo:PrintMethod_Relief ;
+  rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
+  skos:altLabel "xylograph"@en ;
+  skos:prefLabel "woodblock"@en ;
+.
+bdr:PrintMethod_Xerography
+  a bdo:PrintMethod ;
+  skos:prefLabel "xerography"@en ;
+.

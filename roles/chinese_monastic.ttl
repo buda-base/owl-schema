@@ -1,0 +1,134 @@
+# baseURI: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: ChineseMonastic
+
+@prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ChineseMonastic
+  a owl:Class ;
+  rdfs:comment "Roles referred to in various Chinese Gaosengzhuan 高僧傳 \"Biographies of eminent monks\""@en ;
+  rdfs:label "Chinese monastic role"@en ;
+.
+ChineseMonastic:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:R0ER0001
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T09:43:05-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:altLabel "亡身"@zh-hant ;
+  skos:altLabel "燒身"@zh-hant ;
+  skos:altLabel "燒身供養"@zh-hant ;
+  skos:prefLabel "Yíshēn"@zh-latn-pinyin ;
+  skos:prefLabel "self-immolator"@en ;
+  skos:prefLabel "遺身"@zh-hant ;
+.
+bdr:R0ER0002
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:48:17-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Chàngdǎo"@zh-latn-pinyin ;
+  skos:prefLabel "public preacher"@en ;
+  skos:prefLabel "唱導"@zh-hant ;
+.
+bdr:R0ER0003
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:50:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:altLabel "神異"@zh-hant ;
+  skos:prefLabel "Gǎntōng"@zh-latn-pinyin ;
+  skos:prefLabel "miracle worker"@en ;
+  skos:prefLabel "感通"@zh-hant ;
+.
+bdr:R0ER0004
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:52:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Mínglǜ"@zh-latn-pinyin ;
+  skos:prefLabel "Vinaya expert"@en ;
+  skos:prefLabel "明律"@zh-hant ;
+.
+bdr:R0ER0005
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:53:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:altLabel "誦經"@zh-hant ;
+  skos:prefLabel "Jīng shī"@zh-latn-pinyin ;
+  skos:prefLabel "sutra recitator and chanter"@en ;
+  skos:prefLabel "經師"@zh-hant ;
+.
+bdr:R0ER0006
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Xíchán"@zh-latn-pinyin ;
+  skos:prefLabel "meditator"@en ;
+  skos:prefLabel "習禪"@zh-hant ;
+.
+bdr:R0ER0007
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
+  skos:prefLabel "Xīngfú"@zh-latn-pinyin ;
+  skos:prefLabel "promoter of merit"@en ;
+  skos:prefLabel "興福"@zh-hant ;
+.
+bdr:R0ER0008
+  a :ChineseMonastic ;
+  adm:logEntry [
+      a adm:LogEntry ;
+      adm:logDate "2019-03-06T11:03:00-06:00"^^xsd:dateTime ;
+      adm:logMessage "added Chinese monastic role"@en ;
+      adm:logWho bdr:U00006 ;
+    ] ;
+  adm:status bdr:StatusReleased ;
+  skos:prefLabel "Dharma protector (human)"@en ;
+  skos:prefLabel "Hùfǎ"@zh-latn-pinyin ;
+  skos:prefLabel "護法"@zh-hant ;
+.

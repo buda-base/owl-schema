@@ -1,0 +1,102 @@
+# baseURI: http://purl.bdrc.io/ontology/types/TimePeriod
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: TimePeriod
+
+@prefix TimePeriod: <http://purl.bdrc.io/ontology/types/TimePeriod#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:ChineseDynasty
+  a owl:Class ;
+  rdfs:label "Chinese Dynasty"@en ;
+  rdfs:label "王朝"@zh-hans ;
+  rdfs:subClassOf bdo:ChinesePeriods ;
+.
+bdo:ChineseEra
+  a owl:Class ;
+  rdfs:label "Chinese reign" ;
+  rdfs:subClassOf bdo:ChinesePeriods ;
+.
+bdo:ChinesePeriods
+  a owl:Class ;
+  rdfs:label "Cinese periods" ;
+  rdfs:subClassOf bdo:TimePeriod ;
+.
+bdo:QuarterCentury
+  a owl:Class ;
+  rdfs:label "Quarter Century"@en ;
+  rdfs:label "四分之一世纪"@zh-hans ;
+  rdfs:subClassOf bdo:TimePeriod ;
+.
+bdo:TimePeriod
+  a owl:Class ;
+  rdfs:comment "Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ;
+  rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
+  rdfs:label "Time Period"@en ;
+  rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
+.
+<http://purl.bdrc.io/ontology/types/TimePeriod>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:C18Q2
+  a bdo:QuarterCentury ;
+  bdo:notAfter 1749 ;
+  bdo:notBefore 1725 ;
+  rdfs:comment "1725 - 1749"@en ;
+  skos:prefLabel "2nd quarter of the 18th century"@en ;
+.
+bdr:C8Q1
+  a bdo:QuarterCentury ;
+  bdo:notAfter 724 ;
+  bdo:notBefore 700 ;
+  rdfs:comment "700 - 724"@en ;
+  skos:prefLabel "1st quarter of the 8th century"@en ;
+.
+bdr:FormerQinDynasty
+  a bdo:ChineseDynasty ;
+  bdo:notAfter 394 ;
+  bdo:notBefore 350 ;
+  rdfs:comment "Former Qin (350-394) was one of the 16 countries"@en ;
+  rdfs:seeAlso "<https://translate.google.com/translate?hl=en&sl=zh-TW&u=https://zh.wikipedia.org/zh/%25E5%2589%258D%25E7%25A7%25A6&prev=search>"@en ;
+  rdfs:seeAlso "<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj30Ijx-MPaAhVGY6wKHUzFDRwQFggpMAA&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2589%258D%25E7%25A7%25A6&usg=AOvVaw07mPIu0PcnCySbo0auaBWp>"@zh-hans ;
+  skos:prefLabel "Former Qin Dynasty"@en ;
+  skos:prefLabel "前秦代"@zh-hans ;
+.
+bdr:TangDynasty
+  a bdo:ChineseDynasty ;
+  bdo:notAfter 907 ;
+  bdo:notBefore 618 ;
+  rdfs:comment "In the Tang Dynasty (618-907), the Chinese dynasty and the national dynasty shared a total of 289 years with 21 emperors"@en ;
+  rdfs:seeAlso "<https://translate.google.com/translate?hl=en&sl=zh-TW&u=https://zh.wikipedia.org/zh/%25E5%2594%2590%25E6%259C%259D&prev=search>"@en ;
+  rdfs:seeAlso "<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwih_avD_cPaAhVFbK0KHWJdCvMQFggpMAA&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E5%2594%2590%25E6%259C%259D&usg=AOvVaw0WPfem1oSvcsj1-xc6T5qd>"@zh-hans ;
+  skos:prefLabel "Tang Dynasty"@en ;
+  skos:prefLabel "唐代"@zh-hans ;
+.
+bdr:WudeEra
+  a bdo:ChineseEra ;
+  bdo:notAfter "626"^^bdo:AnyDate ;
+  bdo:notBefore "618"^^bdo:AnyDate ;
+  skos:prefLabel "Wude era"@en ;
+  skos:prefLabel "Wǔ dé zhī zhì"@zh-latn-pinyin ;
+  skos:prefLabel "武德之治"@zh-hant ;
+.
+bdr:ZhiguanEra
+  a bdo:ChineseEra ;
+  bdo:notAfter "649"^^bdo:AnyDate ;
+  bdo:notBefore "627"^^bdo:AnyDate ;
+  skos:altLabel "Golden Years"@en ;
+  skos:altLabel "Zhèng guān zhī zhì"@zh-latn-pinyin ;
+  skos:altLabel "正觀之治"@zh-hant ;
+  skos:prefLabel "Zhiguan era"@en ;
+  skos:prefLabel "Zhēnguàn zhī zhì"@zh-latn-pinyin ;
+  skos:prefLabel "貞觀之治"@zh-hant ;
+.
