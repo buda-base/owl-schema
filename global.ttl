@@ -22,6 +22,5 @@ bdgo:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/adm/unknown/> ;
   owl:imports adm: ;
-  owl:imports bdo: ;
   owl:imports aut: ;
 .
