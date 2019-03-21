@@ -26,7 +26,7 @@ adm:
   owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
-  owl:imports <http://purl.bdrc.io/ontology/core/> ;
+  owl:imports bdo: ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 adm:Access
@@ -36,6 +36,12 @@ adm:Account
   a owl:Class ;
   rdfs:subClassOf adm:Entity ;
 .
+adm:AdmUnion
+  a owl:Class ;
+  rdfs:comment "a union of adm classes"@en ;
+  rdfs:label "adm union"@en ;
+  rdfs:subClassOf bdo:Union ;
+.
 adm:Assertion
   a owl:Class ;
   rdfs:comment "An assertion represents a statement made in a source. It contains a comment summarizing the statement in plain language and a location indicating the source."@en ;
@@ -44,10 +50,10 @@ adm:Assertion
 .
 adm:ContentProvider
   a owl:Class ;
+  adm:deprecatedComment "deprecated in favor of the more general adm:Organization. This type is currently not used in the dataset" ;
   rdfs:comment "A content provider is a source of content (images or metadata)"@en ;
   rdfs:label "Content provider"@en ;
   rdfs:subClassOf adm:Entity ;
-  adm:deprecatedComment "deprecated in favor of the more general adm:Organization. This type is currently not used in the dataset" ;
   owl:deprecated true ;
 .
 adm:Entity
@@ -97,6 +103,19 @@ The various Works that are contained in the Product include an inProduct element
   rdfs:label "Product"@en ;
   rdfs:subClassOf adm:Entity ;
 .
+adm:ProductOrProductOrg
+  a owl:Class ;
+  rdfs:comment "used as domain for properties recording CTC subscriber info"@en ;
+  rdfs:label "product or product organization"@en ;
+  rdfs:subClassOf adm:AdmUnion ;
+  rdfs:subClassOf [
+      a owl:Class ;
+      owl:unionOf (
+          adm:Product
+          adm:ProductOrg
+        ) ;
+    ] ;
+.
 adm:ProductOrg
   a owl:Class ;
   rdfs:comment "A unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access."@en ;
@@ -119,11 +138,29 @@ adm:Type
   a owl:Class ;
   rdfs:comment "adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology."@en ;
 .
+adm:WorkOrAdmOutline
+  a owl:Class ;
+  rdfs:comment "domain for :workLegacyNode as part of migration - not a core ontology concept"@en ;
+  rdfs:label "work or adm:Outline"@en ;
+  rdfs:subClassOf bdo:MixedUnion ;
+  rdfs:subClassOf [
+      a owl:Class ;
+      owl:unionOf (
+          adm:Outline
+          bdo:Work
+        ) ;
+    ] ;
+.
 adm:access
   a owl:AnnotationProperty ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The type of online access permitted for the subject Work."@en ;
   rdfs:domain bdo:Entity ;
+  rdfs:domain bdo:TextualEntity ;
   rdfs:label "record access"@en ;
+  rdfs:label "text access"@en ;
   rdfs:range adm:Access ;
+  rdfs:seeAlso bdo:AccessType ;
 .
 adm:attributionName
   a owl:AnnotationProperty ;
@@ -143,6 +180,15 @@ adm:catalogingConvention
   rdfs:label "cataloging convention"@en ;
   rdfs:range rdf:langString ;
   rdfs:subPropertyOf rdfs:comment ;
+.
+adm:contentProvider
+  a owl:ObjectProperty ;
+  adm:deprecatedComment "deprecated in favor of :hasContentProvider - name change"@en ;
+  rdfs:comment "The organization or person that provided the Etext"@en ;
+  rdfs:domain bdo:TextualEntity ;
+  rdfs:label "content provider"@en ;
+  rdfs:range adm:ContentProvider ;
+  owl:deprecated true ;
 .
 adm:contradictedBy
   a owl:AnnotationProperty ;
@@ -190,9 +236,13 @@ adm:legacyImageGroupRID
 .
 adm:license
   a owl:AnnotationProperty ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The license under which access to the Work is provided"@en ;
   rdfs:comment "The license under which access to the metadata representation of the :Entity resource is provided"@en ;
   rdfs:domain bdo:Entity ;
+  rdfs:domain bdo:TextualEntity ;
   rdfs:label "record license"@en ;
+  rdfs:label "text license"@en ;
   rdfs:range adm:License ;
   rdfs:seeAlso bdo:License ;
 .
@@ -467,94 +517,6 @@ bdo:EventOrPeriod
 bdo:PersonFoundsMonastery
   adm:deprecatedComment "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
   adm:replaceWithClass bdo:PlaceFounded ;
-.
-adm:ProductOrProductOrg
-  a owl:Class ;
-  rdfs:comment "used as domain for properties recording CTC subscriber info"@en ;
-  rdfs:label "product or product organization"@en ;
-  rdfs:subClassOf bdo:AdmUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          adm:Product
-          adm:ProductOrg
-        ) ;
-    ] ;
-.
-adm:WorkOrAdmOutline
-  a owl:Class ;
-  rdfs:comment "domain for :workLegacyNode as part of migration - not a core ontology concept"@en ;
-  rdfs:label "work or adm:Outline"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          adm:Outline
-          bdo:Work
-        ) ;
-    ] ;
-.
-adm:access
-  a owl:ObjectProperty ;
-  rdfs:comment "The type of online access permitted for the subject Work."@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "text access"@en ;
-  rdfs:range adm:Access ;
-  rdfs:seeAlso bdo:AccessType ;
-.
-adm:contentProvider
-  a owl:ObjectProperty ;
-  rdfs:comment "The organization or person that provided the Etext"@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "content provider"@en ;
-  rdfs:range adm:ContentProvider ;
-  owl:deprecated true ;
-  adm:deprecatedComment "deprecated in favor of :hasContentProvider - name change"@en ;
-.
-adm:license
-  a owl:ObjectProperty ;
-  rdfs:comment "The license under which access to the Work is provided"@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "text license"@en ;
-  rdfs:range adm:License ;
-  rdfs:seeAlso bdo:License ;
-.
-adm:AdmUnion
-  a owl:Class ;
-  rdfs:comment "a union of adm classes"@en ;
-  rdfs:label "adm union"@en ;
-  rdfs:subClassOf bdo:Union ;
-.
-adm:access
-  a owl:ObjectProperty ;
-  rdfs:comment "The type of online access permitted for the subject Work."@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "text access"@en ;
-  rdfs:range adm:Access ;
-  rdfs:seeAlso bdo:AccessType ;
-.
-adm:contentProvider
-  a owl:ObjectProperty ;
-  rdfs:comment "The organization or person that provided the Etext"@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "content provider"@en ;
-  rdfs:range adm:ContentProvider ;
-  owl:deprecated true ;
-  adm:deprecatedComment "deprecated in favor of :hasContentProvider - name change"@en ;
-.
-adm:license
-  a owl:ObjectProperty ;
-  rdfs:comment "The license under which access to the Work is provided"@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "text license"@en ;
-  rdfs:range adm:License ;
-  rdfs:seeAlso bdo:License ;
-.
-adm:AdmUnion
-  a owl:Class ;
-  rdfs:comment "a union of adm classes"@en ;
-  rdfs:label "adm union"@en ;
-  rdfs:subClassOf bdo:Union ;
 .
 bdo:TranslationRevisedEvent
   adm:replaceWithClass bdo:RevisedEvent ;
