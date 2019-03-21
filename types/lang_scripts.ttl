@@ -14,13 +14,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:LangScript
-  a owl:Class ;
-  rdfs:comment ":LangScript individuals represent combinations of a Language, a script, and possibly a transliteration in which the Language is expressed. For example, bdr:BoEwts represents Tibetan in the Extended Wylie transliteration (which is written in Latin script)"@en ;
-  rdfs:label "Language+Script"@en ;
-  rdfs:seeAlso <http://purl.bdrc.io/ontology/types/LangCode> ;
-  rdfs:seeAlso <http://purl.bdrc.io/ontology/types/Language> ;
-.
 LangScript:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language> ;

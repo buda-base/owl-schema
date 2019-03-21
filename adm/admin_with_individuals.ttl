@@ -1,0 +1,36 @@
+# baseURI: http://purl.bdrc.io/ontology/adm/all/
+# imports: http://purl.bdrc.io/ontology/core/individuals/
+# imports: http://purl.bdrc.io/ontology/adm/types/Access
+# imports: http://purl.bdrc.io/ontology/adm/types/License
+# imports: http://purl.bdrc.io/ontology/adm/types/OutlineType
+# imports: http://purl.bdrc.io/ontology/adm/types/Status
+# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
+# imports: http://purl.bdrc.io/ontology/IGNORE/userProfiles/
+# imports: http://purl.bdrc.io/ontology/admin/
+# prefix: admall
+
+@prefix admall: <http://purl.bdrc.io/ontology/adm/all/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdoall: <http://purl.bdrc.io/ontology/core/all/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bdoinds: <http://purl.bdrc.io/ontology/core/individuals/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+admall:
+  a owl:Ontology ;
+  rdfs:comment "This is the buda adm+bdo+individuals ontology comprising classes, properties, and instances for use in the Buda platform"@en ;
+  rdfs:label "Buda adm+bdo+instances ontology"@en ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/License> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
+  owl:imports adm: ;
+  owl:imports bdoinds: ;
+.

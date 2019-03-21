@@ -13,12 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:Script
-  a owl:Class ;
-  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Kyug'Yig, Native (implies Unicode)"@en ;
-  rdfs:label "Script"@en ;
-  rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
-.
 Script:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

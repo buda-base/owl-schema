@@ -14,11 +14,6 @@ OutlineType:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-adm:OutlineType
-  a owl:Class ;
-  rdfs:comment "Legacy outline type"@en ;
-  rdfs:label "Outline Type"@en ;
-.
 bdr:OutlineTypeCompositeVolume
   a adm:OutlineType ;
 .

@@ -13,19 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:WorkType
-  a owl:Class ;
-  rdfs:comment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
-  rdfs:comment "deprecated in favor of using appropriate subclasses of :Work"@en ;
-  rdfs:label "type of work"@en ;
-  owl:deprecated true ;
-.
-bdo:WorkTypeVirtualWork
-  a bdo:WorkType ;
-  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
-  owl:deprecated true ;
-  skos:prefLabel "virtual work"@en ;
-.
 WorkType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
@@ -50,4 +37,10 @@ bdr:WorkTypeUnicodeText
   a bdo:WorkType ;
   owl:deprecated true ;
   skos:prefLabel "unicode text"@en ;
+.
+bdr:WorkTypeVirtualWork
+  a bdo:WorkType ;
+  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
+  owl:deprecated true ;
+  skos:prefLabel "virtual work"@en ;
 .

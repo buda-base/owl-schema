@@ -13,11 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:PlaceType
-  a owl:Class ;
-  rdfs:comment "The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc."@en ;
-  rdfs:label "Place Type"@en ;
-.
 PlaceType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

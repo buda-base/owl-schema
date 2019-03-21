@@ -15,11 +15,6 @@ License:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-adm:License
-  a owl:Class ;
-  rdfs:comment "License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright."@en ;
-  rdfs:label "License"@en ;
-.
 bdr:LicenseAllRightsReserved
   a adm:License ;
   rdfs:comment "Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved."@en ;

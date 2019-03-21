@@ -13,11 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:Transliteration
-  a owl:Class ;
-  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
-  rdfs:label "Transliteration"@en ;
-.
 Transliteration:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

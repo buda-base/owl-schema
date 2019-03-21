@@ -11,11 +11,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:Creator
-  a owl:Class ;
-  rdfs:comment "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
-  rdfs:label "creator role"@en ;
-.
 creator:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

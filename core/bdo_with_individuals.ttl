@@ -1,0 +1,56 @@
+# baseURI: http://purl.bdrc.io/ontology/core/all/
+# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# imports: http://purl.bdrc.io/ontology/roles/creator
+# imports: http://purl.bdrc.io/ontology/types/Binding
+# imports: http://purl.bdrc.io/ontology/types/Gender
+# imports: http://purl.bdrc.io/ontology/types/LangScript
+# imports: http://purl.bdrc.io/ontology/types/Language
+# imports: http://purl.bdrc.io/ontology/types/LineageType
+# imports: http://purl.bdrc.io/ontology/types/Material
+# imports: http://purl.bdrc.io/ontology/types/PaginationType
+# imports: http://purl.bdrc.io/ontology/types/PlaceType
+# imports: http://purl.bdrc.io/ontology/types/PrintMethod
+# imports: http://purl.bdrc.io/ontology/types/Script
+# imports: http://purl.bdrc.io/ontology/types/Taxonomy
+# imports: http://purl.bdrc.io/ontology/types/TimePeriod
+# imports: http://purl.bdrc.io/ontology/types/Tradition
+# imports: http://purl.bdrc.io/ontology/types/Transliteration
+# imports: http://purl.bdrc.io/ontology/types/WorkPartType
+# imports: http://purl.bdrc.io/ontology/types/WorkType
+# prefix: bdoall
+
+@prefix bdoall: <http://purl.bdrc.io/ontology/core/all/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdoall:
+  a owl:Ontology ;
+  rdfs:comment "This is the buda bdo+individuals ontology comprising classes, properties, and instances for use in the Buda platform"@en ;
+  rdfs:label "Buda bdo+instances ontology"@en ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/creator> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LangScript> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LineageType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Material> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PaginationType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PlaceType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PrintMethod> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Script> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/TimePeriod> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Tradition> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Transliteration> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/WorkType> ;
+  owl:imports bdo: ;
+.

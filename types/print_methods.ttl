@@ -13,10 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:PrintMethod
-  a owl:Class ;
-  rdfs:label "Print method" ;
-.
 bdo:PrintMethod_Intaglio
   a owl:Class ;
   rdfs:label "Print method Intaglio" ;

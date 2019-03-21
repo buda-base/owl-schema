@@ -12,11 +12,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:ChineseMonastic
-  a owl:Class ;
-  rdfs:comment "Roles referred to in various Chinese Gaosengzhuan 高僧傳 \"Biographies of eminent monks\""@en ;
-  rdfs:label "Chinese monastic role"@en ;
-.
 ChineseMonastic:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

@@ -35,13 +35,6 @@ bdo:QuarterCentury
   rdfs:label "四分之一世纪"@zh-hans ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
-bdo:TimePeriod
-  a owl:Class ;
-  rdfs:comment "Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ;
-  rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
-  rdfs:label "Time Period"@en ;
-  rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
-.
 TimePeriod:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

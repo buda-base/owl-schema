@@ -16,9 +16,6 @@ Status:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-adm:Status
-  a owl:Class ;
-.
 bdr:StatusAccessioned
   a adm:Status ;
   skos:prefLabel "accessioned"@en ;
