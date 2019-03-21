@@ -34,7 +34,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -4191,90 +4190,6 @@ bdo:workType
   rdfs:range bdo:WorkType ;
   rdfs:seeAlso bdo:WorkType ;
   owl:deprecated true ;
-.
-tbr:outlineName
-  a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: the name from the outline. This should be the bibliographic name of the Work being outlined but apparently isn't always."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "tbr outline name"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_dist_py
-  a owl:AnnotationProperty ;
-  rdfs:comment "The name in Pinyin of the district containing this Place from import of historical places prepared by Karl Ryavec and Lex Berman."@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "district"@en ;
-  rdfs:range rdf:langString ;
-.
-tbr:place_gb_dist
-  a owl:AnnotationProperty ;
-  rdfs:comment "An old GB code for the district containing this place from import of historical Tibetan places by Karl Ryavec and Lex Beerman"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "old containing district gb"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_gonpa_per1000
-  a owl:AnnotationProperty ;
-  rdfs:comment "The number of monasteries per 1000 sq km in this Place (presumably a region) from data provided by Karl Ryavec"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "monasteries per 1000 sq km"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_id_Lex
-  a owl:AnnotationProperty ;
-  rdfs:comment "Place ID assigned by Lex Berman used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "place ID Lex"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_id_TBRC
-  a owl:AnnotationProperty ;
-  rdfs:comment "Place ID assigned by Karl Ryavec used for import of historical Tibetan place information. This id is based on an old GB code and is not current. It will be removed in the future from the data set"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "place id TBRC"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_name_kr
-  a owl:AnnotationProperty ;
-  rdfs:comment "Place name provided by Karl Ryavec for import of historical Tibetan places"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "name per KR"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_name_lex
-  a owl:AnnotationProperty ;
-  rdfs:comment "Place name provided by Lex Berman for import of historical Tibetan places"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "name per lex"@en ;
-  rdfs:range xsd:string ;
-.
-tbr:place_prov_py
-  a owl:AnnotationProperty ;
-  rdfs:comment "Name of containing province in pinyin per Karl Ryavec for import of historical places"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "province name"@en ;
-  rdfs:range rdf:langString ;
-.
-tbr:place_town_ch
-  a owl:AnnotationProperty ;
-  rdfs:comment "Name of the containing town in Chinese unicode per Karl Ryavec for import of historical Tibetan places"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "town name"@en ;
-  rdfs:range rdf:langString ;
-.
-tbr:place_town_py
-  a owl:AnnotationProperty ;
-  rdfs:comment "Name of containing town in pinyin per Karl Ryavec for import of historical Tibetan places"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "town name"@en ;
-  rdfs:range rdf:langString ;
-.
-tbr:place_town_syl
-  a owl:AnnotationProperty ;
-  rdfs:comment "Another version of the name of the containing town per Karl Ryavec"@en ;
-  rdfs:domain bdo:Place ;
-  rdfs:label "town name"@en ;
-  rdfs:range xsd:string ;
 .
 bdr:ChineseDateNotSpecified
   a bdo:ChineseDate ;
