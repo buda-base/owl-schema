@@ -1,7 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/OutlineType
 # prefix: OutlineType
 
-@prefix OutlineType: <http://purl.bdrc.io/ontology/adm/types/OutlineType#> .
+@prefix OutlineType: <http://purl.bdrc.io/ontology/adm/types/OutlineType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/adm/types/OutlineType>
+OutlineType:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .

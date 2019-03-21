@@ -1,7 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/Status
 # prefix: Status
 
-@prefix Status: <http://purl.bdrc.io/ontology/adm/types/Status#> .
+@prefix Status: <http://purl.bdrc.io/ontology/adm/types/Status/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -12,7 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/adm/types/Status>
+Status:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .

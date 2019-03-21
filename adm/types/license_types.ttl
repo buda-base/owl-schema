@@ -1,7 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/License
 # prefix: License
 
-@prefix License: <http://purl.bdrc.io/ontology/adm/types/License#> .
+@prefix License: <http://purl.bdrc.io/ontology/adm/types/License/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix cc: <http://creativecommons.org/ns#> .
@@ -11,7 +11,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/adm/types/License>
+License:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .

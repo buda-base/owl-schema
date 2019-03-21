@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: LineageType
 
-@prefix LineageType: <http://purl.bdrc.io/ontology/types/LineageType#> .
+@prefix LineageType: <http://purl.bdrc.io/ontology/types/LineageType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -24,7 +24,7 @@ bdo:TibetanLineageType
   rdfs:label "Tibetan Lineage type"@en ;
   rdfs:subClassOf bdo:LineageType ;
 .
-<http://purl.bdrc.io/ontology/types/LineageType>
+LineageType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

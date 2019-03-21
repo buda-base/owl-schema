@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: PaginationType
 
-@prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType#> .
+@prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -21,7 +21,7 @@ Relative pagination uses pagination in the content of the work while absolute co
   rdfs:comment "Migration info: The pagination information affects the interpretation of the :WorkLocation(s) that occur in the original outline. The migration should add the pagination information to each WorkLocation since there will no longer be an Outline document"@en ;
   rdfs:label "pagination type"@en ;
 .
-<http://purl.bdrc.io/ontology/types/PaginationType>
+PaginationType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

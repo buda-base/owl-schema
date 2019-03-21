@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: WorkType
 
-@prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType#> .
+@prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -26,7 +26,7 @@ bdo:WorkTypeVirtualWork
   owl:deprecated true ;
   skos:prefLabel "virtual work"@en ;
 .
-<http://purl.bdrc.io/ontology/types/WorkType>
+WorkType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

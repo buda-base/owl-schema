@@ -1449,10 +1449,10 @@ bdo:chunkId
 bdo:contentProvider
   a owl:ObjectProperty ;
   rdfs:comment "The organization or person that provided the Etext"@en ;
+  rdfs:comment "see adm:contentProvider"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "content provider"@en ;
   owl:deprecated true ;
-  rdfs:comment "see adm:contentProvider"@en ;
 .
 bdo:corporationHasMember
   a owl:ObjectProperty ;
@@ -1625,8 +1625,8 @@ bdo:creatorReciter
 .
 bdo:creatorRequester
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated - not used"@en ;
   rdfs:comment "An individual who requested the author to write the Work"@en ;
+  rdfs:comment "deprecated - not used"@en ;
   rdfs:label "requester"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
@@ -2330,10 +2330,10 @@ bdo:language
 bdo:license
   a owl:ObjectProperty ;
   rdfs:comment "The license under which access to the Work is provided"@en ;
+  rdfs:comment "deprecated by adm:license"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "text license"@en ;
   rdfs:seeAlso bdo:License ;
-  rdfs:comment "deprecated by adm:license"@en ;
   owl:deprecated true ;
 .
 bdo:lineageDownFrom
@@ -2545,8 +2545,8 @@ bdo:onDate
 .
 bdo:onOrAbout
   a owl:DatatypeProperty ;
-  rdfs:comment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
   rdfs:comment "This property replaces the various separate circa properties with a single property that will have a single validator and editor support."@en ;
+  rdfs:comment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "circa"@en ;
   rdfs:range xsd:string ;
@@ -2629,8 +2629,8 @@ bdo:personContributingAuthorOf
 .
 bdo:personCreatorOf
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of bod:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
+  rdfs:comment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   rdfs:domain bdo:Person ;
   rdfs:label "creator of"@en ;
   rdfs:range bdo:Work ;
@@ -2829,8 +2829,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 bdo:placeIsNear
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  rdfs:comment "deprecated because not actually used in legacy data and not well defined"@en ;
   rdfs:comment "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
+  rdfs:comment "deprecated because not actually used in legacy data and not well defined"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
@@ -3259,10 +3259,10 @@ bdo:workContainsChapters
 .
 bdo:workCreator
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   bdo:inferSubTree true ;
   rdfs:comment "Identifies the type and person that are a creator of the work"@en ;
   rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
+  rdfs:comment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
@@ -3524,8 +3524,8 @@ Adding this \"virtual\" property to the ontology provides a place to add the lab
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of the various :WorkEvents."@en ;
   rdfs:comment "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
+  rdfs:comment "deprecated in favor of the various :WorkEvents."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has site"@en ;
   owl:deprecated "true"@en ;
@@ -3611,8 +3611,8 @@ bdo:workIsSimilarTo
 .
 bdo:workIsbn
   a owl:DatatypeProperty ;
-  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:Isbn class"@en ;
   rdfs:comment "Refers to the International Standard Book Number for the Work"@en ;
+  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:Isbn class"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "ISBN"@en ;
   rdfs:range bdo:ISBN ;
@@ -3742,8 +3742,8 @@ bdo:workLangScript
 .
 bdo:workLcCallNumber
   a owl:DatatypeProperty ;
-  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:ShelfMarkLcc class"@en ;
   rdfs:comment "Refers to the Library of Congress Shelf mark call number"@en ;
+  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:ShelfMarkLcc class"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has LC Call Number"@en ;
   rdfs:range bdo:LCCallNumber ;
@@ -3751,8 +3751,8 @@ bdo:workLcCallNumber
 .
 bdo:workLccn
   a owl:DatatypeProperty ;
-  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:Lccn class"@en ;
   rdfs:comment "Refers to the Library of Congress Control Number"@en ;
+  rdfs:comment "convert to Bibframe bf:identifiedBy with range Bibframe bf:Lccn class"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "LCCN"@en ;
   rdfs:range bdo:LCCN ;
@@ -4034,8 +4034,8 @@ This is generally not the source printery of the original wood block prints that
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
-  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:comment "Loction of the publisher of the form of the Work that has been digitized."@en ;
+  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
@@ -4043,8 +4043,8 @@ bdo:workPublisherLocation
 .
 bdo:workPublisherName
   a owl:DatatypeProperty ;
-  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:comment "The name of the publisher transcribed from the Work"@en ;
+  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;

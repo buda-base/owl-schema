@@ -40,7 +40,7 @@ adm:AdmUnion
   a owl:Class ;
   rdfs:comment "a union of adm classes"@en ;
   rdfs:label "adm union"@en ;
-  rdfs:subClassOf bdo:Union ;
+  rdfs:subClassOf owl:Thing ;
 .
 adm:Assertion
   a owl:Class ;

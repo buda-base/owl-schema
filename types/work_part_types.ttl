@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: WorkPartType
 
-@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType#> .
+@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -23,7 +23,7 @@ bdo:WorkPartType
   rdfs:comment "Migration hint: represents the Work related outline:node/@type"@en ;
   rdfs:label "Work Part Type"@en ;
 .
-<http://purl.bdrc.io/ontology/types/WorkPartType>
+WorkPartType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

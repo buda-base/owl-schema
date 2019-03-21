@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Transliteration
 
-@prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration#> .
+@prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -18,7 +18,7 @@ bdo:Transliteration
   rdfs:comment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
   rdfs:label "Transliteration"@en ;
 .
-<http://purl.bdrc.io/ontology/types/Transliteration>
+Transliteration:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

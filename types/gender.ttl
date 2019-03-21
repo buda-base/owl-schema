@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Gender
 
-@prefix Gender: <http://purl.bdrc.io/ontology/types/Gender#> .
+@prefix Gender: <http://purl.bdrc.io/ontology/types/Gender/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -18,7 +18,7 @@ bdo:Gender
   rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
   rdfs:label "Gender"@en ;
 .
-<http://purl.bdrc.io/ontology/types/Gender>
+Gender:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

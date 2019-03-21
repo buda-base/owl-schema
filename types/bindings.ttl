@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Binding
 
-@prefix Binding: <http://purl.bdrc.io/ontology/types/Binding#> .
+@prefix Binding: <http://purl.bdrc.io/ontology/types/Binding/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -32,7 +32,7 @@ bdo:Binding_LooseLeaf
   rdfs:label "Binding Loose leaf" ;
   rdfs:subClassOf bdo:Binding ;
 .
-<http://purl.bdrc.io/ontology/types/Binding>
+Binding:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

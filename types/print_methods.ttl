@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: PrintMethod
 
-@prefix PrintMethod: <http://purl.bdrc.io/ontology/types/PrintMethod#> .
+@prefix PrintMethod: <http://purl.bdrc.io/ontology/types/PrintMethod/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -37,7 +37,7 @@ bdo:PrintMethod_Relief
   rdfs:label "Print method Relief" ;
   rdfs:subClassOf bdo:PrintMethod ;
 .
-<http://purl.bdrc.io/ontology/types/PrintMethod>
+PrintMethod:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

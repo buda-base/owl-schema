@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: PlaceType
 
-@prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType#> .
+@prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -18,7 +18,7 @@ bdo:PlaceType
   rdfs:comment "The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc."@en ;
   rdfs:label "Place Type"@en ;
 .
-<http://purl.bdrc.io/ontology/types/PlaceType>
+PlaceType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;

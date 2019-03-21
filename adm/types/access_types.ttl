@@ -1,6 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/Access
+# prefix: Access
 
-@prefix Access: <http://purl.bdrc.io/ontology/types/Access#> .
+@prefix Access: <http://purl.bdrc.io/ontology/types/Access/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,7 +10,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/adm/types/Access>
+Access:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .

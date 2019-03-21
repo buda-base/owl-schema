@@ -3,7 +3,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: LangScript
 
-@prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript#> .
+@prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -21,7 +21,7 @@ bdo:LangScript
   rdfs:seeAlso <http://purl.bdrc.io/ontology/types/LangCode> ;
   rdfs:seeAlso <http://purl.bdrc.io/ontology/types/Language> ;
 .
-<http://purl.bdrc.io/ontology/types/LangScript>
+LangScript:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
