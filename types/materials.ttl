@@ -1,6 +1,4 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Material
-# imports: http://www.w3.org/2004/02/skos/core
-# prefix: Material
 
 @prefix Material: <http://purl.bdrc.io/ontology/types/Material/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -48,17 +46,25 @@ bdr:AppliedMaterial_SilverLeaf
   skos:prefLabel "silver leaf"@en ;
 .
 bdr:MaterialBirchBark
-  a bdo:BaseMaterial ;
+  a bdr:MaterialWood ;
   skos:prefLabel "birch bark"@en ;
 .
-bdr:MaterialCoryphaPalmLeaf
+bdr:MaterialCloth
   a bdo:BaseMaterial ;
+  skos:prefLabel "cloth"@en ;
+.
+bdr:MaterialCoryphaPalmLeaf
+  a bdr:MaterialPalmLeaf ;
   skos:prefLabel "palm leaf (corypha)"@en ;
 .
 bdr:MaterialDigital
   a bdo:BaseMaterial ;
   rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
   skos:prefLabel "digital material"@en ;
+.
+bdr:MaterialKhoiPaper
+  a bdr:MaterialPaper ;
+  skos:prefLabel "khoi paper"@en ;
 .
 bdr:MaterialMixed
   a bdo:BaseMaterial ;
@@ -71,13 +77,31 @@ bdr:MaterialMultiLayerPaper
 .
 bdr:MaterialPalmLeaf
   a bdo:BaseMaterial ;
+  a owl:Class ;
+  rdfs:subClassOf bdo:BaseMaterial ;
   skos:prefLabel "palm leaf"@en ;
 .
 bdr:MaterialPaper
   a bdo:BaseMaterial ;
+  a owl:Class ;
+  rdfs:subClassOf bdo:BaseMaterial ;
   skos:prefLabel "paper"@en ;
 .
 bdr:MaterialRicePaper
-  a bdo:BaseMaterial ;
+  a bdr:MaterialPaper ;
   skos:prefLabel "rice paper"@en ;
+.
+bdr:MaterialSaPaper
+  a bdr:MaterialPaper ;
+  skos:prefLabel "sa paper"@en ;
+.
+bdr:MaterialStone
+  a bdo:BaseMaterial ;
+  skos:prefLabel "stone"@en ;
+.
+bdr:MaterialWood
+  a bdo:BaseMaterial ;
+  a owl:Class ;
+  rdfs:subClassOf bdo:BaseMaterial ;
+  skos:prefLabel "wood"@en ;
 .
