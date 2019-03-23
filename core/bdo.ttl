@@ -1,5 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/IGNORE/userProfiles/
+# imports: http://purl.bdrc.io/ontology/core/unknown/
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/creator
 # imports: http://purl.bdrc.io/ontology/types/Binding
@@ -105,7 +105,7 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/IGNORE/userProfiles/> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/unknown/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/creator> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
