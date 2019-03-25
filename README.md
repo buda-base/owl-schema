@@ -29,7 +29,7 @@ See [Change log](CHANGELOG.md).
 
 ### RDF 1.0 / 1.1
 
-Protégé handles only RDF 1.0 while TopBraid Composer handles RDF 1.1. The files are in RDF 1.1 format. They can be easily converted to RDF 1.0 (handled by Protégé) with:
+Protégé handles only RDF 1.0 while TopBraid Composer and Jena handles RDF 1.1. The files are in RDF 1.1 format. They can be easily converted to RDF 1.0 (handled by Protégé) with:
 
 ```sh
 $ sed 's,http://www.w3.org/1999/02/22-rdf-syntax-ns#langString,http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral' bdo.ttl > bdo-rdf10.ttl
