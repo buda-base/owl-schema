@@ -9,7 +9,7 @@ The overall ontology is organized in a collection of directories as follows:
 
   - [unknown-entities.ttl](core/unknown-entities.ttl) defines constants representing an unknown person, work, place and so on. This imported by [bdo](core/bdo.ttl).
   - [bdo.owl.ttl](core/bdo.owl.ttl) defines _owl restrictions_ on the classes and properties defined in [bdo.ttl](core/bdo.ttl). These are used in validating resource definitions and to provide declarative information relevant to the UI's for viewing and editing.
-  - [bdo.shape.ttl](core/bdo.shape.ttl) defines _shacl constraints_ on the classes and properties in in [bdo.ttl](core/bdo.ttl). These are used in validating resource definitions and to provide declarative information relevant to the UI's for viewing and editing.
+  - [bdo.shapes.ttl](core/bdo.shapes.ttl) defines _shacl constraints_ on the classes and properties in in [bdo.ttl](core/bdo.ttl). These are used in validating resource definitions and to provide declarative information relevant to the UI's for viewing and editing.
 - [roles](roles): contains files of constant definitions relevant to various sorts of _roles_ that a `Person` may play in events related to `Works`, `Places`, and other `Persons`. Each of these files defines the classes and their instances for a particular role which are then plugged in via `owl:subClassOf` properties in [bdo.ttl](core/bdo.ttl).
 
 - [types](types): contain files that define models via classes and constants related to various types such as the kind of `Binding` that a `Work` has, or the `Script` in which a `Work` is manifested. Each of these files defines the classes and their instances for a particular kind of type which are then plugged in via `owl:subClassOf` properties in [bdo.ttl](core/bdo.ttl).
@@ -18,7 +18,7 @@ The overall ontology is organized in a collection of directories as follows:
   
   - [types](types): contains files that define constants that are used in [admin.ttl](adm/admin.ttl) which imports these files. For example, [license_types.ttl](adm/types/license_types.ttl) and [status_types](adm/types/status_types.ttl)
   - [ext](ext): contains _extensions_ to the core and admin models
-    - [auth](auth): contains [auth.ttl](etx/auth/auth.ttl) which defines an authentication/authorization model used by various services to implement security controls on read and write access to portions of the platform
+    - [auth](auth): contains [auth.ttl](ext/auth/auth.ttl) which defines an authentication/authorization model used by various services to implement security controls on read and write access to portions of the platform
 - [reasoning](reasoning): contains files that use Jena rules to add triples to the dataset via inferencing.
 - [context.jsonld](context.jsonld) file is a JSON-LD context file that can be used, with the url `http://purl.bdrc.io/context.jsonld`.
 - [lang-tags.md](lang-tags.md) file documents language tag conventions BDRC is using.
