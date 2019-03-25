@@ -16,7 +16,7 @@ The overall ontology is organized in a collection of directories as follows:
 - [adm](adm): contains:
   - [admin.ttl](adm/admin.ttl) which defines classes and properties related to the operation and administration of the BUDA platform that represents BDRC's implementation of the core ontology, [bdo.ttl](core/bdo.ttl).
   
-  - [types](types): contains files that define constants that are used in [admin.ttl](adm/admin.ttl) which imports these files. For example, [license_types.ttl](adm/types/license_types.ttl) and [status_types](adm/types/status_types.ttl)
+  - [types](types): contains files that define constants that are used in [admin.ttl](adm/admin.ttl) which imports these files. For example, [license_types.ttl](adm/types/license_types.ttl) and [status_types.ttl](adm/types/status_types.ttl)
   - [ext](ext): contains _extensions_ to the core and admin models
     - [auth](auth): contains [auth.ttl](ext/auth/auth.ttl) which defines an authentication/authorization model used by various services to implement security controls on read and write access to portions of the platform
 - [reasoning](reasoning): contains files that use Jena rules to add triples to the dataset via inferencing.
