@@ -2302,23 +2302,6 @@ bdo:kinWith
   rdfs:label "kin with"@en ;
   rdfs:range bdo:Person ;
 .
-bdo:langBCP47Lang
-  a owl:DatatypeProperty ;
-  rdfs:comment "The 2-letter iso code for the langauge. To be used in creating the full BCP47 language+script+encoding tags"@en ;
-  rdfs:domain bdo:Language ;
-  rdfs:label "lang BCP47Lang"@en ;
-  rdfs:range xsd:string ;
-.
-bdo:langMARCCode
-  a owl:DatatypeProperty ;
-  rdfs:comment "three-character alphabetic codes for languages encode in MARC records"@en ;
-  rdfs:domain bdo:Language ;
-  rdfs:label "MARC language code"@en ;
-  rdfs:range xsd:string ;
-  rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
-  rdfs:seeAlso <http://lexvo.org/ontology#marcCode> ;
-  rdfs:seeAlso <https://www.loc.gov/marc/languages/> ;
-.
 bdo:license
   a owl:ObjectProperty ;
   rdfs:comment "The license under which access to the Work is provided"@en ;
