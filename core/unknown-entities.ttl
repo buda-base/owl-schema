@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/core/unknown/
-# prefix: unknown
+# baseURI: http://purl.bdrc.io/ontology/core/Unknown/
+# prefix: Unknown
 
 @prefix bdd: <http://purl.bdrc.io/data/> .
-@prefix unknown: <http://purl.bdrc.io/ontology/core/unknown/> .
+@prefix Unknown: <http://purl.bdrc.io/ontology/core/Unknown/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -13,7 +13,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-unknown:
+Unknown:
   a owl:Ontology ;
   rdfs:comment "These are various unknown entities"@en ;
   rdfs:label "Buda unknown entities"@en ;

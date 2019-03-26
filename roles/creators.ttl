@@ -1,10 +1,10 @@
-# baseURI: http://purl.bdrc.io/ontology/roles/creator
+# baseURI: http://purl.bdrc.io/ontology/roles/Creator
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: creator
+# prefix: Creator
 
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix creator: <http://purl.bdrc.io/ontology/roles/creator/> .
+@prefix Creator: <http://purl.bdrc.io/ontology/roles/Creator/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -16,7 +16,7 @@ bdo:Creator
   rdfs:comment "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
   rdfs:label "creator role"@en ;
 .
-creator:
+Creator:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
