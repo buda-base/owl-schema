@@ -1,7 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Material
 
 @prefix Material: <http://purl.bdrc.io/ontology/types/Material/> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .

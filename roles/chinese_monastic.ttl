@@ -19,13 +19,6 @@ ChineseMonastic:
 .
 bdr:R0ER0001
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T09:43:05-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:altLabel "亡身"@zh-hant ;
   skos:altLabel "燒身"@zh-hant ;
   skos:altLabel "燒身供養"@zh-hant ;
@@ -35,26 +28,12 @@ bdr:R0ER0001
 .
 bdr:R0ER0002
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:48:17-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:prefLabel "Chàngdǎo"@zh-latn-pinyin ;
   skos:prefLabel "public preacher"@en ;
   skos:prefLabel "唱導"@zh-hant ;
 .
 bdr:R0ER0003
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:50:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:altLabel "神異"@zh-hant ;
   skos:prefLabel "Gǎntōng"@zh-latn-pinyin ;
   skos:prefLabel "miracle worker"@en ;
@@ -62,26 +41,12 @@ bdr:R0ER0003
 .
 bdr:R0ER0004
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:52:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:prefLabel "Mínglǜ"@zh-latn-pinyin ;
   skos:prefLabel "Vinaya expert"@en ;
   skos:prefLabel "明律"@zh-hant ;
 .
 bdr:R0ER0005
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:53:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:altLabel "誦經"@zh-hant ;
   skos:prefLabel "Jīng shī"@zh-latn-pinyin ;
   skos:prefLabel "sutra recitator and chanter"@en ;
@@ -89,26 +54,12 @@ bdr:R0ER0005
 .
 bdr:R0ER0006
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:prefLabel "Xíchán"@zh-latn-pinyin ;
   skos:prefLabel "meditator"@en ;
   skos:prefLabel "習禪"@zh-hant ;
 .
 bdr:R0ER0007
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T10:56:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
   skos:prefLabel "Xīngfú"@zh-latn-pinyin ;
   skos:prefLabel "promoter of merit"@en ;
@@ -116,13 +67,6 @@ bdr:R0ER0007
 .
 bdr:R0ER0008
   a :ChineseMonastic ;
-  adm:logEntry [
-      a adm:LogEntry ;
-      adm:logDate "2019-03-06T11:03:00-06:00"^^xsd:dateTime ;
-      adm:logMessage "added Chinese monastic role"@en ;
-      adm:logWho bdr:U00006 ;
-    ] ;
-  adm:status bdr:StatusReleased ;
   skos:prefLabel "Dharma protector (human)"@en ;
   skos:prefLabel "Hùfǎ"@zh-latn-pinyin ;
   skos:prefLabel "護法"@zh-hant ;
