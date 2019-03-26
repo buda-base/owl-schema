@@ -1,6 +1,4 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Tradition
-# imports: http://www.w3.org/2004/02/skos/core
-# prefix: Tradition
 
 @prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
