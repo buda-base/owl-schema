@@ -21,6 +21,11 @@ bdo:TibetanTradition
   rdfs:label "Tibetan Tradition"@en ;
   rdfs:subClassOf bdo:Tradition ;
 .
+bdo:Tradition
+  a owl:Class ;
+  rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
+  rdfs:label "type of tradition"@en ;
+.
 Tradition:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
