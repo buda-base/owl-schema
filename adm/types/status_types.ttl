@@ -12,6 +12,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+adm:Status
+  a owl:Class ;
+  rdfs:comment "status of a resource: released, provisional, etc"@en ;
+  rdfs:label "status"@en ;
+.
 Status:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;

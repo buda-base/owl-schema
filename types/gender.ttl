@@ -12,6 +12,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Gender
+  a owl:Class ;
+  rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
+  rdfs:label "Gender"@en ;
+.
 Gender:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

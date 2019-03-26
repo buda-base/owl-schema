@@ -10,6 +10,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+adm:OutlineType
+  a owl:Class ;
+  rdfs:comment "Legacy outline type"@en ;
+  rdfs:label "Outline Type"@en ;
+.
 OutlineType:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;

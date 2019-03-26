@@ -12,6 +12,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:WorkType
+  a owl:Class ;
+  rdfs:comment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
+  rdfs:comment "deprecated in favor of using appropriate subclasses of :Work"@en ;
+  rdfs:label "type of work"@en ;
+  owl:deprecated true ;
+.
 WorkType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

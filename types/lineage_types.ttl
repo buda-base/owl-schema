@@ -12,6 +12,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:LineageType
+  a owl:Class ;
+  rdfs:comment "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
+  rdfs:label "lineage type"@en ;
+.
 bdo:TibetanLineageType
   a owl:Class ;
   rdfs:comment "TibetanLineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc."@en ;

@@ -11,6 +11,72 @@
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+bdo:Taxonomy
+  a owl:Class ;
+  rdfs:comment """A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
+
+Assertions using :taxSubClass and :taxElementOf object properties organize the set of typed individuals into a class/subclass hierarchy. Typed indivduals can be asserted to be :taxSubClass of other individuals or of the :Taxonomy individual itself - the :Taxonomy individual is the root of the class/subclass hierarchy.
+
+Typed individuals are asserted to be :taxElementOf other typed individuals that are :taxSubClass related to the :Taxonomy individual.
+
+This approach allows for typed individuals to be elements or subclass as needed for the given taxonomy. For example, 
+
+    :Tradition owl:subClassOf :Type .
+
+    bdr:TraditionTaxonomy a :Taxonomy .
+    bdr:EightPracticeLineages a :Taxonomy ;
+        :taxSubClass bdr:TraditionTaxonomy .
+
+    bdr:TraditionGeluk a :Tradition ;
+        :taxSubClass bdr:TraditionTaxonomy .
+
+    bdr:TraditionNyingma a :Tradition ;
+        :taxSubClass bdr:EightPracticeLineages .
+
+    bdr:TraditionKagyu a :Tradition ;
+        :taxSubClass bdr:EightPracticeLineages .
+
+permits one to assert that
+
+    bdr:G521 :placeEvent 
+                    [ a :PlaceFounded ;
+                      :onOrAbout  \"1150\" ;
+                      :placeEventAffiliation bdr:TraditionKagyu ] ,
+                    [ a :PlaceConverted ;
+                      :placeEventAffiliation bdr:TraditionNyingma ] .
+
+and
+
+    bdr:G1KR781 :placeEvent
+                    [ a :PlaceFounded ;
+                      :onOrAbout  \"1660\" ;
+                      :placeEventAffiliation bdr:TraditionKagyu ] ,
+                    [ a :PlaceConverted ;
+                      :onOrAbout  \"1674\" ;
+                      :placeEventAffiliation bdr:TraditionGeluk ] .
+
+
+Using typed individuals provides a straightforward approach to localization by simply attaching rdfs:label in the various languages to each of the typed individuals so that bdr:TraditionNyingma will have the zh, bo, and en labels needed to display in an application.
+
+Using typed individuals allows to provide a uniform approach to typing names, events, groups and so on rather than using owl:class/subclass relations in some cases and sub-properties (data or object) in other cases."""@en ;
+  rdfs:comment """Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a \"coherent\" set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
+
+Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:TraditionDrukpaKagyu find also instances of bdr:TraditionTodrukKagyu and so on."""@en ;
+  rdfs:comment """Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
+
+bdr:TraditionTaxonomy a :Taxonomy ;
+      :taxSubclassProperty :taxSubclass ;
+      :taxElementOfProperty :taxElementOf .
+
+If there were an alternative Taxonomy of Traditions, e.g.,  bdr:OtherTaxonomy:
+
+bdr:OtherTaxonomy a :Taxonomy ;
+      :taxSubclassProperty :taxSubclass02 ;
+      :taxElementOfProperty :taxElementOf02 .
+
+Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously."""@en ;
+  rdfs:label "Taxonomy"@en ;
+.
 Taxonomy:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;

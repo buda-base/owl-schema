@@ -12,6 +12,20 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Language
+  a owl:Class ;
+  rdfs:comment "A Language code such as \"bo\" or \"tib\" for Tibetan, \"zh\" or \"chi\" for Chinese, \"sa\" for Sanskrit, etc."@en ;
+  rdfs:label "Language"@en ;
+  rdfs:seeAlso <http://id.loc.gov/vocabulary/languages.html> ;
+  rdfs:seeAlso <http://purl.bdrc.io/ontology/types/Language> ;
+.
+bdo:language
+  a owl:ObjectProperty ;
+  rdfs:comment "language of a :LangScript"@en ;
+  rdfs:domain bdo:LangScript ;
+  rdfs:label "language"@en ;
+  rdfs:range bdo:Language ;
+.
 Language:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

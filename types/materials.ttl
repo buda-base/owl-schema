@@ -23,6 +23,13 @@ bdo:BaseMaterial
   rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30208"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Material ;
 .
+bdo:Material
+  a owl:Class ;
+  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed. A physical or chemical substance used to create a manifestation"@en ;
+  rdfs:label "material"@en ;
+  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30304"^^xsd:anyURI ;
+  rdfs:seeAlso "https://www.rdaregistry.info/termList/RDAMaterial/"^^xsd:anyURI ;
+.
 Material:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;

@@ -32,6 +32,10 @@ bdo:PrintMethod_Relief
   rdfs:label "Print method Relief" ;
   rdfs:subClassOf bdo:PrintMethod ;
 .
+bdo:PrintMethod
+  a owl:Class ;
+  rdfs:label "Print method" ;
+.
 PrintMethod:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
