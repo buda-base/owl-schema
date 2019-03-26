@@ -20,6 +20,13 @@ bdo:LangScript
   rdfs:seeAlso <http://purl.bdrc.io/ontology/types/LangCode> ;
   rdfs:seeAlso <http://purl.bdrc.io/ontology/types/Language> ;
 .
+bdo:language
+  a owl:ObjectProperty ;
+  rdfs:comment "language of a :LangScript"@en ;
+  rdfs:domain bdo:LangScript ;
+  rdfs:label "language"@en ;
+  rdfs:range bdo:Language ;
+.
 LangScript:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
