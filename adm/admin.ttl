@@ -373,25 +373,36 @@ adm:productIncludes
   rdfs:label "includes"@en ;
   rdfs:range adm:Product ;
 .
+adm:replaceWith
+  a owl:AnnotationProperty ;
+  rdfs:comment "used when replacing one resource by another when the subproperties are all too specific. Typical situations are duplicated resurces where one is withdrawn and so on"@en ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:label "replace with another rdfs:Resource"@en ;
+  rdfs:range rdfs:Resource ;
+.
 adm:replaceWithClass
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of a Class"@en ;
   rdfs:label "replace with a Class"@en ;
+  rdfs:subPropertyOf adm:replaceWith ;
 .
 adm:replaceWithDataProperty
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of a Data property"@en ;
   rdfs:label "replace with a Data property"@en ;
+  rdfs:subPropertyOf adm:replaceWith ;
 .
 adm:replaceWithIndividual
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of an Individual"@en ;
   rdfs:label "replace with an Individual"@en ;
+  rdfs:subPropertyOf adm:replaceWith ;
 .
 adm:replaceWithObjectProperty
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
   rdfs:label "replace with Object property"@en ;
+  rdfs:subPropertyOf adm:replaceWith ;
 .
 adm:statementScore
   a owl:AnnotationProperty ;
