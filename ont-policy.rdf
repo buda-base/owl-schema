@@ -1,0 +1,138 @@
+<?xml version='1.0'?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY jena    'http://jena.hpl.hp.com/schemas/'>
+
+    <!ENTITY rdf     'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY rdfs    'http://www.w3.org/2000/01/rdf-schema#'>
+    <!ENTITY xsd     'http://www.w3.org/2001/XMLSchema#'>
+    <!ENTITY base    '&jena;2003/03/ont-manager'>
+    <!ENTITY ont     '&base;#'>
+    <!ENTITY adm     'http://purl.bdrc.io/ontology/admin/'>
+    <!ENTITY bdo     'http://purl.bdrc.io/ontology/core/'>
+    <!ENTITY bdr     'http://purl.bdrc.io/resource/'>
+]>
+
+<rdf:RDF
+    xmlns:rdf ="&rdf;"
+    xmlns:rdfs="&rdfs;"
+    xmlns     ="&ont;"
+    xml:base  ="&base;"
+    xmlns:adm ="&adm;"
+    xmlns:bdo ="&bdo;"
+    xmlns:bdr ="&bdr;"
+    >
+    
+    <!-- Mappings for locally cached buda ontologies -->
+    
+    <DocumentManagerPolicy>
+        <!-- policy for controlling the document manager's behaviour -->
+        <processImports rdf:datatype="&xsd;boolean">true</processImports>
+        <cacheModels    rdf:datatype="&xsd;boolean">true</cacheModels>
+    </DocumentManagerPolicy>
+    
+    
+    
+    <!-- ======== external ontologies ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the OWL language ontology (in OWL) -->
+        <publicURI rdf:resource="http://www.w3.org/2002/07/owl" />
+        <!-- uncomment the following line to re-direct attempts to http get the file
+        <altURL    rdf:resource="file:vocabularies/owl.owl" /-->
+        <language  rdf:resource="http://www.w3.org/2002/07/owl" />
+        <prefix    rdf:datatype="&xsd;string">owl</prefix>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the RDFS vocabulary -->
+        <publicURI rdf:resource="http://www.w3.org/2000/01/rdf-schema" />
+        <!-- uncomment the following line to re-direct attempts to http get the file
+        <altURL    rdf:resource="file:vocabularies/rdf-schema.rdf" /-->
+        <language  rdf:resource="http://www.w3.org/2000/01/rdf-schema" />
+        <prefix    rdf:datatype="&xsd;string">rdfs</prefix>
+    </OntologySpec>
+    
+    
+    
+    <!-- ======== bdo admin ontologies ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the admin vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/admin/" />
+        <altURL    rdf:resource="file:owl-schema/adm/admin.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/admin.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/admin/" />
+        <prefix    rdf:datatype="&xsd;string">adm</prefix>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the Admin vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/Access" />
+        <altURL    rdf:resource="file:owl-schema/adm/types/access_types.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/access_types.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/adm/types/Access" />
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the License vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/License" />
+        <altURL    rdf:resource="file:owl-schema/adm/types/license_types.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/license_types.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/adm/types/License" />
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the OutlineType vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/OutlineType" />
+        <altURL    rdf:resource="file:owl-schema/adm/types/outline_types.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/outline_types.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/adm/types/OutlineType" />
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the Status vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/Status" />
+        <altURL    rdf:resource="file:owl-schema/adm/types/status_types.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/status_types.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/adm/types/Status" />
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the TermsOfUse vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/TermsOfUse" />
+        <altURL    rdf:resource="file:owl-schema/adm/types/terms_of_use.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/terms_of_use.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/adm/types/TermsOfUse" />
+    </OntologySpec>
+    
+    
+    
+    <!-- ======== bdo ontologies ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the bdo vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/core/" />
+        <altURL    rdf:resource="file:owl-schema/core/bdo.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl"/>
+        <language  rdf:resource="http://purl.bdrc.io/ontology/core/" />
+        <prefix    rdf:datatype="&xsd;string">bdo</prefix>
+    </OntologySpec>
+    
+</rdf:RDF>
