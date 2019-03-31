@@ -63,6 +63,15 @@ bdr:MaterialCoryphaPalmLeaf
   a bdr:MaterialPalmLeaf ;
   skos:prefLabel "palm leaf (corypha)"@en ;
 .
+bdr:MaterialDeshog
+  a bdr:MaterialPaper ;
+  rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Bhutan"@en ;
+  rdfs:seeAlso <http://bhutan.ims.tuwien.ac.at/ahtcde00/c-viex/j-02-03-02-11/start.html> ;
+  rdfs:seeAlso <https://www.jstor.org/stable/23657810?seq=1#page_scan_tab_contents> ;
+  skos:altLabel "daphne paper"@en ;
+  skos:altLabel "dezo paper"@en ;
+  skos:prefLabel "deshog paper"@en ;
+.
 bdr:MaterialDigital
   a bdo:BaseMaterial ;
   rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
@@ -71,6 +80,12 @@ bdr:MaterialDigital
 bdr:MaterialKhoiPaper
   a bdr:MaterialPaper ;
   skos:prefLabel "khoi paper"@en ;
+.
+bdr:MaterialLoktaPaper
+  a bdr:MaterialPaper ;
+  rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Nepal"@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Lokta_paper> ;
+  skos:prefLabel "lokta paper"@en ;
 .
 bdr:MaterialMixed
   a bdo:BaseMaterial ;

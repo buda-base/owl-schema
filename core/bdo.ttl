@@ -3844,7 +3844,6 @@ bdo:workLocationVolume
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "volume"@en ;
   rdfs:range bdo:IntegerOrString ;
-  rdfs:subPropertyOf owl:topDataProperty ;
 .
 bdo:workLocationVolumeName
   a owl:DatatypeProperty ;
