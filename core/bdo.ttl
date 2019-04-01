@@ -3925,32 +3925,32 @@ W1
 W1_0001
     :workHasPart W1_0002, W1_0003, W1_0004 ;
     :workPartOf W1 ;
-    :workIndex 1 ;
+    :workPartIndex 1 ;
 
 W1_0002
     :workPartOf W1_0001 ;
-    :workIndex 1 ;
+    :workPartIndex 1 ;
 
 W1_0003
     :workPartOf W1_0001 ;
-    :workIndex 2 ;
+    :workPartIndex 2 ;
 
 W1_0004
     :workPartOf W1_0001 ;
-    :workIndex 3 ;
+    :workPartIndex 3 ;
 
 W1_0005
     :workHasPart W1_0006, W1_0007 ;
     :workPartOf W1 ;
-    :workIndex 2 ;
+    :workPartIndex 2 ;
 
 W1_0006
     :workPartOf W1_0005 ;
-    :workIndex 1 ;
+    :workPartIndex 1 ;
 
 W1_0007
     :workPartOf W1_0005 ;
-    :workIndex 2 ;"""@en ;
+    :workPartIndex 2 ;"""@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "part index"@en ;
   rdfs:range xsd:integer ;

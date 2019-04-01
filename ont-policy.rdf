@@ -45,6 +45,9 @@
         <!-- policy for controlling the document manager's behaviour -->
         <processImports rdf:datatype="&xsd;boolean">true</processImports>
         <cacheModels    rdf:datatype="&xsd;boolean">true</cacheModels>
+        <ignoreImport   rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+        <ignoreImport   rdf:resource="http://www.w3.org/2000/01/rdf-schema#" />
+        <ignoreImport   rdf:resource="http://www.w3.org/2004/02/skos/core" />
     </DocumentManagerPolicy>
     
     
@@ -131,16 +134,14 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/core/" />
         <altURL    rdf:resource="file:owl-schema/core/bdo.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl"/>
-        <language  rdf:resource="http://purl.bdrc.io/ontology/core/" />
         <prefix    rdf:datatype="&xsd;string">bdo</prefix>
     </OntologySpec>
     
     <OntologySpec>
-        <!-- local version of the ChineseMonastic vocabulary -->
+        <!-- local version of the Unknown vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/core/Unknown" />
         <altURL    rdf:resource="file:owl-schema/core/unknown-entities.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/unknown-entities.ttl"/>
-        <language  rdf:resource="http://purl.bdrc.io/ontology/core/Unknown" />
     </OntologySpec>
     
     <OntologySpec>
@@ -148,7 +149,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/roles/ChineseMonastic" />
         <altURL    rdf:resource="file:owl-schema/roles/chinese_monastic.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/roles/chinese_monastic.ttl"/>
-        <language  rdf:resource="http://purl.bdrc.io/ontology/roles/ChineseMonastic" />
     </OntologySpec>
     
     <OntologySpec>
@@ -156,7 +156,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/roles/Creator" />
         <altURL    rdf:resource="file:owl-schema/roles/creators.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/roles/creators.ttl"/>
-        <language  rdf:resource="http://purl.bdrc.io/ontology/roles/Creator" />
     </OntologySpec>
     
 </rdf:RDF>
