@@ -26,7 +26,7 @@ The overall ontology is organized in a collection of directories and files as fo
 
 ### Using ont-policy.rdf
 
-The policy is used with the Jena library to locate components of the ontology and cache them for later use. There are two basic approaches ways to load ontology: 1) processing imports; and 2) ignoring imports during loading of an ontology document.
+The policy is used with the Jena library to locate components of the ontology and cache them for later use. There are two ways to load an ontology: 1) processing imports; and 2) ignoring imports during loading of an ontology document.
 
 ```java
 import org.apache.jena.ontology.OntDocumentManager;
