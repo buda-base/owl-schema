@@ -1,9 +1,9 @@
-# baseURI: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# baseURI: http://purl.bdrc.io/ontology/roles/ChineseMonastic
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: ChineseMonastic
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
-@prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
+@prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .

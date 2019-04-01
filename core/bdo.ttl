@@ -1,6 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/core/Unknown/
-# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# imports: http://purl.bdrc.io/ontology/core/Unknown
+# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic
 # imports: http://purl.bdrc.io/ontology/roles/Creator
 # imports: http://purl.bdrc.io/ontology/types/Binding
 # imports: http://purl.bdrc.io/ontology/types/Gender
@@ -105,8 +105,8 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/core/Unknown/> ;
-  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/Unknown> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
