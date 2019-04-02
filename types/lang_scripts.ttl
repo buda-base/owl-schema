@@ -1,7 +1,4 @@
 # baseURI: http://purl.bdrc.io/ontology/types/LangScript
-# imports: http://purl.bdrc.io/ontology/types/Language
-# imports: http://www.w3.org/2004/02/skos/core
-# prefix: LangScript
 
 @prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
@@ -196,7 +193,6 @@ bdr:PiMymr
   a bdr:Pi ;
   bdo:language bdr:LangPi ;
   bdo:script bdr:ScriptMymr ;
-  bdo:taxSubClassOf bdr:Pi ;
   rdfs:subClassOf bdr:Pi ;
   skos:prefLabel "Pali (Burmese)"@en ;
 .

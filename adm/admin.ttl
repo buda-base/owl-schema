@@ -567,7 +567,7 @@ bdo:WorkHalfTitle
 .
 bdo:WorkOtherTitle
   adm:catalogingConvention "when a work is known by different titles, the main one is recorded by :WorkBibliographicalTitle and the others with :WorkOtherTitle. This should mainly be used with abstract works."@en ;
-  adm:userTooltip "Ttitle that a work is known by other than one of the defined title types"@en ;
+  adm:userTooltip "Title that a work is known by other than one of the defined title types"@en ;
 .
 bdo:WorkRunningTitle
   adm:catalogingConvention "Title as it appears in the table of contents of a Work"@en ;

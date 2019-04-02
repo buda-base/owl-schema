@@ -105,7 +105,7 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/core/Unknown> ;
+  owl:imports bdo:Unknown ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
@@ -1337,7 +1337,7 @@ bdo:WorkLocation
 .
 bdo:WorkOtherTitle
   a owl:Class ;
-  rdfs:comment "Ttitle that a work is known by other than one of the defined title types"@en ;
+  rdfs:comment "Title that a work is known by other than one of the defined title types"@en ;
   rdfs:label "Other Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .

@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Tradition
+# imports: http://www.w3.org/2004/02/skos/core
 
 @prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
@@ -26,6 +27,10 @@ bdo:Tradition
   rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
   rdfs:label "type of tradition"@en ;
 .
+<http://purl.bdrc.io/ontology/types/Tradition>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
 Tradition:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
@@ -47,7 +52,7 @@ bdr:FourMainKagyuTraditions
   a bdr:TraditionDakpoKagyu ;
   a owl:Class ;
   rdfs:subClassOf bdr:TraditionDakpoKagyu ;
-  skos:prefLabel "Four Greater"@en ;
+  skos:altLabel "Four Greater"@en ;
   skos:prefLabel "Main Dagpo Kagyu"@en ;
 .
 bdr:ThreeStagesSchool
@@ -63,10 +68,9 @@ bdr:TiantaiSchool
   skos:prefLabel "天台宗"@zh-hant ;
 .
 bdr:TraditionBardrukKagyu
-  a bdo:TibetanTradition ;
-  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
+  a bdr:TraditionDrukpaKagyu ;
+  skos:altLabel "Middle Drukpa Kagyu"@en ;
   skos:prefLabel "Bardruk Kagyu"@en ;
-  skos:prefLabel "Middle Drukpa Kagyu"@en ;
 .
 bdr:TraditionBaromKagyu
   a bdr:FourMainKagyuTraditions ;
@@ -119,6 +123,8 @@ bdr:TraditionDrigungKagyu
 .
 bdr:TraditionDrukpaKagyu
   a bdr:EightMinorKagyuTraditions ;
+  a owl:Class ;
+  rdfs:subClassOf bdr:EightMinorKagyuTraditions ;
   skos:prefLabel "Drukpa Kagyu"@en ;
 .
 bdr:TraditionGeluk
@@ -154,13 +160,14 @@ bdr:TraditionKagyu
 .
 bdr:TraditionKarmaKagyu
   a bdr:FourMainKagyuTraditions ;
-  skos:prefLabel "Kamtsang Kagyu"@en ;
+  a owl:Class ;
+  rdfs:subClassOf bdr:FourMainKagyuTraditions ;
+  skos:altLabel "Kamtsang Kagyu"@en ;
   skos:prefLabel "Karma Kagyu"@en ;
 .
 bdr:TraditionMadrukKagyu
-  a bdo:TibetanTradition ;
-  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
-  skos:prefLabel "Lower Drukpa Kagyu"@en ;
+  a bdr:TraditionDrukpaKagyu ;
+  skos:altLabel "Lower Drukpa Kagyu"@en ;
   skos:prefLabel "Madruk Kagyu"@en ;
 .
 bdr:TraditionMartsangKagyu
@@ -178,8 +185,7 @@ bdr:TraditionMulasarvastivada
   skos:prefLabel "根本說一切有部"@zh-hant ;
 .
 bdr:TraditionNedoKagyu
-  a bdo:TibetanTradition ;
-  bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
+  a bdr:TraditionKarmaKagyu ;
   skos:prefLabel "Nedo Kagyu"@en ;
 .
 bdr:TraditionNgorSakya
@@ -247,15 +253,14 @@ bdr:TraditionTheravada
   skos:prefLabel "Theravāda"@pi-x-iast ;
 .
 bdr:TraditionTodrukKagyu
-  a bdo:TibetanTradition ;
-  bdo:taxSubClassOf bdr:TraditionDrukpaKagyu ;
+  a bdr:TraditionDrukpaKagyu ;
+  skos:altLabel "Upper Drukpa Kagyu"@en ;
   skos:prefLabel "Todruk Kagyu"@en ;
-  skos:prefLabel "Upper Drukpa Kagyu"@en ;
 .
 bdr:TraditionTrophuKagyu
   a bdr:EightMinorKagyuTraditions ;
-  skos:prefLabel "Tradition trophu kagyu"@en ;
   skos:prefLabel "khro phu bka' brgyud"@bo-x-ewts ;
+  skos:prefLabel "trophu kagyu"@en ;
 .
 bdr:TraditionTsalpaKagyu
   a bdr:FourMainKagyuTraditions ;
@@ -297,9 +302,8 @@ bdr:TraditionZhije
   skos:prefLabel "Zhije"@en ;
 .
 bdr:TraditionZurmangKagyu
-  a bdo:TibetanTradition ;
-  bdo:taxSubClassOf bdr:TraditionKarmaKagyu ;
-  skos:prefLabel "Surmang Kagyu"@en ;
+  a bdr:TraditionKarmaKagyu ;
+  skos:altLabel "Surmang Kagyu"@en ;
   skos:prefLabel "Zurmang Kagyu"@en ;
 .
 bdr:ZenSchool
