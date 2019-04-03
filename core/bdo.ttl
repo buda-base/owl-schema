@@ -21,7 +21,9 @@
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
