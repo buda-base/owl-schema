@@ -62,6 +62,9 @@
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/admin.ttl"/>
         <language  rdf:resource="http://purl.bdrc.io/ontology/admin/"/>
         <prefix    rdf:datatype="&xsd;string">adm</prefix>
+        <!-- the following verify that OntDocumentManager is lenient w.r.t. external vocabularies -->
+        <frog      rdf:resource="http://purl.bdrc.io/resource/P123"/>
+        <bdo:aProp rdf:resource="http://purl.bdrc.io/resource/G512"/>
     </OntologySpec>
     
     <OntologySpec>
