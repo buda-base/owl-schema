@@ -21,38 +21,38 @@ Creator:
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-bdr:Amanuensis
+bdr:R0ER0009
   a bdo:Creator ;
   rdfs:comment "the person who writes down a translation in Chinese, in a capacity something like a scribe."@en ;
   skos:prefLabel "Amanuensis"@en ;
   skos:prefLabel "筆受"@zh-hant ;
 .
-bdr:Artist
+bdr:R0ER0010
   a bdo:Creator ;
   rdfs:comment "An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like"@en ;
   skos:prefLabel "artist"@en ;
 .
-bdr:AttributedAuthor
+bdr:R0ER0011
   a bdo:Creator ;
   rdfs:comment "A creator identified by a separate source as an author of the Work"@en ;
   skos:prefLabel "attributed author"@en ;
 .
-bdr:Bard
+bdr:R0ER0012
   a bdo:Creator ;
   rdfs:comment "for a Work of verse a poet who composed the verse"@en ;
   skos:prefLabel "bard"@en ;
 .
-bdr:Calligrapher
+bdr:R0ER0013
   a bdo:Creator ;
   rdfs:comment "For a handwritten Work an individual that drew the text or carved it on wood blocks"@en ;
   skos:prefLabel "calligrapher"@en ;
 .
-bdr:Commentator
+bdr:R0ER0014
   a bdo:Creator ;
   rdfs:comment "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
   skos:prefLabel "commentator"@en ;
 .
-bdr:Compiler
+bdr:R0ER0015
   a bdo:Creator ;
   rdfs:comment """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
 
@@ -60,70 +60,71 @@ Liturgical texts including supplication and recitations for liberating beings fr
 a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
   skos:prefLabel "compiler"@en ;
 .
-bdr:ContributingAuthor
+bdr:R0ER0016
   a bdo:Creator ;
   rdfs:comment "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
   skos:prefLabel "contributing author"@en ;
 .
-bdr:Forger
+bdr:R0ER0017
   a bdo:Creator ;
   rdfs:comment "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
   skos:prefLabel "forger"@en ;
   skos:prefLabel "偽作"@zh-hant ;
 .
-bdr:HeadTranslator
+bdr:R0ER0017
   a bdo:Creator ;
   rdfs:comment "The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person's role is implicit or inferred from other knowledge about the composition of the translation group."@en ;
   skos:prefLabel "head translator"@en ;
   skos:prefLabel "譯主"@zh-hant ;
 .
-bdr:IndicScholar
+bdr:R0ER0018
   a bdo:Creator ;
   rdfs:comment "in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
   skos:prefLabel "Indic Scholar"@en ;
 .
-bdr:MainAuthor
+bdr:R0ER0019
   a bdo:Creator ;
   rdfs:comment "the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the \"author\" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the \"author\" of a commentary"@en ;
   skos:prefLabel "main author"@en ;
 .
-bdr:OralTranslator
+bdr:R0ER0020
   a bdo:Creator ;
   rdfs:comment "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
   skos:prefLabel "oral translator"@en ;
 .
-bdr:RecipientOfResponseToQuery
+bdr:R0ER0021
   a bdo:Creator ;
   rdfs:comment """An individual to whom answers in a Work are addressed. Cf., W22146:
 
 Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
   skos:prefLabel "recipient of response to query"@en ;
 .
-bdr:Reciter
+bdr:R0ER0022
   a bdo:Creator ;
   rdfs:comment "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
   skos:prefLabel "reciter"@en ;
 .
-bdr:Reviser
+bdr:R0ER0023
   a bdo:Creator ;
   rdfs:comment """An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
   skos:prefLabel "reviser"@en ;
 .
-bdr:Scribe
+bdr:R0ER0024
   a bdo:Creator ;
   rdfs:comment "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
   skos:prefLabel "scribe"@en ;
 .
-bdr:Terton
+bdr:R0ER0025
   a bdo:Creator ;
   rdfs:comment """An individual who revealed the Work as treasure texts. Cf., W25816:
 
 Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak"""@en ;
   skos:prefLabel "tertön"@en ;
+  skos:prefLabel "གཏེར་སྟོན།"@bo ;
 .
-bdr:Translator
+bdr:R0ER0026
   a bdo:Creator ;
   rdfs:comment """A translator of the Work. Cf., W8LS25412:
 
