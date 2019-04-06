@@ -55,13 +55,13 @@ bdr:FourMainKagyuTraditions
   skos:altLabel "Four Greater"@en ;
   skos:prefLabel "Main Dagpo Kagyu"@en ;
 .
-bdr:ThreeStagesSchool
+bdr:TR0001
   a bdo:ChineseTradition ;
   skos:prefLabel "Sānjiējiào"@zh-latn-pinyin ;
   skos:prefLabel "Three stages school"@en ;
   skos:prefLabel "三階教"@zh-hant ;
 .
-bdr:TiantaiSchool
+bdr:TR0002
   a bdo:ChineseTradition ;
   skos:prefLabel "Tiantai school"@en ;
   skos:prefLabel "Tiāntáizōng"@zh-latn-pinyin ;
@@ -306,7 +306,7 @@ bdr:TraditionZurmangKagyu
   skos:altLabel "Surmang Kagyu"@en ;
   skos:prefLabel "Zurmang Kagyu"@en ;
 .
-bdr:ZenSchool
+bdr:TR0003
   a bdo:ChineseTradition ;
   skos:prefLabel "Chánzōng"@zh-latn-pinyin ;
   skos:prefLabel "Zen school"@en ;
