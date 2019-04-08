@@ -1,5 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/Status
-# prefix: Status
+# imports: http://purl.bdrc.io/ontology/core/
 
 @prefix Status: <http://purl.bdrc.io/ontology/adm/types/Status/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -12,21 +12,44 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-adm:Status
-  a owl:Class ;
-  rdfs:comment "status of a resource: released, provisional, etc"@en ;
-  rdfs:label "status"@en ;
+<http://purl.bdrc.io/ontology/adm/types/Status>
+  a owl:Ontology ;
+  owl:imports bdo: ;
 .
 Status:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
+adm:ImagesStatus
+  a owl:Class ;
+  rdfs:comment "asset manager status constants for images assets"@en ;
+  rdfs:label "Images Status"@en ;
+.
+adm:Status
+  a owl:Class ;
+  rdfs:comment "status constants for :Entity metadata: released, provisional, etc"@en ;
+  rdfs:label "Status"@en ;
+.
+adm:imagesStatus
+  a owl:AnnotationProperty ;
+  rdfs:comment "records the images asset status for a :PublishedWork"@en ;
+  rdfs:domain bdo:PublishedWork ;
+  rdfs:label "has images status"@en ;
+  rdfs:range adm:ImagesStatus ;
+.
+adm:status
+  a owl:AnnotationProperty ;
+  rdfs:comment "records the status of the associated resource metadata"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "has status"@en ;
+  rdfs:range adm:Status ;
+.
 bdr:StatusAccessioned
-  a adm:Status ;
+  a adm:ImagesStatus ;
   skos:prefLabel "accessioned"@en ;
 .
 bdr:StatusAcquiring
-  a adm:Status ;
+  a adm:ImagesStatus ;
   skos:prefLabel "acquiring"@en ;
 .
 bdr:StatusEditing
@@ -46,11 +69,11 @@ bdr:StatusReleased
   skos:prefLabel "released"@en ;
 .
 bdr:StatusScanned
-  a adm:Status ;
+  a adm:ImagesStatus ;
   skos:prefLabel "scanned"@en ;
 .
 bdr:StatusSeekingOut
-  a adm:Status ;
+  a adm:ImagesStatus ;
   skos:prefLabel "seeking out"@en ;
 .
 bdr:StatusWithdrawn

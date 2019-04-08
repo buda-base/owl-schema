@@ -1134,7 +1134,7 @@ bdo:SecondTranslatedEvent
 bdo:SerialWork
   a owl:Class ;
   rdfs:label "Serial work" ;
-  rdfs:subClassOf bdo:Work ;
+  rdfs:subClassOf bdo:PublishedWork ;
 .
 bdo:SingleAgent
   a owl:Class ;

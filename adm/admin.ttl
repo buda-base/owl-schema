@@ -466,11 +466,6 @@ adm:statementScore
   rdfs:label "score"@en ;
   rdfs:range xsd:integer ;
 .
-adm:status
-  a owl:AnnotationProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:range adm:Status ;
-.
 adm:supportedBy
   a owl:AnnotationProperty ;
   rdfs:domain adm:StatementAnnotationBody ;
