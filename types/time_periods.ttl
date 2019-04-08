@@ -25,7 +25,7 @@ bdo:ChineseEra
 .
 bdo:ChinesePeriods
   a owl:Class ;
-  rdfs:label "Cinese periods" ;
+  rdfs:label "Chinese periods"@en ;
   rdfs:subClassOf bdo:TimePeriod ;
 .
 bdo:QuarterCentury
