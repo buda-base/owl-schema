@@ -11,7 +11,6 @@
 @prefix bda: <http://purl.bdrc.io/admin.data/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
-@prefix bdl: <http://purl.bdrc.io/legal/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
@@ -80,6 +79,11 @@ adm:Facet
   a owl:Class ;
   rdfs:comment "adm:Facet is a facet of an administrative entity in the BDRC ontology."@en ;
   rdfs:label "administrative facet"@en ;
+.
+adm:Graph
+  a rdfs:Class ;
+  rdfs:label "Graph" ;
+  rdfs:subClassOf rdfs:Resource ;
 .
 adm:LegalData
   a owl:Class ;
@@ -186,7 +190,14 @@ adm:adminAbout
   a owl:AnnotationProperty ;
   rdfs:domain adm:AdminData ;
   rdfs:label "admin data about resource"@en ;
-  rdfs:range bdo:Entity ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Entity
+          adm:Graph
+          adm:AdminData
+        ) ;
+    ] ;
 .
 adm:attributionName
   a owl:AnnotationProperty ;
@@ -263,6 +274,18 @@ adm:deprecatedComment
   rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
   rdfs:label "deprecation comment"@en ;
 .
+adm:hasLegal
+  a owl:AnnotationProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          adm:Graph
+          adm:AdminData
+        ) ;
+    ] ;
+  rdfs:label "legal about resource"@en ;
+  rdfs:range adm:LegalData ;
+.
 adm:initialProvider
   a owl:AnnotationProperty ;
   rdfs:comment "The initial provider of the metadata representation of the :Entity resource"@en ;
@@ -274,13 +297,16 @@ adm:initialProvider
 adm:legacyImageGroupRID
   a owl:AnnotationProperty ;
   rdfs:comment "records the original imagegroup rid from which the volume information was migrated"@en ;
+  rdfs:domain bdo:VolumeImageAsset ;
   rdfs:label "legacy imagegroup rid"@en ;
+  rdfs:range xsd:string ;
 .
-adm:legalAbout
+adm:legacyOutlineNodeRID
   a owl:AnnotationProperty ;
-  rdfs:domain adm:LegalData ;
-  rdfs:label "legal about resource"@en ;
-  rdfs:range bdo:Entity ;
+  rdfs:comment "records the original outline node rid from which the work part was migrated"@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "legacy outline node rid"@en ;
+  rdfs:range xsd:string ;
 .
 adm:license
   a owl:AnnotationProperty ;
