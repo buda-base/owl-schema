@@ -5,6 +5,7 @@
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -44,39 +45,39 @@ adm:status
   rdfs:label "has status"@en ;
   rdfs:range adm:Status ;
 .
-bdr:StatusAccessioned
+bda:StatusAccessioned
   a adm:ImagesStatus ;
   skos:prefLabel "accessioned"@en ;
 .
-bdr:StatusAcquiring
+bda:StatusAcquiring
   a adm:ImagesStatus ;
   skos:prefLabel "acquiring"@en ;
 .
-bdr:StatusEditing
+bda:StatusEditing
   a adm:Status ;
   skos:prefLabel "editing"@en ;
 .
-bdr:StatusOnHold
+bda:StatusOnHold
   a adm:Status ;
   skos:prefLabel "on hold"@en ;
 .
-bdr:StatusProvisional
+bda:StatusProvisional
   a adm:Status ;
   skos:prefLabel "provisional"@en ;
 .
-bdr:StatusReleased
+bda:StatusReleased
   a adm:Status ;
   skos:prefLabel "released"@en ;
 .
-bdr:StatusScanned
+bda:StatusScanned
   a adm:ImagesStatus ;
   skos:prefLabel "scanned"@en ;
 .
-bdr:StatusSeekingOut
+bda:StatusSeekingOut
   a adm:ImagesStatus ;
   skos:prefLabel "seeking out"@en ;
 .
-bdr:StatusWithdrawn
+bda:StatusWithdrawn
   a adm:Status ;
   skos:prefLabel "withdrawn"@en ;
 .

@@ -4,6 +4,7 @@
 @prefix OutlineType: <http://purl.bdrc.io/ontology/adm/types/OutlineType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -19,27 +20,27 @@ OutlineType:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-bdr:OutlineTypeCompositeVolume
+bda:OutlineTypeCompositeVolume
   a adm:OutlineType ;
 .
-bdr:OutlineTypeGsungBum
+bda:OutlineTypeGsungBum
   a adm:OutlineType ;
 .
-bdr:OutlineTypeGterChos
+bda:OutlineTypeGterChos
   a adm:OutlineType ;
 .
-bdr:OutlineTypeMultiVolumeCollection
+bda:OutlineTypeMultiVolumeCollection
   a adm:OutlineType ;
 .
-bdr:OutlineTypeNotAssigned
+bda:OutlineTypeNotAssigned
   a adm:OutlineType ;
 .
-bdr:OutlineTypePartialCollectedWorks
+bda:OutlineTypePartialCollectedWorks
   a adm:OutlineType ;
 .
-bdr:OutlineTypeSaBcad
+bda:OutlineTypeSaBcad
   a adm:OutlineType ;
 .
-bdr:OutlineTypeSubjectCollection
+bda:OutlineTypeSubjectCollection
   a adm:OutlineType ;
 .

@@ -8,7 +8,7 @@
 # prefix: adm
 
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -27,6 +27,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bda:ContentProvider_GRETIL
+  a adm:ContentProvider ;
+  skos:prefLabel "Content provider GRETIL"@en ;
+.
 adm:
   a owl:Ontology ;
   rdfs:comment "This is the buda admin ontology comprising classes, and properties with domains and ranges that add administrative items for use in the Buda platform"@en ;
@@ -67,7 +71,7 @@ adm:ContentProvider
   adm:deprecatedComment "deprecated in favor of the more general adm:Organization. This type is currently not used in the dataset" ;
   rdfs:comment "A content provider is a source of content (images or metadata)"@en ;
   rdfs:label "Content provider"@en ;
-  rdfs:subClassOf adm:Entity ;
+  rdfs:subClassOf adm:Organization ;
   owl:deprecated true ;
 .
 adm:Entity
@@ -84,6 +88,9 @@ adm:Graph
   a rdfs:Class ;
   rdfs:label "Graph" ;
   rdfs:subClassOf rdfs:Resource ;
+.
+adm:ImagesStatus
+  rdfs:subClassOf adm:Type ;
 .
 adm:LegalData
   a owl:Class ;

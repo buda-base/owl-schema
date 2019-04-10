@@ -4,6 +4,7 @@
 @prefix Access: <http://purl.bdrc.io/ontology/types/Access/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -21,42 +22,42 @@ Access:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-bdr:AccessFairUse
+bda:AccessFairUse
   a adm:Access ;
   rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
   skos:prefLabel "Fair Use"@en ;
 .
-bdr:AccessMixed
+bda:AccessMixed
   a adm:Access ;
   rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
   skos:prefLabel "mixed access"@en ;
 .
-bdr:AccessOpen
+bda:AccessOpen
   a adm:Access ;
   rdfs:comment "The contents of the Work are freely avaiable in their entirety."@en ;
   skos:prefLabel "Open Access"@en ;
 .
-bdr:AccessRestrictedByQuality
+bda:AccessRestrictedByQuality
   a adm:Access ;
   rdfs:comment "The quality of the scanning or eText conversion to poor to warrant making it available online."@en ;
   skos:prefLabel "Restricted by Quality"@en ;
 .
-bdr:AccessRestrictedByTbrc
+bda:AccessRestrictedByTbrc
   a adm:Access ;
   rdfs:comment "BDRC is restricting access to the Work."@en ;
   skos:prefLabel "Restricted by BDRC"@en ;
 .
-bdr:AccessRestrictedInChina
+bda:AccessRestrictedInChina
   a adm:Access ;
   rdfs:comment "The Work is not to be made available in the PRC."@en ;
   skos:prefLabel "Restricted in China"@en ;
 .
-bdr:AccessRestrictedSealed
+bda:AccessRestrictedSealed
   a adm:Access ;
   rdfs:comment "The Work is sealed by tradition."@en ;
   skos:prefLabel "Restricted Sealed"@en ;
 .
-bdr:AccessRestrictedTemporarily
+bda:AccessRestrictedTemporarily
   a adm:Access ;
   rdfs:comment "The Work is temporarily restricted."@en ;
   skos:prefLabel "Temporarily Restricted"@en ;

@@ -4,6 +4,7 @@
 @prefix License: <http://purl.bdrc.io/ontology/adm/types/License/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -20,33 +21,33 @@ License:
   a owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-bdr:LicenseAllRightsReserved
+bda:LicenseAllRightsReserved
   a adm:License ;
   rdfs:comment "Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved."@en ;
   skos:prefLabel "All Rights Reserved"@en ;
 .
-bdr:LicenseCC0
+bda:LicenseCC0
   a adm:License ;
   rdfs:comment "The work is made available under Creative Commons, CC0 1.0."@en ;
   skos:prefLabel "Creative Commons CC0"@en ;
   rdfs:seeAlso <https://creativecommons.org/share-your-work/public-domain/cc0/> ;
 .
-bdr:LicenseCCBYSA3U
+bda:LicenseCCBYSA3U
   a adm:License ;
   skos:prefLabel "Creative Commons BY-SA 3.0 Unported"@en ;
   rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/3.0/> ;
 .
-bdr:LicenseCCBYSA4U
+bda:LicenseCCBYSA4U
   a adm:License ;
   skos:prefLabel "Creative Commons BY-SA 4.0 Unported"@en ;
   rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
 .
-bdr:LicenseMixed
+bda:LicenseMixed
   a adm:License ;
   rdfs:comment "The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed)."@en ;
   skos:prefLabel "mixed licensing"@en ;
 .
-bdr:LicensePublicDomain
+bda:LicensePublicDomain
   a adm:License ;
   rdfs:comment "Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws."@en ;
   skos:prefLabel "Public Domain"@en ;
