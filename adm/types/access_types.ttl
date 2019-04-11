@@ -1,7 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/Access
 # prefix: Access
 
-@prefix Access: <http://purl.bdrc.io/ontology/types/Access/> .
+@prefix Access: <http://purl.bdrc.io/ontology/adm/types/Access/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .

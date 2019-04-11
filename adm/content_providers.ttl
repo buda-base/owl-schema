@@ -1,0 +1,150 @@
+# baseURI: http://purl.bdrc.io/ontology/adm/ContentProvider
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix ContentProvider: <http://purl.bdrc.io/ontology/adm/ContentProvider/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ContentProvider:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+adm:ContentProvider
+  a owl:Class ;
+  rdfs:comment "A contemporary organization that provides metadata and/or images"@en ;
+  rdfs:label "Work Access Type"@en ;
+.
+bda:CP_84000
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense <https://creativecommons.org/licenses/by-nc-nd/3.0/> ;
+  adm:termsOfUse <http://84000.co/about/copyright/> ;
+  skos:prefLabel "84000" ;
+  foaf:homepage <http://84000.co> ;
+.
+bda:CP_BDRC
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bdr:LicenseCC0 ;
+  adm:termsOfUse <https://www.tbrc.org/#!footer/about/access> ;
+  skos:prefLabel "BDRC" ;
+  skos:prefLabel "Buddhist Digital Resource Center"@en ;
+  foaf:homepage <https://www.tdrc.org> ;
+.
+bda:CP_BnF
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:termsOfUse <http://gallica.bnf.fr/html/und/conditions-dutilisation-des-contenus-de-gallica> ;
+  skos:altLabel "Bibliothèque nationale de France"@fr ;
+  skos:prefLabel "BnF" ;
+  foaf:homepage <https://gallica.bnf.fr/> ;
+.
+bda:CP_CBCAtt
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultMetadataLicense bdr:LicenseCC0 ;
+  skos:altLabel "Chinese Buddhist Canonical Attributions database"@en ;
+  skos:prefLabel "CBC@" ;
+  foaf:homepage <https://dazangthings.nz/cbc/> ;
+.
+bda:CP_CBETA
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:termsOfUse <http://www.cbeta.org/copyright.php> ;
+  skos:altLabel "Chinese Buddhist Electronic Text Association"@en ;
+  skos:prefLabel "CBETA" ;
+  skos:prefLabel "版權宣告"@zh-hant ;
+  foaf:homepage <http://www.cbeta.org/> ;
+.
+bda:CP_CUDL
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:altLabel "Cambridge University Digital Library"@en ;
+  skos:prefLabel "CUDL"@en ;
+  foaf:homepage <https://cudl.lib.cam.ac.uk/> ;
+.
+bda:CP_EAP
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:altLabel "Endangered Archives Programme"@en ;
+  skos:prefLabel "EAP" ;
+  foaf:homepage <https://eap.bl.uk/> ;
+.
+bda:CP_FPL
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:altLabel "Fragile Palm Leaves Foundation"@en ;
+  skos:prefLabel "FPL" ;
+  foaf:homepage <http://fpl.tusita.org/> ;
+.
+bda:CP_GRETIL
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:altLabel "Göttingen Register of Electronic Texts in Indian Languages"@en ;
+  skos:prefLabel "GRETIL" ;
+  foaf:homepage <http://gretil.sub.uni-goettingen.de/> ;
+.
+bda:CP_IA
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Internet Archives"@en ;
+  foaf:homepage <https://archive.org/> ;
+.
+bda:CP_SAT
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:termsOfUse <http://21dzk.l.u-tokyo.ac.jp/SAT/termsofuse.html> ;
+  skos:prefLabel "The SAT Daizōkyō Text Database"@en ;
+  foaf:homepage <http://21dzk.l.u-tokyo.ac.jp/SAT/> ;
+.
+bda:CP_SuttaCentral
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bdr:LicenseCC0 ;
+  adm:termsOfUse <https://suttacentral.net/licensing> ;
+  skos:prefLabel "SuttaCentral" ;
+  foaf:homepage <https://suttacentral.net/> ;
+.
+bda:CP_ToL
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:altLabel "Treasury of Lives"@en ;
+  skos:prefLabel "ToL" ;
+  foaf:homepage <https://treasuryoflives.org/> ;
+.
+bda:CP_VIAF
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultMetadataLicense <https://opendatacommons.org/licenses/by/1.0/> ;
+  adm:termsOfUse <http://viaf.org/viaf/data/> ;
+  skos:altLabel "Virtual International Authority File"@en ;
+  skos:prefLabel "VIAF" ;
+  foaf:homepage <https://viaf.org/> ;
+.
+bda:CP_Wikidata
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultMetadataLicense bdr:LicenseCC0 ;
+  adm:termsOfUse <https://www.wikidata.org/wiki/Wikidata:Copyright> ;
+  skos:prefLabel "Wikidata" ;
+  foaf:homepage <https://www.wikidata.org> ;
+.
+bda:CP_WorldCat
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultMetadataLicense bdr:LicenseCopyrighted ;
+  adm:termsOfUse <https://www.oclc.org/content/dam/ext-ref/worldcat-org/terms.html> ;
+  skos:prefLabel "WorldCat" ;
+  foaf:homepage <https://www.worldcat.org/> ;
+.

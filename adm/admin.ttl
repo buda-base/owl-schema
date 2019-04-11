@@ -1,4 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/admin/
+# imports: http://purl.bdrc.io/ontology/adm/ContentProvider
+# imports: http://purl.bdrc.io/ontology/adm/LegalData
 # imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/adm/types/License
 # imports: http://purl.bdrc.io/ontology/adm/types/OutlineType
@@ -27,20 +29,32 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bda:ContentProvider_GRETIL
-  a adm:ContentProvider ;
-  skos:prefLabel "Content provider GRETIL"@en ;
-.
 adm:
   a owl:Ontology ;
   rdfs:comment "This is the buda admin ontology comprising classes, and properties with domains and ranges that add administrative items for use in the Buda platform"@en ;
   rdfs:label "Buda admin ontology"@en ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/LegalData> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/License> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
   owl:imports bdo: ;
+.
+adm:imagesStatus
+  a owl:AnnotationProperty ;
+  rdfs:comment "records the images asset status for a :PublishedWork"@en ;
+  rdfs:domain bdo:PublishedWork ;
+  rdfs:label "has images status"@en ;
+  rdfs:range adm:ImagesStatus ;
+.
+adm:status
+  a owl:AnnotationProperty ;
+  rdfs:comment "records the status of the associated resource metadata"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "has status"@en ;
+  rdfs:range adm:Status ;
 .
 adm:Access
   rdfs:subClassOf adm:Type ;
@@ -67,12 +81,7 @@ adm:Assertion
   rdfs:subClassOf adm:Entity ;
 .
 adm:ContentProvider
-  a owl:Class ;
-  adm:deprecatedComment "deprecated in favor of the more general adm:Organization. This type is currently not used in the dataset" ;
-  rdfs:comment "A content provider is a source of content (images or metadata)"@en ;
-  rdfs:label "Content provider"@en ;
   rdfs:subClassOf adm:Organization ;
-  owl:deprecated true ;
 .
 adm:Entity
   a owl:Class ;
@@ -93,8 +102,6 @@ adm:ImagesStatus
   rdfs:subClassOf adm:Type ;
 .
 adm:LegalData
-  a owl:Class ;
-  rdfs:label "Legal data" ;
   rdfs:subClassOf owl:Thing ;
 .
 adm:License
@@ -225,14 +232,18 @@ adm:catalogingConvention
   rdfs:range rdf:langString ;
   rdfs:subPropertyOf rdfs:comment ;
 .
+adm:contentLicense
+  a owl:AnnotationProperty ;
+  rdfs:label "content license"@en ;
+  rdfs:subPropertyOf adm:license ;
+.
 adm:contentProvider
   a owl:ObjectProperty ;
   adm:deprecatedComment "deprecated in favor of :hasContentProvider - name change"@en ;
-  rdfs:comment "The organization or person that provided the Etext"@en ;
+  rdfs:comment "The organization or person that provided the eText or image content"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "content provider"@en ;
   rdfs:range adm:ContentProvider ;
-  owl:deprecated true ;
 .
 adm:contradictedBy
   a owl:AnnotationProperty ;
@@ -276,6 +287,19 @@ adm:copyrightOwner
   rdfs:range adm:Organization ;
   rdfs:seeAlso adm:Organization ;
 .
+adm:defaultContentLicense
+  a owl:AnnotationProperty ;
+  rdfs:comment "For a given provider the default content license to use"@en ;
+  rdfs:domain adm:ContentProvider ;
+  rdfs:label "default content license"@en ;
+  rdfs:range adm:License ;
+.
+adm:defaultMetadataLicense
+  a owl:AnnotationProperty ;
+  rdfs:domain adm:ContentProvider ;
+  rdfs:label "default metadata license"@en ;
+  rdfs:range adm:License ;
+.
 adm:deprecatedComment
   a owl:AnnotationProperty ;
   rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
@@ -294,8 +318,8 @@ adm:hasLegal
   rdfs:range adm:LegalData ;
 .
 adm:initialProvider
-  a owl:AnnotationProperty ;
-  rdfs:comment "The initial provider of the metadata representation of the :Entity resource"@en ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The initial provider of the metadata representation and/or images of the :Entity resource. For example, EAP105/1 has adm:initialProvider bdo:G1KG116095 and adm:contentProvider bda:Provider_BL_EAP"@en ;
   rdfs:domain adm:LegalData ;
   rdfs:label "initial provider of resource metadata"@en ;
   rdfs:range adm:ContentProvider ;
@@ -350,6 +374,17 @@ adm:logWho
   rdfs:domain adm:LogEntry ;
   rdfs:label "who"@en ;
   rdfs:range foaf:Agent ;
+.
+adm:metadataLicense
+  a owl:AnnotationProperty ;
+  rdfs:label "metadata license"@en ;
+  rdfs:subPropertyOf adm:license ;
+.
+adm:originalRecord
+  a owl:AnnotationProperty ;
+  rdfs:comment "use to indicate url of the original metadata record or content (for imported records)"@en ;
+  rdfs:label "see original"@en ;
+  rdfs:subPropertyOf rdfs:seeAlso ;
 .
 adm:outline
   a owl:AnnotationProperty ;

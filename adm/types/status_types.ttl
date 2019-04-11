@@ -13,13 +13,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.bdrc.io/ontology/adm/types/Status>
-  a owl:Ontology ;
-  owl:imports bdo: ;
-.
 Status:
   a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 adm:ImagesStatus
   a owl:Class ;
@@ -30,20 +25,6 @@ adm:Status
   a owl:Class ;
   rdfs:comment "status constants for :Entity metadata: released, provisional, etc"@en ;
   rdfs:label "Status"@en ;
-.
-adm:imagesStatus
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the images asset status for a :PublishedWork"@en ;
-  rdfs:domain bdo:PublishedWork ;
-  rdfs:label "has images status"@en ;
-  rdfs:range adm:ImagesStatus ;
-.
-adm:status
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the status of the associated resource metadata"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "has status"@en ;
-  rdfs:range adm:Status ;
 .
 bda:StatusAccessioned
   a adm:ImagesStatus ;
@@ -80,4 +61,8 @@ bda:StatusSeekingOut
 bda:StatusWithdrawn
   a adm:Status ;
   skos:prefLabel "withdrawn"@en ;
+.
+bda:StatusReleasedPendingWithdrawal
+  a adm:Status ;
+  skos:prefLabel "pending withdrawal"@en ;
 .

@@ -2542,6 +2542,7 @@ bdo:originalRecord
   rdfs:comment "use to indicate url of the original record or content (for imported records)"@en ;
   rdfs:label "see original"@en ;
   rdfs:subPropertyOf rdfs:seeAlso ;
+  owl:deprecated true ;
 .
 bdo:pageHasLine
   a owl:ObjectProperty ;

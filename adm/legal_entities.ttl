@@ -1,0 +1,74 @@
+# baseURI: http://purl.bdrc.io/ontology/adm/LegalData
+# imports: http://purl.bdrc.io/ontology/adm/ContentProvider
+# imports: http://purl.bdrc.io/ontology/adm/types/Access
+# imports: http://purl.bdrc.io/ontology/adm/types/License
+# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
+# prefix: LegalData
+
+@prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix LegalData: <http://purl.bdrc.io/ontology/adm/LegalData/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+adm:LegalData
+  a owl:Class ;
+  rdfs:comment "A contemporary organization that provides images or eTexts"@en ;
+  rdfs:label "Work Access Type"@en ;
+.
+LegalData:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/License> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
+.
+bda:LD_BDRC_Open
+  a adm:LegalData ;
+  adm:access bda:AccessOpen ;
+  adm:contentLicense bda:LicensePublicDomain ;
+  adm:contentProvider bda:CP_BDRC ;
+  adm:copyrightOwner bda:CP_BDRC ;
+  adm:license bda:LicensePublicDomain ;
+  adm:metadataLicense bda:LicenseCC0 ;
+  adm:metadataProvider bda:CP_BDRC ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "BDRC open access legal terms"@en ;
+.
+bda:LD_CUDL
+  a adm:LegalData ;
+  adm:access bda:AccessOpen ;
+  adm:contentProvider bda:CP_CUDL ;
+  adm:copyrightOwner bda:CP_CUDL ;
+  adm:license bda:LicensePublicDomain ;
+  adm:metadataProvider bda:CP_CUDL ;
+  adm:termsOfUse <https://cudl.lib.cam.ac.uk/terms/> ;
+  skos:prefLabel "CUDL general legal terms"@en ;
+.
+bda:LD_EAP
+  a adm:LegalData ;
+  adm:access bda:AccessOpen ;
+  adm:contentProvider bda:CP_EAP ;
+  adm:copyrightOwner bda:CP_EAP ;
+  adm:license bda:LicensePublicDomain ;
+  adm:metadataProvider bda:CP_EAP ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "EAP general legal terms"@en ;
+.
+bda:LD_GRETIL
+  a adm:LegalData ;
+  adm:access bda:AccessOpen ;
+  adm:contentProvider bda:CP_GRETIL ;
+  adm:copyrightOwner bda:CP_GRETIL ;
+  adm:license bda:LicensePublicDomain ;
+  adm:metadataProvider bda:CP_GRETIL ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "GRETIL general legal terms"@en ;
+.
