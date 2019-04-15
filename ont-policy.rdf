@@ -51,9 +51,22 @@
         <ignoreImport   rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2002/07/owl#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/ontology/core/ontologySchema"/>
     </DocumentManagerPolicy>
     
     
+    
+    <!-- ======== auth ontologies ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the auth vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/ext/auth/"/>
+        <altURL    rdf:resource="owl-schema/ext/auth/auth.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/ext/auth/auth.ttl"/>
+        <prefix    rdf:datatype="&xsd;string">aut</prefix>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/ontology/ext/authSchema"/>
+        <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
+    </OntologySpec>
     
     <!-- ======== bdo admin ontologies ======== -->
     
@@ -62,11 +75,8 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/admin/"/>
         <altURL    rdf:resource="owl-schema/adm/admin.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/admin.ttl"/>
-        <language  rdf:resource="http://purl.bdrc.io/ontology/admin/"/>
         <prefix    rdf:datatype="&xsd;string">adm</prefix>
-        <!-- the following verify that OntDocumentManager is lenient w.r.t. external vocabularies -->
-        <frog      rdf:resource="http://purl.bdrc.io/resource/P123"/>
-        <bdo:aProp rdf:resource="http://purl.bdrc.io/resource/G512"/>
+        <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
     
     <OntologySpec>
@@ -128,6 +138,7 @@
         <altURL    rdf:resource="owl-schema/core/bdo.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl"/>
         <prefix    rdf:datatype="&xsd;string">bdo</prefix>
+        <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
     
     <OntologySpec>
