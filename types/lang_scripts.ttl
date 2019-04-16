@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/LangScript/
+# imports: http://purl.bdrc.io/ontology/types/Language/
 # prefix: LangScript
 
 @prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript/> .
@@ -27,7 +28,7 @@ bdo:language
 .
 LangScript:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Language/> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
