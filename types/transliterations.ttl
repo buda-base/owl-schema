@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Transliteration
+# baseURI: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Transliteration
 

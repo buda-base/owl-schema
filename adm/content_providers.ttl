@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/ContentProvider
+# baseURI: http://purl.bdrc.io/ontology/adm/ContentProvider/
 # imports: http://www.w3.org/2004/02/skos/core
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -35,11 +35,11 @@ bda:CP_BDRC
   a adm:ContentProvider ;
   a foaf:Organization ;
   adm:defaultContentLicense bdr:LicensePublicDomain ;
-  adm:defaultMetadataLicense bdr:LicenseCC0 ;
-  adm:termsOfUse <https://www.tbrc.org/#!footer/about/access> ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "BDRC" ;
   skos:prefLabel "Buddhist Digital Resource Center"@en ;
-  foaf:homepage <https://www.tdrc.org> ;
+  foaf:homepage <https://www.tbrc.org> ;
 .
 bda:CP_BnF
   a adm:ContentProvider ;
@@ -135,7 +135,7 @@ bda:CP_VIAF
 bda:CP_Wikidata
   a adm:ContentProvider ;
   a foaf:Organization ;
-  adm:defaultMetadataLicense bdr:LicenseCC0 ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
   adm:termsOfUse <https://www.wikidata.org/wiki/Wikidata:Copyright> ;
   skos:prefLabel "Wikidata" ;
   foaf:homepage <https://www.wikidata.org> ;
@@ -143,7 +143,7 @@ bda:CP_Wikidata
 bda:CP_WorldCat
   a adm:ContentProvider ;
   a foaf:Organization ;
-  adm:defaultMetadataLicense bdr:LicenseCopyrighted ;
+  adm:defaultMetadataLicense bda:LicenseAllRightsReserved ;
   adm:termsOfUse <https://www.oclc.org/content/dam/ext-ref/worldcat-org/terms.html> ;
   skos:prefLabel "WorldCat" ;
   foaf:homepage <https://www.worldcat.org/> ;

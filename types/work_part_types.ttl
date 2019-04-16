@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/WorkPartType
+# baseURI: http://purl.bdrc.io/ontology/types/WorkPartType/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: WorkPartType
 

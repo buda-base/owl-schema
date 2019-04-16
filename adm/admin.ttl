@@ -1,11 +1,11 @@
 # baseURI: http://purl.bdrc.io/ontology/admin/
-# imports: http://purl.bdrc.io/ontology/adm/ContentProvider
-# imports: http://purl.bdrc.io/ontology/adm/LegalData
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
-# imports: http://purl.bdrc.io/ontology/adm/types/License
-# imports: http://purl.bdrc.io/ontology/adm/types/OutlineType
-# imports: http://purl.bdrc.io/ontology/adm/types/Status
-# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
+# imports: http://purl.bdrc.io/ontology/adm/ContentProvider/
+# imports: http://purl.bdrc.io/ontology/adm/LegalData/
+# imports: http://purl.bdrc.io/ontology/adm/types/Access/
+# imports: http://purl.bdrc.io/ontology/adm/types/License/
+# imports: http://purl.bdrc.io/ontology/adm/types/OutlineType/
+# imports: http://purl.bdrc.io/ontology/adm/types/Status/
+# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: adm
 
@@ -33,13 +33,13 @@ adm:
   a owl:Ontology ;
   rdfs:comment "This is the buda admin ontology comprising classes, and properties with domains and ranges that add administrative items for use in the Buda platform"@en ;
   rdfs:label "Buda admin ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/LegalData> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/License> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/Status> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/LegalData/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/License/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Status/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
   owl:imports bdo: ;
 .
 adm:imagesStatus

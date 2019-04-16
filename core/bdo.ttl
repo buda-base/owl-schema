@@ -1,23 +1,23 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/core/Unknown
-# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic
-# imports: http://purl.bdrc.io/ontology/roles/Creator
-# imports: http://purl.bdrc.io/ontology/types/Binding
-# imports: http://purl.bdrc.io/ontology/types/Gender
-# imports: http://purl.bdrc.io/ontology/types/LangScript
-# imports: http://purl.bdrc.io/ontology/types/Language
-# imports: http://purl.bdrc.io/ontology/types/LineageType
-# imports: http://purl.bdrc.io/ontology/types/Material
-# imports: http://purl.bdrc.io/ontology/types/PaginationType
-# imports: http://purl.bdrc.io/ontology/types/PlaceType
-# imports: http://purl.bdrc.io/ontology/types/PrintMethod
-# imports: http://purl.bdrc.io/ontology/types/Script
-# imports: http://purl.bdrc.io/ontology/types/Taxonomy
-# imports: http://purl.bdrc.io/ontology/types/TimePeriod
-# imports: http://purl.bdrc.io/ontology/types/Tradition
-# imports: http://purl.bdrc.io/ontology/types/Transliteration
-# imports: http://purl.bdrc.io/ontology/types/WorkPartType
-# imports: http://purl.bdrc.io/ontology/types/WorkType
+# imports: http://purl.bdrc.io/ontology/core/Unknown/
+# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
+# imports: http://purl.bdrc.io/ontology/roles/Creator/
+# imports: http://purl.bdrc.io/ontology/types/Binding/
+# imports: http://purl.bdrc.io/ontology/types/Gender/
+# imports: http://purl.bdrc.io/ontology/types/LangScript/
+# imports: http://purl.bdrc.io/ontology/types/Language/
+# imports: http://purl.bdrc.io/ontology/types/LineageType/
+# imports: http://purl.bdrc.io/ontology/types/Material/
+# imports: http://purl.bdrc.io/ontology/types/PaginationType/
+# imports: http://purl.bdrc.io/ontology/types/PlaceType/
+# imports: http://purl.bdrc.io/ontology/types/PrintMethod/
+# imports: http://purl.bdrc.io/ontology/types/Script/
+# imports: http://purl.bdrc.io/ontology/types/Taxonomy/
+# imports: http://purl.bdrc.io/ontology/types/TimePeriod/
+# imports: http://purl.bdrc.io/ontology/types/Tradition/
+# imports: http://purl.bdrc.io/ontology/types/Transliteration/
+# imports: http://purl.bdrc.io/ontology/types/WorkPartType/
+# imports: http://purl.bdrc.io/ontology/types/WorkType/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -107,25 +107,25 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports bdo:Unknown ;
-  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic> ;
-  owl:imports <http://purl.bdrc.io/ontology/roles/Creator> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Binding> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Gender> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/LangScript> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Language> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/LineageType> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Material> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/PaginationType> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/PlaceType> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/PrintMethod> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Script> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/TimePeriod> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Tradition> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Transliteration> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/WorkType> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/Unknown/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
+  owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Gender/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LangScript/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Language/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/LineageType/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Material/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PaginationType/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PlaceType/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PrintMethod/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Script/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/TimePeriod/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Transliteration/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
 .
 bdo:AbstractWork
   a owl:Class ;

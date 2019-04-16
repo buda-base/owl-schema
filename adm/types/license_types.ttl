@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/License
+# baseURI: http://purl.bdrc.io/ontology/adm/types/License/
 # prefix: License
 
 @prefix License: <http://purl.bdrc.io/ontology/adm/types/License/> .

@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/LineageType
+# baseURI: http://purl.bdrc.io/ontology/types/LineageType/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: LineageType
 

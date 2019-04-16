@@ -1,9 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Binding
+# baseURI: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Binding
 
 @prefix Binding: <http://purl.bdrc.io/ontology/types/Binding/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

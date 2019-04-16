@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/LegalData
-# imports: http://purl.bdrc.io/ontology/adm/ContentProvider
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
-# imports: http://purl.bdrc.io/ontology/adm/types/License
-# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
+# baseURI: http://purl.bdrc.io/ontology/adm/LegalData/
+# imports: http://purl.bdrc.io/ontology/adm/ContentProvider/
+# imports: http://purl.bdrc.io/ontology/adm/types/Access/
+# imports: http://purl.bdrc.io/ontology/adm/types/License/
+# imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # prefix: LegalData
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -25,10 +25,10 @@ adm:LegalData
 .
 LegalData:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/License> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/License/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
 .
 bda:LD_BDRC_Open
   a adm:LegalData ;

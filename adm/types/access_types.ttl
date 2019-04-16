@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/Access
+# baseURI: http://purl.bdrc.io/ontology/adm/types/Access/
 # prefix: Access
 
 @prefix Access: <http://purl.bdrc.io/ontology/adm/types/Access/> .

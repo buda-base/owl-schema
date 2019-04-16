@@ -1,4 +1,5 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Material
+# baseURI: http://purl.bdrc.io/ontology/types/Material/
+# prefix: Material
 
 @prefix Material: <http://purl.bdrc.io/ontology/types/Material/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .

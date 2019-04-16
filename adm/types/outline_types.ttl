@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/OutlineType
+# baseURI: http://purl.bdrc.io/ontology/adm/types/OutlineType/
 # prefix: OutlineType
 
 @prefix OutlineType: <http://purl.bdrc.io/ontology/adm/types/OutlineType/> .

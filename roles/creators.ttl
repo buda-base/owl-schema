@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/roles/Creator
+# baseURI: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Creator
 

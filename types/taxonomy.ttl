@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Taxonomy
+# baseURI: http://purl.bdrc.io/ontology/types/Taxonomy/
 # prefix: Taxonomy
 
 @prefix Taxonomy: <http://purl.bdrc.io/ontology/types/Taxonomy/> .
@@ -79,7 +79,6 @@ Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individu
 .
 Taxonomy:
   a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdo:taxHasSubClass
   a owl:ObjectProperty ;

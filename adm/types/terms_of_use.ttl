@@ -1,4 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/TermsOfUse
+# baseURI: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # prefix: TermsOfUse
 
 @prefix TermsOfUse: <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> .
