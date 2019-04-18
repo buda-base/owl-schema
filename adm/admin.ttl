@@ -42,20 +42,6 @@ adm:
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
   owl:imports bdo: ;
 .
-adm:imagesStatus
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the images asset status for a :PublishedWork"@en ;
-  rdfs:domain bdo:PublishedWork ;
-  rdfs:label "has images status"@en ;
-  rdfs:range adm:ImagesStatus ;
-.
-adm:status
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the status of the associated resource metadata"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "has status"@en ;
-  rdfs:range adm:Status ;
-.
 adm:Access
   rdfs:subClassOf adm:Type ;
 .
@@ -193,8 +179,7 @@ adm:access
   a owl:AnnotationProperty ;
   a owl:ObjectProperty ;
   rdfs:comment "The type of online access permitted for the subject Work."@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:domain bdo:TextualEntity ;
+  rdfs:domain bdo:Item ;
   rdfs:label "record access"@en ;
   rdfs:label "text access"@en ;
   rdfs:range adm:Access ;
@@ -316,6 +301,13 @@ adm:hasLegal
     ] ;
   rdfs:label "legal about resource"@en ;
   rdfs:range adm:LegalData ;
+.
+adm:imagesStatus
+  a owl:AnnotationProperty ;
+  rdfs:comment "records the images asset status for a :PublishedWork"@en ;
+  rdfs:domain bdo:PublishedWork ;
+  rdfs:label "has images status"@en ;
+  rdfs:range adm:ImagesStatus ;
 .
 adm:initialProvider
   a owl:ObjectProperty ;
@@ -533,6 +525,13 @@ adm:statementScore
   rdfs:domain adm:StatementAnnotationBody ;
   rdfs:label "score"@en ;
   rdfs:range xsd:integer ;
+.
+adm:status
+  a owl:AnnotationProperty ;
+  rdfs:comment "records the status of the associated resource metadata"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "has status"@en ;
+  rdfs:range adm:Status ;
 .
 adm:supportedBy
   a owl:AnnotationProperty ;
