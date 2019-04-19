@@ -515,7 +515,6 @@ bdo:Item
   a owl:Class ;
   bdo:inferSubTree true ;
   rdfs:comment ":Item captures the structural and administrative metadata associated with a digital or physical asset. While the BDRC ontology is primarily concerned with digital assets of texts, :Item could easily be extended to other types of digital assets (as is the case with the Tibetan International Digital Library collaboration) such as audio and video, as well as physical assets, such as the physical holdings of monastic libraries."@en ;
-  rdfs:comment "The :Item resource collects info from migrated ImageGroups and ScanRequests.  An :Item is a collection of :Volume components (i.e ImageGroups).  A ScanRequest for the Work associated with an :Item is migrated as :scan_venue, and the instructions note (if any) in the ScanRequest. The @work attribute of the ScanRequest refers to the Work of the corresponding volume. All other fields of ScanRequest are ignored for the migration."@en ;
   rdfs:label "Item"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
@@ -738,13 +737,6 @@ bdo:NoColophon
 bdo:Note
   a owl:Class ;
   rdfs:comment "A comment about the subject resource, possibly with a source Work and a location in the Work"@en ;
-  rdfs:comment """Notes with content \"Old TSD Schools table tree:\" are legacy data from the earliest days of Gene Smith's efforts to create a database about Tibetan texts. These notes are on Person resources.
-
-Gene originally used a simple database called AskSam and when he added a Person he would mark them with one or more labels such as \"Rnying-ma\", \"Indian Panditas\", \"Ruler\", \"Aristocracy\", \"Bka'-gdams-pa -- Dga'-ldan-pa\", and so on. 
-
-When this data was migrated to XML (by way of a Tsadra db and then TBRCDat) no schema was developed for these labels and the content been preserved as free text notes with the tag \"Old TSD Schools table tree:\"
-
-TSD stands for Tibetan Schools Data. TSD data was only entered by Gene and is no longer used in cataloging."""@en ;
   rdfs:label "Note"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
@@ -834,7 +826,6 @@ bdo:PersonEvent
   rdfs:comment """A Person Event describes place, date and other relevant information related to some significant event such as ordination, marriage, birth, death and so on.
 
 The type of event is represented as a subclass of :PersonEvent"""@en ;
-  rdfs:comment "Migration hint: The source person.xsd includes event/pid which is not used and should be silently discarded during migration."@en ;
   rdfs:label "Person Event"@en ;
   rdfs:subClassOf bdo:Event ;
 .
@@ -865,7 +856,6 @@ bdo:PersonFirstOrdinationName
 .
 bdo:PersonFoundsMonastery
   a owl:Class ;
-  rdfs:comment "Migration hint: occurrences of this event in the legacy data are modeled by adding a PlaceEvent of type founded to the Monastery Place and a reference to the founder Person via :placeEventWho predicate"@en ;
   rdfs:label "Founds Monastery"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
   owl:deprecated true ;
@@ -926,7 +916,6 @@ bdo:PersonNameOrWorkTitle
 .
 bdo:PersonOccupiesSeat
   a owl:Class ;
-  rdfs:comment "Migration hint: Rather than a separate :personHasSeat property, the <p:seat/> is modeled as a PersonOccupiesSeat with the place and circa as for any other PersonEvent"@en ;
   rdfs:label "Occupies Seat"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
@@ -1272,11 +1261,7 @@ bdo:VolumePhysicalAsset
 .
 bdo:Work
   a owl:Class ;
-  rdfs:comment "NB: The definition of <w:info/> in work.xsd is incorrect since it allows unbounded use of <w:info/>. It should have been spec'd as only 1 occurrence. Hence in the ontology the wrk:info properties have domain wrk:Work rather than introducing an anon class"@en ;
-  rdfs:comment "Note that <archiveInfo/> @distribution and @restriction are not used and not migrated. They have been replaced by @license and access."@en ;
-  rdfs:comment """The wrk:Work resource models the descriptive metadata about a \"book\" in the BUDAverse. The legacy model split the descriptive metadata between Works and Pubinfos ( predominantly publication data). Thisr ontology merges the Work and Pubinfo items under the wrk:Work resource so there is no hasPubinfo property.
-
-The Works also included some structural metadata in the volumeMap but that is moved to the vol:Volumes resource in this ontology."""@en ;
+  rdfs:comment "The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse." ;
   rdfs:label "Work"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
@@ -2093,9 +2078,7 @@ bdo:imageCount
 .
 bdo:imageList
   a owl:DatatypeProperty ;
-  rdfs:comment """If this property is present it indicates that digitized images of the volume are present in the archive.
-
-Migration hint: this property appears as <ig:description type=\"onDisk\"/> in the source documents."""@en ;
+  rdfs:comment "If this property is present it indicates that digitized images of the volume are present in the archive." ;
   rdfs:comment """The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character. In the normal situations the image names are incremented by one to generate image-count names.
 
 The typical case is a collection of tiffs:
@@ -2186,9 +2169,6 @@ bdo:isIncarnation
 bdo:itemBDRCHoldingStatement
   a owl:DatatypeProperty ;
   rdfs:comment "A free-text statement of the holdings by BDRC of this Item (and its relatives)."@en ;
-  rdfs:comment """Migration hint: the <pubinfo:tbrcHoldings/> should be mapped to :itemBDRCHoldingStatement on the associated Item.
-
-This might require creating an otherwise empty Item to stand-in for a Work that has yet to be scanned."""@en ;
   rdfs:domain bdo:Item ;
   rdfs:label "BDRC holdings statement"@en ;
   rdfs:range xsd:string ;
@@ -2281,9 +2261,6 @@ bdo:itemPhysicalAssetForWork
 bdo:itemShelf
   a owl:DatatypeProperty ;
   rdfs:comment "Identifies where the holding is shelved. The shelf code is based on a library specific taxonomy"@en ;
-  rdfs:comment """Migration hint: For physical items in the FPL - note there is both a physical item and an image asset item for FPL - the string value for the :itemHoldingShelf is formed by concatenation:
-
-    desc_room + ' | ' + desc_id"""@en ;
   rdfs:domain bdo:ItemPhysicalAsset ;
   rdfs:label "shelf"@en ;
   rdfs:range xsd:string ;
@@ -2303,6 +2280,13 @@ bdo:kinWith
   rdfs:domain bdo:Person ;
   rdfs:label "kin with"@en ;
   rdfs:range bdo:Person ;
+.
+bdo:legacyOutlineNodeRID
+  a owl:AnnotationProperty ;
+  rdfs:comment "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "legacy outline node rid"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:license
   a owl:ObjectProperty ;
@@ -2480,7 +2464,6 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
 bdo:noteLocationStatement
   a owl:AnnotationProperty ;
   rdfs:comment "A location statement for where in the :noteWork to look for the :noteText"@en ;
-  rdfs:comment "Migration hint: the @location of the <x:note/>."@en ;
   rdfs:domain bdo:Note ;
   rdfs:label "location"@en ;
   rdfs:range xsd:string ;
@@ -2617,7 +2600,7 @@ bdo:personCreatorOf
 .
 bdo:personEvent
   a owl:ObjectProperty ;
-  rdfs:comment "The source person.xsd includes event/pid which is not used and should be silently discarded during migration."@en ;
+  rdfs:comment "An event related to a perswon such as birth, death, ordination, founding monastery and so on"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "event"@en ;
   rdfs:range bdo:PersonEvent ;
@@ -2664,9 +2647,7 @@ bdo:personIndicScholarOf
 .
 bdo:personIsNonActor
   a owl:DatatypeProperty ;
-  rdfs:comment """The source person.xsd includes @type on <info/> which is meant to capture whether the Person is an \"actor\" in the world of Tibetan books. There are 40 out of 18,320 individuals that have been marked as info/@type = nonActor. These 40 are non-Tibetan individuals that have been included in the db because they are translators, or authors of some work of interest. Many of the records of nonActors have various small errors that need to be corrected.
-
-In any event, when a per:Person is being migrated with info/@type = nonactor then simply assert:  p? :personNonActor true, and we will be able to locate these individuals after migration for further attention"""@en ;
+  rdfs:comment "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest." ;
   rdfs:domain bdo:Person ;
   rdfs:label "non actor"@en ;
   rdfs:range xsd:boolean ;
@@ -2760,9 +2741,9 @@ bdo:placeAddress
 .
 bdo:placeChgisId
   a owl:DatatypeProperty ;
-  rdfs:comment "A legacy Chinese gis id for the Place provided during migration of historical Tibetan Places by Karl Ryavec and Lex Berman"@en ;
-  rdfs:comment "chgis id"@en ;
+  rdfs:comment "A legacy Chinese gis id for the Place"@en ;
   rdfs:domain bdo:Place ;
+  rdfs:label "chgis id"@en ;
   rdfs:range xsd:string ;
 .
 bdo:placeContains
@@ -3072,7 +3053,6 @@ bdo:volumePhysicalDescription
   rdfs:comment """A description of the physical appearance of a Volume of the Item. For example,
 
 \"No covers. Gilded leaves with vermilion band. Printed cotton wrapper with floral designs.\"@en"""@en ;
-  rdfs:comment "Migration hint: for FPL Works map the <work:description type=\"remarks\"/>to :volumePhysicalDescription with string with language tag \"en\""@en ;
   rdfs:domain bdo:VolumePhysicalAsset ;
   rdfs:label "physical description"@en ;
   rdfs:range rdf:langString ;
@@ -3080,7 +3060,6 @@ bdo:volumePhysicalDescription
 bdo:workAuthorshipStatement
   a owl:DatatypeProperty ;
   rdfs:comment "Authorship statement for the Work."@en ;
-  rdfs:comment "Migration hint: Use this when migrating <o:description type=\"authorship\"/>"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "authorship statement"@en ;
   rdfs:range rdf:langString ;
@@ -3095,7 +3074,6 @@ bdo:workBiblioNote
 bdo:workBiblioStatus
   a owl:DatatypeProperty ;
   rdfs:comment "A bibliogrpahic status statement in the language of the Work"@en ;
-  rdfs:comment "Migration hint: this is used for <o:description type=\"status\"/>"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "bibliographic status statement"@en ;
   rdfs:range rdf:langString ;
@@ -3229,7 +3207,6 @@ bdo:workColophon
 .
 bdo:workContainsChapters
   a owl:DatatypeProperty ;
-  rdfs:comment "Migration hint: <o:description type=\"chapters\"/>"@en ;
   rdfs:comment "records the chapters of a larger Work contained in this Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "chapters contained"@en ;
@@ -3257,7 +3234,6 @@ bdo:workCreator
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
   rdfs:comment "deprecated in favor of :CompletedEvent."@en ;
-  rdfs:comment "this property is migrated from the pubinfo.xsd and is sparsely used in the xml dataset (546 occurrences)."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "date of writing"@en ;
   rdfs:range xsd:string ;
@@ -3328,7 +3304,6 @@ bdo:workEvent
 .
 bdo:workExpressionOf
   a owl:ObjectProperty ;
-  rdfs:comment "Migration info: The <work:info @parent/> should be migrated as :workExpressionOf"@en ;
   rdfs:comment """The subject work is an expression of the referenced work. This may mean that the subject work is an edition or version or the only extant occurrence of the referenced work.
 
 This modeling is relevant when there are more than one occurrence of a work that needs to be accounted for in the library. If there is a single edition of a unique work then this elaborate modeling is not needed; however, for many works in the domain of Buddhist Universal Digital Archive there are many expressions of a single identified \"conceptual\" work such as the Kanjur, Tengyur, Nyingma Gyu Bum, Rinchen Terdzod, Nyingma Kama, Songs of Milarepa, and on and on.
@@ -3366,7 +3341,6 @@ bdr:W26071 a Work ;
 bdo:workExtentStatement
   a owl:DatatypeProperty ;
   rdfs:comment "A statement of the extent of the Work"@en ;
-  rdfs:comment "Migration hint: use also for <o:description type=\"extent\"/>"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
@@ -3870,16 +3844,12 @@ bdo:workMaterial
 bdo:workNumberOf
   a owl:ObjectProperty ;
   rdfs:comment "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
-  rdfs:comment """Migration hint: Use this when a Work has <w:info number=\"?\" parent=\"Wxxx\"/> via:
-
-bdr:Wwww :workNumberOf bdr:Wxxx ."""@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "number of"@en ;
   rdfs:range bdo:Work ;
 .
 bdo:workNumberOfVolumes
   a owl:DatatypeProperty ;
-  rdfs:comment "Migration info: this is the <work:archiveInfo @vols/> attribute."@en ;
   rdfs:comment "This is the number of volumes (if any) associated with the Work. Typically this is for a published work. The value may differ from the \"actual\" number of volumes in an associated Item owing to missing volumes."@en ;
   rdfs:label "number of volumes"@en ;
   rdfs:range xsd:integer ;
@@ -4161,7 +4131,6 @@ bdo:workTranslationOf
 .
 bdo:workType
   a owl:ObjectProperty ;
-  rdfs:comment "Migration info: This is the <work:info @nodeType/> attribute NOT the unused @type attribute"@en ;
   rdfs:comment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "work type"@en ;

@@ -319,16 +319,10 @@ adm:initialProvider
 .
 adm:legacyImageGroupRID
   a owl:AnnotationProperty ;
-  rdfs:comment "records the original imagegroup rid from which the volume information was migrated"@en ;
+  adm:migrationComment "records the original imagegroup rid from which the volume information was migrated"@en ;
+  rdfs:comment "the original tbrc imagegroup rid for use in redirect references using the rid"@en ;
   rdfs:domain bdo:VolumeImageAsset ;
   rdfs:label "legacy imagegroup rid"@en ;
-  rdfs:range xsd:string ;
-.
-adm:legacyOutlineNodeRID
-  a owl:AnnotationProperty ;
-  rdfs:comment "records the original outline node rid from which the work part was migrated"@en ;
-  rdfs:domain adm:AdminData ;
-  rdfs:label "legacy outline node rid"@en ;
   rdfs:range xsd:string ;
 .
 adm:license
@@ -372,6 +366,11 @@ adm:metadataLicense
   rdfs:label "metadata license"@en ;
   rdfs:subPropertyOf adm:license ;
 .
+adm:migrationComment
+  a owl:AnnotationProperty ;
+  rdfs:label "migration comment"@en ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
 adm:originalRecord
   a owl:AnnotationProperty ;
   rdfs:comment "use to indicate url of the original metadata record or content (for imported records)"@en ;
@@ -387,15 +386,15 @@ adm:outline
 .
 adm:outlineAuthorStatement
   a owl:AnnotationProperty ;
+  adm:migrationComment "Migration hint: use this for <outline:creator/>"@en ;
   rdfs:comment "A statement of the authorship of the outline of this Work"@en ;
-  rdfs:comment "Migration hint: use this for <outline:creator/>"@en ;
   rdfs:domain adm:Outline ;
   rdfs:label "outline author"@en ;
   rdfs:range xsd:string ;
 .
 adm:outlineLogEntry
   a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works"@en ;
+  adm:migrationComment "Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works"@en ;
   rdfs:domain adm:Outline ;
   rdfs:label "outline log entry"@en ;
   rdfs:range adm:LogEntry ;
@@ -570,7 +569,7 @@ adm:volumeQcPerson
 .
 adm:volumeScanVenue
   a owl:AnnotationProperty ;
-  rdfs:comment "this property is used to migrate the venue attribute from scanrequest. it records where the scanning was to take place"@en ;
+  adm:migrationComment "this property is used to migrate the venue attribute from scanrequest. it records where the scanning was to take place"@en ;
   rdfs:domain bdo:Item ;
   rdfs:range xsd:string ;
 .
@@ -590,14 +589,14 @@ adm:workLegacyNode
 .
 adm:workVolumesNote
   a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: When not empty the <pubinfo:volumes/> is a note regarding how many and which volumes have been acquired, scanned and so on."@en ;
+  adm:migrationComment "Migration hint: When not empty the <pubinfo:volumes/> is a note regarding how many and which volumes have been acquired, scanned and so on."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "volumes note"@en ;
   rdfs:range xsd:string ;
 .
 adm:work_desc_date
   a owl:AnnotationProperty ;
-  rdfs:comment "Migration hint: Used only in O01CT0001 to record some sort of date information from the colophons of various texts. The format is non-standard will require further examination"@en ;
+  adm:migrationComment "Migration hint: Used only in O01CT0001 to record some sort of date information from the colophons of various texts. The format is non-standard will require further examination"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "date from description"@en ;
   rdfs:range xsd:string ;
@@ -639,12 +638,41 @@ bdo:EntitiesOrFacets
 bdo:EventOrPeriod
   adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
 .
+bdo:Item
+  adm:migrationComment "The :Item resource collects info from migrated ImageGroups and ScanRequests.  An :Item is a collection of :Volume components (i.e ImageGroups).  A ScanRequest for the Work associated with an :Item is migrated as :scan_venue, and the instructions note (if any) in the ScanRequest. The @work attribute of the ScanRequest refers to the Work of the corresponding volume. All other fields of ScanRequest are ignored for the migration."@en ;
+.
+bdo:Note
+  adm:migrationComment """Notes with content \"Old TSD Schools table tree:\" are legacy data from the earliest days of Gene Smith's efforts to create a database about Tibetan texts. These notes are on Person resources.
+
+Gene originally used a simple database called AskSam and when he added a Person he would mark them with one or more labels such as \"Rnying-ma\", \"Indian Panditas\", \"Ruler\", \"Aristocracy\", \"Bka'-gdams-pa -- Dga'-ldan-pa\", and so on. 
+
+When this data was migrated to XML (by way of a Tsadra db and then TBRCDat) no schema was developed for these labels and the content been preserved as free text notes with the tag \"Old TSD Schools table tree:\"
+
+TSD stands for Tibetan Schools Data. TSD data was only entered by Gene and is no longer used in cataloging."""@en ;
+.
+bdo:PaginationType
+  adm:migrationComment "Migration info: The pagination information affects the interpretation of the :WorkLocation(s) that occur in the original outline. The migration should add the pagination information to each WorkLocation since there will no longer be an Outline document"@en ;
+.
+bdo:PersonEvent
+  adm:migrationComment "Migration hint: The source person.xsd includes event/pid which is not used and should be silently discarded during migration."@en ;
+.
 bdo:PersonFoundsMonastery
   adm:deprecatedComment "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
+  adm:migrationComment "Migration hint: occurrences of this event in the legacy data are modeled by adding a PlaceEvent of type founded to the Monastery Place and a reference to the founder Person via :placeEventWho predicate"@en ;
   adm:replaceWithClass bdo:PlaceFounded ;
+.
+bdo:PersonOccupiesSeat
+  adm:migrationComment "Migration hint: Rather than a separate :personHasSeat property, the <p:seat/> is modeled as a PersonOccupiesSeat with the place and circa as for any other PersonEvent"@en ;
 .
 bdo:TranslationRevisedEvent
   adm:replaceWithClass bdo:RevisedEvent ;
+.
+bdo:Work
+  adm:migrationComment "NB: The definition of <w:info/> in work.xsd is incorrect since it allows unbounded use of <w:info/>. It should have been spec'd as only 1 occurrence. Hence in the ontology the wrk:info properties have domain wrk:Work rather than introducing an anon class"@en ;
+  adm:migrationComment "Note that <archiveInfo/> @distribution and @restriction are not used and not migrated. They have been replaced by @license and access."@en ;
+  adm:migrationComment """The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse. The legacy model split the descriptive metadata between Works and Pubinfos ( predominantly publication data). Thisr ontology merges the Work and Pubinfo items under the :Work resource so there is no hasPubinfo property.
+
+The Works also included some structural metadata in the volumeMap but that is moved to the vol:Volumes resource in this ontology."""@en ;
 .
 bdo:WorkBibliographicalTitle
   adm:catalogingConvention """This is the main title of a work, the title by which it is the most often known. If a work has only one title, it must be of type Bibliographic Title. There must be only one bibliographical title per work. 
@@ -684,6 +712,9 @@ bdo:WorkOtherTitle
   adm:catalogingConvention "when a work is known by different titles, the main one is recorded by :WorkBibliographicalTitle and the others with :WorkOtherTitle. This should mainly be used with abstract works."@en ;
   adm:userTooltip "Title that a work is known by other than one of the defined title types"@en ;
 .
+bdo:WorkPartType
+  adm:migrationComment "Migration hint: represents the Work related outline:node/@type"@en ;
+.
 bdo:WorkRunningTitle
   adm:catalogingConvention "Title as it appears in the table of contents of a Work"@en ;
   adm:userTooltip "Title as it appears in the table of contents of a Work"@en ;
@@ -703,4 +734,66 @@ bdo:WorkTitlePageTitle
 bdo:WorkTitlePortion
   adm:catalogingConvention "Title that is abbreviated, condensed, divided from the main title"@en ;
   adm:userTooltip "Title that is abbreviated, condensed, divided from the main title"@en ;
+.
+bdo:imageList
+  adm:migrationComment "Migration hint: this property appears as <ig:description type=\"onDisk\"/> in the source documents."@en ;
+.
+bdo:itemBDRCHoldingStatement
+  adm:migrationComment """Migration hint: the <pubinfo:tbrcHoldings/> should be mapped to :itemBDRCHoldingStatement on the associated Item.
+
+This might require creating an otherwise empty Item to stand-in for a Work that has yet to be scanned."""@en ;
+.
+bdo:itemShelf
+  adm:migrationComment """Migration hint: For physical items in the FPL - note there is both a physical item and an image asset item for FPL - the string value for the :itemHoldingShelf is formed by concatenation:
+
+    desc_room + ' | ' + desc_id"""@en ;
+.
+bdo:legacyOutlineNodeRID
+  adm:migrationComment "records the original outline node rid from which the work part was migrated"@en ;
+.
+bdo:noteLocationStatement
+  adm:migrationComment "Migration hint: the @location of the <x:note/>."@en ;
+.
+bdo:personEvent
+  adm:migrationComment "The source person.xsd includes event/pid which is not used and should be silently discarded during migration."@en ;
+.
+bdo:personIsNonActor
+  adm:migrationComment """The source person.xsd includes @type on <info/> which is meant to capture whether the Person is an \"actor\" in the world of Tibetan books. There are 40 out of 18,320 individuals that have been marked as info/@type = nonActor. These 40 are non-Tibetan individuals that have been included in the db because they are translators, or authors of some work of interest. Many of the records of nonActors have various small errors that need to be corrected.
+
+In any event, when a per:Person is being migrated with info/@type = nonactor then simply assert:  p? :personNonActor true, and we will be able to locate these individuals after migration for further attention"""@en ;
+.
+bdo:placeChgisId
+  adm:migrationComment "A legacy Chinese gis id for the Place provided during migration of historical Tibetan Places by Karl Ryavec and Lex Berman"@en ;
+.
+bdo:volumePhysicalDescription
+  adm:migrationComment "Migration hint: for FPL Works map the <work:description type=\"remarks\"/>to :volumePhysicalDescription with string with language tag \"en\""@en ;
+.
+bdo:workAuthorshipStatement
+  adm:migrationComment "Migration hint: Use this when migrating <o:description type=\"authorship\"/>"@en ;
+.
+bdo:workBiblioStatus
+  adm:migrationComment "Migration hint: this is used for <o:description type=\"status\"/>"@en ;
+.
+bdo:workContainsChapters
+  adm:migrationComment "Migration hint: <o:description type=\"chapters\"/>"@en ;
+.
+bdo:workDateOfWriting
+  adm:migrationComment "this property is migrated from the pubinfo.xsd and is sparsely used in the xml dataset (546 occurrences)."@en ;
+.
+bdo:workExpressionOf
+  adm:migrationComment "Migration info: The <work:info @parent/> should be migrated as :workExpressionOf"@en ;
+.
+bdo:workExtentStatement
+  adm:migrationComment "Migration hint: use also for <o:description type=\"extent\"/>"@en ;
+.
+bdo:workNumberOf
+  adm:migrationComment """Migration hint: Use this when a Work has <w:info number=\"?\" parent=\"Wxxx\"/> via:
+
+bdr:Wwww :workNumberOf bdr:Wxxx ."""@en ;
+.
+bdo:workNumberOfVolumes
+  adm:migrationComment "Migration info: this is the <work:archiveInfo @vols/> attribute."@en ;
+.
+bdo:workType
+  adm:migrationComment "Migration info: This is the <work:info @nodeType/> attribute NOT the unused @type attribute"@en ;
 .
