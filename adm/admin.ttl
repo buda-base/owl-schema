@@ -164,6 +164,7 @@ adm:Type
 .
 adm:WorkOrAdmOutline
   a owl:Class ;
+  adm:deprecatedComment "this Union is not used anywhere and can be removed w/o further consideration"@en ;
   rdfs:comment "domain for :workLegacyNode as part of migration - not a core ontology concept"@en ;
   rdfs:label "work or adm:Outline"@en ;
   rdfs:subClassOf bdo:MixedUnion ;
@@ -174,6 +175,7 @@ adm:WorkOrAdmOutline
           bdo:Work
         ) ;
     ] ;
+  owl:deprecated true ;
 .
 adm:access
   a owl:AnnotationProperty ;
@@ -477,8 +479,14 @@ adm:productHasOrg
 .
 adm:productHasWork
   a owl:AnnotationProperty ;
+  adm:deprecatedComment """will not be used when migrating products. The proper pattern is to use adm:workInProduct since it just as easy to retrieve:
+
+    ?work adm:workInProduct bda:SomeProduct    
+
+and keeps the in-degree and out:degree nearly constant rather than size linear in the number of works in a product"""@en ;
   rdfs:comment "the admin:Product contains the referenced :Work"@en ;
   rdfs:label "has work"@en ;
+  owl:deprecated true ;
 .
 adm:productIncludes
   a owl:AnnotationProperty ;

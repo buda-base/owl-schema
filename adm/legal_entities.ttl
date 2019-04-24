@@ -32,7 +32,6 @@ LegalData:
 .
 bda:LD_BDRC_Open
   a adm:LegalData ;
-  adm:access bda:AccessOpen ;
   adm:contentLicense bda:LicensePublicDomain ;
   adm:contentProvider bda:CP_BDRC ;
   adm:copyrightOwner bda:CP_BDRC ;
@@ -44,7 +43,6 @@ bda:LD_BDRC_Open
 .
 bda:LD_CUDL
   a adm:LegalData ;
-  adm:access bda:AccessOpen ;
   adm:contentProvider bda:CP_CUDL ;
   adm:copyrightOwner bda:CP_CUDL ;
   adm:license bda:LicensePublicDomain ;
@@ -54,7 +52,6 @@ bda:LD_CUDL
 .
 bda:LD_EAP
   a adm:LegalData ;
-  adm:access bda:AccessOpen ;
   adm:contentProvider bda:CP_EAP ;
   adm:copyrightOwner bda:CP_EAP ;
   adm:license bda:LicensePublicDomain ;
@@ -64,7 +61,6 @@ bda:LD_EAP
 .
 bda:LD_GRETIL
   a adm:LegalData ;
-  adm:access bda:AccessOpen ;
   adm:contentProvider bda:CP_GRETIL ;
   adm:copyrightOwner bda:CP_GRETIL ;
   adm:license bda:LicensePublicDomain ;
