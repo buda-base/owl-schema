@@ -41,6 +41,17 @@ bda:LD_BDRC_Open
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "BDRC open access legal terms"@en ;
 .
+bda:LD_BDRC_Copyright
+  a adm:LegalData ;
+  adm:contentLicense bda:LicenseAllRightsReserved ;
+  adm:contentProvider bda:CP_BDRC ;
+  adm:copyrightOwner bda:CP_BDRC ;
+  adm:license bda:LicenseAllRightsReserved ;
+  adm:metadataLicense bda:LicenseCC0 ;
+  adm:metadataProvider bda:CP_BDRC ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "BDRC open access legal terms"@en ;
+.
 bda:LD_CUDL
   a adm:LegalData ;
   adm:contentProvider bda:CP_CUDL ;
