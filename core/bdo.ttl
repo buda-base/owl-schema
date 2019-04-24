@@ -1387,14 +1387,6 @@ bdo:WorkTitlePortion
 bdo:WorkType
   rdfs:subClassOf bdo:Type ;
 .
-bdo:access
-  a owl:ObjectProperty ;
-  rdfs:comment "The type of online access permitted for the subject Work."@en ;
-  rdfs:domain bdo:TextualEntity ;
-  rdfs:label "text access"@en ;
-  rdfs:seeAlso bdo:AccessType ;
-  owl:deprecated true ;
-.
 bdo:agent
   a owl:ObjectProperty ;
   rdfs:comment "identifies the agent participating in an :AgentInRole"@en ;

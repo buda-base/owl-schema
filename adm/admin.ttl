@@ -180,12 +180,16 @@ adm:WorkOrAdmOutline
 adm:access
   a owl:AnnotationProperty ;
   a owl:ObjectProperty ;
-  rdfs:comment "The type of online access permitted for the subject Work."@en ;
-  rdfs:domain bdo:Item ;
-  rdfs:label "record access"@en ;
-  rdfs:label "text access"@en ;
+  adm:catalogingConvention """adm:access is used on adm:AdminData for which:
+
+    adm:adminAbout/rdf:type/rdfs:subClassOf bdo:Item
+
+i.e., the access is about the content associated with a :Work not the metadata about the :Work""" ;
+  rdfs:comment "The type of online access permitted for the etext and/or images for a Work."@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "item access"@en ;
   rdfs:range adm:Access ;
-  rdfs:seeAlso bdo:AccessType ;
+  rdfs:seeAlso adm:Access ;
 .
 adm:adminAbout
   a owl:AnnotationProperty ;
@@ -291,6 +295,7 @@ adm:deprecatedComment
   a owl:AnnotationProperty ;
   rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
   rdfs:label "deprecation comment"@en ;
+  rdfs:subPropertyOf rdfs:comment ;
 .
 adm:hasLegal
   a owl:AnnotationProperty ;
