@@ -50,7 +50,7 @@ bda:LD_BDRC_Copyright
   adm:metadataLicense bda:LicenseCC0 ;
   adm:metadataProvider bda:CP_BDRC ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  skos:prefLabel "BDRC open access legal terms"@en ;
+  skos:prefLabel "BDRC copyright content legal terms"@en ;
 .
 bda:LD_CUDL
   a adm:LegalData ;
