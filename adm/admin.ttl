@@ -751,26 +751,6 @@ bdo:itemBDRCHoldingStatement
 
 This might require creating an otherwise empty Item to stand-in for a Work that has yet to be scanned."""@en ;
 .
-bdo:itemEtextForWork
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:itemEtextNonPaginatedForWork
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:itemEtextPaginatedForWork
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:itemImageAssetForWork
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:itemPhysicalAssetForWork
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
 bdo:itemShelf
   adm:migrationComment """Migration hint: For physical items in the FPL - note there is both a physical item and an image asset item for FPL - the string value for the :itemHoldingShelf is formed by concatenation:
 
@@ -813,26 +793,6 @@ bdo:workExpressionOf
 .
 bdo:workExtentStatement
   adm:migrationComment "Migration hint: use also for <o:description type=\"extent\"/>"@en ;
-.
-bdo:workHasItemEtext
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:workHasItemEtextNonPaginated
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:workHasItemEtextPaginated
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:workHasItemImageAsset
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
-.
-bdo:workHasItemPhysicalAsset
-  adm:deprecatedComment "see <https://github.com/buda-base/owl-schema/issues/136>" ;
-  owl:deprecated true ;
 .
 bdo:workNumberOf
   adm:migrationComment """Migration hint: Use this when a Work has <w:info number=\"?\" parent=\"Wxxx\"/> via:

@@ -2181,27 +2181,6 @@ bdo:itemCopies
   rdfs:range xsd:string ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
 .
-bdo:itemEtextForWork
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:ItemEtext ;
-  rdfs:label "eText for work"@en ;
-  rdfs:subPropertyOf bdo:itemForWork ;
-  owl:inverseOf bdo:workHasItemEtext ;
-.
-bdo:itemEtextNonPaginatedForWork
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:ItemEtextNonPaginated ;
-  rdfs:label "non-paginated eText for work"@en ;
-  rdfs:subPropertyOf bdo:itemEtextForWork ;
-  owl:inverseOf bdo:workHasItemEtextNonPaginated ;
-.
-bdo:itemEtextPaginatedForWork
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:ItemEtextPaginated ;
-  rdfs:label "paginated eText for work"@en ;
-  rdfs:subPropertyOf bdo:itemEtextForWork ;
-  owl:inverseOf bdo:workHasItemEtextPaginated ;
-.
 bdo:itemException
   a owl:DatatypeProperty ;
   rdfs:comment "Exception notes such a missing volume, damage to pages and so on"@en ;
@@ -2227,13 +2206,6 @@ bdo:itemHasVolume
   rdfs:range bdo:Volume ;
   owl:inverseOf bdo:volumeOf ;
 .
-bdo:itemImageAssetForWork
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:ItemImageAsset ;
-  rdfs:label "image asset for work"@en ;
-  rdfs:subPropertyOf bdo:itemForWork ;
-  owl:inverseOf bdo:workHasItemImageAsset ;
-.
 bdo:itemLibrary
   a owl:ObjectProperty ;
   rdfs:comment "The Library (Place) that contains the physical holding"@en ;
@@ -2250,13 +2222,6 @@ bdo:itemMissingVolumes
   rdfs:domain bdo:Item ;
   rdfs:label "missing volumes"@en ;
   rdfs:range xsd:string ;
-.
-bdo:itemPhysicalAssetForWork
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:ItemPhysicalAsset ;
-  rdfs:label "physical asset for work"@en ;
-  rdfs:subPropertyOf bdo:itemForWork ;
-  owl:inverseOf bdo:workHasItemPhysicalAsset ;
 .
 bdo:itemShelf
   a owl:DatatypeProperty ;
@@ -3401,36 +3366,6 @@ bdo:workHasItem
   rdfs:domain bdo:Work ;
   rdfs:label "has item"@en ;
   rdfs:range bdo:Item ;
-.
-bdo:workHasItemEtext
-  a owl:ObjectProperty ;
-  rdfs:label "has eText"@en ;
-  rdfs:range bdo:ItemEtext ;
-  rdfs:subPropertyOf bdo:workHasItem ;
-.
-bdo:workHasItemEtextNonPaginated
-  a owl:ObjectProperty ;
-  rdfs:label "non-paginated eText"@en ;
-  rdfs:range bdo:ItemEtextNonPaginated ;
-  rdfs:subPropertyOf bdo:workHasItemEtext ;
-.
-bdo:workHasItemEtextPaginated
-  a owl:ObjectProperty ;
-  rdfs:label "paginated eText"@en ;
-  rdfs:range bdo:ItemEtextPaginated ;
-  rdfs:subPropertyOf bdo:workHasItemEtext ;
-.
-bdo:workHasItemImageAsset
-  a owl:ObjectProperty ;
-  rdfs:label "has image asset"@en ;
-  rdfs:range bdo:ItemImageAsset ;
-  rdfs:subPropertyOf bdo:workHasItem ;
-.
-bdo:workHasItemPhysicalAsset
-  a owl:ObjectProperty ;
-  rdfs:label "has physical asset"@en ;
-  rdfs:range bdo:ItemPhysicalAsset ;
-  rdfs:subPropertyOf bdo:workHasItem ;
 .
 bdo:workHasNumber
   a owl:ObjectProperty ;
