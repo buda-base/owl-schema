@@ -23,6 +23,78 @@ adm:ContentProvider
   rdfs:comment "A contemporary organization that provides metadata and/or images"@en ;
   rdfs:label "Work Access Type"@en ;
 .
+bda:CP001
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:altLabel "DharmaDownload at Karma Lekshey Ling Institute"@en ;
+  skos:prefLabel "DharmaDownload"@en ;
+  adm:termsOfUse <http://dharmadownload.net/pages/english/E_Downloads.html> ;
+  foaf:homepage <http://dharmadownload.net> ;
+  rdfs:comment "primarily Karma Kagyu texts"@en ;
+.
+bda:CP002
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Drikung Chetsang"@en ;
+  foaf:homepage <http://drikungdharmasurya.org/teacher/> ;
+.
+bda:CP003
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "eKangyur"@en ;
+  foaf:homepage <https://adarsha.dharma-treasure.org/about> ;
+.
+bda:CP004
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Guru Lama of Sachen International"@en ;
+  foaf:homepage <http://www.sakyalibrary.com/home/page/966a3738-446b-4787-898b-59e434b725e9> ;
+.
+bda:CP005
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Karma Delek of Larung Gar"@en ;
+.
+bda:CP006
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Palri Parkhang"@en ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  foaf:homepage <https://www.tbrc.org> ;
+  rdfs:comment "operated in Nepal 2006-2013 by BDRC"@en ;
+.
+bda:CP007
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Shechen"@en ;
+  foaf:homepage <http://shechen.org/spiritual-development/monasteries/shechen-tennyi-dargyeling-monastery-kathmandu-nepal/> ;
+.
+bda:CP008
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Tulku Sangag"@en ;
+  foaf:homepage <https://www.ewam.org/about/tulku-sang-ngag> ;
+.
+bda:CP009
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Namsel OCR"@en ;
+  foaf:homepage <https://github.com/thubtenrigzin/namsel-ocr> ;
+  rdfs:comment "Namsel OCR used on scanned images held by BDRC"@en ;
+.
+bda:CP010
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Vajra Vidya Institute"@en ;
+  foaf:homepage <https://www.vajravidya.org> ;
+.
+bda:CP011
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Various"@en ;
+  rdfs:comment "This is a non=specific content provider"@en ;
+.
+
 bda:CP_84000
   a adm:ContentProvider ;
   a foaf:Organization ;
