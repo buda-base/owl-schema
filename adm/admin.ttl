@@ -381,8 +381,9 @@ adm:migrationComment
 adm:originalRecord
   a owl:AnnotationProperty ;
   rdfs:comment "use to indicate url of the original metadata record or content (for imported records)"@en ;
+  rdfs:domain bdo:Entity ;
   rdfs:label "see original"@en ;
-  rdfs:subPropertyOf rdfs:seeAlso ;
+  rdfs:range xsd:anyURI ;
 .
 adm:outline
   a owl:AnnotationProperty ;
@@ -530,6 +531,58 @@ adm:replaceWithObjectProperty
   rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
   rdfs:label "replace with Object property"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
+.
+adm:sameAsToL
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the Treasury of Lives resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as Treasury of Lives"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsVIAF
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the VIAF resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "VIAF"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsWikidata
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the Wikidata resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as Wikidata"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsWorldCat
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the WorldCat resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as WorldCat"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsrKTs
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the rKTs resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as rKTs"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:seeOther
+  a owl:AnnotationProperty ;
+  rdfs:comment "use to indicate a url to a another site providing other information on the subject :Entity. This property is used to refer to information that is not necessarily conformant to RDF Linked Open Data"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "see other"@en ;
+  rdfs:range xsd:anyURI ;
+.
+adm:seeOtherHA
+  a owl:AnnotationProperty ;
+  rdfs:label "same other Himalayan Art entry"@en ;
+  rdfs:subPropertyOf adm:seeOther ;
+.
+adm:seeOtherToL
+  a owl:AnnotationProperty ;
+  rdfs:label "see other Treasury of Lives entry"@en ;
+  rdfs:subPropertyOf adm:seeOther ;
 .
 adm:statementScore
   a owl:AnnotationProperty ;
