@@ -42,6 +42,21 @@ bda:LicenseCCBYSA4U
   skos:prefLabel "Creative Commons BY-SA 4.0 Unported"@en ;
   rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
 .
+bda:LicenseCCBYNCSA3U
+  a adm:License ;
+  skos:prefLabel "Creative Commons BY-NC-SA 3.0 Unported"@en ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-sa/3.0/> ;
+.
+bda:LicenseCCBYNCND3U
+  a adm:License ;
+  skos:prefLabel "Creative Commons BY-NC-ND 3.0 Unported"@en ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-nd/3.0/> ;
+.
+bda:LicenseODCBY10
+  a adm:License ;
+  skos:prefLabel "Open Data Commons Attribution License (ODC-By) v1.0"@en ;
+  rdfs:seeAlso <https://opendatacommons.org/licenses/by/1.0/> ;
+.
 bda:LicenseMixed
   a adm:License ;
   rdfs:comment "The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed)."@en ;
