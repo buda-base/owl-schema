@@ -210,6 +210,12 @@ adm:attributionName
   rdfs:label "attribution name"@en ;
   rdfs:range rdf:langString ;
 .
+adm:attributionStatement
+  a owl:AnnotationProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution statement"@en ;
+  rdfs:range rdf:langString ;
+.
 adm:attributionURL
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
