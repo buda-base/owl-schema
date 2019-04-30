@@ -90,7 +90,7 @@ Most Chinese tags are all standardized so their choice is easy:
 - `zh-Hant` for traditional Chinese characters
 - `zh-Latn-pinyin` for Pinyin transliteration
 - `zh-Latn-pinyin-x-ndia` for Pinyin transliteration with no diacritics
-- `zh-x-wade` for Wade-Giles transliteration
+- `zh-Latn-wadegile` for Wade-Giles transliteration
 - `zh-x-phon-en` for Chinese in phonetics with an English style
 
 #### Pali
