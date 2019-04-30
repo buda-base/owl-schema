@@ -28,27 +28,33 @@ bda:CP001
   a foaf:Organization ;
   skos:altLabel "DharmaDownload at Karma Lekshey Ling Institute"@en ;
   skos:prefLabel "DharmaDownload"@en ;
-  adm:termsOfUse <http://dharmadownload.net/pages/english/E_Downloads.html> ;
-  foaf:homepage <http://dharmadownload.net> ;
+  adm:termsOfUse "http://dharmadownload.net/pages/english/E_Downloads.html"^^xsd:anyURI ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  foaf:homepage "http://dharmadownload.net"^^xsd:anyURI ;
   rdfs:comment "primarily Karma Kagyu texts"@en ;
 .
 bda:CP002
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "Drikung Chetsang"@en ;
-  foaf:homepage <http://drikungdharmasurya.org/teacher/> ;
+  foaf:homepage "http://drikungdharmasurya.org/"^^xsd:anyURI ;
+  adm:attributionURL "http://drikungdharmasurya.org/"^^xsd:anyURI ;
+  adm:termsOfUse "http://drikungdharmasurya.org/561-2/"^^xsd:anyURI ;
 .
 bda:CP003
   a adm:ContentProvider ;
   a foaf:Organization ;
-  skos:prefLabel "eKangyur"@en ;
-  foaf:homepage <https://adarsha.dharma-treasure.org/about> ;
+  skos:prefLabel "Esukhia"@en ;
+  foaf:homepage "https://esukhia.org/"^^xsd:anyURI ;
 .
 bda:CP004
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "Guru Lama of Sachen International"@en ;
-  foaf:homepage <http://www.sakyalibrary.com/home/page/966a3738-446b-4787-898b-59e434b725e9> ;
+  foaf:homepage "http://www.sakyalibrary.com/home/page/966a3738-446b-4787-898b-59e434b725e9"^^xsd:anyURI ;
+  adm:termsOfUse "http://www.sakyalibrary.com/home/page/966a3738-446b-4787-898b-59e434b725e9"^^xsd:anyURI ;
+  adm:attributionStatement "These texts were published in digital format in 2015 by the International Buddhist Academy in conjunction with Sachen International of Lama Guru."@en ;
+  adm:defaultContentLicense bda:LicenseCCBYNCSA3U ;
 .
 bda:CP005
   a adm:ContentProvider ;
@@ -60,48 +66,45 @@ bda:CP006
   a foaf:Organization ;
   skos:prefLabel "Palri Parkhang"@en ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  foaf:homepage <https://www.tbrc.org> ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
   rdfs:comment "operated in Nepal 2006-2013 by BDRC"@en ;
 .
 bda:CP007
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "Shechen"@en ;
-  foaf:homepage <http://shechen.org/spiritual-development/monasteries/shechen-tennyi-dargyeling-monastery-kathmandu-nepal/> ;
+  foaf:homepage "http://shechen.org/spiritual-development/monasteries/shechen-tennyi-dargyeling-monastery-kathmandu-nepal/"^^xsd:anyURI ;
 .
 bda:CP008
   a adm:ContentProvider ;
   a foaf:Organization ;
-  skos:prefLabel "Tulku Sangag"@en ;
-  foaf:homepage <https://www.ewam.org/about/tulku-sang-ngag> ;
-.
-bda:CP009
-  a adm:ContentProvider ;
-  a foaf:Organization ;
-  skos:prefLabel "Namsel OCR"@en ;
-  foaf:homepage <https://github.com/thubtenrigzin/namsel-ocr> ;
-  rdfs:comment "Namsel OCR used on scanned images held by BDRC"@en ;
+  skos:prefLabel "Tulku Sang-ngag"@en ;
+  foaf:homepage "https://www.ewam.org/about/tulku-sang-ngag"^^xsd:anyURI ;
 .
 bda:CP010
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "Vajra Vidya Institute"@en ;
-  foaf:homepage <https://www.vajravidya.org> ;
+  adm:attributionName "Vajra Vidya Institute"@en ;
+  foaf:homepage "https://www.vajravidya.org"^^xsd:anyURI ;
 .
 bda:CP011
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "Various"@en ;
-  rdfs:comment "This is a non=specific content provider"@en ;
+  rdfs:comment "This is a non-specific content provider"@en ;
 .
 
 bda:CP_84000
   a adm:ContentProvider ;
   a foaf:Organization ;
-  adm:defaultContentLicense <https://creativecommons.org/licenses/by-nc-nd/3.0/> ;
+  adm:defaultContentLicense bda:LicenseCCBYNCND3U ;
   adm:termsOfUse <http://84000.co/about/copyright/> ;
   skos:prefLabel "84000" ;
-  foaf:homepage <http://84000.co> ;
+  adm:attributionName "84000"@en ;
+  adm:attributionURL "http://84000.co"^^xsd:anyURI ;
+  foaf:homepage "http://84000.co"^^xsd:anyURI ;
 .
 bda:CP_BDRC
   a adm:ContentProvider ;
@@ -110,7 +113,12 @@ bda:CP_BDRC
   adm:defaultMetadataLicense bda:LicenseCC0 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "BDRC" ;
-  skos:prefLabel "Buddhist Digital Resource Center"@en ;
+  skos:altLabel "Buddhist Digital Resource Center"@en ;
+  skos:altLabel "nang bstan dpe tshogs lte gnas/"@bo-x-ewts ;
+  skos:altLabel "佛教数字资源中心（BDRC）"@zh-Hans ;
+  adm:attributionName "Buddhist Digital Resource Center"@en ;
+  adm:attributionName "nang bstan dpe tshogs lte gnas/"@bo-x-ewts ;
+  adm:attributionName "佛教数字资源中心（BDRC）"@zh-Hans ;
   foaf:homepage <https://www.tbrc.org> ;
 .
 bda:CP_BnF
@@ -119,6 +127,8 @@ bda:CP_BnF
   adm:termsOfUse <http://gallica.bnf.fr/html/und/conditions-dutilisation-des-contenus-de-gallica> ;
   skos:altLabel "Bibliothèque nationale de France"@fr ;
   skos:prefLabel "BnF" ;
+  adm:attributionStatement "Source gallica.bnf.fr / Bibliothèque nationale de France"@fr ;
+  adm:attributionName "BnF"@en ;
   foaf:homepage <https://gallica.bnf.fr/> ;
 .
 bda:CP_CBCAtt
@@ -198,7 +208,7 @@ bda:CP_ToL
 bda:CP_VIAF
   a adm:ContentProvider ;
   a foaf:Organization ;
-  adm:defaultMetadataLicense <https://opendatacommons.org/licenses/by/1.0/> ;
+  adm:defaultMetadataLicense bda:LicenseODCBY10 ;
   adm:termsOfUse <http://viaf.org/viaf/data/> ;
   skos:altLabel "Virtual International Authority File"@en ;
   skos:prefLabel "VIAF" ;
