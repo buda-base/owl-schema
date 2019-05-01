@@ -238,7 +238,7 @@ adm:contentProvider
   a owl:ObjectProperty ;
   adm:deprecatedComment "deprecated in favor of :hasContentProvider - name change"@en ;
   rdfs:comment "The organization or person that provided the eText or image content"@en ;
-  rdfs:domain bdo:TextualEntity ;
+  rdfs:domain bdo:Item ;
   rdfs:label "content provider"@en ;
   rdfs:range adm:ContentProvider ;
 .

@@ -2,9 +2,9 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: Creator
 
+@prefix Creator: <http://purl.bdrc.io/ontology/roles/Creator/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix Creator: <http://purl.bdrc.io/ontology/roles/Creator/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -67,12 +67,6 @@ bdr:R0ER0016
 .
 bdr:R0ER0017
   a bdo:Creator ;
-  rdfs:comment "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
-  skos:prefLabel "forger"@en ;
-  skos:prefLabel "偽作"@zh-hant ;
-.
-bdr:R0ER0017
-  a bdo:Creator ;
   rdfs:comment "The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person's role is implicit or inferred from other knowledge about the composition of the translation group."@en ;
   skos:prefLabel "head translator"@en ;
   skos:prefLabel "譯主"@zh-hant ;
@@ -131,8 +125,19 @@ bdr:R0ER0026
 The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
   skos:prefLabel "translator"@en ;
 .
+bdr:R0ER0027
+  a bdo:Creator ;
+  rdfs:comment "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
+  skos:prefLabel "forger"@en ;
+  skos:prefLabel "偽作"@zh-hant ;
+.
+bdr:R0ER0028
+  a bdo:Creator ;
+  rdfs:comment "a person who requests the author to compose the work"@en ;
+  skos:prefLabel "requester"@en ;
+.
 bdr:Unspecified
   a bdo:Creator ;
-  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
+  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation or composition process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
   skos:prefLabel "unspecified"@en ;
 .
