@@ -76,7 +76,6 @@ There does not seem to be any guideline on the way to encode phonetic transcript
 - `C` is the type of phonetic transcription, when phonetics follows a particular standard; this part (and the preceding `-m-`) can be omitted
 
 Examples:
-- `bo-x-phon-zh-Latn-pinyin` would be Tibetan transcribed in Chinese written in pinyin (`A` is `bo`, `B` is `zh-Latn-pinyin`, `C` is omitted)
 - `bo-x-phon-en-m-tbrc` would be Tibetan transcribed in English with the TBRC phonetic conventions (`A` is `bo`, `B` is `en`, `C` is `tbrc`)
 
 #### Language mixing
@@ -126,6 +125,8 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `bo-x-dts` for a transliteration scheme sometimes called `Diacritical Transliteration Scheme` (DTS), used in some works ([ex1](https://www.tbrc.org/#!rid=W1KG13703), [ex2](https://www.tbrc.org/#!rid=W1PD95677))
 - `bo-x-phon-zh-Hant` for Tibetan written in Traditional Chinese characters
 - `bo-alalc97` for Tibetan transliterated following ALA-LC rules
+- `bo-x-phon-en-m-tbrc` for Tibetan transcribed in English with the TBRC phonetic conventions
+- `bo-x-phon-en-m-thlib` for Tibetan transcribed in English with the [Thlib phonetic conventions](http://www.thlib.org/reference/transliteration/#!essay=/thl/phonetics/)
 
 #### Mongolian
 
