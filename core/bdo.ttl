@@ -1332,6 +1332,12 @@ bdo:WorkOtherTitle
 bdo:WorkPartType
   rdfs:subClassOf bdo:Type ;
 .
+bdo:WorkReferenceTitle
+  a owl:Class ;
+  rdfs:comment "for use with abstract works such as from the SEA project that have many different expressions with the same putative title"@en ;
+  rdfs:label "Reference Title"@en ;
+  rdfs:subClassOf bdo:WorkTitle ;
+.
 bdo:WorkRefs
   a owl:Class ;
   rdfs:comment "Blank nodes of this class collect together the various reference numbers that apply to a given work. This is primarily used in Kanjurs and Tengyurs for which there are quite a number of different catalogue number schemes."@en ;
