@@ -1481,42 +1481,36 @@ bdo:creatorAmanuensis
   rdfs:label "amanuensis"@en ;
   rdfs:label "筆受"@zh-hant ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personAmanuensisOf ;
 .
 bdo:creatorArtist
   a owl:ObjectProperty ;
   rdfs:comment "An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like"@en ;
   rdfs:label "artist"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personArtistOf ;
 .
 bdo:creatorAttributedAuthor
   a owl:ObjectProperty ;
   rdfs:comment "A creator identified by a separate source as an author of the Work"@en ;
   rdfs:label "attributed author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personAttributedAuthorOf ;
 .
 bdo:creatorBard
   a owl:ObjectProperty ;
   rdfs:comment "for a Work of verse a poet who composed the verse"@en ;
   rdfs:label "bard"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personBardOf ;
 .
 bdo:creatorCalligrapher
   a owl:ObjectProperty ;
   rdfs:comment "For a handwritten Work an individual that drew the text or carved it on woord blocks"@en ;
   rdfs:label "calligrapher"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personCalligrapherOf ;
 .
 bdo:creatorCommentator
   a owl:ObjectProperty ;
   rdfs:comment "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
   rdfs:label "commentator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personCommentatorOf ;
 .
 bdo:creatorCompiler
   a owl:ObjectProperty ;
@@ -1526,14 +1520,12 @@ Liturgical texts including supplication and recitations for liberating beings fr
 a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
   rdfs:label "compiler"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personCompilerOf ;
 .
 bdo:creatorContributingAuthor
   a owl:ObjectProperty ;
   rdfs:comment "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
   rdfs:label "contributing author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personContributingAuthorOf ;
 .
 bdo:creatorEditor
   a owl:ObjectProperty ;
@@ -1562,28 +1554,24 @@ bdo:creatorHeadTranslator
   rdfs:label "head translator"@en ;
   rdfs:label "譯主"@zh-hant ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personHeadTranslatorOf ;
 .
 bdo:creatorIndicScholar
   a owl:ObjectProperty ;
   rdfs:comment "in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
   rdfs:label "Indic Scholar"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personIndicScholarOf ;
 .
 bdo:creatorMainAuthor
   a owl:ObjectProperty ;
   rdfs:comment "the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the \"author\" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the \"author\" of a commentary"@en ;
   rdfs:label "main author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personMainAuthorOf ;
 .
 bdo:creatorOralTranslator
   a owl:ObjectProperty ;
   rdfs:comment "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
   rdfs:label "oral translator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personOralTranslatorOf ;
 .
 bdo:creatorPandita
   a owl:ObjectProperty ;
@@ -1599,14 +1587,12 @@ bdo:creatorRecipientOfResponseToQuery
 Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
   rdfs:label "recipient of response to query"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personRecipientOfResponseToQueryOf ;
 .
 bdo:creatorReciter
   a owl:ObjectProperty ;
   rdfs:comment "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
   rdfs:label "reciter"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personReciterOf ;
 .
 bdo:creatorRequester
   a owl:ObjectProperty ;
@@ -1623,7 +1609,6 @@ bdo:creatorReviser
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
   rdfs:label "reviser"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personReviserOf ;
 .
 bdo:creatorReviserOfTranslation
   a owl:ObjectProperty ;
@@ -1639,7 +1624,6 @@ bdo:creatorScribe
   rdfs:comment "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
   rdfs:label "scribe"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personScribeOf ;
 .
 bdo:creatorTerton
   a owl:ObjectProperty ;
@@ -1648,7 +1632,6 @@ bdo:creatorTerton
 Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak"""@en ;
   rdfs:label "tertön"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personTertonOf ;
 .
 bdo:creatorTranslator
   a owl:ObjectProperty ;
@@ -1657,7 +1640,6 @@ bdo:creatorTranslator
 The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
   rdfs:label "translator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
-  owl:inverseOf bdo:personTranslatorOf ;
 .
 bdo:creatorUnspecified
   a owl:ObjectProperty ;
@@ -2497,41 +2479,6 @@ bdo:paginatedBy
   rdfs:label "paginated by"@en ;
   rdfs:range bdo:Item ;
 .
-bdo:personAmanuensisOf
-  a owl:ObjectProperty ;
-  rdfs:label "amanuensis of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personArtistOf
-  a owl:ObjectProperty ;
-  rdfs:label "artist of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personAttributedAuthorOf
-  a owl:ObjectProperty ;
-  rdfs:label "attributed author of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personBardOf
-  a owl:ObjectProperty ;
-  rdfs:label "bard of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personCalligrapherOf
-  a owl:ObjectProperty ;
-  rdfs:label "calligrapher of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personCommentatorOf
-  a owl:ObjectProperty ;
-  rdfs:label "commentator of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personCompilerOf
-  a owl:ObjectProperty ;
-  rdfs:label "compiler of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
 bdo:personConsortOf
   a owl:ObjectProperty ;
   rdfs:comment "The subject :Person is a consort of the target :Person"@en ;
@@ -2539,21 +2486,6 @@ bdo:personConsortOf
   rdfs:label "consort of"@en ;
   rdfs:range bdo:Person ;
   owl:inverseOf bdo:personHasConsort ;
-.
-bdo:personContributingAuthorOf
-  a owl:ObjectProperty ;
-  rdfs:label "contributing author of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personCreatorOf
-  a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
-  rdfs:comment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
-  rdfs:domain bdo:Person ;
-  rdfs:label "creator of"@en ;
-  rdfs:range bdo:Work ;
-  owl:deprecated true ;
-  owl:inverseOf bdo:workCreator ;
 .
 bdo:personEvent
   a owl:ObjectProperty ;
@@ -2574,11 +2506,6 @@ bdo:personEventRole
   rdfs:label "associated role"@en ;
   rdfs:range bdo:Role ;
 .
-bdo:personForgerOf
-  a owl:ObjectProperty ;
-  rdfs:label "forger of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
 bdo:personGender
   a owl:ObjectProperty ;
   rdfs:domain bdo:Person ;
@@ -2592,27 +2519,12 @@ bdo:personHasConsort
   rdfs:label "has consort"@en ;
   rdfs:range bdo:Person ;
 .
-bdo:personHeadTranslatorOf
-  a owl:ObjectProperty ;
-  rdfs:label "head translator of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personIndicScholarOf
-  a owl:ObjectProperty ;
-  rdfs:label "Indic scholar of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
 bdo:personIsNonActor
   a owl:DatatypeProperty ;
   rdfs:comment "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest." ;
   rdfs:domain bdo:Person ;
   rdfs:label "non actor"@en ;
   rdfs:range xsd:boolean ;
-.
-bdo:personMainAuthorOf
-  a owl:ObjectProperty ;
-  rdfs:label "main author of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
 .
 bdo:personName
   a owl:IrreflexiveProperty ;
@@ -2634,31 +2546,6 @@ bdo:personOfTradition
   rdfs:label "person of tradition" ;
   rdfs:range bdo:Tradition ;
 .
-bdo:personOralTranslatorOf
-  a owl:ObjectProperty ;
-  rdfs:label "oral translator of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personRecipientOfResponseToQueryOf
-  a owl:ObjectProperty ;
-  rdfs:label "recipient of response to query of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personReciterOf
-  a owl:ObjectProperty ;
-  rdfs:label "reciter of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personReviserOf
-  a owl:ObjectProperty ;
-  rdfs:label "reviser of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personScribeOf
-  a owl:ObjectProperty ;
-  rdfs:label "scribe of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
 bdo:personStudentOf
   a owl:ObjectProperty ;
   rdfs:domain bdo:Person ;
@@ -2671,16 +2558,6 @@ bdo:personTeacherOf
   rdfs:domain bdo:Person ;
   rdfs:label "teacher of"@en ;
   rdfs:range bdo:Person ;
-.
-bdo:personTertonOf
-  a owl:ObjectProperty ;
-  rdfs:label "terton of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
-.
-bdo:personTranslatorOf
-  a owl:ObjectProperty ;
-  rdfs:label "translator of"@en ;
-  rdfs:subPropertyOf bdo:personCreatorOf ;
 .
 bdo:placeAccuracy
   a owl:DatatypeProperty ;
@@ -3157,7 +3034,6 @@ bdo:workCreator
   rdfs:range bdo:Person ;
   rdfs:seeAlso bdo:creator ;
   owl:deprecated "true" ;
-  owl:inverseOf bdo:personCreatorOf ;
 .
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
