@@ -1215,6 +1215,12 @@ bdo:UnicodeWork
 bdo:Union
   a owl:Class ;
 .
+bdo:UnspecifiedWorkClass
+  a owl:Class ;
+  rdfs:comment "This is the class of migrated works for which no work type was indicated. Needs repair after migration"@en ;
+  rdfs:label "Unspecified work class"@en ;
+  rdfs:subClassOf bdo:Work ;
+.
 bdo:VirtualWork
   a owl:Class ;
   rdfs:label "Virtual work" ;
