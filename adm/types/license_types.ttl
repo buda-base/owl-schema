@@ -3,8 +3,8 @@
 
 @prefix License: <http://purl.bdrc.io/ontology/adm/types/License/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,15 +12,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-adm:License
-  a owl:Class ;
-  rdfs:comment "License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright."@en ;
-  rdfs:label "License"@en ;
-.
-License:
-  a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
-.
 bda:LicenseAllRightsReserved
   a adm:License ;
   rdfs:comment "Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved."@en ;
@@ -29,42 +20,57 @@ bda:LicenseAllRightsReserved
 bda:LicenseCC0
   a adm:License ;
   rdfs:comment "The work is made available under Creative Commons, CC0 1.0."@en ;
-  skos:prefLabel "Creative Commons CC0"@en ;
   rdfs:seeAlso <https://creativecommons.org/share-your-work/public-domain/cc0/> ;
+  skos:prefLabel "Creative Commons CC0"@en ;
 .
-bda:LicenseCCBYSA3U
+bda:LicenseCCBYNC30U
   a adm:License ;
-  skos:prefLabel "Creative Commons BY-SA 3.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/3.0/> ;
-.
-bda:LicenseCCBYSA4U
-  a adm:License ;
-  skos:prefLabel "Creative Commons BY-SA 4.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
-.
-bda:LicenseCCBYNCSA3U
-  a adm:License ;
-  skos:prefLabel "Creative Commons BY-NC-SA 3.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-sa/3.0/> ;
+  rdfs:comment "The work is made available under Creative Commons Attribution No Commercial Use version 3.0 Unported"@en ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc/3.0/> ;
+  skos:prefLabel "CCBYNC30U"@en ;
 .
 bda:LicenseCCBYNCND3U
   a adm:License ;
-  skos:prefLabel "Creative Commons BY-NC-ND 3.0 Unported"@en ;
   rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-nd/3.0/> ;
+  skos:prefLabel "Creative Commons BY-NC-ND 3.0 Unported"@en ;
 .
-bda:LicenseODCBY10
+bda:LicenseCCBYNCSA3U
   a adm:License ;
-  skos:prefLabel "Open Data Commons Attribution License (ODC-By) v1.0"@en ;
-  rdfs:seeAlso <https://opendatacommons.org/licenses/by/1.0/> ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-sa/3.0/> ;
+  skos:prefLabel "Creative Commons BY-NC-SA 3.0 Unported"@en ;
+.
+bda:LicenseCCBYSA3U
+  a adm:License ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/3.0/> ;
+  skos:prefLabel "Creative Commons BY-SA 3.0 Unported"@en ;
+.
+bda:LicenseCCBYSA4U
+  a adm:License ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
+  skos:prefLabel "Creative Commons BY-SA 4.0 Unported"@en ;
 .
 bda:LicenseMixed
   a adm:License ;
   rdfs:comment "The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed)."@en ;
   skos:prefLabel "mixed licensing"@en ;
 .
+bda:LicenseODCBY10
+  a adm:License ;
+  rdfs:seeAlso <https://opendatacommons.org/licenses/by/1.0/> ;
+  skos:prefLabel "Open Data Commons Attribution License (ODC-By) v1.0"@en ;
+.
 bda:LicensePublicDomain
   a adm:License ;
   rdfs:comment "Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws."@en ;
-  skos:prefLabel "Public Domain"@en ;
   rdfs:seeAlso <https://creativecommons.org/publicdomain/mark/1.0/deed> ;
+  skos:prefLabel "Public Domain"@en ;
+.
+License:
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+adm:License
+  a owl:Class ;
+  rdfs:comment "License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright."@en ;
+  rdfs:label "License"@en ;
 .
