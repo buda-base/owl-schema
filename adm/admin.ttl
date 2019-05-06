@@ -229,6 +229,11 @@ adm:catalogingConvention
   rdfs:range rdf:langString ;
   rdfs:subPropertyOf rdfs:comment ;
 .
+adm:contentLegal
+  a owl:AnnotationProperty ;
+  rdfs:label "content legal"@en ;
+  rdfs:subPropertyOf adm:hasLegal ;
+.
 adm:contentLicense
   a owl:AnnotationProperty ;
   rdfs:label "content license"@en ;
@@ -305,13 +310,7 @@ adm:deprecatedComment
 .
 adm:hasLegal
   a owl:AnnotationProperty ;
-  rdfs:domain [
-      a owl:Class ;
-      owl:unionOf (
-          adm:Graph
-          adm:AdminData
-        ) ;
-    ] ;
+  rdfs:domain adm:AdminData ;
   rdfs:label "legal about resource"@en ;
   rdfs:range adm:LegalData ;
 .
@@ -373,6 +372,11 @@ adm:logWho
   rdfs:domain adm:LogEntry ;
   rdfs:label "who"@en ;
   rdfs:range foaf:Agent ;
+.
+adm:metadataLegal
+  a owl:AnnotationProperty ;
+  rdfs:label "metadata legal"@en ;
+  rdfs:subPropertyOf adm:hasLegal ;
 .
 adm:metadataLicense
   a owl:AnnotationProperty ;
