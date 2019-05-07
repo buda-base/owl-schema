@@ -55,6 +55,7 @@ bdr:AppliedMaterial_SilverLeaf
 bdr:MaterialBirchBark
   a bdr:MaterialWood ;
   skos:prefLabel "birch bark"@en ;
+  skos:prefLabel "bhūrjapattra"@sa-x-iast ;
 .
 bdr:MaterialCloth
   a bdo:BaseMaterial ;
