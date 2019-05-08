@@ -329,6 +329,13 @@ adm:initialProvider
   rdfs:range adm:ContentProvider ;
   rdfs:seeAlso adm:ContentProvider ;
 .
+adm:isRestrictedInChina
+  a owl:AnnotationProperty ;
+  rdfs:comment "Has value true if the contents of the associated Work are restricted in China"@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "is restricted in China"@en ;
+  rdfs:range xsd:boolean ;
+.
 adm:legacyImageGroupRID
   a owl:AnnotationProperty ;
   adm:migrationComment "records the original imagegroup rid from which the volume information was migrated"@en ;
