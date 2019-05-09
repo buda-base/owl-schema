@@ -39,7 +39,6 @@ bdo:langMARCCode
 Language:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:LangBo
   a bdo:Language ;
@@ -95,7 +94,7 @@ bdr:LangNew
   a owl:Class ;
   bdo:langBCP47Lang "new" ;
   bdo:langMARCCode "new" ;
-  rdfs:seeAlso <http://www.lexvo.org/page/iso639-3/new> ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/new> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Newari"@en ;
   skos:altLabel "Nepal Bhasa"@en ;
@@ -109,12 +108,22 @@ bdr:LangPi
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Pali"@en ;
 .
+bdr:LangPra
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "pra" ;
+  bdo:langMARCCode "pra" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-5/pra> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Prakrit"@en ;
+  rdfs:comment "use when the language is an unidentified Prakrit language"@en ;
+.
 bdr:LangRu
   a bdo:Language ;
   a owl:Class ;
   bdo:langBCP47Lang "ru" ;
   bdo:langMARCCode "rus" ;
-  rdfs:seeAlso <http://lexvo.org/id/code/ru> ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/rus> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Russian"@en ;
 .
@@ -126,6 +135,16 @@ bdr:LangSa
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Sanskrit"@en ;
+.
+bdr:LangUr
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "ur" ;
+  bdo:langMARCCode "urd" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/urd> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Urdu"@en ;
+  skos:prefLabel "wu'u tu'u skad"@bo-x-ewts ;
 .
 bdr:LangZh
   a bdo:Language ;

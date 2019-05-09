@@ -107,12 +107,17 @@ bdr:ScriptPostGupta
 .
 bdr:ScriptRanj
   a bdo:Script ;
-  rdfs:comment "This script is not normalized in ISO 15924 (yet?)"@en ;
-  rdfs:comment "also referred to as Pāla, as it was developped during the Pāla dynasty"@en ;
+  rdfs:comment "This script is not normalized in ISO 15924"@en ;
+  rdfs:comment "Use it for Landza and Vartu"@en ;
   rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
-  skos:prefLabel "Ranjana (Kutila, Lantsa)"@en ;
+  skos:prefLabel "Ranjana"@en ;
   skos:prefLabel "Rañjanā"@sa-x-iast ;
   skos:prefLabel "lany+dza"@bo-x-ewts ;
+  skos:altLabel "Pāla"@sa-x-iast ;
+  skos:altLabel "Kutika"@en ;
+  skos:altLabel "Vartu"@en ;
+  skos:altLabel "lany+tsa"@bo-x-ewts ;
+  skos:altLabel "wartu"@bo-x-ewts ;
 .
 bdr:ScriptSinh
   a bdo:Script ;
@@ -128,4 +133,11 @@ bdr:ScriptTibt
   rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
   skos:prefLabel "Tibetan Script"@en ;
   skos:prefLabel "bod yig"@bo-x-ewts ;
+.
+bdr:ScriptTirh
+  a bdo:Script ;
+  rdfs:seeAlso <http://lexvo.org/id/script/Tirh> ;
+  skos:prefLabel "Tirhuta"@en ;
+  skos:altLabel "Mithilakshar"@en ;
+  skos:altLabel "Maithili"@en ;
 .
