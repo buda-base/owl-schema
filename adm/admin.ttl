@@ -289,6 +289,12 @@ adm:copyrightOwner
   rdfs:range adm:Organization ;
   rdfs:seeAlso adm:Organization ;
 .
+adm:creatorIndex
+  a owl:AnnotationProperty ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "default metadata license"@en ;
+  rdfs:range xsd:int ;
+.
 adm:defaultContentLicense
   a owl:AnnotationProperty ;
   rdfs:comment "For a given provider the default content license to use"@en ;
@@ -307,6 +313,12 @@ adm:deprecatedComment
   rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
   rdfs:label "deprecation comment"@en ;
   rdfs:subPropertyOf rdfs:comment ;
+.
+adm:eventIndex
+  a owl:AnnotationProperty ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "event index"@en ;
+  rdfs:range xsd:int ;
 .
 adm:hasLegal
   a owl:AnnotationProperty ;
