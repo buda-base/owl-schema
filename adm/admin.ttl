@@ -289,12 +289,6 @@ adm:copyrightOwner
   rdfs:range adm:Organization ;
   rdfs:seeAlso adm:Organization ;
 .
-adm:creatorIndex
-  a owl:AnnotationProperty ;
-  rdfs:domain adm:AdminData ;
-  rdfs:label "default metadata license"@en ;
-  rdfs:range xsd:int ;
-.
 adm:defaultContentLicense
   a owl:AnnotationProperty ;
   rdfs:comment "For a given provider the default content license to use"@en ;
@@ -314,10 +308,11 @@ adm:deprecatedComment
   rdfs:label "deprecation comment"@en ;
   rdfs:subPropertyOf rdfs:comment ;
 .
-adm:eventIndex
+adm:facetIndex
   a owl:AnnotationProperty ;
+  rdfs:comment "this property provides a \"salt\" to be used in generating resource ids for facets such as Events, Notes, AgentAsCreator and so on"@en ;
   rdfs:domain adm:AdminData ;
-  rdfs:label "event index"@en ;
+  rdfs:label "facet index"@en ;
   rdfs:range xsd:int ;
 .
 adm:hasLegal
