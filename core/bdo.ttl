@@ -2153,6 +2153,13 @@ bdo:isIncarnation
   rdfs:label "is incarnation of"@en ;
   rdfs:range bdo:PersonOrTopic ;
 .
+bdo:isRoot
+  a owl:DatatypeProperty ;
+  rdfs:comment "True if this resource is a root resource - Entity or AdminData. If not present on a Work, which may be a sub-part, it is assumed false"@en ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "is root resource"@en ;
+  rdfs:range xsd:boolean ;
+.
 bdo:itemBDRCHoldingStatement
   a owl:DatatypeProperty ;
   rdfs:comment "A free-text statement of the holdings by BDRC of this Item (and its relatives)."@en ;
