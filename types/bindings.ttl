@@ -33,7 +33,6 @@ bdo:Binding_LooseLeaf
 Binding:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:Binding_Codex_Perfect
   a bdo:Binding_Codex ;
@@ -54,16 +53,20 @@ bdr:Binding_Continuous_Leporello
   a bdo:Binding_Continuous ;
   rdfs:comment "folded and bound between front and back boards"@en ;
   skos:prefLabel "leporello"@en ;
+  skos:altLabel "Thyāsaphu"@en ;
 .
 bdr:Binding_Continuous_Scroll
   a bdo:Binding_Continuous ;
   rdfs:comment "continuous sheet written on oneside and rolled up"@en ;
+  rdfs:comment "use also for rolled palm leaves (tamsuk)"@en ;
   skos:prefLabel "scroll"@en ;
+  skos:altLabel "Tamsuk"@en ;
 .
 bdr:Binding_LooseLeaf_Pecha
   a bdo:Binding_LooseLeaf ;
   rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
   skos:prefLabel "pecha"@en ;
+  skos:prefLabel "dpe cha/"@bo-x-exts ;
 .
 bdr:Binding_LooseLeaf_Pothi
   a bdo:Binding_LooseLeaf ;

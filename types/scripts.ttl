@@ -21,7 +21,6 @@ bdo:Script
 Script:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:ScriptBeng
   a bdo:Script ;
@@ -66,10 +65,12 @@ bdr:ScriptGupta
 .
 bdr:ScriptHans
   a bdo:Script ;
+  rdfs:seeAlso <http://www.lexvo.org/page/script/Hans> ;
   skos:prefLabel "Simplified Chinese"@en ;
 .
 bdr:ScriptHant
   a bdo:Script ;
+  rdfs:seeAlso <http://www.lexvo.org/page/script/Hant> ;
   skos:prefLabel "Traditional Chinese"@en ;
 .
 bdr:ScriptKhyugYig
@@ -80,11 +81,12 @@ bdr:ScriptKhyugYig
 bdr:ScriptLatn
   a bdo:Script ;
   rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
-  skos:prefLabel "latin"@en ;
+  skos:prefLabel "Latin"@en ;
 .
 bdr:ScriptMong
   a bdo:Script ;
-  skos:prefLabel "Classical Mongolian script"@en ;
+  rdfs:seeAlso <http://lexvo.org/id/script/Mong> ;
+  skos:prefLabel "Classical Mongolian"@en ;
 .
 bdr:ScriptMymr
   a bdo:Script ;
@@ -92,8 +94,8 @@ bdr:ScriptMymr
 .
 bdr:ScriptNepaleseHooked
   a bdo:Script ;
-  rdfs:comment "also referred to as Bhujimol"@en ;
   skos:prefLabel "Nepalese hooked script"@en ;
+  skos:altLabel "Bhujimol"@en ; 
 .
 bdr:ScriptNewa
   a bdo:Script ;
@@ -121,7 +123,13 @@ bdr:ScriptRanj
 .
 bdr:ScriptSinh
   a bdo:Script ;
+  rdfs:seeAlso <http://www.lexvo.org/page/script/Sinh> ;
   skos:prefLabel "Sinhalese"@en ;
+.
+bdr:ScriptSouthernIndia
+  a bdo:Script ;
+  skos:prefLabel "Southern Indian"@en ;
+  rdfs:comment "use for undetermined Southern Indian script"@en ;
 .
 bdr:ScriptThai
   a bdo:Script ;
@@ -140,4 +148,9 @@ bdr:ScriptTirh
   skos:prefLabel "Tirhuta"@en ;
   skos:altLabel "Mithilakshar"@en ;
   skos:altLabel "Maithili"@en ;
+.
+bdr:ScriptTransitionalGupta
+  a bdo:Script ;
+  skos:prefLabel "Transitional Gupta"@en ;
+  rdfs:comment "Broader category than Post-gupta"@en ;
 .
