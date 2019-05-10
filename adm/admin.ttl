@@ -308,6 +308,13 @@ adm:deprecatedComment
   rdfs:label "deprecation comment"@en ;
   rdfs:subPropertyOf rdfs:comment ;
 .
+adm:facetIndex
+  a owl:AnnotationProperty ;
+  rdfs:comment "this property provides a \"salt\" to be used in generating resource ids for facets such as Events, Notes, AgentAsCreator and so on"@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "facet index"@en ;
+  rdfs:range xsd:int ;
+.
 adm:hasLegal
   a owl:AnnotationProperty ;
   rdfs:domain adm:AdminData ;
