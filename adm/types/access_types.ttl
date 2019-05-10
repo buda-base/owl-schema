@@ -3,25 +3,14 @@
 
 @prefix Access: <http://purl.bdrc.io/ontology/adm/types/Access/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-adm:Access
-  a owl:Class ;
-  rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
-
-AccessTypes designations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
-  rdfs:label "Work Access Type"@en ;
-.
-Access:
-  a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
-.
 bda:AccessFairUse
   a adm:Access ;
   rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
@@ -47,11 +36,6 @@ bda:AccessRestrictedByTbrc
   rdfs:comment "BDRC is restricting access to the Work."@en ;
   skos:prefLabel "Restricted by BDRC"@en ;
 .
-bda:AccessRestrictedInChina
-  a adm:Access ;
-  rdfs:comment "The Work is not to be made available in the PRC."@en ;
-  skos:prefLabel "Restricted in China"@en ;
-.
 bda:AccessRestrictedSealed
   a adm:Access ;
   rdfs:comment "The Work is sealed by tradition."@en ;
@@ -61,4 +45,15 @@ bda:AccessRestrictedTemporarily
   a adm:Access ;
   rdfs:comment "The Work is temporarily restricted."@en ;
   skos:prefLabel "Temporarily Restricted"@en ;
+.
+Access:
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+adm:Access
+  a owl:Class ;
+  rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
+
+AccessTypes designations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
+  rdfs:label "Work Access Type"@en ;
 .
