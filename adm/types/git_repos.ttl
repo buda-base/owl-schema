@@ -1,0 +1,69 @@
+# baseURI: http://purl.bdrc.io/ontology/adm/types/GitRepo/
+# prefix: GitRepo
+
+@prefix GitRepo: <http://purl.bdrc.io/ontology/adm/types/GitRepo/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bda:GR0001
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Corporations> ;
+  rdfs:comment "git repo for Corporation resources"@en ;
+  skos:prefLabel "Corporation repo"@en ;
+.
+bda:GR0002
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Etexts> ;
+  rdfs:comment "git repo for Etext resources"@en ;
+  skos:prefLabel "Etext repo"@en ;
+.
+bda:GR0003
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Items> ;
+  rdfs:comment "git repo for Item resources"@en ;
+  skos:prefLabel "Item repo"@en ;
+.
+bda:GR0004
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Lineages> ;
+  rdfs:comment "git repo for Lineage resources"@en ;
+  skos:prefLabel "Lineage repo"@en ;
+.
+bda:GR0005
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Places> ;
+  rdfs:comment "git repo for Place resources"@en ;
+  skos:prefLabel "Place repo"@en ;
+.
+bda:GR0006
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Persons> ;
+  rdfs:comment "git repo for Person resources"@en ;
+  skos:prefLabel "Person repo"@en ;
+.
+bda:GR0007
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Topics> ;
+  rdfs:comment "git repo for Topic resources"@en ;
+  skos:prefLabel "Topic repo"@en ;
+.
+bda:GR0008
+  a adm:GitRepo ;
+  adm:gitUrl <https://github.com/buda-base/Works> ;
+  rdfs:comment "git repo for Work resources"@en ;
+  skos:prefLabel "Work repo"@en ;
+.
+GitRepo:
+  a owl:Ontology ;
+.
+adm:GitRepo
+  a owl:Class ;
+  rdfs:comment """The class of URLs for various git repos"""@en ;
+  rdfs:label "Git Repos"@en ;
+.

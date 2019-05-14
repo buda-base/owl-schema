@@ -2,6 +2,7 @@
 # imports: http://purl.bdrc.io/ontology/adm/ContentProvider/
 # imports: http://purl.bdrc.io/ontology/adm/LegalData/
 # imports: http://purl.bdrc.io/ontology/adm/types/Access/
+# imports: http://purl.bdrc.io/ontology/adm/types/GitRepo/
 # imports: http://purl.bdrc.io/ontology/adm/types/License/
 # imports: http://purl.bdrc.io/ontology/adm/types/OutlineType/
 # imports: http://purl.bdrc.io/ontology/adm/types/Status/
@@ -36,6 +37,7 @@ adm:
   owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/LegalData/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Access/> ;
+  owl:imports <http://purl.bdrc.io/ontology/adm/types/GitRepo/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/License/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status/> ;
@@ -78,6 +80,14 @@ adm:Facet
   a owl:Class ;
   rdfs:comment "adm:Facet is a facet of an administrative entity in the BDRC ontology."@en ;
   rdfs:label "administrative facet"@en ;
+.
+adm:GitInfo
+  a owl:Class ;
+  rdfs:label "admin git info"@en ;
+  rdfs:subClassOf adm:Entity ;
+.
+adm:GitRepo
+  rdfs:subClassOf adm:Type ;
 .
 adm:Graph
   a rdfs:Class ;
@@ -199,10 +209,16 @@ adm:adminAbout
       a owl:Class ;
       owl:unionOf (
           bdo:Entity
-          adm:Graph
           adm:AdminData
         ) ;
     ] ;
+.
+adm:adminForGraph
+  a owl:AnnotationProperty ;
+  rdfs:comment "This property identifies the containing graph and is used in the root adm:AdminData of the graph"@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "admin for graph"@en ;
+  rdfs:range adm:Graph ;
 .
 adm:attributionName
   a owl:AnnotationProperty ;
@@ -314,6 +330,41 @@ adm:facetIndex
   rdfs:domain adm:AdminData ;
   rdfs:label "facet index"@en ;
   rdfs:range xsd:int ;
+.
+adm:gitInfo
+  a owl:ObjectProperty ;
+  rdfs:comment "this property maps a bdo:Entity to its adm:GitInfo"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "git info"@en ;
+  rdfs:range adm:GitInfo ;
+.
+adm:gitPath
+  a owl:DatatypeProperty ;
+  rdfs:comment "path of this resource in its git repo"@en ;
+  rdfs:domain adm:GitInfo ;
+  rdfs:label "git path"@en ;
+  rdfs:range xsd:string ;
+.
+adm:gitRepo
+  a owl:ObjectProperty ;
+  rdfs:comment "this property maps a GitInfo to a GitRepo containing a git Url"@en ;
+  rdfs:domain adm:GitInfo ;
+  rdfs:label "git repo"@en ;
+  rdfs:range adm:GitRepo ;
+.
+adm:gitRevision
+  a owl:DatatypeProperty ;
+  rdfs:comment "path of this resource in its git repo"@en ;
+  rdfs:domain adm:GitInfo ;
+  rdfs:label "git path"@en ;
+  rdfs:range xsd:string ;
+.
+adm:gitUrl
+  a owl:DatatypeProperty ;
+  rdfs:comment "The URL for a git repo"@en ;
+  rdfs:domain adm:GitRepo ;
+  rdfs:label "git url"@en ;
+  rdfs:range xsd:anyURI ;
 .
 adm:hasLegal
   a owl:AnnotationProperty ;
