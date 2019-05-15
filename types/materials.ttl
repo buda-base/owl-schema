@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Material/
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: Material
 
 @prefix Material: <http://purl.bdrc.io/ontology/types/Material/> .
@@ -44,6 +45,10 @@ bdr:AppliedMaterial_GoldLeaf
   a bdo:AppliedMaterial ;
   skos:prefLabel "gold leaf"@en ;
 .
+bdr:AppliedMaterial_IndigoDye
+  a bdo:AppliedMaterial ;
+  skos:prefLabel "indigo dye"@en ;
+.
 bdr:AppliedMaterial_RedInk
   a bdo:AppliedMaterial ;
   skos:prefLabel "red ink"@en ;
@@ -54,8 +59,8 @@ bdr:AppliedMaterial_SilverLeaf
 .
 bdr:MaterialBirchBark
   a bdr:MaterialWood ;
-  skos:prefLabel "birch bark"@en ;
   skos:prefLabel "bhūrjapattra"@sa-x-iast ;
+  skos:prefLabel "birch bark"@en ;
 .
 bdr:MaterialCloth
   a bdo:BaseMaterial ;
@@ -69,6 +74,7 @@ bdr:MaterialDeshog
   a bdr:MaterialPaper ;
   rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Bhutan"@en ;
   rdfs:seeAlso <http://bhutan.ims.tuwien.ac.at/ahtcde00/c-viex/j-02-03-02-11/start.html> ;
+  rdfs:seeAlso bdr:MaterialLoktaPaper ;
   rdfs:seeAlso <https://www.jstor.org/stable/23657810?seq=1#page_scan_tab_contents> ;
   skos:altLabel "daphne paper"@en ;
   skos:altLabel "dezo paper"@en ;
@@ -86,6 +92,7 @@ bdr:MaterialKhoiPaper
 bdr:MaterialLoktaPaper
   a bdr:MaterialPaper ;
   rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Nepal"@en ;
+  rdfs:seeAlso bdr:MaterialDeshog ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Lokta_paper> ;
   skos:prefLabel "lokta paper"@en ;
 .
@@ -94,7 +101,7 @@ bdr:MaterialMixed
   skos:prefLabel "mixed materials"@en ;
 .
 bdr:MaterialMultiLayerPaper
-  a bdo:BaseMaterial ;
+  a bdr:MaterialPaper ;
   rdfs:comment "used for some manuscripts in Nepal"@en ;
   skos:prefLabel "multi-layer paper"@en ;
 .
