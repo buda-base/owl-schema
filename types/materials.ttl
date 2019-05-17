@@ -48,6 +48,13 @@ bdr:AppliedMaterial_GoldLeaf
 bdr:AppliedMaterial_IndigoDye
   a bdo:AppliedMaterial ;
   skos:prefLabel "indigo dye"@en ;
+  rdfs:comment "paper dyed with indigo is called Nīlapattra in some contexts"@en ;
+.
+bdr:AppliedMaterial_Poison
+  a bdo:AppliedMaterial ;
+  skos:prefLabel "poison"@en ;
+  rdfs:comment "poison (usually arsenic), giving a yellow hue"@en ;
+  rdfs:comment "usually used to keep away insects and people who would want to take part of the manuscript and turn it into a magical tincture for consumption"@en ;
 .
 bdr:AppliedMaterial_RedInk
   a bdo:AppliedMaterial ;
@@ -102,8 +109,10 @@ bdr:MaterialMixed
 .
 bdr:MaterialMultiLayerPaper
   a bdr:MaterialPaper ;
+  owl:deprecated true ;
   rdfs:comment "used for some manuscripts in Nepal"@en ;
   skos:prefLabel "multi-layer paper"@en ;
+  rdfs:comment "deprecated in favor of AppliedMaterial_Poison"@en ;
 .
 bdr:MaterialPalmLeaf
   a bdo:BaseMaterial ;
