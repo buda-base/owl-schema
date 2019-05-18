@@ -35,7 +35,6 @@ bdo:Material
 Material:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:AppliedMaterial_BlackInk
   a bdo:AppliedMaterial ;
@@ -79,11 +78,10 @@ bdr:MaterialCoryphaPalmLeaf
 .
 bdr:MaterialDeshog
   a bdr:MaterialPaper ;
-  rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Bhutan"@en ;
+  rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Bhutan, distinct from the Lokta paper."@en ;
   rdfs:seeAlso <http://bhutan.ims.tuwien.ac.at/ahtcde00/c-viex/j-02-03-02-11/start.html> ;
   rdfs:seeAlso bdr:MaterialLoktaPaper ;
-  rdfs:seeAlso <https://www.jstor.org/stable/23657810?seq=1#page_scan_tab_contents> ;
-  skos:altLabel "daphne paper"@en ;
+  rdfs:seeAlso <https://www.jstor.org/stable/23657810> ;
   skos:altLabel "dezo paper"@en ;
   skos:prefLabel "deshog paper"@en ;
 .
@@ -98,9 +96,9 @@ bdr:MaterialKhoiPaper
 .
 bdr:MaterialLoktaPaper
   a bdr:MaterialPaper ;
-  rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Nepal"@en ;
+  rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Nepal, distinct from the Deshog paper."@en ;
   rdfs:seeAlso bdr:MaterialDeshog ;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/Lokta_paper> ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q6668765> ;
   skos:prefLabel "lokta paper"@en ;
 .
 bdr:MaterialMixed
