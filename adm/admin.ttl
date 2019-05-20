@@ -352,6 +352,13 @@ adm:gitRepo
   rdfs:label "git repo"@en ;
   rdfs:range adm:GitRepo ;
 .
+adm:gitRepoName
+  a owl:DatatypeProperty ;
+  rdfs:comment "The name of a git repo"@en ;
+  rdfs:domain adm:GitRepo ;
+  rdfs:label "git repo name"@en ;
+  rdfs:range xsd:string ;
+.
 adm:gitRevision
   a owl:DatatypeProperty ;
   rdfs:comment "path of this resource in its git repo"@en ;

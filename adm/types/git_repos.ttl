@@ -1,4 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/types/GitRepo/
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: GitRepo
 
 @prefix GitRepo: <http://purl.bdrc.io/ontology/adm/types/GitRepo/> .
@@ -13,57 +14,81 @@
 
 bda:GR0001
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Corporations> ;
+  adm:gitRepoName "corporations" ;
+  adm:gitUrl <https://github.com/buda-base/corporations> ;
   rdfs:comment "git repo for Corporation resources"@en ;
-  skos:prefLabel "Corporation repo"@en ;
+  skos:prefLabel "Corporations repo"@en ;
 .
 bda:GR0002
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Etexts> ;
+  adm:gitRepoName "etexts" ;
+  adm:gitUrl <https://github.com/buda-base/etexts> ;
   rdfs:comment "git repo for Etext resources"@en ;
-  skos:prefLabel "Etext repo"@en ;
+  skos:prefLabel "Etexts repo"@en ;
 .
 bda:GR0003
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Items> ;
+  adm:gitRepoName "items" ;
+  adm:gitUrl <https://github.com/buda-base/items> ;
   rdfs:comment "git repo for Item resources"@en ;
-  skos:prefLabel "Item repo"@en ;
+  skos:prefLabel "Items repo"@en ;
 .
 bda:GR0004
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Lineages> ;
+  adm:gitRepoName "lineages" ;
+  adm:gitUrl <https://github.com/buda-base/lineages> ;
   rdfs:comment "git repo for Lineage resources"@en ;
-  skos:prefLabel "Lineage repo"@en ;
+  skos:prefLabel "Lineages repo"@en ;
 .
 bda:GR0005
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Places> ;
+  adm:gitRepoName "places" ;
+  adm:gitUrl <https://github.com/buda-base/places> ;
   rdfs:comment "git repo for Place resources"@en ;
-  skos:prefLabel "Place repo"@en ;
+  skos:prefLabel "Places repo"@en ;
 .
 bda:GR0006
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Persons> ;
+  adm:gitRepoName "persons" ;
+  adm:gitUrl <https://github.com/buda-base/persons> ;
   rdfs:comment "git repo for Person resources"@en ;
-  skos:prefLabel "Person repo"@en ;
+  skos:prefLabel "Persons repo"@en ;
 .
 bda:GR0007
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Topics> ;
+  adm:gitRepoName "topics" ;
+  adm:gitUrl <https://github.com/buda-base/topics> ;
   rdfs:comment "git repo for Topic resources"@en ;
-  skos:prefLabel "Topic repo"@en ;
+  skos:prefLabel "Topics repo"@en ;
 .
 bda:GR0008
   a adm:GitRepo ;
-  adm:gitUrl <https://github.com/buda-base/Works> ;
+  adm:gitRepoName "works" ;
+  adm:gitUrl <https://github.com/buda-base/works> ;
   rdfs:comment "git repo for Work resources"@en ;
   skos:prefLabel "Work repo"@en ;
 .
+bda:GR0009
+  a adm:GitRepo ;
+  adm:gitRepoName "etextcontents" ;
+  adm:gitUrl <https://github.com/buda-base/etextcontents> ;
+  rdfs:comment "git repo for Etext content resources"@en ;
+  skos:prefLabel "Etext contents repo"@en ;
+.
+bda:GR0010
+  a adm:GitRepo ;
+  adm:gitRepoName "roles" ;
+  adm:gitUrl <https://github.com/buda-base/roles> ;
+  rdfs:comment "Roles includes the migrated Offices" ;
+  rdfs:comment "git repo for Roles resources"@en ;
+  skos:prefLabel "Roles repo"@en ;
+.
 GitRepo:
   a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
 .
 adm:GitRepo
   a owl:Class ;
-  rdfs:comment """The class of URLs for various git repos"""@en ;
+  rdfs:comment "The class of URLs for various git repos"@en ;
   rdfs:label "Git Repos"@en ;
 .
