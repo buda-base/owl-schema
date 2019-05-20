@@ -83,6 +83,13 @@ bda:GR0010
   rdfs:comment "git repo for Roles resources"@en ;
   skos:prefLabel "Roles repo"@en ;
 .
+bda:GR0011
+  a adm:GitRepo ;
+  adm:gitRepoName "products" ;
+  adm:gitUrl <https://github.com/buda-base/products> ;
+  rdfs:comment "git repo for Product resources"@en ;
+  skos:prefLabel "Products repo"@en ;
+.
 GitRepo:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
