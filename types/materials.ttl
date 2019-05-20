@@ -75,6 +75,7 @@ bdr:MaterialCloth
 bdr:MaterialCoryphaPalmLeaf
   a bdr:MaterialPalmLeaf ;
   skos:prefLabel "palm leaf (corypha)"@en ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q856001> ;
 .
 bdr:MaterialDeshog
   a bdr:MaterialPaper ;
@@ -117,6 +118,11 @@ bdr:MaterialPalmLeaf
   a owl:Class ;
   rdfs:subClassOf bdo:BaseMaterial ;
   skos:prefLabel "palm leaf"@en ;
+.
+bdr:MaterialPalmyraPalmLeaf
+  a bdr:MaterialPalmLeaf ;
+  skos:prefLabel "palm leaf (palmyra)"@en ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q310912> ;
 .
 bdr:MaterialPaper
   a bdo:BaseMaterial ;

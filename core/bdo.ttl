@@ -3622,7 +3622,7 @@ bdo:workLocationWork
 .
 bdo:workMaterial
   a owl:ObjectProperty ;
-  rdfs:comment "the material on which the content is imposed: palm leaf, digital, paper etc"@en ;
+  rdfs:comment "a component material of the source (can be the type of paper, type of ink, etc.)"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
