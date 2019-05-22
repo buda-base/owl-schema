@@ -77,3 +77,9 @@ bdr:R0ER0008
   skos:prefLabel "Hùfǎ"@zh-latn-pinyin ;
   skos:prefLabel "護法"@zh-hant ;
 .
+bdr:R0ER0029
+  a :ChineseMonastic ;
+  skos:prefLabel "Diverse Abilities and Vocal Virtue"@en ;
+  rdfs:comment "use it only for the biographies in this category of Taisho T2060."@en ;
+  skos:prefLabel "雜科聲德"@zh-hant ;
+.
