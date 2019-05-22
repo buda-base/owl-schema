@@ -340,7 +340,7 @@ adm:gitInfo
 .
 adm:gitPath
   a owl:DatatypeProperty ;
-  rdfs:comment "path of this resource in its git repo"@en ;
+  rdfs:comment "path of this resource in its git repo . Format is bucket/localName, for example, \"42/W123\""@en ;
   rdfs:domain adm:GitInfo ;
   rdfs:label "git path"@en ;
   rdfs:range xsd:string ;
