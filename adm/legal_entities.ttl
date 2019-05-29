@@ -40,6 +40,13 @@ bda:LD_BDRC_CC0
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "Provided by BDRC under the CC0 license"@en ;
 .
+bda:LD_rKTs_CC0
+  a adm:LegalData ;
+  adm:provider bda:CP036 ;
+  adm:copyrightOwner bda:CP036 ;
+  adm:license bda:LicenseCC0 ;
+  skos:prefLabel "Provided by rKTs under the CC0 license"@en ;
+.
 bda:LD_CUDL_metadata
   a adm:LegalData ;
   adm:copyrightOwner bda:CP025 ;
