@@ -20,7 +20,6 @@ bdo:PlaceType
 PlaceType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:PT0001
   a bdo:PlaceType ;

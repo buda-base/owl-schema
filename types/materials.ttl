@@ -16,22 +16,22 @@
 bdo:AppliedMaterial
   a owl:Class ;
   rdfs:label "applied material"@en ;
-  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30084"^^xsd:anyURI ;
+  rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30084> ;
   rdfs:subClassOf bdo:Material ;
 .
 bdo:BaseMaterial
   a owl:Class ;
   rdfs:comment "underlying physical material of a manifestation"@en ;
   rdfs:label "Base material" ;
-  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30208"^^xsd:anyURI ;
+  rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30208> ;
   rdfs:subClassOf bdo:Material ;
 .
 bdo:Material
   a owl:Class ;
   rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed. A physical or chemical substance used to create a manifestation"@en ;
   rdfs:label "material"@en ;
-  rdfs:seeAlso "http://www.rdaregistry.info/Elements/m/#P30304"^^xsd:anyURI ;
-  rdfs:seeAlso "https://www.rdaregistry.info/termList/RDAMaterial/"^^xsd:anyURI ;
+  rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30304> ;
+  rdfs:seeAlso <http://rdaregistry.info/termList/RDAMaterial> ;
 .
 Material:
   a owl:Ontology ;

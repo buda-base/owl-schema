@@ -20,7 +20,6 @@ bdo:Transliteration
 Transliteration:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:TransAlalc
   a bdo:Transliteration ;
@@ -37,6 +36,7 @@ bdr:TransIAST
   a bdo:Transliteration ;
   rdfs:comment "International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc."@en ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration> ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q194486> ;
   skos:prefLabel "IAST"@en ;
 .
 bdr:TransPinyin

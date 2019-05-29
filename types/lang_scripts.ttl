@@ -253,6 +253,13 @@ bdr:SaEasternNagari
   rdfs:subClassOf bdr:Sa ;
   skos:prefLabel "Sanskrit in Eastern Nāgārī script"@en ;
 .
+bdr:SaNagari
+  a bdr:Sa ;
+  bdo:language bdr:LangSa ;
+  bdo:script bdr:ScriptNagari ;
+  rdfs:subClassOf bdr:Sa ;
+  skos:prefLabel "Sanskrit in Nāgarī"@en ;
+.
 bdr:SaNepaleseHooked
   a bdr:Sa ;
   bdo:language bdr:LangSa ;

@@ -92,6 +92,12 @@ bdr:ScriptMymr
   a bdo:Script ;
   skos:prefLabel "Burmese"@en ;
 .
+bdr:ScriptNagari
+  a bdo:Script ;
+  skos:prefLabel "Nāgarī"@en ;
+  rdfs:comment "Differs from Eastern Nāgarī"@en ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;
+.
 bdr:ScriptNepaleseHooked
   a bdo:Script ;
   skos:prefLabel "Nepalese hooked script"@en ;
@@ -100,7 +106,7 @@ bdr:ScriptNepaleseHooked
 bdr:ScriptNewa
   a bdo:Script ;
   rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/Prachalit_Nepal_alphabet> ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q7237292> ;
   skos:prefLabel "Pracalit"@en ;
 .
 bdr:ScriptPostGupta
