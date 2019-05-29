@@ -3,8 +3,7 @@
 # prefix: Transliteration
 
 @prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
-@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
