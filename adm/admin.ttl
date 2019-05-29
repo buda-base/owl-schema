@@ -89,11 +89,6 @@ adm:GitInfo
 adm:GitRepo
   rdfs:subClassOf adm:Type ;
 .
-adm:Graph
-  a rdfs:Class ;
-  rdfs:label "Graph" ;
-  rdfs:subClassOf rdfs:Resource ;
-.
 adm:ImagesStatus
   rdfs:subClassOf adm:Type ;
 .
@@ -213,13 +208,6 @@ adm:adminAbout
         ) ;
     ] ;
 .
-adm:adminForGraph
-  a owl:AnnotationProperty ;
-  rdfs:comment "This property identifies the containing graph and is used in the root adm:AdminData of the graph"@en ;
-  rdfs:domain adm:AdminData ;
-  rdfs:label "admin for graph"@en ;
-  rdfs:range adm:Graph ;
-.
 adm:attributionName
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
@@ -331,13 +319,6 @@ adm:facetIndex
   rdfs:label "facet index"@en ;
   rdfs:range xsd:int ;
 .
-adm:gitInfo
-  a owl:ObjectProperty ;
-  rdfs:comment "this property maps a bdo:Entity to its adm:GitInfo"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "git info"@en ;
-  rdfs:range adm:GitInfo ;
-.
 adm:gitPath
   a owl:DatatypeProperty ;
   rdfs:comment "path of this resource in its git repo . Format is bucket/localName, for example, \"42/W123\""@en ;
@@ -372,6 +353,12 @@ adm:gitUrl
   rdfs:domain adm:GitRepo ;
   rdfs:label "git url"@en ;
   rdfs:range xsd:anyURI ;
+.
+adm:graphId
+  a owl:AnnotationProperty ;
+  rdfs:comment "This property identifies the containing graph and is used in the root adm:AdminData of the graph"@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "graph id"@en ;
 .
 adm:hasLegal
   a owl:AnnotationProperty ;
@@ -564,17 +551,6 @@ adm:productHasOrg
   rdfs:comment "organization"@en ;
   rdfs:domain bdo:ProductOrProductOrg ;
   rdfs:range adm:ProductOrg ;
-.
-adm:productHasWork
-  a owl:AnnotationProperty ;
-  adm:deprecatedComment """will not be used when migrating products. The proper pattern is to use adm:workInProduct since it just as easy to retrieve:
-
-    ?work adm:workInProduct bda:SomeProduct    
-
-and keeps the in-degree and out:degree nearly constant rather than size linear in the number of works in a product"""@en ;
-  rdfs:comment "the admin:Product contains the referenced :Work"@en ;
-  rdfs:label "has work"@en ;
-  owl:deprecated true ;
 .
 adm:productIncludes
   a owl:AnnotationProperty ;
