@@ -20,58 +20,62 @@
 
 bda:LD_BDRC_Copyright
   a adm:LegalData ;
-  adm:contentLicense bda:LicenseAllRightsReserved ;
-  adm:contentProvider bda:CP_BDRC ;
-  adm:copyrightOwner bda:CP_BDRC ;
   adm:license bda:LicenseAllRightsReserved ;
-  adm:metadataLicense bda:LicenseCC0 ;
-  adm:metadataProvider bda:CP_BDRC ;
+  adm:provider bda:CP021 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  skos:prefLabel "BDRC copyright content legal terms"@en ;
+  skos:prefLabel "Provided by BDRC, under copyright, all rights reserved"@en ;
 .
-bda:LD_BDRC_Open
+bda:LD_BDRC_PD
   a adm:LegalData ;
-  adm:contentLicense bda:LicensePublicDomain ;
-  adm:contentProvider bda:CP_BDRC ;
-  adm:copyrightOwner bda:CP_BDRC ;
   adm:license bda:LicensePublicDomain ;
-  adm:metadataLicense bda:LicenseCC0 ;
-  adm:metadataProvider bda:CP_BDRC ;
+  adm:provider bda:CP021 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  skos:prefLabel "BDRC open access legal terms"@en ;
+  skos:prefLabel "Provided by BDRC, Public domain"@en ;
 .
-bda:LD_CUDL
+bda:LD_BDRC_CC0
   a adm:LegalData ;
-  adm:contentLicense bda:LicensePublicDomain ;
-  adm:contentProvider bda:CP_CUDL ;
-  adm:copyrightOwner bda:CP_CUDL ;
-  adm:license bda:LicensePublicDomain ;
-  adm:metadataLicense bda:LicenseCCBYNC30U ;
-  adm:metadataProvider bda:CP_CUDL ;
-  adm:termsOfUse <https://cudl.lib.cam.ac.uk/terms/> ;
-  skos:prefLabel "CUDL Public Domain"@en ;
-.
-bda:LD_EAP
-  a adm:LegalData ;
-  adm:contentLicense bda:LicensePublicDomain ;
-  adm:contentProvider bda:CP_EAP ;
-  adm:copyrightOwner bda:CP_EAP ;
-  adm:license bda:LicensePublicDomain ;
-  adm:metadataLicense bda:LicenseCC0 ;
-  adm:metadataProvider bda:CP_EAP ;
+  adm:provider bda:CP021 ;
+  adm:copyrightOwner bda:CP021 ;
+  adm:license bda:LicenseCC0 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  skos:prefLabel "EAP general legal terms"@en ;
+  skos:prefLabel "Provided by BDRC under the CC0 license"@en ;
+.
+bda:LD_CUDL_metadata
+  a adm:LegalData ;
+  adm:copyrightOwner bda:CP025 ;
+  adm:license bda:LicenseCCBYNC30U ;
+  adm:provider bda:CP025 ;
+  adm:termsOfUse "https://cudl.lib.cam.ac.uk/terms/"^^xsd:anyURI ;
+  skos:prefLabel "Provided by CUDL under the CC BY NC 3.0 license, see original metadata record for more information"@en ;
+.
+bda:LD_CUDL_content
+  a adm:LegalData ;
+  adm:copyrightOwner bda:CP025 ;
+  adm:license bda:LicenseAllRightsReserved ;
+  adm:provider bda:CP025 ;
+  adm:termsOfUse "https://cudl.lib.cam.ac.uk/terms/"^^xsd:anyURI ;
+  skos:prefLabel "Provided by CUDL, copyright is claimed on the images, see terms of use"@en ;
+.
+bda:LD_EAP_metadata
+  a adm:LegalData ;
+  adm:copyrightOwner bda:CP026 ;
+  adm:license bda:LicenseCC0 ;
+  adm:provider bda:CP026 ;
+  skos:prefLabel "Provided by EAP under the CC0 license"@en ;
+.
+bda:LD_EAP_content
+  a adm:LegalData ;
+  adm:copyrightOwner bda:CP026 ;
+  adm:license bda:LicenseAllRightsReserved ;
+  adm:provider bda:CP026 ;
+  skos:prefLabel "Provided by EAP, copyright is semi-explicitely claimed, see terms of use"@en ;
 .
 bda:LD_GRETIL
   a adm:LegalData ;
-  adm:contentLicense bda:LicensePublicDomain ;
-  adm:contentProvider bda:CP_GRETIL ;
-  adm:copyrightOwner bda:CP_GRETIL ;
-  adm:license bda:LicensePublicDomain ;
-  adm:metadataLicense bda:LicenseCC0 ;
-  adm:metadataProvider bda:CP_GRETIL ;
-  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  skos:prefLabel "GRETIL general legal terms"@en ;
+  adm:copyrightOwner bda:CP028 ;
+  adm:license bda:LicenseCC0 ;
+  adm:provider bda:CP028 ;
+  skos:prefLabel "Provided by GRETIL under the CC0 license"@en ;
 .
 LegalData:
   a owl:Ontology ;
@@ -82,6 +86,5 @@ LegalData:
 .
 adm:LegalData
   a owl:Class ;
-  rdfs:comment "A contemporary organization that provides images or eTexts"@en ;
-  rdfs:label "Work Access Type"@en ;
+  rdfs:label "Legal data"@en ;
 .
