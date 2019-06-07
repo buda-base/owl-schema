@@ -59,6 +59,7 @@ bdr:R0ER0015
 Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
 a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
   skos:prefLabel "compiler"@en ;
+  skos:altLabel "editor"@en ;
 .
 bdr:R0ER0016
   a bdo:Creator ;
@@ -104,6 +105,7 @@ bdr:R0ER0023
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
   skos:prefLabel "reviser"@en ;
+  skos:altLabel "corrector"@en ;
 .
 bdr:R0ER0024
   a bdo:Creator ;
