@@ -91,6 +91,8 @@ Most Chinese tags are all standardized so their choice is easy:
 - `zh-Latn-pinyin-x-ndia` for Pinyin transliteration with no diacritics
 - `zh-Latn-wadegile` for Wade-Giles transliteration
 - `zh-x-phon-en` for Chinese in phonetics with an English style
+- `zh-Tibt` for Chinese written in Tibetan script
+- `zh-x-ewts` for Chinese written in Tibetan script, transliterated in EWTS (`zh-x-dts`, `zh-x-acip` and `zh-x-gbt` follow the same pattern)
 
 #### Pali
 For Pali our convention is to always use a script tag:
