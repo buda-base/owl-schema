@@ -27,14 +27,9 @@ bdo:Tradition
   rdfs:comment "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
   rdfs:label "type of tradition"@en ;
 .
-<http://purl.bdrc.io/ontology/types/Tradition>
-  a owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
 Tradition:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:EightMinorKagyuTraditions
   a bdr:TraditionDakpoKagyu ;
