@@ -173,3 +173,11 @@ aut:personalAccess
   rdfs:label "personal access"@en ;
   rdfs:range bdo:Entity ;
 .
+
+aut:forAnyStatus
+  a owl:DatatypeProperty ;
+  rdfs:comment "set the permission to get access to any resource, regardless the status, for all the users of a given group"@en ;
+  rdfs:domain aut:Group ;
+  rdfs:label "is for any status"@en ;
+  rdfs:range xsd:boolean ;
+.
