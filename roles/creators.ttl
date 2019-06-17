@@ -74,8 +74,8 @@ bdr:R0ER0017
 .
 bdr:R0ER0018
   a bdo:Creator ;
-  rdfs:comment "in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
-  skos:prefLabel "Indic Scholar"@en ;
+  rdfs:comment "Most of the time Indic scholar (indicated as Pandita in the Tibetan tradition); use this also for experts in Chinese for Tibetan texts translated from Chinese. In the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
+  skos:prefLabel "Source Language Scholar"@en ;
 .
 bdr:R0ER0019
   a bdo:Creator ;
