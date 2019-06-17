@@ -64,7 +64,7 @@
         <altURL    rdf:resource="owl-schema/ext/auth/auth.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/ext/auth/auth.ttl"/>
         <prefix    rdf:datatype="&xsd;string">aut</prefix>
-        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/ontology/ext/authSchema"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/authSchema"/>
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
     
