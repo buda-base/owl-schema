@@ -111,6 +111,7 @@ bdr:R0ER0024
   a bdo:Creator ;
   rdfs:comment "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
   skos:prefLabel "scribe"@en ;
+  skos:prefLabel "yi ge ba/"@bo-x-ewts ;
 .
 bdr:R0ER0025
   a bdo:Creator ;
@@ -137,6 +138,12 @@ bdr:R0ER0028
   a bdo:Creator ;
   rdfs:comment "a person who requests the author to compose the work"@en ;
   skos:prefLabel "requester"@en ;
+.
+bdr:R0ER0030
+  a bdo:Creator ;
+  rdfs:comment "a person who sponsors a work (most of the time a translation)"@en ;
+  skos:prefLabel "sponsor"@en ;
+  skos:prefLabel "yon bdag"@bo-x-ewts ;
 .
 bdr:Unspecified
   a bdo:Creator ;
