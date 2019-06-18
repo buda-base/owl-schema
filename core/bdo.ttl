@@ -207,6 +207,12 @@ bdo:AnyOrganization
     ] ;
   owl:deprecated true ;
 .
+bdo:AuthoredEvent
+  a owl:Class ;
+  rdfs:comment "The event of authoring a :Work"@en ;
+  rdfs:label "Authored"@en ;
+  rdfs:subClassOf bdo:WorkEvent ;
+.
 bdo:Binding
   rdfs:subClassOf bdo:Type ;
 .
@@ -1322,6 +1328,12 @@ bdo:WorkHalfTitle
   rdfs:label "Half Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
+bdo:WorkIncipitTitle
+  a owl:Class ;
+  rdfs:comment "the title as given at the beginning of the text"@en ;
+  rdfs:label "Incipit Title"@en ;
+  rdfs:subClassOf bdo:WorkTitle ;
+.
 bdo:WorkLocation
   a owl:Class ;
   rdfs:comment "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
@@ -1337,12 +1349,6 @@ bdo:WorkOtherTitle
 .
 bdo:WorkPartType
   rdfs:subClassOf bdo:Type ;
-.
-bdo:WorkIncipitTitle
-  a owl:Class ;
-  rdfs:comment "the title as given at the beginning of the text"@en ;
-  rdfs:label "Incipit Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkReferenceTitle
   a owl:Class ;
@@ -1740,6 +1746,13 @@ bdo:eTextVolumeIndex
   rdfs:domain bdo:Etext ;
   rdfs:label "eText volume index"@en ;
   rdfs:range xsd:integer ;
+.
+bdo:eventText
+  a owl:DatatypeProperty ;
+  rdfs:comment "captures ad hoc text associated with the event during migration"@en ;
+  rdfs:domain bdo:Event ;
+  rdfs:label "event text"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:eventWhen
   a owl:DatatypeProperty ;
