@@ -51,7 +51,7 @@
         <ignoreImport   rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2002/07/owl#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/ontology/core/ontologySchema"/>
+        <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/graph/ontologySchema"/>
     </DocumentManagerPolicy>
     
     
@@ -144,7 +144,7 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/core/"/>
         <altURL    rdf:resource="owl-schema/core/bdo.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl"/>
-        <prefix    rdf:datatype="&xsd;string">bdo</prefix>
+        <prefix    rdf:datatype="&xsd;string">bdo</prefix>        
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
     
