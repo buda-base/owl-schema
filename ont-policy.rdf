@@ -145,6 +145,7 @@
         <altURL    rdf:resource="owl-schema/core/bdo.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/bdo.ttl"/>
         <prefix    rdf:datatype="&xsd;string">bdo</prefix>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ontSchema"/>
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
     
