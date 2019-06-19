@@ -11,6 +11,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:binding
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "binding"@en ;
+  rdfs:range bdo:Binding ;
+.
 bdo:Binding
   a owl:Class ;
   rdfs:label "Binding" ;

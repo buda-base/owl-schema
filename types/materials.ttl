@@ -13,6 +13,18 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:baseMaterial
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "base material"@en ;
+  rdfs:range bdo:BaseMaterial ;
+.
+bdo:appliedMaterial
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "applied material"@en ;
+  rdfs:range bdo:AppliedMaterial ;
+.
 bdo:AppliedMaterial
   a owl:Class ;
   rdfs:label "applied material"@en ;
