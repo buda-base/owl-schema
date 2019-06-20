@@ -81,11 +81,6 @@ adm:Facet
   rdfs:comment "adm:Facet is a facet of an administrative entity in the BDRC ontology."@en ;
   rdfs:label "administrative facet"@en ;
 .
-adm:GitInfo
-  a owl:Class ;
-  rdfs:label "admin git info"@en ;
-  rdfs:subClassOf adm:Entity ;
-.
 adm:GitRepo
   rdfs:subClassOf adm:Type ;
 .
@@ -322,14 +317,14 @@ adm:facetIndex
 adm:gitPath
   a owl:DatatypeProperty ;
   rdfs:comment "path of this resource in its git repo . Format is bucket/localName, for example, \"42/W123\""@en ;
-  rdfs:domain adm:GitInfo ;
+  rdfs:domain adm:AdminData ;
   rdfs:label "git path"@en ;
   rdfs:range xsd:string ;
 .
 adm:gitRepo
   a owl:ObjectProperty ;
   rdfs:comment "this property maps a GitInfo to a GitRepo containing a git Url"@en ;
-  rdfs:domain adm:GitInfo ;
+  rdfs:domain adm:AdminData ;
   rdfs:label "git repo"@en ;
   rdfs:range adm:GitRepo ;
 .
@@ -343,7 +338,7 @@ adm:gitRepoName
 adm:gitRevision
   a owl:DatatypeProperty ;
   rdfs:comment "path of this resource in its git repo"@en ;
-  rdfs:domain adm:GitInfo ;
+  rdfs:domain adm:AdminData ;
   rdfs:label "git path"@en ;
   rdfs:range xsd:string ;
 .
