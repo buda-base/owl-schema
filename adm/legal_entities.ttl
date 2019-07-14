@@ -86,6 +86,12 @@ bda:LD_EAP_content
   adm:provider bda:CP026 ;
   skos:prefLabel "Provided by EAP, copyright is semi-explicitely claimed, see terms of use"@en ;
 .
+bda:LD_SBB_content
+  a adm:LegalData ;
+  adm:license bda:LicensePublicDomain ;
+  adm:provider bda:CP037 ;
+  skos:prefLabel "Provided by Staatsbibliothek zu Berlin, copyright unspecified, interpreted as Public Domain"@en ;
+.
 bda:LD_GRETIL
   a adm:LegalData ;
   adm:copyrightOwner bda:CP028 ;
