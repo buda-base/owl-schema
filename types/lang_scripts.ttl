@@ -185,6 +185,13 @@ bdr:NewNewa
   rdfs:subClassOf bdr:New ;
   skos:prefLabel "Newari in Pracalit"@en ;
 .
+bdr:PgdKhar
+  a owl:Class ;
+  bdo:language bdr:LangPgd ;
+  bdo:script bdr:ScriptKhar ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Gandhari (Kharoshthi)"@en ;
+.
 bdr:Pi
   a owl:Class ;
   bdo:language bdr:LangPi ;

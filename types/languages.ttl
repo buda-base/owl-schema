@@ -99,6 +99,14 @@ bdr:LangNew
   skos:prefLabel "Newari"@en ;
   skos:altLabel "Nepal Bhasa"@en ;
 .
+bdr:LangPgd
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "pgd" ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Gāndhārī"@sa-x-iast ;
+  skos:prefLabel "Gandhari"@en ;
+.
 bdr:LangPi
   a bdo:Language ;
   a owl:Class ;

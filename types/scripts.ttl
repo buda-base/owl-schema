@@ -72,6 +72,12 @@ bdr:ScriptHant
   rdfs:seeAlso <http://www.lexvo.org/page/script/Hant> ;
   skos:prefLabel "Traditional Chinese"@en ;
 .
+bdr:ScriptKhar
+  a bdo:Script ;
+  rdfs:seeAlso <http://lexvo.org/id/script/Khar> ;
+  skos:prefLabel "Kharoshthi"@en ;
+  skos:prefLabel "Kharoṣṭhī"@sa-x-iast ;
+.
 bdr:ScriptKhyugYig
   a bdo:Script ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
