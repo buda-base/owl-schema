@@ -243,10 +243,16 @@ bda:CP036
   skos:prefLabel "rKTs" ;
   foaf:homepage "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
 .
-
 bda:CP037
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "Staatsbibliothek zu Berlin" ;
   foaf:homepage "https://staatsbibliothek-berlin.de/"^^xsd:anyURI ;
+.
+bda:CP038
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Library of Congress" ;
+  adm:termsOfUse "https://www.loc.gov/legal/"^^xsd:anyURI ;
+  foaf:homepage "https://www.loc.gov"^^xsd:anyURI ;
 .
