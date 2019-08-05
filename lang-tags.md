@@ -101,7 +101,7 @@ For Pali our convention is to always use a script tag:
 - `pi-Thai` for Pali written in Thai script
 - `pi-x-iast` (BDRC) for Pali written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
 - `pi-Khmr` for Pali written in Khmer script
-- `pi-x-khfemc` for Pali written in Khmer via khfemc romanization
+- `pi-x-kmfemc` for Pali written in Khmer via the FEMC romanization
 
 #### Sanskrit
 We also choose to keep the script tag for Sanskrit in Devanagari:
@@ -135,7 +135,7 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 #### Khmer
 
 - `km` for Khmer in Khmer script
-- `km-x-khfemc` for Khmer Romanized via the FEMC romanization
+- `km-x-kmfemc` for Khmer Romanized via the FEMC romanization
 
 #### Mongolian
 
