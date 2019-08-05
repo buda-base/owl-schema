@@ -104,12 +104,12 @@ bdr:LangKhamsTib
   rdfs:subClassOf bdr:LangBo ;
   skos:prefLabel "Khams Tibetan"@en ;
 .
-bdr:LangKhm
+bdr:LangKm
   a bdo:Language ;
   a owl:Class ;
-  bdo:langBCP47Lang "khm" ;
+  bdo:langBCP47Lang "km" ;
   bdo:langMARCCode "khm" ;
-  rdfs:seeAlso <http://lexvo.org/id/iso639-3/new> ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/khm> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Khmer"@en ;
 .

@@ -79,7 +79,7 @@ bdr:ScriptKhar
   skos:prefLabel "Kharoshthi"@en ;
   skos:prefLabel "Kharoṣṭhī"@sa-x-iast ;
 .
-bdr:ScriptKhmer
+bdr:ScriptKhmr
   a bdo:Script ;
   skos:prefLabel "Khmer"@en ;
 .

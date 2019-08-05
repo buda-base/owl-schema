@@ -135,17 +135,17 @@ bdr:HiDeva
   rdfs:subClassOf bdr:Hi ;
   skos:prefLabel "Hindi (in Devanagari)"@en ;
 .
-bdr:Khm
+bdr:Km
   a owl:Class ;
-  bdo:language bdr:LangKhm ;
+  bdo:language bdr:LangKm ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Khmer"@en ;
 .
-bdr:KhmKhm
-  a bdr:Khm ;
-  bdo:language bdr:LangKhm ;
-  bdo:script bdr:ScriptKhmer ;
-  rdfs:subClassOf bdr:Khm ;
+bdr:KmKhmr
+  a bdr:Km ;
+  bdo:language bdr:LangKm ;
+  bdo:script bdr:ScriptKhmr ;
+  rdfs:subClassOf bdr:Km ;
   skos:prefLabel "Khmer"@en ;
 .
 bdr:Mn
@@ -217,7 +217,7 @@ bdr:Pi
 bdr:PiKhmer
   a bdr:Pi ;
   bdo:language bdr:LangPi ;
-  bdo:script bdr:ScriptKhmer ;
+  bdo:script bdr:ScriptKhmr ;
   rdfs:subClassOf bdr:Pi ;
   skos:prefLabel "Pali (Khmer)"@en ;
 .
