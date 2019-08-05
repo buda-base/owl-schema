@@ -100,6 +100,8 @@ For Pali our convention is to always use a script tag:
 - `pi-Sinh` for Pali written in Sinhalese script
 - `pi-Thai` for Pali written in Thai script
 - `pi-x-iast` (BDRC) for Pali written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
+- `pi-Khmr` for Pali written in Khmer script
+- `pi-x-khfemc` for Pali written in Khmer via khfemc romanization
 
 #### Sanskrit
 We also choose to keep the script tag for Sanskrit in Devanagari:
@@ -129,6 +131,11 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `bo-alalc97` for Tibetan transliterated following ALA-LC rules
 - `bo-x-phon-en-m-tbrc` for Tibetan transcribed in English with the TBRC phonetic conventions
 - `bo-x-phon-en-m-thlib` for Tibetan transcribed in English with the [Thlib phonetic conventions](http://www.thlib.org/reference/transliteration/#!essay=/thl/phonetics/)
+
+#### Khmer
+
+- `km` for Khmer in Khmer script
+- `km-x-khfemc` for Khmer Romanized via the FEMC romanization
 
 #### Mongolian
 
