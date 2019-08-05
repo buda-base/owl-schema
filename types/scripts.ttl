@@ -3,7 +3,8 @@
 # prefix: Script
 
 @prefix Script: <http://purl.bdrc.io/ontology/types/Script/> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -78,6 +79,10 @@ bdr:ScriptKhar
   skos:prefLabel "Kharoshthi"@en ;
   skos:prefLabel "Kharoṣṭhī"@sa-x-iast ;
 .
+bdr:ScriptKhmer
+  a bdo:Script ;
+  skos:prefLabel "Khmer"@en ;
+.
 bdr:ScriptKhyugYig
   a bdo:Script ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
@@ -99,19 +104,19 @@ bdr:ScriptMymr
 .
 bdr:ScriptNagari
   a bdo:Script ;
-  skos:prefLabel "Nāgarī"@en ;
-  rdfs:comment "Differs from Eastern Nāgarī"@en ;
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;
+  rdfs:comment "Differs from Eastern Nāgarī"@en ;
+  skos:prefLabel "Nāgarī"@en ;
 .
 bdr:ScriptNepaleseHooked
   a bdo:Script ;
+  skos:altLabel "Bhujimol"@en ;
   skos:prefLabel "Nepalese hooked script"@en ;
-  skos:altLabel "Bhujimol"@en ; 
 .
 bdr:ScriptNewa
   a bdo:Script ;
-  rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q7237292> ;
+  rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
   skos:prefLabel "Pracalit"@en ;
 .
 bdr:ScriptPostGupta
@@ -123,14 +128,14 @@ bdr:ScriptRanj
   rdfs:comment "This script is not normalized in ISO 15924"@en ;
   rdfs:comment "Use it for Landza and Vartu"@en ;
   rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
-  skos:prefLabel "Ranjana"@en ;
-  skos:prefLabel "Rañjanā"@sa-x-iast ;
-  skos:prefLabel "lany+dza"@bo-x-ewts ;
-  skos:altLabel "Pāla"@sa-x-iast ;
   skos:altLabel "Kutika"@en ;
+  skos:altLabel "Pāla"@sa-x-iast ;
   skos:altLabel "Vartu"@en ;
   skos:altLabel "lany+tsa"@bo-x-ewts ;
   skos:altLabel "wartu"@bo-x-ewts ;
+  skos:prefLabel "Ranjana"@en ;
+  skos:prefLabel "Rañjanā"@sa-x-iast ;
+  skos:prefLabel "lany+dza"@bo-x-ewts ;
 .
 bdr:ScriptSinh
   a bdo:Script ;
@@ -139,8 +144,8 @@ bdr:ScriptSinh
 .
 bdr:ScriptSouthernIndia
   a bdo:Script ;
-  skos:prefLabel "Southern Indian"@en ;
   rdfs:comment "use for undetermined Southern Indian script"@en ;
+  skos:prefLabel "Southern Indian"@en ;
 .
 bdr:ScriptThai
   a bdo:Script ;
@@ -156,12 +161,12 @@ bdr:ScriptTibt
 bdr:ScriptTirh
   a bdo:Script ;
   rdfs:seeAlso <http://lexvo.org/id/script/Tirh> ;
-  skos:prefLabel "Tirhuta"@en ;
-  skos:altLabel "Mithilakshar"@en ;
   skos:altLabel "Maithili"@en ;
+  skos:altLabel "Mithilakshar"@en ;
+  skos:prefLabel "Tirhuta"@en ;
 .
 bdr:ScriptTransitionalGupta
   a bdo:Script ;
-  skos:prefLabel "Transitional Gupta"@en ;
   rdfs:comment "Broader category than Post-gupta"@en ;
+  skos:prefLabel "Transitional Gupta"@en ;
 .
