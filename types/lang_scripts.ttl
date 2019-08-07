@@ -214,7 +214,7 @@ bdr:Pi
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Pali"@en ;
 .
-bdr:PiKhmer
+bdr:PiKhmr
   a bdr:Pi ;
   bdo:language bdr:LangPi ;
   bdo:script bdr:ScriptKhmr ;
