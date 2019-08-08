@@ -1419,6 +1419,12 @@ bdo:agent
   rdfs:label "agent"@en ;
   rdfs:range bdo:Agents ;
 .
+bdo:appliedMaterial
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "applied material"@en ;
+  rdfs:range bdo:AppliedMaterial ;
+.
 bdo:attributionName
   a owl:DatatypeProperty ;
   rdfs:comment "The name the holder of a Work resource would like used when attributing re-use."@en ;
@@ -1433,6 +1439,18 @@ bdo:attributionURL
   rdfs:label "attribution url"@en ;
   rdfs:range xsd:anyURI ;
   rdfs:seeAlso cc:attributionURL ;
+.
+bdo:baseMaterial
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "base material"@en ;
+  rdfs:range bdo:BaseMaterial ;
+.
+bdo:binding
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "binding"@en ;
+  rdfs:range bdo:Binding ;
 .
 bdo:chunkContents
   a owl:DatatypeProperty ;
@@ -2727,6 +2745,12 @@ bdo:placeWBArea
   rdfs:domain bdo:Place ;
   rdfs:range xsd:integer ;
 .
+bdo:printMethod
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "print method"@en ;
+  rdfs:range bdo:PrintMethod ;
+.
 bdo:restored
   a owl:DatatypeProperty ;
   rdfs:comment """The :restored property is used to add a restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit) and the original language name or title is not manifest in the material being cataloged so that the cataloger prepares a restoration.
@@ -3838,6 +3862,14 @@ bdo:workRefrKTsK
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workRefrKTsT
+  a owl:DatatypeProperty ;
+  rdfs:comment "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
+  rdfs:domain bdo:WorkRefs ;
+  rdfs:label "rKTs Tengyur reference"@en ;
+  rdfs:range xsd:integer ;
+  rdfs:subPropertyOf bdo:workRefs ;
+.
+bdo:workRefrKTsT_1
   a owl:DatatypeProperty ;
   rdfs:comment "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
   rdfs:domain bdo:WorkRefs ;
