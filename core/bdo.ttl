@@ -1446,11 +1446,25 @@ bdo:baseMaterial
   rdfs:label "base material"@en ;
   rdfs:range bdo:BaseMaterial ;
 .
+bdo:beDate
+  a rdfs:Datatype ;
+  rdfs:comment "Buddhist Era Year" ;
+  rdfs:label "be date" ;
+  rdfs:subClassOf bdo:AnyDate ;
+  owl:onDatatype xsd:integer ;
+.
 bdo:binding
   a owl:ObjectProperty ;
   rdfs:domain bdo:Work ;
   rdfs:label "binding"@en ;
   rdfs:range bdo:Binding ;
+.
+bdo:ceDate
+  a rdfs:Datatype ;
+  rdfs:comment "Common Era Year" ;
+  rdfs:label "ce date" ;
+  rdfs:subClassOf bdo:AnyDate ;
+  owl:onDatatype xsd:integer ;
 .
 bdo:chunkContents
   a owl:DatatypeProperty ;
@@ -1689,6 +1703,13 @@ bdo:creatorUnspecified
   rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
   rdfs:label "unspecified"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
+.
+bdo:csDate
+  a rdfs:Datatype ;
+  rdfs:comment "Cambodian Standard Year" ;
+  rdfs:label "cs date" ;
+  rdfs:subClassOf bdo:AnyDate ;
+  owl:onDatatype xsd:integer ;
 .
 bdo:dataTypeExpression
   a owl:AnnotationProperty ;
