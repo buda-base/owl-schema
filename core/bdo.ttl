@@ -3232,6 +3232,12 @@ bdo:workExtentStatement
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
 .
+bdo:workFEMCManuscript
+  a owl:DatatypeProperty ;
+  rdfs:comment "FEMC Manuscript Code" ;
+  rdfs:label "FEMC Manuscript code"@en ;
+  rdfs:subPropertyOf bdo:workRefs ;
+.
 bdo:workGenre
   a owl:ObjectProperty ;
   rdfs:comment """The referenced Topic is expected to be a \"genre\" topic and eventually the genre topics will be moved to a class of Genre and/or a Taxonomy of Genre may be supplied.
@@ -3426,6 +3432,12 @@ bdo:workIsbn
   rdfs:label "ISBN"@en ;
   rdfs:range bdo:ISBN ;
   owl:deprecated true ;
+.
+bdo:workKDPPOldId
+  a owl:DatatypeProperty ;
+  rdfs:comment "Khmer Digital Preservation Project Old Id" ;
+  rdfs:label "KDPPOld Id"@en ;
+  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaA
   a owl:DatatypeProperty ;
