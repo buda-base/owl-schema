@@ -1504,6 +1504,13 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
   rdfs:label "region"@en ;
   rdfs:range bdo:Place ;
 .
+bdo:correctionOf
+  a owl:DatatypeProperty ;
+  rdfs:comment "the current name or title is a corrected version of the target rdf:langString" ;
+  rdfs:domain bdo:PersonNameOrWorkTitle ;
+  rdfs:label "correction of"@en ;
+  rdfs:range rdf:langString ;
+.
 bdo:creator
   a owl:ObjectProperty ;
   rdfs:comment ":creator associates a Work with an Agent and a Creator Role that participated in the creation of the Work"@en ;
