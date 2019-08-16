@@ -752,6 +752,12 @@ bdo:ObjectType
   rdfs:label "print type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
+bdo:ObjectTypeMicrofilm
+  a owl:Class ;
+  rdfs:comment "the images for the associated work were digitized from microfilm"@en ;
+  rdfs:label "microfilm"@en ;
+  rdfs:subClassOf bdo:ObjectType ;
+.
 bdo:Organization
   a owl:Class ;
   rdfs:comment """An :Organization is a collection of agents that may be considered act in concert as a single agent, e.g., the kashag or the dzogchen protectors taken together: Ekazati, Rahulla, and Dorje Drollo
@@ -2464,6 +2470,21 @@ bdo:lineageWork
   rdfs:range bdo:Work ;
   rdfs:seeAlso bdo:LineageHolder ;
 .
+bdo:microfilmCanister
+  a owl:DatatypeProperty ;
+  rdfs:comment "indicstes the id of the canister that the microfilm was stoered in"@en ;
+  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:label "microfilm canister"@en ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso bdo:ItemPhysicalAsset ;
+.
+bdo:microfilmStrip
+  a owl:DatatypeProperty ;
+  rdfs:comment "indicstes the id of the film strip that contains the digitized content"@en ;
+  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:label "microfilm strip id"@en ;
+  rdfs:range xsd:string ;
+.
 bdo:migration_exception
   a owl:AnnotationProperty ;
   rdfs:range xsd:string ;
@@ -3243,6 +3264,7 @@ bdo:workFEMCManuscriptCode
   a owl:DatatypeProperty ;
   rdfs:comment "FEMC Manuscript Code" ;
   rdfs:label "FEMC Manuscript code"@en ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workGenre
@@ -3444,6 +3466,7 @@ bdo:workKDPPOldId
   a owl:DatatypeProperty ;
   rdfs:comment "Khmer Digital Preservation Project Old Id" ;
   rdfs:label "KDPPOld Id"@en ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaA
@@ -4052,6 +4075,18 @@ bdr:ObjectTypeFacsimile
   rdfs:comment "facsimile"@en ;
   rdfs:label "facsimile"@en ;
 .
+bdr:ObjectTypeLeporello
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "leporello"@en ;
+  rdfs:label "leporello"@en ;
+.
+bdr:ObjectTypeLongPalmLeaf
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "long palm leaf"@en ;
+  rdfs:label "long palm leaf"@en ;
+.
 bdr:ObjectTypeManuscript
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
@@ -4068,6 +4103,12 @@ bdr:ObjectTypeParPhud
   a owl:NamedIndividual ;
   rdfs:comment "\"first fruit\" printing from a set of xylographs. par phud"@en ;
   rdfs:label "first printing"@en ;
+.
+bdr:ObjectTypeShortPalmLeaf
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "short palm leaf"@en ;
+  rdfs:label "short palm leaf"@en ;
 .
 bdr:ObjectTypeTypeSet
   a bdo:ObjectType ;
