@@ -3409,6 +3409,13 @@ bdo:workIncipit
   rdfs:label "incipit"@en ;
   rdfs:range rdf:langString ;
 .
+bdo:workIncomplete
+  a owl:DatatypeProperty ;
+  rdfs:comment "true if the work is incomplete"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "incomplete"@en ;
+  rdfs:range xsd:boolean ;
+.
 bdo:workIsAbout
   a owl:ObjectProperty ;
   rdfs:comment """The referenced Entity is expected to be a subject of the work - something the work is about.
