@@ -1728,6 +1728,13 @@ bdo:datePeriod
   rdfs:label "period"@en ;
   rdfs:range bdo:TimePeriod ;
 .
+bdo:dateType
+  a owl:ObjectProperty ;
+  rdfs:comment "the type of date such as :ceDate for a Common Era date or :beDate for Buddhist Era date"@en ;
+  rdfs:domain bdo:Event ;
+  rdfs:label "date type"@en ;
+  rdfs:range bdo:AnyDate ;
+.
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
   rdfs:domain bdo:Etext ;
