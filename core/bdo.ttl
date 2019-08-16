@@ -3232,7 +3232,7 @@ bdo:workExtentStatement
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workFEMCManuscript
+bdo:workFEMCManuscriptCode
   a owl:DatatypeProperty ;
   rdfs:comment "FEMC Manuscript Code" ;
   rdfs:label "FEMC Manuscript code"@en ;
