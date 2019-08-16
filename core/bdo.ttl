@@ -3740,6 +3740,12 @@ bdo:workMaterial
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
 .
+bdo:workMicrofilm
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "work from microfilm"@en ;
+  rdfs:range bdo:ObjectTypeMicrofilm ;
+.
 bdo:workNumberOf
   a owl:ObjectProperty ;
   rdfs:comment "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
