@@ -1454,8 +1454,8 @@ bdo:baseMaterial
 .
 bdo:beDate
   a rdfs:Datatype ;
-  rdfs:comment "Buddhist Era Year" ;
-  rdfs:label "be date" ;
+  rdfs:comment "Buddhist Era Year dating from 543 BCE"@en ;
+  rdfs:label "BE date"@en ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
 .
@@ -1467,8 +1467,8 @@ bdo:binding
 .
 bdo:ceDate
   a rdfs:Datatype ;
-  rdfs:comment "Common Era Year" ;
-  rdfs:label "ce date" ;
+  rdfs:comment "Common Era Year"@en ;
+  rdfs:label "CE date"@en ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
 .
@@ -1712,8 +1712,11 @@ bdo:creatorUnspecified
 .
 bdo:csDate
   a rdfs:Datatype ;
-  rdfs:comment "Cambodian Standard Year" ;
-  rdfs:label "cs date" ;
+  rdfs:comment "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
+  rdfs:label "CS date"@en ;
+  rdfs:seeAlso <http://lannamanuscripts.net/en/search/new/> ;
+  rdfs:seeAlso <http://www.degruyter.com/downloadpdf/books/9783110479010/9783110479010-003/9783110479010-003.pdf> ;
+  rdfs:seeAlso <http://www.laomanuscripts.net/en/help#3i> ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
 .
