@@ -427,6 +427,13 @@ adm:logWho
   rdfs:label "who"@en ;
   rdfs:range foaf:Agent ;
 .
+adm:logWho_1
+  a owl:AnnotationProperty ;
+  rdfs:comment "who performed the updated being logged"@en ;
+  rdfs:domain adm:LogEntry ;
+  rdfs:label "who"@en ;
+  rdfs:range xsd:string ;
+.
 adm:metadataLegal
   a owl:AnnotationProperty ;
   rdfs:label "metadata legal"@en ;
