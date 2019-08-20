@@ -222,6 +222,18 @@ bdo:CarvedEvent
   rdfs:label "Work Woodblocks Carved"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
+bdo:Catalog
+  a owl:Class ;
+  rdfs:comment "A catalog such as the Tohoku or the FEMC Volumes I, II, or III"@en ;
+  rdfs:label "Catalog" ;
+  rdfs:subClassOf bdo:Work ;
+.
+bdo:CatalogLocation
+  a owl:Class ;
+  rdfs:comment "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
+  rdfs:label "catalog location"@en ;
+  rdfs:subClassOf bdo:Facet ;
+.
 bdo:ChineseDate
   a owl:Class ;
   rdfs:comment "The class of DILA Chinese date individuals"@en ;
@@ -3117,6 +3129,13 @@ bdo:workCBCSiglaZW
   rdfs:label "藏外佛教文獻"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
+bdo:workCatalog
+  a owl:ObjectProperty ;
+  rdfs:comment "This work is identified in the indicated Catalog"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "in catalog"@en ;
+  rdfs:range bdo:Catalog ;
+.
 bdo:workCatalogInfo
   a owl:DatatypeProperty ;
   rdfs:comment "Summary information about the Work"@en ;
@@ -3126,7 +3145,7 @@ bdo:workCatalogInfo
 .
 bdo:workCollection
   a owl:ObjectProperty ;
-  rdfs:comment "This work is contained a the identified collection"@en ;
+  rdfs:comment "This work is contained at the identified institution"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "in collection"@en ;
   rdfs:range bdo:CollectionInstitution ;
