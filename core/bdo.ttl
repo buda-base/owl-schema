@@ -3125,6 +3125,13 @@ bdo:workColophon
   rdfs:label "colophon"@en ;
   rdfs:range bdo:LangStringOrNoColophon ;
 .
+bdo:workComplete
+  a owl:DatatypeProperty ;
+  rdfs:comment "true if the work is complete"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "complete"@en ;
+  rdfs:range xsd:boolean ;
+.
 bdo:workContainsChapters
   a owl:DatatypeProperty ;
   rdfs:comment "records the chapters of a larger Work contained in this Work"@en ;
@@ -3411,13 +3418,6 @@ bdo:workIncipit
   rdfs:domain bdo:Work ;
   rdfs:label "incipit"@en ;
   rdfs:range rdf:langString ;
-.
-bdo:workIncomplete
-  a owl:DatatypeProperty ;
-  rdfs:comment "true if the work is incomplete"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "incomplete"@en ;
-  rdfs:range xsd:boolean ;
 .
 bdo:workIsAbout
   a owl:ObjectProperty ;
