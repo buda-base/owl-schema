@@ -231,6 +231,12 @@ bdo:ChineseDate
 bdo:ChineseMonastic
   rdfs:subClassOf bdo:Role ;
 .
+bdo:CollectionInstitution
+  a owl:Class ;
+  rdfs:comment "An Insitution containing a collection of works such as \"Bibliothèque EFEO - Preah Vanarât Ken Vong\" or \"Fragile Palm Leaves Foundation\" or \"National Library of Mongolia\""@en ;
+  rdfs:label "Collection institution" ;
+  rdfs:subClassOf bdo:Organization ;
+.
 bdo:CompiledEvent
   a owl:Class ;
   rdfs:label "compiled"@en ;
@@ -3117,6 +3123,13 @@ bdo:workCatalogInfo
   rdfs:domain bdo:Work ;
   rdfs:label "catalog info"@en ;
   rdfs:range rdf:langString ;
+.
+bdo:workCollection
+  a owl:ObjectProperty ;
+  rdfs:comment "This work is contained a the identified collection"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "in collection"@en ;
+  rdfs:range bdo:CollectionInstitution ;
 .
 bdo:workColophon
   a owl:DatatypeProperty ;
