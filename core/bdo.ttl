@@ -230,7 +230,7 @@ bdo:Catalog
 .
 bdo:CatalogLocation
   a owl:Class ;
-  rdfs:comment "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
+  rdfs:comment "The CatalogLocation indicates the Catalog and page number within the catalog - useful for scholarly citations"@en ;
   rdfs:label "catalog location"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
@@ -1482,6 +1482,27 @@ bdo:binding
   rdfs:domain bdo:Work ;
   rdfs:label "binding"@en ;
   rdfs:range bdo:Binding ;
+.
+bdo:catalog
+  a owl:ObjectProperty ;
+  rdfs:comment "This work is identified in the indicated Catalog"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "catalog location"@en ;
+  rdfs:range bdo:Catalog ;
+.
+bdo:catalogLoc
+  a owl:ObjectProperty ;
+  rdfs:comment "This work is identified in the indicated Catalog"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "catalog location"@en ;
+  rdfs:range bdo:Catalog ;
+.
+bdo:catalogPage
+  a owl:DatatypeProperty ;
+  rdfs:comment "The page in the catalog containg an entry for the Work"@en ;
+  rdfs:domain bdo:CatalogLocation ;
+  rdfs:label "catalog page"@en ;
+  rdfs:range xsd:integer ;
 .
 bdo:ceDate
   a rdfs:Datatype ;
@@ -3128,13 +3149,6 @@ bdo:workCBCSiglaZW
   a owl:DatatypeProperty ;
   rdfs:label "藏外佛教文獻"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCatalog
-  a owl:ObjectProperty ;
-  rdfs:comment "This work is identified in the indicated Catalog"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "in catalog"@en ;
-  rdfs:range bdo:Catalog ;
 .
 bdo:workCatalogInfo
   a owl:DatatypeProperty ;
