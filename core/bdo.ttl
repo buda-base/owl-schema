@@ -228,12 +228,6 @@ bdo:Catalog
   rdfs:label "Catalog" ;
   rdfs:subClassOf bdo:Work ;
 .
-bdo:CatalogLocation
-  a owl:Class ;
-  rdfs:comment "The CatalogLocation indicates the Catalog and page number within the catalog - useful for scholarly citations"@en ;
-  rdfs:label "catalog location"@en ;
-  rdfs:subClassOf bdo:Facet ;
-.
 bdo:ChineseDate
   a owl:Class ;
   rdfs:comment "The class of DILA Chinese date individuals"@en ;
@@ -311,6 +305,11 @@ bdo:CorporationMemberNotSpecified
   a owl:Class ;
   rdfs:label "Unspecified Member"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
+.
+bdo:CorrectedTitle
+  a owl:Class ;
+  rdfs:label "Corrected title" ;
+  rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:Creator
   rdfs:subClassOf bdo:Role ;
@@ -784,6 +783,11 @@ An administrative organization is one that is not a subject of the domain of dis
   rdfs:label "organization"@en ;
   rdfs:subClassOf bdo:Agent ;
 .
+bdo:OriginalTitle
+  a owl:Class ;
+  rdfs:label "Original title" ;
+  rdfs:subClassOf bdo:TitleVersion ;
+.
 bdo:OriginatedEvent
   a owl:Class ;
   rdfs:comment "When, where and by whom the production of a :Work was originated"@en ;
@@ -1172,6 +1176,11 @@ bdo:SliceLoc
 Both chunk and char number start at one."""@en ;
   rdfs:label "Slice Loc"^^rdf:langString ;
 .
+bdo:StandarizedTitle
+  a owl:Class ;
+  rdfs:label "Standarized title"@en ;
+  rdfs:subClassOf bdo:TitleVersion ;
+.
 bdo:Taxonomy
   rdfs:subClassOf bdo:Type ;
 .
@@ -1201,6 +1210,12 @@ bdo:ThirdTranslatedEvent
 .
 bdo:TimePeriod
   rdfs:subClassOf bdo:Type ;
+.
+bdo:TitleVersion
+  a owl:Class ;
+  rdfs:comment "The TitleVersion indicates whether the title is a standarized, corrected, or original title"@en ;
+  rdfs:label "Title Version"@en ;
+  rdfs:subClassOf bdo:Facet ;
 .
 bdo:Topic
   a owl:Class ;
@@ -1483,27 +1498,6 @@ bdo:binding
   rdfs:label "binding"@en ;
   rdfs:range bdo:Binding ;
 .
-bdo:catalog
-  a owl:ObjectProperty ;
-  rdfs:comment "This work is identified in the indicated Catalog"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "catalog location"@en ;
-  rdfs:range bdo:Catalog ;
-.
-bdo:catalogLoc
-  a owl:ObjectProperty ;
-  rdfs:comment "This work is identified in the indicated Catalog"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "catalog location"@en ;
-  rdfs:range bdo:Catalog ;
-.
-bdo:catalogPage
-  a owl:DatatypeProperty ;
-  rdfs:comment "The page in the catalog containg an entry for the Work"@en ;
-  rdfs:domain bdo:CatalogLocation ;
-  rdfs:label "catalog page"@en ;
-  rdfs:range xsd:integer ;
-.
 bdo:ceDate
   a rdfs:Datatype ;
   rdfs:comment "Common Era Year"@en ;
@@ -1564,11 +1558,11 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
   rdfs:range bdo:Place ;
 .
 bdo:correctionOf
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   rdfs:comment "the current name or title is a corrected version of the target rdf:langString" ;
-  rdfs:domain bdo:PersonNameOrWorkTitle ;
+  rdfs:domain bdo:WorkTitle ;
   rdfs:label "correction of"@en ;
-  rdfs:range rdf:langString ;
+  rdfs:range bdo:OriginalTitle ;
 .
 bdo:creator
   a owl:ObjectProperty ;
