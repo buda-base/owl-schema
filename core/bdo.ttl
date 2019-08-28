@@ -1919,6 +1919,13 @@ This data is used to construct IIIF Manifests for volume presentation"""@en ;
   rdfs:label "dimensions"@en ;
   rdfs:range xsd:anyURI ;
 .
+bdo:hasFascicles
+  a owl:DatatypeProperty ;
+  rdfs:comment "A list of fascicles contained in the work"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "has fascicles"@en ;
+  rdfs:range xsd:string ;
+.
 bdo:hasFather
   a owl:ObjectProperty ;
   rdfs:label "has father"@en ;
@@ -2159,6 +2166,13 @@ bdo:hasWife
   a owl:ObjectProperty ;
   rdfs:label "has wife"@en ;
   rdfs:subPropertyOf bdo:hasSpouse ;
+.
+bdo:hasWorkNum
+  a owl:DatatypeProperty ;
+  rdfs:comment "the number of this work within a containing work"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "has work number"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:hasYoungerBrother
   a owl:ObjectProperty ;
