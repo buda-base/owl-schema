@@ -1178,10 +1178,10 @@ bdo:SliceLoc
 Both chunk and char number start at one."""@en ;
   rdfs:label "Slice Loc"^^rdf:langString ;
 .
-bdo:StandarizedTitle
+bdo:StandardizedTitle
   a owl:Class ;
   rdfs:comment "In some cases, cataloging will introduce a \"standardized\" title distinct from the \"original\" title in a given cultural heritage context"@en ;
-  rdfs:label "Standarized title"@en ;
+  rdfs:label "Standardized title"@en ;
   rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:Taxonomy
