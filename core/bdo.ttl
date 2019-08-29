@@ -1851,7 +1851,7 @@ bdo:eventText
 .
 bdo:eventWhen
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have occurred in relation to a given :AnyDate"@en ;
+  rdfs:comment "Indicates that the event is known to have occurred in relation to a given :AnyDate, unless otherwise specified the date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "event when"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2541,7 +2541,7 @@ bdo:migration_exception
 .
 bdo:notAfter
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given"@en ;
+  rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2549,7 +2549,7 @@ bdo:notAfter
 .
 bdo:notBefore
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given"@en ;
+  rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2599,7 +2599,7 @@ bdo:noteWork
 .
 bdo:onDate
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year or date given"@en ;
+  rdfs:comment "The event is known to have occurred during the year or date given, unless otherwise specified the date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2616,7 +2616,7 @@ bdo:onOrAbout
 .
 bdo:onYear
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year given"@en ;
+  rdfs:comment "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
   rdfs:range xsd:integer ;
