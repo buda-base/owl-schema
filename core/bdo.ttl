@@ -308,7 +308,8 @@ bdo:CorporationMemberNotSpecified
 .
 bdo:CorrectedTitle
   a owl:Class ;
-  rdfs:label "Corrected title" ;
+  rdfs:comment "A corrected title should have a :correctionOf that records the original text that is corrected by this title"@en ;
+  rdfs:label "Corrected title"@en ;
   rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:Creator
@@ -785,7 +786,8 @@ An administrative organization is one that is not a subject of the domain of dis
 .
 bdo:OriginalTitle
   a owl:Class ;
-  rdfs:label "Original title" ;
+  rdfs:comment "An original title is indicated when there is a correction recorded. Most titles in the dataset are transcriptions of a title manifest in the original material and unless a correction is recorded the title version should be assumed to be the original text"@en ;
+  rdfs:label "Original title"@en ;
   rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:OriginatedEvent
@@ -1178,6 +1180,7 @@ Both chunk and char number start at one."""@en ;
 .
 bdo:StandarizedTitle
   a owl:Class ;
+  rdfs:comment "In some cases, cataloging will introduce a \"standardized\" title distinct from the \"original\" title in a given cultural heritage context"@en ;
   rdfs:label "Standarized title"@en ;
   rdfs:subClassOf bdo:TitleVersion ;
 .
