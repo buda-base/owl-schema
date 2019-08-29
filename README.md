@@ -1,6 +1,5 @@
 # Buddhist Digital Ontology vocabulary
 
-
 This repository contains the files that define the Buddhist Digital Ontology (BDO). You can use [TopBraid Composer Free Edition](https://www.topquadrant.com/downloads/topbraid-composer-install/#) or [Protégé](http://protege.stanford.edu/) to view and edit these files.
 
 The overall ontology is organized in a collection of directories and files as follows: 
