@@ -123,7 +123,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 
 - `bo` for Tibetan written in Tibetan script
-- `bo-x-ewts` for EWTS transliteration
+- `bo-x-ewts` for [EWTS](http://www.thlib.org/reference/transliteration/#essay=/thl/ewts/) transliteration
 - `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
 - `bo-x-acip` for ACIP transliteration
 - `bo-Latn-pinyin` for Pinyin phonetic transcription
