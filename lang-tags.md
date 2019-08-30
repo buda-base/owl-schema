@@ -111,6 +111,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 - `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated in EWTS (`sa-x-dts`, `sa-x-acip` and `sa-x-gbt` follow the same pattern)
 - `sa-x-Tibt-alalc97` (?) for Sanskrit transliterated into Tibetan, in turn transliterated in ALA-LC
 - `sa-x-iast` for Sanskrit written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
+- `sa-x-haky` for Sanskrit written in [Harvard-Kyoto transliteration scheme](https://en.wikipedia.org/wiki/Harvard-Kyoto)
 - `sa-x-ndia` for Sanskrit written in IAST with no diacritics
 - `sa-x-slp1` for Sanskrit written in [SLP1](http://www.sanskrit-lexicon.uni-koeln.de/talkMay2008/SLP1.pdf)
 - `sa-x-iso` for Sanskrit written in [ISO 15919](https://en.wikipedia.org/wiki/ISO_15919)
