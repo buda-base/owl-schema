@@ -85,6 +85,7 @@ When a string contains multiple languages, we use the [Unicode T extension mecha
 #### Chinese
 Most Chinese tags are all standardized so their choice is easy:
 
+- `zh-Hani` for Chinese in Chinese characters (simplified vs. traditional undetermined)
 - `zh-Hans` for simplified Chinese characters
 - `zh-Hant` for traditional Chinese characters
 - `zh-Latn-pinyin` for Pinyin transliteration
