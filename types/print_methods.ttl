@@ -12,11 +12,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:printMethod
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "print method"@en ;
-  rdfs:range bdo:PrintMethod ;
+bdo:PrintMethod
+  a owl:Class ;
+  rdfs:label "Print method" ;
 .
 bdo:PrintMethod_Intaglio
   a owl:Class ;
@@ -37,10 +35,6 @@ bdo:PrintMethod_Relief
   a owl:Class ;
   rdfs:label "Print method Relief" ;
   rdfs:subClassOf bdo:PrintMethod ;
-.
-bdo:PrintMethod
-  a owl:Class ;
-  rdfs:label "Print method" ;
 .
 PrintMethod:
   a owl:Ontology ;

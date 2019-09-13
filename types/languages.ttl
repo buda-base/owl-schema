@@ -40,6 +40,14 @@ Language:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
 .
+bdr:LangAmdoTib
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "adx" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Amdo Tibetan"@en ;
+.
 bdr:LangBo
   a bdo:Language ;
   a owl:Class ;
@@ -58,8 +66,8 @@ bdr:LangDz
   bdo:langMARCCode "dzo" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/dzo> ;
   rdfs:subClassOf bdo:Language ;
-  skos:prefLabel "Dzongkha"@en ;
   skos:altLabel "Bhutanese"@en ;
+  skos:prefLabel "Dzongkha"@en ;
   skos:prefLabel "rdzong kha"@bo-x-ewts ;
 .
 bdr:LangEn
@@ -80,6 +88,31 @@ bdr:LangHi
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Hindi"@en ;
 .
+bdr:LangKhamba
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "khg" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Khamba"@en ;
+.
+bdr:LangKhamsTib
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "khg" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Khams Tibetan"@en ;
+.
+bdr:LangKm
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "km" ;
+  bdo:langMARCCode "khm" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/khm> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Khmer"@en ;
+.
 bdr:LangMn
   a bdo:Language ;
   a owl:Class ;
@@ -96,16 +129,16 @@ bdr:LangNew
   bdo:langMARCCode "new" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/new> ;
   rdfs:subClassOf bdo:Language ;
-  skos:prefLabel "Newari"@en ;
   skos:altLabel "Nepal Bhasa"@en ;
+  skos:prefLabel "Newari"@en ;
 .
 bdr:LangPgd
   a bdo:Language ;
   a owl:Class ;
   bdo:langBCP47Lang "pgd" ;
   rdfs:subClassOf bdo:Language ;
-  skos:prefLabel "Gāndhārī"@sa-x-iast ;
   skos:prefLabel "Gandhari"@en ;
+  skos:prefLabel "Gāndhārī"@sa-x-iast ;
 .
 bdr:LangPi
   a bdo:Language ;
@@ -121,10 +154,10 @@ bdr:LangPra
   a owl:Class ;
   bdo:langBCP47Lang "pra" ;
   bdo:langMARCCode "pra" ;
+  rdfs:comment "use when the language is an unidentified Prakrit language"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-5/pra> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Prakrit"@en ;
-  rdfs:comment "use when the language is an unidentified Prakrit language"@en ;
 .
 bdr:LangRu
   a bdo:Language ;
@@ -144,6 +177,14 @@ bdr:LangSa
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Sanskrit"@en ;
 .
+bdr:LangTseku
+  a bdr:LangBo ;
+  a owl:Class ;
+  bdo:langBCP47Lang "tsk" ;
+  bdo:langMARCCode "tib" ;
+  rdfs:subClassOf bdr:LangBo ;
+  skos:prefLabel "Tseku"@en ;
+.
 bdr:LangUr
   a bdo:Language ;
   a owl:Class ;
@@ -162,36 +203,4 @@ bdr:LangZh
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/zho> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Chinese"@en ;
-.
-bdr:LangAmdoTib
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "adx" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Amdo Tibetan"@en ;
-.
-bdr:LangKhamba
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "khg" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Khamba"@en ;
-.
-bdr:LangKhamsTib
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "khg" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Khams Tibetan"@en ;
-.
-bdr:LangTseku
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "tsk" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Tseku"@en ;
 .

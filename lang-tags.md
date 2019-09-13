@@ -85,6 +85,7 @@ When a string contains multiple languages, we use the [Unicode T extension mecha
 #### Chinese
 Most Chinese tags are all standardized so their choice is easy:
 
+- `zh-Hani` for Chinese in Chinese characters (simplified vs. traditional undetermined)
 - `zh-Hans` for simplified Chinese characters
 - `zh-Hant` for traditional Chinese characters
 - `zh-Latn-pinyin` for Pinyin transliteration
@@ -100,6 +101,8 @@ For Pali our convention is to always use a script tag:
 - `pi-Sinh` for Pali written in Sinhalese script
 - `pi-Thai` for Pali written in Thai script
 - `pi-x-iast` (BDRC) for Pali written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
+- `pi-Khmr` for Pali written in Khmer script
+- `pi-x-kmfemc` for Pali written in Khmer via the FEMC romanization
 
 #### Sanskrit
 We also choose to keep the script tag for Sanskrit in Devanagari:
@@ -109,6 +112,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 - `sa-x-ewts` for Sanskrit transliterated into Tibetan, in turn transliterated in EWTS (`sa-x-dts`, `sa-x-acip` and `sa-x-gbt` follow the same pattern)
 - `sa-x-Tibt-alalc97` (?) for Sanskrit transliterated into Tibetan, in turn transliterated in ALA-LC
 - `sa-x-iast` for Sanskrit written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
+- `sa-x-haky` for Sanskrit written in [Harvard-Kyoto transliteration scheme](https://en.wikipedia.org/wiki/Harvard-Kyoto)
 - `sa-x-ndia` for Sanskrit written in IAST with no diacritics
 - `sa-x-slp1` for Sanskrit written in [SLP1](http://www.sanskrit-lexicon.uni-koeln.de/talkMay2008/SLP1.pdf)
 - `sa-x-iso` for Sanskrit written in [ISO 15919](https://en.wikipedia.org/wiki/ISO_15919)
@@ -120,7 +124,7 @@ We also choose to keep the script tag for Sanskrit in Devanagari:
 For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 
 - `bo` for Tibetan written in Tibetan script
-- `bo-x-ewts` for EWTS transliteration
+- `bo-x-ewts` for [EWTS](http://www.thlib.org/reference/transliteration/#essay=/thl/ewts/) transliteration
 - `bo-x-gbt` for precomposed Tibetan (see [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposedtibetan-parta/precomposed-tibetan---part-a) and [here](https://sites.google.com/site/chrisfynn2/home/tibetanscriptfonts/standardization/precomposed-tibetan-part-b))
 - `bo-x-acip` for ACIP transliteration
 - `bo-Latn-pinyin` for Pinyin phonetic transcription
@@ -129,6 +133,11 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 - `bo-alalc97` for Tibetan transliterated following ALA-LC rules
 - `bo-x-phon-en-m-tbrc` for Tibetan transcribed in English with the TBRC phonetic conventions
 - `bo-x-phon-en-m-thlib` for Tibetan transcribed in English with the [Thlib phonetic conventions](http://www.thlib.org/reference/transliteration/#!essay=/thl/phonetics/)
+
+#### Khmer
+
+- `km` for Khmer in Khmer script
+- `km-x-kmfemc` for Khmer Romanized via the FEMC romanization
 
 #### Mongolian
 

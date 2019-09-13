@@ -11,12 +11,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:binding
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "binding"@en ;
-  rdfs:range bdo:Binding ;
-.
 bdo:Binding
   a owl:Class ;
   rdfs:label "Binding" ;
@@ -58,21 +52,21 @@ bdr:Binding_Continuous_Folded
 bdr:Binding_Continuous_Leporello
   a bdo:Binding_Continuous ;
   rdfs:comment "folded and bound between front and back boards"@en ;
-  skos:prefLabel "leporello"@en ;
   skos:altLabel "Thyāsaphu"@en ;
+  skos:prefLabel "leporello"@en ;
 .
 bdr:Binding_Continuous_Scroll
   a bdo:Binding_Continuous ;
   rdfs:comment "continuous sheet written on oneside and rolled up"@en ;
   rdfs:comment "use also for rolled palm leaves (tamsuk)"@en ;
-  skos:prefLabel "scroll"@en ;
   skos:altLabel "Tamsuk"@en ;
+  skos:prefLabel "scroll"@en ;
 .
 bdr:Binding_LooseLeaf_Pecha
   a bdo:Binding_LooseLeaf ;
   rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
-  skos:prefLabel "pecha"@en ;
   skos:prefLabel "dpe cha/"@bo-x-exts ;
+  skos:prefLabel "pecha"@en ;
 .
 bdr:Binding_LooseLeaf_Pothi
   a bdo:Binding_LooseLeaf ;

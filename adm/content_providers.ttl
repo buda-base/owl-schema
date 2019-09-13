@@ -256,3 +256,66 @@ bda:CP038
   adm:termsOfUse "https://www.loc.gov/legal/"^^xsd:anyURI ;
   foaf:homepage "https://www.loc.gov"^^xsd:anyURI ;
 .
+bda:CP041
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX12 ;
+  skos:prefLabel "Bibliothèque EFEO - Preah Vanarât Ken Vong"@fr ;
+.
+bda:CP042
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX13 ;
+  skos:prefLabel "Bibliothèque du Musée national de Phnom Penh"@fr ;
+.
+bda:CP043
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX12 ;
+  skos:prefLabel "Musée national, Fonds Michel Tranet"@fr ;
+.
+bda:CP044
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX13 ;
+  skos:prefLabel "Bibliothèque de l'Université de Phnom Penh"@fr ;
+.
+bda:CP045
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX12 ;
+  skos:prefLabel "Bibliothèque nationale du Cambodge"@fr ;
+.
+bda:CP046
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX12 ;
+  skos:prefLabel "Bibliothèque de la Pagode d'Argent"@fr ;
+.
+bda:CP047
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  adm:defaultContentLicense bdr:LicensePublicDomain ;
+  adm:defaultMetadataLicense bda:LicenseCC0 ;
+  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
+  adm:inRegion bdr:G8CTX12 ;
+  skos:prefLabel "Bibliothèque Preah Vanarăt Kèn Vong, Fonds Trent Walker"@fr ;
+.

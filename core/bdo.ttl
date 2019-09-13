@@ -222,6 +222,12 @@ bdo:CarvedEvent
   rdfs:label "Work Woodblocks Carved"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
+bdo:Catalog
+  a owl:Class ;
+  rdfs:comment "A catalog such as the Tohoku or the FEMC Volumes I, II, or III"@en ;
+  rdfs:label "Catalog" ;
+  rdfs:subClassOf bdo:Work ;
+.
 bdo:ChineseDate
   a owl:Class ;
   rdfs:comment "The class of DILA Chinese date individuals"@en ;
@@ -230,6 +236,12 @@ bdo:ChineseDate
 .
 bdo:ChineseMonastic
   rdfs:subClassOf bdo:Role ;
+.
+bdo:CollectionInstitution
+  a owl:Class ;
+  rdfs:comment "An Insitution containing a collection of works such as \"Bibliothèque EFEO - Preah Vanarât Ken Vong\" or \"Fragile Palm Leaves Foundation\" or \"National Library of Mongolia\""@en ;
+  rdfs:label "Collection institution" ;
+  rdfs:subClassOf bdo:Organization ;
 .
 bdo:CompiledEvent
   a owl:Class ;
@@ -293,6 +305,12 @@ bdo:CorporationMemberNotSpecified
   a owl:Class ;
   rdfs:label "Unspecified Member"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
+.
+bdo:CorrectedTitle
+  a owl:Class ;
+  rdfs:comment "A corrected title should have a :correctionOf that records the original text that is corrected by this title"@en ;
+  rdfs:label "Corrected title"@en ;
+  rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:Creator
   rdfs:subClassOf bdo:Role ;
@@ -752,6 +770,12 @@ bdo:ObjectType
   rdfs:label "print type"@en ;
   rdfs:subClassOf bdo:Type ;
 .
+bdo:ObjectTypeMicrofilm
+  a owl:Class ;
+  rdfs:comment "the images for the associated work were digitized from microfilm"@en ;
+  rdfs:label "microfilm"@en ;
+  rdfs:subClassOf bdo:ObjectType ;
+.
 bdo:Organization
   a owl:Class ;
   rdfs:comment """An :Organization is a collection of agents that may be considered act in concert as a single agent, e.g., the kashag or the dzogchen protectors taken together: Ekazati, Rahulla, and Dorje Drollo
@@ -759,6 +783,12 @@ bdo:Organization
 An administrative organization is one that is not a subject of the domain of discourse. For example, the British Library's Endangered Archives Programme (EAP) is an administrative organization and the sde dge par khang can be considered an :Organization since it is an entity within the domain of Asian Buddhism."""@en ;
   rdfs:label "organization"@en ;
   rdfs:subClassOf bdo:Agent ;
+.
+bdo:OriginalTitle
+  a owl:Class ;
+  rdfs:comment "An original title is indicated when there is a correction recorded. Most titles in the dataset are transcriptions of a title manifest in the original material and unless a correction is recorded the title version should be assumed to be the original text"@en ;
+  rdfs:label "Original title"@en ;
+  rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:OriginatedEvent
   a owl:Class ;
@@ -1148,6 +1178,12 @@ bdo:SliceLoc
 Both chunk and char number start at one."""@en ;
   rdfs:label "Slice Loc"^^rdf:langString ;
 .
+bdo:StandardizedTitle
+  a owl:Class ;
+  rdfs:comment "In some cases, cataloging will introduce a \"standardized\" title distinct from the \"original\" title in a given cultural heritage context"@en ;
+  rdfs:label "Standardized title"@en ;
+  rdfs:subClassOf bdo:TitleVersion ;
+.
 bdo:Taxonomy
   rdfs:subClassOf bdo:Type ;
 .
@@ -1177,6 +1213,12 @@ bdo:ThirdTranslatedEvent
 .
 bdo:TimePeriod
   rdfs:subClassOf bdo:Type ;
+.
+bdo:TitleVersion
+  a owl:Class ;
+  rdfs:comment "The TitleVersion indicates whether the title is a standarized, corrected, or original title"@en ;
+  rdfs:label "Title Version"@en ;
+  rdfs:subClassOf bdo:Facet ;
 .
 bdo:Topic
   a owl:Class ;
@@ -1419,6 +1461,12 @@ bdo:agent
   rdfs:label "agent"@en ;
   rdfs:range bdo:Agents ;
 .
+bdo:appliedMaterial
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "applied material"@en ;
+  rdfs:range bdo:AppliedMaterial ;
+.
 bdo:attributionName
   a owl:DatatypeProperty ;
   rdfs:comment "The name the holder of a Work resource would like used when attributing re-use."@en ;
@@ -1433,6 +1481,32 @@ bdo:attributionURL
   rdfs:label "attribution url"@en ;
   rdfs:range xsd:anyURI ;
   rdfs:seeAlso cc:attributionURL ;
+.
+bdo:baseMaterial
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "base material"@en ;
+  rdfs:range bdo:BaseMaterial ;
+.
+bdo:beDate
+  a rdfs:Datatype ;
+  rdfs:comment "Buddhist Era Year dating from 543 BCE"@en ;
+  rdfs:label "BE date"@en ;
+  rdfs:subClassOf bdo:AnyDate ;
+  owl:onDatatype xsd:integer ;
+.
+bdo:binding
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "binding"@en ;
+  rdfs:range bdo:Binding ;
+.
+bdo:ceDate
+  a rdfs:Datatype ;
+  rdfs:comment "Common Era Year"@en ;
+  rdfs:label "CE date"@en ;
+  rdfs:subClassOf bdo:AnyDate ;
+  owl:onDatatype xsd:integer ;
 .
 bdo:chunkContents
   a owl:DatatypeProperty ;
@@ -1485,6 +1559,13 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
   rdfs:domain bdo:Corporation ;
   rdfs:label "region"@en ;
   rdfs:range bdo:Place ;
+.
+bdo:correctionOf
+  a owl:ObjectProperty ;
+  rdfs:comment "the current name or title is a corrected version of the target rdf:langString" ;
+  rdfs:domain bdo:WorkTitle ;
+  rdfs:label "correction of"@en ;
+  rdfs:range bdo:OriginalTitle ;
 .
 bdo:creator
   a owl:ObjectProperty ;
@@ -1665,6 +1746,16 @@ bdo:creatorUnspecified
   rdfs:label "unspecified"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
 .
+bdo:csDate
+  a rdfs:Datatype ;
+  rdfs:comment "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
+  rdfs:label "CS date"@en ;
+  rdfs:seeAlso <http://lannamanuscripts.net/en/search/new/> ;
+  rdfs:seeAlso <http://www.degruyter.com/downloadpdf/books/9783110479010/9783110479010-003/9783110479010-003.pdf> ;
+  rdfs:seeAlso <http://www.laomanuscripts.net/en/help#3i> ;
+  rdfs:subClassOf bdo:AnyDate ;
+  owl:onDatatype xsd:integer ;
+.
 bdo:dataTypeExpression
   a owl:AnnotationProperty ;
 .
@@ -1681,6 +1772,13 @@ bdo:datePeriod
   rdfs:domain bdo:Date ;
   rdfs:label "period"@en ;
   rdfs:range bdo:TimePeriod ;
+.
+bdo:dateType
+  a owl:ObjectProperty ;
+  rdfs:comment "the type of date such as :ceDate for a Common Era date or :beDate for Buddhist Era date"@en ;
+  rdfs:domain bdo:Event ;
+  rdfs:label "date type"@en ;
+  rdfs:range bdo:AnyDate ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -1756,7 +1854,7 @@ bdo:eventText
 .
 bdo:eventWhen
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have occurred in relation to a given :AnyDate"@en ;
+  rdfs:comment "Indicates that the event is known to have occurred in relation to a given :AnyDate, unless otherwise specified the date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "event when"@en ;
   rdfs:range bdo:AnyDate ;
@@ -1823,6 +1921,13 @@ This data is used to construct IIIF Manifests for volume presentation"""@en ;
   rdfs:domain bdo:ItemImageAsset ;
   rdfs:label "dimensions"@en ;
   rdfs:range xsd:anyURI ;
+.
+bdo:hasFascicles
+  a owl:DatatypeProperty ;
+  rdfs:comment "A list of fascicles contained in the work"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "has fascicles"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:hasFather
   a owl:ObjectProperty ;
@@ -2064,6 +2169,13 @@ bdo:hasWife
   a owl:ObjectProperty ;
   rdfs:label "has wife"@en ;
   rdfs:subPropertyOf bdo:hasSpouse ;
+.
+bdo:hasWorkNum
+  a owl:DatatypeProperty ;
+  rdfs:comment "the number of this work within a containing work"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "has work number"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:hasYoungerBrother
   a owl:ObjectProperty ;
@@ -2411,13 +2523,28 @@ bdo:lineageWork
   rdfs:range bdo:Work ;
   rdfs:seeAlso bdo:LineageHolder ;
 .
+bdo:microfilmCanister
+  a owl:DatatypeProperty ;
+  rdfs:comment "indicstes the id of the canister that the microfilm was stoered in"@en ;
+  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:label "microfilm canister"@en ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso bdo:ItemPhysicalAsset ;
+.
+bdo:microfilmStrip
+  a owl:DatatypeProperty ;
+  rdfs:comment "indicstes the id of the film strip that contains the digitized content"@en ;
+  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:label "microfilm strip id"@en ;
+  rdfs:range xsd:string ;
+.
 bdo:migration_exception
   a owl:AnnotationProperty ;
   rdfs:range xsd:string ;
 .
 bdo:notAfter
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given"@en ;
+  rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2425,7 +2552,7 @@ bdo:notAfter
 .
 bdo:notBefore
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given"@en ;
+  rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2475,7 +2602,7 @@ bdo:noteWork
 .
 bdo:onDate
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year or date given"@en ;
+  rdfs:comment "The event is known to have occurred during the year or date given, unless otherwise specified the date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2492,7 +2619,7 @@ bdo:onOrAbout
 .
 bdo:onYear
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year given"@en ;
+  rdfs:comment "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
   rdfs:range xsd:integer ;
@@ -2726,6 +2853,12 @@ bdo:placeWBArea
   rdfs:comment "The area in square km of the Place from the World Bank 2010"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range xsd:integer ;
+.
+bdo:printMethod
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "print method"@en ;
+  rdfs:range bdo:PrintMethod ;
 .
 bdo:restored
   a owl:DatatypeProperty ;
@@ -3035,12 +3168,26 @@ bdo:workCatalogInfo
   rdfs:label "catalog info"@en ;
   rdfs:range rdf:langString ;
 .
+bdo:workCollection
+  a owl:ObjectProperty ;
+  rdfs:comment "This work is contained at the identified institution"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "in collection"@en ;
+  rdfs:range bdo:CollectionInstitution ;
+.
 bdo:workColophon
   a owl:DatatypeProperty ;
   rdfs:comment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "colophon"@en ;
   rdfs:range bdo:LangStringOrNoColophon ;
+.
+bdo:workComplete
+  a owl:DatatypeProperty ;
+  rdfs:comment "true if the work is complete"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "complete"@en ;
+  rdfs:range xsd:boolean ;
 .
 bdo:workContainsChapters
   a owl:DatatypeProperty ;
@@ -3179,6 +3326,13 @@ bdo:workExtentStatement
   rdfs:domain bdo:Work ;
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
+.
+bdo:workFEMCManuscriptCode
+  a owl:DatatypeProperty ;
+  rdfs:comment "FEMC Manuscript Code" ;
+  rdfs:label "FEMC Manuscript code"@en ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workGenre
   a owl:ObjectProperty ;
@@ -3374,6 +3528,13 @@ bdo:workIsbn
   rdfs:label "ISBN"@en ;
   rdfs:range bdo:ISBN ;
   owl:deprecated true ;
+.
+bdo:workKDPPOldId
+  a owl:DatatypeProperty ;
+  rdfs:comment "Khmer Digital Preservation Project Old Id" ;
+  rdfs:label "KDPPOld Id"@en ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaA
   a owl:DatatypeProperty ;
@@ -3646,6 +3807,12 @@ bdo:workMaterial
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
 .
+bdo:workMicrofilm
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "work from microfilm"@en ;
+  rdfs:range bdo:ObjectTypeMicrofilm ;
+.
 bdo:workNumberOf
   a owl:ObjectProperty ;
   rdfs:comment "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
@@ -3845,6 +4012,14 @@ bdo:workRefrKTsT
   rdfs:range xsd:integer ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
+bdo:workRefrKTsT_1
+  a owl:DatatypeProperty ;
+  rdfs:comment "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
+  rdfs:domain bdo:WorkRefs ;
+  rdfs:label "rKTs Tengyur reference"@en ;
+  rdfs:range xsd:integer ;
+  rdfs:subPropertyOf bdo:workRefs ;
+.
 bdo:workRefs
   a owl:DatatypeProperty ;
   rdfs:comment "This Data property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloguing."@en ;
@@ -3973,6 +4148,18 @@ bdr:ObjectTypeFacsimile
   rdfs:comment "facsimile"@en ;
   rdfs:label "facsimile"@en ;
 .
+bdr:ObjectTypeLeporello
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "leporello"@en ;
+  rdfs:label "leporello"@en ;
+.
+bdr:ObjectTypeLongPalmLeaf
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "long palm leaf"@en ;
+  rdfs:label "long palm leaf"@en ;
+.
 bdr:ObjectTypeManuscript
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
@@ -3989,6 +4176,12 @@ bdr:ObjectTypeParPhud
   a owl:NamedIndividual ;
   rdfs:comment "\"first fruit\" printing from a set of xylographs. par phud"@en ;
   rdfs:label "first printing"@en ;
+.
+bdr:ObjectTypeShortPalmLeaf
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  rdfs:comment "short palm leaf"@en ;
+  rdfs:label "short palm leaf"@en ;
 .
 bdr:ObjectTypeTypeSet
   a bdo:ObjectType ;

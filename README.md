@@ -1,8 +1,9 @@
 # Buddhist Digital Ontology vocabulary
 
+
 This repository contains the files that define the Buddhist Digital Ontology (BDO). You can use [TopBraid Composer Free Edition](https://www.topquadrant.com/downloads/topbraid-composer-install/#) or [Protégé](http://protege.stanford.edu/) to view and edit these files.
 
-The overall ontology is organized in a collection of directories and files as follows:
+The overall ontology is organized in a collection of directories and files as follows: 
 
 - [core](core): contains 
   - the base ontology file: [bdo.ttl](core/bdo.ttl) that defines the classes and properties that make up the core concepts of the cultural heritage vocabulary for the domain of Asian/Southeast Asian Buddhist cultures. The [bdo.ttl](core/bdo.ttl) imports files in the [types](types) and [roles](roles) directories that contain constants and their classes that are used in the core ontology.

@@ -13,18 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:baseMaterial
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "base material"@en ;
-  rdfs:range bdo:BaseMaterial ;
-.
-bdo:appliedMaterial
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "applied material"@en ;
-  rdfs:range bdo:AppliedMaterial ;
-.
 bdo:AppliedMaterial
   a owl:Class ;
   rdfs:label "applied material"@en ;
@@ -59,14 +47,14 @@ bdr:AppliedMaterial_GoldLeaf
 .
 bdr:AppliedMaterial_IndigoDye
   a bdo:AppliedMaterial ;
-  skos:prefLabel "indigo dye"@en ;
   rdfs:comment "paper dyed with indigo is called Nīlapattra in some contexts"@en ;
+  skos:prefLabel "indigo dye"@en ;
 .
 bdr:AppliedMaterial_Poison
   a bdo:AppliedMaterial ;
-  skos:prefLabel "poison"@en ;
   rdfs:comment "poison (usually arsenic), giving a yellow hue"@en ;
   rdfs:comment "usually used to keep away insects and people who would want to take part of the manuscript and turn it into a magical tincture for consumption"@en ;
+  skos:prefLabel "poison"@en ;
 .
 bdr:AppliedMaterial_RedInk
   a bdo:AppliedMaterial ;
@@ -87,8 +75,8 @@ bdr:MaterialCloth
 .
 bdr:MaterialCoryphaPalmLeaf
   a bdr:MaterialPalmLeaf ;
-  skos:prefLabel "palm leaf (corypha)"@en ;
   rdfs:seeAlso <http://www.wikidata.org/entity/Q856001> ;
+  skos:prefLabel "palm leaf (corypha)"@en ;
 .
 bdr:MaterialDeshog
   a bdr:MaterialPaper ;
@@ -110,9 +98,9 @@ bdr:MaterialKhoiPaper
 .
 bdr:MaterialLoktaPaper
   a bdr:MaterialPaper ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q6668765> ;
   rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Nepal, distinct from the Deshog paper."@en ;
   rdfs:seeAlso bdr:MaterialDeshog ;
-  adm:sameAsWikidata <http://www.wikidata.org/entity/Q6668765> ;
   skos:prefLabel "lokta paper"@en ;
 .
 bdr:MaterialMixed
@@ -121,10 +109,10 @@ bdr:MaterialMixed
 .
 bdr:MaterialMultiLayerPaper
   a bdr:MaterialPaper ;
-  owl:deprecated true ;
-  rdfs:comment "used for some manuscripts in Nepal"@en ;
-  skos:prefLabel "multi-layer paper"@en ;
   rdfs:comment "deprecated in favor of AppliedMaterial_Poison"@en ;
+  rdfs:comment "used for some manuscripts in Nepal"@en ;
+  owl:deprecated true ;
+  skos:prefLabel "multi-layer paper"@en ;
 .
 bdr:MaterialPalmLeaf
   a bdo:BaseMaterial ;
@@ -134,8 +122,8 @@ bdr:MaterialPalmLeaf
 .
 bdr:MaterialPalmyraPalmLeaf
   a bdr:MaterialPalmLeaf ;
-  skos:prefLabel "palm leaf (palmyra)"@en ;
   rdfs:seeAlso <http://www.wikidata.org/entity/Q310912> ;
+  skos:prefLabel "palm leaf (palmyra)"@en ;
 .
 bdr:MaterialPaper
   a bdo:BaseMaterial ;

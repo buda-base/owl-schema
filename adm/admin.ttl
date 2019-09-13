@@ -368,6 +368,13 @@ adm:imagesStatus
   rdfs:label "has images status"@en ;
   rdfs:range adm:ImagesStatus ;
 .
+adm:inRegion
+  a owl:ObjectProperty ;
+  rdfs:comment "The organization or person that provided the eText or image content"@en ;
+  rdfs:domain adm:Organization ;
+  rdfs:label "in region"@en ;
+  rdfs:range bdo:Place ;
+.
 adm:initialProvider
   a owl:ObjectProperty ;
   rdfs:comment "The initial provider of the metadata representation and/or images of the :Entity resource. For example, EAP105/1 has adm:initialProvider bdo:G1KG116095 and adm:contentProvider bda:Provider_BL_EAP"@en ;
@@ -426,6 +433,13 @@ adm:logWho
   rdfs:domain adm:LogEntry ;
   rdfs:label "who"@en ;
   rdfs:range foaf:Agent ;
+.
+adm:logWho_1
+  a owl:AnnotationProperty ;
+  rdfs:comment "who performed the updated being logged"@en ;
+  rdfs:domain adm:LogEntry ;
+  rdfs:label "who"@en ;
+  rdfs:range xsd:string ;
 .
 adm:metadataLegal
   a owl:AnnotationProperty ;
