@@ -620,6 +620,20 @@ adm:sameAsrKTs
   rdfs:label "same as rKTs"@en ;
   rdfs:subPropertyOf owl:sameAs ;
 .
+adm:sameAsCBCAt
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the CBC@ resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as CBC@"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsDILA
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the DILA resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as DILA"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
 adm:seeOther
   a owl:AnnotationProperty ;
   rdfs:comment "use to indicate a url to a another site providing other information on the subject :Entity. This property is used to refer to information that is not necessarily conformant to RDF Linked Open Data"@en ;
@@ -629,7 +643,12 @@ adm:seeOther
 .
 adm:seeOtherHA
   a owl:AnnotationProperty ;
-  rdfs:label "same other Himalayan Art entry"@en ;
+  rdfs:label "see Himalayan Art entry"@en ;
+  rdfs:subPropertyOf adm:seeOther ;
+.
+adm:seeOtherSAT
+  a owl:AnnotationProperty ;
+  rdfs:label "see SAT"@en ;
   rdfs:subPropertyOf adm:seeOther ;
 .
 adm:seeOtherToL
