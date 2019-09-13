@@ -113,6 +113,13 @@ bda:LD_GRETIL
   adm:provider bda:CP028 ;
   skos:prefLabel "Provided by GRETIL under the CC0 license"@en ;
 .
+bda:LD_SAT_images
+  a adm:LegalData ;
+  adm:copyrightOwner bda:CP030 ;
+  adm:license bda:LicenseCCBYNCSA4U ;
+  adm:provider bda:CP030 ;
+  skos:prefLabel "Provided by SAT under the CC BY-NC-SA 4.0 license"@en ;
+.
 LegalData:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;

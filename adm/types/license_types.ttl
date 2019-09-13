@@ -49,6 +49,11 @@ bda:LicenseCCBYSA4U
   rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
   skos:prefLabel "Creative Commons BY-SA 4.0 Unported"@en ;
 .
+bda:LicenseCCBYNCSA4U
+  a adm:License ;
+  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+  skos:prefLabel "Creative Commons BY-NC-SA 4.0 Unported"@en ;
+.
 bda:LicenseMixed
   a adm:License ;
   rdfs:comment "The license varies among the different parts of the work. For example, some part of a work may be under copyright (i.e. a work containing a contemporary introduction) and the remaining parts may be in the Public Domain (i.e. an orginial 19th century work re-typed)."@en ;
