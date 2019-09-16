@@ -79,6 +79,24 @@ bdr:LangEn
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "English"@en ;
 .
+bdr:LangEs
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "es" ;
+  bdo:langMARCCode "spa" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/spa> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Spanish"@en ;
+.
+bdr:LangFr
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "fr" ;
+  bdo:langMARCCode "fre" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/fra> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "French"@en ;
+.
 bdr:LangHi
   a bdo:Language ;
   a owl:Class ;
@@ -87,6 +105,15 @@ bdr:LangHi
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/hin> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Hindi"@en ;
+.
+bdr:LangIt
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "it" ;
+  bdo:langMARCCode "ita" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/ita> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Italian"@en ;
 .
 bdr:LangKhamba
   a bdr:LangBo ;
@@ -131,6 +158,24 @@ bdr:LangNew
   rdfs:subClassOf bdo:Language ;
   skos:altLabel "Nepal Bhasa"@en ;
   skos:prefLabel "Newari"@en ;
+.
+bdr:LangNl
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "nl" ;
+  bdo:langMARCCode "dut" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/nld> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Dutch"@en ;
+.
+bdr:LangNo
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "no" ;
+  bdo:langMARCCode "nor" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/nor> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Norwegian"@en ;
 .
 bdr:LangPgd
   a bdo:Language ;

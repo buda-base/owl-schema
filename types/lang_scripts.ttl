@@ -36,7 +36,7 @@ LangScript:
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:Bo
-  a owl:Class ;
+  a owl:Class , bdo:LangScript ;
   bdo:language bdr:LangBo ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Tibetan"@en ;
@@ -85,7 +85,7 @@ bdr:BoKhyugYig
   skos:prefLabel "Tibetan in Kyug 'Yig"@en ;
 .
 bdr:BoTibt
-  a owl:Class ;
+  a bdr:Bo ;
   bdo:language bdr:LangBo ;
   bdo:script bdr:ScriptTibt ;
   rdfs:subClassOf bdr:Bo ;
@@ -93,7 +93,7 @@ bdr:BoTibt
   skos:prefLabel "bod yig"@bo-x-ewts ;
 .
 bdr:Dz
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangDz ;
   rdfs:subClassOf bdo:LangScript ;
   skos:altLabel "Bhutanese"@en ;
@@ -109,8 +109,14 @@ bdr:DzTibt
   skos:prefLabel "Dzongkha"@en ;
   skos:prefLabel "rdzong kha/"@bo-x-ewts ;
 .
+bdr:De
+  a bdo:LangScript ;
+  bdo:language bdr:LangDe ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "German"@en ;
+.
 bdr:En
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangEn ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "English"@en ;
@@ -122,8 +128,20 @@ bdr:EnLatn
   rdfs:subClassOf bdr:En ;
   skos:prefLabel "English (in Roman)"@en ;
 .
+bdr:Es
+  a bdo:LangScript ;
+  bdo:language bdr:LangEs ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Spanish"@en ;
+.
+bdr:Fr
+  a bdo:LangScript ;
+  bdo:language bdr:LangFr ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "French"@en ;
+.
 bdr:Hi
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangHi ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Hindi"@en ;
@@ -135,8 +153,14 @@ bdr:HiDeva
   rdfs:subClassOf bdr:Hi ;
   skos:prefLabel "Hindi (in Devanagari)"@en ;
 .
+bdr:It
+  a bdo:LangScript ;
+  bdo:language bdr:LangIt ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Italian"@en ;
+.
 bdr:Km
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangKm ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Khmer"@en ;
@@ -149,7 +173,7 @@ bdr:KmKhmr
   skos:prefLabel "Khmer"@en ;
 .
 bdr:Mn
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangMn ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Mongolian"@en ;
@@ -182,7 +206,7 @@ bdr:MnUnspecified
   skos:prefLabel "Mongolian (otherwise unspecified)"@en ;
 .
 bdr:New
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangNew ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Newari"@en ;
@@ -201,15 +225,27 @@ bdr:NewNewa
   rdfs:subClassOf bdr:New ;
   skos:prefLabel "Newari in Pracalit"@en ;
 .
+bdr:Nl
+  a bdo:LangScript ;
+  bdo:language bdr:LangNl ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Dutch"@en ;
+.
+bdr:No
+  a bdo:LangScript ;
+  bdo:language bdr:LangNo ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Norwegian"@en ;
+.
 bdr:PgdKhar
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangPgd ;
   bdo:script bdr:ScriptKhar ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Gandhari (Kharoshthi)"@en ;
 .
 bdr:Pi
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangPi ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Pali"@en ;
@@ -244,7 +280,7 @@ bdr:PiThai
   skos:prefLabel "Pali (Thai)"@en ;
 .
 bdr:Ru
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangRu ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Russian"@en ;
@@ -257,7 +293,7 @@ bdr:RuCyrl
   skos:prefLabel "Russian in Cyrillic"@en ;
 .
 bdr:Sa
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangSa ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Sanskrit"@en ;
@@ -341,7 +377,7 @@ bdr:SaUnspecified
   skos:prefLabel "Sanskrit (unspecified script)"@en ;
 .
 bdr:Zh
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangZh ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Chinese"@en ;
