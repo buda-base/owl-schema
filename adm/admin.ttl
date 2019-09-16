@@ -648,6 +648,14 @@ adm:sameAsDILA
   rdfs:label "same as DILA"@en ;
   rdfs:subPropertyOf owl:sameAs ;
 .
+adm:canonicalHtml
+  a owl:AnnotationProperty ;
+  rdfs:comment "A link to the html representation of the entity. Use only for entities which URI is not accessible through http."@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "Html representation"@en ;
+  rdfs:subPropertyOf rdfs:seeAlso ;
+  rdfs:range xsd:anyURI ;
+.
 adm:seeOther
   a owl:AnnotationProperty ;
   rdfs:comment "use to indicate a url to a another site providing other information on the subject :Entity. This property is used to refer to information that is not necessarily conformant to RDF Linked Open Data"@en ;
