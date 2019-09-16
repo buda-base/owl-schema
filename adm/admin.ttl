@@ -599,6 +599,13 @@ adm:replaceWithObjectProperty
   rdfs:label "replace with Object property"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
 .
+adm:sameAsBDRC
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the BDRC resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as BDRC"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
 adm:sameAsToL
   a owl:AnnotationProperty ;
   rdfs:comment "this resource is about the same resource as the Treasury of Lives resource"@en ;
@@ -632,6 +639,13 @@ adm:sameAsrKTs
   rdfs:comment "this resource is about the same resource as the rKTs resource"@en ;
   rdfs:domain bdo:Entity ;
   rdfs:label "same as rKTs"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsMBBT
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the resource in Markus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as Markus Bingenheimer's Bibliography of Translations"@en ;
   rdfs:subPropertyOf owl:sameAs ;
 .
 adm:sameAsCBCAt

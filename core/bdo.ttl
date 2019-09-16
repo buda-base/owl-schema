@@ -3234,6 +3234,7 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
   rdfs:domain bdo:Work ;
   rdfs:label "derivative of"@en ;
   rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workExpressionOf ;
   owl:inverseOf bdo:workHasDerivative ;
 .
 bdo:workDimHeight
@@ -3375,14 +3376,15 @@ bdo:workHasDerivative
   rdfs:domain bdo:Work ;
   rdfs:label "has derivative"@en ;
   rdfs:range bdo:Work ;
-  rdfs:seeAlso bdo:workDerivativeOf ;
+  rdfs:subPropertyOf bdo:workHasExpression ;
+  owl:inverseOf bdo:workDerivativeOf ;
 .
 bdo:workHasExpression
   a owl:ObjectProperty ;
   rdfs:domain bdo:Work ;
   rdfs:label "has expression"@en ;
   rdfs:range bdo:Work ;
-  rdfs:seeAlso bdo:workExpressionOf ;
+  owl:inverseOf bdo:workExpressionOf ;
 .
 bdo:workHasItem
   a owl:ObjectProperty ;
