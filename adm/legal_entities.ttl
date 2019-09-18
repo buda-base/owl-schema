@@ -120,6 +120,18 @@ bda:LD_SAT_images
   adm:provider bda:CP030 ;
   skos:prefLabel "Provided by SAT under the CC BY-NC-SA 4.0 license"@en ;
 .
+bda:LD_BNF_PD
+  a adm:LegalData ;
+  adm:license bda:LicensePublicDomain ;
+  adm:provider bda:CP022 ;
+  skos:prefLabel "Source gallica.bnf.fr / BnF, Public domain"@en ;
+.
+bda:LD_IA_PD
+  a adm:LegalData ;
+  adm:license bda:LicensePublicDomain ;
+  adm:provider bda:CP029 ;
+  skos:prefLabel "Provided by Internet Archive, Public domain"@en ;
+.
 LegalData:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;

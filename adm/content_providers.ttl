@@ -129,7 +129,7 @@ bda:CP021
 bda:CP022
   a adm:ContentProvider ;
   a foaf:Organization ;
-  adm:termsOfUse "http://gallica.bnf.fr/html/und/conditions-dutilisation-des-contenus-de-gallica"^^xsd:anyURI ;
+  adm:termsOfUse "https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"^^xsd:anyURI ;
   skos:altLabel "Bibliothèque nationale de France"@fr ;
   skos:prefLabel "BnF" ;
   adm:attributionStatement "Source gallica.bnf.fr / Bibliothèque nationale de France"@fr ;
