@@ -3339,33 +3339,7 @@ bdo:workGenre
   a owl:ObjectProperty ;
   rdfs:comment """The referenced Topic is expected to be a \"genre\" topic and eventually the genre topics will be moved to a class of Genre and/or a Taxonomy of Genre may be supplied.
 
-A genre is intended to capture a form or structural type of the work versus the content of the work.
-
-For example, a composite :Work may have several genres and may be about several subjects:
-
-bdr:W12827 a :Work ;
-      :workHasGenre bdr:T132 ;
-      :workHasGenre bdr:T1875 ;
-      :workIsAbout bdr:T1388 ;
-      :workIsAbout bdr:T317 ;
-      :workIsAbout bdr:T354 ;
-
-bdr:T132 a :Topic ;
-      rdfs:label \"commentary\"@en .
-
-bdr:T1875 a :Topic ;
-      rdfs:label \"man ngag sde\"@bo-x-ewts .
-
-bdr:T1388 a :Topic ;
-      rdfs:label \"khregs chod\"@bo-x-ewts .
-
-bdr:T317 a :Topic ;
-      rdfs:label \"rdzogs chen sgrub mchod\"@bo-x-ewts .
-
-bdr:T354 a :Topic ;
-      rdfs:label \"rdzogs chen\"@bo-x-ewts .
-
-This suggests that bdr:W12827 contains some commentaries and some instructions regarding dzogchen and so forth."""@en ;
+A genre is intended to capture a form or structural type of the work versus the content of the work."""@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "genre"@en ;
   rdfs:range bdo:Topic ;
