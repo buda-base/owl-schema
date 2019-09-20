@@ -52,7 +52,8 @@ bdr:Binding_Continuous_Folded
 bdr:Binding_Continuous_Leporello
   a bdo:Binding_Continuous ;
   rdfs:comment "folded and bound between front and back boards"@en ;
-  skos:altLabel "Thyāsaphu"@en ;
+  skos:altLabel "Thyāsaphu"@sa-x-iast ;
+  skos:altLabel "Thyāsaphū"@sa-x-iast ;
   skos:prefLabel "leporello"@en ;
 .
 bdr:Binding_Continuous_Scroll
