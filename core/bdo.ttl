@@ -3454,31 +3454,7 @@ bdo:workIncipit
 .
 bdo:workIsAbout
   a owl:ObjectProperty ;
-  rdfs:comment """The referenced Entity is expected to be a subject of the work - something the work is about.
-
-A composite :Work may have several genres and may be about several subjects:
-
-bdr:W12827 a :Work ;
-      :workHasGenre bdr:T132 ;
-      :workHasGenre bdr:T1875 ;
-      :workIsAbout bdr:T1388 ;
-      :workIsAbout bdr:T317 ;
-      :workIsAbout bdr:T354 ;
-
-bdr:T132 a :Topic ;
-      rdfs:label \"commentary\"@en .
-
-bdr:T1875 a :Topic ;
-      rdfs:label \"man ngag sde\"@bo-x-ewts .
-
-bdr:T1388 a :Topic ;
-      rdfs:label \"khregs chod\"@bo-x-ewts .
-
-bdr:T317 a :Topic ;
-      rdfs:label \"rdzogs chen sgrub mchod\"@bo-x-ewts .
-
-bdr:T354 a :Topic ;
-      rdfs:label \"rdzogs chen\"@bo-x-ewts ."""@en ;
+  rdfs:comment """The referenced Entity is expected to be a subject of the work - something the work is about."""@en ;
   rdfs:label "is about"@en ;
 .
 bdo:workIsNumbered
