@@ -211,6 +211,14 @@ bdr:New
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Newari"@en ;
 .
+bdr:NeDeva
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:language bdr:LangNe ;
+  bdo:script bdr:ScriptDeva ;
+  rdfs:subClassOf bdr:LangScript ;
+  skos:prefLabel "Nepali in Devanagari"@en ;
+.
 bdr:NewDeva
   a bdr:New ;
   bdo:language bdr:LangNew ;

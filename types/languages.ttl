@@ -149,6 +149,16 @@ bdr:LangMn
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Mongolian"@en ;
 .
+bdr:LangNe
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "ne" ;
+  bdo:langMARCCode "nep" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/nep> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Nepali"@en ;
+  rdfs:comment "This is the macro-language for all dialects of Nepali."
+.
 bdr:LangNew
   a bdo:Language ;
   a owl:Class ;

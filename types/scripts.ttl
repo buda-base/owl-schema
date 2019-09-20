@@ -118,6 +118,7 @@ bdr:ScriptNewa
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q7237292> ;
   rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
   skos:prefLabel "Pracalit"@en ;
+  skos:altLabel "pracalita"@sa-x-iast ;
 .
 bdr:ScriptPostGupta
   a bdo:Script ;
