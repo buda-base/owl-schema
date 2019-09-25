@@ -40,15 +40,6 @@ bda:LD_BDRC_CC0
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "Provided by BDRC under the CC0 license"@en ;
 .
-bda:LD_BDRC_Open
-  a adm:LegalData ;
-  adm:provider bda:CP021 ;
-  adm:copyrightOwner bda:CP021 ;
-  adm:license bda:LicenseCC0 ;
-  adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
-  skos:prefLabel "Provided by BDRC under the CC0 license"@en ;
-  owl:deprecated true ;
-.
 bda:LD_rKTs_CC0
   a adm:LegalData ;
   adm:provider bda:CP036 ;
@@ -131,6 +122,13 @@ bda:LD_IA_PD
   adm:license bda:LicensePublicDomain ;
   adm:provider bda:CP029 ;
   skos:prefLabel "Provided by Internet Archive, Public domain"@en ;
+.
+bda:LD_IA_Metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseNoKnownCopyright ;
+  adm:provider bda:CP029 ;
+  rdfs:comment "From a private communication: \"most metadata comes from others. sometimes others declare something, but we make not claims about it.\""@en ;
+  skos:prefLabel "Provided by Internet Archive, No copyright claim"@en ;
 .
 LegalData:
   a owl:Ontology ;

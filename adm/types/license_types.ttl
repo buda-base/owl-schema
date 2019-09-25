@@ -15,6 +15,7 @@
 bda:LicenseAllRightsReserved
   a adm:License ;
   rdfs:comment "Use it for works under copyright that do not say anything about the copyrights or saying All Rights Reserved."@en ;
+  rdfs:seeAlso <http://rightsstatements.org/vocab/InC/1.0/> ;
   skos:prefLabel "All Rights Reserved"@en ;
 .
 bda:LicenseCC0
@@ -69,6 +70,12 @@ bda:LicensePublicDomain
   rdfs:comment "Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws."@en ;
   rdfs:seeAlso <https://creativecommons.org/publicdomain/mark/1.0/deed> ;
   skos:prefLabel "Public Domain"@en ;
+.
+bda:LicenseNoKnownCopyright
+  a adm:License ;
+  rdfs:comment "No Known Copyright"@en ;
+  rdfs:seeAlso <http://rightsstatements.org/vocab/NKC/1.0/> ;
+  skos:prefLabel "No Known Copyright"@en ;
 .
 License:
   a owl:Ontology ;
