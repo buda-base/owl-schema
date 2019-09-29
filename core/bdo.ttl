@@ -3237,6 +3237,23 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
   rdfs:subPropertyOf bdo:workExpressionOf ;
   owl:inverseOf bdo:workHasDerivative ;
 .
+bdo:workTranslationOf
+  a owl:ObjectProperty ;
+  rdfs:comment """This work is a translation of the reference work."""@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "translation of"@en ;
+  rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workTranslationOf ;
+  owl:inverseOf bdo:workHasTranslation ;
+.
+bdo:workHasParallelsIn
+  a owl:ObjectProperty ;
+  a owl:SymmetricProperty ;
+  rdfs:comment """This work has some parallels in another work, meaning it displays intertextuality patterns."""@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "parallels in"@en ;
+  rdfs:range bdo:Work ;
+.
 bdo:workDimHeight
   a owl:DatatypeProperty ;
   rdfs:comment "height or thickness of the physical item of a :Work in cm"@en ;
@@ -3352,6 +3369,15 @@ bdo:workHasDerivative
   rdfs:range bdo:Work ;
   rdfs:subPropertyOf bdo:workHasExpression ;
   owl:inverseOf bdo:workDerivativeOf ;
+.
+bdo:workHasTranslation
+  a owl:ObjectProperty ;
+  rdfs:comment "The referenced work is a translation of this work."@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "has translation"@en ;
+  rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workHasDerivative ;
+  owl:inverseOf bdo:workTranslationOf ;
 .
 bdo:workHasExpression
   a owl:ObjectProperty ;
