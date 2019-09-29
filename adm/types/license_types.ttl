@@ -21,38 +21,38 @@ bda:LicenseAllRightsReserved
 bda:LicenseCC0
   a adm:License ;
   rdfs:comment "The work is made available under Creative Commons, CC0 1.0."@en ;
-  rdfs:seeAlso <https://creativecommons.org/share-your-work/public-domain/cc0/> ;
+  rdfs:seeAlso <http://creativecommons.org/publicdomain/zero/1.0/> ;
   skos:prefLabel "Creative Commons CC0"@en ;
 .
 bda:LicenseCCBYNC30U
   a adm:License ;
   rdfs:comment "The work is made available under Creative Commons Attribution No Commercial Use version 3.0 Unported"@en ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc/3.0/> ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by-nc/3.0/> ;
   skos:prefLabel "CCBYNC30U"@en ;
 .
 bda:LicenseCCBYNCND3U
   a adm:License ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-nd/3.0/> ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by-nc-nd/3.0/> ;
   skos:prefLabel "Creative Commons BY-NC-ND 3.0 Unported"@en ;
 .
 bda:LicenseCCBYNCSA3U
   a adm:License ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-sa/3.0/> ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by-nc-sa/3.0/> ;
   skos:prefLabel "Creative Commons BY-NC-SA 3.0 Unported"@en ;
 .
 bda:LicenseCCBYSA3U
   a adm:License ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/3.0/> ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by-sa/3.0/> ;
   skos:prefLabel "Creative Commons BY-SA 3.0 Unported"@en ;
 .
 bda:LicenseCCBYSA4U
   a adm:License ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-sa/4.0/> ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by-sa/4.0/> ;
   skos:prefLabel "Creative Commons BY-SA 4.0 Unported"@en ;
 .
 bda:LicenseCCBYNCSA4U
   a adm:License ;
-  rdfs:seeAlso <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by-nc-sa/4.0/> ;
   skos:prefLabel "Creative Commons BY-NC-SA 4.0 Unported"@en ;
 .
 bda:LicenseMixed
@@ -68,7 +68,7 @@ bda:LicenseODCBY10
 bda:LicensePublicDomain
   a adm:License ;
   rdfs:comment "Works in the Public Domain. Creative materials that are not protected by intellectual property laws such as copyright, trademark, or patent laws."@en ;
-  rdfs:seeAlso <https://creativecommons.org/publicdomain/mark/1.0/deed> ;
+  rdfs:seeAlso <http://creativecommons.org/publicdomain/mark/1.0/> ;
   skos:prefLabel "Public Domain"@en ;
 .
 bda:LicenseNoKnownCopyright
@@ -83,6 +83,6 @@ License:
 .
 adm:License
   a owl:Class ;
-  rdfs:comment "License describes the legal standing of copyright for the Work.  BDRC applies a section 108 copyright analysis to Works in its archive. Copyright protects works from being copied and distributed and varies by country: In the US, the right to copy is held 70 years after the death of the author, 50 years after the death of the author in China, and so on. If the Work is not under copyright protection, BDRC applies CCBY, PublicDomain, or Mixed as needed. Note: texts produced by electronic input are generally not considered protected by copyright."@en ;
+  rdfs:comment "License describes the legal standing of copyright for the Work (All rights reserved, Public domain, Creative Commons License, etc.)."@en ;
   rdfs:label "License"@en ;
 .
