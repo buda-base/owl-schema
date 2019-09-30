@@ -153,6 +153,13 @@ bdr:HiDeva
   rdfs:subClassOf bdr:Hi ;
   skos:prefLabel "Hindi (in Devanagari)"@en ;
 .
+bdr:Inc
+  a bdo:LangScript ;
+  bdo:language bdr:LangInc ;
+  rdfs:subClassOf bdo:LangScript ;
+  rdfs:comment "use for undetermined Indic language" ;
+  skos:prefLabel "Indic"@en ;
+.
 bdr:It
   a bdo:LangScript ;
   bdo:language bdr:LangIt ;

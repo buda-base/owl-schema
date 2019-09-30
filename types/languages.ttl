@@ -106,6 +106,15 @@ bdr:LangHi
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Hindi"@en ;
 .
+bdr:LangInc
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "inc" ;
+  rdfs:comment "use for undetermined Indic language" ;
+  rdfs:seeAlso <http://www.lexvo.org/page/iso639-5/inc> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Indic"@en ;
+.
 bdr:LangIt
   a bdo:Language ;
   a owl:Class ;
