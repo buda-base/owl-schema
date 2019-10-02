@@ -670,6 +670,14 @@ adm:sameAsrKTs
   rdfs:label "same as rKTs"@en ;
   rdfs:subPropertyOf owl:sameAs ;
 .
+adm:seeAlsoDoc
+  a owl:AnnotationProperty ;
+  rdfs:comment "A link to a document which provides additional detail on the resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "see also documentation"@en ;
+  rdfs:range xsd:anyURI ;
+  rdfs:subPropertyOf rdfs:seeAlso ;
+.
 adm:seeOther
   a owl:AnnotationProperty ;
   rdfs:comment "use to indicate a url to a another site providing other information on the subject :Entity. This property is used to refer to information that is not necessarily conformant to RDF Linked Open Data"@en ;
@@ -711,6 +719,12 @@ adm:supportedBy
   rdfs:domain adm:StatementAnnotationBody ;
   rdfs:label "supported by"@en ;
 .
+adm:technicalComment
+  a owl:AnnotationProperty ;
+  rdfs:comment "a detailed explanation of the way a resource is used in the ontology"@en ;
+  rdfs:label "technical comment"@en ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
 adm:termsOfUse
   a owl:AnnotationProperty ;
   rdfs:comment "The terms of use for the metadata representation of the :Entity resource"@en ;
@@ -718,6 +732,13 @@ adm:termsOfUse
   rdfs:label "terms of use for the resource metadata"@en ;
   rdfs:range adm:TermsOfUse ;
   rdfs:seeAlso adm:TermsOfUse ;
+.
+adm:translationPriority
+  a owl:AnnotationProperty ;
+  rdfs:comment "This property is used to prioritize the translation of labels, tooltips and comments for various elements of the ontology"@en ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:label "translation priority"@en ;
+  rdfs:range xsd:integer ;
 .
 adm:userTooltip
   a owl:AnnotationProperty ;

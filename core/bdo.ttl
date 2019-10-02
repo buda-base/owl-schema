@@ -2962,6 +2962,14 @@ bdo:transliteration
   rdfs:label "transliteration"@en ;
   rdfs:range bdo:Transliteration ;
 .
+bdo:uiAbbr
+  a owl:AnnotationProperty ;
+  rdfs:comment ":uiAbbr is used as labels for items such as canon catalog SigLas and Date eras. The value is a string such as \"T %s\"or \"%s C.E.\""@en ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:label "ui abbr"@en ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf rdfs:label ;
+.
 bdo:volumeHasEtext
   a owl:ObjectProperty ;
   rdfs:comment "refers to an :EtextRef that identifies an :Etext and the position of that :Etext in a containing :VolumeEtextAsset"@en ;
@@ -3237,23 +3245,6 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
   rdfs:subPropertyOf bdo:workExpressionOf ;
   owl:inverseOf bdo:workHasDerivative ;
 .
-bdo:workTranslationOf
-  a owl:ObjectProperty ;
-  rdfs:comment """This work is a translation of the reference work."""@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "translation of"@en ;
-  rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workTranslationOf ;
-  owl:inverseOf bdo:workHasTranslation ;
-.
-bdo:workHasParallelsIn
-  a owl:ObjectProperty ;
-  a owl:SymmetricProperty ;
-  rdfs:comment """This work has some parallels in another work, meaning it displays intertextuality patterns."""@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "parallels in"@en ;
-  rdfs:range bdo:Work ;
-.
 bdo:workDimHeight
   a owl:DatatypeProperty ;
   rdfs:comment "height or thickness of the physical item of a :Work in cm"@en ;
@@ -3370,15 +3361,6 @@ bdo:workHasDerivative
   rdfs:subPropertyOf bdo:workHasExpression ;
   owl:inverseOf bdo:workDerivativeOf ;
 .
-bdo:workHasTranslation
-  a owl:ObjectProperty ;
-  rdfs:comment "The referenced work is a translation of this work."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "has translation"@en ;
-  rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workHasDerivative ;
-  owl:inverseOf bdo:workTranslationOf ;
-.
 bdo:workHasExpression
   a owl:ObjectProperty ;
   rdfs:domain bdo:Work ;
@@ -3398,6 +3380,14 @@ bdo:workHasNumber
   rdfs:comment "used with a Series to reference a number of the series"@en ;
   rdfs:label "number in series"@en ;
   owl:inverseOf bdo:workNumberOf ;
+.
+bdo:workHasParallelsIn
+  a owl:ObjectProperty ;
+  a owl:SymmetricProperty ;
+  rdfs:comment "This work has some parallels in another work, meaning it displays intertextuality patterns."@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "parallels in"@en ;
+  rdfs:range bdo:Work ;
 .
 bdo:workHasPart
   a owl:ObjectProperty ;
@@ -3450,10 +3440,12 @@ bdo:workHasSourcePrintery
 .
 bdo:workHasTranslation
   a owl:ObjectProperty ;
+  rdfs:comment "The referenced work is a translation of this work."@en ;
   rdfs:comment "The referenced work is identified as a translation of the subject work. This will be used, for example, when the referenced work is a Tibetan translation of a subject Sanskrit work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has translation"@en ;
   rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workHasDerivative ;
   owl:inverseOf bdo:workTranslationOf ;
 .
 bdo:workHollis
@@ -3480,7 +3472,7 @@ bdo:workIncipit
 .
 bdo:workIsAbout
   a owl:ObjectProperty ;
-  rdfs:comment """The referenced Entity is expected to be a subject of the work - something the work is about."""@en ;
+  rdfs:comment "The referenced Entity is expected to be a subject of the work - something the work is about."@en ;
   rdfs:label "is about"@en ;
 .
 bdo:workIsNumbered
@@ -4083,9 +4075,12 @@ bdo:workTitle
 bdo:workTranslationOf
   a owl:ObjectProperty ;
   rdfs:comment "The subject work is identified as a translation of the referenced work. This will be used, for example, when the subject work is a Tibetan translation of a referenced Sanskrit work."@en ;
+  rdfs:comment "This work is a translation of the reference work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "translation of"@en ;
   rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workTranslationOf ;
+  owl:inverseOf bdo:workHasTranslation ;
 .
 bdo:workType
   a owl:ObjectProperty ;
