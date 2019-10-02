@@ -221,6 +221,14 @@ adm:attributionURL
   rdfs:label "attribution url"@en ;
   rdfs:range xsd:anyURI ;
 .
+adm:canonicalHtml
+  a owl:AnnotationProperty ;
+  rdfs:comment "A link to the html representation of the entity. Use only for entities which URI is not accessible through http."@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "Html representation"@en ;
+  rdfs:range xsd:anyURI ;
+  rdfs:subPropertyOf rdfs:seeAlso ;
+.
 adm:catalogingConvention
   a owl:AnnotationProperty ;
   rdfs:domain rdfs:Resource ;
@@ -606,6 +614,27 @@ adm:sameAsBDRC
   rdfs:label "same as BDRC"@en ;
   rdfs:subPropertyOf owl:sameAs ;
 .
+adm:sameAsCBCAt
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the CBC@ resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as CBC@"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsDILA
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the DILA resource"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as DILA"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
+adm:sameAsMBBT
+  a owl:AnnotationProperty ;
+  rdfs:comment "this resource is about the same resource as the resource in Markus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "same as Markus Bingenheimer's Bibliography of Translations"@en ;
+  rdfs:subPropertyOf owl:sameAs ;
+.
 adm:sameAsToL
   a owl:AnnotationProperty ;
   rdfs:comment "this resource is about the same resource as the Treasury of Lives resource"@en ;
@@ -640,35 +669,6 @@ adm:sameAsrKTs
   rdfs:domain bdo:Entity ;
   rdfs:label "same as rKTs"@en ;
   rdfs:subPropertyOf owl:sameAs ;
-.
-adm:sameAsMBBT
-  a owl:AnnotationProperty ;
-  rdfs:comment "this resource is about the same resource as the resource in Markus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "same as Markus Bingenheimer's Bibliography of Translations"@en ;
-  rdfs:subPropertyOf owl:sameAs ;
-.
-adm:sameAsCBCAt
-  a owl:AnnotationProperty ;
-  rdfs:comment "this resource is about the same resource as the CBC@ resource"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "same as CBC@"@en ;
-  rdfs:subPropertyOf owl:sameAs ;
-.
-adm:sameAsDILA
-  a owl:AnnotationProperty ;
-  rdfs:comment "this resource is about the same resource as the DILA resource"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "same as DILA"@en ;
-  rdfs:subPropertyOf owl:sameAs ;
-.
-adm:canonicalHtml
-  a owl:AnnotationProperty ;
-  rdfs:comment "A link to the html representation of the entity. Use only for entities which URI is not accessible through http."@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "Html representation"@en ;
-  rdfs:subPropertyOf rdfs:seeAlso ;
-  rdfs:range xsd:anyURI ;
 .
 adm:seeOther
   a owl:AnnotationProperty ;
@@ -722,7 +722,7 @@ adm:termsOfUse
 adm:userTooltip
   a owl:AnnotationProperty ;
   rdfs:domain rdfs:Resource ;
-  rdfs:label "cataloging convention"@en ;
+  rdfs:label "user tooltip"@en ;
   rdfs:range rdf:langString ;
   rdfs:subPropertyOf rdfs:comment ;
 .
