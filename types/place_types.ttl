@@ -418,7 +418,7 @@ bdr:PT0057
   skos:notation "khul" ;
   skos:prefLabel "khul/"@bo-x-ewts ;
   skos:prefLabel "prefecture"@en ;
-  skos:prefLabel "传统地区"@en ;
+  skos:prefLabel "传统地区"@zh-hans ;
 .
 bdr:PT0058
   a bdo:PlaceType ;
@@ -584,7 +584,7 @@ bdr:PT0080
 bdr:PT0081
   a bdo:PlaceType ;
   skos:notation "ruSde" ;
-  skos:prefLabel "ru sde/"@en ;
+  skos:prefLabel "ru sde/"@bo-x-ewts ;
   skos:prefLabel "tribal territory"@en ;
   skos:prefLabel "联盟部落"@zh-hans ;
 .

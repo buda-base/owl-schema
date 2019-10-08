@@ -136,7 +136,7 @@ bdr:TraditionJordruk
   a owl:Class ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
   skos:prefLabel "Kalacakra"@en ;
-  skos:prefLabel "Six Branch Vajra Yoga"@en ;
+  skos:altLabel "Six Branch Vajra Yoga"@en ;
 .
 bdr:TraditionKadam
   a bdr:EightPracticeLineages ;
@@ -293,5 +293,5 @@ bdr:TraditionZurmangKagyu
 bdr:TR0003
   a bdo:ChineseTradition ;
   skos:prefLabel "Zen school"@en ;
-  skos:prefLabel "禪宗"@en ;
+  skos:prefLabel "禪宗"@zh-hant ;
 .
