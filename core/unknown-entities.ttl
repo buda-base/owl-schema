@@ -16,58 +16,58 @@
 Unknown:
   a owl:Ontology ;
   rdfs:comment "These are various unknown entities"@en ;
-  rdfs:label "Buda unknown entities"@en ;
+  rdfs:label "BUDA unknown entities"@en ;
 .
 bdr:UNKNOWN_Corporation
   a bdo:Corporation ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Corporation ;
-  rdfs:label "unkown corporation"@en ;
+  rdfs:label "Unkown corporation"@en ;
 .
 bdr:UNKNOWN_Lineage
   a bdo:Lineage ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Lineage ;
-  rdfs:label "unknown lineage"@en ;
+  rdfs:label "Unknown lineage"@en ;
 .
 bdr:UNKNOWN_Organization
   a bdo:Organization ;
   a owl:NamedIndividual ;
-  rdfs:label "unknown organization"@en ;
+  rdfs:label "Unknown organization"@en ;
 .
 bdr:UNKNOWN_Person
   a bdo:Person ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Person ;
-  rdfs:label "Unknown"@en ;
+  rdfs:label "Unknown person"@en ;
 .
 bdr:UNKNOWN_Place
   a bdo:Place ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Place ;
-  rdfs:label "Unknown"@en ;
+  rdfs:label "Unknown place"@en ;
 .
 bdr:UNKNOWN_Product
   a adm:Product ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Product ;
-  rdfs:label "Unknown"@en ;
+  rdfs:label "Unknown product"@en ;
 .
 bdr:UNKNOWN_Role
   a bdo:Role ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Role ;
-  rdfs:label "Unknown Role"@en ;
+  rdfs:label "Unknown role"@en ;
 .
 bdr:UNKNOWN_Topic
   a bdo:Topic ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Topic ;
-  rdfs:label "Unknown"@en ;
+  rdfs:label "Unknown topic"@en ;
 .
 bdr:UNKNOWN_Work
   a bdo:Work ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Work ;
-  rdfs:label "Unknown"@en ;
+  rdfs:label "Unknown work"@en ;
 .

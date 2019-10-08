@@ -19,7 +19,6 @@ bdo:Gender
 Gender:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:GenderFemale
   a bdo:Gender ;
@@ -32,6 +31,7 @@ bdr:GenderMale
 bdr:GenderMixed
   a bdo:Gender ;
   skos:prefLabel "mixed gender"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:GenderNotSpecified
   a bdo:Gender ;

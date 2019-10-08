@@ -39,6 +39,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 
 bf:Identifier
   a owl:Class ;
@@ -129,31 +130,35 @@ bdo:
 .
 bdo:AbstractWork
   a owl:Class ;
-  rdfs:label "Abstract work" ;
+  rdfs:comment "An abstract or conceptual work is the idea of a work, as opposed to an expression or manifestation which is a specific edition or witness."@en ;
+  rdfs:label "Abstract work"@en ;
   rdfs:subClassOf bdo:Work ;
 .
 bdo:Agent
   a owl:Class ;
   rdfs:comment "an entity that performs actions, e.g., creating works, teaching other agents, founding artificial places and so on"@en ;
-  rdfs:label "agent"@en ;
+  rdfs:label "Agent"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:AgentAsCreator
   a owl:Class ;
-  rdfs:comment ":AgentAsCreator has :role that is restricted to instances of :Creator (rdfs:subClassOf :Role)"@en ;
+  adm:technicalComment ":AgentAsCreator has :role that is restricted to instances of :Creator (rdfs:subClassOf :Role)"@en ;
+  rdfs:comment "creator"@en ;
   rdfs:label "agent as creator"@en ;
   rdfs:subClassOf bdo:AgentInRole ;
 .
 bdo:AgentInRole
   a owl:Class ;
-  rdfs:comment ":AgentInRole represents some :Agent performing an action in in a particular :Role in a context represented by the subject and property that refer to the :AgenInRole"@en ;
-  rdfs:label "agent in role"@en ;
+  adm:technicalComment ":AgentInRole represents some :Agent performing an action in in a particular :Role in a context represented by the subject and property that refer to the :AgenInRole"@en ;
+  rdfs:comment "property linking an entity or event to the agents and roles they play"@en ;
+  rdfs:label "agent"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:Agents
   a owl:Class ;
   rdfs:comment "The various sorts of agents represented in the ontology"@en ;
   rdfs:label "Agents"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
       a owl:Class ;
@@ -177,12 +182,12 @@ bdo:AgentsOrAgentInRole
 bdo:AhistoricalAgent
   a owl:Class ;
   rdfs:comment "An ahistorical agent may be a deity or other non-human agent that is said to exist outside of human history"@en ;
-  rdfs:label "an ahistorical agent"@en ;
+  rdfs:label "Ahistorical agent"@en ;
   rdfs:subClassOf bdo:SingleAgent ;
 .
 bdo:AnyDate
   a rdfs:Datatype ;
-  rdfs:comment "may be either an integer year or a YYYY-MM-DD xsd:date or a bdo:Date instance"@en ;
+  rdfs:comment "May be either an integer year or a YYYY-MM-DD xsd:date or a bdo:Date instance"@en ;
   rdfs:label "integer or date or bdo:Date"@en ;
   owl:equivalentClass [
       a owl:Class ;
@@ -209,7 +214,7 @@ bdo:AnyOrganization
 .
 bdo:AuthoredEvent
   a owl:Class ;
-  rdfs:comment "The event of authoring a :Work"@en ;
+  rdfs:comment "The event of authoring a work"@en ;
   rdfs:label "Authored"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
@@ -218,8 +223,8 @@ bdo:Binding
 .
 bdo:CarvedEvent
   a owl:Class ;
-  rdfs:comment "The event of carving a set of woodblocks for a :Work"@en ;
-  rdfs:label "Work Woodblocks Carved"@en ;
+  rdfs:comment "The event of carving a work (in woodblocks, stone, etc.)"@en ;
+  rdfs:label "Work carved"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:Catalog
@@ -232,6 +237,7 @@ bdo:ChineseDate
   a owl:Class ;
   rdfs:comment "The class of DILA Chinese date individuals"@en ;
   rdfs:label "Chinese date type"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:Date ;
 .
 bdo:ChineseMonastic
@@ -239,43 +245,46 @@ bdo:ChineseMonastic
 .
 bdo:CollectionInstitution
   a owl:Class ;
-  rdfs:comment "An Insitution containing a collection of works such as \"Bibliothèque EFEO - Preah Vanarât Ken Vong\" or \"Fragile Palm Leaves Foundation\" or \"National Library of Mongolia\""@en ;
+  rdfs:comment "An Insitution containing a collection of works such as \"Bibliothèque EFEO - Preah Vanarât Ken Vong\", \"Fragile Palm Leaves Foundation\" or \"National Library of Mongolia\""@en ;
   rdfs:label "Collection institution" ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:Organization ;
 .
 bdo:CompiledEvent
   a owl:Class ;
+  rdfs:comment "The event of compiling / editing a work (mostly collections)"@en ;
   rdfs:label "compiled"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:CompletedEvent
   a owl:Class ;
-  rdfs:comment "When, where and by whom production of a :Work was completed"@en ;
-  rdfs:label "Work Completed"@en ;
+  rdfs:comment "The event of completing a work"@en ;
+  rdfs:label "completed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:CopyEvent
   a owl:Class ;
-  rdfs:comment "An event of copying a :Work by some means such as manual enscribing, photocopying, etc."@en ;
-  rdfs:label "Work Copied"@en ;
+  rdfs:comment "An event of copying a work by some means such as manual enscribing, photocopying, etc."@en ;
+  rdfs:label "copied"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:CoreUnion
   a owl:Class ;
   rdfs:comment "a union of core ontology classes"@en ;
   rdfs:label "core union"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:Union ;
 .
 bdo:Corporation
   a owl:Class ;
-  rdfs:comment "Corporation defines important social institutions in Tibet that (1) owned land and (2) had members. Examples include families and monastic institutions"@en ;
-  rdfs:comment "The Names of individual Corporations are represented by rdfs:label"@en ;
+  rdfs:comment "Corporation defines important social institutions. For instance in Tibet those that (1) owned land and (2) had members. Examples include families and monastic institutions"@en ;
+  adm:technicalComment "The Names of individual Corporations are represented by rdfs:label"@en ;
   rdfs:label "Corporation"@en ;
   rdfs:subClassOf bdo:Organization ;
 .
 bdo:CorporationMember
   a owl:Class ;
-  rdfs:comment """Describes a member of the subject Corporation by indicating the :Person that is a member and the :CorporationMemberType of the :Person:
+  adm:technicalComment """Describes a member of the subject Corporation by indicating the :Person that is a member and the :CorporationMemberType of the :Person:
 
 bdr:Czzzz a :Corporation ;
                  :corporationHasMember
@@ -283,51 +292,44 @@ bdr:Czzzz a :Corporation ;
                          :corporationMember bdr:Pyyyyy ] ,
                         [ a CorporationMemberByMarriage ;
                          :corporationMember bdr:Pxxxxx ] ."""@en ;
-  rdfs:label "Corporation Member"@en ;
+  rdfs:label "Corporation member"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:CorporationMemberByBlood
   a owl:Class ;
-  rdfs:label "Member by Blood"@en ;
+  rdfs:label "Member by blood"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:CorporationMemberByMarriage
   a owl:Class ;
-  rdfs:label "Member by Marriage"@en ;
+  rdfs:label "Member by marriage"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:CorporationMemberMonastic
   a owl:Class ;
-  rdfs:label "Monastic Member"@en ;
+  rdfs:label "Monastic member"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:CorporationMemberNotSpecified
   a owl:Class ;
-  rdfs:label "Unspecified Member"@en ;
+  rdfs:label "member (unspecified type)"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:CorrectedTitle
   a owl:Class ;
   rdfs:comment "A corrected title should have a :correctionOf that records the original text that is corrected by this title"@en ;
   rdfs:label "Corrected title"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:TitleVersion ;
 .
 bdo:Creator
   rdfs:subClassOf bdo:Role ;
 .
-bdo:DDBCAId
-  a owl:DatatypeProperty ;
-  rdfs:comment "Buddhist Studies Authority ID"@en ;
-  rdfs:comment "ID used by the Dharma Drum College Buddhist Studied Authorities databases, for places and persons. It should be just the ID starting with A (ex: A017001), not the full URL."@en ;
-  rdfs:domain bdo:PersonOrPlace ;
-  rdfs:range xsd:anyURI ;
-  rdfs:seeAlso <http://authority.dila.edu.tw/person/> ;
-  rdfs:seeAlso <http://authority.dila.edu.tw/place/> ;
-.
 bdo:Date
   a owl:Class ;
   rdfs:comment "The type of various sorts of date individuals such as DILA's Chinese date individuals - see subclass bdo:ChineseDateType"@en ;
   rdfs:label "Date type"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:EditedEvent
@@ -341,13 +343,14 @@ bdo:EditedEvent
 bdo:EnscribedEvent
   a owl:Class ;
   rdfs:comment "An event of preparing a written manuscript of a Work"@en ;
-  rdfs:label "Work Enscribed"@en ;
+  rdfs:label "enscribed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:EntitiesOrFacets
   a owl:Class ;
   rdfs:comment "class of various resources that may have :Note attached"@en ;
   rdfs:label "entity or facet"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
       a owl:Class ;
@@ -362,11 +365,12 @@ bdo:Entity
   a owl:Class ;
   rdfs:comment "Entities are the principle types or concepts in the BDRC ontology. Individuals of type subclass of :Entity will correspond to distinct individuals in the domain of discourse of BDRC, such as Persons, Places, and Works."@en ;
   rdfs:label "Entity"@en ;
+  adm:translationPriority 2 ;
 .
 bdo:Etext
   a owl:Class ;
   bdo:inferSubTree true ;
-  rdfs:comment """The :Etext :Entity represents a searchable Unicode text file (\"eText\"). In BUDA, eTexts are comprised of a base layer + at least one archival annotation layer, plus other annotation layers for different uses.  The base layer is a raw Unicode text file. The base layer contains Unicode text and line breaks that form a coordinate system.  The coordinate system includes a sequence number, position of start character and end character. The coordinate system is defined in the archival annotation layer.
+  adm:technicalComment """The :Etext :Entity represents a searchable Unicode text file (\"eText\"). In BUDA, eTexts are comprised of a base layer + at least one archival annotation layer, plus other annotation layers for different uses.  The base layer is a raw Unicode text file. The base layer contains Unicode text and line breaks that form a coordinate system.  The coordinate system includes a sequence number, position of start character and end character. The coordinate system is defined in the archival annotation layer.
 
 The RDF representation of :Etext is derived from the base layer, a graph definining the coordinate system :EtextNonPaginated or :EtextPaginate, and a graph for the :ItemEtext that references the volume of the :ItemEtext. 
 
@@ -404,8 +408,8 @@ bdo:EtextChunk
 .
 bdo:EtextLine
   a owl:Class ;
-  rdfs:comment "A line of Etext correponding to a line of text on a page of a physical/image asset. Lines are counted from the top of the page oriented in conventional reading orientation. Specified via line id, the starting chunk and char, and ending chunk and char."@en ;
-  rdfs:label "Etext Line"@en ;
+  rdfs:comment "An indication of correpondance with a line of text of a physical/image asset. Lines are counted from 1."@en ;
+  rdfs:label "line"@en ;
   rdfs:subClassOf bdo:EtextSlice ;
 .
 bdo:EtextNonPaginated
@@ -415,8 +419,8 @@ bdo:EtextNonPaginated
 .
 bdo:EtextPage
   a owl:Class ;
-  rdfs:comment "A page of Etext corresponding to a physical/image page. Specified with a page id, starting chunk and char, and ending chunbk and char"@en ;
-  rdfs:label "Etext Page"@en ;
+  rdfs:comment "An indication of correspondence with a page of a physical/image page."@en ;
+  rdfs:label "page"@en ;
   rdfs:subClassOf bdo:EtextSlice ;
 .
 bdo:EtextPaginated
@@ -426,23 +430,21 @@ bdo:EtextPaginated
 .
 bdo:EtextRef
   a owl:Class ;
-  rdfs:comment "Used as a reference from a :VolumeEtextAsset to a particular :Etext, via :eTextResource, and indicating the position, :seqNum, of the :Etext in the volume."@en ;
-  rdfs:label "Etext Reference"@en ;
+  adm:technicalComment "Used as a reference from a :VolumeEtextAsset to a particular :Etext, via :eTextResource, and indicating the position, :seqNum, of the :Etext in the volume."@en ;
+  rdfs:comment "links an etext volume to its various etexts (often 1)"@en ;
+  rdfs:label "etext"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:EtextSlice
   a owl:Class ;
-  rdfs:comment """A slice of text is specified by starting chunk and char, and ending chunk and char.
-
-Slices are used to identify portions of an Etext for any purpose, such as pages, lines, parts-of-speech; or a semantic textual structure such as a chapter or paragraph and so on.
-
-Types of slices may be identified as subclasses of :EtextSlice, such as :EtextLine and :EtextPage."""@en ;
-  rdfs:label "Etext Slice"@en ;
+  rdfs:comment """A slice of text is a character range, used to identify portions of an Etext for any purpose: correspondence with original pages, lines, etc."""@en ;
+  rdfs:label "slice"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:Event
   a owl:Class ;
-  rdfs:comment "Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc"@en ;
+  adm:technicalComment "Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc"@en ;
   rdfs:label "Event"@en ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -464,6 +466,7 @@ bdo:Facet
   a owl:Class ;
   rdfs:comment ":Facets are essentially n-ary relations that apply to one or more Resources. Facets are compound features or properties of Resources."@en ;
   rdfs:label "Facet"@en ;
+  adm:translationPriority 2 ;
 .
 bdo:Gender
   rdfs:subClassOf bdo:Type ;
@@ -484,6 +487,7 @@ bdo:IIIF2Or3Collection
           iiif3:Collection
         ) ;
     ] ;
+    adm:translationPriority 2 ;
 .
 bdo:IIIF2Or3Manifest
   a owl:Class ;
@@ -496,12 +500,14 @@ bdo:IIIF2Or3Manifest
           iiif3:Manifest
         ) ;
     ] ;
+    adm:translationPriority 2 ;
 .
 bdo:IIIFCollection
   a owl:Class ;
   rdfs:comment "can be v2.1.* or v3.0.*"@en ;
   rdfs:label "IIIF Collection"@en ;
   rdfs:subClassOf bdo:IIIFEntity ;
+  adm:translationPriority 2 ;
 .
 bdo:IIIFEntity
   a owl:Class ;
@@ -511,19 +517,22 @@ bdo:IIIFManifest
   rdfs:comment "can be v2.1.* or v3.0.*"@en ;
   rdfs:label "IIIF Manifest"@en ;
   rdfs:subClassOf bdo:IIIFEntity ;
+  adm:translationPriority 2 ;
 .
 bdo:IIIFUnion
   a owl:Class ;
   rdfs:comment "a union of iiif classes"@en ;
   rdfs:label "iiif union"@en ;
   rdfs:subClassOf bdo:Union ;
+  adm:translationPriority 2 ;
 .
 bdo:ISBN
   a rdfs:Datatype ;
   bdo:dataTypeExpression "^(97(8|9))?\\d{9}(\\d|X)$" ;
-  rdfs:comment "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
-  rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
-  rdfs:label "International Standard Book Number"@en ;
+  rdfs:comment "International Standard Book Number"@en ;
+  adm:technicalComment "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
+  rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
+  rdfs:label "ISBN"@en ;
 .
 bdo:IntegerOrString
   a rdfs:Datatype ;
@@ -538,13 +547,13 @@ bdo:IntegerOrString
 bdo:Item
   a owl:Class ;
   bdo:inferSubTree true ;
-  rdfs:comment ":Item captures the structural and administrative metadata associated with a digital or physical asset. While the BDRC ontology is primarily concerned with digital assets of texts, :Item could easily be extended to other types of digital assets (as is the case with the Tibetan International Digital Library collaboration) such as audio and video, as well as physical assets, such as the physical holdings of monastic libraries."@en ;
+  rdfs:comment ":Item captures the structural and administrative metadata associated with a digital or physical asset. While this ontology is primarily concerned with digital assets of texts, :Item could easily be extended to other types of digital assets such as audio and video; as well as physical assets, such as the physical holdings of libraries."@en ;
   rdfs:label "Item"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:ItemEtext
   a owl:Class ;
-  rdfs:comment """:ItemEtext represent the :Etext items in the archive (i.e the actual digital files). 
+  adm:technicalComment """:ItemEtext represent the :Etext items in the archive (i.e the actual digital files). 
 
 There are two subclasses of :ItemEtext. (1) :ItemEtextNonPaginated and (2) :ItemEtextPaginated. These are characterized by the presence or lack of pagination information maintained in the :ItemEtext. OCR is considered ItemEtextPaginated and manual input saved in RTF format  considered :ItemEtextNonPaginated. These are distinguished because there are different stuctural characteristics in the :ItemEtext.
 
@@ -555,33 +564,34 @@ An :ItemEtext typically will represent an entire published Work. There won't be 
 .
 bdo:ItemEtextNonPaginated
   a owl:Class ;
-  rdfs:comment """An eText created by manual inputting. Input etexts are prepared manually and used to typeset printed versions of texts in the case of many contemporary Tibetan publications. :ItemEtextNonPaginated eTexts generally do not provide alignment with digitized pages.
+  adm:technicalComment """An eText created by manual inputting. Input etexts are prepared manually and used to typeset printed versions of texts in the case of many contemporary Tibetan publications. :ItemEtextNonPaginated eTexts generally do not provide alignment with digitized pages.
 
 :ItemEtextNonPaginated generally only have a known relationship to a Work but there is generally not a known page correspondence to the :Item. In some cases, there is no known correspondence to the physical volume structure of the :Work. It may be possible to derive this information later."""@en ;
   rdfs:label "Non Paginated Etext Item"@en ;
   rdfs:subClassOf bdo:ItemEtext ;
+  adm:translationPriority 2 ;
 .
 bdo:ItemEtextPaginated
   a owl:Class ;
-  rdfs:comment """An eText created via OCR or manual input where pagination has been maintained in the eText of a set of digitized page images.
+  adm:technicalComment """An eText created via OCR or manual input where pagination has been maintained in the eText of a set of digitized page images.
 
 Paginated etexts are searchable Unicode documents that correspond to image assets in BUDA. Paginated etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive. :ItemEtextPaginated have known pagination correspondence to an :ItemImageAsset from which they are derived.
 
 In some cases, such as texts from the Asian Classics Input Project (ACIP), pagination information is maintained in the :ItemEtextPaginated, even though there might not be a known correspondence to the image asset."""@en ;
   rdfs:label "Paginated Etext Item"@en ;
   rdfs:subClassOf bdo:ItemEtext ;
+  adm:translationPriority 2 ;
 .
 bdo:ItemImageAsset
   a owl:Class ;
   rdfs:comment "A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats."@en ;
-  rdfs:label "Image Asset"@en ;
+  rdfs:label "Image item"@en ;
   rdfs:subClassOf bdo:Item ;
 .
 bdo:ItemPhysicalAsset
   a owl:Class ;
-  rdfs:comment """A physical volume or volumes.
-
-A ItemPhysicalAsset refers to the library Place which has one or more physical copies of the  catalogued Work and shows the number of copies that are held at the library. The :itemShelf is the Library's shelving information concerning the location in the library of the physical copies. The exception is an optional note regarding missing volumes in a copy or other information such as may  be useful to qualify the status of one or more copies.
+  rdfs:comment "A physical volume or volumes."@en ;
+  adm:technicalComment """A ItemPhysicalAsset refers to the library Place which has one or more physical copies of the  catalogued Work and shows the number of copies that are held at the library. The :itemShelf is the Library's shelving information concerning the location in the library of the physical copies. The exception is an optional note regarding missing volumes in a copy or other information such as may  be useful to qualify the status of one or more copies.
 
 Examples:
 
@@ -616,14 +626,16 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
        :itemCopies 1 ;
        :itemShelf \"ཉ|༣|||001811\" ;
        :itemException \"དེབ་གཅིག་ཕྱི་ལ་གཡར་ནས་མ་འབྱོར\"@bo ."""@en ;
-  rdfs:label "Physical Asset"@en ;
+  rdfs:label "Physical item"@en ;
   rdfs:subClassOf bdo:Item ;
 .
 bdo:LCCN
   a rdfs:Datatype ;
   bdo:dataTypeExpression "[[a-z]|[[a-z][a-z]|dd]|[a-z][[a-z][a-z]|dd]|[a-z][a-z]dd]dddddddd" ;
   rdfs:isDefinedBy <http://www.loc.gov/marc/lccn-namespace.html> ;
-  rdfs:label "Library of Congress Control Number"@en ;
+  rdfs:comment "Library of Congress Control Number"@en ;
+  rdfs:label "LCCN" ;
+  adm:translationPriority 2 ;
   owl:equivalentClass xsd:string ;
 .
 bdo:LCCallNumber
@@ -631,6 +643,7 @@ bdo:LCCallNumber
   bdo:dataTypeExpression <https://gist.github.com/kurtraschke/560162> ;
   rdfs:isDefinedBy <https://www.loc.gov/aba/publications/FreeCSM/freecsm.html> ;
   rdfs:label "Library of Congress Call Number"@en ;
+  adm:translationPriority 2 ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
 .
 bdo:LangScript
@@ -651,7 +664,7 @@ bdo:Language
 .
 bdo:Lineage
   a owl:Class ;
-  rdfs:comment """Example:
+  adm:technicalComment """Example:
 
 bdr:L8LS15684 a :Lineage ; :status bdr:StatusReleased ;
       rdfs:label \"mngon rtogs rgyan gyi 'grel pa don gsal gyi brgyud pa/\"@bo-x-ewts ;
@@ -677,14 +690,14 @@ bdr:L8LS15684 a :Lineage ; :status bdr:StatusReleased ;
   rdfs:comment """Lineages represent information about how a particular text or group of texts or perhaps purely oral transmission has been passed from one individual to another. The Tibetan genres, gsan yig and thob yig.
 
 Lineage transmissions capture the relationship between lineage holders, sets of texts and the places and dates where/when the lineage was transferred from one holder to another."""@en ;
-  rdfs:comment "Names are represented by rdfs:label"@en ;
+  adm:technicalComment "Names are represented by rdfs:label"@en ;
   rdfs:label "Lineage"@en ;
-  rdfs:seeAlso <https://link.springer.com/article/10.1023%2FA%3A1004844115222?LI=true> ;
+  rdfs:seeAlso "https://link.springer.com/article/10.1023%2FA%3A1004844115222?LI=true"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:LineageEvent
   a owl:Class ;
-  rdfs:comment """Each :LineageReceived describes another :LineageHolder from whom the current :LineageHolder received the :Lineage transmission. Typically there is a unique :LineageHolder from whom the :Lineage is received but two or more are possible.
+  adm:technicalComment """Each :LineageReceived describes another :LineageHolder from whom the current :LineageHolder received the :Lineage transmission. Typically there is a unique :LineageHolder from whom the :Lineage is received but two or more are possible.
 
 For example,
 
@@ -698,13 +711,13 @@ bdr:Lwwww a :Lineage ;
                                 :lineageSite bdr:Gdddd ;
                                 :onOrAbout \"134u\" ] ;
                           :lineageWork bdr:Wcccc ]"""@en ;
-  rdfs:label "Lineage Event"@en ;
+  rdfs:label "Event"@en ;
   rdfs:seeAlso bdo:LineageHolder ;
   rdfs:subClassOf bdo:Event ;
 .
 bdo:LineageHolder
   a owl:Class ;
-  rdfs:comment """A :LineageHolder describes a :Person or other :Entity (i.e., a deity or mythical being) that was/is considered to be the authoritative transmitter of a :Lineage.
+  adm:technicalComment """A :LineageHolder describes a :Person or other :Entity (i.e., a deity or mythical being) that was/is considered to be the authoritative transmitter of a :Lineage.
 
 Usually the holder received the :Lineage from some other entity but there is a \"first\" holder who counts as the original holder of the :Lineage.
 
@@ -729,8 +742,9 @@ bdr:Lwwww a :Lineage ;
 .
 bdo:LineageOrNoteOrWork
   a owl:Class ;
-  rdfs:comment "the domain of :workLocation for use on :Lineage, or ;Note, or :Work"@en ;
+  adm:technicalComment "the domain of :workLocation for use on :Lineage, or :Note, or :Work"@en ;
   rdfs:label "lineage or note or work"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
       a owl:Class ;
@@ -752,11 +766,13 @@ bdo:MixedUnion
   rdfs:comment "a union of core and adm classes"@en ;
   rdfs:label "mixed union"@en ;
   rdfs:subClassOf bdo:Union ;
+  adm:translationPriority 2 ;
 .
 bdo:NoColophon
   a rdfs:Datatype ;
   rdfs:comment "Used to indicated that a Work has no colophon vs a Work for which the colophon has not been recorded in the metadata."@en ;
   rdfs:label "no colophon"@en ;
+  adm:translationPriority 2 ;
 .
 bdo:Note
   a owl:Class ;
@@ -768,12 +784,14 @@ bdo:ObjectType
   a owl:Class ;
   rdfs:comment "ObjectType describes how the witness came to be. For example, it could have been written by the author, an Autograph; it could have been printed from wood blocks, a BlockPrint; it could have been OCR'd from some other witness; and so on."@en ;
   rdfs:label "print type"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:Type ;
 .
 bdo:ObjectTypeMicrofilm
   a owl:Class ;
   rdfs:comment "the images for the associated work were digitized from microfilm"@en ;
   rdfs:label "microfilm"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:ObjectType ;
 .
 bdo:Organization
@@ -792,8 +810,8 @@ bdo:OriginalTitle
 .
 bdo:OriginatedEvent
   a owl:Class ;
-  rdfs:comment "When, where and by whom the production of a :Work was originated"@en ;
-  rdfs:label "Work Originated"@en ;
+  rdfs:comment "The event of origin of a work"@en ;
+  rdfs:label "originated"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:PaginationType
@@ -802,23 +820,24 @@ bdo:PaginationType
 bdo:Person
   a owl:Class ;
   rdfs:comment "The Person object tracks biographical data such as kinship relations, birth and death dates, administrative offices  and seats held, important events and known name variants.  Instances of Person objects are not created for historical and quasi-historical personages, including legendary and mythical figures. Deities are defined as Topics." ;
-  rdfs:comment "names are represented via bdo:PersonName"@en ;
+  adm:technicalComment "names are represented via bdo:PersonName"@en ;
   rdfs:label "Person"@en ;
   rdfs:subClassOf bdo:SingleAgent ;
 .
 bdo:PersonAffiliation
   a owl:Class ;
+  rdfs:comment "the event type for when a person gets affiliated with a lineage or organization"@en ;
   rdfs:label "Affiliation"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
 bdo:PersonAssumesOffice
   a owl:Class ;
-  rdfs:label "Assumes Office"@en ;
+  rdfs:label "Assumes office"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
 bdo:PersonAssumesSeat
   a owl:Class ;
-  rdfs:label "Assumes Seat"@en ;
+  rdfs:label "Assumes seat"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
 bdo:PersonBirth
@@ -828,12 +847,12 @@ bdo:PersonBirth
 .
 bdo:PersonBodhisattvaVowName
   a owl:Class ;
-  rdfs:label "Bodhisattva Vow Name"@en ;
+  rdfs:label "Bodhisattva vow name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
 bdo:PersonChineseName
   a owl:Class ;
-  rdfs:comment true ;
+  owl:deprecated true ;
   rdfs:label "Chinese Name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
@@ -867,6 +886,7 @@ The type of event is represented as a subclass of :PersonEvent"""@en ;
 .
 bdo:PersonEventNotSpecified
   a owl:Class ;
+  rdfs:comment "a type for unspecified person events"@en ;
   rdfs:label "Not Specified"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
@@ -928,7 +948,7 @@ bdo:PersonMarriage
 .
 bdo:PersonName
   a owl:Class ;
-  rdfs:comment """:PersonName is one or many authority names of :Person. :PersonName is represented by an rdfs:label and a subclass of :PersonName (which signifies the type of person name). For example: 
+  adm:technicalComment """:PersonName is one or many authority names of :Person. :PersonName is represented by an rdfs:label and a subclass of :PersonName (which signifies the type of person name). For example: 
 
     bdr:P1583 a :Person ; 
         :personName 
@@ -939,6 +959,7 @@ bdo:PersonName
 .
 bdo:PersonNameOrWorkTitle
   a owl:Class ;
+  adm:translationPriority 2 ;
   rdfs:comment "domain of :restored and :reswtoredAlt that area used to name and title variants restored from corrupt textual content"@en ;
   rdfs:label "person name or work title"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
@@ -965,6 +986,7 @@ bdo:PersonOrCorporation
   rdfs:comment "Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event"@en ;
   rdfs:comment "deprecated in favor of :Agent"@en ;
   rdfs:label "person or coporation"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
       a owl:Class ;
@@ -979,6 +1001,7 @@ bdo:PersonOrPlace
   a owl:Class ;
   rdfs:comment "domain of :DDBCAId which is used to record ids of Dharma Drum authority resources"@en ;
   rdfs:label "person or place"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
       a owl:Class ;
@@ -1005,11 +1028,13 @@ bdo:PersonOrTopic
 .
 bdo:PersonOtherName
   a owl:Class ;
+  rdfs:comment "name not fitting in any other name category"@en ;
   rdfs:label "Other Name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
 bdo:PersonPenName
   a owl:Class ;
+  rdfs:comment "name used by the author in the colophons of his works"@en ;
   rdfs:label "Pen Name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
@@ -1051,13 +1076,14 @@ bdo:PersonTulkuTitle
 .
 bdo:Place
   a owl:Class ;
-  rdfs:comment "Names are represented by rdfs:label"@en ;
+  adm:technicalComment "Names are represented by rdfs:label"@en ;
   rdfs:comment "Places are geographic entities ranging from monasteries, to villages, to counties, provinces and so on. Places are modeled in terms of subclasses that indicate the type of \"real world\" place that is referred to"@en ;
   rdfs:label "Place"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:PlaceAbandoned
   a owl:Class ;
+  rdfs:comment "event type describing when a place was abandonned"@en ;
   rdfs:label "abandoned"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
@@ -1100,19 +1126,20 @@ bdo:PrintMethod
 .
 bdo:PrintedEvent
   a owl:Class ;
-  rdfs:comment "An event of printing one or more :Items of a :Work"@en ;
-  rdfs:label "Work Printed"@en ;
+  rdfs:comment "An event of printing a work"@en ;
+  rdfs:label "Printed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:ProvenanceNote
   a owl:Class ;
+  rdfs:comment "note indicating the provenance of an information"@en ;
   rdfs:label "Provenance note"@en ;
   rdfs:subClassOf bdo:Note ;
 .
 bdo:PublishedEvent
   a owl:Class ;
-  rdfs:comment "When, where, and by whom or what corporation a :Work was published"@en ;
-  rdfs:label "Work Published"@en ;
+  rdfs:comment "An event describing the publication of a work"@en ;
+  rdfs:label "Published"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:PublishedWork
@@ -1122,14 +1149,14 @@ bdo:PublishedWork
 .
 bdo:RequestedEvent
   a owl:Class ;
-  rdfs:comment "When, where and by whom a :Work as requested to be produced"@en ;
-  rdfs:label "Work Requested"@en ;
+  rdfs:comment "An event describing the request for a work"@en ;
+  rdfs:label "requested"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:RevealedEvent
   a owl:Class ;
-  rdfs:comment "use for terma revelations"@en ;
-  rdfs:label "Work revealed"@en ;
+  rdfs:comment "An event describing the discovery of a work (for terma revelations)"@en ;
+  rdfs:label "revealed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:RevisedEvent
@@ -1139,7 +1166,7 @@ bdo:RevisedEvent
 .
 bdo:Role
   a owl:Class ;
-  rdfs:comment "Names are represented by rdfs:label"@en ;
+  adm:technicalComment "Names are represented by rdfs:label"@en ;
   rdfs:comment "Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly used concept in libraries."@en ;
   rdfs:label "Role"@en ;
   rdfs:subClassOf bdo:Facet ;

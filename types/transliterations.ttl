@@ -29,7 +29,7 @@ bdr:TransEWTS
   a bdo:Transliteration ;
   rdfs:seeAlso <http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/> ;
   skos:prefLabel "Extended Wylie"@en ;
-  skos:prefLabel "wa'i li"@bo-x-ewts ;
+  skos:prefLabel "wa'i li/"@bo-x-ewts ;
 .
 bdr:TransIAST
   a bdo:Transliteration ;

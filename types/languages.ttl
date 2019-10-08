@@ -68,7 +68,7 @@ bdr:LangDz
   rdfs:subClassOf bdo:Language ;
   skos:altLabel "Bhutanese"@en ;
   skos:prefLabel "Dzongkha"@en ;
-  skos:prefLabel "rdzong kha"@bo-x-ewts ;
+  skos:prefLabel "rdzong kha/"@bo-x-ewts ;
 .
 bdr:LangEn
   a bdo:Language ;
@@ -123,22 +123,6 @@ bdr:LangIt
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/ita> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Italian"@en ;
-.
-bdr:LangKhamba
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "khg" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Khamba"@en ;
-.
-bdr:LangKhamsTib
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "khg" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Khams Tibetan"@en ;
 .
 bdr:LangKm
   a bdo:Language ;
@@ -240,14 +224,6 @@ bdr:LangSa
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Sanskrit"@en ;
-.
-bdr:LangTseku
-  a bdr:LangBo ;
-  a owl:Class ;
-  bdo:langBCP47Lang "tsk" ;
-  bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
-  skos:prefLabel "Tseku"@en ;
 .
 bdr:LangUr
   a bdo:Language ;

@@ -19,11 +19,13 @@ bdo:Binding_Codex
   a owl:Class ;
   rdfs:label "Binding Codex" ;
   rdfs:subClassOf bdo:Binding ;
+  adm:translationPriority 2 ;
 .
 bdo:Binding_Continuous
   a owl:Class ;
   rdfs:label "continuous binding"@en ;
   rdfs:subClassOf bdo:Binding ;
+  adm:translationPriority 2 ;
 .
 bdo:Binding_LooseLeaf
   a owl:Class ;
@@ -48,6 +50,7 @@ bdr:Binding_Continuous_Folded
   a bdo:Binding_Continuous ;
   rdfs:comment "folded concertina or accordion style"@en ;
   skos:prefLabel "folded"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:Binding_Continuous_Leporello
   a bdo:Binding_Continuous ;

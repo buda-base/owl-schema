@@ -21,60 +21,51 @@ bdo:ChineseMonastic
 ChineseMonastic:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:R0ER0001
   a :ChineseMonastic ;
   skos:altLabel "亡身"@zh-hant ;
   skos:altLabel "燒身"@zh-hant ;
   skos:altLabel "燒身供養"@zh-hant ;
-  skos:prefLabel "Yíshēn"@zh-latn-pinyin ;
   skos:prefLabel "self-immolator"@en ;
   skos:prefLabel "遺身"@zh-hant ;
 .
 bdr:R0ER0002
   a :ChineseMonastic ;
-  skos:prefLabel "Chàngdǎo"@zh-latn-pinyin ;
   skos:prefLabel "public preacher"@en ;
   skos:prefLabel "唱導"@zh-hant ;
 .
 bdr:R0ER0003
   a :ChineseMonastic ;
   skos:altLabel "神異"@zh-hant ;
-  skos:prefLabel "Gǎntōng"@zh-latn-pinyin ;
   skos:prefLabel "miracle worker"@en ;
   skos:prefLabel "感通"@zh-hant ;
 .
 bdr:R0ER0004
   a :ChineseMonastic ;
-  skos:prefLabel "Mínglǜ"@zh-latn-pinyin ;
   skos:prefLabel "Vinaya expert"@en ;
   skos:prefLabel "明律"@zh-hant ;
 .
 bdr:R0ER0005
   a :ChineseMonastic ;
   skos:altLabel "誦經"@zh-hant ;
-  skos:prefLabel "Jīng shī"@zh-latn-pinyin ;
   skos:prefLabel "sutra recitator and chanter"@en ;
   skos:prefLabel "經師"@zh-hant ;
 .
 bdr:R0ER0006
   a :ChineseMonastic ;
-  skos:prefLabel "Xíchán"@zh-latn-pinyin ;
   skos:prefLabel "meditator"@en ;
   skos:prefLabel "習禪"@zh-hant ;
 .
 bdr:R0ER0007
   a :ChineseMonastic ;
   rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
-  skos:prefLabel "Xīngfú"@zh-latn-pinyin ;
   skos:prefLabel "promoter of merit"@en ;
   skos:prefLabel "興福"@zh-hant ;
 .
 bdr:R0ER0008
   a :ChineseMonastic ;
   skos:prefLabel "Dharma protector (human)"@en ;
-  skos:prefLabel "Hùfǎ"@zh-latn-pinyin ;
   skos:prefLabel "護法"@zh-hant ;
 .
 bdr:R0ER0029

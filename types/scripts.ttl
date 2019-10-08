@@ -14,7 +14,7 @@
 
 bdo:Script
   a owl:Class ;
-  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Kyug'Yig, Native (implies Unicode)"@en ;
+  rdfs:comment "A script in which a language is written. For example, DbuCan, DbuMed, Devanagari, Latin, etc."@en ;
   rdfs:label "Script"@en ;
   rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
 .
@@ -35,12 +35,12 @@ bdr:ScriptCyrl
 bdr:ScriptDbuCan
   a bdo:Script ;
   skos:prefLabel "Uchen"@en ;
-  skos:prefLabel "dbu can"@bo-x-ewts ;
+  skos:prefLabel "dbu can/"@bo-x-ewts ;
 .
 bdr:ScriptDbuMed
   a bdo:Script ;
   skos:prefLabel "Ume"@en ;
-  skos:prefLabel "dbu med"@bo-x-ewts ;
+  skos:prefLabel "dbu med/"@bo-x-ewts ;
 .
 bdr:ScriptDeva
   a bdo:Script ;
@@ -50,18 +50,22 @@ bdr:ScriptDeva
 bdr:ScriptEasternNagari
   a bdo:Script ;
   skos:prefLabel "Eastern Nāgārī"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptGilgitBamiyan1
   a bdo:Script ;
   skos:prefLabel "Gilgit Bamiyan Type I"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptGilgitBamiyan2
   a bdo:Script ;
   skos:prefLabel "Gilgit Bamiyan Type II"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptGupta
   a bdo:Script ;
   skos:prefLabel "Gupta"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptHans
   a bdo:Script ;
@@ -78,6 +82,7 @@ bdr:ScriptKhar
   rdfs:seeAlso <http://lexvo.org/id/script/Khar> ;
   skos:prefLabel "Kharoshthi"@en ;
   skos:prefLabel "Kharoṣṭhī"@sa-x-iast ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptKhmr
   a bdo:Script ;
@@ -86,7 +91,7 @@ bdr:ScriptKhmr
 bdr:ScriptKhyugYig
   a bdo:Script ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
-  skos:prefLabel "Kyug'yig"@en ;
+  skos:prefLabel "Kyug yig"@en ;
 .
 bdr:ScriptLatn
   a bdo:Script ;
@@ -107,6 +112,8 @@ bdr:ScriptNagari
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;
   rdfs:comment "Differs from Eastern Nāgarī"@en ;
   skos:prefLabel "Nāgarī"@en ;
+  skos:prefLabel "Nāgarī"@sa-x-iast ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptNepaleseHooked
   a bdo:Script ;
@@ -123,6 +130,7 @@ bdr:ScriptNewa
 bdr:ScriptPostGupta
   a bdo:Script ;
   skos:prefLabel "Post-gupta"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptRanj
   a bdo:Script ;
@@ -165,9 +173,11 @@ bdr:ScriptTirh
   skos:altLabel "Maithili"@en ;
   skos:altLabel "Mithilakshar"@en ;
   skos:prefLabel "Tirhuta"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:ScriptTransitionalGupta
   a bdo:Script ;
   rdfs:comment "Broader category than Post-gupta"@en ;
   skos:prefLabel "Transitional Gupta"@en ;
+  adm:translationPriority 2 ;
 .

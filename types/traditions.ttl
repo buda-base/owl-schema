@@ -52,14 +52,12 @@ bdr:FourMainKagyuTraditions
 .
 bdr:TR0001
   a bdo:ChineseTradition ;
-  skos:prefLabel "Sānjiējiào"@zh-latn-pinyin ;
   skos:prefLabel "Three stages school"@en ;
   skos:prefLabel "三階教"@zh-hant ;
 .
 bdr:TR0002
   a bdo:ChineseTradition ;
   skos:prefLabel "Tiantai school"@en ;
-  skos:prefLabel "Tiāntáizōng"@zh-latn-pinyin ;
   skos:prefLabel "天台宗"@zh-hant ;
 .
 bdr:TraditionBardrukKagyu
@@ -96,12 +94,12 @@ Some of the more careful Tibetan scholars suggested that the term Dkar brgyud pa
 
 See page 40, E.Gene Smith, \"Among Tibetan Texts\""""@en ;
   rdfs:comment "Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight."@en ;
-  rdfs:seeAlso <bdr:T1187> ;
+  rdfs:seeAlso bdr:T1187 ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
   skos:altLabel "Marpa Kargyu"@en ;
-  skos:altLabel "dmar pa bka' brgyud"@bo-x-ewts ;
+  skos:altLabel "dmar pa bka' brgyud/"@bo-x-ewts ;
   skos:prefLabel "Dagpo Kagyu"@en ;
-  skos:prefLabel "dwags po bka' brgyud"@bo-x-ewts ;
+  skos:prefLabel "dwags po bka' brgyud/"@bo-x-ewts ;
 .
 bdr:TraditionDharmaguptaka
   a bdo:Tradition ;
@@ -109,7 +107,6 @@ bdr:TraditionDharmaguptaka
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Dharmaguptaka> ;
   rdfs:subClassOf bdo:Tradition ;
   skos:prefLabel "Dharmaguptaka"@en ;
-  skos:prefLabel "Fǎzàng bù"@zh-latn-pinyin ;
   skos:prefLabel "法藏部"@zh-hant ;
 .
 bdr:TraditionDrigungKagyu
@@ -138,7 +135,6 @@ bdr:TraditionJordruk
   a bdr:EightPracticeLineages ;
   a owl:Class ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
-  skos:prefLabel "Jordruk"@en ;
   skos:prefLabel "Kalacakra"@en ;
   skos:prefLabel "Six Branch Vajra Yoga"@en ;
 .
@@ -151,7 +147,7 @@ bdr:TraditionKadam
 bdr:TraditionKagyu
   a bdr:EightPracticeLineages ;
   skos:prefLabel "Kagyu"@en ;
-  skos:prefLabel "bka' brgyud"@bo-x-ewts ;
+  skos:prefLabel "bka' brgyud/"@bo-x-ewts ;
 .
 bdr:TraditionKarmaKagyu
   a bdr:FourMainKagyuTraditions ;
@@ -174,9 +170,7 @@ bdr:TraditionMulasarvastivada
   a owl:Class ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Mulasarvastivada> ;
   rdfs:subClassOf bdo:Tradition ;
-  skos:prefLabel "Gēnběn Shuō Yīqièyǒu Bù"@zh-latn-pinyin ;
   skos:prefLabel "Mūlasarvāstivāda"@sa-x-iast ;
-  skos:prefLabel "मूलसर्वास्तिवाद"@sa-deva ;
   skos:prefLabel "根本說一切有部"@zh-hant ;
 .
 bdr:TraditionNedoKagyu
@@ -198,12 +192,11 @@ bdr:TraditionOrgyenNyengyu
   a bdr:EightPracticeLineages ;
   a owl:Class ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
-  skos:prefLabel "Orgyen Nyengru"@en ;
   skos:prefLabel "The Three Vajras"@en ;
 .
 bdr:TraditionPhagGruKagyu
   a bdr:FourMainKagyuTraditions ;
-  skos:prefLabel "Phag Gru Kagyu"@en ;
+  skos:prefLabel "Phagdru Kagyu"@en ;
 .
 bdr:TraditionRime
   a bdo:TibetanTradition ;
@@ -223,7 +216,6 @@ bdr:TraditionSarvastivada
   a owl:Class ;
   rdfs:subClassOf bdo:Tradition ;
   skos:prefLabel "Sarvāstivāda"@sa-x-iast ;
-  skos:prefLabel "Shuō Yīqièyǒu Bù"@zh-latn-pinyin ;
   skos:prefLabel "說一切有部"@zh-hant ;
 .
 bdr:TraditionShangpaKagyu
@@ -263,7 +255,7 @@ bdr:TraditionTsalpaKagyu
 .
 bdr:TraditionTsarSakya
   a bdr:TraditionSakya ;
-  rdfs:comment "one of     sa ngor tsar gsum"@en ;
+  rdfs:comment "one of  sa ngor tsar gsum"@en ;
   skos:prefLabel "Tsar Sakya"@en ;
 .
 bdr:TraditionYazangKagyu
@@ -280,30 +272,26 @@ bdr:TraditionZhalu
   rdfs:comment """term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala
  	
 འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།"""@en ;
-  rdfs:seeAlso <bdr:G1180> ;
-  rdfs:seeAlso <bdr:T1198> ;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/Shalu_Monastery> ;
+  rdfs:seeAlso bdr:G1180 ;
+  rdfs:seeAlso bdr:T1198 ;
+  rdfs:seeAlso "https://en.wikipedia.org/wiki/Shalu_Monastery"^^xsd:anyURI ;
   rdfs:subClassOf bdr:TraditionKadam ;
-  skos:altLabel "zha lu"@bo-x-ewts ;
+  skos:altLabel "zha lu/"@bo-x-ewts ;
   skos:prefLabel "Zhalu"@en ;
-  skos:prefLabel "zhwa lu"@bo-x-ewts ;
-  skos:prefLabel "ཞྭ་ལུ་"@bo ;
+  skos:prefLabel "zhwa lu/"@bo-x-ewts ;
 .
 bdr:TraditionZhije
   a bdr:EightPracticeLineages ;
   a owl:Class ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
   skos:prefLabel "Shije"@en ;
-  skos:prefLabel "Zhije"@en ;
 .
 bdr:TraditionZurmangKagyu
   a bdr:TraditionKarmaKagyu ;
-  skos:altLabel "Surmang Kagyu"@en ;
   skos:prefLabel "Zurmang Kagyu"@en ;
 .
 bdr:TR0003
   a bdo:ChineseTradition ;
-  skos:prefLabel "Chánzōng"@zh-latn-pinyin ;
   skos:prefLabel "Zen school"@en ;
   skos:prefLabel "禪宗"@en ;
 .

@@ -13,7 +13,7 @@
 
 bdo:Taxonomy
   a owl:Class ;
-  rdfs:comment """A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
+  adm:technicalComment """A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
 
 Assertions using :taxSubClass and :taxElementOf object properties organize the set of typed individuals into a class/subclass hierarchy. Typed indivduals can be asserted to be :taxSubClass of other individuals or of the :Taxonomy individual itself - the :Taxonomy individual is the root of the class/subclass hierarchy.
 
@@ -59,10 +59,10 @@ and
 Using typed individuals provides a straightforward approach to localization by simply attaching rdfs:label in the various languages to each of the typed individuals so that bdr:TraditionNyingma will have the zh, bo, and en labels needed to display in an application.
 
 Using typed individuals allows to provide a uniform approach to typing names, events, groups and so on rather than using owl:class/subclass relations in some cases and sub-properties (data or object) in other cases."""@en ;
-  rdfs:comment """Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a \"coherent\" set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
+  adm:technicalComment """Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a \"coherent\" set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
 
 Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:TraditionDrukpaKagyu find also instances of bdr:TraditionTodrukKagyu and so on."""@en ;
-  rdfs:comment """Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
+  adm:technicalComment """Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
 
 bdr:TraditionTaxonomy a :Taxonomy ;
       :taxSubclassProperty :taxSubclass ;
@@ -76,26 +76,35 @@ bdr:OtherTaxonomy a :Taxonomy ;
 
 Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously."""@en ;
   rdfs:label "Taxonomy"@en ;
+  adm:translationPriority 2 ;
 .
 Taxonomy:
   a owl:Ontology ;
 .
 bdo:taxHasSubClass
   a owl:ObjectProperty ;
-  rdfs:label "taxonomy has subclass"@en ;
+  rdfs:label """This represents a "has-a" relationship in taxonomies."""@en ;
+  rdfs:seeAlso "https://en.wikipedia.org/wiki/Has-a"^^xsd:anyURI ;
+  rdfs:label "has subtype"@en ;
+  skos:altLabel "has hyponym"@en ;
   owl:inverseOf bdo:taxSubClassOf ;
+  adm:translationPriority 2 ;
 .
 bdo:taxSubClassOf
   a owl:ObjectProperty ;
-  rdfs:label "This property identifies the subject as a subclass of a Taxonomy or some other subclass of a Taxonomy"@en ;
-  rdfs:label "taxonomy is subclass of"@en ;
+  rdfs:label """This represents a "is-a" relationship in taxonomies."""@en ;
+  rdfs:seeAlso "https://en.wikipedia.org/wiki/Is-a"^^xsd:anyURI ;
+  rdfs:label "is a"@en ;
+  skos:altLabel "has hypernym"@en ;
   rdfs:seeAlso bdo:Taxonomy ;
+  adm:translationPriority 2 ;
 .
 bdo:taxSubclassRelation
   a owl:AnnotationProperty ;
   rdfs:comment "This identifies a property that is used in a custom taxonomy to represent the subclass relation for the taxonomy"@en ;
   rdfs:domain bdo:Taxonomy ;
-  rdfs:label "taxonomy subclass relation"@en ;
+  rdfs:label "has "@en ;
   rdfs:range owl:ObjectProperty ;
   rdfs:seeAlso bdo:Taxonomy ;
+  adm:translationPriority 2 ;
 .

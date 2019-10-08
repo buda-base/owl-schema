@@ -33,7 +33,6 @@ LangScript:
   owl:imports <http://purl.bdrc.io/ontology/types/Language/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Script/> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:Bo
   a owl:Class , bdo:LangScript ;

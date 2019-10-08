@@ -20,6 +20,7 @@ bdo:PrintMethod_Intaglio
   a owl:Class ;
   rdfs:label "Print method Intaglio" ;
   rdfs:subClassOf bdo:PrintMethod ;
+  adm:translationPriority 2 ;
 .
 bdo:PrintMethod_Manuscript
   a owl:Class ;
@@ -30,11 +31,13 @@ bdo:PrintMethod_Offset
   a owl:Class ;
   rdfs:label "Print method Offset"@en ;
   rdfs:subClassOf bdo:PrintMethod ;
+  adm:translationPriority 2 ;
 .
 bdo:PrintMethod_Relief
   a owl:Class ;
   rdfs:label "Print method Relief" ;
   rdfs:subClassOf bdo:PrintMethod ;
+  adm:translationPriority 2 ;
 .
 PrintMethod:
   a owl:Ontology ;
@@ -43,10 +46,12 @@ PrintMethod:
 bdr:PrintMethod_Intaglio_Copper
   a bdo:PrintMethod_Intaglio ;
   skos:prefLabel "copper intaglio"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:PrintMethod_Intaglio_Zinc
   a bdo:PrintMethod_Intaglio ;
   skos:prefLabel "zinc intaglio"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:PrintMethod_Manuscript
   a bdo:PrintMethod_Manuscript ;
@@ -56,6 +61,7 @@ bdr:PrintMethod_Relief_Letterpress
   a bdo:PrintMethod_Relief ;
   rdfs:comment "mechanical relief printing typically via wood"@en ;
   skos:prefLabel "letterpress"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:PrintMethod_Relief_WoodBlock
   a bdo:PrintMethod_Relief ;

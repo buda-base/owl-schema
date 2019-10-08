@@ -56,30 +56,37 @@ adm:AdmUnion
   rdfs:comment "a union of adm classes"@en ;
   rdfs:label "adm union"@en ;
   rdfs:subClassOf owl:Thing ;
+  adm:translationPriority 2 ;
 .
 adm:AdminData
   a owl:Class ;
-  rdfs:label "Admin data" ;
+  rdfs:label "Administrative data"@en ;
+  rdfs:comment "This class represents the data about the metadata"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf owl:Thing ;
 .
 adm:Assertion
   a owl:Class ;
   rdfs:comment "An assertion represents a statement made in a source. It contains a comment summarizing the statement in plain language and a location indicating the source."@en ;
   rdfs:label "Assertion"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf adm:Entity ;
 .
 adm:ContentProvider
   rdfs:subClassOf adm:Organization ;
+  rdfs:label "Content provider" ;
 .
 adm:Entity
   a owl:Class ;
   rdfs:comment "adm:Entity is an administrative entity in the BDRC ontology. Administrative entities are not the subject matter entities that the BDRC ontology entities are \"about\". Rather, they are entities that are used to manage the BUDA information system."@en ;
   rdfs:label "Administrative entity"@en ;
+  adm:translationPriority 2 ;
 .
 adm:Facet
   a owl:Class ;
   rdfs:comment "adm:Facet is a facet of an administrative entity in the BDRC ontology."@en ;
   rdfs:label "administrative facet"@en ;
+  adm:translationPriority 2 ;
 .
 adm:GitRepo
   rdfs:subClassOf adm:Type ;
@@ -101,14 +108,16 @@ adm:LogEntry
 .
 adm:Organization
   a owl:Class ;
-  rdfs:comment "An administrative organization is one that is not a subject of the domain of discourse. For example, the British Library's Endangered Archives Programme (EAP) is an administrative organization and the sde dge par khang can be considered an :Organization since it is an entity within the domain of Asian Buddhism."@en ;
-  rdfs:label "administrative organization"@en ;
+  rdfs:comment "An administrative organization is one that is only relevant to the administrative data (ex: a content provider of images or metadata)"@en ;
+  rdfs:label "organization"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf adm:Entity ;
 .
 adm:Outline
   a owl:Class ;
   rdfs:comment "Used to hold various root-level Outline information that has no place in the constituent Works."@en ;
   rdfs:label "Outline root"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf adm:Facet ;
 .
 adm:OutlineType
@@ -132,6 +141,7 @@ adm:ProductOrProductOrg
   rdfs:comment "used as domain for properties recording CTC subscriber info"@en ;
   rdfs:label "product or product organization"@en ;
   rdfs:subClassOf adm:AdmUnion ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf [
       a owl:Class ;
       owl:unionOf (
@@ -144,12 +154,14 @@ adm:ProductOrg
   a owl:Class ;
   rdfs:comment "A unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access."@en ;
   rdfs:comment "The name of a ProductOrg is represented by rdfs:label"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf adm:Facet ;
 .
 adm:StatementAnnotationBody
   a owl:Class ;
   rdfs:comment "This class is used for the body of annotations related with RDF statements."@en ;
   rdfs:label "statement annotation body"@en ;
+  adm:translationPriority 2 ;
   rdfs:subClassOf adm:Entity ;
 .
 adm:Status
@@ -161,6 +173,7 @@ adm:TermsOfUse
 adm:Type
   a owl:Class ;
   rdfs:comment "adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology."@en ;
+  adm:translationPriority 2 ;
 .
 adm:WorkOrAdmOutline
   a owl:Class ;
@@ -180,14 +193,15 @@ adm:WorkOrAdmOutline
 adm:access
   a owl:AnnotationProperty ;
   a owl:ObjectProperty ;
-  adm:catalogingConvention """adm:access is used on adm:AdminData for which:
+  adm:technicalComment """adm:access is used on adm:AdminData for which:
 
     adm:adminAbout/rdf:type/rdfs:subClassOf bdo:Item
 
 i.e., the access is about the content associated with a :Work not the metadata about the :Work""" ;
+  adm:catalogingConvention """Access to images should be indicated in the item, not the work"""@en;
   rdfs:comment "The type of online access permitted for the etext and/or images for a Work."@en ;
   rdfs:domain adm:AdminData ;
-  rdfs:label "item access"@en ;
+  rdfs:label "access"@en ;
   rdfs:range adm:Access ;
   rdfs:seeAlso adm:Access ;
 .
@@ -195,6 +209,7 @@ adm:adminAbout
   a owl:AnnotationProperty ;
   rdfs:domain adm:AdminData ;
   rdfs:label "admin data about resource"@en ;
+  adm:translationPriority 2 ;
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
@@ -206,6 +221,7 @@ adm:adminAbout
 adm:attributionName
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
+  rdfs:comment "Name used when attributing a work or images to the corresponding author or provider"@en ;
   rdfs:label "attribution name"@en ;
   rdfs:range rdf:langString ;
 .
@@ -213,19 +229,22 @@ adm:attributionStatement
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
   rdfs:label "attribution statement"@en ;
+  rdfs:comment "Complete statement used when attributing a work or images to the corresponding author or provider"@en ;
   rdfs:range rdf:langString ;
 .
 adm:attributionURL
   a owl:AnnotationProperty ;
   rdfs:domain bdo:Entity ;
   rdfs:label "attribution url"@en ;
+  rdfs:comment "URL used when attributing a work or images to the corresponding author or provider"@en ;
   rdfs:range xsd:anyURI ;
 .
 adm:canonicalHtml
   a owl:AnnotationProperty ;
-  rdfs:comment "A link to the html representation of the entity. Use only for entities which URI is not accessible through http."@en ;
+  rdfs:comment "A link to the html representation of the entity."@en ;
+  adm:catalogingConvention "Use only for entities which URI is not accessible through http."@en ;
   rdfs:domain bdo:Entity ;
-  rdfs:label "Html representation"@en ;
+  rdfs:label "link"@en ;
   rdfs:range xsd:anyURI ;
   rdfs:subPropertyOf rdfs:seeAlso ;
 .
@@ -238,13 +257,9 @@ adm:catalogingConvention
 .
 adm:contentLegal
   a owl:AnnotationProperty ;
-  rdfs:label "content legal"@en ;
+  rdfs:comment "legal data about the content (images, etext)"@en ;
+  rdfs:comment "content legal info"@en ;
   rdfs:subPropertyOf adm:hasLegal ;
-.
-adm:contentLicense
-  a owl:AnnotationProperty ;
-  rdfs:label "content license"@en ;
-  rdfs:subPropertyOf adm:license ;
 .
 adm:contentProvider
   a owl:ObjectProperty ;
@@ -253,11 +268,13 @@ adm:contentProvider
   rdfs:domain bdo:Item ;
   rdfs:label "content provider"@en ;
   rdfs:range adm:ContentProvider ;
+  owl:deprecated true ;
 .
 adm:contradictedBy
   a owl:AnnotationProperty ;
   rdfs:domain adm:StatementAnnotationBody ;
   rdfs:label "contradicted by"@en ;
+  adm:translationPriority 2 ;
 .
 adm:conversionAnnotations
   a owl:AnnotationProperty ;
@@ -268,6 +285,7 @@ adm:convertProperty
 
 The value of this property should be an explanation of the needed conversion as an rdf:langString"""@en ;
   rdfs:range rdf:langString ;
+  adm:translationPriority 2 ;
   rdfs:subPropertyOf adm:conversionAnnotations ;
 .
 adm:convertToClass
@@ -276,17 +294,20 @@ adm:convertToClass
   rdfs:domain owl:Thing ;
   rdfs:label "convert to Class"@en ;
   rdfs:range owl:Thing ;
+  adm:translationPriority 2 ;
   rdfs:subPropertyOf adm:conversionAnnotations ;
 .
 adm:convertToProperty
   a owl:AnnotationProperty ;
   rdfs:comment "Indicates that the annotated property is to be converted directly to a statement in terms of another property. The value of this annotation is the target property to convert to."@en ;
   rdfs:subPropertyOf adm:conversionAnnotations ;
+  adm:translationPriority 2 ;
 .
 adm:convertValueToClass
   a owl:AnnotationProperty ;
   rdfs:comment "Indicates that the value of the property being converted is to be an instance of the designated class"@en ;
   rdfs:subPropertyOf adm:conversionAnnotations ;
+  adm:translationPriority 2 ;
 .
 adm:copyrightOwner
   a owl:AnnotationProperty ;
@@ -301,18 +322,21 @@ adm:defaultContentLicense
   rdfs:comment "For a given provider the default content license to use"@en ;
   rdfs:domain adm:ContentProvider ;
   rdfs:label "default content license"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:License ;
 .
 adm:defaultMetadataLicense
   a owl:AnnotationProperty ;
   rdfs:domain adm:ContentProvider ;
   rdfs:label "default metadata license"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:License ;
 .
 adm:deprecatedComment
   a owl:AnnotationProperty ;
   rdfs:comment "short explanation of why a vocabulary item is being deprecated"@en ;
   rdfs:label "deprecation comment"@en ;
+  adm:translationPriority 2 ;
   rdfs:subPropertyOf rdfs:comment ;
 .
 adm:facetIndex
@@ -320,6 +344,7 @@ adm:facetIndex
   rdfs:comment "this property provides a \"salt\" to be used in generating resource ids for facets such as Events, Notes, AgentAsCreator and so on"@en ;
   rdfs:domain adm:AdminData ;
   rdfs:label "facet index"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:int ;
 .
 adm:gitPath
@@ -327,6 +352,7 @@ adm:gitPath
   rdfs:comment "path of this resource in its git repo . Format is bucket/localName, for example, \"42/W123\""@en ;
   rdfs:domain adm:AdminData ;
   rdfs:label "git path"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:gitRepo
@@ -334,6 +360,7 @@ adm:gitRepo
   rdfs:comment "this property maps a GitInfo to a GitRepo containing a git Url"@en ;
   rdfs:domain adm:AdminData ;
   rdfs:label "git repo"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:GitRepo ;
 .
 adm:gitRepoName
@@ -341,13 +368,15 @@ adm:gitRepoName
   rdfs:comment "The name of a git repo"@en ;
   rdfs:domain adm:GitRepo ;
   rdfs:label "git repo name"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:gitRevision
   a owl:DatatypeProperty ;
-  rdfs:comment "path of this resource in its git repo"@en ;
+  rdfs:comment "revision of this resource in its git repo"@en ;
   rdfs:domain adm:AdminData ;
-  rdfs:label "git path"@en ;
+  rdfs:label "git revision"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:gitUrl
@@ -355,31 +384,35 @@ adm:gitUrl
   rdfs:comment "The URL for a git repo"@en ;
   rdfs:domain adm:GitRepo ;
   rdfs:label "git url"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:anyURI ;
 .
 adm:graphId
   a owl:AnnotationProperty ;
   rdfs:comment "This property identifies the containing graph and is used in the root adm:AdminData of the graph"@en ;
   rdfs:domain adm:AdminData ;
+  adm:translationPriority 2 ;
   rdfs:label "graph id"@en ;
 .
 adm:hasLegal
   a owl:AnnotationProperty ;
   rdfs:domain adm:AdminData ;
-  rdfs:label "legal about resource"@en ;
+  rdfs:label "legal info"@en ;
   rdfs:range adm:LegalData ;
 .
 adm:imagesStatus
   a owl:AnnotationProperty ;
   rdfs:comment "records the images asset status for a :PublishedWork"@en ;
   rdfs:domain bdo:PublishedWork ;
-  rdfs:label "has images status"@en ;
+  rdfs:label "images status"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:ImagesStatus ;
 .
 adm:inRegion
   a owl:ObjectProperty ;
-  rdfs:comment "The organization or person that provided the eText or image content"@en ;
+  rdfs:comment "The region or plaorganization or person that provided the eText or image content"@en ;
   rdfs:domain adm:Organization ;
+  adm:translationPriority 2 ;
   rdfs:label "in region"@en ;
   rdfs:range bdo:Place ;
 .
@@ -387,7 +420,7 @@ adm:initialProvider
   a owl:ObjectProperty ;
   rdfs:comment "The initial provider of the metadata representation and/or images of the :Entity resource. For example, EAP105/1 has adm:initialProvider bdo:G1KG116095 and adm:contentProvider bda:Provider_BL_EAP"@en ;
   rdfs:domain adm:LegalData ;
-  rdfs:label "initial provider of resource metadata"@en ;
+  rdfs:label "initial provider of metadata"@en ;
   rdfs:range adm:ContentProvider ;
   rdfs:seeAlso adm:ContentProvider ;
 .
@@ -401,67 +434,59 @@ adm:isRestrictedInChina
 adm:legacyImageGroupRID
   a owl:AnnotationProperty ;
   adm:migrationComment "records the original imagegroup rid from which the volume information was migrated"@en ;
-  rdfs:comment "the original tbrc imagegroup rid for use in redirect references using the rid"@en ;
+  rdfs:comment "the original TBRC imagegroup rid for use in redirect references using the rid"@en ;
   rdfs:domain bdo:VolumeImageAsset ;
   rdfs:label "legacy imagegroup rid"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:license
   a owl:AnnotationProperty ;
   rdfs:comment "The license under which access to the metadata representation of the :Entity resource is provided"@en ;
   rdfs:domain adm:LegalData ;
-  rdfs:label "license to resource metadata"@en ;
+  rdfs:label "license"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:License ;
   rdfs:seeAlso adm:License ;
 .
 adm:logDate
   a owl:AnnotationProperty ;
-  rdfs:comment "When the update was performed"@en ;
+  rdfs:comment "When the update  described by the log entry was performed"@en ;
   rdfs:domain adm:LogEntry ;
   rdfs:label "date"@en ;
   rdfs:range xsd:dateTime ;
 .
 adm:logEntry
   a owl:AnnotationProperty ;
-  rdfs:comment "Log entry for updates to BDRC resources"@en ;
+  rdfs:comment "Log entry for updates to resources"@en ;
   rdfs:domain bdo:Entity ;
   rdfs:label "log entry"@en ;
   rdfs:range adm:LogEntry ;
 .
 adm:logMessage
   a owl:AnnotationProperty ;
-  rdfs:comment "Explanation of the update"@en ;
+  rdfs:comment "Explanation of the update described by the log entry"@en ;
   rdfs:domain adm:LogEntry ;
   rdfs:label "message"@en ;
   rdfs:range rdf:langString ;
 .
 adm:logWho
   a owl:AnnotationProperty ;
-  rdfs:comment "who performed the updated being logged"@en ;
+  rdfs:comment "who performed the update  described by the log entry"@en ;
   rdfs:domain adm:LogEntry ;
   rdfs:label "who"@en ;
   rdfs:range foaf:Agent ;
 .
-adm:logWho_1
-  a owl:AnnotationProperty ;
-  rdfs:comment "who performed the updated being logged"@en ;
-  rdfs:domain adm:LogEntry ;
-  rdfs:label "who"@en ;
-  rdfs:range xsd:string ;
-.
 adm:metadataLegal
   a owl:AnnotationProperty ;
-  rdfs:label "metadata legal"@en ;
+  rdfs:comment "Legal data about the metadata of the record"@en ;
+  rdfs:label "metadata legal info"@en ;
   rdfs:subPropertyOf adm:hasLegal ;
-.
-adm:metadataLicense
-  a owl:AnnotationProperty ;
-  rdfs:label "metadata license"@en ;
-  rdfs:subPropertyOf adm:license ;
 .
 adm:migrationComment
   a owl:AnnotationProperty ;
   rdfs:label "migration comment"@en ;
+  adm:translationPriority 2 ;
   rdfs:subPropertyOf rdfs:comment ;
 .
 adm:originalRecord
@@ -476,6 +501,7 @@ adm:outline
   rdfs:comment "The referenced admin:Outline contains the root-level information from an Outline for this Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "had outline"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:Outline ;
 .
 adm:outlineAuthorStatement
@@ -491,6 +517,7 @@ adm:outlineLogEntry
   adm:migrationComment "Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works"@en ;
   rdfs:domain adm:Outline ;
   rdfs:label "outline log entry"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:LogEntry ;
 .
 adm:outlineType
@@ -498,6 +525,7 @@ adm:outlineType
   rdfs:comment "records the legacy outline type"@en ;
   rdfs:domain adm:Outline ;
   rdfs:label "outline type"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:OutlineType ;
 .
 adm:place_TLM_accession
@@ -505,6 +533,7 @@ adm:place_TLM_accession
   rdfs:comment "The accession attribute records the next accession number to be allocated for the Library. The num should be a 6 digit zero filled string initialized to \"000001\". This number is incremented each time a new holdng is added for this library." ;
   rdfs:domain bdo:Place ;
   rdfs:label "accession"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_admin
@@ -512,6 +541,7 @@ adm:place_TLM_admin
   rdfs:comment "The admin property records the name of the group of users that are permitted to update the Library and Monastery profiles for the Library. The group name will conventionally be named by lower-casing the hasTLM_code property value and appending \"Admin\". For example, \"dzlAdmin\"" ;
   rdfs:domain bdo:Place ;
   rdfs:label "tlm admin group"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_adminEmail
@@ -519,6 +549,7 @@ adm:place_TLM_adminEmail
   rdfs:comment "The admin email is used to send requests for new users to be added to the Library." ;
   rdfs:domain bdo:Place ;
   rdfs:label "tlm admin email"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_code
@@ -526,6 +557,7 @@ adm:place_TLM_code
   rdfs:comment "the code attribute records a unique 3-latin-letter code for the Library. For example, DZL would be reasonable for Dzongsar Library. The code along with the num attribute are used to create RIDs for Works that are added by the library. RIDs will take the form of: W1TLMDZL000001" ;
   rdfs:domain bdo:Place ;
   rdfs:label "tlm code"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_librarian
@@ -533,6 +565,7 @@ adm:place_TLM_librarian
   rdfs:comment "The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/code and appending \"librarian\". for example, \"dzllibrarian\""@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "tlm librarian group"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_librarianEmail
@@ -540,6 +573,7 @@ adm:place_TLM_librarianEmail
   rdfs:domain bdo:Place ;
   rdfs:label "The librarian email is used to send requests to the library staff."@en ;
   rdfs:label "tlm librarian email"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_num
@@ -547,6 +581,7 @@ adm:place_TLM_num
   rdfs:comment "The num attribute records the last RID suffix allocated for the Library. The num should be a 6 digit zero filled string initialized to \"000001\"." ;
   rdfs:domain bdo:Place ;
   rdfs:label "tlm num"@en ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_taxonomy
@@ -554,12 +589,14 @@ adm:place_TLM_taxonomy
   rdfs:comment "Identifies a Taxonomy that specifies the Library's shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "TLM taxonomy"@en ;
+  adm:translationPriority 2 ;
   rdfs:range bdo:Taxonomy ;
 .
 adm:productAllowByAddr
   a owl:AnnotationProperty ;
   rdfs:comment "The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works"@en ;
   rdfs:domain adm:ProductOrg ;
+  adm:translationPriority 2 ;
   rdfs:range xsd:string ;
 .
 adm:productHasOrg
@@ -567,6 +604,7 @@ adm:productHasOrg
   rdfs:comment "Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on"@en ;
   rdfs:comment "organization"@en ;
   rdfs:domain bdo:ProductOrProductOrg ;
+  adm:translationPriority 2 ;
   rdfs:range adm:ProductOrg ;
 .
 adm:productIncludes
@@ -574,6 +612,7 @@ adm:productIncludes
   rdfs:comment "A Product may include another Product for the purpose of including access information in support of the subscription service."@en ;
   rdfs:domain adm:Product ;
   rdfs:label "includes"@en ;
+  adm:translationPriority 2 ;
   rdfs:range adm:Product ;
 .
 adm:replaceWith
@@ -581,6 +620,7 @@ adm:replaceWith
   rdfs:comment "used when replacing one resource by another when the subproperties are all too specific. Typical situations are duplicated resurces where one is withdrawn and so on"@en ;
   rdfs:domain rdfs:Resource ;
   rdfs:label "replace with another rdfs:Resource"@en ;
+  adm:translationPriority 2 ;
   rdfs:range rdfs:Resource ;
 .
 adm:replaceWithClass
@@ -588,28 +628,32 @@ adm:replaceWithClass
   rdfs:comment "used when deprecating a vocabulary item in favor of a Class"@en ;
   rdfs:label "replace with a Class"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
+  adm:translationPriority 2 ;
 .
 adm:replaceWithDataProperty
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of a Data property"@en ;
   rdfs:label "replace with a Data property"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
+  adm:translationPriority 2 ;
 .
 adm:replaceWithIndividual
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of an Individual"@en ;
   rdfs:label "replace with an Individual"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
+  adm:translationPriority 2 ;
 .
 adm:replaceWithObjectProperty
   a owl:AnnotationProperty ;
   rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
   rdfs:label "replace with Object property"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
+  adm:translationPriority 2 ;
 .
 adm:sameAsBDRC
   a owl:AnnotationProperty ;
-  rdfs:comment "this resource is about the same resource as the BDRC resource"@en ;
+  rdfs:comment "Indicates the equivalent resource in BDRC"@en ;
   rdfs:domain bdo:Entity ;
   rdfs:label "same as BDRC"@en ;
   rdfs:subPropertyOf owl:sameAs ;
@@ -677,6 +721,7 @@ adm:seeAlsoDoc
   rdfs:label "see also documentation"@en ;
   rdfs:range xsd:anyURI ;
   rdfs:subPropertyOf rdfs:seeAlso ;
+  adm:translationPriority 2 ;
 .
 adm:seeOther
   a owl:AnnotationProperty ;
@@ -684,6 +729,7 @@ adm:seeOther
   rdfs:domain bdo:Entity ;
   rdfs:label "see other"@en ;
   rdfs:range xsd:anyURI ;
+  adm:translationPriority 2 ;
 .
 adm:seeOtherHA
   a owl:AnnotationProperty ;
@@ -706,6 +752,7 @@ adm:statementScore
   rdfs:domain adm:StatementAnnotationBody ;
   rdfs:label "score"@en ;
   rdfs:range xsd:integer ;
+  adm:translationPriority 2 ;
 .
 adm:status
   a owl:AnnotationProperty ;
@@ -718,12 +765,14 @@ adm:supportedBy
   a owl:AnnotationProperty ;
   rdfs:domain adm:StatementAnnotationBody ;
   rdfs:label "supported by"@en ;
+  adm:translationPriority 2 ;
 .
 adm:technicalComment
   a owl:AnnotationProperty ;
   rdfs:comment "a detailed explanation of the way a resource is used in the ontology"@en ;
   rdfs:label "technical comment"@en ;
   rdfs:subPropertyOf rdfs:comment ;
+  adm:translationPriority 2 ;
 .
 adm:termsOfUse
   a owl:AnnotationProperty ;
@@ -739,6 +788,7 @@ adm:translationPriority
   rdfs:domain rdfs:Resource ;
   rdfs:label "translation priority"@en ;
   rdfs:range xsd:integer ;
+  adm:translationPriority 2 ;
 .
 adm:userTooltip
   a owl:AnnotationProperty ;
@@ -746,6 +796,7 @@ adm:userTooltip
   rdfs:label "user tooltip"@en ;
   rdfs:range rdf:langString ;
   rdfs:subPropertyOf rdfs:comment ;
+  adm:translationPriority 2 ;
 .
 adm:volumeQcDate
   a owl:AnnotationProperty ;
@@ -767,6 +818,7 @@ adm:volumeScanVenue
   adm:migrationComment "this property is used to migrate the venue attribute from scanrequest. it records where the scanning was to take place"@en ;
   rdfs:domain bdo:Item ;
   rdfs:range xsd:string ;
+  adm:translationPriority 2 ;
 .
 adm:workInProduct
   a owl:AnnotationProperty ;
@@ -774,6 +826,7 @@ adm:workInProduct
   rdfs:domain bdo:Work ;
   rdfs:label "in product"@en ;
   rdfs:range adm:Product ;
+  adm:translationPriority 2 ;
 .
 adm:workLegacyNode
   a owl:DatatypeProperty ;
@@ -781,6 +834,7 @@ adm:workLegacyNode
   rdfs:domain bdo:WorkOrAdmOutline ;
   rdfs:label "has legacy node"@en ;
   rdfs:range xsd:string ;
+  adm:translationPriority 2 ;
 .
 adm:workVolumesNote
   a owl:AnnotationProperty ;
@@ -788,6 +842,7 @@ adm:workVolumesNote
   rdfs:domain bdo:Work ;
   rdfs:label "volumes note"@en ;
   rdfs:range xsd:string ;
+  adm:translationPriority 2 ;
 .
 adm:work_desc_date
   a owl:AnnotationProperty ;
@@ -795,6 +850,7 @@ adm:work_desc_date
   rdfs:domain bdo:Work ;
   rdfs:label "date from description"@en ;
   rdfs:range xsd:string ;
+  adm:translationPriority 2 ;
 .
 bdo:Agents
   rdfs:subClassOf [

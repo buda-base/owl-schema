@@ -18,6 +18,7 @@ bdo:AppliedMaterial
   rdfs:label "applied material"@en ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30084> ;
   rdfs:subClassOf bdo:Material ;
+  adm:translationPriority 2 ;
 .
 bdo:BaseMaterial
   a owl:Class ;
@@ -25,6 +26,7 @@ bdo:BaseMaterial
   rdfs:label "Base material" ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30208> ;
   rdfs:subClassOf bdo:Material ;
+  adm:translationPriority 2 ;
 .
 bdo:Material
   a owl:Class ;
@@ -49,6 +51,7 @@ bdr:AppliedMaterial_IndigoDye
   a bdo:AppliedMaterial ;
   rdfs:comment "paper dyed with indigo is called Nīlapattra in some contexts"@en ;
   skos:prefLabel "indigo dye"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:AppliedMaterial_Poison
   a bdo:AppliedMaterial ;
@@ -106,6 +109,7 @@ bdr:MaterialLoktaPaper
 bdr:MaterialMixed
   a bdo:BaseMaterial ;
   skos:prefLabel "mixed materials"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:MaterialMultiLayerPaper
   a bdr:MaterialPaper ;

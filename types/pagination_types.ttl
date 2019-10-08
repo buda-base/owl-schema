@@ -18,6 +18,7 @@ bdo:PaginationType
 
 Relative pagination uses pagination in the content of the work while absolute counts from the first image of a scanned volume an since there are 2 scanned pages of metadata in each volume, absolute pagination generally starts at 3."""@en ;
   rdfs:label "pagination type"@en ;
+  adm:translationPriority 2 ;
 .
 PaginationType:
   a owl:Ontology ;
@@ -26,8 +27,10 @@ PaginationType:
 bdr:PaginationAbsolute
   a bdo:PaginationType ;
   skos:prefLabel "absolute pagination"@en ;
+  adm:translationPriority 2 ;
 .
 bdr:PaginationRelative
   a bdo:PaginationType ;
   skos:prefLabel "relative pagination"@en ;
+  adm:translationPriority 2 ;
 .
