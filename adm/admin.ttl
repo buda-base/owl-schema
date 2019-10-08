@@ -945,7 +945,7 @@ bdo:WorkCoverTitle
   adm:catalogingConvention "Title printed on the cover of a Work or text as issued"@en ;
   adm:userTooltip "Title printed on the cover of a Work or text as issued"@en ;
 .
-bdo:WorkDkarChagTitle
+bdo:WorkToCTitle
   adm:catalogingConvention "Use this type for titles in table of contents when they differ from the bibliographical title."@en ;
   adm:userTooltip "title in the table of contents"@en ;
 .
