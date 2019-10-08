@@ -3,7 +3,7 @@
 # prefix: WorkPartType
 
 @prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

@@ -22,7 +22,6 @@
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
 @prefix bda: <http://purl.bdrc.io/admin.data/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -1243,7 +1242,7 @@ bdo:TitleVersion
 .
 bdo:Topic
   a owl:Class ;
-  rdfs:technicalComment "Names are represented by rdfs:label"@en ;
+  adm:technicalComment "Names are represented by rdfs:label"@en ;
   rdfs:comment "Subjects and genres of works, just as in a traditional library catalog"@en ;
   rdfs:label "Topic"@en ;
   rdfs:subClassOf bdo:Entity ;
@@ -1268,7 +1267,7 @@ bdo:Transliteration
 .
 bdo:Type
   a owl:Class ;
-  rdfs:technicalComment """Types are used to indicate features names, titles, events and so on.
+  adm:technicalComment """Types are used to indicate features names, titles, events and so on.
 
 An owl:subClassOf :Type, e.g., :KinType, will have some set of individuals that represent the various types, e.g., bdr:KinUncle, bdr:KinYoungerSister, etc.
 
@@ -1300,7 +1299,7 @@ bdo:VirtualWork
 .
 bdo:Volume
   a owl:Class ;
-  rdfs:technicalComment """There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.
+  adm:technicalComment """There are subclasses of Volume corresponding to the different types of holding: physical, digitized images, and unicode etexts.
 
 Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive."""@en ;
   rdfs:label "Volume"@en ;
@@ -1320,9 +1319,8 @@ There is no distinction between OCR'd and input volumes."""@en ;
 .
 bdo:VolumeImageAsset
   a owl:Class ;
-  rdfs:comment """The :VolumeImageAsset represents a scanned or otherwise digitized set of page images. These may be from paper hardcopy or microfilm. Digitization may be via scanning or camera. Going forward all of this information should be captured to reflect the provenance of the digital asset.
-
-Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive.
+  rdfs:comment """Roleepresents a scanned or otherwise digitized set of page images."""@en ;
+  adm:technicalComment """Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive.
 
 Each :VolumeImageAsset may have a :imageList property which will have a '|' separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.
 
@@ -1453,7 +1451,7 @@ bdo:WorkSubtitle
 .
 bdo:WorkTitle
   a owl:Class ;
-  rdfs:technicalComment """A title for the Work including the title text and title type: full, sub, etc:
+  adm:technicalComment """A title for the Work including the title text and title type: full, sub, etc:
 
 
 bdr:W22083 a :Work ;
@@ -2420,7 +2418,7 @@ bdo:license
 .
 bdo:lineageDownFrom
   a owl:ObjectProperty ;
-  rdfs:technicalComment """This models the \"down from ...\" references to other Lineages. The :Lineage object of :lineageDownFrom will contain the same :LineageHolder as here and the meaning of :lineageDownFrom is to \"splice\" the remaining holders on to the end of this lineage.
+  adm:technicalComment """This models the \"down from ...\" references to other Lineages. The :Lineage object of :lineageDownFrom will contain the same :LineageHolder as here and the meaning of :lineageDownFrom is to \"splice\" the remaining holders on to the end of this lineage.
 
 This models the directly the way in which the source gsan/thob yigs are written.
 
@@ -2908,7 +2906,7 @@ bdo:printMethod
 .
 bdo:restored
   a owl:DatatypeProperty ;
-  rdfs:technicalComment """The :restored property is used to add a restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit) and the original language name or title is not manifest in the material being cataloged so that the cataloger prepares a restoration.
+  adm:technicalComment """The :restored property is used to add a restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit) and the original language name or title is not manifest in the material being cataloged so that the cataloger prepares a restoration.
 
 For example in:
 
@@ -3344,7 +3342,7 @@ bdo:workEvent
 .
 bdo:workExpressionOf
   a owl:ObjectProperty ;
-  rdfs:technicalComment """The subject work is an expression of the referenced work. This may mean that the subject work is an edition or version or the only extant occurrence of the referenced work.
+  adm:technicalComment """The subject work is an expression of the referenced work. This may mean that the subject work is an edition or version or the only extant occurrence of the referenced work.
 
 This modeling is relevant when there are more than one occurrence of a work that needs to be accounted for in the library. If there is a single edition of a unique work then this elaborate modeling is not needed; however, for many works in the domain of Buddhist Universal Digital Archive there are many expressions of a single identified \"conceptual\" work such as the Kanjur, Tengyur, Nyingma Gyu Bum, Rinchen Terdzod, Nyingma Kama, Songs of Milarepa, and on and on.
 
@@ -3859,7 +3857,7 @@ bdo:workObjectType
 .
 bdo:workOtherLangScript
   a owl:ObjectProperty ;
-  rdfs:technicalComment """The :workOtherLangScript is used to indicate language script combinations that occur in secondary or subsidiary roles within a :Work. For example, a preface in Chinese for a primary Tibetan text could be indicated via:
+  adm:technicalComment """The :workOtherLangScript is used to indicate language script combinations that occur in secondary or subsidiary roles within a :Work. For example, a preface in Chinese for a primary Tibetan text could be indicated via:
 
     :workOtherLangScript bdr:ZhNative
 
@@ -3887,7 +3885,7 @@ bdo:workPagination
 .
 bdo:workPartIndex
   a owl:DatatypeProperty ;
-  rdfs:technicalComment """The part index is used to provide a simple way to order the parts of a parent :Work. The direct children parts of a :Work are indexed from 1 to n. The direct children of each of these is similarly indexed from 1 to n.
+  adm:technicalComment """The part index is used to provide a simple way to order the parts of a parent :Work. The direct children parts of a :Work are indexed from 1 to n. The direct children of each of these is similarly indexed from 1 to n.
 
 Schematically:
 
@@ -3938,7 +3936,7 @@ bdo:workPartLabel
 .
 bdo:workPartOf
   a owl:ObjectProperty ;
-  rdfs:technicalComment """The subject work is a part of the referenced work. The subject work in this case is an <outline:node/> in the legacy metadata. The referenced work may be the root work or another part of the root work such as a section.
+  adm:technicalComment """The subject work is a part of the referenced work. The subject work in this case is an <outline:node/> in the legacy metadata. The referenced work may be the root work or another part of the root work such as a section.
 
 For example, The Kanjur conventionally has a section of Vinaya texts and each of these will be a :Work modeled like:
 
@@ -4057,7 +4055,7 @@ bdo:workRefs
 bdo:workReproductionOf
   a owl:ObjectProperty ;
   rdfs:comment """The subject work is a reproduction of the referenced work such as a photocopy or a an offset print of an original or photocopy and so on."""@en ;
-  rdfs:technicalComment """This is relevant to record versus :workExpressionOf when there may be features peculariar to the fact of reproduction versus a direct production such as from master woodblocks or, in a more modern setting, the original offset plates from an input text.
+  adm:technicalComment """This is relevant to record versus :workExpressionOf when there may be features peculariar to the fact of reproduction versus a direct production such as from master woodblocks or, in a more modern setting, the original offset plates from an input text.
 
 For example,
 

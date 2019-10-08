@@ -3,7 +3,6 @@
 
 @prefix Status: <http://purl.bdrc.io/ontology/adm/types/Status/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
