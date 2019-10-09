@@ -14,14 +14,14 @@
 
 bdo:LineageType
   a owl:Class ;
-  rdfs:comment "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
+  adm:userTooltip "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
   rdfs:label "lineage type"@en ;
 .
 bdo:TibetanLineageType
   a owl:Class ;
-  rdfs:comment "TibetanLineageType identifies the type of lineage transmission being documented. Examples are empowerment, instruction, reading transmission, etc."@en ;
   rdfs:label "Tibetan Lineage type"@en ;
   rdfs:subClassOf bdo:LineageType ;
+  adm:userTooltip "Tibetan lineage type records the Tibetan form of a transmission lineage such as empowerment, pith instruction, and so on"@en ;
 .
 LineageType:
   a owl:Ontology ;

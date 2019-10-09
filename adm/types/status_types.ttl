@@ -1,5 +1,5 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/Status
-# imports: http://purl.bdrc.io/ontology/core/
+# baseURI: http://purl.bdrc.io/ontology/adm/types/Status/
+# prefix: Status
 
 @prefix Status: <http://purl.bdrc.io/ontology/adm/types/Status/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -17,12 +17,12 @@ Status:
 .
 adm:ImagesStatus
   a owl:Class ;
-  rdfs:comment "asset manager status constants for images assets"@en ;
+  adm:userTooltip "asset manager status constants for images assets"@en ;
   rdfs:label "Images Status"@en ;
 .
 adm:Status
   a owl:Class ;
-  rdfs:comment "status constants for :Entity metadata: released, provisional, etc"@en ;
+  adm:userTooltip "status constants for :Entity metadata: released, provisional, etc"@en ;
   rdfs:label "Status"@en ;
 .
 bda:StatusAccessioned

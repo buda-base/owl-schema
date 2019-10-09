@@ -14,7 +14,7 @@
 
 bdo:Creator
   a owl:Class ;
-  rdfs:comment "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
+  adm:userTooltip "Individuals of class :Creator describe the various roles that :Agents play in creating a :Work"@en ;
   rdfs:label "creator role"@en ;
 .
 Creator:

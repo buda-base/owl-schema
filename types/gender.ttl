@@ -14,7 +14,7 @@
 
 bdo:Gender
   a owl:Class ;
-  rdfs:comment "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
+  adm:userTooltip "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
   rdfs:label "Gender"@en ;
 .
 Gender:

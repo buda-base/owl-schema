@@ -15,22 +15,26 @@
 bdo:Binding
   a owl:Class ;
   rdfs:label "Binding" ;
+  adm:userTooltip "The binding records how a collection of pages/folia are kept together"@en ;
 .
 bdo:Binding_Codex
   a owl:Class ;
   rdfs:label "Binding Codex" ;
+  adm:userTooltip "The codex form of binding is the precursor to the modern Western-style bound book"@en ;
   rdfs:subClassOf bdo:Binding ;
   adm:translationPriority 2 ;
 .
 bdo:Binding_Continuous
   a owl:Class ;
   rdfs:label "continuous binding"@en ;
+  adm:userTooltip "Examples of continuous binding include scrolls and leporellos"@en ;
   rdfs:subClassOf bdo:Binding ;
   adm:translationPriority 2 ;
 .
 bdo:Binding_LooseLeaf
   a owl:Class ;
   rdfs:label "Binding Loose leaf" ;
+  adm:userTooltip "A binding form in which some sort of container, cloth wrapping, box, pecha between boards, and so on"@en ;
   rdfs:subClassOf bdo:Binding ;
 .
 Binding:
