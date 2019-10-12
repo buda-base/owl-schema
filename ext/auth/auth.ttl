@@ -4,7 +4,7 @@
 
 @prefix : <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix adr: <http://purl.bdrc.io/resource-auth/> .
+@prefix adr: <http://purl.bdrc.io/resource-nc/auth/> .
 @prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -69,9 +69,9 @@ It is important to notice that roles are used for application level access contr
   rdfs:label "role"@en ;
   rdfs:subClassOf aut:Entity ;
 .
-aut:User
+aut:UserProfile
   a owl:Class ;
-  rdfs:comment """The User object represents any person registered to the system. A user instance may belong to a Group and may have a Role.
+  rdfs:comment """The UserProfile object represents any person registered to the system. A user may belong to a Group and may have a Role.
 It is worth noticing that permissions are not associated directly to a User but instead, through its various roles."""@en ;
   rdfs:label "user"@en ;
   rdfs:subClassOf aut:Entity ;
@@ -89,7 +89,7 @@ aut:appId
 aut:authId
   a owl:DatatypeProperty ;
   rdfs:comment "The unique id given to the user by the authorization provider"@en ;
-  rdfs:domain aut:User ;
+  rdfs:domain aut:UserProfile ;
   rdfs:label "authentification id"@en ;
   rdfs:range xsd:string ;
 .
@@ -105,9 +105,9 @@ aut:desc
 .
 aut:forGroup
   a owl:ObjectProperty ;
-  rdfs:comment "Besides linking a User to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
+  rdfs:comment "Besides linking a UserProfile to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
   rdfs:domain aut:Endpoint ;
-  rdfs:domain aut:User ;
+  rdfs:domain aut:UserProfile ;
   rdfs:label "for group"@en ;
   rdfs:range aut:Group ;
 .
@@ -132,7 +132,7 @@ aut:hasMember
   rdfs:comment "Links Users and Groups following auth0 model"@en ;
   rdfs:domain aut:Group ;
   rdfs:label "has member"@en ;
-  rdfs:range aut:User ;
+  rdfs:range aut:UserProfile ;
 .
 aut:hasPermission
   a owl:ObjectProperty ;
@@ -146,7 +146,7 @@ aut:hasRole
   rdfs:comment "Links Groups or Users to Roles, following auth0 model."@en ;
   rdfs:comment "has role"@en ;
   rdfs:domain aut:Group ;
-  rdfs:domain aut:User ;
+  rdfs:domain aut:UserProfile ;
   rdfs:range aut:Role ;
 .
 aut:path
@@ -169,7 +169,7 @@ This property is used for checking access rights against protected resources ava
 aut:personalAccess
   a owl:ObjectProperty ;
   rdfs:comment "A resource Id based access authorization"@en ;
-  rdfs:domain aut:User ;
+  rdfs:domain aut:UserProfile ;
   rdfs:label "personal access"@en ;
   rdfs:range bdo:Entity ;
 .

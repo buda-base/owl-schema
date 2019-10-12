@@ -15,21 +15,22 @@
 bdo:AppliedMaterial
   a owl:Class ;
   rdfs:label "applied material"@en ;
+  adm:userTooltip "The material such as ink and so on that is used to impose writing on the base material"@en ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30084> ;
   rdfs:subClassOf bdo:Material ;
   adm:translationPriority 2 ;
 .
 bdo:BaseMaterial
   a owl:Class ;
-  rdfs:comment "underlying physical material of a manifestation"@en ;
-  rdfs:label "Base material" ;
+  adm:userTooltip "underlying physical material of a manifestation of a Work"@en ;
+  rdfs:label "base material" ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30208> ;
   rdfs:subClassOf bdo:Material ;
   adm:translationPriority 2 ;
 .
 bdo:Material
   a owl:Class ;
-  rdfs:comment "This describes the material on which the content of a :TextualEntity is imposed. A physical or chemical substance used to create a manifestation"@en ;
+  adm:userTooltip "Materials include the base material on which the printing appears and the applied material such as ink and so on"@en ;
   rdfs:label "material"@en ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30304> ;
   rdfs:seeAlso <http://rdaregistry.info/termList/RDAMaterial> ;

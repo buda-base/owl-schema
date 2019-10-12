@@ -14,7 +14,7 @@
 
 bdo:PlaceType
   a owl:Class ;
-  rdfs:comment "The :PlaceType(s) are used to indicate a conventional characterization of a :Place, e.g., bdr:PlaceTypeBangSo, bdr:PlaceTypeChoBo, etc."@en ;
+  adm:userTooltip "Place types are used to indicate a conventional characterization of a Place, e.g., monastery, cave, river, and so on"@en ;
   rdfs:label "Place Type"@en ;
 .
 PlaceType:
