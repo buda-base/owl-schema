@@ -1910,7 +1910,6 @@ bdo:hasAunt
 .
 bdo:hasBrother
   a owl:ObjectProperty ;
-  a owl:SymmetricProperty ;
   rdfs:label "has brother"@en ;
   rdfs:subPropertyOf bdo:hasSibling ;
 .
@@ -2144,7 +2143,6 @@ bdo:hasSiblingInLaw
 .
 bdo:hasSister
   a owl:ObjectProperty ;
-  a owl:SymmetricProperty ;
   rdfs:label "has sister"@en ;
   rdfs:subPropertyOf bdo:hasSibling ;
 .
