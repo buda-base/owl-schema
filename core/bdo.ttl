@@ -1136,44 +1136,50 @@ bdo:PersonTulkuTitle
 bdo:Place
   a owl:Class ;
   adm:technicalComment "Names are represented by rdfs:label"@en ;
-  rdfs:comment "Places are geographic entities ranging from monasteries, to villages, to counties, provinces and so on. Places are modeled in terms of subclasses that indicate the type of \"real world\" place that is referred to"@en ;
+  adm:catalogingConvention "Places are geographic entities such as: monasteries, villages, counties, provinces, rivers, caves and so on. Places are modeled in terms of subclasses that indicate the type of \"real world\" place that is referred to"@en ;
+  adm:userTooltip "Places are geographic entities such as: monasteries, villages, counties, rivers, caves and so on"@en ;
   rdfs:label "Place"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:PlaceAbandoned
   a owl:Class ;
-  rdfs:comment "event type describing when a place was abandonned"@en ;
-  rdfs:label "abandoned"@en ;
+  adm:userTooltip "event type describing when a place was abandonded"@en ;
+  rdfs:label "abandonded"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceConverted
   a owl:Class ;
+  adm:userTooltip "event type describing when a place was converted from one tradition to another, e.g., from Nyingma to Gelugpa"@en ;
   rdfs:label "converted"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceDestroyed
   a owl:Class ;
+  adm:userTooltip "event type describing when a place was destroyed"@en ;
   rdfs:label "destroyed"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceEvent
   a owl:Class ;
-  rdfs:comment "An event of some type that occurred at the subject Place around some date, involving some Persons and other entities: founding, destruction etc."@en ;
+  adm:userTooltip "An event of some type that occurred at the subject Place around some date, involving some Persons and other entities: founding, destruction etc."@en ;
   rdfs:label "Place Event"@en ;
   rdfs:subClassOf bdo:Event ;
 .
 bdo:PlaceEventNotSpecified
   a owl:Class ;
+  adm:userTooltip "indicates a Place Event of unknown type!?"@en ;
   rdfs:label "not specified"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceFounded
   a owl:Class ;
+  adm:userTooltip "event type describing when a place was founded"@en ;
   rdfs:label "founded"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
 bdo:PlaceRebuilt
   a owl:Class ;
+  adm:userTooltip "event type describing when a place was rebuilt"@en ;
   rdfs:label "rebuilt"@en ;
   rdfs:subClassOf bdo:PlaceEvent ;
 .
@@ -1185,48 +1191,51 @@ bdo:PrintMethod
 .
 bdo:PrintedEvent
   a owl:Class ;
-  rdfs:comment "An event of printing a work"@en ;
+  adm:userTooltip "An event of printing a work"@en ;
   rdfs:label "Printed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:ProvenanceNote
   a owl:Class ;
-  rdfs:comment "note indicating the provenance of an information"@en ;
+  adm:userTooltip "note indicating the provenance of an information"@en ;
   rdfs:label "Provenance note"@en ;
   rdfs:subClassOf bdo:Note ;
 .
 bdo:PublishedEvent
   a owl:Class ;
-  rdfs:comment "An event describing the publication of a work"@en ;
+  adm:userTooltip "An event describing the publication of a work"@en ;
   rdfs:label "Published"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:PublishedWork
   a owl:Class ;
   rdfs:label "Published work" ;
+  adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
   rdfs:subClassOf bdo:Work ;
 .
 bdo:RequestedEvent
   a owl:Class ;
-  rdfs:comment "An event describing the request for a work"@en ;
+  adm:userTooltip "An event describing the request for a work"@en ;
   rdfs:label "requested"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:RevealedEvent
   a owl:Class ;
-  rdfs:comment "An event describing the discovery of a work (for terma revelations)"@en ;
+  adm:userTooltip "An event describing the discovery of a work (for terma revelations)"@en ;
   rdfs:label "revealed"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:RevisedEvent
   a owl:Class ;
   rdfs:label "revised"@en ;
+  adm:userTooltip "An event describing the revision of a work"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:Role
   a owl:Class ;
   adm:technicalComment "Names are represented by rdfs:label"@en ;
-  rdfs:comment "Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly used concept in libraries."@en ;
+  adm:catalogingConvention "Roles include offices held as well as other positions. Roles was formerly called Office in the tbrc.org XML schema. Roles is prefered as a more commonly used concept in libraries."@en ;
+  adm:userTooltip "Roles include offices held as well as other positions."@en ;
   rdfs:label "Role"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
@@ -1236,28 +1245,32 @@ bdo:Script
 bdo:SecondRevisedEvent
   a owl:Class ;
   rdfs:label "Second revised event" ;
+  adm:userTooltip "An event describing the second revision of a work"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:SecondTranslatedEvent
   a owl:Class ;
   rdfs:label "Second translated event" ;
+  adm:userTooltip "An event describing the second translation of a work"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:SerialWork
   a owl:Class ;
   rdfs:label "Serial work" ;
+  adm:userTooltip "A Work published as a series of volues/numbers over time"@en ;
   rdfs:subClassOf bdo:PublishedWork ;
 .
 bdo:SingleAgent
   a owl:Class ;
-  rdfs:comment "single agents include ahistorical and historical (human) agents"@en ;
+  adm:userTooltip "single agents include ahistorical and historical (human) agents"@en ;
   rdfs:label "single agent"@en ;
   rdfs:subClassOf bdo:Agent ;
 .
 bdo:StandardizedTitle
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "In some cases, cataloging will introduce a \"standardized\" title distinct from the \"original\" title in a given cultural heritage context"@en ;
+  adm:catalogingConvention "In some cases, cataloging will introduce a \"standardized\" title distinct from the \"original\" title in a given cultural heritage context"@en ;
+  adm:userTooltip "A title introduced as a conventional title versus the manifest original title"@en ;
   rdfs:label "Standardized title"@en ;
   rdfs:subClassOf bdo:TitleVersion ;
 .
@@ -1282,11 +1295,13 @@ bdo:TextualEntity
 bdo:ThirdRevisedEvent
   a owl:Class ;
   rdfs:label "Third revised event" ;
+  adm:userTooltip "An event describing the third revision of a work"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:ThirdTranslatedEvent
   a owl:Class ;
   rdfs:label "Third translated event" ;
+  adm:userTooltip "An event describing the third translation of a work"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:TimePeriod
@@ -1295,14 +1310,14 @@ bdo:TimePeriod
 bdo:TitleVersion
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "The TitleVersion indicates whether the title is a standarized, corrected, or original title"@en ;
+  adm:userTooltip "The TitleVersion indicates whether the title is a standarized, corrected, or original title"@en ;
   rdfs:label "Title Version"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:Topic
   a owl:Class ;
   adm:technicalComment "Names are represented by rdfs:label"@en ;
-  rdfs:comment "Subjects and genres of works, just as in a traditional library catalog"@en ;
+  adm:userTooltip "Subjects and genres of works, just as in a traditional library catalog"@en ;
   rdfs:label "Topic"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
@@ -1311,13 +1326,14 @@ bdo:Tradition
 .
 bdo:TranslatedEvent
   a owl:Class ;
-  rdfs:comment "An event of work translation."@en ;
+  adm:userTooltip "An event of work translation."@en ;
   rdfs:label "Translated"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
 bdo:TranslationRevisedEvent
   a owl:Class ;
   rdfs:label "Revision of a translation"@en ;
+  adm:userTooltip "Event describing a revision of a Work"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
   owl:deprecated true ;
 .
@@ -1332,12 +1348,14 @@ An owl:subClassOf :Type, e.g., :KinType, will have some set of individuals that 
 
 The set of such individuals may be further organized via :Taxonomy but need not be."""@en ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Types are used to indicate features names, titles, events and so on."@en ;
   rdfs:label "Type"@en ;
 .
 bdo:UnicodeWork
   a owl:Class ;
   adm:translationPriority 2 ;
   rdfs:label "Unicode work (etext)" ;
+  adm:userTooltip "Indicates a searchable etext Work versus digitized page images."@en ;
   rdfs:subClassOf bdo:Work ;
 .
 bdo:Union
@@ -1346,13 +1364,15 @@ bdo:Union
 bdo:UnspecifiedWorkClass
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "This is the class of migrated works for which no work type was indicated. Needs repair after migration"@en ;
+  adm:technicalComment "This is the class of migrated works for which no work type was indicated. Needs repair after migration"@en ;
   rdfs:label "Unspecified work class"@en ;
+  adm:userTooltip "Works for which no work type was indicated"@en ;
   rdfs:subClassOf bdo:Work ;
 .
 bdo:VirtualWork
   a owl:Class ;
-  rdfs:comment "Virtual works are works made by assembling different other works. Examples: collections, manuscripts reconstituted from fragments in different collections, etc. The hierarchy of works displayed in an embedded reader is also a virtual work."@en ;
+  adm:technicalComment "Virtual works are works made by assembling different other works. Examples: collections, manuscripts reconstituted from fragments in different collections, etc. The hierarchy of works displayed in an embedded reader is also a virtual work."@en ;
+  adm:userTooltip "Virtual works are works made by assembling different other works."@en ;
   rdfs:label "Virtual work"@en ;
   rdfs:subClassOf bdo:Work ;
 .
@@ -1362,11 +1382,12 @@ bdo:Volume
 
 Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive."""@en ;
   rdfs:label "Volume"@en ;
+  adm:userTooltip "A volume is a self-contained set of pages/folia."@en ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:VolumeEtextAsset
   a owl:Class ;
-  rdfs:comment """This serves as a blank node that represents an actual volume corresponding to a volume of a printed/pubished Work OR a virtual volume of all of the eTexts contained in a printed/published Work.
+  adm:technicalComment """This serves as a blank node that represents an actual volume corresponding to a volume of a printed/pubished Work OR a virtual volume of all of the eTexts contained in a printed/published Work.
 
 The ambiguity arises because in some cases we do not have know the actual volume or volume order of a collection of input eTexts that have been provided for preservation. 
 
@@ -1374,6 +1395,7 @@ An example is the Guru Lama collection of Sakyapa eTexts. These were all input a
 
 There is no distinction between OCR'd and input volumes."""@en ;
   rdfs:label "Etext Volume"@en ;
+  adm:userTooltip "A searchable etext volume versus a physical or digitized pzges images."@en ;
   rdfs:subClassOf bdo:Volume ;
 .
 bdo:VolumeImageAsset
@@ -1385,38 +1407,39 @@ Each :VolumeImageAsset may have a :imageList property which will have a '|' sepa
 Alternatively, a :VolumeImageAsset may have an :hasManifest property that identifies an :IIIFManifest resource. This will typically occur when the images associated with the :VolumeImageAsset are served from a third-party IIIF server.
 
 Further, the :imageList property will be deprecated in favor of :hasDimensionData which will represent the image specific, name, height and width that is needed to generate a IIIF Manifest on-the-fly. The dimension data is a json array of per image data."""@en ;
-  rdfs:comment "Roleepresents a scanned or otherwise digitized set of page images."@en ;
+  adm:userTooltip "Represents a scanned or otherwise digitized set of page images."@en ;
   rdfs:label "Image Volume"@en ;
   rdfs:subClassOf bdo:Volume ;
 .
 bdo:VolumePhysicalAsset
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "Physical assets are indicated for libraries that are representing their assets as physical items."@en ;
+  adm:userTooltip "Physical assets are indicated for libraries that are representing their assets as physical items."@en ;
   rdfs:label "Physical Volume"@en ;
   rdfs:subClassOf bdo:Volume ;
 .
 bdo:Work
   a owl:Class ;
-  rdfs:comment "The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse." ;
+  adm:userTooltip "The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse." ;
   rdfs:label "Work"@en ;
   rdfs:subClassOf bdo:Entity ;
 .
 bdo:WorkBibliographicalTitle
   a owl:Class ;
-  rdfs:comment "The main title of a work, the title by which it is the most often known." ;
+  adm:userTooltip "The main title of a work, the title by which it is the most often known." ;
   rdfs:label "Bibliographic Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkColophonTitle
   a owl:Class ;
-  rdfs:comment "Title given in the colophon of a Work or text"@en ;
+  adm:userTooltip "Title given in the colophon of a Work or text"@en ;
   rdfs:label "Colophon Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkCopyrightPageTitle
   a owl:Class ;
-  rdfs:comment "use for the title on the copyright page when it differs from the bibliographical title."@en ;
+  adm:catalogingConvention "use for the title on the copyright page when it differs from the bibliographical title."@en ;
+  adm:userTooltip "Title appearing on the copyright page of a Work, if present."@en ;
   rdfs:label "Copyright page Title"@en ;
   rdfs:seeAlso "http://cip.loc.gov/cipman/"^^xsd:anyURI ;
   rdfs:seeAlso "https://www.loc.gov/publish/cip/news/lccn_art.html"^^xsd:anyURI ;
@@ -1424,51 +1447,53 @@ bdo:WorkCopyrightPageTitle
 .
 bdo:WorkCoverTitle
   a owl:Class ;
-  rdfs:comment "Title printed on the cover of a Work or text as issued"@en ;
+  adm:userTooltip "Title printed on the cover of a Work or text as issued"@en ;
   rdfs:label "Cover Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkDkarChagTitle
   a owl:Class ;
-  rdfs:comment "Use this type for titles in table of contents when they differ from the bibliographical title."@en ;
+  adm:userTooltip "Use this type for titles in table of contents when they differ from the bibliographical title."@en ;
   rdfs:label "Table of Contents Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
   owl:deprecated true ;
 .
 bdo:WorkEvent
   a owl:Class ;
-  rdfs:comment "An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
+  adm:technicalComment "An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
+  adm:userTooltip "An event associated with the production of a Work."@en ;
   rdfs:label "Work Event"@en ;
   rdfs:subClassOf bdo:Event ;
 .
 bdo:WorkFullTitle
   a owl:Class ;
-  rdfs:comment "Title on the first page of the text of the Tibetan traditional Pecha format."@en ;
+  adm:userTooltip "Title on the first page of the text of the Tibetan traditional Pecha format."@en ;
   rdfs:label "Full Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkHalfTitle
   a owl:Class ;
-  rdfs:comment "Title of a publication appearing on a page or folio preceding the title page."@en ;
+  adm:userTooltip "Title of a publication appearing on a page or folio preceding the title page."@en ;
   rdfs:label "Half Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkIncipitTitle
   a owl:Class ;
-  rdfs:comment "the title as given at the beginning of the text"@en ;
+  adm:userTooltip "the title as given, inline, at the beginning of the text"@en ;
   rdfs:label "Incipit Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkLocation
   a owl:Class ;
-  rdfs:comment "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
-  rdfs:comment "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
-  rdfs:comment "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
+  adm:userTooltip "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
+  adm:technicalComment "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
+  adm:technicalComment "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
+  rdfs:label "Work Location"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:WorkOtherTitle
   a owl:Class ;
-  rdfs:comment "Title that a work is known by other than one of the defined title types"@en ;
+  adm:userTooltip "Title that a work is known by other than one of the defined title types"@en ;
   rdfs:label "Other Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1478,27 +1503,27 @@ bdo:WorkPartType
 bdo:WorkReferenceTitle
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "for use with abstract works such as from the SEA project that have many different expressions with the same putative title"@en ;
+  adm:userTooltip "for use with abstract works such as from the SEA project that have many different expressions with the same putative title"@en ;
   rdfs:label "Reference Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkRunningTitle
   a owl:Class ;
-  rdfs:comment "Title indicated in the margins or the page headers of a book."@en ;
+  adm:userTooltip "Title indicated in the margins or the page headers of a book."@en ;
   rdfs:label "Running Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
   skos:altlabel "Marginal title"@en ;
 .
 bdo:WorkSpineTitle
   a owl:Class ;
-  rdfs:comment "title indicated on the spine of a book"@en ;
-  rdfs:comment "use for titles indicated on the spine of a book when it differs from the bibliographical title."@en ;
+  adm:userTooltip "title indicated on the spine of a book"@en ;
+  adm:catalogingConvention "use for titles indicated on the spine of a book when it differs from the bibliographical title."@en ;
   rdfs:label "Spine Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkSubtitle
   a owl:Class ;
-  rdfs:comment "Title that is explanatory. Typically following the main Title Page Title or Cover Title"@en ;
+  adm:userTooltip "Title that is explanatory. Typically following the main Title Page Title or Cover Title"@en ;
   rdfs:label "Subtitle"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1514,24 +1539,26 @@ bdr:W22083 a :Work ;
             rdfs:label \"la dwags tog mu mkhar bzhugs pa'i bod yig bka' 'gyur bris ma/\"@bo-x-ewts ] ,
           [ a :WorkTitlePageTitle ;
             rdfs:label \"the tog palace manuscript of the tibetan kanjur\"@en ] ."""@en ;
+  adm:userTooltip "A title by which is known or referenced."@en ;
   rdfs:label "Title"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:WorkTitlePageTitle
   a owl:Class ;
-  rdfs:comment "Title that appears on the title page of a Work"@en ;
+  adm:userTooltip "Title that appears on the title page of a Work"@en ;
   rdfs:label "Title page title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkTitlePortion
   a owl:Class ;
-  rdfs:comment "Title that is abbreviated, condensed, divided from the main title"@en ;
+  adm:userTooltip "Title that is abbreviated, condensed, divided from the main title"@en ;
   rdfs:label "Title portion"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
 bdo:WorkToCTitle
   a owl:Class ;
   rdfs:comment "Use this type for titles in table of contents when they differ from the bibliographical title."@en ;
+  adm:userTooltip "A title for a work as it occurs in the table of contents for a Work."@en ;
   rdfs:label "Table of Contents Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
@@ -1540,7 +1567,7 @@ bdo:WorkType
 .
 bdo:agent
   a owl:ObjectProperty ;
-  rdfs:comment "identifies the agent participating in an :AgentInRole"@en ;
+  adm:userTooltip "identifies the agent participating in an :AgentInRole"@en ;
   rdfs:domain bdo:AgentInRole ;
   rdfs:label "agent"@en ;
   rdfs:range bdo:Agents ;

@@ -14,7 +14,8 @@
 
 bdo:Transliteration
   a owl:Class ;
-  rdfs:comment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
+  adm:technicalComment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
+  adm:userTooltip "A transliteration used to represent a language in a non-native script."@en ;
   rdfs:label "Transliteration"@en ;
 .
 Transliteration:

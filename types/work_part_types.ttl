@@ -14,7 +14,7 @@
 
 bdo:WorkPartType
   a owl:Class ;
-  rdfs:comment "represents the type of a part of a Work such as Chapter, Section and so on"@en ;
+  adm:userTooltip "represents the type of a part of a Work such as Chapter, Section and so on"@en ;
   rdfs:label "Work Part Type"@en ;
 .
 WorkPartType:
