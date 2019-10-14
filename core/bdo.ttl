@@ -3646,7 +3646,6 @@ bdo:workKaTenSiglaD
 bdo:workKaTenSiglaDo
   a owl:DatatypeProperty ;
   rdfs:label "Dolpo Kangyur Catalogue Number"@en ;
-  rdfs:label "Dolpo Manuscript Catalogue number, from rKTs"@en ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaG
