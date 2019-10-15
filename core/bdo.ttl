@@ -2845,7 +2845,7 @@ bdo:personConsortOf
 .
 bdo:personEvent
   a owl:ObjectProperty ;
-  rdfs:comment "An event related to a perswon such as birth, death, ordination, founding monastery and so on"@en ;
+  adm:userTooltip "An event related to a person such as birth, death, ordination, founding monastery and so on"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "event"@en ;
   rdfs:range bdo:PersonEvent ;
