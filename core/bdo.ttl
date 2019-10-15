@@ -1821,7 +1821,7 @@ bdo:creatorReviser
   adm:catalogingConvention """An individual who is known to have revised a previous work or translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-  adm:userTooltip "An individual who is known to have revised a previous work or translation."@en ;"
+  adm:userTooltip "An individual who is known to have revised a previous work or translation."@en ;
   rdfs:label "reviser"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
@@ -1831,7 +1831,7 @@ bdo:creatorReviserOfTranslation
   adm:catalogingConvention """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-  adm:userTooltip "An individual who is known to have revised a previous translation."@en ;"
+  adm:userTooltip "An individual who is known to have revised a previous translation."@en ;
   rdfs:label "reviser of translation"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
@@ -1858,7 +1858,7 @@ bdo:creatorTranslator
   adm:catalogingConvention """A translator of the Work. Cf., W8LS25412:
 
 The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
-  adm:userTooltip "A translator of the Work."@en ;"
+  adm:userTooltip "A translator of the Work."@en ;
   rdfs:label "translator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
