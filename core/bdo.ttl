@@ -1574,35 +1574,35 @@ bdo:agent
 .
 bdo:appliedMaterial
   a owl:ObjectProperty ;
-  rdfs:comment "use to indicate the material applied on a work (ink, golden leaf, etc.)"@en ;
+  adm:userTooltip "Indicates the material applied on a work (ink, golden leaf, etc.)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "applied material"@en ;
   rdfs:range bdo:AppliedMaterial ;
 .
 bdo:baseMaterial
   a owl:ObjectProperty ;
-  rdfs:comment "use to indicate the base material of a work (paper, palm leaf, etc.)"@en ;
+  adm:userTooltip "Indicates the base material of a work (paper, palm leaf, etc.)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "base material"@en ;
   rdfs:range bdo:BaseMaterial ;
 .
 bdo:beDate
   a rdfs:Datatype ;
-  rdfs:comment "Buddhist Era Year dating from 543 B.C.E."@en ;
+  adm:userTooltip "Buddhist Era Year dating from 543 B.C.E."@en ;
   rdfs:label "B.E. date"@en ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
 .
 bdo:binding
   a owl:ObjectProperty ;
-  rdfs:comment "use to describe the type of binding of a work (loose leaves, bound by glue, etc.)"@en ;
+  adm:userTooltip "Describes the type of binding of a work (loose leaves, bound by glue, etc.)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "binding"@en ;
   rdfs:range bdo:Binding ;
 .
 bdo:ceDate
   a rdfs:Datatype ;
-  rdfs:comment "Common Era Year"@en ;
+  adm:userTooltip "Common Era Year"@en ;
   rdfs:label "C.E. date"@en ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
@@ -1617,6 +1617,7 @@ bdo:chunkContents
 .
 bdo:corporationHasMember
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Entity that is a member of the corporation"@en ;
   rdfs:domain bdo:Corporation ;
   rdfs:label "has member"@en ;
   rdfs:range bdo:CorporationMember ;
@@ -1624,6 +1625,7 @@ bdo:corporationHasMember
 bdo:corporationMember
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a Person that is a member of the corporation"@en ;
   rdfs:domain bdo:CorporationMember ;
   rdfs:label "person"@en ;
   rdfs:range bdo:Person ;
@@ -1642,7 +1644,7 @@ The original corporation.xsd includes several attributes on <region/>: @start, @
 for @start, C71, and a different instance, C13, for @endCirca. The uses are not correct and these attributes have not been included in the current model.
 
 Thus crp:region maps crp:Corporation directly to plc:Place without any additional chaff"""@en ;
-  rdfs:comment "This property records a Place characterizing the region in which the Corporation occured/occurs."@en ;
+  adm:userTooltip "This property records a Place characterizing the region in which the Corporation occured/occurs."@en ;
   rdfs:domain bdo:Corporation ;
   rdfs:label "region"@en ;
   rdfs:range bdo:Place ;
@@ -1650,14 +1652,14 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 bdo:correctionOf
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "the current name or title is a corrected version of the target rdf:langString" ;
+  adm:userTooltip "the current name or title is a corrected version of the target rdf:langString" ;
   rdfs:domain bdo:WorkTitle ;
   rdfs:label "correction of"@en ;
   rdfs:range bdo:OriginalTitle ;
 .
 bdo:creator
   a owl:ObjectProperty ;
-  rdfs:comment ":creator associates a Work with an Agent and a Creator Role that participated in the creation of the Work"@en ;
+  adm:userTooltip "Associates a Work with an Agent and a Creator Role that participated in the creation of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has creator"@en ;
   rdfs:range bdo:AgentAsCreator ;
@@ -1665,7 +1667,7 @@ bdo:creator
 .
 bdo:creatorAmanuensis
   a owl:ObjectProperty ;
-  rdfs:comment "the person who writes down a translation in Chinese, in a capacity something like a scribe."@en ;
+  adm:userTooltip "A person who writes down a translation in Chinese, in a capacity something like a scribe."@en ;
   rdfs:label "amanuensis"@en ;
   rdfs:label "筆受"@zh-hant ;
   rdfs:subPropertyOf bdo:workCreator ;
@@ -1673,66 +1675,69 @@ bdo:creatorAmanuensis
 .
 bdo:creatorArtist
   a owl:ObjectProperty ;
-  rdfs:comment "An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like"@en ;
+  adm:userTooltip "An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like"@en ;
   rdfs:label "artist"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorAttributedAuthor
   a owl:ObjectProperty ;
-  rdfs:comment "A creator identified by a separate source as an author of the Work"@en ;
+  adm:userTooltip "A creator identified by a separate source as an author of the Work"@en ;
   rdfs:label "attributed author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorBard
   a owl:ObjectProperty ;
-  rdfs:comment "for a Work of verse a poet who composed the verse"@en ;
+  adm:userTooltip "for a Work of verse a poet who composed the verse"@en ;
   rdfs:label "bard"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorCalligrapher
   a owl:ObjectProperty ;
-  rdfs:comment "For a handwritten Work an individual that drew the text or carved it on woord blocks"@en ;
+  adm:userTooltip "For a handwritten Work an individual that drew the text or carved it on woord blocks"@en ;
   rdfs:label "calligrapher"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorCommentator
   a owl:ObjectProperty ;
-  rdfs:comment "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
+  adm:userTooltip "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
   rdfs:label "commentator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorCompiler
   a owl:ObjectProperty ;
-  rdfs:comment """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
+  adm:catalogingConvention """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
 
 Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
 a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
+  adm:userTooltip "A person who assembles a text out of pre-existing smaller texts or portions"@en ;
   rdfs:label "compiler"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorContributingAuthor
   a owl:ObjectProperty ;
-  rdfs:comment "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
+  adm:catalogingConvention "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
+  adm:userTooltip "An individual that author one or more parts of a Work."@en ;
   rdfs:label "contributing author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorEditor
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of bdo:Compiler"@en ;
+  adm:deprecatedComment "deprecated in favor of bdo:Compiler"@en ;
   rdfs:label "editor"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorForger
   a owl:ObjectProperty ;
-  rdfs:comment "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
+  adm:catalogingConvention "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
+  adm:userTooltip "A person who produces a text, but then knowingly presents it as the end result of some other process of composition"@en ;
   rdfs:label "forger"@en ;
   rdfs:label "偽作"@zh-hant ;
   rdfs:subPropertyOf bdo:workCreator ;
@@ -1740,14 +1745,15 @@ bdo:creatorForger
 .
 bdo:creatorGeneralAuthor
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of :MainAuthor"@en ;
+  adm:deprecatedComment "deprecated in favor of :MainAuthor"@en ;
   rdfs:label "general author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorHeadTranslator
   a owl:ObjectProperty ;
-  rdfs:comment "The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person's role is implicit or inferred from other knowledge about the composition of the translation group."@en ;
+  adm:catalogingConvention "The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person's role is implicit or inferred from other knowledge about the composition of the translation group."@en ;
+  adm:userTooltip "The person identified by tradition implicitly as the head of the translation group"@en ;
   rdfs:label "head translator"@en ;
   rdfs:label "譯主"@zh-hant ;
   rdfs:subPropertyOf bdo:workCreator ;
@@ -1755,110 +1761,120 @@ bdo:creatorHeadTranslator
 .
 bdo:creatorIndicScholar
   a owl:ObjectProperty ;
-  rdfs:comment "in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
+  adm:catalogingConvention "in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
+  adm:userTooltip "Persons who function in the translation group as experts in the Indic traditions"@en ;
   rdfs:label "Indic Scholar"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorMainAuthor
   a owl:ObjectProperty ;
-  rdfs:comment "the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the \"author\" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the \"author\" of a commentary"@en ;
+  adm:catalogingConvention "the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the \"author\" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the \"author\" of a commentary"@en ;
+  adm:userTooltip "The actual author of a text"@en ;
   rdfs:label "main author"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorOralTranslator
   a owl:ObjectProperty ;
-  rdfs:comment "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
+  adm:catalogingConvention "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
+  adm:userTooltip "a person who translates an orally transmitted text"@en ;
   rdfs:label "oral translator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorPandita
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of :IndicScholar"@en ;
+  adm:deprecatedComment "deprecated in favor of :IndicScholar"@en ;
   rdfs:label "pandita"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorRecipientOfResponseToQuery
   a owl:ObjectProperty ;
-  rdfs:comment """An individual to whom answers in a Work are addressed. Cf., W22146:
+  adm:catalogingConvention """An individual to whom answers in a Work are addressed. Cf., W22146:
 
-Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
+Study of the history of Buddhism in Tibet. Written by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
+  adm:userTooltip "An individual to whom answers in a Work are addressed"@en ;
   rdfs:label "recipient of response to query"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorReciter
   a owl:ObjectProperty ;
-  rdfs:comment "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
+  adm:catalogingConvention "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
+  adm:userTooltip "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation"@en ;
   rdfs:label "reciter"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorRequester
   a owl:ObjectProperty ;
-  rdfs:comment "An individual who requested the author to write the Work"@en ;
-  rdfs:comment "deprecated - not used"@en ;
+  adm:catalogingConvention "An individual who requested the author to write the Work"@en ;
+  adm:deprecatedComment "deprecated - not used"@en ;
   rdfs:label "requester"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorReviser
   a owl:ObjectProperty ;
-  rdfs:comment """An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
+  adm:catalogingConvention """An individual who is known to have revised a previous work or translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
+  adm:userTooltip "An individual who is known to have revised a previous work or translation."@en ;"
   rdfs:label "reviser"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorReviserOfTranslation
   a owl:ObjectProperty ;
-  rdfs:comment """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
+  adm:catalogingConvention """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
 
 The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
+  adm:userTooltip "An individual who is known to have revised a previous translation."@en ;"
   rdfs:label "reviser of translation"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorScribe
   a owl:ObjectProperty ;
-  rdfs:comment "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
+  adm:userTooltip "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
   rdfs:label "scribe"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorTerton
   a owl:ObjectProperty ;
-  rdfs:comment """An individual who revealed the Work as treasure texts. Cf., W25816:
+  adm:catalogingConvention """An individual who revealed the Work as treasure texts. Cf., W25816:
 
 Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak"""@en ;
+  adm:userTooltip "An individual who revealed the Work as treasure texts."@en ;
   rdfs:label "tertön"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorTranslator
   a owl:ObjectProperty ;
-  rdfs:comment """A translator of the Work. Cf., W8LS25412:
+  adm:catalogingConvention """A translator of the Work. Cf., W8LS25412:
 
 The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
+  adm:userTooltip "A translator of the Work."@en ;"
   rdfs:label "translator"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:creatorUnspecified
   a owl:ObjectProperty ;
-  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
+  adm:catalogingConvention "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
   rdfs:label "unspecified"@en ;
+  adm:userTooltip "A person that evidence tells us only that they were involved in the production of the Work."@en ;
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
 bdo:csDate
   a rdfs:Datatype ;
   adm:translationPriority 2 ;
-  rdfs:comment "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
+  adm:userTooltip "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
   rdfs:label "CS date"@en ;
   rdfs:seeAlso <http://lannamanuscripts.net/en/search/new/> ;
   rdfs:seeAlso <http://www.degruyter.com/downloadpdf/books/9783110479010/9783110479010-003/9783110479010-003.pdf> ;
@@ -1872,7 +1888,7 @@ bdo:dataTypeExpression
 bdo:dateApproximate
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "set to true to indicate that the date information in an :Event or :Period is approximate or uncertain"@en ;
+  adm:userTooltip "set to true to indicate that the date information in an :Event or :Period is approximate or uncertain"@en ;
   rdfs:domain bdo:Date ;
   rdfs:label "date is approximate"@en ;
   rdfs:range xsd:boolean ;
@@ -1880,7 +1896,7 @@ bdo:dateApproximate
 bdo:datePeriod
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "associates a :Date with at most one :TimePeriod such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :TimePeriod metadata"@en ;
+  adm:catalogingConvention "associates a :Date with at most one :TimePeriod such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :TimePeriod metadata"@en ;
   rdfs:domain bdo:Date ;
   rdfs:label "period"@en ;
   rdfs:range bdo:TimePeriod ;
@@ -1888,7 +1904,7 @@ bdo:datePeriod
 bdo:dateType
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "the type of date such as :ceDate for a Common Era date or :beDate for Buddhist Era date"@en ;
+  adm:userTooltip "the type of date such as :ceDate for a Common Era date or :beDate for Buddhist Era date"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "date type"@en ;
   rdfs:range bdo:AnyDate ;
@@ -1902,16 +1918,17 @@ bdo:eTextHasChunk
 .
 bdo:eTextHasPage
   a owl:ObjectProperty ;
-  rdfs:comment """Refers to a page of an eText corresponding to a physical/image page asset.
+  adm:catalogingConvention """Refers to a page of an eText corresponding to a physical/image page asset.
 
 Used to provide stand-off markup for the pagination of eText in correspondence with physical/image assets when known such as in OCR or certain cases of manual input where such information has been preserved during input."""@en ;
+  adm:userTooltip "Refers to a page of an eText corresponding to a physical/image page asset."@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "page"@en ;
   rdfs:range bdo:EtextPage ;
 .
 bdo:eTextInItem
   a owl:ObjectProperty ;
-  rdfs:comment "The reference to the :ItemEtext indicates the item that contains the volume that this Etext is contained in"@en ;
+  adm:userTooltip "The reference to the :ItemEtext indicates the item that contains the volume that this Etext is contained in"@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "in item"@en ;
   rdfs:range bdo:ItemEtext ;
@@ -1919,20 +1936,21 @@ bdo:eTextInItem
 .
 bdo:eTextInVolume
   a owl:DatatypeProperty ;
+  adm:userTooltip "Indicates the volume in which the etext is found."@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "in volume"@en ;
   rdfs:range xsd:integer ;
 .
 bdo:eTextIsVolume
   a owl:DatatypeProperty ;
-  rdfs:comment "The Etext is the entire volume"@en ;
+  adm:userTooltip "The Etext is the entire volume"@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "is volume"@en ;
   rdfs:range xsd:integer ;
 .
 bdo:eTextResource
   a owl:ObjectProperty ;
-  rdfs:comment "Refers to an :Etext that is contained in a particular :VolumeEtextAsset"@en ;
+  adm:userTooltip "Refers to an :Etext that is contained in a particular :VolumeEtextAsset"@en ;
   rdfs:domain bdo:EtextRef ;
   rdfs:label "eText resource"@en ;
   rdfs:range bdo:Etext ;
@@ -1940,22 +1958,24 @@ bdo:eTextResource
 bdo:eTextSourcePath
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment """The source path, for an InputEtext, is a relative to an unspecified file system root and identifies a file from which the Unicode eText was generated. This should be the original Tibet Doc, Sambhota Word or other input format.
+  adm:catalogingConvention """The source path, for an InputEtext, is a relative to an unspecified file system root and identifies a file from which the Unicode eText was generated. This should be the original Tibet Doc, Sambhota Word or other input format.
 
 For an OCR file this should refer to the file generated by the OCR process which contains information regarding character positioning and so on."""@en ;
+  adm:userTooltip "The source path, for an InputEtext."@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "source path"@en ;
   rdfs:range xsd:string ;
 .
 bdo:eTextTitle
   a owl:DatatypeProperty ;
+  adm:userTooltip "Title for the etext."@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "title"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:eTextVolumeIndex
   a owl:DatatypeProperty ;
-  rdfs:comment "position of the eText in the volume that contains it"@en ;
+  adm:userTooltip "position of the eText in the volume that contains it"@en ;
   rdfs:domain bdo:Etext ;
   rdfs:label "eText volume index"@en ;
   rdfs:range xsd:integer ;
@@ -1963,49 +1983,53 @@ bdo:eTextVolumeIndex
 bdo:eventText
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "captures ad hoc text associated with the event"@en ;
+  adm:userTooltip "captures ad hoc text associated with the event"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "event text"@en ;
   rdfs:range xsd:string ;
 .
 bdo:eventWhen
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates the time of the event"@en ;
+  adm:userTooltip "Indicates the time of the event"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "when"@en ;
   rdfs:range bdo:AnyDate ;
 .
 bdo:eventWhere
   a owl:ObjectProperty ;
-  rdfs:comment "associates an event with at most one place"@en ;
+  adm:userTooltip "associates an event with at most one place"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "place"@en ;
   rdfs:range bdo:Place ;
 .
 bdo:eventWho
   a owl:ObjectProperty ;
-  rdfs:comment "associates an event with one or more agent"@en ;
+  adm:userTooltip "associates an event with one or more agent"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "who"@en ;
   rdfs:range bdo:AgentsOrAgentInRole ;
 .
 bdo:hasAunt
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Aunt of the Person"@en ;
   rdfs:label "has aunt"@en ;
   rdfs:subPropertyOf bdo:hasParentSibling ;
 .
 bdo:hasBrother
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Brother of the Person"@en ;
   rdfs:label "has brother"@en ;
   rdfs:subPropertyOf bdo:hasSibling ;
 .
 bdo:hasBrotherInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Brother-in-law of the Person"@en ;
   rdfs:label "has brother in-law"@en ;
   rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 .
 bdo:hasChild
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Child of the Person"@en ;
   rdfs:label "has child"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
   owl:inverseOf bdo:hasParent ;
@@ -2013,65 +2037,76 @@ bdo:hasChild
 bdo:hasCousin
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
+  adm:userTooltip "Indicates a Cousin of the Person"@en ;
   rdfs:label "has cousin"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasDaughter
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Daughter of the Person"@en ;
   rdfs:label "has daughter"@en ;
   rdfs:subPropertyOf bdo:hasChild ;
 .
 bdo:hasFascicles
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A list of fascicles contained in the work"@en ;
+  adm:userTooltip "A list of fascicles contained in the work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has fascicles"@en ;
   rdfs:range xsd:string ;
 .
 bdo:hasFather
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the Father of the Person"@en ;
   rdfs:label "has father"@en ;
   rdfs:subPropertyOf bdo:hasParent ;
 .
 bdo:hasFatherInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the Father-in-law of the Person"@en ;
   rdfs:label "has father in-law"@en ;
   rdfs:subPropertyOf bdo:hasParentInLaw ;
 .
 bdo:hasGrandChild
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Grandchild of the Person"@en ;
   rdfs:label "has grandchild"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
   owl:inverseOf bdo:hasGrandParent ;
 .
 bdo:hasGrandParent
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Grandparent of the Person"@en ;
   rdfs:label "has grandparent"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasGranddaughter
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Granddaughter of the Person"@en ;
   rdfs:label "has granddaughter"@en ;
   rdfs:subPropertyOf bdo:hasGrandChild ;
 .
 bdo:hasGrandfather
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Grandfather of the Person"@en ;
   rdfs:label "has grandfather"@en ;
   rdfs:subPropertyOf bdo:hasGrandParent ;
 .
 bdo:hasGrandmother
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Grandmother of the Person"@en ;
   rdfs:label "has grandmother"@en ;
   rdfs:subPropertyOf bdo:hasGrandParent ;
 .
 bdo:hasGrandson
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Grandson of the Person"@en ;
   rdfs:label "has grandson"@en ;
   rdfs:subPropertyOf bdo:hasGrandChild ;
 .
 bdo:hasHusband
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Husband of the Person"@en ;
   rdfs:label "has husband"@en ;
   rdfs:subPropertyOf bdo:hasSpouse ;
 .
@@ -2092,13 +2127,15 @@ bdo:hasIIIFManifest
 .
 bdo:hasInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an in-law of the Person"@en ;
   rdfs:label "has in-law"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasIncarnation
   a owl:ObjectProperty ;
   bdo:inferSubTree true ;
-  rdfs:comment "This property is applicable to Persons and Topics (that represent deities or other ahistorical figures)."@en ;
+  adm:catalogingConvention "This property is applicable to Persons and Topics (that represent deities or other ahistorical figures)."@en ;
+  adm:userTooltip "Indicates a Person considered to be an Incarnation of this Person"@en ;
   rdfs:domain bdo:PersonOrTopic ;
   rdfs:label "has incarnation"@en ;
   rdfs:range bdo:Person ;
@@ -2106,194 +2143,227 @@ bdo:hasIncarnation
 .
 bdo:hasIncarnationActivities
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Activities incarnation of this Person."@en ;
   rdfs:label "has activities incarnation"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationActivities ;
 .
 bdo:hasIncarnationBody
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Body incarnation of this Person."@en ;
   rdfs:label "has body incarnation"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationBody ;
 .
 bdo:hasIncarnationGeneral
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an incarnation of this Person."@en ;
   rdfs:label "has general incarnation"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationGeneral ;
 .
 bdo:hasIncarnationMind
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Minds incarnation of this Person."@en ;
   rdfs:label "has mind incarnation"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationMind ;
 .
 bdo:hasIncarnationQualities
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Qualities incarnation of this Person."@en ;
   rdfs:label "has qualities incarnation"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationQualities ;
 .
 bdo:hasIncarnationSpeech
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Speech incarnation of this Person."@en ;
   rdfs:label "has speech incarnation"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationSpeech ;
 .
 bdo:hasIncarnationYangtse
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a young incarnation of this Person."@en ;
   rdfs:label "has yangtse"@en ;
   rdfs:subPropertyOf bdo:hasIncarnation ;
   owl:inverseOf bdo:incarnationYangtse ;
 .
 bdo:hasMaternalAunt
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Maternal aunt of the Person"@en ;
   rdfs:label "has maternal aunt"@en ;
   rdfs:subPropertyOf bdo:hasAunt ;
 .
 bdo:hasMaternalUncle
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Maternal uncle of the Person"@en ;
   rdfs:label "has maternal uncle"@en ;
   rdfs:subPropertyOf bdo:hasUncle ;
 .
 bdo:hasMother
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the Mother of the Person"@en ;
   rdfs:label "has mother"@en ;
   rdfs:subPropertyOf bdo:hasParent ;
 .
 bdo:hasMotherInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Mother-in-law of the Person"@en ;
   rdfs:label "has mother in-law"@en ;
   rdfs:subPropertyOf bdo:hasParentInLaw ;
 .
 bdo:hasNephew
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Nephew of the Person"@en ;
   rdfs:label "has nephew"@en ;
   rdfs:subPropertyOf bdo:hasNibling ;
 .
 bdo:hasNibling
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Nibling of the Person"@en ;
   rdfs:label "has nibling"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasNiece
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Niece of the Person"@en ;
   rdfs:label "has niece"@en ;
   rdfs:subPropertyOf bdo:hasNibling ;
 .
 bdo:hasOlderBrother
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Older brother of the Person"@en ;
   rdfs:label "has older brother"@en ;
   rdfs:subPropertyOf bdo:hasBrother ;
 .
 bdo:hasOlderSister
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Older sister of the Person"@en ;
   rdfs:label "has older sister"@en ;
   rdfs:subPropertyOf bdo:hasSister ;
 .
 bdo:hasParent
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Parent of the Person"@en ;
   rdfs:label "has parent"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasParentInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Parent-in-law of the Person"@en ;
   rdfs:label "has parent in-law"@en ;
   rdfs:subPropertyOf bdo:hasInLaw ;
 .
 bdo:hasParentSibling
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Parent sibling of the Person"@en ;
   rdfs:label "has parent sibling"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasPaternalAunt
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Paternal aunt of the Person"@en ;
   rdfs:label "has paternal aunt"@en ;
   rdfs:subPropertyOf bdo:hasAunt ;
 .
 bdo:hasPaternalUncle
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Paternal uncle of the Person"@en ;
   rdfs:label "has paternal uncle"@en ;
   rdfs:subPropertyOf bdo:hasUncle ;
 .
 bdo:hasSibling
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
+  adm:userTooltip "Indicates a Sibling of the Person"@en ;
   rdfs:label "has sibling"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasSiblingInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Sibling-in-law of the Person"@en ;
   rdfs:label "has sibling in-law"@en ;
   rdfs:subPropertyOf bdo:hasInLaw ;
 .
 bdo:hasSister
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Sister of the Person"@en ;
   rdfs:label "has sister"@en ;
   rdfs:subPropertyOf bdo:hasSibling ;
 .
 bdo:hasSisterInLaw
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Sister-in-law of the Person"@en ;
   rdfs:label "has sister in-law"@en ;
   rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 .
 bdo:hasSon
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Son of the Person"@en ;
   rdfs:label "has son"@en ;
   rdfs:subPropertyOf bdo:hasChild ;
 .
 bdo:hasSpouse
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
+  adm:userTooltip "Indicates a Spouse of the Person"@en ;
   rdfs:label "has spouse"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasSteward
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A steward of (a Collection of) Textual Item(s) is an organization that preserves and makes metadata and images/etexts available digitally.  A steward may be an :Organization or an adm:Organization."@en ;
+  adm:catalogingConvention "A steward of (a Collection of) Textual Item(s) is an organization that preserves and makes metadata and images/etexts available digitally.  A steward may be an :Organization or an adm:Organization."@en ;
+  adm:userTooltip "An organization that preserves and makes metadata and images/etexts available digitally"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has steward"@en ;
   rdfs:range bdo:Agents ;
 .
 bdo:hasUncle
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates an Uncle of the Person"@en ;
   rdfs:label "has uncle"@en ;
   rdfs:subPropertyOf bdo:hasParentSibling ;
 .
 bdo:hasUnknownKinship
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
+  adm:userTooltip "Indicates a Person with an unknown kinship relation to the Person"@en ;
   rdfs:label "has unknown kinship with"@en ;
   rdfs:subPropertyOf bdo:kinWith ;
 .
 bdo:hasWife
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Wife of the Person"@en ;
   rdfs:label "has wife"@en ;
   rdfs:subPropertyOf bdo:hasSpouse ;
 .
 bdo:hasWorkNum
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "the number of this work within a containing work"@en ;
+  adm:userTooltip "the number of this work within a containing work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has work number"@en ;
   rdfs:range xsd:string ;
 .
 bdo:hasYoungerBrother
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Younger brother of the Person"@en ;
   rdfs:label "has younger brother"@en ;
   rdfs:subPropertyOf bdo:hasBrother ;
 .
 bdo:hasYoungerSister
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Younger sister of the Person"@en ;
   rdfs:label "has younger sister"@en ;
   rdfs:subPropertyOf bdo:hasSister ;
 .
 bdo:imageCount
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A positive integer indicating the total number of images in the VolumeImageAsset"@en ;
+  adm:userTooltip "A positive integer indicating the total number of images in the VolumeImageAsset"@en ;
   rdfs:domain bdo:VolumeImageAsset ;
   rdfs:label "image count"@en ;
   rdfs:range xsd:integer ;
@@ -2301,8 +2371,8 @@ bdo:imageCount
 bdo:imageList
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "If this property is present it indicates that digitized images of the volume are present in the archive." ;
-  rdfs:comment """The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character. In the normal situations the image names are incremented by one to generate image-count names.
+  adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive." ;
+  adm:catalogingConvention """The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character. In the normal situations the image names are incremented by one to generate image-count names.
 
 The typical case is a collection of tiffs:
 
@@ -2327,6 +2397,7 @@ There are odd naming situations where a single name stands alone and the next na
     :imageList \"1CZ7740001.tif:43|1CZ7740043a.tif|1CZ7740044.tif:472\"
 
 when a name standalone the \":1\" can be dispensed with."""@en ;
+  adm:userTooltip "The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character."@en ;
   rdfs:domain bdo:VolumeImageAsset ;
   rdfs:label "image list"@en ;
   rdfs:range xsd:string ;
@@ -2335,11 +2406,12 @@ when a name standalone the \":1\" can be dispensed with."""@en ;
 bdo:imagesMissing
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment """A comma separated list of image indexes that are missing. For example:
+  adm:catalogingConvention """A comma separated list of image indexes that are missing. For example:
 
     :imagesMissing \"43,77-78,192'
 
 This is a rare situation but needs to be handled."""@en ;
+  adm:userTooltip "A comma separated list of image indexes that are missing."@en ;
   rdfs:domain bdo:VolumeImageAsset ;
   rdfs:label "images missing"@en ;
   rdfs:range xsd:string ;
@@ -2347,36 +2419,43 @@ This is a rare situation but needs to be handled."""@en ;
 .
 bdo:incarnationActivities
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is an Activities incarnation of the target Person"@en ;
   rdfs:label "activities incarnation of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
 bdo:incarnationBody
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is a Body incarnation of the target Person"@en ;
   rdfs:label "body incarnation of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
 bdo:incarnationGeneral
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is a general incarnation of the target Person"@en ;
   rdfs:label "general incarnation of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
 bdo:incarnationMind
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is a Mind incarnation of the target Person"@en ;
   rdfs:label "mind incarnation of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
 bdo:incarnationQualities
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is a Qualities incarnation of the target Person"@en ;
   rdfs:label "qualities incarnation of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
 bdo:incarnationSpeech
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is a Speech incarnation of the target Person"@en ;
   rdfs:label "speech incarnation of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
 bdo:incarnationYangtse
   a owl:ObjectProperty ;
+  adm:userTooltip "This Person is the next incarnation of the target Person"@en ;
   rdfs:label "yangtse of"@en ;
   rdfs:subPropertyOf bdo:isIncarnation ;
 .
@@ -2387,7 +2466,8 @@ bdo:inferSubTree
 bdo:isIncarnation
   a owl:ObjectProperty ;
   bdo:inferSubTree true ;
-  rdfs:comment "personIsIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary."@en ;
+  adm:catalogingConvention "isIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary."@en ;
+  adm:userTooltip "This Person is an incarnation of the target Person"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "is incarnation of"@en ;
   rdfs:range bdo:PersonOrTopic ;
@@ -2395,7 +2475,8 @@ bdo:isIncarnation
 bdo:isRoot
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "True if this resource is a root resource - Entity or AdminData. If not present on a Work, which may be a sub-part, it is assumed false"@en ;
+  adm:catalogingConvention "True if this resource is a root resource - Entity or AdminData. If not present on a Work, which may be a sub-part, it is assumed false"@en ;
+  adm:userTooltip "This Resource is a root of a composite Resource such as a Work containing other works."@en ;
   rdfs:domain owl:Thing ;
   rdfs:label "is root resource"@en ;
   rdfs:range xsd:boolean ;
