@@ -2506,15 +2506,16 @@ bdo:isRoot
 bdo:itemBDRCHoldingStatement
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A free-text statement of the holdings by BDRC of this Item (and its relatives)."@en ;
+  adm:userTooltip "A free-text statement of the holdings by BDRC of this Item (and its relatives)."@en ;
   rdfs:domain bdo:Item ;
   rdfs:label "BDRC holdings statement"@en ;
   rdfs:range xsd:string ;
 .
 bdo:itemCopies
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "The number of copies of the :Work in this holding. Must be greater than zero."@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "The number of copies of the :Work in this holding"@en ;
+  adm:userTooltip "The number of copies of the Work in this holding"@en ;
   rdfs:domain bdo:ItemPhysicalAsset ;
   rdfs:label "number of copies"@en ;
   rdfs:range xsd:string ;
@@ -2523,7 +2524,7 @@ bdo:itemCopies
 bdo:itemException
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "Exception notes such a missing volume, damage to pages and so on"@en ;
+  adm:userTooltip "Exception notes such a missing volume, damage to pages and so on"@en ;
   rdfs:domain bdo:ItemPhysicalAsset ;
   rdfs:label "exception"@en ;
   rdfs:range rdf:langString ;
@@ -2532,7 +2533,7 @@ bdo:itemException
 bdo:itemForWork
   a owl:ObjectProperty ;
   bdo:inferSubTree true ;
-  rdfs:comment "This Item is for the referenced Work, i.e., this Item represents a physical or digital instance of the referenced Work"@en ;
+  adm:userTooltip "This Item represents a physical or digital instance of the referenced Work"@en ;
   rdfs:domain bdo:Item ;
   rdfs:label "for work"@en ;
   rdfs:range bdo:Work ;
@@ -2540,7 +2541,7 @@ bdo:itemForWork
 .
 bdo:itemHasVolume
   a owl:ObjectProperty ;
-  rdfs:comment "refers to a volume description which could be a digital asset, scanned or etext; or a physical volume (part of a physical holding)"@en ;
+  adm:userTooltip "refers to a volume description of a digital asset, scanned or etext; or a physical volume."@en ;
   rdfs:domain bdo:Item ;
   rdfs:label "has volume"@en ;
   rdfs:range bdo:Volume ;
@@ -2548,7 +2549,7 @@ bdo:itemHasVolume
 .
 bdo:itemLibrary
   a owl:ObjectProperty ;
-  rdfs:comment "The Library (Place) that contains the physical holding"@en ;
+  adm:userTooltip "The Library (Place) that contains the physical holding"@en ;
   rdfs:domain bdo:ItemPhysicalAsset ;
   rdfs:label "library"@en ;
   rdfs:range bdo:Place ;
@@ -2556,16 +2557,17 @@ bdo:itemLibrary
 .
 bdo:itemMissingVolumes
   a owl:DatatypeProperty ;
-  rdfs:comment """A comma separated list of volume numbers and ranges of missing volumes for the Item. For example:
+  adm:catalogingConvention """A comma separated list of volume numbers and ranges of missing volumes for the Item. For example:
 
     :itemMissingVolumes \"3-4,11,17,81-88,101\""""@en ;
+  adm:userTooltip "A comma separated list of numbers and ranges of missing volumes"@en ;
   rdfs:domain bdo:Item ;
   rdfs:label "missing volumes"@en ;
   rdfs:range xsd:string ;
 .
 bdo:itemShelf
   a owl:DatatypeProperty ;
-  rdfs:comment "Identifies where the holding is shelved. The shelf code is based on a library specific taxonomy"@en ;
+  adm:userTooltip "Identifies where the holding is shelved. The shelf code is based on a library specific taxonomy"@en ;
   rdfs:domain bdo:ItemPhysicalAsset ;
   rdfs:label "shelf"@en ;
   rdfs:range xsd:string ;
@@ -2573,7 +2575,7 @@ bdo:itemShelf
 .
 bdo:itemVolumes
   a owl:DatatypeProperty ;
-  rdfs:comment "The number of volumes in the item"@en ;
+  adm:userTooltip "The number of volumes in the item"@en ;
   rdfs:domain bdo:Item ;
   rdfs:label "nb. volumes"@en ;
   rdfs:range xsd:integer ;
@@ -2581,6 +2583,7 @@ bdo:itemVolumes
 bdo:kinWith
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
+  adm:userTooltip "Root property that expresses some kinship relation between the subject and object Persons."@en ;
   bdo:inferSubTree true ;
   rdfs:domain bdo:Person ;
   rdfs:label "kin with"@en ;
@@ -2589,15 +2592,16 @@ bdo:kinWith
 bdo:legacyOutlineNodeRID
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
+  adm:userTooltip "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "legacy outline node rid"@en ;
   rdfs:range xsd:string ;
 .
 bdo:license
   a owl:ObjectProperty ;
-  rdfs:comment "The license under which access to the Work is provided"@en ;
-  rdfs:comment "deprecated by adm:license"@en ;
+  adm:userTooltip "The license under which access to the Work is provided"@en ;
+  adm:deprecatedComment "deprecated by adm:license"@en ;
+  adm:replaceWith adm:license ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "license"@en ;
   rdfs:seeAlso bdo:License ;
@@ -2605,7 +2609,7 @@ bdo:license
 .
 bdo:lineageDownFrom
   a owl:ObjectProperty ;
-  adm:technicalComment """This models the \"down from ...\" references to other Lineages. The :Lineage object of :lineageDownFrom will contain the same :LineageHolder as here and the meaning of :lineageDownFrom is to \"splice\" the remaining holders on to the end of this lineage.
+  adm:catalogingConvention """This models the \"down from ...\" references to other Lineages. The :Lineage object of :lineageDownFrom will contain the same :LineageHolder as here and the meaning of :lineageDownFrom is to \"splice\" the remaining holders on to the end of this lineage.
 
 This models the directly the way in which the source gsan/thob yigs are written.
 
@@ -2656,6 +2660,7 @@ bdr:L0RKL134 a :Lineage ;
 . . .
 
 This illustrates that while bdr:P3094 received the :Lineage from bdr:P502 in both cases, bdr:P502 received the lineage from bdr:P3093 in one case and from bdr:P1226 in the other. The two :Lineages are both of the same type and are transmitting the same object, bdr:T976, so this example illustrates the use of :lineageDownFrom to simplify the recording in a gsan yig or thob yig while highlighting some of the commonalities."""@en ;
+  adm:userTooltip "Down from expresses a sequence of lineage holders by reference to another Lineage."@en ;
   rdfs:domain bdo:LineageHolder ;
   rdfs:label "down from"@en ;
   rdfs:range bdo:Lineage ;
@@ -2663,7 +2668,8 @@ This illustrates that while bdr:P3094 received the :Lineage from bdr:P502 in bot
 .
 bdo:lineageDownTo
   a owl:ObjectProperty ;
-  rdfs:comment "This models the \"down to ...\" references to other Lineages. The other Lineage from the beginning to the holder with the same who as this holder is implicitly included with this lineage. The known use case is for the initial holder to include the prior holders from another lineage as the initial without having members of this lineage without having to repeat them. It may be meaningful to use this feature deeper in a lineage but that is not defined at this time. It is meaningful to include multiple from references which is interpreted as implicitly creating an alternative lineage for each from element."@en ;
+  adm:catalogingConvention "This models the \"down to ...\" references to other Lineages. The other Lineage from the beginning to the holder with the same who as this holder is implicitly included with this lineage. The known use case is for the initial holder to include the prior holders from another lineage as the initial without having members of this lineage without having to repeat them. It may be meaningful to use this feature deeper in a lineage but that is not defined at this time. It is meaningful to include multiple from references which is interpreted as implicitly creating an alternative lineage for each from element."@en ;
+  adm:userTooltip "Similar to down from this property refers to a sequence of holders from another Lineage."@en ;
   rdfs:domain bdo:LineageHolder ;
   rdfs:label "down to"@en ;
   rdfs:range bdo:Lineage ;
@@ -2672,7 +2678,7 @@ bdo:lineageDownTo
 .
 bdo:lineageFrom
   a owl:ObjectProperty ;
-  rdfs:comment "Who did this \"LineageHolder receive the :Lineage from?"@en ;
+  adm:userTooltip "Who did this \"LineageHolder receive the :Lineage from?"@en ;
   rdfs:domain bdo:LineageEvent ;
   rdfs:label "received from"@en ;
   rdfs:range bdo:PersonOrTopic ;
@@ -2680,7 +2686,7 @@ bdo:lineageFrom
 .
 bdo:lineageHolder
   a owl:ObjectProperty ;
-  rdfs:comment "the object of :lineageHolder is a :LineageHolder that describes an individual that held the given :Lineage"@en ;
+  adm:userTooltip "the object of :lineageHolder is a :LineageHolder that describes an individual that held the given :Lineage"@en ;
   rdfs:domain bdo:Lineage ;
   rdfs:label "has holder"@en ;
   rdfs:range bdo:LineageHolder ;
@@ -2688,9 +2694,10 @@ bdo:lineageHolder
 .
 bdo:lineageObject
   a owl:ObjectProperty ;
-  rdfs:comment """This is a reference to what is being transmitted in the :Lineage. Typically this is a deity, ritual, or teaching or some sort. The :lineageType will indicate the nature of the :Lineage transmission, empowerment, reading transmission, instructions on practice and so on.
+  adm:catalogingConvention """This is a reference to what is being transmitted in the :Lineage. Typically this is a deity, ritual, or teaching or some sort. The :lineageType will indicate the nature of the :Lineage transmission, empowerment, reading transmission, instructions on practice and so on.
 
 The object should be restricted to Persons or to Topics that represent a Deity or other suitable objects of a Lineage (what might those be?). This requires a union of some sort."""@en ;
+  adm:userTooltip "This is a reference to what is being transmitted in the Lineage."@en ;
   rdfs:domain bdo:Lineage ;
   rdfs:label "transmits"@en ;
   rdfs:range bdo:Entity ;
@@ -2698,7 +2705,7 @@ The object should be restricted to Persons or to Topics that represent a Deity o
 .
 bdo:lineageReceived
   a owl:ObjectProperty ;
-  rdfs:comment "Essentially who did the holder receive this :Lineage from"@en ;
+  adm:userTooltip "Essentially who did the holder receive this Lineage from"@en ;
   rdfs:domain bdo:LineageHolder ;
   rdfs:label "lineage received"@en ;
   rdfs:range bdo:LineageEvent ;
@@ -2706,7 +2713,8 @@ bdo:lineageReceived
 .
 bdo:lineageRef
   a owl:ObjectProperty ;
-  rdfs:comment "The :lineageRef identifies another :Lineage that is an alternative version of the current :Lineage. In gsan yig and thob yig there can be references to different versions of how a given object has been transmitted up to the time of the writing of the gsan/thob yig."@en ;
+  adm:catalogingConvention "The :lineageRef identifies another :Lineage that is an alternative version of the current :Lineage. In gsan yig and thob yig there can be references to different versions of how a given object has been transmitted up to the time of the writing of the gsan/thob yig."@en ;
+  adm:userTooltip "The :lineageRef identifies an alternative version of the current Lineage"@en ;
   rdfs:domain bdo:Lineage ;
   rdfs:label "alternative lineage"@en ;
   rdfs:range bdo:Lineage ;
@@ -2715,7 +2723,7 @@ bdo:lineageRef
 bdo:lineageType
   a owl:FunctionalProperty ;
   a owl:ObjectProperty ;
-  rdfs:comment "Identifies the type of :Lineage such as empowerment, reading transmission, various sorts of instructions and so on"@en ;
+  adm:userTooltip "Identifies the type of :Lineage such as empowerment, reading transmission, various sorts of instructions and so on"@en ;
   rdfs:domain bdo:Lineage ;
   rdfs:label "lineage type"@en ;
   rdfs:range bdo:TibetanLineageType ;
@@ -2723,7 +2731,7 @@ bdo:lineageType
 .
 bdo:lineageWho
   a owl:ObjectProperty ;
-  rdfs:comment "identifies who this :LineageHolder is, :Person or a being represented via a :Topic."@en ;
+  adm:userTooltip "identifies who this LineageHolder is, Person or a being represented via a Topic."@en ;
   rdfs:domain bdo:LineageHolder ;
   rdfs:label "is holder"@en ;
   rdfs:range bdo:PersonOrTopic ;
@@ -2731,7 +2739,7 @@ bdo:lineageWho
 .
 bdo:lineageWork
   a owl:ObjectProperty ;
-  rdfs:comment "This refers to a :Work that the subject :LineageHolder authored as an element of the :Lineage - a commentary of some sort typically"@en ;
+  adm:userTooltip "Refers to a Work authored by the LineageHolder about the Lineage."@en ;
   rdfs:domain bdo:LineageHolder ;
   rdfs:label "work"@en ;
   rdfs:range bdo:Work ;
@@ -2740,7 +2748,7 @@ bdo:lineageWork
 bdo:microfilmCanister
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "indicstes the id of the canister that the microfilm was stoered in"@en ;
+  adm:userTooltip "indicates the id of the canister that the microfilm was stored in"@en ;
   rdfs:domain bdo:ObjectTypeMicrofilm ;
   rdfs:label "microfilm canister"@en ;
   rdfs:range xsd:string ;
@@ -2749,7 +2757,7 @@ bdo:microfilmCanister
 bdo:microfilmStrip
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "indicstes the id of the film strip that contains the digitized content"@en ;
+  adm:userTooltip "indicates the id of the film strip that contains the digitized content"@en ;
   rdfs:domain bdo:ObjectTypeMicrofilm ;
   rdfs:label "microfilm strip id"@en ;
   rdfs:range xsd:string ;
@@ -2760,7 +2768,7 @@ bdo:migration_exception
 .
 bdo:notAfter
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
+  adm:userTooltip "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2768,7 +2776,7 @@ bdo:notAfter
 .
 bdo:notBefore
   a owl:DatatypeProperty ;
-  rdfs:comment "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
+  adm:userTooltip "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2776,23 +2784,24 @@ bdo:notBefore
 .
 bdo:note
   a owl:AnnotationProperty ;
-  rdfs:comment """the :note annotation adds language tagged string and optionally a reference to a Work and a simpe text description of a location in a Work, e.g., \"pp. 231-3\".
+  adm:catalogingConvention """the :note annotation adds language tagged string and optionally a reference to a Work and a simple text description of a location in a Work, e.g., \"pp. 231-3\".
 
 In the XML db the notes are restricted to a limited set of items such as top-level resources and Outline Nodes, Place Events and so on. In this model there are no limitations on where notes can be attached. They can be attached directly to any owl:NamedIndividual or property. In particular one could add a note to the per:name property on an individual that provides evidence for the particular per:name assertion.""" ;
+  adm:userTooltip "Associates a Note containing: a comment, Work, and location in the Work."@en ;
   rdfs:domain bdo:EntitiesOrFacets ;
   rdfs:label "note"@en ;
   rdfs:range bdo:Note ;
 .
 bdo:noteLocationStatement
   a owl:AnnotationProperty ;
-  rdfs:comment "A location statement for where in the :noteWork to look for the :noteText"@en ;
+  adm:userTooltip "A string indicating where in the :noteWork to look for the :noteText"@en ;
   rdfs:domain bdo:Note ;
   rdfs:label "location"@en ;
   rdfs:range xsd:string ;
 .
 bdo:noteLocationStatementCBETA
   a owl:AnnotationProperty ;
-  rdfs:comment """Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
+  adm:catalogingConvention """Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
 
 T52n2103_p0264c18
 
@@ -2801,26 +2810,27 @@ means:
 Taisho, Volume 52, Text 2103, page 264, register c, line 18
 
 (line counting start at 1 and goes from right to left)"""@en ;
+  adm:userTooltip "Indicates a location in the Chinese Buddhist Canon."@en ;
   rdfs:label "location statement (in the Chinese Buddhist Canon)"@en ;
   rdfs:subPropertyOf bdo:noteLocationStatement ;
 .
 bdo:noteText
   a owl:AnnotationProperty ;
-  rdfs:comment "text of the note"@en ;
+  adm:userTooltip "text of the note"@en ;
   rdfs:domain bdo:Note ;
   rdfs:label "text"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:noteWork
   a owl:AnnotationProperty ;
-  rdfs:comment "The source Work for the noteContent"@en ;
+  adm:userTooltip "The source Work for the noteContent"@en ;
   rdfs:domain bdo:Note ;
   rdfs:label "source"@en ;
   rdfs:range bdo:Work ;
 .
 bdo:onDate
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year or date given, unless otherwise specified the date is reckoned in the Common Era"@en ;
+  adm:userTooltip "The event is known to have occurred during the year or date given, unless otherwise specified the date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
   rdfs:range bdo:AnyDate ;
@@ -2828,8 +2838,8 @@ bdo:onDate
 .
 bdo:onOrAbout
   a owl:DatatypeProperty ;
-  rdfs:comment "This property replaces the various separate circa properties with a single property that will have a single validator and editor support."@en ;
-  rdfs:comment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
+  adm:deprecatedComment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
+  adm:replaceWith bdo:notBefore , bdo:onDate , bdo:onYear , bdo:notAfter ;
   rdfs:domain bdo:Event ;
   rdfs:label "circa"@en ;
   rdfs:range xsd:string ;
@@ -2837,7 +2847,7 @@ bdo:onOrAbout
 .
 bdo:onYear
   a owl:DatatypeProperty ;
-  rdfs:comment "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
+  adm:userTooltip "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
   rdfs:range xsd:integer ;
@@ -2845,13 +2855,14 @@ bdo:onYear
 .
 bdo:pageHasLine
   a owl:ObjectProperty ;
-  rdfs:comment "Refers to a line of an Etext page"@en ;
+  adm:userTooltip "Refers to a line of an Etext page"@en ;
   rdfs:domain bdo:EtextPage ;
   rdfs:label "line"@en ;
   rdfs:range bdo:EtextLine ;
 .
 bdo:paginatedBy
   a owl:ObjectProperty ;
+  adm:technicalComment "This property does appear to be used, nor is it cear what it means."@en ;
   adm:translationPriority 2 ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "paginated by"@en ;
@@ -2859,7 +2870,7 @@ bdo:paginatedBy
 .
 bdo:personConsortOf
   a owl:ObjectProperty ;
-  rdfs:comment "The subject :Person is a consort of the target :Person"@en ;
+  adm:userTooltip "The subject Person is a consort of the target Person"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "consort of"@en ;
   rdfs:range bdo:Person ;
@@ -2874,25 +2885,28 @@ bdo:personEvent
 .
 bdo:personEventCorporation
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Corporation that is associated with the subject Event."@en ;
   rdfs:domain bdo:PersonEvent ;
   rdfs:label "associated corporation"@en ;
   rdfs:range bdo:Corporation ;
 .
 bdo:personEventRole
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Role that is occupied by a Person associated with the PersonEvent."@en ;
   rdfs:domain bdo:PersonEvent ;
   rdfs:label "associated role"@en ;
   rdfs:range bdo:Role ;
 .
 bdo:personGender
   a owl:ObjectProperty ;
+  adm:userTooltip "The gender of the Person"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "gender"@en ;
   rdfs:range bdo:Gender ;
 .
 bdo:personHasConsort
   a owl:ObjectProperty ;
-  rdfs:comment "the target :Person is a consort of the subject :Person"@en ;
+  adm:userTooltip "The target Person is a consort of the subject Person"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "has consort"@en ;
   rdfs:range bdo:Person ;
@@ -2900,7 +2914,7 @@ bdo:personHasConsort
 bdo:personIsNonActor
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest." ;
+  adm:userTooltip "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest." ;
   rdfs:domain bdo:Person ;
   rdfs:label "non actor"@en ;
   rdfs:range xsd:boolean ;
@@ -2909,25 +2923,28 @@ bdo:personIsNonActor
 bdo:personName
   a owl:IrreflexiveProperty ;
   a owl:ObjectProperty ;
-  rdfs:comment "describe a name for a Person"@en ;
+  adm:userTooltip "describe a name for a Person"@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "name"@en ;
   rdfs:range bdo:PersonName ;
 .
 bdo:personOfSect
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a school, tradition, or sect that the Person is associated with."@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "person of school"@en ;
   rdfs:range bdo:Topic ;
 .
 bdo:personOfTradition
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Tradition that the Person is associated with."@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "person of tradition" ;
   rdfs:range bdo:Tradition ;
 .
 bdo:personStudentOf
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Person this Person was a student of."@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "student of"@en ;
   rdfs:range bdo:Person ;
@@ -2935,6 +2952,7 @@ bdo:personStudentOf
 .
 bdo:personTeacherOf
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Person this Person was a teacher of."@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "teacher of"@en ;
   rdfs:range bdo:Person ;
@@ -2942,7 +2960,7 @@ bdo:personTeacherOf
 bdo:placeAccuracy
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "The accuracy of the latitude and longitude"@en ;
+  adm:userTooltip "The accuracy of the latitude and longitude"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "accuracy"@en ;
   rdfs:range xsd:string ;
@@ -2950,7 +2968,7 @@ bdo:placeAccuracy
 bdo:placeAddress
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "Associates modern address information with a Place"@en ;
+  adm:userTooltip "Associates modern address information with a Place"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "address"@en ;
   rdfs:range vcard:Address ;
@@ -2958,14 +2976,14 @@ bdo:placeAddress
 bdo:placeChgisId
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A legacy Chinese gis id for the Place"@en ;
+  adm:userTooltip "A Chinese GIS id for the Place"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "chgis id"@en ;
   rdfs:range xsd:string ;
 .
 bdo:placeContains
   a owl:ObjectProperty ;
-  rdfs:comment "Identifies a Place that this Place contains."@en ;
+  adm:userTooltip "Identifies a Place that this Place contains."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "contains"@en ;
   rdfs:range bdo:Place ;
@@ -2973,14 +2991,14 @@ bdo:placeContains
 .
 bdo:placeEvent
   a owl:ObjectProperty ;
-  rdfs:comment "Identifies an event that occurred at this Place, e.g., founded, rebuilt, deserted, etc."@en ;
+  adm:userTooltip "Identifies an event that occurred at this Place, e.g., founded, rebuilt, deserted, etc."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "event"@en ;
   rdfs:range bdo:PlaceEvent ;
 .
 bdo:placeEventAffiliation
   a owl:ObjectProperty ;
-  rdfs:comment "Refers to the Tradition that the place event is affiliated with."@en ;
+  adm:userTooltip "Refers to the Tradition that the place event is affiliated with."@en ;
   rdfs:domain bdo:PlaceEvent ;
   rdfs:label "affiliated tradition"@en ;
   rdfs:range bdo:Tradition ;
@@ -2988,7 +3006,7 @@ bdo:placeEventAffiliation
 bdo:placeGB2260-2013
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "The 2013 Chinese GB code for the Place. Similar to U.S. Zipcode"@en ;
+  adm:userTooltip "The 2013 Chinese GB code for the Place. Similar to U.S. Zipcode"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "GB2260-2013"@en ;
   rdfs:range xsd:string ;
@@ -2996,10 +3014,10 @@ bdo:placeGB2260-2013
 bdo:placeGonpaPerEcumen
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment """Karl Ryavec supplies the following information regarding this property:
+  adm:technicalComment """Karl Ryavec supplies the following information regarding this property:
 
 Gonpa per ecumen would be how many temples are there per one sq km of land area minus water, bare rock, ice and so forth.  Thus I totaled the ecumen areas of each township primarily in terms of the sq km of grassland and forests and farmland.  Then because these areas per temple are so tiny I represented the final amounts on my map legend per 1000 sq km so that the numbers would be closer to 1.0 at times.  For example there might only be .0000001 temples per sq km of ecumen.  But if we convert to per 1000 sq km of ecumen we get .0001 temples  which is a more understandable amount.  Though I think most scholars are baffled by technology and so just understand the idea of core areas like the Lhasa valley compared the peripheral areas like the Changthang.  So that's mainly what I focused on showing."""@en ;
-  rdfs:comment "The number of monasteries per ecumen in this Place (presumably a region) from data provided by Karl Ryavec"@en ;
+  adm:userTooltip "The number of monasteries per ecumen in this Place (presumably a region) from data provided by Karl Ryavec"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "monasteries per ecumen"@en ;
   rdfs:range xsd:string ;
@@ -3007,8 +3025,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 bdo:placeIsNear
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  rdfs:comment "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
-  rdfs:comment "deprecated because not actually used in legacy data and not well defined"@en ;
+  adm:userTooltip "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
+  adm:deprecatedComment "deprecated because not actually used in legacy data and not well defined"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
@@ -3016,14 +3034,15 @@ bdo:placeIsNear
 bdo:placeLat
   a owl:DatatypeProperty ;
   a owl:FunctionalProperty ;
-  rdfs:comment "The latitude of the Place"@en ;
+  adm:userTooltip "The latitude of the Place"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "latitude"@en ;
   rdfs:range xsd:string ;
 .
 bdo:placeLocatedIn
   a owl:ObjectProperty ;
-  rdfs:comment "Identifies a Place that this Place is located in - usually a single Place but to account for changes over time in the definitions of regions and such it may be necessary to have multiple associations."@en ;
+  adm:catalogingConvention "Identifies a Place that this Place is located in - usually a single Place but to account for changes over time in the definitions of regions and such it may be necessary to have multiple associations."@en ;
+  adm:userTooltip "Identifies a Place that this Place is located in."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "located in"@en ;
   rdfs:range bdo:Place ;
@@ -3031,7 +3050,7 @@ bdo:placeLocatedIn
 bdo:placeLong
   a owl:DatatypeProperty ;
   a owl:FunctionalProperty ;
-  rdfs:comment "The longitude of the Place"@en ;
+  adm:userTooltip "The longitude of the Place"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "longitude"@en ;
   rdfs:range xsd:string ;
@@ -3039,7 +3058,7 @@ bdo:placeLong
 bdo:placeMARCCountryCode
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)"@en ;
+  adm:userTooltip "two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "MARC Country Code"@en ;
   rdfs:range xsd:string ;
@@ -3049,14 +3068,14 @@ bdo:placeMARCCountryCode
 bdo:placeRegionPoly
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "The object of this property is an xsd:string representing a geoJSON Polygon or Mulit-Polygon. See http://geojson.org/geojson-spec.html" ;
+  adm:userTooltip "The object of this property is an xsd:string representing a geoJSON Polygon or Mulit-Polygon. See http://geojson.org/geojson-spec.html" ;
   rdfs:domain bdo:Place ;
   rdfs:label "region poly"@en ;
   rdfs:range xsd:string ;
 .
 bdo:placeType
   a owl:ObjectProperty ;
-  rdfs:comment "The type of Place: monastery, river, mountain pass, etc."@en ;
+  adm:userTooltip "The type of Place: monastery, river, mountain pass, etc."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "type"@en ;
   rdfs:range bdo:PlaceType ;
@@ -3065,7 +3084,7 @@ bdo:placeWB2000
   a owl:DatatypeProperty ;
   a owl:FunctionalProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "The World Bank 2000 population for the Place"@en ;
+  adm:userTooltip "The World Bank 2000 population for the Place"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range xsd:integer ;
 .
@@ -3073,7 +3092,7 @@ bdo:placeWB2010
   a owl:DatatypeProperty ;
   a owl:FunctionalProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "The World Bank 2010 population for the Place"@en ;
+  adm:userTooltip "The World Bank 2010 population for the Place"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "WB 2010 population"@en ;
   rdfs:range xsd:integer ;
@@ -3081,12 +3100,13 @@ bdo:placeWB2010
 bdo:placeWBArea
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "The area in square km of the Place from the World Bank 2010"@en ;
+  adm:userTooltip "The area in square km of the Place from the World Bank 2010"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range xsd:integer ;
 .
 bdo:printMethod
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the printing method of the Igtem associated with the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "print method"@en ;
   rdfs:range bdo:PrintMethod ;
@@ -3107,14 +3127,14 @@ the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, 
 
 Such reconstructions are typically approximations to the original and there will often be a primary or preferred form of the name or title in which case the :restored property should be used."""@en ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a restoration of the original PersonName or WorkTitle"@en ;
   rdfs:domain bdo:PersonNameOrWorkTitle ;
   rdfs:label "restored"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:restoredAlt
   a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  rdfs:comment """The :restoredAlt property is used to add an alternative restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit).
+  adm:catalogingConvention """The :restoredAlt property is used to add an alternative restoration of the original :PersonName or WorkTitle in the event that the name in the rdfs:label is a transliteration from another language (often Sanskrit).
 
 For example in:
 
@@ -3128,6 +3148,8 @@ For example in:
 the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, and the :restoredAlt is a reconstruction of the original Sanskrit encoded as IAST. 
 
 Such reconstructions are typically approximations to the original and there may be alternatives to the preferred form of the name or title in which case :restoredAlt literals may be recorded."""@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "Indicates an alternative restoration of the original PersonName or WorkTitle"@en ;
   rdfs:domain bdo:PersonNameOrWorkTitle ;
   rdfs:label "restored alternative"@en ;
   rdfs:range rdf:langString ;
@@ -3135,25 +3157,26 @@ Such reconstructions are typically approximations to the original and there may 
 .
 bdo:role
   a owl:ObjectProperty ;
-  rdfs:comment """The :role property associates a :Role with eiher an :Agents or an :AgentInRole.
+  adm:catalogingConvention """The :role property associates a :Role with eiher an :Agents or an :AgentInRole.
 
 When used with an :Agents the triple is asserting that the subject is commonly found performing in the target :Role
 
 When used in an :AgentInRole, the associated :Agents is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
+  adm:userTooltip "Associates a Role with eiher an Agents or an AgentInRole."@en ;
   rdfs:domain bdo:Agents ;
   rdfs:label "role"@en ;
   rdfs:range bdo:Role ;
 .
 bdo:script
   a owl:ObjectProperty ;
-  rdfs:comment "The script (Tibetan, Devanagari, etc.)"@en ;
+  adm:userTooltip "The script (Tibetan, Devanagari, etc.)"@en ;
   rdfs:domain bdo:LangScript ;
   rdfs:label "script"@en ;
   rdfs:range bdo:Script ;
 .
 bdo:seqNum
   a owl:DatatypeProperty ;
-  rdfs:comment "A :seqNum may be a page number, line number or other id as appropriate to the use of the :EtextSlice or other contexts such as the sequence of eTexts in a Volume and so on."@en ;
+  adm:userTooltip "A :seqNum may be a page number, line number or other id as appropriate to the use of the :EtextSlice or other contexts such as the sequence of eTexts in a Volume and so on."@en ;
   rdfs:label "sequence number"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
@@ -3170,7 +3193,8 @@ bdo:sliceStartChar
 bdo:transliteration
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "A transliteration for a :LangScript. Mostly this will apply for Pali situations since texts are always written in a transliteration of Pali in a Romanization or script of a language such as Thai."@en ;
+  adm:catalogingConvention "A transliteration for a :LangScript. Mostly this will apply for Pali situations since texts are always written in a transliteration of Pali in a Romanization or script of a language such as Thai."@en ;
+  adm:userTooltip "A transliteration for a LangScript."@en ;
   rdfs:domain bdo:LangScript ;
   rdfs:label "transliteration"@en ;
   rdfs:range bdo:Transliteration ;
@@ -3178,7 +3202,7 @@ bdo:transliteration
 bdo:uiAbbr
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment ":uiAbbr is used as labels for items such as canon catalog SigLas and Date eras. The value is a string such as \"T %s\"or \"%s C.E.\""@en ;
+  adm:userTooltip ":uiAbbr is used as labels for items such as canon catalog SigLas and Date eras. The value is a string such as \"T %s\"or \"%s C.E.\""@en ;
   rdfs:domain rdfs:Resource ;
   rdfs:label "ui abbr"@en ;
   rdfs:range xsd:string ;
@@ -3186,42 +3210,42 @@ bdo:uiAbbr
 .
 bdo:volumeHasEtext
   a owl:ObjectProperty ;
-  rdfs:comment "refers to an :EtextRef that identifies an :Etext and the position of that :Etext in a containing :VolumeEtextAsset"@en ;
+  adm:userTooltip "refers to an :EtextRef that identifies an :Etext and the position of that :Etext in a containing :VolumeEtextAsset"@en ;
   rdfs:domain bdo:VolumeEtextAsset ;
   rdfs:label "eText"@en ;
   rdfs:range bdo:EtextRef ;
 .
 bdo:volumeName
   a owl:DatatypeProperty ;
-  rdfs:comment "In some cases volumes of a :Work are given names. For example, in Tibetan a three volume work might have volumes named O, a, huM or a 10 volume work might have volumes named: ka, kha, ga, nga, ca, cha, ja, nya, ta, a."@en ;
+  adm:userTooltip "In some cases volumes of a :Work are given names. For example, in Tibetan a three volume work might have volumes named O, a, huM or a 10 volume work might have volumes named: ka, kha, ga, nga, ca, cha, ja, nya, ta, a."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "volume name"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:volumeNumber
   a owl:DatatypeProperty ;
-  rdfs:comment "The number of the volume in the Item. There is no implied order in RDF and there may be missing volumes so it is necessary to explicitly indicate the volume number."@en ;
+  adm:userTooltip "The number of the volume in the Item. There is no implied order in RDF and there may be missing volumes so it is necessary to explicitly indicate the volume number."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "volume number"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:volumeOf
   a owl:ObjectProperty ;
-  rdfs:comment "The subject is a volume of the referenced item."@en ;
+  adm:userTooltip "The subject is a volume of the referenced item."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "volume of"@en ;
   rdfs:range bdo:Item ;
 .
 bdo:volumePagesIntro
   a owl:DatatypeProperty ;
-  rdfs:comment "May be used to indicate the number of introductory pages in a volume"@en ;
+  adm:userTooltip "May be used to indicate the number of introductory pages in a volume"@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "nb. pages of intro"@en ;
   rdfs:range xsd:integer ;
 .
 bdo:volumePagesTbrcIntro
   a owl:DatatypeProperty ;
-  rdfs:comment "The number of digitized metadata pages added by TBRC (now BDRC). Originally this was 2 pages and more recently condensed to a single non-blank page however a second blank page 2 was included to simplify processing of volumes for display and so on. The intention being to capture some relevant metadata in along with the digitized images so that the volume is essentially standalone."@en ;
+  adm:userTooltip "The number of digitized metadata pages added by TBRC (now BDRC). Originally this was 2 pages and more recently condensed to a single non-blank page however a second blank page 2 was included to simplify processing of volumes for display and so on. The intention being to capture some relevant metadata in along with the digitized images so that the volume is essentially standalone."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "nb. pages of TBRC intro"@en ;
   rdfs:range xsd:integer ;
@@ -3229,7 +3253,7 @@ bdo:volumePagesTbrcIntro
 bdo:volumePagesText
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "pages of text content in the volume"@en ;
+  adm:userTooltip "pages of text content in the volume"@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "nb. pages of text"@en ;
   rdfs:range xsd:integer ;
@@ -3237,37 +3261,38 @@ bdo:volumePagesText
 bdo:volumePagesTotal
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "Total number of pages in the volume"@en ;
+  adm:userTooltip "Total number of pages in the volume"@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "nb. pages total"@en ;
   rdfs:range xsd:integer ;
 .
 bdo:volumePhysicalDescription
   a owl:DatatypeProperty ;
-  rdfs:comment """A description of the physical appearance of a Volume of the Item. For example,
+  adm:catalogingConvention """A description of the physical appearance of a Volume of the Item. For example,
 
 \"No covers. Gilded leaves with vermilion band. Printed cotton wrapper with floral designs.\"@en"""@en ;
+  adm:userTooltip "A description of the physical appearance of a Volume of the Item."@en ;
   rdfs:domain bdo:VolumePhysicalAsset ;
   rdfs:label "physical description"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workAuthorshipStatement
   a owl:DatatypeProperty ;
-  rdfs:comment "Authorship statement for the Work."@en ;
+  adm:userTooltip "Authorship statement for the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "authorship statement"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workBiblioNote
   a owl:DatatypeProperty ;
-  rdfs:comment "A note regarding a bibliographic feature of the Work"@en ;
+  adm:userTooltip "A note regarding a bibliographic feature of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "bibliographic note"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workBiblioStatus
   a owl:DatatypeProperty ;
-  rdfs:comment "A bibliogrpahic status statement in the language of the Work"@en ;
+  adm:userTooltip "A bibliogrpahic status statement in the language of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "bibliographic status statement"@en ;
   rdfs:range rdf:langString ;
@@ -3275,103 +3300,137 @@ bdo:workBiblioStatus
 bdo:workCBCSiglaA
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla A associated with this Work."@en ;
+  rdfs:label "CBC Sigla A"@en ;
   rdfs:label "趙城金藏"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaB
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla B associated with this Work."@en ;
+  rdfs:label "CBC Sigla B"@en ;
   rdfs:label "大藏經補編"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaC
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla C associated with this Work."@en ;
+  rdfs:label "CBC Sigla C"@en ;
   rdfs:label "中華大藏經-中華書局版"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaD
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla D associated with this Work."@en ;
+  rdfs:label "CBC Sigla D"@en ;
   rdfs:label "國圖善本"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaF
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla F associated with this Work."@en ;
+  rdfs:label "CBC Sigla F"@en ;
   rdfs:label "房山石經"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaG
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla G associated with this Work."@en ;
+  rdfs:label "CBC Sigla G"@en ;
   rdfs:label "佛教大藏經"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaGA
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla GA associated with this Work."@en ;
+  rdfs:label "CBC Sigla GA"@en ;
   rdfs:label "中國佛寺史志彙刊"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaGB
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla GB associated with this Work."@en ;
+  rdfs:label "CBC Sigla GB"@en ;
   rdfs:label "中國佛寺志叢刊"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaI
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla I associated with this Work."@en ;
+  rdfs:label "CBC Sigla I"@en ;
   rdfs:label "北朝佛教石刻拓片百品"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaJ
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla J associated with this Work."@en ;
+  rdfs:label "CBC Sigla J"@en ;
   rdfs:label "嘉興藏"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaK
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla K associated with this Work."@en ;
+  rdfs:label "CBC Sigla K"@en ;
   rdfs:label "高麗大藏經-新文豐版"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaL
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla L associated with this Work."@en ;
+  rdfs:label "CBC Sigla L"@en ;
   rdfs:label "乾隆大藏經-新文豐版"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaM
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla M associated with this Work."@en ;
+  rdfs:label "CBC Sigla M"@en ;
   rdfs:label "卍正藏經-新文豐版"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaN
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla N associated with this Work."@en ;
+  rdfs:label "CBC Sigla N"@en ;
   rdfs:label "南傳大藏經"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaP
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla P associated with this Work."@en ;
+  rdfs:label "CBC Sigla P"@en ;
   rdfs:label "永樂北藏"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaS
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla S associated with this Work."@en ;
+  rdfs:label "CBC Sigla S"@en ;
   rdfs:label "宋藏遺珍-新文豐版"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaT
   a owl:DatatypeProperty ;
   rdfs:domain bdo:WorkRefs ;
+  adm:userTooltip "Indicates a CBC Sigla T, Taisho, associated with this Work."@en ;
   rdfs:label "Taisho reference number"@en ;
+  rdfs:label "CBC Sigla T, Taisho"@en ;
   rdfs:label "大正藏"@zh-hant ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
@@ -3379,36 +3438,46 @@ bdo:workCBCSiglaT
 bdo:workCBCSiglaU
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla U associated with this Work."@en ;
+  rdfs:label "CBC Sigla U"@en ;
   rdfs:label "洪武南藏"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaX
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla X associated with this Work."@en ;
+  rdfs:label "CBC Sigla X"@en ;
   rdfs:label "卍續藏"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaY
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla Y associated with this Work."@en ;
+  rdfs:label "CBC Sigla Y"@en ;
   rdfs:label "印順法師佛學著作集"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaZS
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla ZS associated with this Work."@en ;
+  rdfs:label "CBC Sigla ZS"@en ;
   rdfs:label "正史佛教資料類編"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaZW
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a CBC Sigla ZW associated with this Work."@en ;
+  rdfs:label "CBC Sigla ZW"@en ;
   rdfs:label "藏外佛教文獻"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCatalogInfo
   a owl:DatatypeProperty ;
-  rdfs:comment "Summary information about the Work"@en ;
+  adm:userTooltip "Summary information about the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "summary"@en ;
   rdfs:range rdf:langString ;
@@ -3416,21 +3485,22 @@ bdo:workCatalogInfo
 bdo:workCollection
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "This work is contained at the identified institution"@en ;
+  adm:userTooltip "This work is contained at the identified institution"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "in collection"@en ;
   rdfs:range bdo:CollectionInstitution ;
 .
 bdo:workColophon
   a owl:DatatypeProperty ;
-  rdfs:comment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
+  adm:technicalComment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
+  adm:userTooltip "A transcription of the colophon of the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "colophon"@en ;
   rdfs:range bdo:LangStringOrNoColophon ;
 .
 bdo:workComplete
   a owl:DatatypeProperty ;
-  rdfs:comment "true if the work is complete"@en ;
+  adm:userTooltip "true if the work is complete"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "complete"@en ;
   rdfs:range xsd:boolean ;
@@ -3438,7 +3508,7 @@ bdo:workComplete
 bdo:workContainsChapters
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "records the chapters of a larger Work contained in this Work"@en ;
+  adm:userTooltip "records the chapters of a larger Work contained in this Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "chapters contained"@en ;
   rdfs:range xsd:string ;
@@ -3447,9 +3517,9 @@ bdo:workContainsChapters
 bdo:workCreator
   a owl:ObjectProperty ;
   bdo:inferSubTree true ;
-  rdfs:comment "Identifies the type and person that are a creator of the work"@en ;
-  rdfs:comment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
-  rdfs:comment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
+  adm:userTooltip "Identifies the type and person that are a creator of the work"@en ;
+  adm:deprecatedComment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
+  adm:deprecatedComment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
@@ -3464,7 +3534,7 @@ bdo:workCreator
 .
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
-  rdfs:comment "deprecated in favor of :CompletedEvent."@en ;
+  adm:deprecatedComment "deprecated in favor of :CompletedEvent."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "date of writing"@en ;
   rdfs:range xsd:string ;
@@ -3472,13 +3542,14 @@ bdo:workDateOfWriting
 .
 bdo:workDerivativeOf
   a owl:ObjectProperty ;
-  rdfs:comment """This work is a derivative of the reference work. This means that it may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work.
+  rdfs:comment """This work is a derivative of the referenced work. This means that it may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work.
 
 For example,
 
 bdr:W30532 :workDerivativeOf bdr:W22084
 
 bdr:W30532 is a printing based on woodblocks that have a variety of \"corrections\" made via plugs in the original woodblocks and W22084 is a printing from the original sde dge Kanjur woodblocks so it makes sense to indicate that bdr:W30532 is a derivative of bdr:W22084."""@en ;
+  adm:userTooltip "This work is a derivative of the referenced work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "derivative of"@en ;
   rdfs:range bdo:Work ;
@@ -3487,27 +3558,29 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
 .
 bdo:workDimHeight
   a owl:DatatypeProperty ;
-  rdfs:comment "height or thickness of the physical item of a :Work in cm"@en ;
+  adm:userTooltip "height or thickness of the physical item of a :Work in cm"@en ;
   rdfs:label "height"@en ;
 .
 bdo:workDimLength
   a owl:DatatypeProperty ;
-  rdfs:comment "length of the physical item, of this :Work, that is held or scanned in cm"@en ;
+  adm:userTooltip "length of the physical item, of this :Work, that is held or scanned in cm"@en ;
   rdfs:label "length"@en ;
 .
 bdo:workDimWidth
   a owl:DatatypeProperty ;
-  rdfs:comment "width of the physical item, of this :Work, that is held or scanned in cm"@en ;
+  adm:userTooltip "width of the physical item, of this :Work, that is held or scanned in cm"@en ;
   rdfs:label "width"@en ;
 .
 bdo:workDimensions
   a owl:DatatypeProperty ;
+  adm:userTooltip "The physical dimensions of the work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "physical dimensions"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workEditionStatement
   a owl:DatatypeProperty ;
+  adm:userTooltip "An Edition statement expresses information about this Work as an edition."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "edition statement"@en ;
   rdfs:range rdf:langString ;
@@ -3515,14 +3588,14 @@ bdo:workEditionStatement
 bdo:workErrata
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "Indicates a statement of error in the content"@en ;
+  adm:userTooltip "Indicates a statement of error in the content"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "errata"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workEvent
   a owl:ObjectProperty ;
-  rdfs:comment "A description of the what, when and where of an event in the life of a work"@en ;
+  adm:userTooltip "A description of the what, when and where of an event in the life of a work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "event"@en ;
   rdfs:range bdo:WorkEvent ;
@@ -3558,7 +3631,7 @@ bdr:W26071 a Work ;
             rdfs:label \"Lhasa Kanjur\"@en ;
             :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
       :workExpressionOf bdr:T2423 ."""@en ;
-  rdfs:comment "links an abstract / conceptual work and one of its expressions / manifestations"@en ;
+  adm:userTooltip "Links an abstract / conceptual work and one of its expressions / manifestations"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "expression of"@en ;
   rdfs:range bdo:Work ;
@@ -3566,7 +3639,7 @@ bdr:W26071 a Work ;
 .
 bdo:workExtentStatement
   a owl:DatatypeProperty ;
-  rdfs:comment "A statement of the extent of the Work"@en ;
+  adm:userTooltip "A statement of the extent of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
@@ -3574,23 +3647,25 @@ bdo:workExtentStatement
 bdo:workFEMCManuscriptCode
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "FEMC Manuscript Code" ;
+  adm:userTooltip "FEMC Manuscript Code" ;
   rdfs:label "FEMC Manuscript code"@en ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workGenre
   a owl:ObjectProperty ;
-  rdfs:comment """The referenced Topic is expected to be a \"genre\" topic and eventually the genre topics will be moved to a class of Genre and/or a Taxonomy of Genre may be supplied.
+  adm:technicalComment """The referenced Topic is expected to be a \"genre\" topic and eventually the genre topics will be moved to a class of Genre and/or a Taxonomy of Genre may be supplied.
 
 A genre is intended to capture a form or structural type of the work versus the content of the work."""@en ;
+  adm:userTooltip "The referenced Topic is interpreted as a \"genre\"."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "genre"@en ;
   rdfs:range bdo:Topic ;
 .
 bdo:workHasDerivative
   a owl:ObjectProperty ;
-  rdfs:comment "The referenced work is a derivative of this work. This means that the referenced work may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work."@en ;
+  adm:technicalComment "The referenced work is a derivative of this Work. This means that the referenced work may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work."@en ;
+  adm:userTooltip "The referenced Work is a derivative of this Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has derivative"@en ;
   rdfs:range bdo:Work ;
@@ -3599,6 +3674,7 @@ bdo:workHasDerivative
 .
 bdo:workHasExpression
   a owl:ObjectProperty ;
+  adm:userTooltip "The referenced Work is an expression of this Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has expression"@en ;
   rdfs:range bdo:Work ;
@@ -3607,27 +3683,28 @@ bdo:workHasExpression
 bdo:workHasItem
   a owl:ObjectProperty ;
   bdo:inferSubTree true ;
+  adm:userTooltip "This Work has an Item, iages, etext, or physical."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has item"@en ;
   rdfs:range bdo:Item ;
 .
 bdo:workHasNumber
   a owl:ObjectProperty ;
-  rdfs:comment "used to reference the number associated with the work in the series"@en ;
+  adm:userTooltip "used to reference the number associated with the work in the series"@en ;
   rdfs:label "number"@en ;
   owl:inverseOf bdo:workNumberOf ;
 .
 bdo:workHasParallelsIn
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  rdfs:comment "This work has some parallels in another work, meaning it displays intertextuality patterns."@en ;
+  adm:userTooltip "This work has some parallels in another work, meaning it displays intertextuality patterns."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "parallels in"@en ;
   rdfs:range bdo:Work ;
 .
 bdo:workHasPart
   a owl:ObjectProperty ;
-  rdfs:comment "links a work and one of its part (a collection and a text in the collection, a text and one of its chapters, etc.)"@en ;
+  adm:userTooltip "links a work and one of its part (a collection and a text in the collection, a text and one of its chapters, etc.)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has part"@en ;
   rdfs:range bdo:Work ;
@@ -3636,6 +3713,7 @@ bdo:workHasPart
 .
 bdo:workHasReproduction
   a owl:ObjectProperty ;
+  adm:userTooltip "References a Work that is a reproduction of this Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has reproduction"@en ;
   rdfs:range bdo:Work ;
@@ -3644,7 +3722,7 @@ bdo:workHasReproduction
 bdo:workHasRoot
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment """:workHasRoot is typically \"inferred\" via a path expression such as:
+  adm:technicalComment """:workHasRoot is typically \"inferred\" via a path expression such as:
 
     ?hEx bdo:workPartOf+ ?hExW .
     optional { ?hExW bdo:workPartOf ?hExWP }
@@ -3657,29 +3735,31 @@ which can then be constructed to:
 
 rather than storing the triple explicitly for every part of a large composite :Work such as a Kanjur or Tengyur.
 
-Adding this \"virtual\" property to the ontology provides a place to add the labels needed to localization of applications"""@en ;
+Adding this \"virtual\" property to the ontology provides a place to add the labels needed for localization of applications"""@en ;
+  adm:userTooltip "For a sub(sub, etc) Work the target Work is the top-level containing Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has root"@en ;
   rdfs:range bdo:Work ;
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
-  rdfs:comment "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
-  rdfs:comment "deprecated in favor of the various :WorkEvents."@en ;
+  adm:userTooltip "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
+  adm:deprecatedComment "deprecated in favor of the various :WorkEvents."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
 .
 bdo:workHasSourcePrintery
   a owl:ObjectProperty ;
-  rdfs:comment "used to indicate the printery of a traditional artefact"@en ;
+  adm:userTooltip "used to indicate the printery of a traditional artefact"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "printed at"@en ;
   rdfs:range bdo:Place ;
 .
 bdo:workHasTranslation
   a owl:ObjectProperty ;
-  rdfs:comment "The referenced work is identified as a translation of the subject work. This will be used, for example, when the referenced work is a Tibetan translation of a subject Sanskrit work."@en ;
+  adm:catalogingConvention "The referenced work is identified as a translation of the subject work. This will be used, for example, when the referenced work is a Tibetan translation of a subject Sanskrit work."@en ;
+  adm:userTooltip "The referenced Work is identified as a translation of this Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has translation"@en ;
   rdfs:range bdo:Work ;
@@ -3689,43 +3769,44 @@ bdo:workHasTranslation
 bdo:workHollis
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment """The Harvard Online Library ID for the Work.
+  adm:catalogingConvention """The Harvard Online Library ID for the Work.
 
 There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"""@en ;
+  adm:userTooltip "The Harvard Online Library ID for the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "hollis id"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workIllustrations
   a owl:DatatypeProperty ;
+  adm:userTooltip "Provides a string describing the presence of illustrations, portraits, color plates and so on."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "illustrations"@en ;
   rdfs:range xsd:string ;
-  owl:deprecated true ;
 .
 bdo:workIncipit
   a owl:DatatypeProperty ;
-  rdfs:comment "The opening words of the Work"@en ;
+  adm:userTooltip "The opening words of the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "incipit"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workIsAbout
   a owl:ObjectProperty ;
-  rdfs:comment "The referenced Entity (topic, person, work, etc.) is expected to be a subject of the work - something the work is about."@en ;
+  adm:userTooltip "The referenced Entity (topic, person, work, etc.) is a subject of the Work - something the Work is about."@en ;
   rdfs:label "is about"@en ;
 .
 bdo:workIsNumbered
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
+  adm:userTooltip "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
   rdfs:domain bdo:Work ;
-  rdfs:label "number in serie"@en ;
+  rdfs:label "number in series"@en ;
   rdfs:range xsd:boolean ;
 .
 bdo:workIsbn
   a owl:DatatypeProperty ;
-  rdfs:comment "Refers to the International Standard Book Number for the Work"@en ;
+  adm:userTooltip "Refers to the International Standard Book Number for the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "ISBN"@en ;
   rdfs:range bdo:ISBN ;
@@ -3733,14 +3814,14 @@ bdo:workIsbn
 bdo:workKDPPOldId
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "Khmer Digital Preservation Project Old Id" ;
+  adm:userTooltip "Khmer Digital Preservation Project Old Id" ;
   rdfs:label "KDPPOld Id"@en ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaA
   a owl:DatatypeProperty ;
-  rdfs:comment "From Paul Hackett's catalogue"@en ;
+  adm:userTooltip "From Paul Hackett's catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Pedurma catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3749,7 +3830,7 @@ bdo:workKaTenSiglaA
 .
 bdo:workKaTenSiglaBon
   a owl:DatatypeProperty ;
-  rdfs:comment "Reference number in the Bon combined Kanjur and Tenjur"@en ;
+  adm:userTooltip "Reference number in the Bon combined Kanjur and Tenjur"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "bon kanjur catalog number"@en ;
   rdfs:range xsd:string ;
@@ -3757,7 +3838,7 @@ bdo:workKaTenSiglaBon
 .
 bdo:workKaTenSiglaC
   a owl:DatatypeProperty ;
-  rdfs:comment "from Mibu's catalogue"@en ;
+  adm:userTooltip "from Mibu's catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Cone catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3766,7 +3847,7 @@ bdo:workKaTenSiglaC
 .
 bdo:workKaTenSiglaD
   a owl:DatatypeProperty ;
-  rdfs:comment "Derge Kangyur and Tengyur reference numbers, from the Tohoku Catalogue"@en ;
+  adm:userTooltip "Derge Kangyur and Tengyur reference numbers, from the Tohoku Catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Tohoku catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3775,12 +3856,13 @@ bdo:workKaTenSiglaD
 .
 bdo:workKaTenSiglaDo
   a owl:DatatypeProperty ;
+  adm:userTooltip "Reference number for this work from the Dolpo Kangyur Catalogue"@en ;
   rdfs:label "Dolpo Kangyur Catalogue Number"@en ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaG
   a owl:DatatypeProperty ;
-  rdfs:comment "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
+  adm:userTooltip "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "gser bris catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3788,7 +3870,7 @@ bdo:workKaTenSiglaG
 .
 bdo:workKaTenSiglaH
   a owl:DatatypeProperty ;
-  rdfs:comment "Lhasa Kanjur reference number"@en ;
+  adm:userTooltip "Lhasa Kanjur reference number"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "lha sa catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3796,7 +3878,7 @@ bdo:workKaTenSiglaH
 .
 bdo:workKaTenSiglaJ
   a owl:DatatypeProperty ;
-  rdfs:comment "From Imaeda's catalogue"@en ;
+  adm:userTooltip "From Imaeda's catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "'jang catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3805,7 +3887,7 @@ bdo:workKaTenSiglaJ
 .
 bdo:workKaTenSiglaN
   a owl:DatatypeProperty ;
-  rdfs:comment "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
+  adm:userTooltip "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "narthang number"@en ;
   rdfs:range xsd:string ;
@@ -3814,7 +3896,7 @@ bdo:workKaTenSiglaN
 .
 bdo:workKaTenSiglaQ
   a owl:DatatypeProperty ;
-  rdfs:comment "Pecing Kangyur Reference number from the Otani catalogue"@en ;
+  adm:userTooltip "Pecing Kangyur Reference number from the Otani catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Otani catalogue reference"@en ;
   rdfs:range xsd:string ;
@@ -3822,7 +3904,7 @@ bdo:workKaTenSiglaQ
 .
 bdo:workKaTenSiglaS
   a owl:DatatypeProperty ;
-  rdfs:comment "Reference number from Skorupski's catalogue"@en ;
+  adm:userTooltip "Reference number from Skorupski's catalogue"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Stog catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3831,7 +3913,7 @@ bdo:workKaTenSiglaS
 .
 bdo:workKaTenSiglaU
   a owl:DatatypeProperty ;
-  rdfs:comment "Urga Kangyur reference number"@en ;
+  adm:userTooltip "Urga Kangyur reference number"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Urga catalogue number"@en ;
   rdfs:range xsd:string ;
@@ -3839,12 +3921,13 @@ bdo:workKaTenSiglaU
 .
 bdo:workKaTenSiglaV
   a owl:DatatypeProperty ;
+  adm:userTooltip "Reference number from the Ulaanbaatar catalogue"@en ;
   rdfs:label "Ulaanbaatar catalogue number"@en ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaZ
   a owl:DatatypeProperty ;
-  rdfs:comment "Shey Palace manuscript reference number"@en ;
+  adm:userTooltip "Shey Palace manuscript reference number"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "Shey number"@en ;
   rdfs:range xsd:string ;
@@ -3853,21 +3936,22 @@ bdo:workKaTenSiglaZ
 .
 bdo:workLangScript
   a owl:ObjectProperty ;
-  rdfs:comment "Every :Work should have at least one :workLangScript indicating the primary laguage and script in which the language is presented. There may be more than one :workLangScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
+  adm:catalogingConvention "Every Work should have at least one :workLangScript indicating the primary laguage and script in which the language is presented. There may be more than one :workLangScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
+  adm:userTooltip "Indicates the primary language and script in which the Work is expressed."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "language"@en ;
   rdfs:range bdo:LangScript ;
 .
 bdo:workLcCallNumber
   a owl:DatatypeProperty ;
-  rdfs:comment "Refers to the Library of Congress Shelf mark call number"@en ;
+  adm:userTooltip "Refers to the Library of Congress Shelf mark call number"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has LC Call Number"@en ;
   rdfs:range bdo:LCCallNumber ;
 .
 bdo:workLccn
   a owl:DatatypeProperty ;
-  rdfs:comment "Refers to the Library of Congress Control Number"@en ;
+  adm:userTooltip "Refers to the Library of Congress Control Number"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "LCCN"@en ;
   rdfs:range bdo:LCCN ;
@@ -3875,6 +3959,7 @@ bdo:workLccn
 bdo:workLinkTo
   a owl:InverseFunctionalProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a member Work of a VirtualWork (an ad hoc collection of Works)"@en ;
   rdfs:domain bdo:VirtualWork ;
   rdfs:label "work link to"@en ;
   rdfs:range bdo:Work ;
@@ -3887,11 +3972,12 @@ bdo:workLinkedAt
   rdfs:label "work linked at"@en ;
   rdfs:range bdo:VirtualWork ;
   owl:inverseOf bdo:workLinkTo ;
+  owl:deprecated true ;
 .
 bdo:workLocation
   a owl:ObjectProperty ;
-  rdfs:comment "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
-  rdfs:comment "the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
+  adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
+  adm:technicalComment "the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
   rdfs:domain bdo:LineageOrNoteOrWork ;
   rdfs:label "location"@en ;
   rdfs:range bdo:WorkLocation ;
@@ -3900,44 +3986,47 @@ bdo:workLocation
 bdo:workLocationByFolio
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "If true then the location is specified in terms of folio # and side: verso/recto"@en ;
+  adm:userTooltip "If true then the location is specified in terms of folio # and side: verso/recto"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "location by folio"@en ;
   rdfs:range xsd:boolean ;
 .
 bdo:workLocationEndLine
   a owl:DatatypeProperty ;
-  rdfs:comment "The ending line on the ending page that is referenced"@en ;
+  adm:userTooltip "The ending line on the ending page that is referenced"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "end line"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:workLocationEndPage
   a owl:DatatypeProperty ;
-  rdfs:comment "The ending page in the volume of the Work indicated by the other statements for this :WorkLocation"@en ;
+  adm:userTooltip "The ending page in the volume of the Work indicated by the other statements for this :WorkLocation"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "end page"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:workLocationEndPhrase
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationEndLine specified as well."@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationEndLine specified as well."@en ;
+  adm:userTooltip "A count of the ending phrase (in language specific units) of a Work location"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "end phrase"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:workLocationEndSide
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "If :workLocationByFolio true then end side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "If :workLocationByFolio true then end side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
+  adm:userTooltip "Indicates the ending side of the folio in a folio-based location."@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "end side"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workLocationEndVolume
   a owl:DatatypeProperty ;
-  rdfs:comment "this should be a positive integer indicating the ending volume (if different from the starting volume) of the Work referenced in this Location"@en ;
+  adm:catalogingConvention "this should be a positive integer indicating the ending volume (if different from the starting volume) of the Work referenced in this Location"@en ;
+  adm:userTooltip "Indicates the ending volume number of a Work location."@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "end volume"@en ;
   rdfs:range bdo:IntegerOrString ;
@@ -3945,49 +4034,51 @@ bdo:workLocationEndVolume
 bdo:workLocationEndVolumeName
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "refers to the ending volume by name, e.g., ca, ta, nga"@en ;
+  adm:userTooltip "Indicates the ending volume name of a Work location."@en ;
   rdfs:label "location ending volume name"@en ;
 .
 bdo:workLocationLine
   a owl:DatatypeProperty ;
-  rdfs:comment "The line on the page that is referenced"@en ;
+  adm:userTooltip "The line on the page that is referenced"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "line"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:workLocationPage
   a owl:DatatypeProperty ;
-  rdfs:comment "The page in the volume of the Work indicated by the other statements for this :WorkLocation"@en ;
+  adm:userTooltip "The page in the volume of the Work indicated by the other statements for this :WorkLocation"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "page"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:workLocationPhrase
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationLine specified as well."@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationLine specified as well."@en ;
+  adm:userTooltip "A count of the starting phrase (in language specific units) of a Work location."@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "phrase"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:workLocationSide
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "If :workLocationByFolio true then side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "If :workLocationByFolio true then side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
+  adm:userTooltip "Starting side of the folio in a folio-based location."@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "side"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workLocationStatement
   a owl:DatatypeProperty ;
-  rdfs:comment "A statement of the location of this Work in a containing Work or of the pagination present in the text versus the formal location in terms of page images."@en ;
+  adm:userTooltip "A statement of the location of this Work in a containing Work or of the pagination present in the text versus the formal location in terms of page images."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "location statement"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workLocationVolume
   a owl:DatatypeProperty ;
-  rdfs:comment "this should be a positive integer indicating the volume of the Work referenced in this Location"@en ;
+  adm:userTooltip "this should be a positive integer indicating the volume of the Work referenced in this Location"@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "volume"@en ;
   rdfs:range bdo:IntegerOrString ;
@@ -3995,11 +4086,12 @@ bdo:workLocationVolume
 bdo:workLocationVolumeName
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "refers to the volume by name, e.g., ca, ta, nga"@en ;
+  adm:userTooltip "refers to the volume by name, e.g., ca, ta, nga"@en ;
   rdfs:label "location volume name"@en ;
 .
 bdo:workLocationWork
   a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the Work that the WorkLocation refers to."@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "in work"@en ;
   rdfs:range bdo:Work ;
@@ -4008,7 +4100,7 @@ bdo:workLocationWork
 bdo:workMaterial
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "a component material of the source (can be the type of paper, type of ink, etc.)"@en ;
+  adm:userTooltip "a component material of the source (can be the type of paper, type of ink, etc.)"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
@@ -4016,27 +4108,30 @@ bdo:workMaterial
 bdo:workMicrofilm
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "The Work was digitized from a microfilm copy."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "work from microfilm"@en ;
   rdfs:range bdo:ObjectTypeMicrofilm ;
 .
 bdo:workNumberOf
   a owl:ObjectProperty ;
-  rdfs:comment "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
+  adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
+  adm:userTooltip "Indicates that this Work is a member of a series."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "In"@en ;
   rdfs:range bdo:Work ;
 .
 bdo:workNumberOfVolumes
   a owl:DatatypeProperty ;
-  rdfs:comment "This is the number of volumes associated with the original work. Typically this is for a published work. The value may differ from the \"actual\" number of volumes in an associated Item owing to missing volumes."@en ;
+  adm:catalogingConvention "This is the number of volumes associated with the original work. Typically this is for a published work. The value may differ from the \"actual\" number of volumes in an associated Item owing to missing volumes."@en ;
+  adm:userTooltip "This is the number of volumes associated with the original work."@en ;
   rdfs:label "number of volumes"@en ;
   rdfs:range xsd:integer ;
 .
 bdo:workObjectType
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "the type of content: manuscript, blockprint, etc"@en ;
+  adm:userTooltip "the type of content: manuscript, blockprint, etc"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "object type"@en ;
   rdfs:range bdo:ObjectType ;
@@ -4050,13 +4145,14 @@ bdo:workOtherLangScript
 or a text containing handwritten comments in Tibetan might have:
 
     :workOtherLangScript bdr:BoKhyugYig"""@en ;
-  rdfs:comment "secondary language associated with a work"@en ;
+  adm:userTooltip "secondary language associated with a work"@en ;
   rdfs:label "other language"@en ;
 .
 bdo:workPL480
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "Id and indication that the Work was prepared and acquired as part of Gene Smith's contribution to the implementation of Public Law 480 in India in the 1960's and 70's"@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "Id and indication that the Work was prepared and acquired as part of Gene Smith's contribution to the implementation of Public Law 480 in India in the 1960's and 70's"@en ;
+  adm:userTooltip "Indicates that the Work was acquired as part of Gene Smith's contribution to the implementation of Public Law 480"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "pl480"@en ;
   rdfs:range xsd:string ;
@@ -4064,6 +4160,7 @@ bdo:workPL480
 bdo:workPagination
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Indicates whether the pagination is absolute across all pages of a Work or relative to the contents of a part of the Work."@en ;
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "pagination"@en ;
   rdfs:range bdo:PaginationType ;
@@ -4071,7 +4168,7 @@ bdo:workPagination
 .
 bdo:workPartIndex
   a owl:DatatypeProperty ;
-  adm:technicalComment """The part index is used to provide a simple way to order the parts of a parent :Work. The direct children parts of a :Work are indexed from 1 to n. The direct children of each of these is similarly indexed from 1 to n.
+  adm:catalogingConvention """The part index is used to provide a simple way to order the parts of a parent :Work. The direct children parts of a :Work are indexed from 1 to n. The direct children of each of these is similarly indexed from 1 to n.
 
 Schematically:
 
@@ -4108,21 +4205,23 @@ W1_0007
     :workPartOf W1_0005 ;
     :workPartIndex 2 ;"""@en ;
   adm:translationPriority 2 ;
+  adm:userTooltip "The part index is used to provide a simple way to order the parts of a parent Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "part index"@en ;
   rdfs:range xsd:integer ;
 .
 bdo:workPartLabel
   a owl:DatatypeProperty ;
+  adm:catalogingConvention "Use this property to reflect a label/name for a \"synthetic\" part of a work such as \"Sutra Basket\" or \"Guhyagarbha Commentaries\" that is not identified directly in a composite work such Kangyur or Kama but that helps to highlight the organization of composite work"@en ;
   adm:translationPriority 2 ;
-  rdfs:comment "Use this property to reflect a label/name for a \"synthetic\" part of a work such as \"Sutra Basket\" or \"Guhyagarbha Commentaries\" that is not identified directly in a composite work such Kangyur or Kama but that helps to highight the organization of composite work"@en ;
+  adm:userTooltip "A label that helps to highlight the organization of composite work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "part label"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workPartOf
   a owl:ObjectProperty ;
-  adm:technicalComment """The subject work is a part of the referenced work. The subject work in this case is an <outline:node/> in the legacy metadata. The referenced work may be the root work or another part of the root work such as a section.
+  adm:catalogingConvention """The subject work is a part of the referenced work. The subject work in this case is an <outline:node/> in the legacy metadata. The referenced work may be the root work or another part of the root work such as a section.
 
 For example, The Kanjur conventionally has a section of Vinaya texts and each of these will be a :Work modeled like:
 
@@ -4135,7 +4234,7 @@ bdr:SomeKanjurVinayaSection a :Work ;
       :workPartOf bdr:W26071 ;
       :workBeginsAt bdr:WorkLocationZ001 ;
       :workEndsAt bdr:WorksLocationZ002 ."""@en ;
-  rdfs:comment "Indicates the direct parent in the hierarchy of the work content"@en ;
+  adm:userTooltip "Indicates the direct parent in the hierarchy of the work content"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "part of"@en ;
   rdfs:range bdo:Work ;
@@ -4143,17 +4242,18 @@ bdr:SomeKanjurVinayaSection a :Work ;
 .
 bdo:workPartTreeIndex
   a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  rdfs:comment """the :workPartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For example, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
+  adm:catalogingConvention """the :workPartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For example, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
 
     5.1.3.2
 
 so go to the fifth child of the root then to the first of its children, then to the third child of that and finally to that child's second child"""@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "A dotted list of indexes of the part among its siblings under each parent up to the root."@en ;
   rdfs:label "work part tree index"@en ;
 .
 bdo:workPartType
   a owl:ObjectProperty ;
-  rdfs:comment "If the subject work is part of another work, then this reflects the type of part: chapter, section, text, etc."@en ;
+  adm:userTooltip "If the subject work is part of another work, then this reflects the type of part: chapter, section, text, etc."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "part type"@en ;
   rdfs:range bdo:WorkPartType ;
@@ -4161,17 +4261,18 @@ bdo:workPartType
 bdo:workPrintery
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment """Free text comment on where the copy of the Work that was digitized was printed.
+  adm:catalogingConvention """Free text comment on where the copy of the Work that was digitized was printed.
 
 This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
+  adm:userTooltip "Free text comment on where the copy of the Work that was digitized was printed."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "printery"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
-  rdfs:comment "Loction of the publisher of the form of the Work that has been digitized."@en ;
-  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
+  adm:userTooltip "Loction of the publisher of the form of the Work that has been digitized."@en ;
+  adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
@@ -4179,8 +4280,8 @@ bdo:workPublisherLocation
 .
 bdo:workPublisherName
   a owl:DatatypeProperty ;
-  rdfs:comment "The name of the publisher transcribed from the Work"@en ;
-  rdfs:comment "deprecated in favor of :PublishedEvent"@en ;
+  adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
+  adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
@@ -4188,7 +4289,7 @@ bdo:workPublisherName
 .
 bdo:workRefChokLing
   a owl:DatatypeProperty ;
-  rdfs:comment "Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642"@en ;
+  adm:userTooltip "Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "chokling tersar reference"@en ;
   rdfs:range xsd:string ;
@@ -4198,7 +4299,7 @@ bdo:workRefChokLing
 bdo:workRefIsIAO
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:comment "Catalog of the Tucci Tibetan fund in the library of ISMEO"@en ;
+  adm:userTooltip "Catalog of the Tucci Tibetan fund in the library of ISMEO"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "IsIAO reference"@en ;
   rdfs:range xsd:string ;
@@ -4207,7 +4308,7 @@ bdo:workRefIsIAO
 .
 bdo:workRefrKTsG
   a owl:DatatypeProperty ;
-  rdfs:comment "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
+  adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs rnying rgyud reference"@en ;
   rdfs:range xsd:integer ;
@@ -4216,7 +4317,7 @@ bdo:workRefrKTsG
 .
 bdo:workRefrKTsK
   a owl:DatatypeProperty ;
-  rdfs:comment "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
+  adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs Kangyur reference"@en ;
   rdfs:range xsd:integer ;
@@ -4225,7 +4326,7 @@ bdo:workRefrKTsK
 .
 bdo:workRefrKTsT
   a owl:DatatypeProperty ;
-  rdfs:comment "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
+  adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs Tengyur reference"@en ;
   rdfs:range xsd:integer ;
@@ -4234,40 +4335,43 @@ bdo:workRefrKTsT
 .
 bdo:workRefs
   a owl:DatatypeProperty ;
-  rdfs:comment "This property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloguing."@en ;
+  adm:userTooltip "This property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloguing."@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "reference number"@en ;
 .
 bdo:workReproductionOf
   a owl:ObjectProperty ;
-  adm:technicalComment """This is relevant to record versus :workExpressionOf when there may be features peculariar to the fact of reproduction versus a direct production such as from master woodblocks or, in a more modern setting, the original offset plates from an input text.
+  adm:catalogingConvention """This is relevant to record versus :workExpressionOf when there may be features peculariar to the fact of reproduction versus a direct production such as from master woodblocks or, in a more modern setting, the original offset plates from an input text.
 
 For example,
 
 bdr:W22084 :workReproductionOf bdr:W9NEW01
 
 indicates that bdr:W22084 is considered to be scanned images from a reproduction of the conceptual sdg dge Kanjur identified here as bdr:W9NEW01. The bdr:W9NEW01 denotes the constellation of versions/reproductions and derivatives of the (mythical) sde dge Kanjur."""@en ;
-  rdfs:comment "The subject work is a reproduction of the referenced work such as a photocopy or a an offset print of an original or photocopy and so on."@en ;
+  adm:userTooltip "The subject work is a reproduction of the referenced work such as a photocopy or an offset print of an original or photocopy and so on."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "reproduction of"@en ;
   rdfs:range bdo:Work ;
 .
 bdo:workScanInfo
   a owl:DatatypeProperty ;
-  rdfs:comment "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
+  adm:userTooltip "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "scan info"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workSeeHarvard
   a owl:DatatypeProperty ;
+  adm:technicalComment "what is this used for versus the Hollis ID?"@en ;
   adm:translationPriority 2 ;
+  adm:userTooltip "Gives an identifier in the Harvard library catalog."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "see Harvard"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workSeriesContent
   a owl:DatatypeProperty ;
+  adm:technicalComment "does not appear to be used."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "series content"@en ;
   rdfs:range rdf:langString ;
@@ -4275,7 +4379,7 @@ bdo:workSeriesContent
 .
 bdo:workSeriesName
   a owl:DatatypeProperty ;
-  rdfs:comment "do not use for new records, a proper work should be created for the series."@en ;
+  adm:catalogingConvention "do not use for new records, a proper work should be created for the series."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "series name"@en ;
   rdfs:range rdf:langString ;
@@ -4283,29 +4387,32 @@ bdo:workSeriesName
 .
 bdo:workSeriesNumber
   a owl:DatatypeProperty ;
-  rdfs:comment "This is the number of this Work in a series - implies that this work is a part (member of) a series Work."@en ;
+  adm:userTooltip "This is the number of this Work in a series - implies that this work is a part (member of) a series Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "number"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workSideBoxSequenceId
   a owl:DatatypeProperty ;
-  rdfs:comment "An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts. Conventionally appearing in a side box of the textbox. See bdr:W22080 for an example."@en ;
+  adm:catalogingConvention "An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts. Conventionally appearing in a side box of the textbox. See bdr:W22080 for an example."@en ;
+  adm:userTooltip "An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "side box sequence id"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workSourceNote
   a owl:DatatypeProperty ;
+  adm:userTooltip "A note about the origin of the form of the Work that was digitized."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "source note"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workSourcePrintery_string
   a owl:DatatypeProperty ;
-  rdfs:comment """Free-text expression of the source printery for the Work.
+  adm:catalogingConvention """Free-text expression of the source printery for the Work.
 
 Should be converted to a reference to a Place resource"""@en ;
+  adm:userTooltip "Free-text expression of the source printery for the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "source printery"@en ;
   rdfs:range xsd:string ;
@@ -4313,7 +4420,7 @@ Should be converted to a reference to a Place resource"""@en ;
 .
 bdo:workTitle
   a owl:ObjectProperty ;
-  rdfs:comment "Asserts that the subject Work has a particular title."@en ;
+  adm:userTooltip "Asserts that the subject Work has a particular title."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "title"@en ;
   rdfs:range bdo:WorkTitle ;
@@ -4321,8 +4428,8 @@ bdo:workTitle
 .
 bdo:workTranslationOf
   a owl:ObjectProperty ;
-  rdfs:comment "The subject work is identified as a translation of the referenced work. This will be used, for example, when the subject work is a Tibetan translation of a referenced Sanskrit work."@en ;
-  rdfs:comment "This work is a translation of the reference work."@en ;
+  adm:catalogingConvention "The subject work is identified as a translation of the referenced work. This will be used, for example, when the subject work is a Tibetan translation of a referenced Sanskrit work."@en ;
+  adm:userTooltip "This work is a translation of the reference work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "translation of"@en ;
   rdfs:range bdo:Work ;
@@ -4331,7 +4438,7 @@ bdo:workTranslationOf
 .
 bdo:workType
   a owl:ObjectProperty ;
-  rdfs:comment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
+  adm:deprecatedComment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "work type"@en ;
   rdfs:range bdo:WorkType ;
@@ -4341,7 +4448,8 @@ bdo:workType
 bdr:ChineseDateNotSpecified
   a bdo:ChineseDate ;
   adm:translationPriority 2 ;
-  rdfs:label "Chinese date Not specified"@en ;
+  adm:userTooltip "An unspecified Chinese date."@en ;
+  rdfs:label "Unspecified Chinese date"@en ;
 .
 bdr:LanguageTaxonomy
   a bdo:Type ;
@@ -4419,13 +4527,13 @@ dcterms:modified
   a owl:AnnotationProperty ;
 .
 rdfs:comment
-  rdfs:comment """As a convention in the BDRC ontology, use rdfs:comment for summary and contents statements about a resource rather than adding additional properties.
+  adm:catalogingConvention """As a convention in the BDRC ontology, use rdfs:comment for summary and contents statements about a resource rather than adding additional properties.
 
 We take the view that the summary or contents statements can be treated in a manner similar to the use of rdfs:label as a way of providing a short description of a resource"""@en ;
   rdfs:label "Comment"@en ;
 .
 rdfs:label
-  rdfs:comment "The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle"@en ;
+  adm:catalogingConvention "The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle"@en ;
   rdfs:label "label"@en ;
 .
 rdfs:seeAlso
@@ -4435,7 +4543,7 @@ xsd:date
   a rdfs:Datatype ;
 .
 owl:Thing
-  rdfs:comment "The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA's domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types."@en ;
+  adm:technicalComment "The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA's domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types."@en ;
 .
 owl:sameAs
   a owl:AnnotationProperty ;
@@ -4444,26 +4552,26 @@ owl:sameAs
 .
 skos:altLabel
   a owl:AnnotationProperty ;
-  rdfs:comment "A variant label for entities such as :Place, :Corporation and so on"@en ;
+  adm:catalogingConvention "A variant label for entities such as :Place, :Corporation and so on"@en ;
   rdfs:label "variant label"@en ;
   rdfs:subPropertyOf rdfs:label ;
 .
 skos:hiddenLabel
   a owl:AnnotationProperty ;
-  rdfs:comment "Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset"@en ;
+  adm:catalogingConvention "Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset"@en ;
   rdfs:label "hidden label"@en ;
   rdfs:subPropertyOf rdfs:label ;
 .
 skos:prefLabel
   a owl:AnnotationProperty ;
-  rdfs:comment "The preferred human-readable label for a resource. For a Work this is typically the bibliographic title and will be repeated in a WorkTitle, similarly for Persons"@en ;
+  adm:catalogingConvention "The preferred human-readable label for a resource. For a Work this is typically the bibliographic title and will be repeated in a WorkTitle, similarly for Persons"@en ;
   rdfs:label "preferred label"@en ;
   rdfs:subPropertyOf rdfs:label ;
 .
 vcard:Address
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "The components of the address for a physical location."@en ;
+  adm:catalogingConvention "The components of the address for a physical location."@en ;
   rdfs:label "VCARD Address"@en ;
   rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1292> ;
   rdfs:subClassOf vcard:Entity ;
@@ -4471,20 +4579,20 @@ vcard:Address
 vcard:Entity
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled."@en ;
+  adm:catalogingConvention "Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled."@en ;
   rdfs:label "VCARD Entity"@en ;
   rdfs:seeAlso "https://www.w3.org/TR/vcard-rdf" ;
 .
 vcard:country-name
   a owl:DatatypeProperty ;
-  rdfs:comment "map the country for a Library address"@en ;
+  adm:catalogingConvention "map the country for a Library address"@en ;
   rdfs:domain vcard:Address ;
   rdfs:label "country"@en ;
   rdfs:range xsd:string ;
 .
 vcard:locality
   a owl:DatatypeProperty ;
-  rdfs:comment "use for city for a Library address"@en ;
+  adm:catalogingConvention "use for city for a Library address"@en ;
   rdfs:domain vcard:Address ;
   rdfs:label "locality"@en ;
   rdfs:range xsd:string ;
@@ -4497,27 +4605,27 @@ vcard:postal-code
 .
 vcard:region
   a owl:DatatypeProperty ;
-  rdfs:comment "use for state in Library address"@en ;
+  adm:catalogingConvention "use for state in Library address"@en ;
   rdfs:domain vcard:Address ;
   rdfs:label "region"@en ;
   rdfs:range xsd:string ;
 .
 vcard:street-address
   a owl:DatatypeProperty ;
-  rdfs:comment "concatenate with the street number for a Library address"@en ;
+  adm:catalogingConvention "concatenate with the street number for a Library address"@en ;
   rdfs:domain vcard:Address ;
   rdfs:label "street address"@en ;
   rdfs:range xsd:string ;
 .
 foaf:Agent
   a owl:Class ;
-  rdfs:comment "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
+  adm:catalogingConvention "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
   rdfs:label "Agent"@en ;
   rdfs:subClassOf foaf:Entity ;
 .
 foaf:Entity
   a owl:Class ;
-  rdfs:comment "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
+  adm:catalogingConvention "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
   rdfs:label "FOAF Entity"@en ;
   rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
 .
