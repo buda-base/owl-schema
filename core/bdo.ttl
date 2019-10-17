@@ -1118,6 +1118,12 @@ bdo:PersonRabByungOrdination
   rdfs:label "rab byung"@bo-x-ewts ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
+bdo:PersonReversal
+  a owl:Class ;
+  adm:userTooltip "Reverses firstname lastname to lastname, firstname"@en ;
+  rdfs:label "other title"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
 bdo:PersonSecretInitiatoryName
   a owl:Class ;
   adm:userTooltip "A name bestowed on Person upon receiving certain empowerments"@en ;
@@ -1134,6 +1140,12 @@ bdo:PersonTulkuTitle
   a owl:Class ;
   adm:userTooltip "A title bestowed on a Person who is recognized as a reincarnation of a distinguished Person"@en ;
   rdfs:label "Tulku Title"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
+bdo:PersonVariantOrthography
+  a owl:Class ;
+  adm:userTooltip "An accepted variant writing of a name"@en ;
+  rdfs:label "variant orthography"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
 bdo:Place
@@ -2532,8 +2544,8 @@ bdo:itemException
 .
 bdo:itemForWork
   a owl:ObjectProperty ;
-  bdo:inferSubTree true ;
   adm:userTooltip "This Item represents a physical or digital instance of the referenced Work"@en ;
+  bdo:inferSubTree true ;
   rdfs:domain bdo:Item ;
   rdfs:label "for work"@en ;
   rdfs:range bdo:Work ;
@@ -2599,9 +2611,9 @@ bdo:legacyOutlineNodeRID
 .
 bdo:license
   a owl:ObjectProperty ;
-  adm:userTooltip "The license under which access to the Work is provided"@en ;
   adm:deprecatedComment "deprecated by adm:license"@en ;
   adm:replaceWith adm:license ;
+  adm:userTooltip "The license under which access to the Work is provided"@en ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "license"@en ;
   rdfs:seeAlso bdo:License ;
@@ -2839,7 +2851,10 @@ bdo:onDate
 bdo:onOrAbout
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
-  adm:replaceWith bdo:notBefore , bdo:onDate , bdo:onYear , bdo:notAfter ;
+  adm:replaceWith bdo:notAfter ;
+  adm:replaceWith bdo:notBefore ;
+  adm:replaceWith bdo:onDate ;
+  adm:replaceWith bdo:onYear ;
   rdfs:domain bdo:Event ;
   rdfs:label "circa"@en ;
   rdfs:range xsd:string ;
@@ -3013,10 +3028,10 @@ bdo:placeGB2260-2013
 .
 bdo:placeGonpaPerEcumen
   a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
   adm:technicalComment """Karl Ryavec supplies the following information regarding this property:
 
 Gonpa per ecumen would be how many temples are there per one sq km of land area minus water, bare rock, ice and so forth.  Thus I totaled the ecumen areas of each township primarily in terms of the sq km of grassland and forests and farmland.  Then because these areas per temple are so tiny I represented the final amounts on my map legend per 1000 sq km so that the numbers would be closer to 1.0 at times.  For example there might only be .0000001 temples per sq km of ecumen.  But if we convert to per 1000 sq km of ecumen we get .0001 temples  which is a more understandable amount.  Though I think most scholars are baffled by technology and so just understand the idea of core areas like the Lhasa valley compared the peripheral areas like the Changthang.  So that's mainly what I focused on showing."""@en ;
+  adm:translationPriority 2 ;
   adm:userTooltip "The number of monasteries per ecumen in this Place (presumably a region) from data provided by Karl Ryavec"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "monasteries per ecumen"@en ;
@@ -3025,8 +3040,8 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 bdo:placeIsNear
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  adm:userTooltip "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
   adm:deprecatedComment "deprecated because not actually used in legacy data and not well defined"@en ;
+  adm:userTooltip "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
   rdfs:domain bdo:Place ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
@@ -3192,8 +3207,8 @@ bdo:sliceStartChar
 .
 bdo:transliteration
   a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
   adm:catalogingConvention "A transliteration for a :LangScript. Mostly this will apply for Pali situations since texts are always written in a transliteration of Pali in a Romanization or script of a language such as Thai."@en ;
+  adm:translationPriority 2 ;
   adm:userTooltip "A transliteration for a LangScript."@en ;
   rdfs:domain bdo:LangScript ;
   rdfs:label "transliteration"@en ;
@@ -3427,10 +3442,10 @@ bdo:workCBCSiglaS
 .
 bdo:workCBCSiglaT
   a owl:DatatypeProperty ;
-  rdfs:domain bdo:WorkRefs ;
   adm:userTooltip "Indicates a CBC Sigla T, Taisho, associated with this Work."@en ;
-  rdfs:label "Taisho reference number"@en ;
+  rdfs:domain bdo:WorkRefs ;
   rdfs:label "CBC Sigla T, Taisho"@en ;
+  rdfs:label "Taisho reference number"@en ;
   rdfs:label "大正藏"@zh-hant ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
@@ -3516,10 +3531,10 @@ bdo:workContainsChapters
 .
 bdo:workCreator
   a owl:ObjectProperty ;
-  bdo:inferSubTree true ;
-  adm:userTooltip "Identifies the type and person that are a creator of the work"@en ;
   adm:deprecatedComment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
   adm:deprecatedComment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
+  adm:userTooltip "Identifies the type and person that are a creator of the work"@en ;
+  bdo:inferSubTree true ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
@@ -3542,6 +3557,7 @@ bdo:workDateOfWriting
 .
 bdo:workDerivativeOf
   a owl:ObjectProperty ;
+  adm:userTooltip "This work is a derivative of the referenced work."@en ;
   rdfs:comment """This work is a derivative of the referenced work. This means that it may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work.
 
 For example,
@@ -3549,7 +3565,6 @@ For example,
 bdr:W30532 :workDerivativeOf bdr:W22084
 
 bdr:W30532 is a printing based on woodblocks that have a variety of \"corrections\" made via plugs in the original woodblocks and W22084 is a printing from the original sde dge Kanjur woodblocks so it makes sense to indicate that bdr:W30532 is a derivative of bdr:W22084."""@en ;
-  adm:userTooltip "This work is a derivative of the referenced work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "derivative of"@en ;
   rdfs:range bdo:Work ;
@@ -3682,8 +3697,8 @@ bdo:workHasExpression
 .
 bdo:workHasItem
   a owl:ObjectProperty ;
-  bdo:inferSubTree true ;
   adm:userTooltip "This Work has an Item, iages, etext, or physical."@en ;
+  bdo:inferSubTree true ;
   rdfs:domain bdo:Work ;
   rdfs:label "has item"@en ;
   rdfs:range bdo:Item ;
@@ -3721,7 +3736,6 @@ bdo:workHasReproduction
 .
 bdo:workHasRoot
   a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
   adm:technicalComment """:workHasRoot is typically \"inferred\" via a path expression such as:
 
     ?hEx bdo:workPartOf+ ?hExW .
@@ -3736,6 +3750,7 @@ which can then be constructed to:
 rather than storing the triple explicitly for every part of a large composite :Work such as a Kanjur or Tengyur.
 
 Adding this \"virtual\" property to the ontology provides a place to add the labels needed for localization of applications"""@en ;
+  adm:translationPriority 2 ;
   adm:userTooltip "For a sub(sub, etc) Work the target Work is the top-level containing Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has root"@en ;
@@ -3743,8 +3758,8 @@ Adding this \"virtual\" property to the ontology provides a place to add the lab
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
-  adm:userTooltip "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
   adm:deprecatedComment "deprecated in favor of the various :WorkEvents."@en ;
+  adm:userTooltip "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
@@ -3768,10 +3783,10 @@ bdo:workHasTranslation
 .
 bdo:workHollis
   a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
   adm:catalogingConvention """The Harvard Online Library ID for the Work.
 
 There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"""@en ;
+  adm:translationPriority 2 ;
   adm:userTooltip "The Harvard Online Library ID for the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "hollis id"@en ;
@@ -3971,13 +3986,13 @@ bdo:workLinkedAt
   rdfs:domain bdo:Work ;
   rdfs:label "work linked at"@en ;
   rdfs:range bdo:VirtualWork ;
-  owl:inverseOf bdo:workLinkTo ;
   owl:deprecated true ;
+  owl:inverseOf bdo:workLinkTo ;
 .
 bdo:workLocation
   a owl:ObjectProperty ;
-  adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
   adm:technicalComment "the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
+  adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
   rdfs:domain bdo:LineageOrNoteOrWork ;
   rdfs:label "location"@en ;
   rdfs:range bdo:WorkLocation ;
@@ -4260,10 +4275,10 @@ bdo:workPartType
 .
 bdo:workPrintery
   a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
   adm:catalogingConvention """Free text comment on where the copy of the Work that was digitized was printed.
 
 This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
+  adm:translationPriority 2 ;
   adm:userTooltip "Free text comment on where the copy of the Work that was digitized was printed."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "printery"@en ;
@@ -4271,8 +4286,8 @@ This is generally not the source printery of the original wood block prints that
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
-  adm:userTooltip "Loction of the publisher of the form of the Work that has been digitized."@en ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
+  adm:userTooltip "Loction of the publisher of the form of the Work that has been digitized."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
@@ -4280,8 +4295,8 @@ bdo:workPublisherLocation
 .
 bdo:workPublisherName
   a owl:DatatypeProperty ;
-  adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
+  adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
@@ -4570,16 +4585,16 @@ skos:prefLabel
 .
 vcard:Address
   a owl:Class ;
-  adm:translationPriority 2 ;
   adm:catalogingConvention "The components of the address for a physical location."@en ;
+  adm:translationPriority 2 ;
   rdfs:label "VCARD Address"@en ;
   rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1292> ;
   rdfs:subClassOf vcard:Entity ;
 .
 vcard:Entity
   a owl:Class ;
-  adm:translationPriority 2 ;
   adm:catalogingConvention "Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled."@en ;
+  adm:translationPriority 2 ;
   rdfs:label "VCARD Entity"@en ;
   rdfs:seeAlso "https://www.w3.org/TR/vcard-rdf" ;
 .
