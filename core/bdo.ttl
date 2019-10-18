@@ -3,6 +3,7 @@
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
+# imports: http://purl.bdrc.io/ontology/types/DateIndication/
 # imports: http://purl.bdrc.io/ontology/types/Gender/
 # imports: http://purl.bdrc.io/ontology/types/LangScript/
 # imports: http://purl.bdrc.io/ontology/types/Language/
@@ -13,7 +14,6 @@
 # imports: http://purl.bdrc.io/ontology/types/PrintMethod/
 # imports: http://purl.bdrc.io/ontology/types/Script/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
-# imports: http://purl.bdrc.io/ontology/types/TimePeriod/
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://purl.bdrc.io/ontology/types/WorkPartType/
@@ -111,6 +111,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/DateIndication/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LangScript/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language/> ;
@@ -121,7 +122,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/PrintMethod/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Script/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/TimePeriod/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Transliteration/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType/> ;
@@ -463,13 +463,13 @@ bdo:EventOrPeriod
   a owl:Class ;
   adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
   adm:technicalComment "domain of various date properties"@en ;
-  rdfs:label "event or timePeriod"@en ;
+  rdfs:label "Event or DateIndication"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
       a owl:Class ;
       owl:unionOf (
           bdo:Event
-          bdo:TimePeriod
+          bdo:DateIndication
         ) ;
     ] ;
   owl:deprecated true ;
@@ -1319,7 +1319,7 @@ bdo:ThirdTranslatedEvent
   rdfs:label "Third translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:TimePeriod
+bdo:DateIndication
   rdfs:subClassOf bdo:Type ;
 .
 bdo:TitleVersion
@@ -1931,11 +1931,11 @@ bdo:dateApproximate
 .
 bdo:datePeriod
   a owl:ObjectProperty ;
-  adm:catalogingConvention "associates a :Date with at most one :TimePeriod such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :TimePeriod metadata"@en ;
+  adm:technicalComment "Not Used: associates a :Date with at most one :ChineseDateIndication such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :DateIndication metadata"@en ;
   adm:translationPriority 2 ;
   rdfs:domain bdo:Date ;
   rdfs:label "period"@en ;
-  rdfs:range bdo:TimePeriod ;
+  rdfs:range bdo:DateIndication ;
 .
 bdo:dateType
   a owl:ObjectProperty ;
