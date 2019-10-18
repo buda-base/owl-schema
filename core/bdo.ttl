@@ -1622,6 +1622,7 @@ bdo:baseMaterial
 bdo:beDate
   a rdfs:Datatype ;
   adm:userTooltip "Buddhist Era Year dating from 543 B.C.E."@en ;
+  bdo:yearOffset -543 ;
   rdfs:label "B.E. date"@en ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
@@ -1636,6 +1637,7 @@ bdo:binding
 bdo:ceDate
   a rdfs:Datatype ;
   adm:userTooltip "Common Era Year"@en ;
+  bdo:yearOffset 0 ;
   rdfs:label "C.E. date"@en ;
   rdfs:subClassOf bdo:AnyDate ;
   owl:onDatatype xsd:integer ;
@@ -1908,6 +1910,7 @@ bdo:csDate
   a rdfs:Datatype ;
   adm:translationPriority 2 ;
   adm:userTooltip "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
+  bdo:yearOffset 638 ;
   rdfs:label "CS date"@en ;
   rdfs:seeAlso <http://lannamanuscripts.net/en/search/new/> ;
   rdfs:seeAlso <http://www.degruyter.com/downloadpdf/books/9783110479010/9783110479010-003/9783110479010-003.pdf> ;
@@ -4459,6 +4462,14 @@ bdo:workType
   rdfs:range bdo:WorkType ;
   rdfs:seeAlso bdo:WorkType ;
   owl:deprecated true ;
+.
+bdo:yearOffset
+  a owl:DatatypeProperty ;
+  adm:catalogingConvention "This is the year offset for an Era in terms of the Common Era and is established based on the definition of the Era for which this is the offset"@en ;
+  adm:userTooltip "This is the year offset for an Era in terms of the Common Era."@en ;
+  rdfs:domain bdo:AnyDate ;
+  rdfs:label "year offset"@en ;
+  rdfs:range xsd:integer ;
 .
 bdr:ChineseDateNotSpecified
   a bdo:ChineseDate ;
