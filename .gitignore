@@ -7,6 +7,7 @@ catalog-v001.xml
 # TopBraid Compopser
 #
 *.tbc
+*.diagrams
 
 #
 # OSX

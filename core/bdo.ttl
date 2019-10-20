@@ -337,6 +337,9 @@ bdo:Date
   rdfs:label "Date type"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
+bdo:DateIndication
+  rdfs:subClassOf bdo:Type ;
+.
 bdo:EditedEvent
   a owl:Class ;
   adm:deprecatedComment "deprecated in favor of :CompiledEvent"@en ;
@@ -1318,9 +1321,6 @@ bdo:ThirdTranslatedEvent
   adm:userTooltip "An event describing the third translation of a work"@en ;
   rdfs:label "Third translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
-.
-bdo:DateIndication
-  rdfs:subClassOf bdo:Type ;
 .
 bdo:TitleVersion
   a owl:Class ;
