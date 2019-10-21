@@ -669,6 +669,11 @@ bdo:LCCallNumber
   rdfs:label "LCCallNum"@en ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
 .
+bdo:Label
+  a owl:Class ;
+  rdfs:label "Label" ;
+  rdfs:subClassOf bdo:Facet ;
+.
 bdo:LangScript
   rdfs:subClassOf bdo:Type ;
 .
@@ -1010,7 +1015,7 @@ bdo:PersonName
               rdfs:label \"dri med 'od zer\"@bo-x-ewts ] ."""@en ;
   adm:userTooltip "A Person Name is one of the names a Person is historically known by"@en ;
   rdfs:label "person name"@en ;
-  rdfs:subClassOf bdo:Facet ;
+  rdfs:subClassOf bdo:Label ;
 .
 bdo:PersonNameOrWorkTitle
   a owl:Class ;
@@ -1572,7 +1577,7 @@ bdr:W22083 a :Work ;
             rdfs:label \"the tog palace manuscript of the tibetan kanjur\"@en ] ."""@en ;
   adm:userTooltip "A title by which is known or referenced."@en ;
   rdfs:label "Title"@en ;
-  rdfs:subClassOf bdo:Facet ;
+  rdfs:subClassOf bdo:Label ;
 .
 bdo:WorkTitlePageTitle
   a owl:Class ;
@@ -1688,9 +1693,8 @@ bdo:correctionOf
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "the current name or title is a corrected version of the target rdf:langString" ;
-  rdfs:domain bdo:WorkTitle ;
   rdfs:label "correction of"@en ;
-  rdfs:range bdo:OriginalTitle ;
+  rdfs:subPropertyOf bdo:variantOf ;
 .
 bdo:creator
   a owl:ObjectProperty ;
@@ -3225,6 +3229,14 @@ bdo:uiAbbr
   rdfs:label "ui abbr"@en ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf rdfs:label ;
+.
+bdo:variantOf
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "the current name or title is a corrected version of the target rdf:langString" ;
+  rdfs:domain bdo:Label ;
+  rdfs:label "variant of"@en ;
+  rdfs:range bdo:Label ;
 .
 bdo:volumeHasEtext
   a owl:ObjectProperty ;
