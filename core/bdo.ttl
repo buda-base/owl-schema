@@ -4463,7 +4463,6 @@ bdo:workTranslationOf
   rdfs:domain bdo:Work ;
   rdfs:label "translation of"@en ;
   rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workTranslationOf ;
   owl:inverseOf bdo:workHasTranslation ;
 .
 bdo:workType
