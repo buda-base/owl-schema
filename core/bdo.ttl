@@ -375,6 +375,9 @@ bdo:Entity
   adm:userTooltip "Entities are the principle types or concepts in the BDRC ontology. Individuals of type subclass of :Entity will correspond to distinct individuals in the domain of discourse of BDRC, such as Persons, Places, and Works."@en ;
   rdfs:label "Entity"@en ;
 .
+bdo:Era
+  rdfs:subClassOf bdo:Type ;
+.
 bdo:Etext
   a owl:Class ;
   adm:technicalComment """The :Etext :Entity represents a searchable Unicode text file (\"eText\"). In BUDA, eTexts are comprised of a base layer + at least one archival annotation layer, plus other annotation layers for different uses.  The base layer is a raw Unicode text file. The base layer contains Unicode text and line breaks that form a coordinate system.  The coordinate system includes a sequence number, position of start character and end character. The coordinate system is defined in the archival annotation layer.
