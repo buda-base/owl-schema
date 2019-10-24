@@ -4344,7 +4344,7 @@ bdo:workRefrKTsG
   adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs rnying rgyud reference"@en ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
   rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
@@ -4353,7 +4353,7 @@ bdo:workRefrKTsK
   adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs Kangyur reference"@en ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
   rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
@@ -4362,7 +4362,7 @@ bdo:workRefrKTsT
   adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs Tengyur reference"@en ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
   rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
