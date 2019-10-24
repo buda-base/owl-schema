@@ -80,12 +80,21 @@ bdr:EraMS
   rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
   bdo:uiAbbrFormat "%s M.S."@en ;
 .
-bdr:EraMS
+bdr:EraVS
   a bdo:Era ;
-  adm:userTooltip "Mahasakarat, used in Southeast Asia, starting in 78 C.E."@en ;
-  bdo:yearOffset 78 ;
-  rdfs:label "Mahasakarat (M.S.)"@en ;
-  bdo:uiAbbrFormat "%s M.S."@en ;
+  adm:userTooltip "Vikram Samvat Era, used in Nepal and India, starting in 56 B.C.E."@en ;
+  bdo:yearOffset -57 ;
+  rdfs:label "Vikram Samvat (V.S. or B.S.)"@en , "Vikram Samvat"@hi-x-iast ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q1370848> ;
+  bdo:uiAbbrFormat "%s V.S."@en ;
+.
+bdr:EraNS
+  a bdo:Era ;
+  adm:userTooltip "Nepal Sambat Era, used in Nepal, starting in 879 C.E."@en ;
+  bdo:yearOffset 879 ;
+  rdfs:label "Nepal Sambat (N.S.)"@en , "Nepal Sambat"@nep-x-iast ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q1268741> ;
+  bdo:uiAbbrFormat "%s N.S."@en ;
 .
 bdo:DateIndicationTibetan
   a owl:Class ;
