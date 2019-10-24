@@ -3224,10 +3224,10 @@ bdo:transliteration
   rdfs:label "transliteration"@en ;
   rdfs:range bdo:Transliteration ;
 .
-bdo:uiAbbr
+bdo:uiAbbrFormat
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip ":uiAbbr is used as labels for items such as canon catalog SigLas and Date eras. The value is a string such as \"T %s\"or \"%s C.E.\""@en ;
+  adm:userTooltip "used as labels for items such as canon catalog sigLas and date eras. The value is a string such as \"T %s\"or \"%s C.E.\""@en ;
   rdfs:domain rdfs:Resource ;
   rdfs:label "ui abbr"@en ;
   rdfs:range xsd:string ;
@@ -4550,13 +4550,6 @@ bdr:ObjectTypeParPhud
   a owl:NamedIndividual ;
   rdfs:comment "\"first fruit\" printing from a set of xylographs. par phud"@en ;
   rdfs:label "first printing"@en ;
-.
-bdr:ObjectTypeShortPalmLeaf
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "short palm leaf"@en ;
-  rdfs:label "short palm leaf"@en ;
-  owl:deprecated true ;
 .
 bdr:ObjectTypeTypeSet
   a bdo:ObjectType ;

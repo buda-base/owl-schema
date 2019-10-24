@@ -12,23 +12,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:BuddhistEra
-  a owl:Class ;
-  adm:userTooltip "Buddhist Era dating from -543 C.E."@en ;
-  bdo:yearOffset -543 ;
-  rdfs:label "B.E."@en ;
-  rdfs:subClassOf bdo:Era ;
-.
-bdo:ChineseDate
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:label "Chinese Date"@en ;
-  rdfs:subClassOf bdo:ChineseDateIndication ;
-.
 bdo:ChineseDateIndication
   a owl:Class ;
   adm:translationPriority 2 ;
-  adm:userTooltip "A Chinese Date Indication includes a Chinese Era, and year, month, day within the era"@en ;
+  adm:userTooltip "A Chinese date indication usually includes dynasty, reign, era, year, month, day"@en ;
   rdfs:label "Chinese Date Indication"@en ;
   rdfs:subClassOf bdo:DateIndication ;
 .
@@ -37,25 +24,6 @@ bdo:ChineseEra
   adm:translationPriority 2 ;
   adm:userTooltip "A (traditional) Chinese Era is reckoned in terms of the reign of an Emperor"@en ;
   rdfs:label "Chinese Era"@en ;
-  rdfs:subClassOf bdo:Era ;
-.
-bdo:ChineseMonth
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:label "Chinese Month"@en ;
-  rdfs:subClassOf bdo:ChineseDateIndication ;
-.
-bdo:ChineseYear
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:label "Chinese Year"@en ;
-  rdfs:subClassOf bdo:ChineseDateIndication ;
-.
-bdo:CommonEra
-  a owl:Class ;
-  adm:userTooltip "Common Era"@en ;
-  bdo:yearOffset 0 ;
-  rdfs:label "C.E."@en ;
   rdfs:subClassOf bdo:Era ;
 .
 bdo:DateIndication
@@ -72,21 +40,58 @@ bdo:Era
   adm:userTooltip "An Era is a span of years usually reckoned as starting and ending in reference to a Reference Era"@en ;
   rdfs:label "Era"@en ;
 .
-bdo:SEALittleEra
-  a owl:Class ;
-  adm:userTooltip "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
+bdr:EraCS
+  a bdo:Era ;
+  adm:userTooltip "Cunlasakkalat or Cunlasakkarat (‘Little Era’), used in Southeast Asia, beginning in 638 C.E."@en ;
   bdo:yearOffset 638 ;
-  rdfs:label "C.S." ;
-  rdfs:seeAlso <http://lannamanuscripts.net/en/search/new/> ;
-  rdfs:seeAlso <http://www.degruyter.com/downloadpdf/books/9783110479010/9783110479010-003/9783110479010-003.pdf> ;
-  rdfs:seeAlso <http://www.laomanuscripts.net/en/help#3i> ;
-  rdfs:subClassOf bdo:Era ;
+  rdfs:label "Cunlasakkalat Era (C.S.)"@en ;
+  bdo:uiAbbrFormat "%s C.S."@en ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/7351824935> ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  rdfs:seeAlso "http://www.laomanuscripts.net/en/help#3i"^^xsd:anyURI ;
 .
-bdo:TibetanDateIndication
+bdr:EraCE
+  a bdo:Era ;
+  bdo:yearOffset 0 ;
+  rdfs:label "Common Era (C.E.)"@en ;
+  bdo:uiAbbrFormat "%s C.E."@en ;
+.
+bdr:EraBE
+  a bdo:Era ;
+  adm:userTooltip "Buddhist Era (Buddhasakarat), usually starting in 545 B.C.E."@en ;
+  bdo:yearOffset -543 ;
+  rdfs:label "Buddhist Era (B.E.)"@en ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  bdo:uiAbbrFormat "%s B.E."@en ;
+.
+bdr:EraAS
+  a bdo:Era ;
+  adm:userTooltip "Anchatsakarat, used in Southeast Asia, starting in 691 B.C.E."@en ;
+  bdo:yearOffset -690 ;
+  rdfs:label "Anchatsakarat (A.S.)"@en ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  bdo:uiAbbrFormat "%s A.S."@en ;
+.
+bdr:EraMS
+  a bdo:Era ;
+  adm:userTooltip "Mahasakarat, used in Southeast Asia, starting in 78 C.E."@en ;
+  bdo:yearOffset 78 ;
+  rdfs:label "Mahasakarat (M.S.)"@en ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  bdo:uiAbbrFormat "%s M.S."@en ;
+.
+bdr:EraMS
+  a bdo:Era ;
+  adm:userTooltip "Mahasakarat, used in Southeast Asia, starting in 78 C.E."@en ;
+  bdo:yearOffset 78 ;
+  rdfs:label "Mahasakarat (M.S.)"@en ;
+  bdo:uiAbbrFormat "%s M.S."@en ;
+.
+bdo:DateIndicationTibetan
   a owl:Class ;
-  adm:technicalComment "Tibetan Dates are in terms of a 60-year period (rabjung) designated by number or a combination of an animal and an element, a year within the rabjung, and month and day within the year based on a LuniSolar calendar"@en ;
+  adm:technicalComment "Tibetan dates are usually in terms of a 60-year period (rabjung) designated by number or a combination of an animal and an element, a year within the rabjung, and month and day within the year based on a LuniSolar calendar"@en ;
   adm:translationPriority 2 ;
-  adm:userTooltip "Tibetan Dates are designated in terms of the 6-year rabjung, year, month and day within rabjung."@en ;
+  adm:userTooltip "Tibetan dates are designated in terms of the rabjung, year, month and day."@en ;
   rdfs:label "Tibetan Date Indication"@en ;
   rdfs:subClassOf bdo:DateIndication ;
 .
