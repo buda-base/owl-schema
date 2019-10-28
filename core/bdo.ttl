@@ -184,19 +184,6 @@ bdo:AhistoricalAgent
   rdfs:label "Ahistorical agent"@en ;
   rdfs:subClassOf bdo:SingleAgent ;
 .
-bdo:AnyDate
-  a rdfs:Datatype ;
-  adm:userTooltip "May be either an integer year or a YYYY-MM-DD xsd:date or a bdo:Date instance"@en ;
-  rdfs:label "integer or date or bdo:Date"@en ;
-  owl:equivalentClass [
-      a owl:Class ;
-      owl:unionOf (
-          xsd:date
-          xsd:integer
-          bdo:Date
-        ) ;
-    ] ;
-.
 bdo:AnyOrganization
   a owl:Class ;
   adm:deprecatedComment "deprecated in favor of setting the range of :agent to :Agents"@en ;
@@ -1627,28 +1614,12 @@ bdo:baseMaterial
   rdfs:label "base material"@en ;
   rdfs:range bdo:BaseMaterial ;
 .
-bdo:beDate
-  a rdfs:Datatype ;
-  adm:userTooltip "Buddhist Era Year dating from 543 B.C.E."@en ;
-  bdo:yearOffset -543 ;
-  rdfs:label "B.E. date"@en ;
-  rdfs:subClassOf bdo:AnyDate ;
-  owl:onDatatype xsd:integer ;
-.
 bdo:binding
   a owl:ObjectProperty ;
   adm:userTooltip "Describes the type of binding of a work (loose leaves, bound by glue, etc.)"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "binding"@en ;
   rdfs:range bdo:Binding ;
-.
-bdo:ceDate
-  a rdfs:Datatype ;
-  adm:userTooltip "Common Era Year"@en ;
-  bdo:yearOffset 0 ;
-  rdfs:label "C.E. date"@en ;
-  rdfs:subClassOf bdo:AnyDate ;
-  owl:onDatatype xsd:integer ;
 .
 bdo:chunkContents
   a owl:DatatypeProperty ;
@@ -1913,18 +1884,6 @@ bdo:creatorUnspecified
   rdfs:subPropertyOf bdo:workCreator ;
   owl:deprecated true ;
 .
-bdo:csDate
-  a rdfs:Datatype ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Cunlasakkalat or Cunlasakkarat (CS), the so-called ‘Little Era,’ beginning at 638 of the Common Era."@en ;
-  bdo:yearOffset 638 ;
-  rdfs:label "CS date"@en ;
-  rdfs:seeAlso <http://lannamanuscripts.net/en/search/new/> ;
-  rdfs:seeAlso <http://www.degruyter.com/downloadpdf/books/9783110479010/9783110479010-003/9783110479010-003.pdf> ;
-  rdfs:seeAlso <http://www.laomanuscripts.net/en/help#3i> ;
-  rdfs:subClassOf bdo:AnyDate ;
-  owl:onDatatype xsd:integer ;
-.
 bdo:dataTypeExpression
   a owl:AnnotationProperty ;
 .
@@ -1936,21 +1895,13 @@ bdo:dateApproximate
   rdfs:label "date is approximate"@en ;
   rdfs:range xsd:boolean ;
 .
-bdo:datePeriod
+bdo:dateIndication
   a owl:ObjectProperty ;
   adm:technicalComment "Not Used: associates a :Date with at most one :ChineseDateIndication such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :DateIndication metadata"@en ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:Date ;
-  rdfs:label "period"@en ;
-  rdfs:range bdo:DateIndication ;
-.
-bdo:dateType
-  a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "the type of date such as :ceDate for a Common Era date or :beDate for Buddhist Era date"@en ;
   rdfs:domain bdo:Event ;
-  rdfs:label "date type"@en ;
-  rdfs:range bdo:AnyDate ;
+  rdfs:label "date indication"@en ;
+  rdfs:range bdo:DateIndication ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -2036,7 +1987,6 @@ bdo:eventWhen
   adm:userTooltip "Indicates the time of the event"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "when"@en ;
-  rdfs:range bdo:AnyDate ;
 .
 bdo:eventWhere
   a owl:ObjectProperty ;
@@ -2793,7 +2743,7 @@ bdo:notAfter
   adm:userTooltip "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
-  rdfs:range bdo:AnyDate ;
+  rdfs:range xsd:gYear ;
   rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:notBefore
@@ -2801,7 +2751,7 @@ bdo:notBefore
   adm:userTooltip "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
-  rdfs:range bdo:AnyDate ;
+  rdfs:range xsd:gYear ;
   rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:note
@@ -2855,7 +2805,7 @@ bdo:onDate
   adm:userTooltip "The event is known to have occurred during the year or date given, unless otherwise specified the date is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
-  rdfs:range bdo:AnyDate ;
+  rdfs:range xsd:date ;
   rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:onOrAbout
@@ -2868,6 +2818,7 @@ bdo:onOrAbout
   rdfs:domain bdo:Event ;
   rdfs:label "circa"@en ;
   rdfs:range xsd:string ;
+  rdfs:subPropertyOf bdo:eventWhen ;
   owl:deprecated true ;
 .
 bdo:onYear
@@ -2875,7 +2826,7 @@ bdo:onYear
   adm:userTooltip "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:gYear ;
   rdfs:subPropertyOf bdo:eventWhen ;
 .
 bdo:pageHasLine
@@ -4477,11 +4428,21 @@ bdo:workType
   rdfs:seeAlso bdo:WorkType ;
   owl:deprecated true ;
 .
+bdo:yearInEra
+  a owl:DatatypeProperty ;
+  adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive." ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "The year in era is relative to the yearOffset for the Era"@en ;
+  rdfs:domain bdo:DateIndication ;
+  rdfs:label "year in era"@en ;
+  rdfs:range xsd:integer ;
+  owl:deprecated true ;
+.
 bdo:yearOffset
   a owl:DatatypeProperty ;
   adm:catalogingConvention "This is the year offset for an Era in terms of the Common Era and is established based on the definition of the Era for which this is the offset"@en ;
   adm:userTooltip "This is the year offset for an Era in terms of the Common Era."@en ;
-  rdfs:domain bdo:AnyDate ;
+  rdfs:domain bdo:Era ;
   rdfs:label "year offset"@en ;
   rdfs:range xsd:integer ;
 .
