@@ -29,72 +29,9 @@ bdo:ChineseEra
 bdo:DateIndication
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment "Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ;
   rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
   rdfs:label "Time Period"@en ;
   rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
-.
-bdo:Era
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "An Era is a span of years usually reckoned as starting and ending in reference to a Reference Era"@en ;
-  rdfs:label "Era"@en ;
-.
-bdr:EraCS
-  a bdo:Era ;
-  adm:userTooltip "Cunlasakkalat or Cunlasakkarat (‘Little Era’), used in Southeast Asia, beginning in 638 C.E."@en ;
-  bdo:yearOffset 638 ;
-  rdfs:label "Cunlasakkalat Era (C.S.)"@en ;
-  bdo:uiAbbrFormat "%s C.S."@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/7351824935> ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
-  rdfs:seeAlso "http://www.laomanuscripts.net/en/help#3i"^^xsd:anyURI ;
-.
-bdr:EraCE
-  a bdo:Era ;
-  bdo:yearOffset 0 ;
-  rdfs:label "Common Era (C.E.)"@en ;
-  bdo:uiAbbrFormat "%s C.E."@en ;
-.
-bdr:EraBE
-  a bdo:Era ;
-  adm:userTooltip "Buddhist Era (Buddhasakarat), usually starting in 545 B.C.E."@en ;
-  bdo:yearOffset -543 ;
-  rdfs:label "Buddhist Era (B.E.)"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
-  bdo:uiAbbrFormat "%s B.E."@en ;
-.
-bdr:EraAS
-  a bdo:Era ;
-  adm:userTooltip "Anchatsakarat, used in Southeast Asia, starting in 691 B.C.E."@en ;
-  bdo:yearOffset -690 ;
-  rdfs:label "Anchatsakarat (A.S.)"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
-  bdo:uiAbbrFormat "%s A.S."@en ;
-.
-bdr:EraMS
-  a bdo:Era ;
-  adm:userTooltip "Mahasakarat, used in Southeast Asia, starting in 78 C.E."@en ;
-  bdo:yearOffset 78 ;
-  rdfs:label "Mahasakarat (M.S.)"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
-  bdo:uiAbbrFormat "%s M.S."@en ;
-.
-bdr:EraVS
-  a bdo:Era ;
-  adm:userTooltip "Vikram Samvat Era, used in Nepal and India, starting in 56 B.C.E."@en ;
-  bdo:yearOffset -57 ;
-  rdfs:label "Vikram Samvat (V.S. or B.S.)"@en , "Vikram Samvat"@hi-x-iast ;
-  rdfs:seeAlso <http://www.wikidata.org/entity/Q1370848> ;
-  bdo:uiAbbrFormat "%s V.S."@en ;
-.
-bdr:EraNS
-  a bdo:Era ;
-  adm:userTooltip "Nepal Sambat Era, used in Nepal, starting in 879 C.E."@en ;
-  bdo:yearOffset 879 ;
-  rdfs:label "Nepal Sambat (N.S.)"@en , "Nepal Sambat"@nep-x-iast ;
-  rdfs:seeAlso <http://www.wikidata.org/entity/Q1268741> ;
-  bdo:uiAbbrFormat "%s N.S."@en ;
 .
 bdo:DateIndicationTibetan
   a owl:Class ;
@@ -104,7 +41,71 @@ bdo:DateIndicationTibetan
   rdfs:label "Tibetan Date Indication"@en ;
   rdfs:subClassOf bdo:DateIndication ;
 .
+bdo:Era
+  a owl:Class ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "An Era is a span of years usually reckoned as starting and ending in reference to a Reference Era"@en ;
+  rdfs:label "Era"@en ;
+.
 DateIndication:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:EraAS
+  a bdo:Era ;
+  adm:userTooltip "Anchatsakarat, used in Southeast Asia, starting in 691 B.C.E."@en ;
+  bdo:uiAbbrFormat "%s A.S."@en ;
+  bdo:yearOffset -690 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  skos:prefLabel "Anchatsakarat (A.S.)"@en ;
+.
+bdr:EraBE
+  a bdo:Era ;
+  adm:userTooltip "Buddhist Era (Buddhasakarat), usually starting in 545 B.C.E."@en ;
+  bdo:uiAbbrFormat "%s B.E."@en ;
+  bdo:yearOffset -543 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  skos:prefLabel "Buddhist Era (B.E.)"@en ;
+.
+bdr:EraCE
+  a bdo:Era ;
+  bdo:uiAbbrFormat "%s C.E."@en ;
+  bdo:yearOffset 0 ;
+  skos:prefLabel "Common Era (C.E.)"@en ;
+.
+bdr:EraCS
+  a bdo:Era ;
+  adm:userTooltip "Cunlasakkalat or Cunlasakkarat (‘Little Era’), used in Southeast Asia, beginning in 638 C.E."@en ;
+  bdo:uiAbbrFormat "%s C.S."@en ;
+  bdo:yearOffset 638 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/7351824935> ;
+  rdfs:seeAlso "http://www.laomanuscripts.net/en/help#3i"^^xsd:anyURI ;
+  skos:prefLabel "Cunlasakkalat Era (C.S.)"@en ;
+.
+bdr:EraMS
+  a bdo:Era ;
+  adm:userTooltip "Mahasakarat, used in Southeast Asia, starting in 78 C.E."@en ;
+  bdo:uiAbbrFormat "%s M.S."@en ;
+  bdo:yearOffset 78 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  skos:prefLabel "Mahasakarat (M.S.)"@en ;
+.
+bdr:EraNS
+  a bdo:Era ;
+  adm:userTooltip "Nepal Sambat Era, used in Nepal, starting in 879 C.E."@en ;
+  bdo:uiAbbrFormat "%s N.S."@en ;
+  bdo:yearOffset 879 ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q1268741> ;
+  skos:prefLabel "Nepal Sambat (N.S.)"@en ;
+  skos:prefLabel "Nepal Sambat"@nep-x-iast ;
+.
+bdr:EraVS
+  a bdo:Era ;
+  adm:userTooltip "Vikram Samvat Era, used in Nepal and India, starting in 56 B.C.E."@en ;
+  bdo:uiAbbrFormat "%s V.S."@en ;
+  bdo:yearOffset -57 ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q1370848> ;
+  skos:prefLabel "Vikram Samvat (V.S. or B.S.)"@en ;
+  skos:prefLabel "Vikram Samvat"@hi-x-iast ;
 .
