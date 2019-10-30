@@ -306,14 +306,6 @@ bdo:CorporationMemberNotSpecified
   rdfs:label "member (unspecified type)"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
-bdo:CorrectedTitle
-  a owl:Class ;
-  adm:catalogingConvention "A corrected title should have a :correctionOf that records the original text that is corrected by this title"@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "A correction of an original title"@en ;
-  rdfs:label "Corrected title"@en ;
-  rdfs:subClassOf bdo:TitleVersion ;
-.
 bdo:Creator
   rdfs:subClassOf bdo:Role ;
 .
@@ -826,13 +818,6 @@ An administrative organization is one that is not a subject of the domain of dis
   rdfs:label "organization"@en ;
   rdfs:subClassOf bdo:Agent ;
 .
-bdo:OriginalTitle
-  a owl:Class ;
-  adm:catalogingConvention "An original title is indicated when there is a correction recorded. Most titles in the dataset are transcriptions of a title manifest in the original material and unless a correction is recorded the title version should be assumed to be the original text"@en ;
-  adm:userTooltip "An original title is literally what was printed or written on the Work. Occurs when there is a corrected title"@en ;
-  rdfs:label "Original title"@en ;
-  rdfs:subClassOf bdo:TitleVersion ;
-.
 bdo:OriginatedEvent
   a owl:Class ;
   adm:userTooltip "The event of origin of a work"@en ;
@@ -1279,14 +1264,6 @@ bdo:SingleAgent
   rdfs:label "single agent"@en ;
   rdfs:subClassOf bdo:Agent ;
 .
-bdo:StandardizedTitle
-  a owl:Class ;
-  adm:catalogingConvention "In some cases, cataloging will introduce a \"standardized\" title distinct from the \"original\" title in a given cultural heritage context"@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "A title introduced as a conventional title versus the manifest original title"@en ;
-  rdfs:label "Standardized title"@en ;
-  rdfs:subClassOf bdo:TitleVersion ;
-.
 bdo:Taxonomy
   rdfs:subClassOf bdo:Type ;
 .
@@ -1316,13 +1293,6 @@ bdo:ThirdTranslatedEvent
   adm:userTooltip "An event describing the third translation of a work"@en ;
   rdfs:label "Third translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
-.
-bdo:TitleVersion
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "The TitleVersion indicates whether the title is a standarized, corrected, or original title"@en ;
-  rdfs:label "Title Version"@en ;
-  rdfs:subClassOf bdo:Facet ;
 .
 bdo:Topic
   a owl:Class ;
@@ -1593,6 +1563,12 @@ bdo:WorkToCTitle
 bdo:WorkType
   rdfs:subClassOf bdo:Type ;
 .
+bdo:abbreviationOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "indicates that this label is a shortened. abbreviated form of the object label"@en ;
+  rdfs:label "abbreviation of"@en ;
+  rdfs:subPropertyOf bdo:labelConnection ;
+.
 bdo:agent
   a owl:ObjectProperty ;
   adm:userTooltip "identifies the agent participating in an :AgentInRole"@en ;
@@ -1628,6 +1604,12 @@ bdo:chunkContents
   rdfs:label "contents"@en ;
   rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:Etext ;
+.
+bdo:conversionOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "This label is a conversion of the object label from one orthographic form to another in the same language, e.g., Khmer"@en ;
+  rdfs:label "conversion of"@en ;
+  rdfs:subPropertyOf bdo:labelConnection ;
 .
 bdo:corporationHasMember
   a owl:ObjectProperty ;
@@ -1665,10 +1647,9 @@ Thus crp:region maps crp:Corporation directly to plc:Place without any additiona
 .
 bdo:correctionOf
   a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "the current name or title is a corrected version of the target rdf:langString" ;
+  adm:userTooltip "This label is a (spelling) correction of the object label"@en ;
   rdfs:label "correction of"@en ;
-  rdfs:subPropertyOf bdo:variantOf ;
+  rdfs:subPropertyOf bdo:labelConnection ;
 .
 bdo:creator
   a owl:ObjectProperty ;
@@ -2001,6 +1982,13 @@ bdo:eventWho
   rdfs:domain bdo:Event ;
   rdfs:label "who"@en ;
   rdfs:range bdo:AgentsOrAgentInRole ;
+.
+bdo:femcConversionOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "This label is a (spelling) correction and conversion from the FEMC catalogs"@en ;
+  rdfs:label "femc conversion of"@en ;
+  rdfs:subPropertyOf bdo:conversionOf ;
+  rdfs:subPropertyOf bdo:correctionOf ;
 .
 bdo:hasAunt
   a owl:ObjectProperty ;
@@ -2456,6 +2444,12 @@ bdo:inferSubTree
   a owl:AnnotationProperty ;
   rdfs:range xsd:boolean ;
 .
+bdo:interpretationOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "indicates that this label is an interpretation of the object label, e.g., this sa-iast label is an interpretation of a phonetic label"@en ;
+  rdfs:label "interpretation of"@en ;
+  rdfs:subPropertyOf bdo:labelConnection ;
+.
 bdo:isIncarnation
   a owl:ObjectProperty ;
   adm:catalogingConvention "isIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary."@en ;
@@ -2560,6 +2554,13 @@ bdo:kinWith
   rdfs:domain bdo:Person ;
   rdfs:label "kin with"@en ;
   rdfs:range bdo:Person ;
+.
+bdo:labelConnection
+  a owl:ObjectProperty ;
+  adm:userTooltip "indicates a connection between two bdo:Labels"@en ;
+  rdfs:domain bdo:Label ;
+  rdfs:label "label connection"@en ;
+  rdfs:range bdo:Label ;
 .
 bdo:legacyOutlineNodeRID
   a owl:AnnotationProperty ;
@@ -3166,6 +3167,12 @@ bdo:sliceStartChar
   adm:translationPriority 2 ;
   rdfs:label "slice start char"@en ;
 .
+bdo:translationOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "This label is a translation of the object label to a language indicated in the language tag"@en ;
+  rdfs:label "translation of"@en ;
+  rdfs:subPropertyOf bdo:labelConnection ;
+.
 bdo:transliteration
   a owl:ObjectProperty ;
   adm:catalogingConvention "A transliteration for a :LangScript. Mostly this will apply for Pali situations since texts are always written in a transliteration of Pali in a Romanization or script of a language such as Thai."@en ;
@@ -3175,6 +3182,12 @@ bdo:transliteration
   rdfs:label "transliteration"@en ;
   rdfs:range bdo:Transliteration ;
 .
+bdo:transliterationOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "This label is a transliteration of the object label in a form indicated in the language tag"@en ;
+  rdfs:label "transliteration of"@en ;
+  rdfs:subPropertyOf bdo:labelConnection ;
+.
 bdo:uiAbbrFormat
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
@@ -3183,14 +3196,6 @@ bdo:uiAbbrFormat
   rdfs:label "ui abbr"@en ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf rdfs:label ;
-.
-bdo:variantOf
-  a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "the current name or title is a corrected version of the target rdf:langString" ;
-  rdfs:domain bdo:Label ;
-  rdfs:label "variant of"@en ;
-  rdfs:range bdo:Label ;
 .
 bdo:volumeHasEtext
   a owl:ObjectProperty ;
