@@ -1,0 +1,559 @@
+# baseURI: http://purl.bdrc.io/resource/FEMCScheme/
+# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: FEMCScheme
+
+@prefix FEMCScheme: <http://purl.bdrc.io/resource/FEMCScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdr:FEMCScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "FEMC Scheme"@en ;
+.
+FEMCScheme:
+  a owl:Ontology ;
+  owl:imports bdo: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdr:FEMC_Scheme_I
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_I01 ;
+  skos:narrower bdr:FEMC_Scheme_I_1 ;
+  skos:narrower bdr:FEMC_Scheme_I_2 ;
+  skos:narrower bdr:FEMC_Scheme_I_3 ;
+  skos:prefLabel "Didactic verse texts."@en ;
+  skos:prefLabel "Textes didactiques"@fr ;
+  skos:prefLabel "sāstrā 'upades"@km-x-bdrc ;
+  skos:prefLabel "sāstrā Upades"@km-x-femc ;
+  skos:prefLabel "សាស្ត្រាឧបទេស"@km ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_II
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_II01 ;
+  skos:narrower bdr:FEMC_Scheme_II_1 ;
+  skos:narrower bdr:FEMC_Scheme_II_2 ;
+  skos:prefLabel "Entertaining verse texts"@en ;
+  skos:prefLabel "Textes d'agrément"@fr ;
+  skos:prefLabel "sāstrā lpèṅ"@km-x-bdrc ;
+  skos:prefLabel "sāstrā lpèṅ"@km-x-femc ;
+  skos:prefLabel "សាស្ត្រាល្បែង"@km ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_III
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III01 ;
+  skos:narrower bdr:FEMC_Scheme_III_1 ;
+  skos:narrower bdr:FEMC_Scheme_III_2 ;
+  skos:narrower bdr:FEMC_Scheme_III_3 ;
+  skos:narrower bdr:FEMC_Scheme_III_4 ;
+  skos:narrower bdr:FEMC_Scheme_III_5 ;
+  skos:narrower bdr:FEMC_Scheme_III_6 ;
+  skos:prefLabel "Religious prose texts"@en ;
+  skos:prefLabel "Textes religieuxt"@fr ;
+  skos:prefLabel "sāstrā desa(n)"@km-x-bdrc ;
+  skos:prefLabel "sāstrā desan"@km-x-femc ;
+  skos:prefLabel "សាស្ត្រាទេសន៍"@km ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_III_1
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III_101 ;
+  bdo:note bdr:NTFEMC_Scheme_III_102 ;
+  skos:broader bdr:FEMC_Scheme_III ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Doctrinal texts"@en ;
+  skos:prefLabel "saddhamm"@km-x-femc ;
+.
+bdr:FEMC_Scheme_III_2
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III_201 ;
+  bdo:note bdr:NTFEMC_Scheme_III_202 ;
+  skos:broader bdr:FEMC_Scheme_III ;
+  skos:closeMatch bdr:T769 ;
+  skos:prefLabel "Sutta texts"@en ;
+  skos:prefLabel "sutta"@km-x-femc ;
+.
+bdr:FEMC_Scheme_III_3
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III_301 ;
+  bdo:note bdr:NTFEMC_Scheme_III_302 ;
+  skos:broader bdr:FEMC_Scheme_III ;
+  skos:closeMatch bdr:T55 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Vinaya texts"@en ;
+  skos:prefLabel "vinaya"@km-x-femc ;
+.
+bdr:FEMC_Scheme_III_4
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III_401 ;
+  bdo:note bdr:NTFEMC_Scheme_III_402 ;
+  skos:broader bdr:FEMC_Scheme_III ;
+  skos:closeMatch bdr:T59 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Abhidhamma texts"@en ;
+  skos:prefLabel "abhidhamma"@km-x-femc ;
+.
+bdr:FEMC_Scheme_III_5
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III_501 ;
+  skos:broader bdr:FEMC_Scheme_III ;
+  skos:closeMatch bdr:T1342 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Jātaka texts"@en ;
+.
+bdr:FEMC_Scheme_III_6
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_III_601 ;
+  bdo:note bdr:NTFEMC_Scheme_III_602 ;
+  skos:broader bdr:FEMC_Scheme_III ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Ānisaṅsa texts"@en ;
+  skos:prefLabel "ānisaṅsa"@km-x-femc ;
+.
+bdr:FEMC_Scheme_II_1
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_II_101 ;
+  skos:broader bdr:FEMC_Scheme_II ;
+  skos:closeMatch bdr:T260 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Classical novels"@en ;
+  skos:prefLabel "Romans classiques"@fr ;
+  skos:prefLabel "pralom lok purāṇ"@km-x-bdrc ;
+  skos:prefLabel "pralom lok purāṇ"@km-x-femc ;
+  skos:prefLabel "ប្រលោមលោកបុរាណ"@km ;
+.
+bdr:FEMC_Scheme_II_2
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_II_201 ;
+  skos:broader bdr:FEMC_Scheme_II ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Contes moraux"@fr ;
+  skos:prefLabel "Fables"@en ;
+  skos:prefLabel "lpök ap'raṃ"@km-x-bdrc ;
+  skos:prefLabel "lpök ap'raṃ"@km-x-femc ;
+  skos:prefLabel "ល្បើកអប់រំ"@km ;
+.
+bdr:FEMC_Scheme_IV
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_IV01 ;
+  skos:narrower bdr:FEMC_Scheme_IV_1 ;
+  skos:narrower bdr:FEMC_Scheme_IV_2 ;
+  skos:prefLabel "Historical prose texts"@en ;
+  skos:prefLabel "Textes historiques"@fr ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_IV_1
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_IV_101 ;
+  bdo:note bdr:NTFEMC_Scheme_IV_102 ;
+  skos:broadMatch lcsh:sh85017596 ;
+  skos:broader bdr:FEMC_Scheme_IV ;
+  skos:closeMatch bdr:T3 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Biographies"@en ;
+  skos:prefLabel "Biographies"@fr ;
+  skos:prefLabel "jīv pravatti"@km-x-femc ;
+  skos:prefLabel "jīvapravatti"@km-x-bdrc ;
+.
+bdr:FEMC_Scheme_IV_2
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_IV_201 ;
+  bdo:note bdr:NTFEMC_Scheme_IV_202 ;
+  skos:broader bdr:FEMC_Scheme_IV ;
+  skos:closeMatch bdr:T10MS12314 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Chronicles"@en ;
+  skos:prefLabel "Chroniques"@fr ;
+.
+bdr:FEMC_Scheme_I_1
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_I_101 ;
+  bdo:note bdr:NTFEMC_Scheme_I_102 ;
+  skos:broader bdr:FEMC_Scheme_I ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Codes de conduite"@fr ;
+  skos:prefLabel "Moral codes"@en ;
+  skos:prefLabel "cpāp' dūnmān"@km-x-bdrc ;
+  skos:prefLabel "cpāp' dūnmān"@km-x-femc ;
+  skos:prefLabel "ច្បាប់ទូន្មាន"@km ;
+.
+bdr:FEMC_Scheme_I_2
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_I_201 ;
+  bdo:note bdr:NTFEMC_Scheme_I_202 ;
+  skos:broader bdr:FEMC_Scheme_I ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Proverbes"@fr ;
+  skos:prefLabel "Proverbs"@en ;
+  skos:prefLabel "cpāp' subhāsit"@km-x-bdrc ;
+  skos:prefLabel "cpāp' subhāsit"@km-x-femc ;
+  skos:prefLabel "ច្បាប់សុភាសិត"@km ;
+.
+bdr:FEMC_Scheme_I_3
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_I_301 ;
+  skos:broader bdr:FEMC_Scheme_I ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Buddhist poems"@en ;
+  skos:prefLabel "Contes religieux"@fr ;
+  skos:prefLabel "lpök braḥ dhaŕm"@km-x-bdrc ;
+  skos:prefLabel "lpök braḥ dhaṛm"@km-x-femc ;
+  skos:prefLabel "ល្បើកព្រះធម៌"@km ;
+.
+bdr:FEMC_Scheme_V
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_V01 ;
+  skos:narrower bdr:FEMC_Scheme_V_1 ;
+  skos:narrower bdr:FEMC_Scheme_V_2 ;
+  skos:narrower bdr:FEMC_Scheme_V_3 ;
+  skos:prefLabel "Textes traditionnels"@fr ;
+  skos:prefLabel "Traditional prose texts"@en ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_VI
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI01 ;
+  skos:narrower bdr:FEMC_Scheme_VI_1 ;
+  skos:narrower bdr:FEMC_Scheme_VI_2 ;
+  skos:narrower bdr:FEMC_Scheme_VI_3 ;
+  skos:narrower bdr:FEMC_Scheme_VI_4 ;
+  skos:narrower bdr:FEMC_Scheme_VI_5 ;
+  skos:narrower bdr:FEMC_Scheme_VI_6 ;
+  skos:prefLabel "Traditional prose manuals"@en ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_VII
+  a skos:Concept ;
+  skos:prefLabel "Pali texts"@en ;
+  skos:prefLabel "Textes en Pāli"@fr ;
+  skos:prefLabel "pālī"@km-x-bdrc ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_VIII
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VIII01 ;
+  bdo:note bdr:NTFEMC_Scheme_VIII02 ;
+  skos:prefLabel "Divers"@fr ;
+  skos:prefLabel "Other"@en ;
+  skos:prefLabel "phseṅ phseṅ"@km-x-bdrc ;
+  skos:topConceptOf bdr:FEMCScheme ;
+.
+bdr:FEMC_Scheme_VI_1
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI_101 ;
+  skos:broader bdr:FEMC_Scheme_VI ;
+  skos:closeMatch bdr:T1834 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Astrological manuals"@en ;
+  skos:prefLabel "Manuels d'astrologie et livres de prédiction"@fr ;
+  skos:prefLabel "horā"@km-x-bdrc ;
+  skos:prefLabel "horā"@km-x-femc ;
+.
+bdr:FEMC_Scheme_VI_2
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI_201 ;
+  skos:broader bdr:FEMC_Scheme_VI ;
+  skos:closeMatch bdr:T2MS13793 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Medicinal manuals"@en ;
+  skos:prefLabel "thnāṃ"@km-x-bdrc ;
+  skos:prefLabel "thnāṃ"@km-x-femc ;
+.
+bdr:FEMC_Scheme_VI_3
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI_301 ;
+  bdo:note bdr:NTFEMC_Scheme_VI_302 ;
+  skos:broader bdr:FEMC_Scheme_VI ;
+  skos:closeMatch bdr:T1408 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Yantra manuals"@en ;
+  skos:prefLabel "yănt"@km-x-bdrc ;
+  skos:prefLabel "yănt"@km-x-femc ;
+.
+bdr:FEMC_Scheme_VI_4
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI_401 ;
+  bdo:note bdr:NTFEMC_Scheme_VI_402 ;
+  skos:broader bdr:FEMC_Scheme_VI ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Spell manuals"@en ;
+  skos:prefLabel "mant vijjā"@km-x-bdrc ;
+  skos:prefLabel "mant vijjā"@km-x-femc ;
+.
+bdr:FEMC_Scheme_VI_5
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI_501 ;
+  skos:broader bdr:FEMC_Scheme_VI ;
+  skos:closeMatch bdr:T2516 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Architectural manuals"@en ;
+  skos:prefLabel "saṅ' phdaḥ"@km-x-bdrc ;
+  skos:prefLabel "saṅ' phdaḥ"@km-x-femc ;
+.
+bdr:FEMC_Scheme_VI_6
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_VI_601 ;
+  skos:broader bdr:FEMC_Scheme_VI ;
+  skos:closeMatch bdr:T977 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Ritual manuals"@en ;
+  skos:prefLabel "kpuon dhvö puṇy"@km-x-bdrc ;
+  skos:prefLabel "kpuon dhvö puṇy"@km-x-femc ;
+.
+bdr:FEMC_Scheme_V_1
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_V_101 ;
+  bdo:note bdr:NTFEMC_Scheme_V_102 ;
+  skos:broader bdr:FEMC_Scheme_V ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Chronicles"@en ;
+  skos:prefLabel "Chroniques"@fr ;
+.
+bdr:FEMC_Scheme_V_2
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_V_201 ;
+  skos:broader bdr:FEMC_Scheme_V ;
+  skos:closeMatch bdr:T384 ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Legal codes"@en ;
+  skos:prefLabel "codes [juridiques] anciens"@fr ;
+.
+bdr:FEMC_Scheme_V_3
+  a skos:Concept ;
+  bdo:note bdr:NTFEMC_Scheme_V_301 ;
+  bdo:note bdr:NTFEMC_Scheme_V_302 ;
+  skos:broader bdr:FEMC_Scheme_V ;
+  skos:inScheme bdr:FEMCScheme ;
+  skos:prefLabel "Meditation guides"@en ;
+  skos:prefLabel "Textes de méditation"@fr ;
+.
+bdr:NTFEMC_Scheme_I01
+  a bdo:Note ;
+  bdo:noteText "I" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_II01
+  a bdo:Note ;
+  bdo:noteText "II" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III01
+  a bdo:Note ;
+  bdo:noteText "III" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_101
+  a bdo:Note ;
+  bdo:noteText "III.1" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_102
+  a bdo:Note ;
+  bdo:noteText "Yes, this is indeed too generic. It's a problem in the FEMC system. This section is quite interesting, though, in that it contains texts that are not translations of Pali scriptures but rather distinct Southeast Asian Buddhist texts. They are generally prose texts intented for sermons, and are sometimes composed in a bilingual Pali-vernacular style."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_III_201
+  a bdo:Note ;
+  bdo:noteText "III.2" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_202
+  a bdo:Note ;
+  bdo:noteText "They are in Khmer, or in bilingual Pali-Khmer, and generally in prose. They are translations/expansions/contractions of Pali texts."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_III_301
+  a bdo:Note ;
+  bdo:noteText "III.3" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_302
+  a bdo:Note ;
+  bdo:noteText "As above, but also contains some texts that are not direct translations of Pali Vinaya texts but rather doctrinal texts on vinaya-related topics."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_III_401
+  a bdo:Note ;
+  bdo:noteText "III.4" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_402
+  a bdo:Note ;
+  bdo:noteText "As above, but on the Abhidhamma"@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_III_501
+  a bdo:Note ;
+  bdo:noteText "III.5" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_601
+  a bdo:Note ;
+  bdo:noteText "III.6" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_III_602
+  a bdo:Note ;
+  bdo:noteText "These are texts, generally speaking prose sermons, that articulate the benefits of performing particular meritorious acts. This is genre found throughout SE Asia. It is similar to the ānuśaṃsa portions of Mahāyāna sūtras that describe the benefits of reciting, copying, etc. a particular text, but in a broader context. For instance, there are ānisaṅsa/ānisaṃsa on the benefits of offering robes, building toilets, conducting a funeral, etc."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_II_101
+  a bdo:Note ;
+  bdo:noteText "II.1" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_II_201
+  a bdo:Note ;
+  bdo:noteText "II.2" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_IV01
+  a bdo:Note ;
+  bdo:noteText "IV" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_IV_101
+  a bdo:Note ;
+  bdo:noteText "IV.1" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_IV_102
+  a bdo:Note ;
+  bdo:noteText "Only one text year, a monk's biography."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_IV_201
+  a bdo:Note ;
+  bdo:noteText "IV.2" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_IV_202
+  a bdo:Note ;
+  bdo:noteText "Very few in this category; historical chronicle texts for the most part."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_I_101
+  a bdo:Note ;
+  bdo:noteText "I.1" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_I_102
+  a bdo:Note ;
+  bdo:noteText "These are ethical poems that provide guidance on how to conduct oneself depending on one's station in society. They were memorized by young students learning to read and write in traditional monastic schools and also in the court."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_I_201
+  a bdo:Note ;
+  bdo:noteText "I.2" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_I_202
+  a bdo:Note ;
+  bdo:noteText "This category is actually quite close to the above; I'm not sure why the FEMC separated them. They are also ethical poems."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_I_301
+  a bdo:Note ;
+  bdo:noteText "I.3" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_V01
+  a bdo:Note ;
+  bdo:noteText "V" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VI01
+  a bdo:Note ;
+  bdo:noteText "VI" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VII01
+  a bdo:Note ;
+  bdo:noteText "VII" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VIII01
+  a bdo:Note ;
+  bdo:noteText "VIII" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VIII02
+  a bdo:Note ;
+  bdo:noteText "Indeed! For things that didn't fit in the above. All of the Thai texts are here, for instance, and the one Chinese-Khmer math manuscript."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_VI_101
+  a bdo:Note ;
+  bdo:noteText "VI.1" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VI_201
+  a bdo:Note ;
+  bdo:noteText "VI.2" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VI_301
+  a bdo:Note ;
+  bdo:noteText "VI.3" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VI_302
+  a bdo:Note ;
+  bdo:noteText "Magical diagrams based on mantras, in some cased connected to traditional kammaṭṭhāna medicine."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_VI_401
+  a bdo:Note ;
+  bdo:noteText "VI.4" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VI_402
+  a bdo:Note ;
+  bdo:noteText "I'm not sure how many are in this category. Generally speaking, Pali or pseudo-Pali incantations used in connection with ritual practices for healing and occassionally less Vinaya-appropriate purposes."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_VI_501
+  a bdo:Note ;
+  bdo:noteText "VI.5" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_VI_601
+  a bdo:Note ;
+  bdo:noteText "VI.6" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_V_101
+  a bdo:Note ;
+  bdo:noteText "V.1" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_V_102
+  a bdo:Note ;
+  bdo:noteText "A vague category like \"Doctrinal texts.\" Texts in this category, however, are generally not sermons but rather manuals or long narratives are distinct to Southeast Asian Buddhism."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.
+bdr:NTFEMC_Scheme_V_201
+  a bdo:Note ;
+  bdo:noteText "V.2" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_V_301
+  a bdo:Note ;
+  bdo:noteText "V.3" ;
+  bdo:noteType "FEMC Classification Code" ;
+.
+bdr:NTFEMC_Scheme_V_302
+  a bdo:Note ;
+  bdo:noteText "It is all traditional kammaṭṭhāna meditation (which doesn't fit neatly in the samatha/vipassanā dichotomy). It contains many \"Tantra\"-like practices, including mantras, visualization, bodily channels, and master-disciple initiation, but is very much Theravadin (if non-canonical) and not specifically linked to Mahayana or Vajrayana practices in any way. This form of meditation was dominant until recently in Cambodia, Laos, and Thailand."@en ;
+  bdo:noteType "Trent Walker Comments" ;
+.

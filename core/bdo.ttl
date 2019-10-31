@@ -2794,6 +2794,13 @@ bdo:noteText
   rdfs:label "text"@en ;
   rdfs:range rdf:langString ;
 .
+bdo:noteType
+  a owl:AnnotationProperty ;
+  adm:userTooltip "A string indicating where in the :noteWork to look for the :noteText"@en ;
+  rdfs:domain bdo:Note ;
+  rdfs:label "location"@en ;
+  rdfs:range xsd:string ;
+.
 bdo:noteWork
   a owl:AnnotationProperty ;
   adm:userTooltip "The source Work for the noteContent"@en ;
