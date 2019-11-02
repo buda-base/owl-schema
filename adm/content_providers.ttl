@@ -319,3 +319,10 @@ bda:CP047
   adm:inRegion bdr:G8CTX12 ;
   skos:prefLabel "Bibliothèque Preah Vanarăt Kèn Vong, Fonds Trent Walker"@fr ;
 .
+bda:CP048
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "DILA Buddhist Studies Authority Database Project"@en ;
+  skos:prefLabel "佛學規範資料庫"@zh-hant ;
+  foaf:homepage "http://authority.dila.edu.tw/"^^xsd:anyURI ;
+.
