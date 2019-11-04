@@ -25,6 +25,7 @@ FEMCScheme:
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bdr:FEMC_Scheme_I
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_I01 ;
   skos:narrower bdr:FEMC_Scheme_I_1 ;
@@ -38,6 +39,7 @@ bdr:FEMC_Scheme_I
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_II
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_II01 ;
   skos:narrower bdr:FEMC_Scheme_II_1 ;
@@ -50,6 +52,7 @@ bdr:FEMC_Scheme_II
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_III
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III01 ;
   skos:narrower bdr:FEMC_Scheme_III_1 ;
@@ -66,6 +69,7 @@ bdr:FEMC_Scheme_III
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_III_1
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III_101 ;
   bdo:note bdr:NTFEMC_Scheme_III_102 ;
@@ -75,6 +79,7 @@ bdr:FEMC_Scheme_III_1
   skos:prefLabel "saddhamm"@km-x-femc ;
 .
 bdr:FEMC_Scheme_III_2
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III_201 ;
   bdo:note bdr:NTFEMC_Scheme_III_202 ;
@@ -84,6 +89,7 @@ bdr:FEMC_Scheme_III_2
   skos:prefLabel "sutta"@km-x-femc ;
 .
 bdr:FEMC_Scheme_III_3
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III_301 ;
   bdo:note bdr:NTFEMC_Scheme_III_302 ;
@@ -94,6 +100,7 @@ bdr:FEMC_Scheme_III_3
   skos:prefLabel "vinaya"@km-x-femc ;
 .
 bdr:FEMC_Scheme_III_4
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III_401 ;
   bdo:note bdr:NTFEMC_Scheme_III_402 ;
@@ -104,6 +111,7 @@ bdr:FEMC_Scheme_III_4
   skos:prefLabel "abhidhamma"@km-x-femc ;
 .
 bdr:FEMC_Scheme_III_5
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III_501 ;
   skos:broader bdr:FEMC_Scheme_III ;
@@ -112,6 +120,7 @@ bdr:FEMC_Scheme_III_5
   skos:prefLabel "Jātaka texts"@en ;
 .
 bdr:FEMC_Scheme_III_6
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_III_601 ;
   bdo:note bdr:NTFEMC_Scheme_III_602 ;
@@ -121,6 +130,7 @@ bdr:FEMC_Scheme_III_6
   skos:prefLabel "ānisaṅsa"@km-x-femc ;
 .
 bdr:FEMC_Scheme_II_1
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_II_101 ;
   skos:broader bdr:FEMC_Scheme_II ;
@@ -133,6 +143,7 @@ bdr:FEMC_Scheme_II_1
   skos:prefLabel "ប្រលោមលោកបុរាណ"@km ;
 .
 bdr:FEMC_Scheme_II_2
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_II_201 ;
   skos:broader bdr:FEMC_Scheme_II ;
@@ -144,6 +155,7 @@ bdr:FEMC_Scheme_II_2
   skos:prefLabel "ល្បើកអប់រំ"@km ;
 .
 bdr:FEMC_Scheme_IV
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_IV01 ;
   skos:narrower bdr:FEMC_Scheme_IV_1 ;
@@ -153,6 +165,7 @@ bdr:FEMC_Scheme_IV
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_IV_1
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_IV_101 ;
   bdo:note bdr:NTFEMC_Scheme_IV_102 ;
@@ -166,6 +179,7 @@ bdr:FEMC_Scheme_IV_1
   skos:prefLabel "jīvapravatti"@km-x-bdrc ;
 .
 bdr:FEMC_Scheme_IV_2
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_IV_201 ;
   bdo:note bdr:NTFEMC_Scheme_IV_202 ;
@@ -176,6 +190,7 @@ bdr:FEMC_Scheme_IV_2
   skos:prefLabel "Chroniques"@fr ;
 .
 bdr:FEMC_Scheme_I_1
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_I_101 ;
   bdo:note bdr:NTFEMC_Scheme_I_102 ;
@@ -188,6 +203,7 @@ bdr:FEMC_Scheme_I_1
   skos:prefLabel "ច្បាប់ទូន្មាន"@km ;
 .
 bdr:FEMC_Scheme_I_2
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_I_201 ;
   bdo:note bdr:NTFEMC_Scheme_I_202 ;
@@ -200,6 +216,7 @@ bdr:FEMC_Scheme_I_2
   skos:prefLabel "ច្បាប់សុភាសិត"@km ;
 .
 bdr:FEMC_Scheme_I_3
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_I_301 ;
   skos:broader bdr:FEMC_Scheme_I ;
@@ -211,6 +228,7 @@ bdr:FEMC_Scheme_I_3
   skos:prefLabel "ល្បើកព្រះធម៌"@km ;
 .
 bdr:FEMC_Scheme_V
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_V01 ;
   skos:narrower bdr:FEMC_Scheme_V_1 ;
@@ -221,6 +239,7 @@ bdr:FEMC_Scheme_V
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_VI
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI01 ;
   skos:narrower bdr:FEMC_Scheme_VI_1 ;
@@ -233,6 +252,7 @@ bdr:FEMC_Scheme_VI
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_VII
+  a bdo:Topic ;
   a skos:Concept ;
   skos:prefLabel "Pali texts"@en ;
   skos:prefLabel "Textes en Pāli"@fr ;
@@ -240,6 +260,7 @@ bdr:FEMC_Scheme_VII
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_VIII
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VIII01 ;
   bdo:note bdr:NTFEMC_Scheme_VIII02 ;
@@ -249,6 +270,7 @@ bdr:FEMC_Scheme_VIII
   skos:topConceptOf bdr:FEMCScheme ;
 .
 bdr:FEMC_Scheme_VI_1
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI_101 ;
   skos:broader bdr:FEMC_Scheme_VI ;
@@ -260,6 +282,7 @@ bdr:FEMC_Scheme_VI_1
   skos:prefLabel "horā"@km-x-femc ;
 .
 bdr:FEMC_Scheme_VI_2
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI_201 ;
   skos:broader bdr:FEMC_Scheme_VI ;
@@ -270,6 +293,7 @@ bdr:FEMC_Scheme_VI_2
   skos:prefLabel "thnāṃ"@km-x-femc ;
 .
 bdr:FEMC_Scheme_VI_3
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI_301 ;
   bdo:note bdr:NTFEMC_Scheme_VI_302 ;
@@ -281,6 +305,7 @@ bdr:FEMC_Scheme_VI_3
   skos:prefLabel "yănt"@km-x-femc ;
 .
 bdr:FEMC_Scheme_VI_4
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI_401 ;
   bdo:note bdr:NTFEMC_Scheme_VI_402 ;
@@ -291,6 +316,7 @@ bdr:FEMC_Scheme_VI_4
   skos:prefLabel "mant vijjā"@km-x-femc ;
 .
 bdr:FEMC_Scheme_VI_5
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI_501 ;
   skos:broader bdr:FEMC_Scheme_VI ;
@@ -301,6 +327,7 @@ bdr:FEMC_Scheme_VI_5
   skos:prefLabel "saṅ' phdaḥ"@km-x-femc ;
 .
 bdr:FEMC_Scheme_VI_6
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_VI_601 ;
   skos:broader bdr:FEMC_Scheme_VI ;
@@ -311,6 +338,7 @@ bdr:FEMC_Scheme_VI_6
   skos:prefLabel "kpuon dhvö puṇy"@km-x-femc ;
 .
 bdr:FEMC_Scheme_V_1
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_V_101 ;
   bdo:note bdr:NTFEMC_Scheme_V_102 ;
@@ -320,6 +348,7 @@ bdr:FEMC_Scheme_V_1
   skos:prefLabel "Chroniques"@fr ;
 .
 bdr:FEMC_Scheme_V_2
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_V_201 ;
   skos:broader bdr:FEMC_Scheme_V ;
@@ -329,6 +358,7 @@ bdr:FEMC_Scheme_V_2
   skos:prefLabel "codes [juridiques] anciens"@fr ;
 .
 bdr:FEMC_Scheme_V_3
+  a bdo:Topic ;
   a skos:Concept ;
   bdo:note bdr:NTFEMC_Scheme_V_301 ;
   bdo:note bdr:NTFEMC_Scheme_V_302 ;
