@@ -13,11 +13,16 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eftr: <http://purl.84000.co/resource/core/> .
 
 ContentProvider:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
 .
+
+eftr:EFT a adm:ContentProvider ;
+    rdfs:label "84000" .
+
 adm:ContentProvider
   a owl:Class ;
   rdfs:comment "A contemporary organization that provides metadata and/or images"@en ;

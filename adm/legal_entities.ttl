@@ -17,7 +17,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eftr: <http://purl.84000.co/resource/core/> .
 
+eftr:LegalData a adm:LegalData ;
+    adm:copyrightOwner eftr:EFT ;
+    adm:license bda:LicenseCC0 ;
+    adm:provider eftr:EFT ;
+    skos:prefLabel "Metadata related to the translations by 84000, provided under the CC0 License"@en ;
+.
 bda:LD_BDRC_Copyright
   a adm:LegalData ;
   adm:license bda:LicenseAllRightsReserved ;
