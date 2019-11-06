@@ -3,6 +3,13 @@
 
 This repository contains the files that define the Buddhist Digital Ontology (BDO). You can use [TopBraid Composer Free Edition](https://www.topquadrant.com/downloads/topbraid-composer-install/#) or [Protégé](http://protege.stanford.edu/) to view and edit these files.
 
+### Releases
+
+To simply view the BDO ontology in Protégé without having to deal with imports, please download the latest `bdo.owl` file from the releases. 
+The current release is [bdo.owl v2.0.0](https://github.com/buda-base/owl-schema/releases/download/v2.0.0/bdo.owl).
+
+### Organization of the Ontology components
+
 The overall ontology is organized in a collection of directories and files as follows: 
 
 - [core](core): contains 
