@@ -18,6 +18,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://purl.bdrc.io/ontology/types/WorkPartType/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
+# imports: http://purl.bdrc.io/resource/FEMCScheme/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -126,6 +127,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Transliteration/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
+  owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
 .
 bdo:AbstractWork
   a owl:Class ;

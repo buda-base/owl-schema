@@ -94,6 +94,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the FEMCScheme vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/FEMCScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/FEMCScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/FEMCScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the GitRepo vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/GitRepo/"/>
         <altURL    rdf:resource="owl-schema/adm/types/git_repos.ttl"/>

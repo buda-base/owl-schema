@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/resource/FEMCScheme/
-# imports: http://purl.bdrc.io/ontology/core/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: FEMCScheme
 
@@ -20,7 +19,6 @@ bdr:FEMCScheme
 .
 FEMCScheme:
   a owl:Ontology ;
-  owl:imports bdo: ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
