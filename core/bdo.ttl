@@ -2962,7 +2962,8 @@ bdo:placeAddress
 bdo:placeChgisId
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip "A Chinese GIS id for the Place"@en ;
+  adm:userTooltip "The China Historical GIS identifier for the Place"@en ;
+  adm:technicalComment "Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with \"TBRC_\", for instance \"TBRC_G162\"."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "chgis id"@en ;
   rdfs:range xsd:string ;
