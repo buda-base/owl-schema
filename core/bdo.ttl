@@ -41,49 +41,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bf:Identifier
-  a owl:Class ;
-  rdfs:comment "Token or name that is associated with a resource, such as a URI or an ISBN.  A resource that is associated with a character string that serves to differentiate one resource from another."@en ;
-  rdfs:label "Bibframe Identifier"@en ;
-  rdfs:subClassOf bf:Thing ;
-.
-bf:Isbn
-  a owl:Class ;
-  rdfs:comment "International Standard Book Number."@en ;
-  rdfs:label "ISBN"@en ;
-  rdfs:subClassOf bf:Identifier ;
-.
-bf:Lccn
-  a owl:Class ;
-  rdfs:comment "Library of Congress Control Number that identifies a resource description."@en ;
-  rdfs:label "LCCN"@en ;
-  rdfs:subClassOf bf:Identifier ;
-.
-bf:ShelfMarkLcc
-  a owl:Class ;
-  rdfs:comment "Shelf mark based on Library of Congress Classification."@en ;
-  rdfs:label "LCC call number"@en ;
-  rdfs:subClassOf bf:Identifier ;
-.
-bf:Thing
-  a owl:Class ;
-  rdfs:comment "Subclasses of bf:Thing are BIBFRAME classes that are referred to in the BDRC ontology"@en ;
-  rdfs:label "BIBFRAME Thing"@en ;
-.
-bf:identifiedBy
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Work ;
-  rdfs:range bf:Identifier ;
-  rdfs:subPropertyOf bf:objectProperty ;
-  owl:inverseOf bf:identifies ;
-.
-bf:identifies
-  a owl:ObjectProperty ;
-  rdfs:subPropertyOf bf:objectProperty ;
-.
-bf:objectProperty
-  a owl:ObjectProperty ;
-.
 iiif2:Collection
   a owl:Class ;
   rdfs:label "IIIF Collection (v2.*)"@en ;
@@ -2961,9 +2918,9 @@ bdo:placeAddress
 .
 bdo:placeChgisId
   a owl:DatatypeProperty ;
+  adm:technicalComment "Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with \"TBRC_\", for instance \"TBRC_G162\"."@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "The China Historical GIS identifier for the Place"@en ;
-  adm:technicalComment "Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with \"TBRC_\", for instance \"TBRC_G162\"."@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "chgis id"@en ;
   rdfs:range xsd:string ;
