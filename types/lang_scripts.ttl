@@ -38,7 +38,6 @@ LangScript:
 .
 bdr:Bo
   a bdo:LangScript ;
-  a owl:Class ;
   bdo:language bdr:LangBo ;
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Tibetan"@en ;
@@ -215,8 +214,7 @@ bdr:MnUnspecified
   skos:prefLabel "Mongolian (otherwise unspecified)"@en ;
 .
 bdr:NeDeva
-  a bdo:Language ;
-  a owl:Class ;
+  a bdo:LangScript ;
   bdo:language bdr:LangNe ;
   bdo:script bdr:ScriptDeva ;
   rdfs:subClassOf bdr:LangScript ;
