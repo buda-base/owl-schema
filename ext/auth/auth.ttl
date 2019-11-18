@@ -73,7 +73,7 @@ aut:UserProfile
   a owl:Class ;
   rdfs:comment """The UserProfile object represents any person registered to the system. A user may belong to a Group and may have a Role.
 It is worth noticing that permissions are not associated directly to a User but instead, through its various roles."""@en ;
-  rdfs:label "user"@en ;
+  rdfs:label "user profile"@en ;
   rdfs:subClassOf aut:Entity ;
   rdfs:subClassOf foaf:Agent ;
 .
