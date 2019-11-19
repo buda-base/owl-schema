@@ -1,7 +1,7 @@
-@prefix : <#> .
 @prefix adr: <http://purl.bdrc.io/resource-nc/auth/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdu: <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -32,35 +32,35 @@ bdou:isActive rdf:type owl:AnnotationProperty ;
 ###  http://purl.bdrc.io/ontology/ext/user/preferredLangTags
 bdou:preferredLangTags rdf:type owl:AnnotationProperty ;
                        rdfs:range xsd:string ;
-                       rdfs:domain bdu:User .
+                       rdfs:domain bdou:User .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/publicProps
 bdou:publicProps rdf:type owl:AnnotationProperty ;
                  rdfs:range rdf:PlainLiteral ;
-                 rdfs:domain bdu:User .
+                 rdfs:domain bdou:User .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment rdfs:range rdf:PlainLiteral ;
-             rdfs:domain bdu:User .
+             rdfs:domain bdou:User .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#seeAlso
 rdfs:seeAlso rdfs:range xsd:anyURI ;
-             rdfs:domain bdu:User .
+             rdfs:domain bdou:User .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty ;
               rdfs:range rdf:PlainLiteral ;
-              rdfs:domain bdu:User .
+              rdfs:domain bdou:User .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty ;
                rdfs:range rdf:PlainLiteral ;
-               rdfs:domain bdu:User .
+               rdfs:domain bdou:User .
 
 
 #################################################################
@@ -78,29 +78,35 @@ xsd:datetime rdf:type rdfs:Datatype .
 ###  http://purl.bdrc.io/ontology/core/personGender
 bdo:personGender rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
-                 rdfs:domain bdu:User ;
+                 rdfs:domain bdou:User ;
                  rdfs:range bdo:Gender .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/affiliation
 bdou:affiliation rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
-                 rdfs:domain bdu:User ;
+                 rdfs:domain bdou:User ;
                  rdfs:range bdo:Place .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/hasUserProfile
 bdou:hasUserProfile rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdfs:domain bdu:User ;
-                    rdfs:range <http://purl.bdrc.io/ontology/ext/auth/UserProfile> .
+                    rdfs:domain bdou:User ;
+                    rdfs:range aut:UserProfile .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/interest
 bdou:interest rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain bdu:User ;
+              rdfs:domain bdou:User ;
               rdfs:range bdou:InterestType .
+
+
+###  http://purl.bdrc.io/ontology/ext/user/onDatatype
+bdou:onDatatype rdf:type owl:ObjectProperty ;
+                rdfs:domain bdou:SearchBookmark ;
+                rdfs:range owl:Class .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/onResource
@@ -109,29 +115,35 @@ bdou:onResource rdf:type owl:ObjectProperty ;
                 rdfs:domain bdou:Bookmark ;
                 rdfs:range bdo:Entity .
 
+###  http://purl.bdrc.io/ontology/ext/user/onImageVolume 
+bdou:onImageVolume  rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain bdou:SearchBookmark ;
+                rdfs:range bdo:VolumeImageAsset .
+
 
 ###  http://purl.bdrc.io/ontology/ext/user/resourceHistory
 bdou:resourceHistory rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
-                     rdfs:domain bdu:User ;
+                     rdfs:domain bdou:User ;
                      rdfs:range bdou:Bookmark .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/searchHistory
 bdou:searchHistory rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain bdu:User ;
+                   rdfs:domain bdou:User ;
                    rdfs:range bdou:Bookmark .
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdfs:domain bdu:User .
+owl:topObjectProperty rdfs:domain bdou:User .
 
 
 ###  http://xmlns.com/foaf/0.1/interest
 foaf:interest rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain bdu:User ;
+              rdfs:domain bdou:User ;
               rdfs:range bdo:Entity .
 
 
@@ -142,21 +154,21 @@ foaf:interest rdf:type owl:ObjectProperty ;
 ###  http://purl.bdrc.io/ontology/ext/user/accountCreation
 bdou:accountCreation rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain bdu:User ;
+                     rdfs:domain bdou:User ;
                      rdfs:range xsd:datetime .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/homepage
 bdou:homepage rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain bdu:User ;
+              rdfs:domain bdou:User ;
               rdfs:range xsd:anyURI .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/image
 bdou:image rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:domain bdu:User ;
+           rdfs:domain bdou:User ;
            rdfs:range xsd:anyURI .
 
 
@@ -168,22 +180,34 @@ bdou:isActive rdf:type owl:DatatypeProperty ;
 ###  http://purl.bdrc.io/ontology/ext/user/lastVisit
 bdou:lastVisit rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain bdu:User ;
+               rdfs:domain bdou:User ;
                rdfs:range xsd:dateTime .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/mainResidenceArea
 bdou:mainResidenceArea rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:domain bdu:User ;
+                       rdfs:domain bdou:User ;
                        rdfs:range rdf:PlainLiteral .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/mainResidenceCountry
 bdou:mainResidenceCountry rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain bdu:User ;
+                          rdfs:domain bdou:User ;
                           rdfs:range rdf:PlainLiteral .
+
+
+###  http://purl.bdrc.io/ontology/ext/user/onDatatype
+bdou:onDatatype rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://purl.bdrc.io/ontology/ext/user/onKeyword
+bdou:onKeyword rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain bdou:SearchBookmark ;
+               rdfs:range rdf:PlainLiteral .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/onPage
@@ -201,20 +225,6 @@ bdou:preferredLangTags rdf:type owl:DatatypeProperty ;
 ###  http://purl.bdrc.io/ontology/ext/user/publicProps
 bdou:publicProps rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  http://purl.bdrc.io/ontology/ext/user/onDatatype
-bdou:onDatatype rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain bdou:SearchBookmark ;
-                rdfs:range owl:Class .
-
-
-###  http://purl.bdrc.io/ontology/ext/user/onKeyword
-bdou:onKeyword rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain bdou:SearchBookmark ;
-                rdfs:range rdf:PlainLiteral .
 
 
 ###  http://www.w3.org/2002/07/owl#topDataProperty
@@ -248,7 +258,7 @@ bdo:Type rdf:type owl:Class .
 
 
 ###  http://purl.bdrc.io/ontology/ext/auth/UserProfile
-<http://purl.bdrc.io/ontology/ext/auth/UserProfile> rdf:type owl:Class .
+aut:UserProfile rdf:type owl:Class .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/Bookmark
@@ -280,9 +290,13 @@ bdou:SearchBookmarkFacet rdf:type owl:Class ;
 
 
 ###  http://purl.bdrc.io/resource-nc/user/User
-bdu:User rdf:type owl:Class ;
+bdou:User rdf:type owl:Class ;
          rdfs:subClassOf bdo:Person ,
                          foaf:Person .
+
+
+###  http://www.w3.org/2002/07/owl#Class
+owl:Class rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
