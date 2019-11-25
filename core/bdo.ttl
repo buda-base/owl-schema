@@ -1616,7 +1616,6 @@ bdo:creator
   rdfs:domain bdo:Work ;
   rdfs:label "has creator"@en ;
   rdfs:range bdo:AgentAsCreator ;
-  owl:deprecated true ;
 .
 bdo:creatorAmanuensis
   a owl:ObjectProperty ;
