@@ -102,7 +102,11 @@ For Pali our convention is to always use a script tag:
 - `pi-Thai` for Pali written in Thai script
 - `pi-x-iast` (BDRC) for Pali written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
 - `pi-Khmr` for Pali written in Khmer script
-- `pi-x-kmfemc` for Pali written in Khmer via the FEMC romanization
+- `pi-x-efeo` for Pali written in Khmer via the EFEO romanization
+- `pi-x-twktt-origKhmer` for Pali written in Khmer romanized via the [TWKTT](https://github.com/buda-base/twktt-doc/) romanization
+- `pi-Khmr-x-kmpre20c` for Pali written in Khmer script using the archaic spelling predating any of the 20th-century reforms
+- `pi-x-kmpre20c-efeo` for Pali written in Khmer script using the archaic spelling predating any of the 20th-century reforms transliterated using the EFEO romanization
+- `pi-x-kmpre20c-twktt-origKhmer` for Pali written in Khmer script using the archaic spelling predating any of the 20th-century reforms transliterated using the [TWKTT](https://github.com/buda-base/twktt-doc/) romanization
 
 #### Sanskrit
 We also choose to keep the script tag for Sanskrit in Devanagari:
@@ -137,7 +141,11 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 #### Khmer
 
 - `km` for Khmer in Khmer script
-- `km-x-kmfemc` for Khmer Romanized via the FEMC romanization
+- `km-x-twktt` for Khmer Romanized via the [TWKTT](https://github.com/buda-base/twktt-doc/) romanization
+- `km-x-efeo` for Khmer Romanized via the EFEO romanization
+- `km-x-kmpre20c` for Khmer written in Khmer script using the archaic spelling predating any of the 20th-century reforms
+- `km-x-kmpre20c-efeo` for Khmer written in Khmer script using the archaic spelling predating any of the 20th-century reforms transliterated using the EFEO romanization
+- `km-x-kmpre20c-twktt` for Khmer written in Khmer script using the archaic spelling predating any of the 20th-century reforms transliterated using the [TWKTT](https://github.com/buda-base/twktt-doc/) romanization
 
 #### Mongolian
 

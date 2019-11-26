@@ -3049,7 +3049,7 @@ bdo:placeWBArea
 .
 bdo:printMethod
   a owl:ObjectProperty ;
-  adm:userTooltip "Indicates the printing method of the Igtem associated with the Work."@en ;
+  adm:userTooltip "Indicates the printing method of the Item associated with the Work."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "print method"@en ;
   rdfs:range bdo:PrintMethod ;
