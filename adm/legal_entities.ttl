@@ -143,6 +143,18 @@ bda:LD_DILA_BSADP
   adm:provider bda:CP048 ;
   skos:prefLabel "Provided by DILA, Creative Commons BY-NC-SA 3.0 Unported License"@en ;
 .
+bda:LD_NGMCP_Metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseCopyrightUndetermined ;
+  adm:provider bda:CP049 ;
+  skos:prefLabel "Provided by NGMCP, Copyright Undetermined"@en ;
+.
+bda:LD_SRC_Metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseCopyrightUndetermined ;
+  adm:provider bda:CP050 ;
+  skos:prefLabel "Provided by Sakya Research Center, Copyright Undetermined"@en ;
+.
 LegalData:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;

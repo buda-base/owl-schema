@@ -73,9 +73,14 @@ bda:LicensePublicDomain
 .
 bda:LicenseNoKnownCopyright
   a adm:License ;
-  rdfs:comment "No Known Copyright"@en ;
   rdfs:seeAlso <http://rightsstatements.org/vocab/NKC/1.0/> ;
   skos:prefLabel "No Known Copyright"@en ;
+.
+bda:LicenseCopyrightUndetermined
+  a adm:License ;
+  rdfs:comment "Copyright Undetermined"@en ;
+  rdfs:seeAlso <http://rightsstatements.org/vocab/UND/1.0/> ;
+  skos:prefLabel "Copyright Undetermined"@en ;
 .
 License:
   a owl:Ontology ;

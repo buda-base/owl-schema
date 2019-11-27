@@ -331,3 +331,25 @@ bda:CP048
   skos:prefLabel "佛學規範資料庫"@zh-hant ;
   foaf:homepage "http://authority.dila.edu.tw/"^^xsd:anyURI ;
 .
+bda:CP049
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "NGMCP" ;
+  skos:altLabel "Nepalese German Manuscript Cataloging Project"@en ;
+  foaf:homepage "https://www.aai.uni-hamburg.de/en/forschung/ngmcp"^^xsd:anyURI ;
+.
+bda:CP050
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "SRC" ;
+  skos:altLabel "Sakya Research Center"@en ;
+  skos:altLabel "ས་སྐྱ་ཞིབ་འཇུག་ཁང་།"@bo ;
+  foaf:homepage "https://sakyaresearch.org"^^xsd:anyURI ;
+.
+bda:CP051
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "IOM" ;
+  skos:altLabel "Saint Petersburg Institute of Oriental Manuscripts"@en ;
+  foaf:homepage "http://www.orientalstudies.ru/"^^xsd:anyURI ;
+.
