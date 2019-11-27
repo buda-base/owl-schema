@@ -180,6 +180,15 @@ bdr:LangNo
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Norwegian"@en ;
 .
+bdr:LangOui
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "oui" ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Old Uighur"@en ;
+  bdo:langMARCCode "uig" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/oui> ;
+.
 bdr:LangPgd
   a bdo:Language ;
   a owl:Class ;

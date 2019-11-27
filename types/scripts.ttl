@@ -127,6 +127,12 @@ bdr:ScriptNewa
   skos:prefLabel "Pracalit"@en ;
   skos:altLabel "pracalita"@sa-x-iast ;
 .
+bdr:ScriptOldOui
+  a bdo:Script ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q428299> ;
+  rdfs:comment "Not in ISO 15924"@en ;
+  skos:prefLabel "Old Uighur script"@en ;
+.
 bdr:ScriptPostGupta
   a bdo:Script ;
   skos:prefLabel "Post-gupta"@en ;

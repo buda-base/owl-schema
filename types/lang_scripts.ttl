@@ -252,6 +252,13 @@ bdr:No
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Norwegian"@en ;
 .
+bdr:OuiOldOui
+  a bdo:LangScript ;
+  bdo:language bdr:LangOui ;
+  bdo:script bdr:ScriptOldOui ;
+  rdfs:subClassOf bdo:LangScript ;
+  skos:prefLabel "Old Uighur in Old Uighur script"@en ;
+.
 bdr:PgdKhar
   a bdo:LangScript ;
   bdo:language bdr:LangPgd ;
