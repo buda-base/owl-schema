@@ -737,12 +737,17 @@ adm:seeOtherHA
 .
 adm:seeOtherSAT
   a owl:AnnotationProperty ;
-  rdfs:label "see SAT"@en ;
+  rdfs:label "see on SAT"@en ;
+  rdfs:subPropertyOf adm:seeOther ;
+.
+adm:seeOtherSRC
+  a owl:AnnotationProperty ;
+  rdfs:label "See Sakya Research Center entry"@en ;
   rdfs:subPropertyOf adm:seeOther ;
 .
 adm:seeOtherToL
   a owl:AnnotationProperty ;
-  rdfs:label "see other Treasury of Lives entry"@en ;
+  rdfs:label "See Treasury of Lives entry"@en ;
   rdfs:subPropertyOf adm:seeOther ;
 .
 adm:statementScore
