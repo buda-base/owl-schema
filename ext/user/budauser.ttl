@@ -1,7 +1,8 @@
+@prefix : <#> .
 @prefix adr: <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdu: <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,6 +11,7 @@
 @prefix bdgu: <http://purl.bdrc.io/graph-nc/user/> .
 @prefix bdou: <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix viaf: <http://viaf.org/viaf/> .
@@ -49,6 +51,11 @@ rdfs:comment rdfs:range rdf:PlainLiteral ;
 ###  http://www.w3.org/2000/01/rdf-schema#seeAlso
 rdfs:seeAlso rdfs:range xsd:anyURI ;
              rdfs:domain bdou:User .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdf:type owl:AnnotationProperty ;
+                    rdfs:domain bdu:User .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -109,17 +116,18 @@ bdou:onDatatype rdf:type owl:ObjectProperty ;
                 rdfs:range owl:Class .
 
 
+###  http://purl.bdrc.io/ontology/ext/user/onImageVolume
+bdou:onImageVolume rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain bdou:SearchBookmark ;
+                   rdfs:range bdo:VolumeImageAsset .
+
+
 ###  http://purl.bdrc.io/ontology/ext/user/onResource
 bdou:onResource rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain bdou:Bookmark ;
                 rdfs:range bdo:Entity .
-
-###  http://purl.bdrc.io/ontology/ext/user/onImageVolume 
-bdou:onImageVolume  rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
-                rdfs:domain bdou:SearchBookmark ;
-                rdfs:range bdo:VolumeImageAsset .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/resourceHistory
@@ -228,8 +236,7 @@ bdou:publicProps rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/2002/07/owl#topDataProperty
-owl:topDataProperty rdfs:domain bdu:User ;
-                    rdfs:range xsd:datetime .
+owl:topDataProperty rdfs:range xsd:datetime .
 
 
 #################################################################
@@ -255,6 +262,10 @@ bdo:Place rdf:type owl:Class ;
 
 ###  http://purl.bdrc.io/ontology/core/Type
 bdo:Type rdf:type owl:Class .
+
+
+###  http://purl.bdrc.io/ontology/core/VolumeImageAsset
+bdo:VolumeImageAsset rdf:type owl:Class .
 
 
 ###  http://purl.bdrc.io/ontology/ext/auth/UserProfile
@@ -289,10 +300,15 @@ bdou:SearchBookmarkFacet rdf:type owl:Class ;
                          rdfs:subClassOf bdou:Facet .
 
 
-###  http://purl.bdrc.io/resource-nc/user/User
+###  http://purl.bdrc.io/ontology/ext/user/User
 bdou:User rdf:type owl:Class ;
-         rdfs:subClassOf bdo:Person ,
-                         foaf:Person .
+          rdfs:subClassOf bdo:Person ,
+                          foaf:Person .
+
+
+###  http://purl.bdrc.io/ontology/ext/user/EditType
+bdou:EditType rdf:type owl:Class ;
+              rdfs:subClassOf bdo:Type .
 
 
 ###  http://www.w3.org/2002/07/owl#Class
@@ -306,6 +322,21 @@ foaf:Person rdf:type owl:Class .
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://purl.bdrc.io/ontology/ext/user/EditAdmin
+bdou:EditAdmin rdf:type owl:NamedIndividual ,
+                        <http://www.co-ode.org/ontologies/ont.owl#EditType> .
+
+
+###  http://purl.bdrc.io/ontology/ext/user/EditNone
+bdou:EditNone rdf:type owl:NamedIndividual ,
+                       <http://www.co-ode.org/ontologies/ont.owl#EditType> .
+
+
+###  http://purl.bdrc.io/ontology/ext/user/EditUser
+bdou:EditUser rdf:type owl:NamedIndividual ,
+                       <http://www.co-ode.org/ontologies/ont.owl#EditType> .
+
 
 ###  http://purl.bdrc.io/resource-nc/user/InteresrResearch
 bdu:InteresrResearch rdf:type owl:NamedIndividual ,
