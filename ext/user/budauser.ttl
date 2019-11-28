@@ -325,17 +325,17 @@ foaf:Person rdf:type owl:Class .
 
 ###  http://purl.bdrc.io/ontology/ext/user/EditAdmin
 bdou:EditAdmin rdf:type owl:NamedIndividual ,
-                        <http://www.co-ode.org/ontologies/ont.owl#EditType> .
+                        bdou:EditType .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/EditNone
 bdou:EditNone rdf:type owl:NamedIndividual ,
-                       <http://www.co-ode.org/ontologies/ont.owl#EditType> .
+                       bdou:EditType .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/EditUser
 bdou:EditUser rdf:type owl:NamedIndividual ,
-                       <http://www.co-ode.org/ontologies/ont.owl#EditType> .
+                       bdou:EditType .
 
 
 ###  http://purl.bdrc.io/resource-nc/user/InteresrResearch
