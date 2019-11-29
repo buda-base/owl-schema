@@ -28,18 +28,21 @@
 ###  http://purl.bdrc.io/ontology/ext/user/isActive
 bdou:isActive rdf:type owl:AnnotationProperty ;
               rdfs:range xsd:boolean ;
-              rdfs:domain bdu:User .
+              rdfs:domain bdou:User ,
+                          bdu:User .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/preferredLangTags
 bdou:preferredLangTags rdf:type owl:AnnotationProperty ;
-                       rdfs:range xsd:string ;
+                       rdfs:range rdf:PlainLiteral ,
+                                  xsd:string ;
                        rdfs:domain bdou:User .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/publicProps
 bdou:publicProps rdf:type owl:AnnotationProperty ;
-                 rdfs:range rdf:PlainLiteral ;
+                 rdfs:range rdf:PlainLiteral ,
+                            xsd:anyURI ;
                  rdfs:domain bdou:User .
 
 
@@ -86,7 +89,7 @@ xsd:datetime rdf:type rdfs:Datatype .
 ###  http://purl.bdrc.io/ontology/core/personGender
 bdo:personGender rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
-                 rdfs:domain bdou:User ;
+                 rdfs:domain bdo:Person ;
                  rdfs:range bdo:Gender .
 
 
@@ -189,9 +192,7 @@ bdou:image rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.bdrc.io/ontology/ext/user/isActive
 bdou:isActive rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain bdou:User ;
-              rdfs:range xsd:boolean .
+              rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/lastVisit
@@ -231,14 +232,12 @@ bdou:onPage rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.bdrc.io/ontology/ext/user/preferredLangTags
 bdou:preferredLangTags rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:range rdf:PlainLiteral .
+                       rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/publicProps
 bdou:publicProps rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:range xsd:anyURI .
+                 rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/userEditProps
