@@ -2381,6 +2381,15 @@ This is a rare situation but needs to be handled."""@en ;
   rdfs:range xsd:string ;
   owl:deprecated true ;
 .
+bdo:inCollection
+  a owl:ObjectProperty ;
+  adm:technicalComment "was :workCollection"@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "This instance is contained at the identified institution"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "in collection"@en ;
+  rdfs:range bdo:CollectionInstitution ;
+.
 bdo:incarnationActivities
   a owl:ObjectProperty ;
   adm:userTooltip "This Person is an Activities incarnation of the target Person"@en ;
@@ -2426,6 +2435,106 @@ bdo:incarnationYangtse
 bdo:inferSubTree
   a owl:AnnotationProperty ;
   rdfs:range xsd:boolean ;
+.
+bdo:instanceComplete
+  a owl:DatatypeProperty ;
+  adm:technicalComment "was :workComplete"@en ;
+  adm:userTooltip "true if the instance is complete"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "complete"@en ;
+  rdfs:range xsd:boolean ;
+.
+bdo:instanceDimensions
+  a owl:DatatypeProperty ;
+  adm:technicalComment "was :workDimensions"@en ;
+  adm:userTooltip "The physical dimensions of the work"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "physical dimensions"@en ;
+  rdfs:range xsd:string ;
+.
+bdo:instanceErrata
+  a owl:DatatypeProperty ;
+  adm:technicalComment "was :workErrata"@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "Indicates a statement of error in the content"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "errata"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:instanceExtentStatement
+  a owl:DatatypeProperty ;
+  adm:technicalComment "was :workExtentStatement"@en ;
+  adm:userTooltip "A statement of the extent of the Instance"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "extent statement"@en ;
+  rdfs:range xsd:string ;
+.
+bdo:instanceHasItem
+  a owl:ObjectProperty ;
+  adm:technicalComment "was workHasItem"@n ;
+  adm:userTooltip "This physical instance has an associated Item."@en ;
+  bdo:inferSubTree true ;
+  rdfs:domain bdo:PhysicalInstance ;
+  rdfs:label "has item"@en ;
+  rdfs:range bdo:Item ;
+.
+bdo:instanceHasSourcePrintery
+  a owl:ObjectProperty ;
+  adm:technicalComment "was :workHasSourcePrintery"@en ;
+  adm:userTooltip "used to indicate the printery of a traditional artefact"@en ;
+  rdfs:domain bdo:PhysicalInstance ;
+  rdfs:label "printed at"@en ;
+  rdfs:range bdo:Place ;
+.
+bdo:instanceOf
+  a owl:ObjectProperty ;
+  adm:technicalComment """The subject Instance is an instance of the referenced :Work. This may mean that the subject instance is an edition or version or the only extant occurrence of the referenced :Work.
+
+This modeling is relevant when there are more than one occurrence of a work that needs to be accounted for in the library. If there is a single edition of a unique work then this elaborate modeling is not needed; however, for many works in the domain of Buddhist Universal Digital Archive there are many expressions of a single identified \"conceptual\" work such as the Kanjur, Tengyur, Nyingma Gyu Bum, Rinchen Terdzod, Nyingma Kama, Songs of Milarepa, and on and on.
+
+Consider the Kanjur:
+
+bdr:T2423 a Topic, Work ;
+      rdfs:label \"bka' 'gyur\"@bo-x-ewts ;
+      :workHasTitle [ a :WorkTitle ;
+            rdfs:label \"Kanjur\"@en ;
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
+
+bdr:W9NEW01 a Work ;
+      :workHasTitle [ a :WorkTitle ;
+            rdfs:label \"Dege Kanjur\"@en ;
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
+      :instanceOf bdr:T2423 .
+
+bdr:W22703 a Work ;
+      :workHasTitle [ a :WorkTitle ;
+            rdfs:label \"Narthang Kanjur\"@en ;
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
+      :instanceOf bdr:T2423 .
+
+bdr:W26071 a Work ;
+      :workHasTitle [ a :WorkTitle ;
+            rdfs:label \"Lhasa Kanjur\"@en ;
+            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
+      :instanceOf bdr:T2423 ."""@en ;
+  adm:technicalComment "was :workExpressionOf"@en ;
+  adm:userTooltip "Links an (abstract) :Work and one of its instances"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "instance of"@en ;
+  rdfs:range bdo:Work ;
+  owl:inverseOf bdo:workHasExpression ;
+.
+bdo:instancePrintery
+  a owl:DatatypeProperty ;
+  adm:catalogingConvention """Free text comment on where the copy of the Work that was digitized was printed.
+
+This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
+  adm:technicalComment "was :workPrintery"@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "Free text comment on where the copy of the Instance that was digitized was printed."@en ;
+  rdfs:domain bdo:PhysicalInstance ;
+  rdfs:label "printery"@en ;
+  rdfs:range rdf:langString ;
 .
 bdo:interpretationOf
   a owl:ObjectProperty ;
@@ -3463,15 +3572,6 @@ bdo:workCatalogInfo
   rdfs:label "summary"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:inCollection
-  a owl:ObjectProperty ;
-  adm:technicalComment "was :workCollection"@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "This instance is contained at the identified institution"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "in collection"@en ;
-  rdfs:range bdo:CollectionInstitution ;
-.
 bdo:workColophon
   a owl:DatatypeProperty ;
   adm:technicalComment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
@@ -3479,14 +3579,6 @@ bdo:workColophon
   rdfs:domain bdo:Instance ;
   rdfs:label "colophon"@en ;
   rdfs:range rdf:langString ;
-.
-bdo:instanceComplete
-  a owl:DatatypeProperty ;
-  adm:technicalComment "was :workComplete"@en ;
-  adm:userTooltip "true if the instance is complete"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "complete"@en ;
-  rdfs:range xsd:boolean ;
 .
 bdo:workContainsChapters
   a owl:DatatypeProperty ;
@@ -3554,28 +3646,11 @@ bdo:workDimWidth
   adm:userTooltip "width of the physical item, of this :Work, that is held or scanned in cm"@en ;
   rdfs:label "width"@en ;
 .
-bdo:instanceDimensions
-  a owl:DatatypeProperty ;
-  adm:technicalComment "was :workDimensions"@en ;
-  adm:userTooltip "The physical dimensions of the work"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "physical dimensions"@en ;
-  rdfs:range xsd:string ;
-.
 bdo:workEditionStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "An Edition statement expresses information about this Work as an edition."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "edition statement"@en ;
-  rdfs:range rdf:langString ;
-.
-bdo:instanceErrata
-  a owl:DatatypeProperty ;
-  adm:technicalComment "was :workErrata"@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a statement of error in the content"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "errata"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workEvent
@@ -3584,52 +3659,6 @@ bdo:workEvent
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "event"@en ;
   rdfs:range bdo:WorkEvent ;
-.
-bdo:instanceOf
-  a owl:ObjectProperty ;
-  adm:technicalComment "was :workExpressionOf"@en ;
-  adm:technicalComment """The subject Instance is an instance of the referenced :Work. This may mean that the subject instance is an edition or version or the only extant occurrence of the referenced :Work.
-
-This modeling is relevant when there are more than one occurrence of a work that needs to be accounted for in the library. If there is a single edition of a unique work then this elaborate modeling is not needed; however, for many works in the domain of Buddhist Universal Digital Archive there are many expressions of a single identified \"conceptual\" work such as the Kanjur, Tengyur, Nyingma Gyu Bum, Rinchen Terdzod, Nyingma Kama, Songs of Milarepa, and on and on.
-
-Consider the Kanjur:
-
-bdr:T2423 a Topic, Work ;
-      rdfs:label \"bka' 'gyur\"@bo-x-ewts ;
-      :workHasTitle [ a :WorkTitle ;
-            rdfs:label \"Kanjur\"@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-
-bdr:W9NEW01 a Work ;
-      :workHasTitle [ a :WorkTitle ;
-            rdfs:label \"Dege Kanjur\"@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-      :instanceOf bdr:T2423 .
-
-bdr:W22703 a Work ;
-      :workHasTitle [ a :WorkTitle ;
-            rdfs:label \"Narthang Kanjur\"@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-      :instanceOf bdr:T2423 .
-
-bdr:W26071 a Work ;
-      :workHasTitle [ a :WorkTitle ;
-            rdfs:label \"Lhasa Kanjur\"@en ;
-            :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-      :instanceOf bdr:T2423 ."""@en ;
-  adm:userTooltip "Links an (abstract) :Work and one of its instances"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "instance of"@en ;
-  rdfs:range bdo:Work ;
-  owl:inverseOf bdo:workHasExpression ;
-.
-bdo:instanceExtentStatement
-  a owl:DatatypeProperty ;
-  adm:technicalComment "was :workExtentStatement"@en ;
-  adm:userTooltip "A statement of the extent of the Instance"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "extent statement"@en ;
-  rdfs:range xsd:string ;
 .
 bdo:workFEMCManuscriptCode
   a owl:DatatypeProperty ;
@@ -3667,15 +3696,6 @@ bdo:workHasInstance
   rdfs:label "has instance"@en ;
   rdfs:range bdo:Instance ;
   owl:inverseOf bdo:instanceOf ;
-.
-bdo:instanceHasItem
-  a owl:ObjectProperty ;
-  adm:technicalComment "was workHasItem"@n ;
-  adm:userTooltip "This physical instance has an associated Item."@en ;
-  bdo:inferSubTree true ;
-  rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "has item"@en ;
-  rdfs:range bdo:Item ;
 .
 bdo:workHasNumber
   a owl:ObjectProperty ;
@@ -3737,14 +3757,6 @@ bdo:workHasSite
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
-.
-bdo:instanceHasSourcePrintery
-  a owl:ObjectProperty ;
-  adm:technicalComment "was :workHasSourcePrintery"@en ;
-  adm:userTooltip "used to indicate the printery of a traditional artefact"@en ;
-  rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "printed at"@en ;
-  rdfs:range bdo:Place ;
 .
 bdo:workHasTranslation
   a owl:ObjectProperty ;
@@ -4248,18 +4260,6 @@ bdo:workPartType
   rdfs:label "part type"@en ;
   rdfs:range bdo:WorkPartType ;
 .
-bdo:instancePrintery
-  a owl:DatatypeProperty ;
-  adm:technicalComment "was :workPrintery"@en ;
-  adm:catalogingConvention """Free text comment on where the copy of the Work that was digitized was printed.
-
-This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Free text comment on where the copy of the Instance that was digitized was printed."@en ;
-  rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "printery"@en ;
-  rdfs:range rdf:langString ;
-.
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
@@ -4326,7 +4326,7 @@ bdo:workRefrKTsT
 .
 bdo:workRefs
   a owl:DatatypeProperty ;
-  adm:userTooltip "This property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloguing."@en ;
+  adm:userTooltip "This property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloging."@en ;
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "reference number"@en ;
 .
