@@ -38,6 +38,11 @@ bdr:WorkText
   a bdo:WorkPartType ;
   skos:prefLabel "text"@en ;
 .
+bdr:WorkTableOfContent
+  a bdo:WorkPartType ;
+  skos:prefLabel "table of content"@en ;
+  skos:prefLabel "dkar chag"@bo-x-ewts ;
+.
 bdr:WorkVolume
   a bdo:WorkPartType ;
   skos:prefLabel "volume"@en ;
