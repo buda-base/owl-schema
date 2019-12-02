@@ -1,9 +1,9 @@
 # baseURI: http://purl.bdrc.io/ontology/core/Unknown/
 # prefix: Unknown
 
-@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix Unknown: <http://purl.bdrc.io/ontology/core/Unknown/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -66,7 +66,7 @@ bdr:UNKNOWN_Topic
   rdfs:label "Unknown topic"@en ;
 .
 bdr:UNKNOWN_Work
-  a bdo:Work ;
+  a bdo:BiblioEntity ;
   a owl:NamedIndividual ;
   rdfs:isDefinedBy bdd:UNKNOWN_Work ;
   rdfs:label "Unknown work"@en ;

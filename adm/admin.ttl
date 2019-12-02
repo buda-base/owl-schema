@@ -184,7 +184,7 @@ adm:WorkOrAdmOutline
       a owl:Class ;
       owl:unionOf (
           adm:Outline
-          bdo:Work
+          bdo:BiblioEntity
         ) ;
     ] ;
   owl:deprecated true ;
@@ -499,7 +499,7 @@ adm:outline
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
   rdfs:comment "The referenced admin:Outline contains the root-level information from an Outline for this Work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "had outline"@en ;
   rdfs:range adm:Outline ;
 .
@@ -828,7 +828,7 @@ adm:workInProduct
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
   rdfs:comment "This :Work is included in the referenced admin:Product"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "in product"@en ;
   rdfs:range adm:Product ;
 .
@@ -844,7 +844,7 @@ adm:workVolumesNote
   a owl:AnnotationProperty ;
   adm:migrationComment "Migration hint: When not empty the <pubinfo:volumes/> is a note regarding how many and which volumes have been acquired, scanned and so on."@en ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "volumes note"@en ;
   rdfs:range xsd:string ;
 .
@@ -852,7 +852,7 @@ adm:work_desc_date
   a owl:AnnotationProperty ;
   adm:migrationComment "Migration hint: Used only in O01CT0001 to record some sort of date information from the colophons of various texts. The format is non-standard will require further examination"@en ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "date from description"@en ;
   rdfs:range xsd:string ;
 .
@@ -874,6 +874,13 @@ bdo:AnyOrganization
         ) ;
     ] ;
   owl:deprecated true ;
+.
+bdo:BiblioEntity
+  adm:migrationComment "NB: The definition of <w:info/> in work.xsd is incorrect since it allows unbounded use of <w:info/>. It should have been spec'd as only 1 occurrence. Hence in the ontology the wrk:info properties have domain wrk:Work rather than introducing an anon class"@en ;
+  adm:migrationComment "Note that <archiveInfo/> @distribution and @restriction are not used and not migrated. They have been replaced by @license and access."@en ;
+  adm:migrationComment """The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse. The legacy model split the descriptive metadata between Works and Pubinfos ( predominantly publication data). Thisr ontology merges the Work and Pubinfo items under the :Work resource so there is no hasPubinfo property.
+
+The Works also included some structural metadata in the volumeMap but that is moved to the vol:Volumes resource in this ontology."""@en ;
 .
 bdo:EditedEvent
   adm:replaceWithClass bdo:CompiledEvent ;
@@ -913,13 +920,6 @@ bdo:PersonFoundsMonastery
 .
 bdo:PersonOccupiesSeat
   adm:migrationComment "Migration hint: Rather than a separate :personHasSeat property, the <p:seat/> is modeled as a PersonOccupiesSeat with the place and circa as for any other PersonEvent"@en ;
-.
-bdo:Work
-  adm:migrationComment "NB: The definition of <w:info/> in work.xsd is incorrect since it allows unbounded use of <w:info/>. It should have been spec'd as only 1 occurrence. Hence in the ontology the wrk:info properties have domain wrk:Work rather than introducing an anon class"@en ;
-  adm:migrationComment "Note that <archiveInfo/> @distribution and @restriction are not used and not migrated. They have been replaced by @license and access."@en ;
-  adm:migrationComment """The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse. The legacy model split the descriptive metadata between Works and Pubinfos ( predominantly publication data). Thisr ontology merges the Work and Pubinfo items under the :Work resource so there is no hasPubinfo property.
-
-The Works also included some structural metadata in the volumeMap but that is moved to the vol:Volumes resource in this ontology."""@en ;
 .
 bdo:WorkPartType
   adm:migrationComment "Migration hint: represents the Work related outline:node/@type"@en ;

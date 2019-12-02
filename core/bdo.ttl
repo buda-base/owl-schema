@@ -86,12 +86,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
 .
-bdo:AbstractWork
-  a owl:Class ;
-  adm:userTooltip "An abstract or conceptual work is the idea of a work, as opposed to an expression or manifestation which is a specific edition or witness."@en ;
-  rdfs:label "Abstract work"@en ;
-  rdfs:subClassOf bdo:Work ;
-.
 bdo:Agent
   a owl:Class ;
   adm:userTooltip "an entity that performs actions, e.g., creating works, teaching other agents, founding artificial places and so on"@en ;
@@ -107,7 +101,7 @@ bdo:AgentAsCreator
 .
 bdo:AgentInRole
   a owl:Class ;
-  adm:technicalComment ":AgentInRole represents some :Agent performing an action in in a particular :Role in a context represented by the subject and property that refer to the :AgenInRole"@en ;
+  adm:technicalComment ":AgentInRole represents some :Agent performing an action in a particular :Role in a context represented by the subject and property that refer to the :AgenInRole"@en ;
   adm:userTooltip "property linking an entity or event to the agents and roles they play"@en ;
   rdfs:label "agent"@en ;
   rdfs:subClassOf bdo:Facet ;
@@ -163,6 +157,13 @@ bdo:AuthoredEvent
   rdfs:label "Authored"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
+bdo:BiblioEntity
+  a owl:Class ;
+  adm:technicalComment "Was Work, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "The :BiblioEntity Class models the descriptive metadata about a \"book\" in the BUDAverse."@en ;
+  rdfs:label "BiblioEntity"@en ;
+  rdfs:subClassOf bdo:Entity ;
+.
 bdo:Binding
   rdfs:subClassOf bdo:Type ;
 .
@@ -174,9 +175,11 @@ bdo:CarvedEvent
 .
 bdo:Catalog
   a owl:Class ;
+  adm:deprecatedComment "remove, not needed"@en ;
   adm:userTooltip "A catalog such as the Tohoku or the FEMC Volumes I, II, or III"@en ;
   rdfs:label "Catalog" ;
-  rdfs:subClassOf bdo:Work ;
+  rdfs:subClassOf bdo:BiblioEntity ;
+  owl:deprecated true ;
 .
 bdo:ChineseDate
   a owl:Class ;
@@ -357,6 +360,19 @@ bdo:EtextChunk
   rdfs:label "eText chunk"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
+bdo:EtextInstance
+  a owl:Class ;
+  adm:technicalComment """:ItemEtext represent the :Etext items in the archive (i.e the actual digital files). 
+
+There are two subclasses of :ItemEtext. (1) :ItemEtextNonPaginated and (2) :ItemEtextPaginated. These are characterized by the presence or lack of pagination information maintained in the :ItemEtext. OCR is considered ItemEtextPaginated and manual input saved in RTF format  considered :ItemEtextNonPaginated. These are distinguished because there are different stuctural characteristics in the :ItemEtext.
+
+An :ItemEtext typically will represent an entire published Work. There won't be an Etext item for each :Volume within the Work. This is because we generally want to track the entire published Work as a single entity and will use the Work :partOf Work statements along with additional statements to link an individual Etext back to a Work part."""@en ;
+  adm:technicalComment "Was ItemEtext, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "An Instance consisting of some form of searchable text"@en ;
+  rdfs:label "eText instance"@en ;
+  rdfs:seeAlso bdo:Etext ;
+  rdfs:subClassOf bdo:Instance ;
+.
 bdo:EtextLine
   a owl:Class ;
   adm:userTooltip "indicates a line of text in a corresponding digitized image of a Work"@en ;
@@ -492,6 +508,20 @@ bdo:ISBN
   rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
   rdfs:label "ISBN"@en ;
 .
+bdo:ImageInstance
+  a owl:Class ;
+  adm:technicalComment "A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats."@en ;
+  adm:userTooltip "An item comprised of digitized images of the pages of a Work"@en ;
+  rdfs:label "Image item"@en ;
+  rdfs:subClassOf bdo:Instance ;
+.
+bdo:Instance
+  a owl:Class ;
+  adm:technicalComment "Was PublishedWork, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
+  rdfs:label "instance"@en ;
+  rdfs:subClassOf bdo:BiblioEntity ;
+.
 bdo:IntegerOrString
   a rdfs:Datatype ;
   owl:equivalentClass [
@@ -508,19 +538,7 @@ bdo:Item
   adm:userTooltip "An Item captures structural and administrative metadata associated with a digital or physical asset"@en ;
   bdo:inferSubTree true ;
   rdfs:label "Item"@en ;
-  rdfs:subClassOf bdo:Entity ;
-.
-bdo:ItemEtext
-  a owl:Class ;
-  adm:technicalComment """:ItemEtext represent the :Etext items in the archive (i.e the actual digital files). 
-
-There are two subclasses of :ItemEtext. (1) :ItemEtextNonPaginated and (2) :ItemEtextPaginated. These are characterized by the presence or lack of pagination information maintained in the :ItemEtext. OCR is considered ItemEtextPaginated and manual input saved in RTF format  considered :ItemEtextNonPaginated. These are distinguished because there are different stuctural characteristics in the :ItemEtext.
-
-An :ItemEtext typically will represent an entire published Work. There won't be an Etext item for each :Volume within the Work. This is because we generally want to track the entire published Work as a single entity and will use the Work :partOf Work statements along with additional statements to link an individual Etext back to a Work part."""@en ;
-  adm:userTooltip "An item consisting of some form of searchable text"@en ;
-  rdfs:label "eText item"@en ;
-  rdfs:seeAlso bdo:Etext ;
-  rdfs:subClassOf bdo:Item ;
+  rdfs:subClassOf bdo:BiblioEntity ;
 .
 bdo:ItemEtextNonPaginated
   a owl:Class ;
@@ -543,13 +561,6 @@ In some cases, such as texts from the Asian Classics Input Project (ACIP), pagin
   adm:userTooltip "An etext with pagination corresponding to digitized images of the Work"@en ;
   rdfs:label "Paginated Etext Item"@en ;
   rdfs:subClassOf bdo:ItemEtext ;
-.
-bdo:ItemImageAsset
-  a owl:Class ;
-  adm:technicalComment "A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats."@en ;
-  adm:userTooltip "An item comprised of digitized images of the pages of a Work"@en ;
-  rdfs:label "Image item"@en ;
-  rdfs:subClassOf bdo:Item ;
 .
 bdo:ItemPhysicalAsset
   a owl:Class ;
@@ -723,7 +734,7 @@ bdo:LineageOrNoteOrWork
       owl:unionOf (
           bdo:Lineage
           bdo:Note
-          bdo:Work
+          bdo:BiblioEntity
         ) ;
     ] ;
 .
@@ -1090,6 +1101,13 @@ bdo:PersonVariantOrthography
   rdfs:label "variant orthography"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
+bdo:PhysicalInstance
+  a owl:Class ;
+  adm:technicalComment "A published or one-off (manuscript, etc.) instance of an (abstract) Work"@en ;
+  adm:userTooltip "A physical instance of an (abstract) Work"@en ;
+  rdfs:label "Physical instance"@en ;
+  rdfs:subClassOf bdo:Instance ;
+.
 bdo:Place
   a owl:Class ;
   adm:catalogingConvention "Places are geographic entities such as: monasteries, villages, counties, provinces, rivers, caves and so on. Places are modeled in terms of subclasses that indicate the type of \"real world\" place that is referred to"@en ;
@@ -1164,12 +1182,6 @@ bdo:PublishedEvent
   rdfs:label "Published"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:PublishedWork
-  a owl:Class ;
-  adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
-  rdfs:label "Published work" ;
-  rdfs:subClassOf bdo:Work ;
-.
 bdo:RequestedEvent
   a owl:Class ;
   adm:userTooltip "An event describing the request for a work"@en ;
@@ -1211,11 +1223,19 @@ bdo:SecondTranslatedEvent
   rdfs:label "Second translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
+bdo:SerialInstance
+  a owl:Class ;
+  adm:technicalComment "Was SerialWork, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "A Serial instance published as a series of volues/numbers over time."@en ;
+  rdfs:label "Serial instance" ;
+  rdfs:subClassOf bdo:Instance ;
+.
 bdo:SerialWork
   a owl:Class ;
-  adm:userTooltip "A Work published as a series of volues/numbers over time"@en ;
+  adm:technicalComment "Was SerialWork now split into an (abstract) Work Class and an Instance Class, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "An (abstreact) Work representing a series of volues/numbers published over time"@en ;
   rdfs:label "Serial work" ;
-  rdfs:subClassOf bdo:PublishedWork ;
+  rdfs:subClassOf bdo:Work ;
 .
 bdo:SingleAgent
   a owl:Class ;
@@ -1237,7 +1257,7 @@ bdo:TextualEntity
       owl:unionOf (
           bdo:Etext
           bdo:Item
-          bdo:Work
+          bdo:BiblioEntity
         ) ;
     ] ;
 .
@@ -1293,28 +1313,32 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 .
 bdo:UnicodeWork
   a owl:Class ;
+  adm:deprecatedComment "replace with EtextInstance"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates a searchable etext Work versus digitized page images."@en ;
   rdfs:label "Unicode work (etext)" ;
-  rdfs:subClassOf bdo:Work ;
+  rdfs:subClassOf bdo:BiblioEntity ;
+  owl:deprecated true ;
 .
 bdo:Union
   a owl:Class ;
 .
 bdo:UnspecifiedWorkClass
   a owl:Class ;
+  adm:deprecatedComment "not used, not needed"@en ;
   adm:technicalComment "This is the class of migrated works for which no work type was indicated. Needs repair after migration"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Works for which no work type was indicated"@en ;
   rdfs:label "Unspecified work class"@en ;
-  rdfs:subClassOf bdo:Work ;
+  rdfs:subClassOf bdo:BiblioEntity ;
+  owl:deprecated true ;
 .
 bdo:VirtualWork
   a owl:Class ;
   adm:technicalComment "Virtual works are works made by assembling different other works. Examples: collections, manuscripts reconstituted from fragments in different collections, etc. The hierarchy of works displayed in an embedded reader is also a virtual work."@en ;
   adm:userTooltip "Virtual works are works made by assembling different other works."@en ;
   rdfs:label "Virtual work"@en ;
-  rdfs:subClassOf bdo:Work ;
+  rdfs:subClassOf bdo:BiblioEntity ;
 .
 bdo:Volume
   a owl:Class ;
@@ -1360,9 +1384,10 @@ bdo:VolumePhysicalAsset
 .
 bdo:Work
   a owl:Class ;
-  adm:userTooltip "The :Work resource models the descriptive metadata about a \"book\" in the BUDAverse." ;
-  rdfs:label "Work"@en ;
-  rdfs:subClassOf bdo:Entity ;
+  adm:technicalComment "Was AbstarctWork, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "An abstract or conceptual work is the idea of a work, as opposed to an expression or manifestation which is a specific edition or witness."@en ;
+  rdfs:label "work"@en ;
+  rdfs:subClassOf bdo:BiblioEntity ;
 .
 bdo:WorkBibliographicalTitle
   a owl:Class ;
@@ -1538,21 +1563,21 @@ bdo:agent
 bdo:appliedMaterial
   a owl:ObjectProperty ;
   adm:userTooltip "Indicates the material applied on a work (ink, golden leaf, etc.)"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "applied material"@en ;
   rdfs:range bdo:AppliedMaterial ;
 .
 bdo:baseMaterial
   a owl:ObjectProperty ;
   adm:userTooltip "Indicates the base material of a work (paper, palm leaf, etc.)"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "base material"@en ;
   rdfs:range bdo:BaseMaterial ;
 .
 bdo:binding
   a owl:ObjectProperty ;
   adm:userTooltip "Describes the type of binding of a work (loose leaves, bound by glue, etc.)"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "binding"@en ;
   rdfs:range bdo:Binding ;
 .
@@ -1989,8 +2014,8 @@ bdo:hasDaughter
 bdo:hasFascicles
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip "A list of fascicles contained in the work"@en ;
-  rdfs:domain bdo:Work ;
+  adm:userTooltip "A list of fascicles contained in the physical instance of a Work"@en ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "has fascicles"@en ;
   rdfs:range xsd:string ;
 .
@@ -2052,7 +2077,7 @@ bdo:hasHusband
 bdo:hasIIIFCollection
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:ItemImageAsset ;
+  rdfs:domain bdo:ImageInstance ;
   rdfs:label "has IIIF Collection"@en ;
   rdfs:range bdo:IIIFCollection ;
 .
@@ -2454,14 +2479,15 @@ bdo:itemException
   rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
 .
-bdo:itemForWork
+bdo:itemForInstance
   a owl:ObjectProperty ;
-  adm:userTooltip "This Item represents a physical or digital instance of the referenced Work"@en ;
+  adm:technicalComment "was :itemForWork."@en ;
+  adm:userTooltip "This Item represents an occurrence of the referenced PhysicalInstance"@en ;
   bdo:inferSubTree true ;
   rdfs:domain bdo:Item ;
-  rdfs:label "for work"@en ;
-  rdfs:range bdo:Work ;
-  owl:inverseOf bdo:workHasItem ;
+  rdfs:label "for instance"@en ;
+  rdfs:range bdo:PhysicalInstance ;
+  owl:inverseOf bdo:instanceHasItem ;
 .
 bdo:itemHasVolume
   a owl:ObjectProperty ;
@@ -2764,7 +2790,7 @@ bdo:noteWork
   adm:userTooltip "The source Work for the noteContent"@en ;
   rdfs:domain bdo:Note ;
   rdfs:label "source"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:BiblioEntity ;
 .
 bdo:onDate
   a owl:DatatypeProperty ;
@@ -3050,7 +3076,7 @@ bdo:placeWBArea
 bdo:printMethod
   a owl:ObjectProperty ;
   adm:userTooltip "Indicates the printing method of the Item associated with the Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "print method"@en ;
   rdfs:range bdo:PrintMethod ;
 .
@@ -3437,11 +3463,12 @@ bdo:workCatalogInfo
   rdfs:label "summary"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workCollection
+bdo:inCollection
   a owl:ObjectProperty ;
+  adm:technicalComment "was :workCollection"@en ;
   adm:translationPriority 2 ;
-  adm:userTooltip "This work is contained at the identified institution"@en ;
-  rdfs:domain bdo:Work ;
+  adm:userTooltip "This instance is contained at the identified institution"@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "in collection"@en ;
   rdfs:range bdo:CollectionInstitution ;
 .
@@ -3449,14 +3476,15 @@ bdo:workColophon
   a owl:DatatypeProperty ;
   adm:technicalComment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
   adm:userTooltip "A transcription of the colophon of the Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "colophon"@en ;
-  rdfs:range bdo:LangStringOrNoColophon ;
+  rdfs:range rdf:langString ;
 .
-bdo:workComplete
+bdo:instanceComplete
   a owl:DatatypeProperty ;
-  adm:userTooltip "true if the work is complete"@en ;
-  rdfs:domain bdo:Work ;
+  adm:technicalComment "was :workComplete"@en ;
+  adm:userTooltip "true if the instance is complete"@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "complete"@en ;
   rdfs:range xsd:boolean ;
 .
@@ -3526,10 +3554,11 @@ bdo:workDimWidth
   adm:userTooltip "width of the physical item, of this :Work, that is held or scanned in cm"@en ;
   rdfs:label "width"@en ;
 .
-bdo:workDimensions
+bdo:instanceDimensions
   a owl:DatatypeProperty ;
+  adm:technicalComment "was :workDimensions"@en ;
   adm:userTooltip "The physical dimensions of the work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "physical dimensions"@en ;
   rdfs:range xsd:string ;
 .
@@ -3540,24 +3569,26 @@ bdo:workEditionStatement
   rdfs:label "edition statement"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workErrata
+bdo:instanceErrata
   a owl:DatatypeProperty ;
+  adm:technicalComment "was :workErrata"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates a statement of error in the content"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "errata"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workEvent
   a owl:ObjectProperty ;
   adm:userTooltip "A description of the what, when and where of an event in the life of a work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "event"@en ;
   rdfs:range bdo:WorkEvent ;
 .
-bdo:workExpressionOf
+bdo:instanceOf
   a owl:ObjectProperty ;
-  adm:technicalComment """The subject work is an expression of the referenced work. This may mean that the subject work is an edition or version or the only extant occurrence of the referenced work.
+  adm:technicalComment "was :workExpressionOf"@en ;
+  adm:technicalComment """The subject Instance is an instance of the referenced :Work. This may mean that the subject instance is an edition or version or the only extant occurrence of the referenced :Work.
 
 This modeling is relevant when there are more than one occurrence of a work that needs to be accounted for in the library. If there is a single edition of a unique work then this elaborate modeling is not needed; however, for many works in the domain of Buddhist Universal Digital Archive there are many expressions of a single identified \"conceptual\" work such as the Kanjur, Tengyur, Nyingma Gyu Bum, Rinchen Terdzod, Nyingma Kama, Songs of Milarepa, and on and on.
 
@@ -3573,29 +3604,30 @@ bdr:W9NEW01 a Work ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label \"Dege Kanjur\"@en ;
             :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-      :workExpressionOf bdr:T2423 .
+      :instanceOf bdr:T2423 .
 
 bdr:W22703 a Work ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label \"Narthang Kanjur\"@en ;
             :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-      :workExpressionOf bdr:T2423 .
+      :instanceOf bdr:T2423 .
 
 bdr:W26071 a Work ;
       :workHasTitle [ a :WorkTitle ;
             rdfs:label \"Lhasa Kanjur\"@en ;
             :workHasTitleType bdr:TitleTypeBibliographicalTitle ]
-      :workExpressionOf bdr:T2423 ."""@en ;
-  adm:userTooltip "Links an abstract / conceptual work and one of its expressions / manifestations"@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "expression of"@en ;
+      :instanceOf bdr:T2423 ."""@en ;
+  adm:userTooltip "Links an (abstract) :Work and one of its instances"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "instance of"@en ;
   rdfs:range bdo:Work ;
   owl:inverseOf bdo:workHasExpression ;
 .
-bdo:workExtentStatement
+bdo:instanceExtentStatement
   a owl:DatatypeProperty ;
-  adm:userTooltip "A statement of the extent of the Work"@en ;
-  rdfs:domain bdo:Work ;
+  adm:technicalComment "was :workExtentStatement"@en ;
+  adm:userTooltip "A statement of the extent of the Instance"@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
 .
@@ -3627,19 +3659,21 @@ bdo:workHasDerivative
   rdfs:subPropertyOf bdo:workHasExpression ;
   owl:inverseOf bdo:workDerivativeOf ;
 .
-bdo:workHasExpression
+bdo:workHasInstance
   a owl:ObjectProperty ;
-  adm:userTooltip "The referenced Work is an expression of this Work."@en ;
+  adm:technicalComment "was :workHasExpression"@en ;
+  adm:userTooltip "The referenced Instance is an expression of this Work."@en ;
   rdfs:domain bdo:Work ;
-  rdfs:label "has expression"@en ;
-  rdfs:range bdo:Work ;
-  owl:inverseOf bdo:workExpressionOf ;
+  rdfs:label "has instance"@en ;
+  rdfs:range bdo:Instance ;
+  owl:inverseOf bdo:instanceOf ;
 .
-bdo:workHasItem
+bdo:instanceHasItem
   a owl:ObjectProperty ;
-  adm:userTooltip "This Work has an Item, iages, etext, or physical."@en ;
+  adm:technicalComment "was workHasItem"@n ;
+  adm:userTooltip "This physical instance has an associated Item."@en ;
   bdo:inferSubTree true ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "has item"@en ;
   rdfs:range bdo:Item ;
 .
@@ -3660,18 +3694,18 @@ bdo:workHasParallelsIn
 bdo:workHasPart
   a owl:ObjectProperty ;
   adm:userTooltip "links a work and one of its part (a collection and a text in the collection, a text and one of its chapters, etc.)"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has part"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:BiblioEntity ;
   rdfs:seeAlso bdo:workPartOf ;
   owl:inverseOf bdo:workPartOf ;
 .
 bdo:workHasReproduction
   a owl:ObjectProperty ;
   adm:userTooltip "References a Work that is a reproduction of this Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has reproduction"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:BiblioEntity ;
   owl:inverseOf bdo:workReproductionOf ;
 .
 bdo:workHasRoot
@@ -3692,22 +3726,23 @@ rather than storing the triple explicitly for every part of a large composite :W
 Adding this \"virtual\" property to the ontology provides a place to add the labels needed for localization of applications"""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "For a sub(sub, etc) Work the target Work is the top-level containing Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has root"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:BiblioEntity ;
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
   adm:deprecatedComment "deprecated in favor of the various :WorkEvents."@en ;
   adm:userTooltip "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
 .
-bdo:workHasSourcePrintery
+bdo:instanceHasSourcePrintery
   a owl:ObjectProperty ;
+  adm:technicalComment "was :workHasSourcePrintery"@en ;
   adm:userTooltip "used to indicate the printery of a traditional artefact"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "printed at"@en ;
   rdfs:range bdo:Place ;
 .
@@ -3728,14 +3763,14 @@ bdo:workHollis
 There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "The Harvard Online Library ID for the Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "hollis id"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workIllustrations
   a owl:DatatypeProperty ;
   adm:userTooltip "Provides a string describing the presence of illustrations, portraits, color plates and so on."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "illustrations"@en ;
   rdfs:range xsd:string ;
 .
@@ -3755,14 +3790,14 @@ bdo:workIsNumbered
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "number in series"@en ;
   rdfs:range xsd:boolean ;
 .
 bdo:workIsbn
   a owl:DatatypeProperty ;
   adm:userTooltip "Refers to the International Standard Book Number for the Work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "ISBN"@en ;
   rdfs:range bdo:ISBN ;
 .
@@ -3893,21 +3928,21 @@ bdo:workLangScript
   a owl:ObjectProperty ;
   adm:catalogingConvention "Every Work should have at least one :workLangScript indicating the primary laguage and script in which the language is presented. There may be more than one :workLangScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
   adm:userTooltip "Indicates the primary language and script in which the Work is expressed."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "language"@en ;
   rdfs:range bdo:LangScript ;
 .
 bdo:workLcCallNumber
   a owl:DatatypeProperty ;
   adm:userTooltip "Refers to the Library of Congress Shelf mark call number"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has LC Call Number"@en ;
   rdfs:range bdo:LCCallNumber ;
 .
 bdo:workLccn
   a owl:DatatypeProperty ;
   adm:userTooltip "Refers to the Library of Congress Control Number"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "LCCN"@en ;
   rdfs:range bdo:LCCN ;
 .
@@ -3917,13 +3952,13 @@ bdo:workLinkTo
   adm:userTooltip "Indicates a member Work of a VirtualWork (an ad hoc collection of Works)"@en ;
   rdfs:domain bdo:VirtualWork ;
   rdfs:label "work link to"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:VirtualWork ;
   owl:inverseOf bdo:workLinkedAt ;
 .
 bdo:workLinkedAt
   a owl:InverseFunctionalProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "work linked at"@en ;
   rdfs:range bdo:VirtualWork ;
   owl:deprecated true ;
@@ -4027,7 +4062,7 @@ bdo:workLocationSide
 bdo:workLocationStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "A statement of the location of this Work in a containing Work or of the pagination present in the text versus the formal location in terms of page images."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "location statement"@en ;
   rdfs:range xsd:string ;
 .
@@ -4064,7 +4099,7 @@ bdo:workMicrofilm
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "The Work was digitized from a microfilm copy."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "work from microfilm"@en ;
   rdfs:range bdo:ObjectTypeMicrofilm ;
 .
@@ -4074,7 +4109,7 @@ bdo:workNumberOf
   adm:userTooltip "Indicates that this Work is a member of a series."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "In"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:SerialWork ;
 .
 bdo:workNumberOfVolumes
   a owl:DatatypeProperty ;
@@ -4108,7 +4143,7 @@ bdo:workPL480
   adm:catalogingConvention "Id and indication that the Work was prepared and acquired as part of Gene Smith's contribution to the implementation of Public Law 480 in India in the 1960's and 70's"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates that the Work was acquired as part of Gene Smith's contribution to the implementation of Public Law 480"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "pl480"@en ;
   rdfs:range xsd:string ;
 .
@@ -4161,7 +4196,7 @@ W1_0007
     :workPartIndex 2 ;"""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "The part index is used to provide a simple way to order the parts of a parent Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "part index"@en ;
   rdfs:range xsd:integer ;
 .
@@ -4170,7 +4205,7 @@ bdo:workPartLabel
   adm:catalogingConvention "Use this property to reflect a label/name for a \"synthetic\" part of a work such as \"Sutra Basket\" or \"Guhyagarbha Commentaries\" that is not identified directly in a composite work such Kangyur or Kama but that helps to highlight the organization of composite work"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "A label that helps to highlight the organization of composite work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "part label"@en ;
   rdfs:range rdf:langString ;
 .
@@ -4190,9 +4225,9 @@ bdr:SomeKanjurVinayaSection a :Work ;
       :workBeginsAt bdr:WorkLocationZ001 ;
       :workEndsAt bdr:WorksLocationZ002 ."""@en ;
   adm:userTooltip "Indicates the direct parent in the hierarchy of the work content"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "part of"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:BiblioEntity ;
   owl:inverseOf bdo:workHasPart ;
 .
 bdo:workPartTreeIndex
@@ -4209,18 +4244,19 @@ so go to the fifth child of the root then to the first of its children, then to 
 bdo:workPartType
   a owl:ObjectProperty ;
   adm:userTooltip "If the subject work is part of another work, then this reflects the type of part: chapter, section, text, etc."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "part type"@en ;
   rdfs:range bdo:WorkPartType ;
 .
-bdo:workPrintery
+bdo:instancePrintery
   a owl:DatatypeProperty ;
+  adm:technicalComment "was :workPrintery"@en ;
   adm:catalogingConvention """Free text comment on where the copy of the Work that was digitized was printed.
 
 This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
   adm:translationPriority 2 ;
-  adm:userTooltip "Free text comment on where the copy of the Work that was digitized was printed."@en ;
-  rdfs:domain bdo:Work ;
+  adm:userTooltip "Free text comment on where the copy of the Instance that was digitized was printed."@en ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "printery"@en ;
   rdfs:range rdf:langString ;
 .
@@ -4228,7 +4264,7 @@ bdo:workPublisherLocation
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   adm:userTooltip "Loction of the publisher of the form of the Work that has been digitized."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4237,7 +4273,7 @@ bdo:workPublisherName
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4304,14 +4340,14 @@ bdr:W22084 :workReproductionOf bdr:W9NEW01
 
 indicates that bdr:W22084 is considered to be scanned images from a reproduction of the conceptual sdg dge Kanjur identified here as bdr:W9NEW01. The bdr:W9NEW01 denotes the constellation of versions/reproductions and derivatives of the (mythical) sde dge Kanjur."""@en ;
   adm:userTooltip "The subject work is a reproduction of the referenced work such as a photocopy or an offset print of an original or photocopy and so on."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "reproduction of"@en ;
-  rdfs:range bdo:Work ;
+  rdfs:range bdo:BiblioEntity ;
 .
 bdo:workScanInfo
   a owl:DatatypeProperty ;
   adm:userTooltip "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:ImageInstance ;
   rdfs:label "scan info"@en ;
   rdfs:range rdf:langString ;
 .
@@ -4320,14 +4356,14 @@ bdo:workSeeHarvard
   adm:technicalComment "what is this used for versus the Hollis ID?"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Gives an identifier in the Harvard library catalog."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "see Harvard"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workSeriesContent
   a owl:DatatypeProperty ;
   adm:technicalComment "does not appear to be used."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "series content"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4335,7 +4371,7 @@ bdo:workSeriesContent
 bdo:workSeriesName
   a owl:DatatypeProperty ;
   adm:catalogingConvention "do not use for new records, a proper work should be created for the series."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "series name"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4343,7 +4379,7 @@ bdo:workSeriesName
 bdo:workSeriesNumber
   a owl:DatatypeProperty ;
   adm:userTooltip "This is the number of this Work in a series - implies that this work is a part (member of) a series Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "number"@en ;
   rdfs:range xsd:string ;
 .
@@ -4351,14 +4387,14 @@ bdo:workSideBoxSequenceId
   a owl:DatatypeProperty ;
   adm:catalogingConvention "An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts. Conventionally appearing in a side box of the textbox. See bdr:W22080 for an example."@en ;
   adm:userTooltip "An identifer, typically a Tibetan letter, indicating the position of the text in a sequence of texts."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "side box sequence id"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workSourceNote
   a owl:DatatypeProperty ;
   adm:userTooltip "A note about the origin of the form of the Work that was digitized."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "source note"@en ;
   rdfs:range rdf:langString ;
 .
@@ -4368,7 +4404,7 @@ bdo:workSourcePrintery_string
 
 Should be converted to a reference to a Place resource"""@en ;
   adm:userTooltip "Free-text expression of the source printery for the Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "source printery"@en ;
   rdfs:range xsd:string ;
   owl:deprecated true ;
@@ -4376,7 +4412,7 @@ Should be converted to a reference to a Place resource"""@en ;
 bdo:workTitle
   a owl:ObjectProperty ;
   adm:userTooltip "Asserts that the subject Work has a particular title."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "title"@en ;
   rdfs:range bdo:WorkTitle ;
   rdfs:seeAlso bdo:WorkTitle ;
@@ -4393,7 +4429,7 @@ bdo:workTranslationOf
 bdo:workType
   a owl:ObjectProperty ;
   adm:deprecatedComment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "work type"@en ;
   rdfs:range bdo:WorkType ;
   rdfs:seeAlso bdo:WorkType ;
