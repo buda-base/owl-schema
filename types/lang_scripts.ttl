@@ -404,6 +404,13 @@ bdr:Zh
   rdfs:subClassOf bdo:LangScript ;
   skos:prefLabel "Chinese"@en ;
 .
+bdr:ZhHani
+  a bdr:Zh ;
+  bdo:language bdr:LangZh ;
+  bdo:script bdr:ScriptHani ;
+  rdfs:subClassOf bdr:Zh ;
+  skos:prefLabel "Chinese"@en ;
+.
 bdr:ZhHans
   a bdr:Zh ;
   bdo:language bdr:LangZh ;

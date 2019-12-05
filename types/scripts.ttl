@@ -67,6 +67,11 @@ bdr:ScriptGupta
   skos:prefLabel "Gupta"@en ;
   adm:translationPriority 2 ;
 .
+bdr:ScriptHani
+  a bdo:Script ;
+  rdfs:seeAlso <http://www.lexvo.org/page/script/Hani> ;
+  skos:prefLabel "Chinese"@en ;
+.
 bdr:ScriptHans
   a bdo:Script ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Hans> ;
