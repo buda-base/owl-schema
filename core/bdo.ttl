@@ -352,7 +352,7 @@ If the chunk is from an OCR'd text, then there is additional information indicat
 The character counts are in terms of Unicode codepoints in whatever representation is used, typically, UTF-8."""@en ;
   bdo:inferSubTree true ;
   rdfs:label "eText"@en ;
-  rdfs:subClassOf bdo:Entity ;
+  rdfs:subClassOf bdo:BiblioEntity ;
 .
 bdo:EtextChunk
   a owl:Class ;
@@ -1223,18 +1223,27 @@ bdo:SecondTranslatedEvent
   rdfs:label "Second translated event" ;
   rdfs:subClassOf bdo:WorkEvent ;
 .
-bdo:SerialInstance
+bdo:SerialMember
+  a owl:Class ;
+  adm:seeAlso bdo:SerialMemberInstance ;
+  adm:technicalComment "The (abstract) :SeriesNumber resource contains the Work metadata associated with a number of a :SerialWork  "@en ;
+  adm:userTooltip "The Work metadata about a member of a :SerialWork"@en ;
+  rdfs:label "Series Member" ;
+  rdfs:subClassOf bdo:Work ;
+.
+bdo:SerialMemberInstance
   a owl:Class ;
   adm:technicalComment "Was SerialWork, changed to align with Bibframe 2.0"@en ;
-  adm:userTooltip "A Serial instance published as a series of volues/numbers over time."@en ;
-  rdfs:label "Serial instance" ;
+  adm:userTooltip "An instance of a SeriesMember."@en ;
+  rdfs:label "Series Member instance" ;
   rdfs:subClassOf bdo:Instance ;
 .
 bdo:SerialWork
   a owl:Class ;
   adm:technicalComment "Was SerialWork now split into an (abstract) Work Class and an Instance Class, changed to align with Bibframe 2.0"@en ;
-  adm:userTooltip "An (abstreact) Work representing a series of volues/numbers published over time"@en ;
-  rdfs:label "Serial work" ;
+  adm:userTooltip "An (abstreact) Work representing a series of volumes/numbers published over time"@en ;
+  rdfs:label "Serial Work"@en ;
+  rdfs:seeAlso <https://www.abc-clio.com/ODLIS/odlis_S.aspx?#serial> ;
   rdfs:subClassOf bdo:Work ;
 .
 bdo:SingleAgent
@@ -1347,7 +1356,7 @@ bdo:Volume
 Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive."""@en ;
   adm:userTooltip "A volume is a self-contained set of pages/folia."@en ;
   rdfs:label "Volume"@en ;
-  rdfs:subClassOf bdo:Entity ;
+  rdfs:subClassOf bdo:BiblioEntity ;
 .
 bdo:VolumeEtextAsset
   a owl:Class ;
@@ -2522,7 +2531,7 @@ bdr:W26071 a Work ;
   rdfs:domain bdo:Instance ;
   rdfs:label "instance of"@en ;
   rdfs:range bdo:Work ;
-  owl:inverseOf bdo:workHasExpression ;
+  owl:inverseOf bdo:workHasInstance ;
 .
 bdo:instancePrintery
   a owl:DatatypeProperty ;
@@ -3258,6 +3267,38 @@ bdo:seqNum
   rdfs:label "sequence number"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
+bdo:serialHasInstance
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:SerialMember ;
+  rdfs:label "serial has instance" ;
+  rdfs:range bdo:SerialMemberInstance ;
+  rdfs:subPropertyOf bdo:workHasInstance ;
+  owl:inverseOf bdo:serialInstanceOf ;
+.
+bdo:serialHasMember
+  a owl:ObjectProperty ;
+  adm:userTooltip "used to reference the number associated with the work in the series"@en ;
+  rdfs:domain bdo:SerialWork ;
+  rdfs:label "has serial member"@en ;
+  rdfs:range bdo:SerialMember ;
+  owl:inverseOf bdo:serialMemberOf ;
+.
+bdo:serialInstanceOf
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:SerialMemberInstance ;
+  rdfs:label "serial instance of"@en ;
+  rdfs:range bdo:SerialMember ;
+  rdfs:subPropertyOf bdo:instanceOf ;
+  owl:inverseOf bdo:serialHasInstance ;
+.
+bdo:serialMemberOf
+  a owl:ObjectProperty ;
+  adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
+  adm:userTooltip "Indicates that this Work is a member of a series."@en ;
+  rdfs:domain bdo:SerialMember ;
+  rdfs:label "serial member of"@en ;
+  rdfs:range bdo:SerialWork ;
+.
 bdo:sliceEndChar
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
@@ -3699,8 +3740,11 @@ bdo:workHasInstance
 .
 bdo:workHasNumber
   a owl:ObjectProperty ;
+  adm:deprecatedComment "now use :serialHasMember"@en ;
+  adm:replaceWithObjectProperty bdo:serialHasMember ;
   adm:userTooltip "used to reference the number associated with the work in the series"@en ;
   rdfs:label "number"@en ;
+  owl:deprecated true ;
   owl:inverseOf bdo:workNumberOf ;
 .
 bdo:workHasParallelsIn
@@ -3800,11 +3844,13 @@ bdo:workIsAbout
 .
 bdo:workIsNumbered
   a owl:DatatypeProperty ;
+  adm:deprecatedComment "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "number in series"@en ;
   rdfs:range xsd:boolean ;
+  owl:deprecated true ;
 .
 bdo:workIsbn
   a owl:DatatypeProperty ;
@@ -4118,10 +4164,13 @@ bdo:workMicrofilm
 bdo:workNumberOf
   a owl:ObjectProperty ;
   adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
+  adm:deprecatedComment "now use :serialMemberOf"@en ;
+  adm:replaceWithObjectProperty bdo:serialMemberOf ;
   adm:userTooltip "Indicates that this Work is a member of a series."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "In"@en ;
   rdfs:range bdo:SerialWork ;
+  owl:deprecated true ;
 .
 bdo:workNumberOfVolumes
   a owl:DatatypeProperty ;

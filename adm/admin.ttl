@@ -954,6 +954,11 @@ In any event, when a per:Person is being migrated with info/@type = nonactor the
 bdo:placeChgisId
   adm:migrationComment "A legacy Chinese gis id for the Place provided during migration of historical Tibetan Places by Karl Ryavec and Lex Berman"@en ;
 .
+bdo:serialMemberOf
+  adm:migrationComment """Migration hint: Use this when a Work has <w:info number=\"?\" parent=\"Wxxx\"/> via:
+
+bdr:Wwww :workNumberOf bdr:Wxxx ."""@en ;
+.
 bdo:volumePhysicalDescription
   adm:migrationComment "Migration hint: for FPL Works map the <work:description type=\"remarks\"/>to :volumePhysicalDescription with string with language tag \"en\""@en ;
 .
@@ -974,11 +979,6 @@ bdo:workExpressionOf
 .
 bdo:workExtentStatement
   adm:migrationComment "Migration hint: use also for <o:description type=\"extent\"/>"@en ;
-.
-bdo:workNumberOf
-  adm:migrationComment """Migration hint: Use this when a Work has <w:info number=\"?\" parent=\"Wxxx\"/> via:
-
-bdr:Wwww :workNumberOf bdr:Wxxx ."""@en ;
 .
 bdo:workNumberOfVolumes
   adm:migrationComment "Migration info: this is the <work:archiveInfo @vols/> attribute."@en ;
