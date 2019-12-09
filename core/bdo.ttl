@@ -281,6 +281,11 @@ bdo:Date
 bdo:DateIndication
   rdfs:subClassOf bdo:Type ;
 .
+bdo:DigitalInstance
+  a owl:Class ;
+  rdfs:label "Digital instance" ;
+  rdfs:subClassOf bdo:Instance ;
+.
 bdo:EditedEvent
   a owl:Class ;
   adm:deprecatedComment "deprecated in favor of :CompiledEvent"@en ;
@@ -371,7 +376,7 @@ An :ItemEtext typically will represent an entire published Work. There won't be 
   adm:userTooltip "An Instance consisting of some form of searchable text"@en ;
   rdfs:label "eText instance"@en ;
   rdfs:seeAlso bdo:Etext ;
-  rdfs:subClassOf bdo:Instance ;
+  rdfs:subClassOf bdo:DigitalInstance ;
 .
 bdo:EtextLine
   a owl:Class ;
@@ -513,7 +518,7 @@ bdo:ImageInstance
   adm:technicalComment "A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats."@en ;
   adm:userTooltip "An item comprised of digitized images of the pages of a Work"@en ;
   rdfs:label "Image item"@en ;
-  rdfs:subClassOf bdo:Instance ;
+  rdfs:subClassOf bdo:DigitalInstance ;
 .
 bdo:Instance
   a owl:Class ;
@@ -3767,9 +3772,9 @@ bdo:workHasPart
 bdo:workHasReproduction
   a owl:ObjectProperty ;
   adm:userTooltip "References a Work that is a reproduction of this Work."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "has reproduction"@en ;
-  rdfs:range bdo:BiblioEntity ;
+  rdfs:range bdo:Instance ;
   owl:inverseOf bdo:workReproductionOf ;
 .
 bdo:workHasRoot
