@@ -567,6 +567,11 @@ In some cases, such as texts from the Asian Classics Input Project (ACIP), pagin
   rdfs:label "Paginated Etext Item"@en ;
   rdfs:subClassOf bdo:ItemEtext ;
 .
+bdo:ItemMicrofilmAsset
+  a owl:Class ;
+  rdfs:label "Item microfilm asset" ;
+  rdfs:subClassOf bdo:ItemPhysicalAsset ;
+.
 bdo:ItemPhysicalAsset
   a owl:Class ;
   adm:technicalComment """A ItemPhysicalAsset refers to the library Place which has one or more physical copies of the  catalogued Work and shows the number of copies that are held at the library. The :itemShelf is the Library's shelving information concerning the location in the library of the physical copies. The exception is an optional note regarding missing volumes in a copy or other information such as may  be useful to qualify the status of one or more copies.
@@ -2458,6 +2463,14 @@ bdo:instanceComplete
   rdfs:label "complete"@en ;
   rdfs:range xsd:boolean ;
 .
+bdo:instanceDerivativeOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "References an Instance that this Instance is a derivative of."@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "instance derivative of"@en ;
+  rdfs:range bdo:Instance ;
+  owl:inverseOf bdo:instanceHasDerivative ;
+.
 bdo:instanceDimensions
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workDimensions"@en ;
@@ -2483,6 +2496,14 @@ bdo:instanceExtentStatement
   rdfs:label "extent statement"@en ;
   rdfs:range xsd:string ;
 .
+bdo:instanceHasDerivative
+  a owl:ObjectProperty ;
+  adm:userTooltip "References an Instance that is a derivative of this Instance."@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "has derivative"@en ;
+  rdfs:range bdo:Instance ;
+  owl:inverseOf bdo:instanceReproductionOf ;
+.
 bdo:instanceHasItem
   a owl:ObjectProperty ;
   adm:technicalComment "was workHasItem"@n ;
@@ -2491,6 +2512,16 @@ bdo:instanceHasItem
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "has item"@en ;
   rdfs:range bdo:Item ;
+.
+bdo:instanceHasReproduction
+  a owl:ObjectProperty ;
+  adm:technicalComment "was :workHasReproduction"@en ;
+  adm:userTooltip "References an Instance that is a reproduction of this Instance."@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "has reproduction"@en ;
+  rdfs:range bdo:Instance ;
+  rdfs:subPropertyOf bdo:instanceHasDerivative ;
+  owl:inverseOf bdo:instanceReproductionOf ;
 .
 bdo:instanceHasSourcePrintery
   a owl:ObjectProperty ;
@@ -2549,6 +2580,22 @@ This is generally not the source printery of the original wood block prints that
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "printery"@en ;
   rdfs:range rdf:langString ;
+.
+bdo:instanceReproductionOf
+  a owl:ObjectProperty ;
+  adm:catalogingConvention """This is relevant to record versus :workExpressionOf when there may be features peculariar to the fact of reproduction versus a direct production such as from master woodblocks or, in a more modern setting, the original offset plates from an input text.
+
+For example,
+
+bdr:W22084 :workReproductionOf bdr:W9NEW01
+
+indicates that bdr:W22084 is considered to be scanned images from a reproduction of the conceptual sdg dge Kanjur identified here as bdr:W9NEW01. The bdr:W9NEW01 denotes the constellation of versions/reproductions and derivatives of the (mythical) sde dge Kanjur."""@en ;
+  adm:technicalComment "was :workReproductionOf"@en ;
+  adm:userTooltip "The subject instance is a reproduction of the referenced instance such as a photocopy or an offset print of an original or photocopy and so on."@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "instance reproduction of"@en ;
+  rdfs:range bdo:Instance ;
+  rdfs:subPropertyOf bdo:instanceDerivativeOf ;
 .
 bdo:interpretationOf
   a owl:ObjectProperty ;
@@ -2833,6 +2880,15 @@ bdo:microfilmCanister
   rdfs:label "microfilm canister"@en ;
   rdfs:range xsd:string ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
+.
+bdo:microfilmItem
+  a owl:ObjectProperty ;
+  adm:technicalComment "was :workMicrofilm"@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "The microfilm item from which the instance was digitized."@en ;
+  rdfs:domain bdo:ItemMicrofilmAsset ;
+  rdfs:label "item from microfilm"@en ;
+  rdfs:range bdo:ObjectTypeMicrofilm ;
 .
 bdo:microfilmStrip
   a owl:DatatypeProperty ;
@@ -3674,7 +3730,6 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
   rdfs:domain bdo:Work ;
   rdfs:label "derivative of"@en ;
   rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workExpressionOf ;
   owl:inverseOf bdo:workHasDerivative ;
 .
 bdo:workDimHeight
@@ -3731,7 +3786,6 @@ bdo:workHasDerivative
   rdfs:domain bdo:Work ;
   rdfs:label "has derivative"@en ;
   rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workHasExpression ;
   owl:inverseOf bdo:workDerivativeOf ;
 .
 bdo:workHasInstance
@@ -3759,6 +3813,7 @@ bdo:workHasParallelsIn
   rdfs:domain bdo:Work ;
   rdfs:label "parallels in"@en ;
   rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workHasDerivative ;
 .
 bdo:workHasPart
   a owl:ObjectProperty ;
@@ -3768,14 +3823,6 @@ bdo:workHasPart
   rdfs:range bdo:BiblioEntity ;
   rdfs:seeAlso bdo:workPartOf ;
   owl:inverseOf bdo:workPartOf ;
-.
-bdo:workHasReproduction
-  a owl:ObjectProperty ;
-  adm:userTooltip "References a Work that is a reproduction of this Work."@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "has reproduction"@en ;
-  rdfs:range bdo:Instance ;
-  owl:inverseOf bdo:workReproductionOf ;
 .
 bdo:workHasRoot
   a owl:ObjectProperty ;
@@ -4158,14 +4205,6 @@ bdo:workMaterial
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
 .
-bdo:workMicrofilm
-  a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "The Work was digitized from a microfilm copy."@en ;
-  rdfs:domain bdo:BiblioEntity ;
-  rdfs:label "work from microfilm"@en ;
-  rdfs:range bdo:ObjectTypeMicrofilm ;
-.
 bdo:workNumberOf
   a owl:ObjectProperty ;
   adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
@@ -4384,20 +4423,6 @@ bdo:workRefs
   rdfs:domain bdo:WorkRefs ;
   rdfs:label "reference number"@en ;
 .
-bdo:workReproductionOf
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """This is relevant to record versus :workExpressionOf when there may be features peculariar to the fact of reproduction versus a direct production such as from master woodblocks or, in a more modern setting, the original offset plates from an input text.
-
-For example,
-
-bdr:W22084 :workReproductionOf bdr:W9NEW01
-
-indicates that bdr:W22084 is considered to be scanned images from a reproduction of the conceptual sdg dge Kanjur identified here as bdr:W9NEW01. The bdr:W9NEW01 denotes the constellation of versions/reproductions and derivatives of the (mythical) sde dge Kanjur."""@en ;
-  adm:userTooltip "The subject work is a reproduction of the referenced work such as a photocopy or an offset print of an original or photocopy and so on."@en ;
-  rdfs:domain bdo:BiblioEntity ;
-  rdfs:label "reproduction of"@en ;
-  rdfs:range bdo:BiblioEntity ;
-.
 bdo:workScanInfo
   a owl:DatatypeProperty ;
   adm:userTooltip "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
@@ -4478,6 +4503,7 @@ bdo:workTranslationOf
   rdfs:domain bdo:Work ;
   rdfs:label "translation of"@en ;
   rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workDerivativeOf ;
   owl:inverseOf bdo:workHasTranslation ;
 .
 bdo:workType
