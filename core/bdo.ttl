@@ -4124,12 +4124,14 @@ bdo:workLocationEndVolume
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "end volume"@en ;
   rdfs:range bdo:IntegerOrString ;
+  owl:deprecated true ;
 .
 bdo:workLocationEndVolumeName
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates the ending volume name of a Work location."@en ;
   rdfs:label "location ending volume name"@en ;
+  owl:deprecated true ;
 .
 bdo:workLocationLine
   a owl:DatatypeProperty ;
@@ -4153,6 +4155,15 @@ bdo:workLocationPhrase
   rdfs:domain bdo:WorkLocation ;
   rdfs:label "phrase"@en ;
   rdfs:range bdo:IntegerOrString ;
+.
+bdo:workLocationSeqNum
+  a owl:DatatypeProperty ;
+  adm:catalogingConvention "in the typical case when an work is completely contained in a single volume then the only loction will have seqnum 1; otherwise, there may be 2 or more additional locations specifying where the parts of a work occur"@en ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "sequence number of the work location in a list of locations"@en ;
+  rdfs:domain bdo:WorkLocation ;
+  rdfs:label "location sequence number"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:workLocationSide
   a owl:DatatypeProperty ;
