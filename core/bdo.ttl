@@ -2327,7 +2327,7 @@ bdo:hasWorkNum
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "the number of this work within a containing work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "has work number"@en ;
   rdfs:range xsd:string ;
 .
@@ -2475,7 +2475,7 @@ bdo:instanceDimensions
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workDimensions"@en ;
   adm:userTooltip "The physical dimensions of the work"@en ;
-  rdfs:domain bdo:Instance ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "physical dimensions"@en ;
   rdfs:range xsd:string ;
 .
@@ -3471,21 +3471,21 @@ bdo:volumePhysicalDescription
 bdo:workAuthorshipStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "Authorship statement for the Work."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "authorship statement"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workBiblioNote
   a owl:DatatypeProperty ;
   adm:userTooltip "A note regarding a bibliographic feature of the Work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "bibliographic note"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workBiblioStatus
   a owl:DatatypeProperty ;
-  adm:userTooltip "A bibliogrpahic status statement in the language of the Work"@en ;
-  rdfs:domain bdo:Work ;
+  adm:userTooltip "A bibliographic status statement in the language of the Instance"@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "bibliographic status statement"@en ;
   rdfs:range rdf:langString ;
 .
@@ -3620,11 +3620,9 @@ bdo:workCBCSiglaS
 bdo:workCBCSiglaT
   a owl:DatatypeProperty ;
   adm:userTooltip "Indicates a CBC Sigla T, Taisho, associated with this Work."@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "CBC Sigla T, Taisho"@en ;
   rdfs:label "Taisho reference number"@en ;
   rdfs:label "大正藏"@zh-hant ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workCBCSiglaU
@@ -3669,8 +3667,8 @@ bdo:workCBCSiglaZW
 .
 bdo:workCatalogInfo
   a owl:DatatypeProperty ;
-  adm:userTooltip "Summary information about the Work"@en ;
-  rdfs:domain bdo:Work ;
+  adm:userTooltip "Summary information about the Instance"@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "summary"@en ;
   rdfs:range rdf:langString ;
 .
@@ -3735,22 +3733,28 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
 bdo:workDimHeight
   a owl:DatatypeProperty ;
   adm:userTooltip "height or thickness of the physical item of a :Work in cm"@en ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "height"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:workDimLength
   a owl:DatatypeProperty ;
   adm:userTooltip "length of the physical item, of this :Work, that is held or scanned in cm"@en ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "length"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:workDimWidth
   a owl:DatatypeProperty ;
   adm:userTooltip "width of the physical item, of this :Work, that is held or scanned in cm"@en ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "width"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:workEditionStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "An Edition statement expresses information about this Work as an edition."@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "edition statement"@en ;
   rdfs:range rdf:langString ;
 .
@@ -3766,7 +3770,6 @@ bdo:workFEMCManuscriptCode
   adm:translationPriority 2 ;
   adm:userTooltip "FEMC Manuscript Code" ;
   rdfs:label "FEMC Manuscript code"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workGenre
@@ -3885,7 +3888,7 @@ bdo:workIllustrations
 bdo:workIncipit
   a owl:DatatypeProperty ;
   adm:userTooltip "The opening words of the Work"@en ;
-  rdfs:domain bdo:Work ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "incipit"@en ;
   rdfs:range rdf:langString ;
 .
@@ -3907,50 +3910,41 @@ bdo:workIsNumbered
 bdo:workIsbn
   a owl:DatatypeProperty ;
   adm:userTooltip "Refers to the International Standard Book Number for the Work"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "ISBN"@en ;
-  rdfs:range bdo:ISBN ;
+  rdfs:range xsd:string ;
 .
 bdo:workKDPPOldId
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "Khmer Digital Preservation Project Old Id" ;
   rdfs:label "KDPPOld Id"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaA
   a owl:DatatypeProperty ;
   adm:userTooltip "From Paul Hackett's catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Pedurma catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/756377542> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaBon
   a owl:DatatypeProperty ;
   adm:userTooltip "Reference number in the Bon combined Kanjur and Tenjur"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "bon kanjur catalog number"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaC
   a owl:DatatypeProperty ;
   adm:userTooltip "from Mibu's catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Cone catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/603601029> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaD
   a owl:DatatypeProperty ;
   adm:userTooltip "Derge Kangyur and Tengyur reference numbers, from the Tohoku Catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Tohoku catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/976594525> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
@@ -3963,60 +3957,46 @@ bdo:workKaTenSiglaDo
 bdo:workKaTenSiglaG
   a owl:DatatypeProperty ;
   adm:userTooltip "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "gser bris catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaH
   a owl:DatatypeProperty ;
   adm:userTooltip "Lhasa Kanjur reference number"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "lha sa catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaJ
   a owl:DatatypeProperty ;
   adm:userTooltip "From Imaeda's catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "'jang catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/769115653> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaN
   a owl:DatatypeProperty ;
   adm:userTooltip "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "narthang number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/718065580> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaQ
   a owl:DatatypeProperty ;
   adm:userTooltip "Pecing Kangyur Reference number from the Otani catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Otani catalogue reference"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaS
   a owl:DatatypeProperty ;
   adm:userTooltip "Reference number from Skorupski's catalogue"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Stog catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/461960048> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaU
   a owl:DatatypeProperty ;
   adm:userTooltip "Urga Kangyur reference number"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Urga catalogue number"@en ;
-  rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workKaTenSiglaV
@@ -4028,9 +4008,7 @@ bdo:workKaTenSiglaV
 bdo:workKaTenSiglaZ
   a owl:DatatypeProperty ;
   adm:userTooltip "Shey Palace manuscript reference number"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "Shey number"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso <https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
@@ -4045,16 +4023,16 @@ bdo:workLangScript
 bdo:workLcCallNumber
   a owl:DatatypeProperty ;
   adm:userTooltip "Refers to the Library of Congress Shelf mark call number"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "has LC Call Number"@en ;
-  rdfs:range bdo:LCCallNumber ;
+  rdfs:range xsd:string ;
 .
 bdo:workLccn
   a owl:DatatypeProperty ;
   adm:userTooltip "Refers to the Library of Congress Control Number"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "LCCN"@en ;
-  rdfs:range bdo:LCCN ;
+  rdfs:range xsd:string ;
 .
 bdo:workLinkTo
   a owl:InverseFunctionalProperty ;
@@ -4220,6 +4198,7 @@ bdo:workNumberOfVolumes
   a owl:DatatypeProperty ;
   adm:catalogingConvention "This is the number of volumes associated with the original work. Typically this is for a published work. The value may differ from the \"actual\" number of volumes in an associated Item owing to missing volumes."@en ;
   adm:userTooltip "This is the number of volumes associated with the original work."@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "number of volumes"@en ;
   rdfs:range xsd:integer ;
 .
@@ -4301,7 +4280,7 @@ W1_0007
     :workPartIndex 2 ;"""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "The part index is used to provide a simple way to order the parts of a parent Work."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "part index"@en ;
   rdfs:range xsd:integer ;
 .
@@ -4310,7 +4289,7 @@ bdo:workPartLabel
   adm:catalogingConvention "Use this property to reflect a label/name for a \"synthetic\" part of a work such as \"Sutra Basket\" or \"Guhyagarbha Commentaries\" that is not identified directly in a composite work such Kangyur or Kama but that helps to highlight the organization of composite work"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "A label that helps to highlight the organization of composite work"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "part label"@en ;
   rdfs:range rdf:langString ;
 .
@@ -4344,7 +4323,9 @@ bdo:workPartTreeIndex
 so go to the fifth child of the root then to the first of its children, then to the third child of that and finally to that child's second child"""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "A dotted list of indexes of the part among its siblings under each parent up to the root."@en ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "work part tree index"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:workPartType
   a owl:ObjectProperty ;
@@ -4357,7 +4338,7 @@ bdo:workPublisherLocation
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   adm:userTooltip "Loction of the publisher of the form of the Work that has been digitized."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4366,7 +4347,7 @@ bdo:workPublisherName
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4374,9 +4355,7 @@ bdo:workPublisherName
 bdo:workRefChokLing
   a owl:DatatypeProperty ;
   adm:userTooltip "Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "chokling tersar reference"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso "http://rywiki.tsadra.org/index.php/Catalogue_of_the_New_Treasures_of_Chokgyur_Lingpa_Part_1"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
@@ -4384,44 +4363,37 @@ bdo:workRefIsIAO
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "Catalog of the Tucci Tibetan fund in the library of ISMEO"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "IsIAO reference"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso bdr:W19841 ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workRefrKTsG
   a owl:DatatypeProperty ;
   adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs rnying rgyud reference"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workRefrKTsK
   a owl:DatatypeProperty ;
   adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs Kangyur reference"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workRefrKTsT
   a owl:DatatypeProperty ;
   adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
-  rdfs:domain bdo:WorkRefs ;
   rdfs:label "rKTs Tengyur reference"@en ;
-  rdfs:range xsd:string ;
   rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workRefs
   a owl:DatatypeProperty ;
   adm:userTooltip "This property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloging."@en ;
-  rdfs:domain bdo:WorkRefs ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "reference number"@en ;
+  rdfs:range xsd:string ;
 .
 bdo:workScanInfo
   a owl:DatatypeProperty ;
@@ -4435,7 +4407,7 @@ bdo:workSeeHarvard
   adm:technicalComment "what is this used for versus the Hollis ID?"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Gives an identifier in the Harvard library catalog."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "see Harvard"@en ;
   rdfs:range xsd:string ;
 .
@@ -4450,7 +4422,8 @@ bdo:workSeriesContent
 bdo:workSeriesName
   a owl:DatatypeProperty ;
   adm:catalogingConvention "do not use for new records, a proper work should be created for the series."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  adm:technicalComment "the series name should be a Label/Title on a :SerialWork"@en ;
+  rdfs:domain bdo:SerialMember ;
   rdfs:label "series name"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
@@ -4458,7 +4431,7 @@ bdo:workSeriesName
 bdo:workSeriesNumber
   a owl:DatatypeProperty ;
   adm:userTooltip "This is the number of this Work in a series - implies that this work is a part (member of) a series Work."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:SerialMemberInstance ;
   rdfs:label "number"@en ;
   rdfs:range xsd:string ;
 .
