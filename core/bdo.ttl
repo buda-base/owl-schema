@@ -2463,6 +2463,13 @@ bdo:instanceComplete
   rdfs:label "complete"@en ;
   rdfs:range xsd:boolean ;
 .
+bdo:instanceCreator
+  a owl:ObjectProperty ;
+  adm:userTooltip "Associates an Instance with an Agent and a Creator Role that participated in the creation of the Instance. For example, scribe, carver and so on"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "has creator"@en ;
+  rdfs:range bdo:AgentAsCreator ;
+.
 bdo:instanceDerivativeOf
   a owl:ObjectProperty ;
   adm:userTooltip "References an Instance that this Instance is a derivative of."@en ;
@@ -3761,7 +3768,7 @@ bdo:workEditionStatement
 bdo:workEvent
   a owl:ObjectProperty ;
   adm:userTooltip "A description of the what, when and where of an event in the life of a work"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "event"@en ;
   rdfs:range bdo:WorkEvent ;
 .
@@ -3821,9 +3828,9 @@ bdo:workHasParallelsIn
 bdo:workHasPart
   a owl:ObjectProperty ;
   adm:userTooltip "links a work and one of its part (a collection and a text in the collection, a text and one of its chapters, etc.)"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "has part"@en ;
-  rdfs:range bdo:BiblioEntity ;
+  rdfs:range bdo:Instance ;
   rdfs:seeAlso bdo:workPartOf ;
   owl:inverseOf bdo:workPartOf ;
 .
@@ -3845,9 +3852,9 @@ rather than storing the triple explicitly for every part of a large composite :W
 Adding this \"virtual\" property to the ontology provides a place to add the labels needed for localization of applications"""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "For a sub(sub, etc) Work the target Work is the top-level containing Work."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "has root"@en ;
-  rdfs:range bdo:BiblioEntity ;
+  rdfs:range bdo:Instance ;
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
@@ -3895,7 +3902,9 @@ bdo:workIncipit
 bdo:workIsAbout
   a owl:ObjectProperty ;
   adm:userTooltip "The referenced Entity (topic, person, work, etc.) is a subject of the Work - something the Work is about."@en ;
+  rdfs:domain bdo:Work ;
   rdfs:label "is about"@en ;
+  rdfs:range bdo:Entity ;
 .
 bdo:workIsNumbered
   a owl:DatatypeProperty ;
@@ -4056,7 +4065,14 @@ bdo:workLocation
   a owl:ObjectProperty ;
   adm:technicalComment "the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
   adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
-  rdfs:domain bdo:LineageOrNoteOrWork ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Lineage
+          bdo:Note
+          bdo:Work
+        ) ;
+    ] ;
   rdfs:label "location"@en ;
   rdfs:range bdo:WorkLocation ;
   rdfs:seeAlso bdo:Lineage ;
@@ -4179,7 +4195,7 @@ bdo:workMaterial
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "a component material of the source (can be the type of paper, type of ink, etc.)"@en ;
-  rdfs:domain bdo:TextualEntity ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
 .
@@ -4206,7 +4222,7 @@ bdo:workObjectType
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "the type of content: manuscript, blockprint, etc"@en ;
-  rdfs:domain bdo:TextualEntity ;
+  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "object type"@en ;
   rdfs:range bdo:ObjectType ;
 .
@@ -4309,9 +4325,9 @@ bdr:SomeKanjurVinayaSection a :Work ;
       :workBeginsAt bdr:WorkLocationZ001 ;
       :workEndsAt bdr:WorksLocationZ002 ."""@en ;
   adm:userTooltip "Indicates the direct parent in the hierarchy of the work content"@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "part of"@en ;
-  rdfs:range bdo:BiblioEntity ;
+  rdfs:range bdo:Instance ;
   owl:inverseOf bdo:workHasPart ;
 .
 bdo:workPartTreeIndex
@@ -4330,7 +4346,7 @@ so go to the fifth child of the root then to the first of its children, then to 
 bdo:workPartType
   a owl:ObjectProperty ;
   adm:userTooltip "If the subject work is part of another work, then this reflects the type of part: chapter, section, text, etc."@en ;
-  rdfs:domain bdo:BiblioEntity ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "part type"@en ;
   rdfs:range bdo:WorkPartType ;
 .
@@ -4464,7 +4480,13 @@ Should be converted to a reference to a Place resource"""@en ;
 bdo:workTitle
   a owl:ObjectProperty ;
   adm:userTooltip "Asserts that the subject Work has a particular title."@en ;
-  rdfs:domain bdo:Instance ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Instance
+          bdo:Work
+        ) ;
+    ] ;
   rdfs:label "title"@en ;
   rdfs:range bdo:WorkTitle ;
   rdfs:seeAlso bdo:WorkTitle ;
