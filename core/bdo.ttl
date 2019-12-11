@@ -4457,9 +4457,9 @@ bdo:workSeriesName
 .
 bdo:workSeriesNumber
   a owl:DatatypeProperty ;
-  adm:userTooltip "This is the number of this Work in a series - implies that this work is a part (member of) a series Work."@en ;
+  adm:userTooltip "This is the number or other id of this SerialInstance in a SerialWork."@en ;
   rdfs:domain bdo:SerialMemberInstance ;
-  rdfs:label "number"@en ;
+  rdfs:label "series member id"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workSideBoxSequenceId
