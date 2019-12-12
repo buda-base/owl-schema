@@ -2538,6 +2538,14 @@ bdo:instanceHasSourcePrintery
   rdfs:label "printed at"@en ;
   rdfs:range bdo:Place ;
 .
+bdo:instanceHasVolume
+  a owl:ObjectProperty ;
+  adm:userTooltip "refers to a volume description of a digital asset, scanned or etext; or a physical volume."@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "has volume"@en ;
+  rdfs:range bdo:Volume ;
+  owl:inverseOf bdo:volumeOf ;
+.
 bdo:instanceOf
   a owl:ObjectProperty ;
   adm:technicalComment """The subject Instance is an instance of the referenced :Work. This may mean that the subject instance is an edition or version or the only extant occurrence of the referenced :Work.
@@ -2665,14 +2673,6 @@ bdo:itemForInstance
   rdfs:label "for instance"@en ;
   rdfs:range bdo:PhysicalInstance ;
   owl:inverseOf bdo:instanceHasItem ;
-.
-bdo:instanceHasVolume
-  a owl:ObjectProperty ;
-  adm:userTooltip "refers to a volume description of a digital asset, scanned or etext; or a physical volume."@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "has volume"@en ;
-  rdfs:range bdo:Volume ;
-  owl:inverseOf bdo:volumeOf ;
 .
 bdo:itemLibrary
   a owl:ObjectProperty ;
@@ -3356,7 +3356,6 @@ bdo:serialInstanceOf
   rdfs:domain bdo:SerialMemberInstance ;
   rdfs:label "serial instance of"@en ;
   rdfs:range bdo:SerialMember ;
-  rdfs:subPropertyOf bdo:instanceOf ;
   owl:inverseOf bdo:serialHasInstance ;
 .
 bdo:serialMemberOf
