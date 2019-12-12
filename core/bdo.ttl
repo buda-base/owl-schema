@@ -2509,7 +2509,7 @@ bdo:instanceHasDerivative
   rdfs:domain bdo:Instance ;
   rdfs:label "has derivative"@en ;
   rdfs:range bdo:Instance ;
-  owl:inverseOf bdo:instanceReproductionOf ;
+  owl:inverseOf bdo:instanceDerivativeOf ;
 .
 bdo:instanceHasItem
   a owl:ObjectProperty ;
@@ -2666,10 +2666,10 @@ bdo:itemForInstance
   rdfs:range bdo:PhysicalInstance ;
   owl:inverseOf bdo:instanceHasItem ;
 .
-bdo:itemHasVolume
+bdo:instanceHasVolume
   a owl:ObjectProperty ;
   adm:userTooltip "refers to a volume description of a digital asset, scanned or etext; or a physical volume."@en ;
-  rdfs:domain bdo:Item ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "has volume"@en ;
   rdfs:range bdo:Volume ;
   owl:inverseOf bdo:volumeOf ;
@@ -3433,7 +3433,7 @@ bdo:volumeOf
   adm:userTooltip "The subject is a volume of the referenced item."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "volume of"@en ;
-  rdfs:range bdo:Item ;
+  rdfs:range bdo:Instance ;
 .
 bdo:volumePagesIntro
   a owl:DatatypeProperty ;
