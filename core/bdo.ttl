@@ -3340,7 +3340,6 @@ bdo:serialHasInstance
   rdfs:domain bdo:SerialMember ;
   rdfs:label "serial has instance" ;
   rdfs:range bdo:SerialMemberInstance ;
-  rdfs:subPropertyOf bdo:workHasInstance ;
   owl:inverseOf bdo:serialInstanceOf ;
 .
 bdo:serialHasMember
