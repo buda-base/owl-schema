@@ -4608,6 +4608,10 @@ bdr:ObjectTypeTypeSet
   a owl:NamedIndividual ;
   rdfs:label "typeset"@en ;
 .
+bdr:PrintMethod_Lithography
+  a bdo:PrintMethod_Offset ;
+  skos:prefLabel "lithography"@en ;
+.
 dcterms:modified
   a owl:AnnotationProperty ;
 .
