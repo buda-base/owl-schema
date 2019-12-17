@@ -94,7 +94,7 @@ bda:GR0012
   a adm:GitRepo ;
   adm:gitRepoName "instances" ;
   adm:gitUrl "https://gitlab.com/bdrc-data/instances"^^xsd:anyURI ;
-  rdfs:comment "git repo for Instance resources"@en ;
+  rdfs:comment "git repo for Instance resources (not digital ones)"@en ;
   skos:prefLabel "Instances repo"@en ;
 .
 bda:GR0013
@@ -102,7 +102,14 @@ bda:GR0013
   adm:gitRepoName "einstances" ;
   adm:gitUrl "https://gitlab.com/bdrc-data/einstances"^^xsd:anyURI ;
   rdfs:comment "git repo for Electronic instance resources"@en ;
-  skos:prefLabel "Electronic Instances repo"@en ;
+  skos:prefLabel "Etext Instances repo"@en ;
+.
+bda:GR0014
+  a adm:GitRepo ;
+  adm:gitRepoName "iinstances" ;
+  adm:gitUrl "https://gitlab.com/bdrc-data/iinstances"^^xsd:anyURI ;
+  rdfs:comment "git repo for Electronic instance resources"@en ;
+  skos:prefLabel "Image Instances repo"@en ;
 .
 GitRepo:
   a owl:Ontology ;
