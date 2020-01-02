@@ -101,7 +101,7 @@ bda:GR0013
   a adm:GitRepo ;
   adm:gitRepoName "einstances" ;
   adm:gitUrl "https://gitlab.com/bdrc-data/einstances"^^xsd:anyURI ;
-  rdfs:comment "git repo for Electronic instance resources"@en ;
+  rdfs:comment "git repo for Etext instance resources"@en ;
   skos:prefLabel "Etext Instances repo"@en ;
 .
 bda:GR0014

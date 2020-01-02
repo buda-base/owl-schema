@@ -3882,6 +3882,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
   rdfs:domain bdo:Instance ;
   rdfs:label "hollis id"@en ;
   rdfs:range xsd:string ;
+  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workIllustrations
   a owl:DatatypeProperty ;
@@ -4033,6 +4034,7 @@ bdo:workLcCallNumber
   rdfs:domain bdo:Instance ;
   rdfs:label "has LC Call Number"@en ;
   rdfs:range xsd:string ;
+  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workLccn
   a owl:DatatypeProperty ;
@@ -4040,6 +4042,7 @@ bdo:workLccn
   rdfs:domain bdo:Instance ;
   rdfs:label "LCCN"@en ;
   rdfs:range xsd:string ;
+  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:workLinkTo
   a owl:InverseFunctionalProperty ;
