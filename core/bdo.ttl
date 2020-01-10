@@ -85,6 +85,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
+  owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
 bdo:Agent
   a owl:Class ;
@@ -111,7 +112,6 @@ bdo:Agents
   adm:translationPriority 2 ;
   adm:userTooltip "The various sorts of agents represented in the ontology, such as Persons, Organizations and so on"@en ;
   rdfs:label "Agents"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
       a owl:Class ;
       owl:unionOf (
@@ -1661,212 +1661,6 @@ bdo:creator
   rdfs:label "has creator"@en ;
   rdfs:range bdo:AgentAsCreator ;
 .
-bdo:creatorAmanuensis
-  a owl:ObjectProperty ;
-  adm:userTooltip "A person who writes down a translation in Chinese, in a capacity something like a scribe."@en ;
-  rdfs:label "amanuensis"@en ;
-  rdfs:label "筆受"@zh-hant ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorArtist
-  a owl:ObjectProperty ;
-  adm:userTooltip "An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like"@en ;
-  rdfs:label "artist"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorAttributedAuthor
-  a owl:ObjectProperty ;
-  adm:userTooltip "A creator identified by a separate source as an author of the Work"@en ;
-  rdfs:label "attributed author"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorBard
-  a owl:ObjectProperty ;
-  adm:userTooltip "for a Work of verse a poet who composed the verse"@en ;
-  rdfs:label "bard"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorCalligrapher
-  a owl:ObjectProperty ;
-  adm:userTooltip "For a handwritten Work an individual that drew the text or carved it on woord blocks"@en ;
-  rdfs:label "calligrapher"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorCommentator
-  a owl:ObjectProperty ;
-  adm:userTooltip "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
-  rdfs:label "commentator"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorCompiler
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
-
-Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
-a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
-  adm:userTooltip "A person who assembles a text out of pre-existing smaller texts or portions"@en ;
-  rdfs:label "compiler"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorContributingAuthor
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
-  adm:userTooltip "An individual that author one or more parts of a Work."@en ;
-  rdfs:label "contributing author"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorEditor
-  a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of bdo:Compiler"@en ;
-  rdfs:label "editor"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorForger
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was \"translated\" by a person other than the forger (i.e. with a false ascription attached)."@en ;
-  adm:userTooltip "A person who produces a text, but then knowingly presents it as the end result of some other process of composition"@en ;
-  rdfs:label "forger"@en ;
-  rdfs:label "偽作"@zh-hant ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorGeneralAuthor
-  a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of :MainAuthor"@en ;
-  rdfs:label "general author"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorHeadTranslator
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person's role is implicit or inferred from other knowledge about the composition of the translation group."@en ;
-  adm:userTooltip "The person identified by tradition implicitly as the head of the translation group"@en ;
-  rdfs:label "head translator"@en ;
-  rdfs:label "譯主"@zh-hant ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorIndicScholar
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as \"head translator\"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states \"handled the Indic text\", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of \"reciter\""@en ;
-  adm:userTooltip "Persons who function in the translation group as experts in the Indic traditions"@en ;
-  rdfs:label "Indic Scholar"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorMainAuthor
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the \"author\" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the \"author\" of a commentary"@en ;
-  adm:userTooltip "The actual author of a text"@en ;
-  rdfs:label "main author"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorOralTranslator
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
-  adm:userTooltip "a person who translates an orally transmitted text"@en ;
-  rdfs:label "oral translator"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorPandita
-  a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of :IndicScholar"@en ;
-  rdfs:label "pandita"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorRecipientOfResponseToQuery
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """An individual to whom answers in a Work are addressed. Cf., W22146:
-
-Study of the history of Buddhism in Tibet. Written by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
-  adm:userTooltip "An individual to whom answers in a Work are addressed"@en ;
-  rdfs:label "recipient of response to query"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorReciter
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
-  adm:userTooltip "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation"@en ;
-  rdfs:label "reciter"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorRequester
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "An individual who requested the author to write the Work"@en ;
-  adm:deprecatedComment "deprecated - not used"@en ;
-  rdfs:label "requester"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorReviser
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """An individual who is known to have revised a previous work or translation. Cf., W3CN4970:
-
-The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-  adm:userTooltip "An individual who is known to have revised a previous work or translation."@en ;
-  rdfs:label "reviser"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorReviserOfTranslation
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
-
-The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-  adm:userTooltip "An individual who is known to have revised a previous translation."@en ;
-  rdfs:label "reviser of translation"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorScribe
-  a owl:ObjectProperty ;
-  adm:userTooltip "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
-  rdfs:label "scribe"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorTerton
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """An individual who revealed the Work as treasure texts. Cf., W25816:
-
-Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak"""@en ;
-  adm:userTooltip "An individual who revealed the Work as treasure texts."@en ;
-  rdfs:label "tertön"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorTranslator
-  a owl:ObjectProperty ;
-  adm:catalogingConvention """A translator of the Work. Cf., W8LS25412:
-
-The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
-  adm:userTooltip "A translator of the Work."@en ;
-  rdfs:label "translator"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
-bdo:creatorUnspecified
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
-  adm:userTooltip "A person that evidence tells us only that they were involved in the production of the Work."@en ;
-  rdfs:label "unspecified"@en ;
-  rdfs:subPropertyOf bdo:workCreator ;
-  owl:deprecated true ;
-.
 bdo:dataTypeExpression
   a owl:AnnotationProperty ;
 .
@@ -1885,6 +1679,21 @@ bdo:dateIndication
   rdfs:domain bdo:Event ;
   rdfs:label "date indication"@en ;
   rdfs:range bdo:DateIndication ;
+.
+bdo:derivativeOf
+  a owl:ObjectProperty ;
+  adm:userTooltip "This work is a derivative of the referenced work."@en ;
+  rdfs:comment """This work is a derivative of the referenced work. This means that it may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work.
+
+For example,
+
+bdr:W30532 :workDerivativeOf bdr:W22084
+
+bdr:W30532 is a printing based on woodblocks that have a variety of \"corrections\" made via plugs in the original woodblocks and W22084 is a printing from the original sde dge Kanjur woodblocks so it makes sense to indicate that bdr:W30532 is a derivative of bdr:W22084."""@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "derivative of"@en ;
+  rdfs:range bdo:Work ;
+  owl:inverseOf bdo:hasDerivative ;
 .
 bdo:eTextHasChunk
   a owl:ObjectProperty ;
@@ -2029,6 +1838,15 @@ bdo:hasDaughter
   adm:userTooltip "Indicates a Daughter of the Person"@en ;
   rdfs:label "has daughter"@en ;
   rdfs:subPropertyOf bdo:hasChild ;
+.
+bdo:hasDerivative
+  a owl:ObjectProperty ;
+  adm:technicalComment "The referenced work is a derivative of this Work. This means that the referenced work may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work."@en ;
+  adm:userTooltip "The referenced Work is a derivative of this Work."@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "has derivative"@en ;
+  rdfs:range bdo:Work ;
+  owl:inverseOf bdo:derivativeOf ;
 .
 bdo:hasFascicles
   a owl:DatatypeProperty ;
@@ -2227,6 +2045,13 @@ bdo:hasOlderSister
   rdfs:label "has older sister"@en ;
   rdfs:subPropertyOf bdo:hasSister ;
 .
+bdo:hasParallelsIn
+  a owl:ObjectProperty ;
+  a owl:SymmetricProperty ;
+  adm:userTooltip "This work has some parallels in another work, meaning it displays intertextuality patterns."@en ;
+  rdfs:label "parallels in"@en ;
+  rdfs:subPropertyOf bdo:hasDerivative ;
+.
 bdo:hasParent
   a owl:ObjectProperty ;
   adm:userTooltip "Indicates a Parent of the Person"@en ;
@@ -2303,6 +2128,14 @@ bdo:hasSteward
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has steward"@en ;
   rdfs:range bdo:Agents ;
+.
+bdo:hasTranslation
+  a owl:ObjectProperty ;
+  adm:catalogingConvention "The referenced work is identified as a translation of the subject work. This will be used, for example, when the referenced work is a Tibetan translation of a subject Sanskrit work."@en ;
+  adm:userTooltip "The referenced Work is identified as a translation of this Work."@en ;
+  rdfs:label "has translation"@en ;
+  rdfs:subPropertyOf bdo:hasDerivative ;
+  owl:inverseOf bdo:translationOf ;
 .
 bdo:hasUncle
   a owl:ObjectProperty ;
@@ -3122,10 +2955,9 @@ bdo:placeAccuracy
 bdo:placeAddress
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip "Associates modern address information with a Place"@en ;
+  adm:userTooltip "Associates modern address information with a Place using Vcard"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "address"@en ;
-  rdfs:range vcard:Address ;
 .
 bdo:placeChgisId
   a owl:DatatypeProperty ;
@@ -3694,24 +3526,6 @@ bdo:workContainsChapters
   rdfs:range xsd:string ;
   owl:deprecated true ;
 .
-bdo:workCreator
-  a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of :creator and associated :AgentAsCreator"@en ;
-  adm:deprecatedComment "deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent" ;
-  adm:userTooltip "Identifies the type and person that are a creator of the work"@en ;
-  bdo:inferSubTree true ;
-  rdfs:domain [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Work
-          bdo:WorkEvent
-        ) ;
-    ] ;
-  rdfs:label "creator"@en ;
-  rdfs:range bdo:Person ;
-  rdfs:seeAlso bdo:creator ;
-  owl:deprecated true ;
-.
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :CompletedEvent."@en ;
@@ -3719,21 +3533,6 @@ bdo:workDateOfWriting
   rdfs:label "date of writing"@en ;
   rdfs:range xsd:string ;
   owl:deprecated true ;
-.
-bdo:workDerivativeOf
-  a owl:ObjectProperty ;
-  adm:userTooltip "This work is a derivative of the referenced work."@en ;
-  rdfs:comment """This work is a derivative of the referenced work. This means that it may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work.
-
-For example,
-
-bdr:W30532 :workDerivativeOf bdr:W22084
-
-bdr:W30532 is a printing based on woodblocks that have a variety of \"corrections\" made via plugs in the original woodblocks and W22084 is a printing from the original sde dge Kanjur woodblocks so it makes sense to indicate that bdr:W30532 is a derivative of bdr:W22084."""@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "derivative of"@en ;
-  rdfs:range bdo:Work ;
-  owl:inverseOf bdo:workHasDerivative ;
 .
 bdo:workDimHeight
   a owl:DatatypeProperty ;
@@ -3787,15 +3586,6 @@ A genre is intended to capture a form or structural type of the work versus the 
   rdfs:label "genre"@en ;
   rdfs:range bdo:Topic ;
 .
-bdo:workHasDerivative
-  a owl:ObjectProperty ;
-  adm:technicalComment "The referenced work is a derivative of this Work. This means that the referenced work may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work."@en ;
-  adm:userTooltip "The referenced Work is a derivative of this Work."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "has derivative"@en ;
-  rdfs:range bdo:Work ;
-  owl:inverseOf bdo:workDerivativeOf ;
-.
 bdo:workHasInstance
   a owl:ObjectProperty ;
   adm:technicalComment "was :workHasExpression"@en ;
@@ -3813,15 +3603,6 @@ bdo:workHasNumber
   rdfs:label "number"@en ;
   owl:deprecated true ;
   owl:inverseOf bdo:workNumberOf ;
-.
-bdo:workHasParallelsIn
-  a owl:ObjectProperty ;
-  a owl:SymmetricProperty ;
-  adm:userTooltip "This work has some parallels in another work, meaning it displays intertextuality patterns."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "parallels in"@en ;
-  rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workHasDerivative ;
 .
 bdo:workHasPart
   a owl:ObjectProperty ;
@@ -3861,16 +3642,6 @@ bdo:workHasSite
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
-.
-bdo:workHasTranslation
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "The referenced work is identified as a translation of the subject work. This will be used, for example, when the referenced work is a Tibetan translation of a subject Sanskrit work."@en ;
-  adm:userTooltip "The referenced Work is identified as a translation of this Work."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "has translation"@en ;
-  rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workHasDerivative ;
-  owl:inverseOf bdo:workTranslationOf ;
 .
 bdo:workHollis
   a owl:DatatypeProperty ;
@@ -4510,8 +4281,8 @@ bdo:workTranslationOf
   rdfs:domain bdo:Work ;
   rdfs:label "translation of"@en ;
   rdfs:range bdo:Work ;
-  rdfs:subPropertyOf bdo:workDerivativeOf ;
-  owl:inverseOf bdo:workHasTranslation ;
+  rdfs:subPropertyOf bdo:derivativeOf ;
+  owl:inverseOf bdo:hasTranslation ;
 .
 bdo:workType
   a owl:ObjectProperty ;
@@ -4660,64 +4431,32 @@ skos:prefLabel
   rdfs:label "preferred label"@en ;
   rdfs:subPropertyOf rdfs:label ;
 .
-vcard:Address
-  a owl:Class ;
-  adm:catalogingConvention "The components of the address for a physical location."@en ;
-  adm:translationPriority 2 ;
-  rdfs:label "VCARD Address"@en ;
-  rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1292> ;
-  rdfs:subClassOf vcard:Entity ;
-.
-vcard:Entity
-  a owl:Class ;
-  adm:catalogingConvention "Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled."@en ;
-  adm:translationPriority 2 ;
-  rdfs:label "VCARD Entity"@en ;
-  rdfs:seeAlso "https://www.w3.org/TR/vcard-rdf" ;
-.
 vcard:country-name
   a owl:DatatypeProperty ;
   adm:catalogingConvention "map the country for a Library address"@en ;
-  rdfs:domain vcard:Address ;
   rdfs:label "country"@en ;
   rdfs:range xsd:string ;
 .
 vcard:locality
   a owl:DatatypeProperty ;
   adm:catalogingConvention "use for city for a Library address"@en ;
-  rdfs:domain vcard:Address ;
   rdfs:label "locality"@en ;
   rdfs:range xsd:string ;
 .
 vcard:postal-code
   a owl:DatatypeProperty ;
-  rdfs:domain vcard:Address ;
   rdfs:label "postal code"@en ;
   rdfs:range xsd:string ;
 .
 vcard:region
   a owl:DatatypeProperty ;
   adm:catalogingConvention "use for state in Library address"@en ;
-  rdfs:domain vcard:Address ;
   rdfs:label "region"@en ;
   rdfs:range xsd:string ;
 .
 vcard:street-address
   a owl:DatatypeProperty ;
   adm:catalogingConvention "concatenate with the street number for a Library address"@en ;
-  rdfs:domain vcard:Address ;
   rdfs:label "street address"@en ;
   rdfs:range xsd:string ;
-.
-foaf:Agent
-  a owl:Class ;
-  adm:catalogingConvention "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
-  rdfs:label "Agent"@en ;
-  rdfs:subClassOf foaf:Entity ;
-.
-foaf:Entity
-  a owl:Class ;
-  adm:catalogingConvention "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
-  rdfs:label "FOAF Entity"@en ;
-  rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
 .
