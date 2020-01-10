@@ -77,8 +77,8 @@ bds:WorkShape
       a sh:PropertyShape ;
       sh:path bdo:creator ;
       sh:class bdo:AgentAsCreator ;
-      sh:description "usually there will be one or more creator/author for a bdo:Work but there are occasionally none known in which case the bdo:agent should be bdr:UNKNOWN_Person. For the words of the buddha we need a designation either as a person or Ahistorical agent" ;
-      sh:minCount 1 ;
+      sh:description "this Work may have zero or more creators" ;
+      sh:minCount 0 ;
       sh:name "creator" ;
       sh:nodeKind sh:IRI ;
       sh:order "3"^^xsd:decimal ;
@@ -115,12 +115,21 @@ bds:WorkShape
       sh:minCount 0 ;
       sh:name "work has translation" ;
     ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:hasInstance ;
+    sh:inversePath bdo:instanceOf ;
+    sh:class bdo:Instance ;
+    sh:description "this Work may have zero or more Instances" ;
+    sh:minCount 0 ;
+    sh:name "has instance" ;
+  ] ;
   sh:targetClass bdo:Work ;
 .
 bds:LabelShape
   a rdfs:Class ;
-  a sh:NodeShape 
-  rdfs:label "Label Shape"
+  a sh:NodeShape ;
+  rdfs:label "Label Shape" ;
     sh:property [
       a sh:PropertyShape ;
       sh:path bdo:hasTranslation ;
@@ -132,7 +141,85 @@ bds:LabelShape
     ] ;
   sh:targetClass bdo:Label ;
 .
-
+bds:InstanceShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Instance Shape" ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:creator ;
+    sh:class bdo:AgentAsCreator ;
+    sh:description "this Instance may have zero or more creators" ;
+    sh:minCount 0 ;
+    sh:name "instance has translation" ;
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:instanceOf ;
+    sh:inversePath bdo:hasInstance ;
+    sh:class bdo:Work ;
+    sh:description "this Instance is an instance of at least one Work" ;
+    sh:minCount 1 ;
+    sh:name "instance of" ;
+  ] ;
+  sh:targetClass bdo:Instance ;
+.
+bds:SerialWorkShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "SerialWork Shape" ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:hasMember ;
+    sh:inversePath bdo:memberOf ;
+    sh:class bdo:SerialMember ;
+    sh:description "this SerialWork has zero or more SerialMembers" ;
+    sh:minCount 0 ;
+    sh:name "has series member" ;
+  ] ;
+  sh:targetClass bdo:SerialWork ;
+.
+bds:SerialMemberShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "SerialMember Shape" ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:memberOf ;
+    sh:inversePath bdo:hasMember ;
+    sh:class bdo:SerialWork ;
+    sh:description "this SerialMember is a series member of a SerialWork" ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "series member" ;
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:hasInstance ;
+    sh:inversePath bdo:instanceOf ;
+    sh:class bdo:Instance ;
+    sh:description "this SerialMember may have a SerialInstance" ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has serial instance" ;
+  ] ;
+  sh:targetClass bdo:SerialMember ;
+.
+bds:SerialInstanceShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "SerialInstance Shape" ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path bdo:instanceOf ;
+    sh:inversePath bdo:hasInstance ;
+    sh:class bdo:SerialMember ;
+    sh:description "this is an instance of a SerialMember" ;
+    sh:minCount 1 ;
+    sh:name "instance of serial" ;
+  ] ;
+  sh:targetClass bdo:SerialInstance ;
+.
 
 
 
