@@ -139,7 +139,7 @@ bdo:AhistoricalAgent
 .
 bdo:AnyOrganization
   a owl:Class ;
-  adm:deprecatedComment "deprecated in favor of setting the range of :agent to :Agents"@en ;
+  skos:historyNote "deprecated in favor of setting the range of :agent to :Agents"@en ;
   rdfs:label "any organization"@en ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
@@ -175,7 +175,7 @@ bdo:CarvedEvent
 .
 bdo:Catalog
   a owl:Class ;
-  adm:deprecatedComment "remove, not needed"@en ;
+  skos:historyNote "remove, not needed"@en ;
   rdfs:label "Catalog" ;
   rdfs:subClassOf bdo:BiblioEntity ;
   owl:deprecated true ;
@@ -288,7 +288,7 @@ bdo:DigitalInstance
 .
 bdo:EditedEvent
   a owl:Class ;
-  adm:deprecatedComment "deprecated in favor of :CompiledEvent"@en ;
+  skos:historyNote "deprecated in favor of :CompiledEvent"@en ;
   rdfs:label "Work Edited"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
   owl:deprecated true ;
@@ -426,7 +426,7 @@ bdo:Event
 .
 bdo:EventOrPeriod
   a owl:Class ;
-  adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
+  skos:historyNote "deprecated as a bad idea. not used"@en ;
   rdfs:label "Event or DateIndication"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
@@ -917,7 +917,7 @@ bdo:PersonFirstOrdinationName
 .
 bdo:PersonFoundsMonastery
   a owl:Class ;
-  adm:deprecatedComment "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
+  skos:historyNote "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
   adm:replaceWithClass bdo:PlaceFounded ;
   rdfs:label "Founds Monastery"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
@@ -1332,7 +1332,7 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 .
 bdo:UnicodeWork
   a owl:Class ;
-  adm:deprecatedComment "replace with EtextInstance"@en ;
+  skos:historyNote "replace with EtextInstance"@en ;
   adm:translationPriority 2 ;
   rdfs:label "Unicode work (etext)" ;
   rdfs:subClassOf bdo:BiblioEntity ;
@@ -1344,7 +1344,7 @@ bdo:Union
 .
 bdo:UnspecifiedWorkClass
   a owl:Class ;
-  adm:deprecatedComment "not used, not needed"@en ;
+  skos:historyNote "not used, not needed"@en ;
   adm:translationPriority 2 ;
   rdfs:label "Unspecified work class"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
@@ -1444,7 +1444,7 @@ bdo:WorkCoverTitle
 .
 bdo:WorkDkarChagTitle
   a owl:Class ;
-  adm:deprecatedComment "retired in favor a the more neutral WorkToCTitle"@en ;
+  skos:historyNote "retired in favor a the more neutral WorkToCTitle"@en ;
   adm:replaceWith bdo:WorkToCTitle ;
   rdfs:label "Table of Contents Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
@@ -2554,7 +2554,7 @@ bdo:legacyOutlineNodeRID
 .
 bdo:license
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated by adm:license"@en ;
+  skos:historyNote "deprecated by adm:license"@en ;
   adm:replaceWith adm:license ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "license"@en ;
@@ -2814,7 +2814,7 @@ bdo:onDate
 .
 bdo:onOrAbout
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
+  skos:historyNote "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
   adm:replaceWith bdo:notAfter ;
   adm:replaceWith bdo:notBefore ;
   adm:replaceWith bdo:onDate ;
@@ -3005,7 +3005,7 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 bdo:placeIsNear
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  adm:deprecatedComment "deprecated because not actually used in legacy data and not well defined"@en ;
+  skos:historyNote "deprecated because not actually used in legacy data and not well defined"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
@@ -3491,7 +3491,7 @@ bdo:workContainsChapters
 .
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :CompletedEvent."@en ;
+  skos:historyNote "deprecated in favor of :CompletedEvent."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "date of writing"@en ;
   rdfs:range xsd:string ;
@@ -3551,7 +3551,7 @@ A genre is intended to capture a form or structural type of the work versus the 
 .
 bdo:workHasNumber
   a owl:ObjectProperty ;
-  adm:deprecatedComment "now use :serialHasMember"@en ;
+  skos:historyNote "now use :serialHasMember"@en ;
   rdfs:label "number"@en ;
   owl:deprecated true ;
   owl:inverseOf bdo:workNumberOf ;
@@ -3590,7 +3590,7 @@ Adding this \"virtual\" property to the ontology provides a place to add the lab
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of the various :WorkEvents."@en ;
+  skos:historyNote "deprecated in favor of the various :WorkEvents."@en ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
@@ -3631,7 +3631,7 @@ bdo:workIsAbout
 .
 bdo:workIsNumbered
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
+  skos:historyNote "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
   adm:translationPriority 2 ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "number in series"@en ;
@@ -3938,7 +3938,7 @@ bdo:workMaterial
 bdo:workNumberOf
   a owl:ObjectProperty ;
   adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
-  adm:deprecatedComment "now use :serialMemberOf"@en ;
+  skos:historyNote "now use :serialMemberOf"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "In"@en ;
   rdfs:range bdo:SerialWork ;
@@ -4087,7 +4087,7 @@ bdo:workPartType
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
+  skos:historyNote "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
@@ -4096,7 +4096,7 @@ bdo:workPublisherLocation
 .
 bdo:workPublisherName
   a owl:DatatypeProperty ;
-  adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
+  skos:historyNote "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
@@ -4238,7 +4238,7 @@ bdo:workTranslationOf
 .
 bdo:workType
   a owl:ObjectProperty ;
-  adm:deprecatedComment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
+  skos:historyNote "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "work type"@en ;
   rdfs:range bdo:WorkType ;
