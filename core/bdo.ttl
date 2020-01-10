@@ -1614,21 +1614,6 @@ bdo:conversionOf
   rdfs:subPropertyOf bdo:labelConnection ;
   skos:definition "This label is a conversion of the object label from one orthographic form to another in the same language, e.g., Khmer"@en ;
 .
-bdo:corporationHasMember
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Corporation ;
-  rdfs:label "has member"@en ;
-  rdfs:range bdo:CorporationMember ;
-  skos:definition "Indicates an Entity that is a member of the corporation"@en ;
-.
-bdo:corporationMember
-  a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  rdfs:domain bdo:CorporationMember ;
-  rdfs:label "person"@en ;
-  rdfs:range bdo:Person ;
-  skos:definition "Indicates a Person that is a member of the corporation"@en ;
-.
 bdo:corporationMemberType
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
@@ -2009,6 +1994,12 @@ bdo:hasMaternalUncle
   rdfs:subPropertyOf bdo:hasUncle ;
   skos:definition "Indicates a Maternal uncle of the Person"@en ;
 .
+bdo:hasMember
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:label "has member"@en ;
+  skos:definition "Indicates that this resource has a member resource"@en ;
+.
 bdo:hasMother
   a owl:ObjectProperty ;
   rdfs:label "has mother"@en ;
@@ -2245,8 +2236,8 @@ bdo:inCollection
   rdfs:domain bdo:Instance ;
   rdfs:label "in collection"@en ;
   rdfs:range bdo:CollectionInstitution ;
-  skos:definition "This instance is contained at the identified institution"@en ;
-  skos:editorialNote "was :workCollection"@en ;
+  skos:definition "This instance is contained at the identified institution."@en ;
+  skos:editorialNote "was :workCollection."@en ;
 .
 bdo:incarnationActivities
   a owl:ObjectProperty ;
@@ -2708,6 +2699,11 @@ bdo:lineageWork
   rdfs:range bdo:Work ;
   rdfs:seeAlso bdo:LineageHolder ;
   skos:definition "Refers to a Work authored by the LineageHolder about the Lineage."@en ;
+.
+bdo:memberOf
+  a owl:ObjectProperty ;
+  rdfs:label "member of"@en ;
+  skos:definition "Indicates an Entity that is a member of another Entity"@en ;
 .
 bdo:microfilmCanister
   a owl:DatatypeProperty ;

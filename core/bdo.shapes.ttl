@@ -35,6 +35,40 @@ bds:
   owl:imports bdo: ;
   owl:versionInfo "Initial SHACL constraints" ;
 .
+bds:CorporationMemberShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "CorporationMember shape"@en ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:memberOf ;
+      sh:class bdo:Corporation ;
+      sh:description "this respource may be a member of a Corporation" ;
+      sh:inversePath bdo:hasMember ;
+      sh:minCount 0 ;
+      sh:name "member of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass bdo:Person ;
+.
+bds:CorporationShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Corporation shape"@en ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:hasMember ;
+      sh:class bdo:CorporationMember ;
+      sh:description "this Corporation may have zero or more members" ;
+      sh:inversePath bdo:memberOf ;
+      sh:minCount 0 ;
+      sh:name "has member" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass bdo:Corporation ;
+.
 bds:EntityShape
   a rdfs:Class ;
   a sh:NodeShape ;
@@ -71,7 +105,7 @@ bds:EntityShape
 bds:InstanceShape
   a rdfs:Class ;
   a sh:NodeShape ;
-  rdfs:label "Instance Shape" ;
+  rdfs:label "Instance Shape"@en ;
   sh:property [
       a sh:PropertyShape ;
       sh:path bdo:creator ;
