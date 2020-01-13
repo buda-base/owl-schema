@@ -1,0 +1,110 @@
+# baseURI: http://purl.bdrc.io/resource/PrintMethodScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: PrintMethodScheme
+
+@prefix PrintMethodScheme: <http://purl.bdrc.io/resource/PrintMethodScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:PrintMethod
+  a owl:Class ;
+  adm:translationPriority 2 ;
+  rdfs:label "Print method"@en ;
+  skos:definition "A kind of Printing Method, e.g., blockprint, manuscript, xerography, and so on"@en ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.
+bdr:PrintMethodScheme
+  a skos:ConceptScheme ;
+  adm:translationPriority 2 ;
+  skos:prefLabel "PrintMethod Scheme"@en ;
+.
+PrintMethodScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:PrintMethod_Intaglio
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Print method Intaglio"@en ;
+  skos:definition "Indicates an Intaglio method was used."@en ;
+  skos:narrower bdr:PrintMethod_Intaglio_Copper ;
+  skos:narrower bdr:PrintMethod_Intaglio_Zinc ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.
+bdr:PrintMethod_Intaglio_Copper
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:PrintMethod_Intaglio ;
+  skos:prefLabel "copper intaglio"@en ;
+.
+bdr:PrintMethod_Intaglio_Zinc
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:PrintMethod_Intaglio ;
+  skos:prefLabel "zinc intaglio"@en ;
+.
+bdr:PrintMethod_Lithography
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:prefLabel "lithography"@en ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.
+bdr:PrintMethod_Manuscript
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:definition "Indicates that the Work was handwritten."@en ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.
+bdr:PrintMethod_Offset
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Print method Offset"@en ;
+  skos:definition "Indicates an offset method method was used."@en ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.
+bdr:PrintMethod_Relief
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Print method Relief"@en ;
+  skos:definition "Indicates a relief method such as carved woodblocks were used."@en ;
+  skos:narrower bdr:PrintMethod_Relief_Letterpress ;
+  skos:narrower bdr:PrintMethod_Relief_WoodBlock ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.
+bdr:PrintMethod_Relief_Letterpress
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:PrintMethod_Relief ;
+  skos:definition "mechanical relief printing typically via wood"@en ;
+  skos:prefLabel "letterpress"@en ;
+.
+bdr:PrintMethod_Relief_WoodBlock
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:altLabel "xylograph"@en ;
+  skos:broader bdr:PrintMethod_Relief ;
+  skos:definition "manual pressing of paper or other material on a woodblock"@en ;
+  skos:prefLabel "woodblock"@en ;
+.
+bdr:PrintMethod_Xerography
+  a bdo:PrintMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:prefLabel "xerography"@en ;
+  skos:topConceptOf bdr:PrintMethodScheme ;
+.

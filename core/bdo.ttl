@@ -11,7 +11,6 @@
 # imports: http://purl.bdrc.io/ontology/types/Material/
 # imports: http://purl.bdrc.io/ontology/types/PaginationType/
 # imports: http://purl.bdrc.io/ontology/types/PlaceType/
-# imports: http://purl.bdrc.io/ontology/types/PrintMethod/
 # imports: http://purl.bdrc.io/ontology/types/Script/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
@@ -19,6 +18,7 @@
 # imports: http://purl.bdrc.io/ontology/types/WorkPartType/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
+# imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -77,7 +77,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Material/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/PaginationType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/PlaceType/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/PrintMethod/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Script/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
@@ -85,6 +84,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
 bdo:Agent
@@ -782,13 +782,6 @@ bdo:ObjectType
   rdfs:subClassOf bdo:Type ;
   skos:definition "Print type indicates the form of the Work such as blockprint, palm-leaf, manuscript, and so on"@en ;
 .
-bdo:ObjectTypeMicrofilm
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:label "microfilm"@en ;
-  rdfs:subClassOf bdo:ObjectType ;
-  skos:definition "the images for the associated work were digitized from microfilm"@en ;
-.
 bdo:Organization
   a owl:Class ;
   adm:catalogingConvention """An :Organization is a collection of agents that may be considered act in concert as a single agent, e.g., the kashag or the dzogchen protectors taken together: Ekazati, Rahulla, and Dorje Drollo
@@ -1169,9 +1162,6 @@ bdo:PlaceRebuilt
   skos:definition "event type describing when a place was rebuilt"@en ;
 .
 bdo:PlaceType
-  rdfs:subClassOf bdo:Type ;
-.
-bdo:PrintMethod
   rdfs:subClassOf bdo:Type ;
 .
 bdo:PrintedEvent
@@ -3086,10 +3076,8 @@ bdo:placeWBArea
 .
 bdo:printMethod
   a owl:ObjectProperty ;
-  rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "print method"@en ;
-  rdfs:range bdo:PrintMethod ;
-  skos:definition "Indicates the printing method of the Item associated with the Work."@en ;
+  skos:definition "Indicates the printing method of a PhysicalInstance associated with of some Work."@en ;
 .
 bdo:restored
   a owl:DatatypeProperty ;
@@ -4318,6 +4306,13 @@ bdr:ObjectTypeManuscript
   rdfs:label "manuscript"@en ;
   owl:deprecated true ;
 .
+bdr:ObjectTypeMicrofilm
+  a bdo:ObjectType ;
+  a owl:NamedIndividual ;
+  adm:translationPriority 2 ;
+  rdfs:label "microfilm"@en ;
+  skos:definition "the images for the associated work were digitized from microfilm"@en ;
+.
 bdr:ObjectTypeOCR
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
@@ -4333,10 +4328,6 @@ bdr:ObjectTypeTypeSet
   a bdo:ObjectType ;
   a owl:NamedIndividual ;
   rdfs:label "typeset"@en ;
-.
-bdr:PrintMethod_Lithography
-  a bdo:PrintMethod_Offset ;
-  skos:prefLabel "lithography"@en ;
 .
 rdfs:comment
   adm:catalogingConvention """As a convention in the BDRC ontology, use rdfs:comment for summary and contents statements about a resource rather than adding additional properties.

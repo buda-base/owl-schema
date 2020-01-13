@@ -20,7 +20,7 @@ bdr:FEMCScheme
 FEMCScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:FEMC_Scheme_I
   a bdo:Topic ;
