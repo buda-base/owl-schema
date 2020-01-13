@@ -246,9 +246,9 @@
     
     <OntologySpec>
         <!-- local version of the PrintMethod vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PrintMethod/"/>
-        <altURL    rdf:resource="owl-schema/types/print_methods.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/print_methods.ttl"/>
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/PrintMethodScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/PrintMethodScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/PrintMethodScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
