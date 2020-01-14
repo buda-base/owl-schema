@@ -187,6 +187,21 @@
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/roles/creators.ttl"/>
     </OntologySpec>
     
+    <!-- schemes -->
+    <OntologySpec>
+        <!-- local version of the FEMCTopics vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/FEMCScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/FEMCScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/FEMCScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the PrintMethod vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/PrintMethodScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/PrintMethodScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/PrintMethodScheme.ttl"/>
+    </OntologySpec>
+    
     <!-- types -->
     <OntologySpec>
         <!-- local version of the Binding vocabulary -->
@@ -242,13 +257,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PlaceType/"/>
         <altURL    rdf:resource="owl-schema/types/place_types.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/place_types.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the PrintMethod vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/resource/PrintMethodScheme/"/>
-        <altURL    rdf:resource="owl-schema/schemes/PrintMethodScheme.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/PrintMethodScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>

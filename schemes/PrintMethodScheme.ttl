@@ -17,7 +17,6 @@ bdo:PrintMethod
   adm:translationPriority 2 ;
   rdfs:label "Print method"@en ;
   skos:definition "A kind of Printing Method, e.g., blockprint, manuscript, xerography, and so on"@en ;
-  skos:topConceptOf bdr:PrintMethodScheme ;
 .
 bdr:PrintMethodScheme
   a skos:ConceptScheme ;
