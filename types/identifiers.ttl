@@ -1,0 +1,46 @@
+# baseURI: http://purl.bdrc.io/ontology/types/Identifier/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: Gender
+
+@prefix Identifier: <http://purl.bdrc.io/ontology/types/Identifier/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+
+bdo:Identifier
+  a owl:Class ;
+  rdfs:subClassOf bdo:Type ;
+  skos:definition "Identifiers for Works and Instances and maybe other Entities"@en ;
+  rdfs:label "Identifier"@en ;
+.
+Identifier:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdo:InstanceIdentifier
+  a owl:Class ;
+  rdfs:subClassOf bdo:Identifier ;
+  rdfs:subClassOf bf:Identifier ;
+.
+bdo:WorkIdentifier
+  a owl:Class ;
+  rdfs:subClassOf bdo:Identifier ;
+  rdfs:subClassOf bf:Identifier ;
+.
+bf:Isbn
+  rdfs:subClassOf bdo:InstanceIdentifier ;
+.
+bf:Lccn
+  rdfs:subClassOf bdo:InstanceIdentifier ;
+.
+bf:ShelfMarkLcc
+  rdfs:subClassOf bdo:InstanceIdentifier ;
+  rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
+  skos:definition "Library of Congress Call Number. Was bdo:LCCallNumber."@en ;
+.

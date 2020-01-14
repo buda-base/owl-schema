@@ -5,6 +5,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://purl.bdrc.io/ontology/types/DateIndication/
 # imports: http://purl.bdrc.io/ontology/types/Gender/
+# imports: http://purl.bdrc.io/ontology/types/Identifier/
 # imports: http://purl.bdrc.io/ontology/types/LangScript/
 # imports: http://purl.bdrc.io/ontology/types/Language/
 # imports: http://purl.bdrc.io/ontology/types/LineageType/
@@ -41,6 +42,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bf:ShelfMarkLcc
+  rdfs:seeAlso <https://gist.github.com/kurtraschke/560162> ;
+.
 iiif2:Collection
   a owl:Class ;
   rdfs:label "IIIF Collection (v2.*)"@en ;
@@ -71,6 +75,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/DateIndication/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/Identifier/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LangScript/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LineageType/> ;
@@ -139,7 +144,6 @@ bdo:AhistoricalAgent
 .
 bdo:AnyOrganization
   a owl:Class ;
-  skos:historyNote "deprecated in favor of setting the range of :agent to :Agents"@en ;
   rdfs:label "any organization"@en ;
   rdfs:subClassOf bdo:MixedUnion ;
   rdfs:subClassOf [
@@ -150,6 +154,7 @@ bdo:AnyOrganization
     ] ;
   owl:deprecated true ;
   skos:definition "Any sort of organization"@en ;
+  skos:historyNote "deprecated in favor of setting the range of :agent to :Agents"@en ;
 .
 bdo:AuthoredEvent
   a owl:Class ;
@@ -175,11 +180,11 @@ bdo:CarvedEvent
 .
 bdo:Catalog
   a owl:Class ;
-  skos:historyNote "remove, not needed"@en ;
   rdfs:label "Catalog" ;
   rdfs:subClassOf bdo:BiblioEntity ;
   owl:deprecated true ;
   skos:definition "A catalog such as the Tohoku or the FEMC Volumes I, II, or III"@en ;
+  skos:historyNote "remove, not needed"@en ;
 .
 bdo:ChineseDate
   a owl:Class ;
@@ -288,11 +293,11 @@ bdo:DigitalInstance
 .
 bdo:EditedEvent
   a owl:Class ;
-  skos:historyNote "deprecated in favor of :CompiledEvent"@en ;
   rdfs:label "Work Edited"@en ;
   rdfs:subClassOf bdo:WorkEvent ;
   owl:deprecated true ;
   skos:definition "An event of editing a :Work"@en ;
+  skos:historyNote "deprecated in favor of :CompiledEvent"@en ;
 .
 bdo:EnscribedEvent
   a owl:Class ;
@@ -426,7 +431,6 @@ bdo:Event
 .
 bdo:EventOrPeriod
   a owl:Class ;
-  skos:historyNote "deprecated as a bad idea. not used"@en ;
   rdfs:label "Event or DateIndication"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
@@ -438,6 +442,7 @@ bdo:EventOrPeriod
     ] ;
   owl:deprecated true ;
   skos:editorialNote "domain of various date properties"@en ;
+  skos:historyNote "deprecated as a bad idea. not used"@en ;
 .
 bdo:Facet
   a owl:Class ;
@@ -504,15 +509,6 @@ bdo:IIIFUnion
   rdfs:subClassOf bdo:Union ;
   skos:definition "a union of iiif classes"@en ;
 .
-bdo:ISBN
-  a rdfs:Datatype ;
-  adm:translationPriority 2 ;
-  bdo:dataTypeExpression "^(97(8|9))?\\d{9}(\\d|X)$" ;
-  rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
-  rdfs:label "ISBN"@en ;
-  skos:definition "International Standard Book Number"@en ;
-  skos:editorialNote "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
-.
 bdo:ImageInstance
   a owl:Class ;
   rdfs:label "Image item"@en ;
@@ -522,9 +518,9 @@ bdo:ImageInstance
 .
 bdo:Instance
   a owl:Class ;
-  rdfs:label "instance"@en ;
+  rdfs:label "Instance"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
-  skos:definition "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
+  skos:definition "An Instance of an abstract Work for which there is at least one physical or digital manifestation. Versus Abstract Work"@en ;
   skos:editorialNote "Was PublishedWork, changed to align with Bibframe 2.0"@en ;
 .
 bdo:IntegerOrString
@@ -612,24 +608,6 @@ bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
        :itemCopies 1 ;
        :itemShelf \"ཉ|༣|||001811\" ;
        :itemException \"དེབ་གཅིག་ཕྱི་ལ་གཡར་ནས་མ་འབྱོར\"@bo ."""@en ;
-.
-bdo:LCCN
-  a rdfs:Datatype ;
-  adm:translationPriority 2 ;
-  bdo:dataTypeExpression "[[a-z]|[[a-z][a-z]|dd]|[a-z][[a-z][a-z]|dd]|[a-z][a-z]dd]dddddddd" ;
-  rdfs:isDefinedBy <http://www.loc.gov/marc/lccn-namespace.html> ;
-  rdfs:label "LCCN" ;
-  owl:equivalentClass xsd:string ;
-  skos:definition "Library of Congress Control Number"@en ;
-.
-bdo:LCCallNumber
-  a rdfs:Datatype ;
-  adm:translationPriority 2 ;
-  bdo:dataTypeExpression <https://gist.github.com/kurtraschke/560162> ;
-  rdfs:isDefinedBy <https://www.loc.gov/aba/publications/FreeCSM/freecsm.html> ;
-  rdfs:label "LCCallNum"@en ;
-  rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
-  skos:definition "Library of Congress Call Number"@en ;
 .
 bdo:Label
   a owl:Class ;
@@ -910,12 +888,12 @@ bdo:PersonFirstOrdinationName
 .
 bdo:PersonFoundsMonastery
   a owl:Class ;
-  skos:historyNote "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
   adm:replaceWithClass bdo:PlaceFounded ;
   rdfs:label "Founds Monastery"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
   owl:deprecated true ;
   skos:definition "The Event of a Person founding a Monastery"@en ;
+  skos:historyNote "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
 .
 bdo:PersonGterMaDiscovery
   a owl:Class ;
@@ -1322,25 +1300,25 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 .
 bdo:UnicodeWork
   a owl:Class ;
-  skos:historyNote "replace with EtextInstance"@en ;
   adm:translationPriority 2 ;
   rdfs:label "Unicode work (etext)" ;
   rdfs:subClassOf bdo:BiblioEntity ;
   owl:deprecated true ;
   skos:definition "Indicates a searchable etext Work versus digitized page images."@en ;
+  skos:historyNote "replace with EtextInstance"@en ;
 .
 bdo:Union
   a owl:Class ;
 .
 bdo:UnspecifiedWorkClass
   a owl:Class ;
-  skos:historyNote "not used, not needed"@en ;
   adm:translationPriority 2 ;
   rdfs:label "Unspecified work class"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
   owl:deprecated true ;
   skos:definition "Works for which no work type was indicated"@en ;
   skos:editorialNote "This is the class of migrated works for which no work type was indicated. Needs repair after migration"@en ;
+  skos:historyNote "not used, not needed"@en ;
 .
 bdo:VirtualWork
   a owl:Class ;
@@ -1434,11 +1412,11 @@ bdo:WorkCoverTitle
 .
 bdo:WorkDkarChagTitle
   a owl:Class ;
-  skos:historyNote "retired in favor a the more neutral WorkToCTitle"@en ;
   adm:replaceWith bdo:WorkToCTitle ;
   rdfs:label "Table of Contents Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
   owl:deprecated true ;
+  skos:historyNote "retired in favor a the more neutral WorkToCTitle"@en ;
 .
 bdo:WorkEvent
   a owl:Class ;
@@ -2544,13 +2522,13 @@ bdo:legacyOutlineNodeRID
 .
 bdo:license
   a owl:ObjectProperty ;
-  skos:historyNote "deprecated by adm:license"@en ;
   adm:replaceWith adm:license ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "license"@en ;
   rdfs:seeAlso bdo:License ;
   owl:deprecated true ;
   skos:definition "The license under which access to the Work is provided"@en ;
+  skos:historyNote "deprecated by adm:license"@en ;
 .
 bdo:lineageDownFrom
   a owl:ObjectProperty ;
@@ -2804,7 +2782,6 @@ bdo:onDate
 .
 bdo:onOrAbout
   a owl:DatatypeProperty ;
-  skos:historyNote "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
   adm:replaceWith bdo:notAfter ;
   adm:replaceWith bdo:notBefore ;
   adm:replaceWith bdo:onDate ;
@@ -2814,6 +2791,7 @@ bdo:onOrAbout
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:eventWhen ;
   owl:deprecated true ;
+  skos:historyNote "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
 .
 bdo:onYear
   a owl:DatatypeProperty ;
@@ -2995,11 +2973,11 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 bdo:placeIsNear
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  skos:historyNote "deprecated because not actually used in legacy data and not well defined"@en ;
   rdfs:domain bdo:Place ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
   skos:definition "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
+  skos:historyNote "deprecated because not actually used in legacy data and not well defined"@en ;
 .
 bdo:placeLat
   a owl:DatatypeProperty ;
@@ -3479,11 +3457,11 @@ bdo:workContainsChapters
 .
 bdo:workDateOfWriting
   a owl:DatatypeProperty ;
-  skos:historyNote "deprecated in favor of :CompletedEvent."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "date of writing"@en ;
   rdfs:range xsd:string ;
   owl:deprecated true ;
+  skos:historyNote "deprecated in favor of :CompletedEvent."@en ;
 .
 bdo:workDimHeight
   a owl:DatatypeProperty ;
@@ -3539,11 +3517,11 @@ A genre is intended to capture a form or structural type of the work versus the 
 .
 bdo:workHasNumber
   a owl:ObjectProperty ;
-  skos:historyNote "now use :serialHasMember"@en ;
   rdfs:label "number"@en ;
   owl:deprecated true ;
   owl:inverseOf bdo:workNumberOf ;
   skos:definition "used to reference the number associated with the work in the series"@en ;
+  skos:historyNote "now use :serialHasMember"@en ;
 .
 bdo:workHasPart
   a owl:ObjectProperty ;
@@ -3578,11 +3556,11 @@ Adding this \"virtual\" property to the ontology provides a place to add the lab
 .
 bdo:workHasSite
   a owl:ObjectProperty ;
-  skos:historyNote "deprecated in favor of the various :WorkEvents."@en ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "has site"@en ;
   owl:deprecated true ;
   skos:definition "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
+  skos:historyNote "deprecated in favor of the various :WorkEvents."@en ;
 .
 bdo:workHollis
   a owl:DatatypeProperty ;
@@ -3619,13 +3597,13 @@ bdo:workIsAbout
 .
 bdo:workIsNumbered
   a owl:DatatypeProperty ;
-  skos:historyNote "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
   adm:translationPriority 2 ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "number in series"@en ;
   rdfs:range xsd:boolean ;
   owl:deprecated true ;
   skos:definition "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
+  skos:historyNote "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
 .
 bdo:workIsbn
   a owl:DatatypeProperty ;
@@ -3926,12 +3904,12 @@ bdo:workMaterial
 bdo:workNumberOf
   a owl:ObjectProperty ;
   adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
-  skos:historyNote "now use :serialMemberOf"@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "In"@en ;
   rdfs:range bdo:SerialWork ;
   owl:deprecated true ;
   skos:definition "Indicates that this Work is a member of a series."@en ;
+  skos:historyNote "now use :serialMemberOf"@en ;
 .
 bdo:workNumberOfVolumes
   a owl:DatatypeProperty ;
@@ -4075,21 +4053,21 @@ bdo:workPartType
 .
 bdo:workPublisherLocation
   a owl:DatatypeProperty ;
-  skos:historyNote "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
   skos:definition "Loction of the publisher of the form of the Work that has been digitized."@en ;
+  skos:historyNote "deprecated in favor of :PublishedEvent"@en ;
 .
 bdo:workPublisherName
   a owl:DatatypeProperty ;
-  skos:historyNote "deprecated in favor of :PublishedEvent"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
   owl:deprecated true ;
   skos:definition "The name of the publisher transcribed from the Work"@en ;
+  skos:historyNote "deprecated in favor of :PublishedEvent"@en ;
 .
 bdo:workRefChokLing
   a owl:DatatypeProperty ;
@@ -4226,12 +4204,12 @@ bdo:workTranslationOf
 .
 bdo:workType
   a owl:ObjectProperty ;
-  skos:historyNote "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
   rdfs:domain bdo:BiblioEntity ;
   rdfs:label "work type"@en ;
   rdfs:range bdo:WorkType ;
   rdfs:seeAlso bdo:WorkType ;
   owl:deprecated true ;
+  skos:historyNote "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
 .
 bdo:yearInEra
   a owl:DatatypeProperty ;

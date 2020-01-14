@@ -218,6 +218,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the Gender vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Identifier/"/>
+        <altURL    rdf:resource="owl-schema/types/identifiers.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/identifiers.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the LangScript vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/LangScript/"/>
         <altURL    rdf:resource="owl-schema/types/lang_scripts.ttl"/>
