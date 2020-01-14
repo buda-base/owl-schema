@@ -1,14 +1,16 @@
-# baseURI: http://purl.bdrc.io/ontology/core/shapes/
+# baseURI: http://purl.bdrc.io/ontology/shapes/core/WorkShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: bds
 
+@prefix WorkShapes: <http://purl.bdrc.io/ontology/shapes/core/WorkShapes/>
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix bds: <http://purl.bdrc.io/ontology/core/shapes/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dash: <http://datashapes.org/dash#> .
@@ -28,148 +30,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bds:
+WorkShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
   owl:imports bdo: ;
-  owl:versionInfo "Initial SHACL constraints" ;
-.
-bds:CorporationMemberShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "CorporationMember shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:memberOf ;
-      sh:class bdo:Corporation ;
-      sh:description "this respource may be a member of a Corporation"@en ;
-      sh:inversePath bdo:hasMember ;
-      sh:minCount 0 ;
-      sh:name "member of"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:targetClass bdo:Person ;
-.
-bds:CorporationShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "Corporation shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:hasMember ;
-      sh:class bdo:CorporationMember ;
-      sh:description "this Corporation may have zero or more members"@en ;
-      sh:inversePath bdo:memberOf ;
-      sh:minCount 0 ;
-      sh:name "has member"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:targetClass bdo:Corporation ;
-.
-bds:EntityShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "Entity shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path adm:status ;
-      sh:class adm:Status ;
-      sh:description "must be exactly one adm:status of value adm:StatusType"@en ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "status"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path skos:prefLabel ;
-      sh:datatype rdf:langString ;
-      sh:description "require unique language from among the listed choices"@en ;
-      sh:languageIn (
-          "en"
-          "zh"
-          "bo"
-          "bo-x-ewts"
-        ) ;
-      sh:minCount 1 ;
-      sh:name "pref label"@en ;
-      sh:order "1"^^xsd:decimal ;
-      sh:uniqueLang true ;
-    ] ;
-  sh:targetClass bdo:Entity ;
-.
-bds:InstanceShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "Instance Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:creator ;
-      sh:class bdo:AgentAsCreator ;
-      sh:description "this Instance may have zero or more creators."@en ;
-      sh:minCount 0 ;
-      sh:name "instance has translation"@en ;
-    ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:instanceOf ;
-      sh:class bdo:Work ;
-      sh:description "this Instance is an instance of at least one Work"@en ;
-      sh:inversePath bdo:hasInstance ;
-      sh:minCount 1 ;
-      sh:name "instance of"@en ;
-    ] ;
-  sh:targetClass bdo:Instance ;
-.
-bds:LabelShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "Label Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:hasTranslation ;
-      sh:class bdo:Label ;
-      sh:description "this Label may have zero or more tanslations"@en ;
-      sh:inversePath bdo:translationOf ;
-      sh:minCount 0 ;
-      sh:name "label has translation"@en ;
-    ] ;
-  sh:targetClass bdo:Label ;
-.
-bds:PhysicalInstanceShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "PhysicalInstance Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:printMethod ;
-      sh:class bdo:PrintMethod ;
-      sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
-      sh:inversePath bdo:translationOf ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "instance print method"@en ;
-    ] ;
-  sh:targetClass bdo:PhysicalInstance ;
-.
-bds:SerialInstanceShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "SerialInstance Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:instanceOf ;
-      sh:class bdo:SerialMember ;
-      sh:description "this is an instance of a SerialMember"@en ;
-      sh:inversePath bdo:hasInstance ;
-      sh:minCount 1 ;
-      sh:name "instance of serial"@en ;
-    ] ;
-  sh:targetClass bdo:SerialInstance ;
+  owl:versionInfo "Initial SHACL constraints for Works" ;
 .
 bds:SerialMemberShape
   a rdfs:Class ;
