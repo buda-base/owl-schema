@@ -167,6 +167,11 @@ bdr:ScriptSouthernIndia
   rdfs:comment "use for undetermined Southern Indian script"@en ;
   skos:prefLabel "Southern Indian"@en ;
 .
+bdr:ScriptTang
+   a bdo:Script ;
+   rdfs:seeAlso <http://lexvo.org/id/script/Tang> ;
+   skos:prefLabel "Tangut script"@en ;
+ .
 bdr:ScriptThai
   a bdo:Script ;
   rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;

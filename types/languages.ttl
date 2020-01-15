@@ -234,6 +234,15 @@ bdr:LangSa
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Sanskrit"@en ;
 .
+bdr:LangTxg
+   a bdo:Language ;
+   a owl:Class ;
+   bdo:langBCP47Lang "txg" ;
+   bdo:langMARCCode "sit" ;
+   rdfs:seeAlso <http://lexvo.org/id/iso639-3/txg> ;
+   rdfs:subClassOf bdo:Language ;
+   skos:prefLabel "Tangut"@en ;
+ .
 bdr:LangUr
   a bdo:Language ;
   a owl:Class ;
