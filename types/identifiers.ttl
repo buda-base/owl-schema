@@ -1,6 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Identifier/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Gender
+# prefix: Identifier
 
 @prefix Identifier: <http://purl.bdrc.io/ontology/types/Identifier/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -28,6 +28,15 @@ bdo:InstanceIdentifier
   rdfs:subClassOf bdo:Identifier ;
   rdfs:subClassOf bf:Identifier ;
 .
+bdo:ItemIdentifier
+  a owl:Class ;
+  rdfs:subClassOf bdo:Identifier ;
+  rdfs:subClassOf bf:Identifier ;
+.
+bdo:PlaceIdentifier
+  a owl:Class ;
+  rdfs:subClassOf bdo:Identifier ;
+.
 bdo:WorkIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:Identifier ;
@@ -35,12 +44,59 @@ bdo:WorkIdentifier
 .
 bf:Isbn
   rdfs:subClassOf bdo:InstanceIdentifier ;
+  skos:historyNote "Was bdo:ISBN."@en ;
 .
 bf:Lccn
   rdfs:subClassOf bdo:InstanceIdentifier ;
+  skos:historyNote "Was bdo:LCCN."@en ;
 .
 bf:ShelfMarkLcc
   rdfs:subClassOf bdo:InstanceIdentifier ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
   skos:definition "Library of Congress Call Number. Was bdo:LCCallNumber."@en ;
+  skos:historyNote "Was bdo:LCCallNumber."@en ;
 .
+bdo:HollisId
+  a owl:Class ;
+  rdfs:subClassOf bdo:InstanceIdentifier ;
+  skos:definition "Identifier assigned by Harvard Library to BDRC assets on file at Harvard."@en ;
+.
+bdo:HarvardShelfId
+  a owl:Class ;
+  rdfs:subClassOf bdo:InstanceIdentifier ;
+  skos:definition "Harvard Library identifier for physical items at Harvard and cataloged in BDRC"@en ;
+  skos:historyNote "Was bdo:workSeeHarvard."@en ;
+.
+bdo:CHGISId
+  a owl:Class ;
+  rdfs:label "chgis id"@en ;
+  rdfs:subClassOf bdo:PlaceIdentifier ;
+  skos:definition "The China Historical GIS identifier for the Place"@en ;
+  skos:editorialNote "Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with \"TBRC_\", for example, \"TBRC_G162\"."@en ;  
+  skos:historyNote "Was bdo:placeChgisId."@en ;
+.
+bdo:GB2260-2013
+  a owl:Class ;
+  rdfs:subClassOf bdo:PlaceIdentifier ;
+  rdfs:label "GB2260-2013"@en ;
+  skos:definition "The 2013 Chinese GB code for the Place. Similar to U.S. Zipcode"@en ;
+  skos:historyNote "Was bdo:placeGB2260-2013."@en ;
+.
+bdo:MARCCountryCode
+  a owl:DatatypeProperty ;
+  rdfs:subClassOf bdo:PlaceIdentifier ;
+  rdfs:label "MARC Country Code"@en ;
+  rdfs:seeAlso <http://id.loc.gov/vocabulary/countries.html> ;
+  rdfs:seeAlso <http://www.loc.gov/marc/countries/> ;
+  skos:definition "two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)"@en ;
+  skos:historyNote "Was bdo:placeMARCCountryCode."@en ;
+.
+
+
+
+
+
+
+
+
+
