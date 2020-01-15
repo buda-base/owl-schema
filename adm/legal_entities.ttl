@@ -143,11 +143,11 @@ bda:LD_DILA_BSADP
   adm:provider bda:CP048 ;
   skos:prefLabel "Provided by DILA, Creative Commons BY-NC-SA 3.0 Unported License"@en ;
 .
-bda:LD_NGMCP_Metadata
+bda:LD_NGMPP_Metadata
   a adm:LegalData ;
   adm:license bda:LicenseCopyrightUndetermined ;
   adm:provider bda:CP049 ;
-  skos:prefLabel "Provided by NGMCP, Copyright Undetermined"@en ;
+  skos:prefLabel "Provided by NGMPP, Copyright Undetermined"@en ;
 .
 bda:LD_SRC_Metadata
   a adm:LegalData ;

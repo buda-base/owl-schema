@@ -334,8 +334,8 @@ bda:CP048
 bda:CP049
   a adm:ContentProvider ;
   a foaf:Organization ;
-  skos:prefLabel "NGMCP" ;
-  skos:altLabel "Nepalese German Manuscript Cataloging Project"@en ;
+  skos:prefLabel "NGMPP" ;
+  skos:altLabel "Nepalese German Manuscript Preservation Project"@en ;
   foaf:homepage "https://www.aai.uni-hamburg.de/en/forschung/ngmcp"^^xsd:anyURI ;
 .
 bda:CP050
