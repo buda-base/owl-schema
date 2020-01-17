@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/core/Unknown/
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
@@ -69,7 +68,6 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/core/Unknown/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
@@ -2108,13 +2106,6 @@ bdo:hasUncle
   rdfs:subPropertyOf bdo:hasParentSibling ;
   skos:definition "Indicates an Uncle of the Person"@en ;
 .
-bdo:hasUnknownKinship
-  a owl:ObjectProperty ;
-  a owl:SymmetricProperty ;
-  rdfs:label "has unknown kinship with"@en ;
-  rdfs:subPropertyOf bdo:kinWith ;
-  skos:definition "Indicates a Person with an unknown kinship relation to the Person"@en ;
-.
 bdo:hasWife
   a owl:ObjectProperty ;
   rdfs:label "has wife"@en ;
@@ -3831,12 +3822,6 @@ bdo:yearOffset
   rdfs:label "year offset"@en ;
   rdfs:range xsd:integer ;
   skos:definition "This is the year offset for an Era in terms of the Common Era."@en ;
-.
-bdr:ChineseDateNotSpecified
-  a bdo:ChineseDate ;
-  adm:translationPriority 2 ;
-  rdfs:label "Unspecified Chinese date"@en ;
-  skos:definition "An unspecified Chinese date."@en ;
 .
 bdr:LanguageTaxonomy
   a bdo:Type ;

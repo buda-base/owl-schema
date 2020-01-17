@@ -165,13 +165,6 @@
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
     
-    <OntologySpec>
-        <!-- local version of the Unknown vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/core/Unknown/"/>
-        <altURL    rdf:resource="owl-schema/core/unknown-entities.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/core/unknown-entities.ttl"/>
-    </OntologySpec>
-    
     <!-- roles -->
     <OntologySpec>
         <!-- local version of the ChineseMonastic vocabulary -->
