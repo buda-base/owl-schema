@@ -160,7 +160,7 @@ bdr:TraditionKarmaKagyu
 bdr:TraditionMadrukKagyu
   a bdr:TraditionDrukpaKagyu ;
   skos:altLabel "Lower Drukpa Kagyu"@en ;
-  skos:prefLabel "Madruk Kagyu"@en ;
+  skos:prefLabel "Medruk Kagyu"@en ;
 .
 bdr:TraditionMartsangKagyu
   a bdr:EightMinorKagyuTraditions ;
