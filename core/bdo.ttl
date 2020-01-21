@@ -1083,8 +1083,8 @@ bdo:PersonRabByungOrdination
 .
 bdo:PersonReversal
   a owl:Class ;
-  adm:userTooltip "Reverses firstname lastname to lastname, firstname"@en ;
-  rdfs:label "other title"@en ;
+  adm:userTooltip "Reverses 'firstname lastname' to 'lastname, firstname'"@en ;
+  rdfs:label "reversed name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
 bdo:PersonSecretInitiatoryName
