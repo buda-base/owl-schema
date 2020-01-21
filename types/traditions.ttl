@@ -1,7 +1,9 @@
 # baseURI: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://www.w3.org/2004/02/skos/core
+# prefix: Tradition
 
 @prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,12 +11,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 
 bdo:ChineseTradition
   a owl:Class ;
-  rdfs:label "Chinese tradition"@en ;
   adm:userTooltip "A Chinese Buddhist school or tradition, e.g., Tintai"@en ;
+  rdfs:label "Chinese tradition"@en ;
   rdfs:subClassOf bdo:Tradition ;
 .
 bdo:TibetanTradition
@@ -60,6 +61,11 @@ bdr:TR0002
   a bdo:ChineseTradition ;
   skos:prefLabel "Tiantai school"@en ;
   skos:prefLabel "天台宗"@zh-hant ;
+.
+bdr:TR0003
+  a bdo:ChineseTradition ;
+  skos:prefLabel "Zen school"@en ;
+  skos:prefLabel "禪宗"@zh-hant ;
 .
 bdr:TraditionBardrukKagyu
   a bdr:TraditionDrukpaKagyu ;
@@ -107,7 +113,9 @@ bdr:TraditionDharmaguptaka
   a owl:Class ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Dharmaguptaka> ;
   rdfs:subClassOf bdo:Tradition ;
+  skos:prefLabel "Dhammaguttā"@pi-x-iast ;
   skos:prefLabel "Dharmaguptaka"@en ;
+  skos:prefLabel "Dharmaguptaka"@sa-x-iast ;
   skos:prefLabel "法藏部"@zh-hant ;
 .
 bdr:TraditionDrigungKagyu
@@ -136,8 +144,8 @@ bdr:TraditionJordruk
   a bdr:EightPracticeLineages ;
   a owl:Class ;
   rdfs:subClassOf bdr:EightPracticeLineages ;
-  skos:prefLabel "Kalacakra"@en ;
   skos:altLabel "Six Branch Vajra Yoga"@en ;
+  skos:prefLabel "Kalacakra"@en ;
 .
 bdr:TraditionKadam
   a bdr:EightPracticeLineages ;
@@ -160,7 +168,7 @@ bdr:TraditionKarmaKagyu
 bdr:TraditionMadrukKagyu
   a bdr:TraditionDrukpaKagyu ;
   skos:altLabel "Lower Drukpa Kagyu"@en ;
-  skos:prefLabel "Madruk Kagyu"@en ;
+  skos:prefLabel "Medruk Kagyu"@en ;
 .
 bdr:TraditionMartsangKagyu
   a bdr:EightMinorKagyuTraditions ;
@@ -171,6 +179,7 @@ bdr:TraditionMulasarvastivada
   a owl:Class ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Mulasarvastivada> ;
   rdfs:subClassOf bdo:Tradition ;
+  skos:prefLabel "Mūlasarvāstivāda"@en ;
   skos:prefLabel "Mūlasarvāstivāda"@sa-x-iast ;
   skos:prefLabel "根本說一切有部"@zh-hant ;
 .
@@ -216,6 +225,7 @@ bdr:TraditionSarvastivada
   a bdo:Tradition ;
   a owl:Class ;
   rdfs:subClassOf bdo:Tradition ;
+  skos:prefLabel "Sarvāstivāda"@en ;
   skos:prefLabel "Sarvāstivāda"@sa-x-iast ;
   skos:prefLabel "說一切有部"@zh-hant ;
 .
@@ -237,7 +247,8 @@ bdr:TraditionTheravada
   a bdo:Tradition ;
   a owl:Class ;
   rdfs:subClassOf bdo:Tradition ;
-  skos:prefLabel "School of the Elders"@en ;
+  skos:altLabel "School of the Elders"@en ;
+  skos:prefLabel "Theravāda"@en ;
   skos:prefLabel "Theravāda"@pi-x-iast ;
 .
 bdr:TraditionTodrukKagyu
@@ -290,9 +301,4 @@ bdr:TraditionZhije
 bdr:TraditionZurmangKagyu
   a bdr:TraditionKarmaKagyu ;
   skos:prefLabel "Zurmang Kagyu"@en ;
-.
-bdr:TR0003
-  a bdo:ChineseTradition ;
-  skos:prefLabel "Zen school"@en ;
-  skos:prefLabel "禪宗"@zh-hant ;
 .
