@@ -27,34 +27,50 @@ bdo:BibliographicIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:Identifier ;
   rdfs:subClassOf bf:Identifier ;
+  rdfs:label "Bibliographic Identifer"@en ;
+  skos:definition "An identifier associated with a bibliographic concept such as Work, Instance or Item"@en ;
 .
 bdo:InstanceIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:BibliographicIdentifier ;
+  rdfs:label "Instance Identifer"@en ;
+  skos:definition "An identifier associated with an Instance"@en ;
 .
 bdo:CBCSiglaIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:InstanceIdentifier ;
+  rdfs:label "CBC Sigla Identifer"@en ;
+  skos:definition "An identifier associated with a CBC Instance"@en ;
 .
 bdo:KaTenSiglaIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:InstanceIdentifier ;
+  rdfs:label "KaTen Sigla Identifer"@en ;
+  skos:definition "An identifier associated with a KaTen Instance"@en ;
 .
 bdo:ItemIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:BibliographicIdentifier ;
+  rdfs:label "Item Identifer"@en ;
+  skos:definition "An identifier associated with an Item"@en ;
 .
 bdo:PlaceIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:Identifier ;
+  rdfs:label "Place Identifer"@en ;
+  skos:definition "An identifier associated with a Place"@en ;
 .
 bdo:WorkIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:BibliographicIdentifier ;
+  rdfs:label "Work Identifer"@en ;
+  skos:definition "An identifier associated with a Work"@en ;
 .
 bdo:RefrKTsIdentifier
   a owl:Class ;
   rdfs:subClassOf bdo:WorkIdentifier ;
+  rdfs:label "rKTs Identifer"@en ;
+  skos:definition "An identifier associated with an rKTs Work"@en ;
 .
 bf:Isbn
   rdfs:subClassOf bdo:InstanceIdentifier ;
@@ -64,10 +80,15 @@ bf:Lccn
   rdfs:subClassOf bdo:InstanceIdentifier ;
   skos:historyNote "Was bdo:LCCN."@en ;
 .
+bdo:ShelfMark
+  a owl:Class ;
+  rdfs:subClassOf bdo:ItemIdentifier ;
+  rdfs:label "Shelf location"@en ;
+  skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
+.
 bf:ShelfMarkLcc
-  rdfs:subClassOf bdo:InstanceIdentifier ;
+  rdfs:subClassOf bdo:ShelfMark ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
-  skos:definition "Library of Congress Call Number. Was bdo:LCCallNumber."@en ;
   skos:historyNote "Was bdo:LCCallNumber."@en ;
 .
 bdo:HollisId
