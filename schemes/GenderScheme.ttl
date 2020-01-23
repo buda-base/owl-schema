@@ -1,0 +1,42 @@
+# baseURI: http://purl.bdrc.io/ontology/types/GenderScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: GenderScheme
+
+@prefix GenderScheme: <http://purl.bdrc.io/ontology/types/GenderScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:Gender
+  a owl:Class ;
+  rdfs:label "Gender"@en ;
+.
+GenderScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:GenderFemale
+  a bdo:Gender ;
+  a skos:Concept ;
+  skos:definition "The gender of this person is female"@en ;
+  skos:prefLabel "female"@en ;
+  skos:topConceptOf bdr:GenderScheme ;
+.
+bdr:GenderMale
+  a bdo:Gender ;
+  a skos:Concept ;
+  skos:definition "The gender of this person is male"@en ;
+  skos:prefLabel "male"@en ;
+  skos:topConceptOf bdr:GenderScheme ;
+.
+bdr:GenderScheme
+  a skos:ConceptScheme ;
+  adm:translationPriority 2 ;
+  skos:definition "The Gender Scheme records the gender of a :Person"@en ;
+  skos:prefLabel "Gender Scheme"@en ;
+.
