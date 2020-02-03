@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/GenderScheme/
+# baseURI: http://purl.bdrc.io/resource/GenderScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: GenderScheme
 
-@prefix GenderScheme: <http://purl.bdrc.io/ontology/types/GenderScheme/> .
+@prefix GenderScheme: <http://purl.bdrc.io/resource/GenderScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
