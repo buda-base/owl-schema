@@ -3,7 +3,6 @@
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://purl.bdrc.io/ontology/types/DateIndication/
-# imports: http://purl.bdrc.io/ontology/types/Identifier/
 # imports: http://purl.bdrc.io/ontology/types/LangScript/
 # imports: http://purl.bdrc.io/ontology/types/Language/
 # imports: http://purl.bdrc.io/ontology/types/LineageType/
@@ -18,6 +17,7 @@
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # imports: http://purl.bdrc.io/resource/GenderScheme/
+# imports: http://purl.bdrc.io/resource/IdentifierScheme/
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # prefix: bdo
 
@@ -72,7 +72,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/DateIndication/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Identifier/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LangScript/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Language/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/LineageType/> ;
@@ -87,6 +86,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/IdentierScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
@@ -2271,7 +2271,7 @@ bdo:instanceErrata
   rdfs:domain bdo:Instance ;
   rdfs:label "errata"@en ;
   rdfs:range rdf:langString ;
-  skos:definition "Indicates a statement of error in the content"@en ;
+  skos:definition "Indicates a statement of an error in the content"@en ;
   skos:editorialNote "was :workErrata"@en ;
 .
 bdo:instanceExtentStatement
@@ -2488,9 +2488,7 @@ bdo:kinWith
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
   bdo:inferSubTree true ;
-  rdfs:domain bdo:Person ;
   rdfs:label "kin with"@en ;
-  rdfs:range bdo:Person ;
   skos:definition "Root property that expresses some kinship relation between the subject and object Persons."@en ;
 .
 bdo:labelConnection

@@ -104,13 +104,6 @@
     </OntologySpec>
     
     <OntologySpec>
-        <!-- local version of the FEMCScheme vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/resource/FEMCScheme/"/>
-        <altURL    rdf:resource="owl-schema/schemes/FEMCScheme.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/FEMCScheme.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
         <!-- local version of the GitRepo vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/GitRepo/"/>
         <altURL    rdf:resource="owl-schema/adm/types/git_repos.ttl"/>
@@ -182,10 +175,24 @@
     
     <!-- schemes -->
     <OntologySpec>
-        <!-- local version of the FEMCTopics vocabulary -->
+        <!-- local version of the FEMCScheme vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/FEMCScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/FEMCScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/FEMCScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the Gender vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/GenderScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/GenderScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/GenderScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the Identifier vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/IdentifierScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/IdentifierScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/IdentifierScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
@@ -201,20 +208,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Binding/"/>
         <altURL    rdf:resource="owl-schema/types/bindings.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/bindings.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the Gender vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Gender/"/>
-        <altURL    rdf:resource="owl-schema/types/gender.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/gender.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the Identifier vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Identifier/"/>
-        <altURL    rdf:resource="owl-schema/types/identifiers.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/identifiers.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
