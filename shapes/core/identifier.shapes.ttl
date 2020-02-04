@@ -3,7 +3,7 @@
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: bds
 
-@prefix CorporationShapes: <http://purl.bdrc.io/ontology/shapes/core/IdentifierShapes/>
+@prefix IdentifierShapes: <http://purl.bdrc.io/ontology/shapes/core/IdentifierShapes/>
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .

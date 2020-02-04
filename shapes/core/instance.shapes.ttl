@@ -59,7 +59,7 @@ bds:InstanceShape
     ] ;
   sh:property [
       a sh:PropertyShape ;
-      sh:path bf:identifiedBy
+      sh:path bf:identifiedBy ;
       sh:inversePath bf:identifies ;
       sh:class bdo:InstanceIdentifier ;
       sh:name "identifies instance shape"@en ;

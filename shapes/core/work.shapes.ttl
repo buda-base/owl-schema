@@ -135,7 +135,7 @@ bds:WorkShape
     ] ;
   sh:property [
       a sh:PropertyShape ;
-      sh:path bf:identifiedBy
+      sh:path bf:identifiedBy ;
       sh:inversePath bf:identifies ;
       sh:class bdo:WorkIdentifier ;
       sh:name "identifies Work shape"@en ;
