@@ -1,0 +1,105 @@
+# baseURI: http://purl.bdrc.io/resource/BindingScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: BindingScheme
+
+@prefix BindingScheme: <http://purl.bdrc.io/resource/BindingScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:Binding
+  a owl:Class ;
+  rdfs:label "Binding" ;
+  skos:definition "The binding records how a collection of pages/folia are kept together"@en ;
+.
+bdr:BindingScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Binding Scheme"@en ;
+.
+BindingScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:Binding_Codex
+  a bdo:Binding ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Binding Codex" ;
+  skos:definition "The codex form of binding is the precursor to the modern Western-style bound book"@en ;
+  skos:topConceptOf bdr:BindingScheme ;
+.
+bdr:Binding_Codex_Perfect
+  a bdo:Binding ;
+  a skos:Concept ;
+  skos:broader bdr:Binding_Codex ;
+  skos:definition "thermally activated glued paperback binding"@en ;
+  skos:prefLabel "perfect bound"@en ;
+.
+bdr:Binding_Codex_Sewn
+  a bdo:Binding ;
+  a skos:Concept ;
+  skos:broader bdr:Binding_Codex ;
+  skos:definition "conventional hardbound book other manuscript"@en ;
+  skos:prefLabel "sewn binding"@en ;
+.
+bdr:Binding_Continuous
+  a bdo:Binding ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "continuous binding"@en ;
+  skos:definition "Examples of continuous binding include scrolls and leporellos"@en ;
+  skos:topConceptOf bdr:BindingScheme ;
+.
+bdr:Binding_Continuous_Folded
+  a bdo:Binding ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:Binding_Continuous ;
+  skos:definition "folded concertina or accordion style"@en ;
+  skos:prefLabel "folded"@en ;
+.
+bdr:Binding_Continuous_Leporello
+  a bdo:Binding ;
+  a skos:Concept ;
+  skos:altLabel "Thyāsaphu"@sa-x-iast ;
+  skos:altLabel "Thyāsaphū"@sa-x-iast ;
+  skos:broader bdr:Binding_Continuous ;
+  skos:definition "folded and bound between front and back boards"@en ;
+  skos:prefLabel "leporello"@en ;
+.
+bdr:Binding_Continuous_Scroll
+  a bdo:Binding ;
+  a skos:Concept ;
+  skos:altLabel "Tamsuk"@en ;
+  skos:broader bdr:Binding_Continuous ;
+  skos:definition "continuous sheet written on oneside and rolled up"@en ;
+  skos:definition "use also for rolled palm leaves (tamsuk)"@en ;
+  skos:prefLabel "scroll"@en ;
+.
+bdr:Binding_LooseLeaf
+  a bdo:Binding ;
+  a skos:Concept ;
+  rdfs:label "Binding Loose leaf" ;
+  skos:definition "A binding form in which some sort of container, cloth wrapping, box, pecha between boards, and so on"@en ;
+  skos:topConceptOf bdr:BindingScheme ;
+.
+bdr:Binding_LooseLeaf_Pecha
+  a bdo:Binding ;
+  a skos:Concept ;
+  skos:broader bdr:Binding_LooseLeaf ;
+  skos:definition "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
+  skos:prefLabel "dpe cha/"@bo-x-exts ;
+  skos:prefLabel "pecha"@en ;
+.
+bdr:Binding_LooseLeaf_Pothi
+  a bdo:Binding ;
+  a skos:Concept ;
+  skos:broader bdr:Binding_LooseLeaf ;
+  skos:definition "loose leaves with holes for string to keep the leaves together and wrapped in cloth"@en ;
+  skos:prefLabel "pothi"@en ;
+.

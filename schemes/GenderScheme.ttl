@@ -16,10 +16,6 @@ bdo:Gender
   a owl:Class ;
   rdfs:label "Gender"@en ;
 .
-GenderScheme:
-  a owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
 bdr:GenderFemale
   a bdo:Gender ;
   a skos:Concept ;
@@ -39,4 +35,8 @@ bdr:GenderScheme
   adm:translationPriority 2 ;
   skos:definition "The Gender Scheme records the gender of a :Person"@en ;
   skos:prefLabel "Gender Scheme"@en ;
+.
+GenderScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
 .
