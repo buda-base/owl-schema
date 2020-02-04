@@ -133,5 +133,12 @@ bds:WorkShape
         ] ;
       sh:order 2.1 ;
     ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bf:identifiedBy
+      sh:inversePath bf:identifies ;
+      sh:class bdo:WorkIdentifier ;
+      sh:name "identifies Work shape"@en ;
+  ] ;
   sh:targetClass bdo:Work ;
 .

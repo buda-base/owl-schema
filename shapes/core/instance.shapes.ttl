@@ -57,6 +57,13 @@ bds:InstanceShape
       sh:minCount 1 ;
       sh:name "instance of"@en ;
     ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bf:identifiedBy
+      sh:inversePath bf:identifies ;
+      sh:class bdo:InstanceIdentifier ;
+      sh:name "identifies instance shape"@en ;
+  ] ;
   sh:targetClass bdo:Instance ;
 .
 bds:PhysicalInstanceShape
@@ -68,10 +75,18 @@ bds:PhysicalInstanceShape
       sh:path bdo:printMethod ;
       sh:class bdo:PrintMethod ;
       sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
-      sh:inversePath bdo:translationOf ;
       sh:maxCount 1 ;
       sh:minCount 0 ;
       sh:name "instance print method"@en ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:binding ;
+      sh:class bdo:Binding ;
+      sh:description "this PhysicalInstance may have a single Binding"@en ;
+      sh:maxCount 1 ;
+      sh:minCount 0 ;
+      sh:name "instance binding"@en ;
     ] ;
   sh:targetClass bdo:PhysicalInstance ;
 .

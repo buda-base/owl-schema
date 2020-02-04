@@ -211,13 +211,6 @@
     
     <!-- types -->
     <OntologySpec>
-        <!-- local version of the Binding vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Binding/"/>
-        <altURL    rdf:resource="owl-schema/types/bindings.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/bindings.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
         <!-- local version of the LangScript vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/LangScript/"/>
         <altURL    rdf:resource="owl-schema/types/lang_scripts.ttl"/>

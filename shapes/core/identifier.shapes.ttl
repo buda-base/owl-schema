@@ -35,34 +35,6 @@ IdentifierShapes:
   owl:imports bdo: ;
   owl:versionInfo "Initial SHACL constraints for Identifiers such as ISBN and such" ;
 .
-bds:InstanceIdentifierShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "generic Instance Identifier shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bf:identifies
-      sh:inversePath bf:identifiedBy ;
-      sh:class bdo:Instance ;
-      sh:name "identifies instance shape"@en ;
-  ] ;
-  sh:targetClass bdo:InstanceIdentifier ;
-.
-bds:WorkIdentifierShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "generic Work Identifier shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bf:identifies
-      sh:inversePath bf:identifiedBy ;
-      sh:class bdo:Work ;
-      sh:name "identifies Work shape"@en ;
-  ] ;
-  sh:targetClass bdo:WorkIdentifier ;
-.
 bds:IsbnShape
   a rdfs:Class ;
   a sh:NodeShape ;
