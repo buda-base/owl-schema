@@ -86,7 +86,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/IdentierScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
