@@ -1,0 +1,471 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bf:  <http://id.loc.gov/ontologies/bibframe/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+
+<http://id.loc.gov/ontologies/bflc/>
+        rdf:type          owl:Ontology ;
+        owl:versionInfo   "1.2.0" ;
+        owl:ontologyIRI   <http://id.loc.gov/ontologies/bflc/> ;
+        owl:versionIRI    <http://id.loc.gov/ontologies/bflc-1-2-0/> ;
+        owl:priorVersion  <http://id.loc.gov/ontologies/bflc-1-1-0/> ;
+        rdfs:label        "BIBFRAME vocabulary with LC extensions" ;
+        dcterms:modified  "2019-05-14T15:21:35.917-04:00" ;
+        owl:imports       <http://id.loc.gov/vocabulary/relators> ;
+        owl:imports       <http://id.loc.gov/ontologies/bibframe> .
+
+<http://id.loc.gov/ontologies/bflc/PrimaryContribution>
+        rdf:type          owl:Class ;
+        rdfs:label        "Primary contribution" ;
+        rdfs:subClassOf   bf:Contribution ;
+        skos:definition   "Contribution for which the agent is the name chosen as the name part of the name and title access point." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/Relationship>
+        rdf:type          owl:Class ;
+        rdfs:label        "Relationship" ;
+        skos:definition   "Resource and its connection to another resource." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/TransliteratedTitle>
+        rdf:type          owl:Class ;
+        rdfs:label        "Transliterated title" ;
+        rdfs:subClassOf   bf:VariantTitle ;
+        skos:definition   "Title transliterated from one script to another." ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/DemographicGroup>
+        rdf:type          owl:Class ;
+        rdfs:label        "Demographic group" ;
+        skos:definition   "Characteristics of a group of agents." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/CreatorCharacteristic>
+        rdf:type          owl:Class ;
+        rdfs:label        "Creator characteristic" ;
+        skos:definition   "Category to which the creators of the resource belong." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesTreatment>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series treatment" ;
+        skos:definition   "Technical specification relating to the encoding of series data in a resource" ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesSequentialDesignation>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series sequential designation" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "Beginning/ending date(s) of publication and/or sequential designations used in the bf:title field for a work. May also include a citation for the source of information." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesNumberingPeculiarities>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series numbering peculiarities" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "Listing of irregularities in the report year coverage and/or numbering used in the bf:title field for a work. May also include a citation for the source of information." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesNumbering>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series numbering" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "Sequential designation or numbering used in the bf:title field for a work." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesProvider>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series provider" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "Place of publication and the name of the publisher/issuing body used in the bf:title field for a work." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesAnalysis>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series analysis" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "A specific organization's analysis practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesTracing>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series tracing" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "A specific organization's tracing practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/SeriesClassification>
+        rdf:type          owl:Class ;
+        rdfs:label        "Series classification" ;
+        rdfs:subClassOf   <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "A specific organization's classification practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies." ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/Relief>
+        rdf:type          owl:Class ;
+        rdfs:label        "Relief" ;
+        skos:definition   "Relief term specified on a cartographic resource" ;
+        dcterms:modified  "2019-05-07 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/MachineModel>
+        rdf:type          owl:Class ;
+        rdfs:label        "Model" ;
+        rdfs:subClassOf   bf:SystemRequirement ;
+        skos:definition   "Model of the computing device on which the resource operates." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/ProgrammingLanguage>
+        rdf:type          owl:Class ;
+        rdfs:label        "Programming language" ;
+        rdfs:subClassOf   bf:SystemRequirement ;
+        skos:definition   "Name of the programming language associated with the data comprising the resource." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/OperatingSystem>
+        rdf:type          owl:Class ;
+        rdfs:label        "Operating system" ;
+        rdfs:subClassOf   bf:SystemRequirement ;
+        skos:definition   "Software that directly operates a system's hardware and serves as a platform for applications." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/ImageBitDepth>
+        rdf:type          owl:Class ;
+        rdfs:label        "Image bit depth" ;
+        rdfs:subClassOf   bf:DigitalCharacteristic ;
+        skos:definition   "The number of bits used to represent each pixel in an image." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/GrooveCutting>
+        rdf:type          owl:Class ;
+        rdfs:label        "Groove cutting" ;
+        rdfs:subClassOf   bf:SoundCharacteristic ;
+        skos:definition   "Kind of cutting of the grooves used on a disc whose sound reproduction process involves a cutting head inscribing a modulated groove into the surface of a rotating cylinder or disc." ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/Eidr>
+        rdf:type          owl:Class ;
+        rdfs:label        "Entertainment Identifier Registry Association ID" ;
+        rdfs:subClassOf   bf:Identifier ;
+        skos:definition   "Universal unique identifier system for movie and television assets." ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/MetadataLicensor>
+        rdf:type          owl:Class ;
+        rdfs:label        "Metadata licensor" ;
+        rdfs:subClassOf   bf:Agent ;
+        skos:definition   "Organization that licenses the intellectual property rights to the data contained in the description." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/EncodingLevel>
+        rdf:type          owl:Class ;
+        rdfs:label        "Encoding level" ;
+        skos:definition   "Designation of the fullness of the bibliographic description." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/Relation>
+        rdf:type          owl:Class ;
+        rdfs:label        "Relation" ;
+        skos:definition   "Connection between resources." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/AppliesTo>
+        rdf:type          owl:Class ;
+        rdfs:label        "Applies to" ;
+        skos:definition   "The component of a resource to which a characteristic applies." ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/demographicGroup>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/DemographicGroup> ;
+        skos:definition   "Characteristics of a group of agents." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Demographic group" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/creatorCharacteristic>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/CreatorCharacteristic> ;
+        skos:definition   "Category to which the creators of the resource belong." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Creator characteristic" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/alternateMediumOfPerformance>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/pmo:DeclaredMedium> ;
+        skos:definition   "Alternative to the primary declared medium of performance." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Alternate declared medium" ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/seriesTreatment>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/SeriesTreatment> ;
+        skos:definition   "Information concerning the treatment of a series in a resource" ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Series treatment" ;
+        dcterms:modified  "2018-10-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/projectedProvisionDate>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/date> ;
+        skos:definition   "Projected date of publication of the resource." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Projected publication date" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/relief>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/Relief> ;
+        skos:definition   "Relief term specified on a cartographic resource" ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Relief" ;
+        dcterms:modified  "2019-05-07 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/indexedIn>
+        rdf:type          owl:ObjectProperty ;
+        skos:definition   "Citation to the resource where the material being described is indexed." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Indexed in" ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/metadataLicensor>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:domain       <http://id.loc.gov/ontologies/bflc/AdminMetadata> ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/MetadataLicensor> ;
+        skos:definition   "Organization that licenses the intellectual property rights to the data contained in the description." ;
+        rdfs:label        "Metadata licensor" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/encodingLevel>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:domain       <http://id.loc.gov/ontologies/bflc/AdminMetadata> ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/EncodingLevel> ;
+        skos:definition   "Designation of the fullness of the bibliographic description." ;
+        rdfs:label        "Encoding level" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/catalogerId>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:domain       <http://id.loc.gov/ontologies/bflc/AdminMetadata> ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "ID of the cataloger who created or edited the description." ;
+        rdfs:label        "Cataloger ID" ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/profile>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:domain       <http://id.loc.gov/ontologies/bflc/AdminMetadata> ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "Name of the BIBFRAME editor profile used to create or edit the description." ;
+        rdfs:label        "LC Editor profile" ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/procInfo>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:domain       <http://id.loc.gov/ontologies/bflc/AdminMetadata> ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "System-supplied processing information for the BIBFRAME description (e.g. \"ibc update\")." ;
+        rdfs:label        "Processing Info" ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/appliesTo>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/AppliesTo> ;
+        skos:definition   "The component of a resource to which a characteristic applies." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Applies to" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/applicableInstitution>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        bf:Agent ;
+        skos:definition   "Institutional location of a resource to which a particular piece of description applies." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Applicable institution" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/relationship>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/Relationship> ;
+        skos:definition   "Resource and its connection to another resource." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Related resource and relationship" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/relation>
+        rdf:type          owl:ObjectProperty ;
+        rdfs:range        <http://id.loc.gov/ontologies/bflc/Relation> ;
+        skos:definition   "Connection between resources." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Specific relationship" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/target>
+        rdf:type          owl:ObjectProperty ;
+        skos:definition   "End resource of a BIBFRAME structure." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Target resource" ;
+        dcterms:modified  "2018-07-12 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/name00MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Match key for X00 Name" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/name10MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Match key for X10 Name" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/name11MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Match key for X11 Name" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/name00MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for personal name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "MARC key for X00 Names" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/name10MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "MARC key for X10 Names" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/name11MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "MARC key for X11 Names" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/primaryContributorName00MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for entry name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Primary X00 Name Match key" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/primaryContributorName10MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for entry name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Primary X10 Name Match key" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/primaryContributorName11MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for entry name matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Primary X11 Name Match key" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title00MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Match key for Title X00" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title10MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Match key for Title X10" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title11MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "Match key for Title X11" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title30MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title30MatchKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title40MatchKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title40MatchKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title00MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title00MarcKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title10MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title10MarcKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title11MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title11MarcKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title30MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title30MarcKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/title40MarcKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for title matching." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "title40MarcKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
+
+<http://id.loc.gov/ontologies/bflc/titleSortKey>
+        rdf:type          owl:DatatypeProperty ;
+        rdfs:range        rdfs:Literal ;
+        skos:definition   "String for sorting." ;
+        rdfs:comment      "Used with Work, Instance or Item" ;
+        rdfs:label        "titleSortKey" ;
+        dcterms:modified  "2017-02-02 (New)" .
