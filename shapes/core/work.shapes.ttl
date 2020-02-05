@@ -138,6 +138,7 @@ bds:WorkShape
       sh:path bf:identifiedBy ;
       sh:inversePath bf:identifies ;
       sh:class bdo:WorkIdentifier ;
+      sh:minCount 0 ;
       sh:name "identifies Work shape"@en ;
   ] ;
   sh:targetClass bdo:Work ;

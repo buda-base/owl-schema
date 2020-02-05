@@ -45,6 +45,7 @@ bds:ItemPhysicalAssetShape
       sh:path bf:identifiedBy ;
       sh:inversePath bf:identifies ;
       sh:class bdo:ItemIdentifier ;
+      sh:minCount 0 ;
       sh:name "identifies Item shape"@en ;
   ] ;
   sh:targetClass bdo:ItemPhysicalAsset ;
