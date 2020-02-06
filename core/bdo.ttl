@@ -529,9 +529,11 @@ bdo:Item
   a owl:Class ;
   bdo:inferSubTree true ;
   rdfs:label "Item"@en ;
+  rdfs:subClassOf bf:Item ;
   rdfs:subClassOf bdo:BiblioEntity ;
   skos:definition "An Item captures structural and administrative metadata associated with a digital or physical asset"@en ;
   skos:editorialNote ":Item captures the structural and administrative metadata associated with a digital or physical asset. While this ontology is primarily concerned with digital assets of texts, :Item could easily be extended to other types of digital assets such as audio and video; as well as physical assets, such as the physical holdings of libraries."@en ;
+  skos:editorialNote "extends the Bibframe bf:Item class"@en ;
 .
 bdo:ItemEtextNonPaginated
   a owl:Class ;
@@ -1366,7 +1368,7 @@ bdo:Work
   rdfs:label "work"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
   skos:definition "An abstract or conceptual work is the idea of a work, as opposed to an expression or manifestation which is a specific edition or witness."@en ;
-  skos:editorialNote "Was AbstarctWork, changed to align with Bibframe 2.0"@en ;
+  skos:editorialNote "was :AbstractWork, changed to align with Bibframe 2.0"@en ;
 .
 bdo:WorkBibliographicalTitle
   a owl:Class ;
@@ -1408,7 +1410,7 @@ bdo:WorkDkarChagTitle
   rdfs:label "Table of Contents Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
   owl:deprecated true ;
-  skos:historyNote "retired in favor a the more neutral WorkToCTitle"@en ;
+  skos:historyNote "retired in favor the more neutral WorkToCTitle"@en ;
 .
 bdo:WorkEvent
   a owl:Class ;
@@ -1718,12 +1720,6 @@ bdo:eventText
   rdfs:range xsd:string ;
   skos:definition "captures ad hoc text associated with the event"@en ;
 .
-bdo:eventWhen
-  a owl:DatatypeProperty ;
-  rdfs:domain bdo:Event ;
-  rdfs:label "when"@en ;
-  skos:definition "Indicates the time of the event"@en ;
-.
 bdo:eventWhere
   a owl:ObjectProperty ;
   rdfs:domain bdo:Event ;
@@ -1744,6 +1740,11 @@ bdo:femcConversionOf
   rdfs:subPropertyOf bdo:conversionOf ;
   rdfs:subPropertyOf bdo:correctionOf ;
   skos:definition "This label is a (spelling) correction and conversion from the FEMC catalogs"@en ;
+.
+bdo:gender
+  a owl:ObjectProperty ;
+  rdfs:label "gender"@en ;
+  skos:definition "The gender of the Person"@en ;
 .
 bdo:hasAunt
   a owl:ObjectProperty ;
@@ -2126,6 +2127,15 @@ bdo:hasYoungerSister
   rdfs:subPropertyOf bdo:hasSister ;
   skos:definition "Indicates a Younger sister of the Person"@en ;
 .
+bdo:heldAt
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:ItemPhysicalAsset ;
+  rdfs:label "library"@en ;
+  rdfs:range bdo:Place ;
+  rdfs:seeAlso bdo:ItemPhysicalAsset ;
+  skos:definition "The Place (often a Library) that contains the physical holding"@en ;
+  skos:editorialNote "was :itemLibrary."@en ;
+.
 bdo:imageCount
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
@@ -2448,14 +2458,6 @@ bdo:itemForInstance
   skos:definition "This Item represents an occurrence of the referenced PhysicalInstance"@en ;
   skos:editorialNote "was :itemForWork."@en ;
 .
-bdo:itemLibrary
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:ItemPhysicalAsset ;
-  rdfs:label "library"@en ;
-  rdfs:range bdo:Place ;
-  rdfs:seeAlso bdo:ItemPhysicalAsset ;
-  skos:definition "The Library (Place) that contains the physical holding"@en ;
-.
 bdo:itemMissingVolumes
   a owl:DatatypeProperty ;
   rdfs:domain bdo:Item ;
@@ -2691,7 +2693,7 @@ bdo:notAfter
   rdfs:domain bdo:Event ;
   rdfs:label "not after"@en ;
   rdfs:range xsd:gYear ;
-  rdfs:subPropertyOf bdo:eventWhen ;
+  rdfs:subPropertyOf bdo:when ;
   skos:definition "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
 .
 bdo:notBefore
@@ -2699,7 +2701,7 @@ bdo:notBefore
   rdfs:domain bdo:Event ;
   rdfs:label "not before"@en ;
   rdfs:range xsd:gYear ;
-  rdfs:subPropertyOf bdo:eventWhen ;
+  rdfs:subPropertyOf bdo:when ;
   skos:definition "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
 .
 bdo:note
@@ -2760,7 +2762,7 @@ bdo:onDate
   rdfs:domain bdo:Event ;
   rdfs:label "on date"@en ;
   rdfs:range xsd:date ;
-  rdfs:subPropertyOf bdo:eventWhen ;
+  rdfs:subPropertyOf bdo:when ;
   skos:definition "The event is known to have occurred during the year or date given, unless otherwise specified the date is reckoned in the Common Era"@en ;
 .
 bdo:onOrAbout
@@ -2772,7 +2774,7 @@ bdo:onOrAbout
   rdfs:domain bdo:Event ;
   rdfs:label "circa"@en ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf bdo:eventWhen ;
+  rdfs:subPropertyOf bdo:when ;
   owl:deprecated true ;
   skos:historyNote "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
 .
@@ -2781,7 +2783,7 @@ bdo:onYear
   rdfs:domain bdo:Event ;
   rdfs:label "in year"@en ;
   rdfs:range xsd:gYear ;
-  rdfs:subPropertyOf bdo:eventWhen ;
+  rdfs:subPropertyOf bdo:when ;
   skos:definition "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
 .
 bdo:pageHasLine
@@ -2827,11 +2829,6 @@ bdo:personEventRole
   rdfs:label "associated role"@en ;
   rdfs:range bdo:Role ;
   skos:definition "Indicates a Role that is occupied by a Person associated with the PersonEvent."@en ;
-.
-bdo:gender
-  a owl:ObjectProperty ;
-  rdfs:label "gender"@en ;
-  skos:definition "The gender of the Person"@en ;
 .
 bdo:personHasConsort
   a owl:ObjectProperty ;
@@ -3187,6 +3184,13 @@ bdo:volumePhysicalDescription
   skos:editorialNote """A description of the physical appearance of a Volume of the Item. For example,
 
 \"No covers. Gilded leaves with vermilion band. Printed cotton wrapper with floral designs.\"@en"""@en ;
+.
+bdo:when
+  a owl:DatatypeProperty ;
+  rdfs:label "when"@en ;
+  skos:definition "Indicates a date when an event or other activity happened."@en ;
+  skos:editorialNote "There are several subproperties which allow for various degrees of specificity about dates. See shapes for various domains such as Events or Items"@en ;
+  skos:editorialNote "was eventWhen."@en ;
 .
 bdo:workAuthorshipStatement
   a owl:DatatypeProperty ;

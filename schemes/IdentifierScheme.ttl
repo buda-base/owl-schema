@@ -25,6 +25,13 @@ bf:Lccn
   skos:broader bdr:InstanceIdentifier ;
   skos:historyNote "Was bdo:LCCN."@en ;
 .
+bf:ShelfMark
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "Shelf location"@en ;
+  skos:broader bdr:ItemIdentifier ;
+  skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
+.
 bf:ShelfMarkLcc
   a bdo:Identifier ;
   a skos:Concept ;
@@ -35,13 +42,15 @@ bf:ShelfMarkLcc
 bdo:Identifier
   a owl:Class ;
   rdfs:label "Identifier"@en ;
-  skos:definition "Identifiers for Works and Instances and maybe other Entities"@en ;
+  skos:definition "Identifiers for Bibliographic entities, Places and other Entities"@en ;
 .
 bdr:BibliographicIdentifier
   a bdo:Identifier ;
   a skos:Concept ;
   rdfs:label "Bibliographic Identifer"@en ;
+  rdfs:subClassOf bf:Identifier ;
   skos:definition "An identifier associated with a bibliographic concept such as Work, Instance or Item"@en ;
+  skos:editorialNote "extends the Bibframe 2 Identifier class"@en ;
   skos:narrower bdr:InstanceIdentifier ;
   skos:narrower bdr:ItemIdentifier ;
   skos:narrower bdr:WorkIdentifier ;
@@ -492,13 +501,6 @@ bdr:RefrKTsT
   skos:broader bdr:RefrKTsIdentifier ;
   skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
   skos:historyNote "Was bdo:workRefrKTsT."@en ;
-.
-bdr:ShelfMark
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Shelf location"@en ;
-  skos:broader bdr:ItemIdentifier ;
-  skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
 .
 bdr:WorkIdentifier
   a bdo:Identifier ;
