@@ -106,7 +106,7 @@ aut:desc
 
 aut:forMethod
   a owl:DatatypeProperty ;
-  rdfs:comment "A group, Role or Permission description"@en ;
+  rdfs:comment "A list of authorized http methods for a given endpoint"@en ;
   rdfs:domain aut:Endpoint ; 
   rdfs:label "for method"@en ;
   rdfs:range rdf:PlainLiteral ;
