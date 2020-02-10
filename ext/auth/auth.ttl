@@ -31,29 +31,28 @@ aut:AuthId
 .
 aut:Endpoint
   a owl:Class ;
-  rdfs:comment "The Endpoint object represents any secured web or REST service provided accross the whole organization. Endpoints are associated with a given app (Linked data server, Image server, etc...).
-Any application implementing bdrc auth0 security can therefore filter its own secured endpoints and check against user credentials to allow or deny access to these endpoints."@en ;
+  rdfs:comment """The Endpoint object represents any secured web or REST service provided accross the whole organization. Endpoints are associated with a given app (Linked data server, Image server, etc...).
+Any application implementing bdrc auth0 security can therefore filter its own secured endpoints and check against user credentials to allow or deny access to these endpoints."""@en ;
   rdfs:label "endpoint"@en ;
   rdfs:subClassOf aut:Entity ;
 .
 aut:Entity
   a owl:Class ;
 .
-
 aut:Group
   a owl:Class ;
-  rdfs:comment "The Group objects represent a specific category of users. 
+  rdfs:comment """The Group objects represent a specific category of users. 
 Following auth0 model, Groups are also associated with roles, i.e that each member of the group inherits the roles associated with that group. 
 Therefore, the role associated to a specific user are of two types: 
 1) Specific roles associated with the user outside of a group; 
-2) Roles inherited from all groups (and eventuelly nested groups) the user may belong to."@en ;
+2) Roles inherited from all groups (and eventuelly nested groups) the user may belong to."""@en ;
   rdfs:label "group"@en ;
   rdfs:subClassOf aut:Entity ;
 .
 aut:Permission
   a owl:Class ;
-  rdfs:comment "The Permission object represent fine grained authorization policies. It may be associated with a Role object and is therefore restricted to the application associated with that role.
-For instance, a permission associated to bdrc Linked Data Server application can only be associated to a role defined for that same Linked Data server app."@en ;
+  rdfs:comment """The Permission object represent fine grained authorization policies. It may be associated with a Role object and is therefore restricted to the application associated with that role.
+For instance, a permission associated to bdrc Linked Data Server application can only be associated to a role defined for that same Linked Data server app."""@en ;
   rdfs:label "permission"@en ;
   rdfs:subClassOf aut:Entity ;
 .
@@ -65,15 +64,15 @@ aut:ResourceAccess
 .
 aut:Role
   a owl:Class ;
-  rdfs:comment "A Role object is associated to an application and possibly various Permission objects.
-It is important to notice that roles are used for application level access control while groups can be used accross all applications."@en ;
+  rdfs:comment """A Role object is associated to an application and possibly various Permission objects.
+It is important to notice that roles are used for application level access control while groups can be used accross all applications."""@en ;
   rdfs:label "role"@en ;
   rdfs:subClassOf aut:Entity ;
-
+.
 aut:UserProfile
   a owl:Class ;
-  rdfs:comment "The UserProfile object represents any person registered to the system. A user may belong to a Group and may have a Role.
-It is worth noticing that permissions are not associated directly to a User but instead, through its various roles."@en ;
+  rdfs:comment """The UserProfile object represents any person registered to the system. A user may belong to a Group and may have a Role.
+It is worth noticing that permissions are not associated directly to a User but instead, through its various roles."""@en ;
   rdfs:label "user profile"@en ;
   rdfs:subClassOf aut:Entity ;
   rdfs:subClassOf foaf:Agent ;
@@ -129,8 +128,8 @@ aut:forPermission
 .
 aut:forRole
   a owl:ObjectProperty ;
-  rdfs:comment "Links Endpoints to their authorized auth0 roles, allowing request filters to give or deny access to endpoints according to a specific user profile. 
-Note that this property also links Endpoints (implicitly) to permissions associated to auth0 corresponding roles"@en ;
+  rdfs:comment """Links Endpoints to their authorized auth0 roles, allowing request filters to give or deny access to endpoints according to a specific user profile. 
+Note that this property also links Endpoints (implicitly) to permissions associated to auth0 corresponding roles"""@en ;
   rdfs:domain aut:Endpoint ;
   rdfs:label "for role"@en ;
   rdfs:range aut:Role ;
@@ -159,16 +158,16 @@ aut:hasRole
 .
 aut:path
   a owl:DatatypeProperty ;
-  rdfs:comment "The unique path of a given Endpoint or web service. This path is unique for the application associated with this Endpoint.
-Important: note that other endpoints of different applications may have the same path."@en ;
+  rdfs:comment """The unique path of a given Endpoint or web service. This path is unique for the application associated with this Endpoint.
+Important: note that other endpoints of different applications may have the same path."""@en ;
   rdfs:domain aut:Endpoint ;
   rdfs:label "path"@en ;
   rdfs:range xsd:string ;
 .
 aut:policy
   a owl:ObjectProperty ;
-  rdfs:comment "Links ResourceAccess objects to bdrc AccessType.
-This property is used for checking access rights against protected resources available at secured or open endpoints. It corresponds to the finest grained authorization in bdrc auth implementation."@en ;
+  rdfs:comment """Links ResourceAccess objects to bdrc AccessType.
+This property is used for checking access rights against protected resources available at secured or open endpoints. It corresponds to the finest grained authorization in bdrc auth implementation."""@en ;
   rdfs:domain aut:ResourceAccess ;
   rdfs:label "policy"@en ;
   rdfs:range adm:Access ;
