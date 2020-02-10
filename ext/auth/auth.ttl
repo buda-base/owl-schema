@@ -68,7 +68,7 @@ aut:Role
 It is important to notice that roles are used for application level access control while groups can be used accross all applications."""@en ;
   rdfs:label "role"@en ;
   rdfs:subClassOf aut:Entity ;
-.
+
 aut:UserProfile
   a owl:Class ;
   rdfs:comment """The UserProfile object represents any person registered to the system. A user may belong to a Group and may have a Role.
@@ -103,6 +103,13 @@ aut:desc
   rdfs:label "description"@en ;
   rdfs:range rdf:PlainLiteral ;
 .
+aut:forMethod
+  a owl:ObjectProperty ;
+  rdfs:comment "This property links a specific endpoint to the http request method used to access the endpoint."@en ;
+  rdfs:domain aut:Endpoint ;  
+  rdfs:label "for method"@en ;
+  rdfs:range rdf:PlainLiteral ;
+
 aut:forGroup
   a owl:ObjectProperty ;
   rdfs:comment "Besides linking a UserProfile to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
