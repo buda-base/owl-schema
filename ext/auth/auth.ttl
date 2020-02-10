@@ -103,13 +103,6 @@ aut:desc
   rdfs:label "description"@en ;
   rdfs:range rdf:PlainLiteral ;
 .
-aut:forMethod
-  a owl:ObjectProperty ;
-  rdfs:comment "This property links a specific endpoint to the http request method used to access the endpoint."@en ;
-  rdfs:domain aut:Endpoint ;  
-  rdfs:label "for method"@en ;
-  rdfs:range rdf:PlainLiteral ;
-.
 aut:forGroup
   a owl:ObjectProperty ;
   rdfs:comment "Besides linking a UserProfile to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
