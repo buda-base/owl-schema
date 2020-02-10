@@ -103,6 +103,15 @@ aut:desc
   rdfs:label "description"@en ;
   rdfs:range rdf:PlainLiteral ;
 .
+
+aut:forMethod
+  a owl:DatatypeProperty ;
+  rdfs:comment "A group, Role or Permission description"@en ;
+  rdfs:domain aut:Endpoint ; 
+  rdfs:label "for method"@en ;
+  rdfs:range rdf:PlainLiteral ;
+.
+
 aut:forGroup
   a owl:ObjectProperty ;
   rdfs:comment "Besides linking a UserProfile to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
