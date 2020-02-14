@@ -1,0 +1,1904 @@
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg:  <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://rdaregistry.info/Elements/i/datatype/>
+        dc:title   "RDA Item datatype properties"@en ;
+        skos:note  "Datatype properties derived from RDA elements with the domain of RDA Item."@en .
+
+<http://rdaregistry.info/Elements/i/datatype/P40080>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has access point for item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/accessPointForItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "accessPointForItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40080> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40081> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40083> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40084> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00016> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40029>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "accompaniedByItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/accompaniedByItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is accompanied by item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40029> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40046> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40032> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40035> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40036> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40051>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "accompanyingItemRelationship"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/accompanyingItemRelationship.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has accompanying item relationship with (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40051> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40015>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "annotator"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/annotator.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has annotator"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40015> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40112> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40081>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has appellation of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/appellationOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "appellationOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40081> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40079> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40082> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40081> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40081> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00017> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40083>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has authorized access point for item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/authorizedAccessPointForItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "authorizedAccessPointForItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40083> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40080> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00020> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40016>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "autographer"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/autographer.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has autographer"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40016> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40112> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40013>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "binderAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/binderAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has binder agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40013> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40093> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40114>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has binder collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/binderCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "binderCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40114> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40128> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40013> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40130> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40146> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40130>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has binder corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/binderCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "binderCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40130> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40144> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40114> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40146>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has binder family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/binderFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "binderFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40146> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40160> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40114> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40098>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has binder person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/binderPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "binderPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40098> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40112> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40013> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40094>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has binding of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/bindingOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "bindingOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40094> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40069> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40032>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "boundWith"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/boundWith.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is bound with"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40032> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40029> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40096>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has category of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/categoryOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "categoryOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40096> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00029> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40005>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectionRegistrarAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectionRegistrarAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has collection registrar agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40005> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40017> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40122>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collection registrar collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectionRegistrarCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectionRegistrarCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40122> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40115> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40005> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40138> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40154> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40138>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collection registrar corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectionRegistrarCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectionRegistrarCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40138> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40131> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40122> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40154>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collection registrar family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectionRegistrarFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectionRegistrarFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40154> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40147> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40122> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40106>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collection registrar person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectionRegistrarPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectionRegistrarPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40106> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40099> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40005> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40004>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectorAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectorAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has collector agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40004> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40017> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40121>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collector collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectorCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectorCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40121> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40115> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40004> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40137> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40153> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40137>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collector corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectorCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectorCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40137> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40131> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40121> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40153>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collector family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectorFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectorFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40153> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40147> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40121> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40105>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has collector person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/collectorPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "collectorPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40105> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40099> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40004> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40009>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "containedInItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/containedInItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is contained in item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40009> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40046> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40034>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "containerOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/containerOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is container of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40034> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40046> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40017>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "curatorAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/curatorAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has curator agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40017> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40004> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40005> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40105> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40106> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40121> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40122> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40115>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has curator collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/curatorCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "curatorCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40115> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40017> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40121> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40122> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40131> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40147> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40131>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has curator corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/curatorCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "curatorCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40131> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40075> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40115> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40137> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40138> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40147>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has curator family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/curatorFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "curatorFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40147> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40074> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40115> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40153> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40154> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40099>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has curator person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/curatorPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "curatorPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40099> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40073> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40017> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40105> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40106> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40018>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "currentOwnerAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/currentOwnerAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has current owner agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40018> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40006> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40021> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40107> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40123> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40117>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has current owner collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/currentOwnerCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "currentOwnerCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40117> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40120> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40018> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40123> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40133> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40149> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40133>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has current owner corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/currentOwnerCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "currentOwnerCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40133> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40136> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40117> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40139> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40149>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has current owner family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/currentOwnerFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "currentOwnerFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40149> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40152> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40117> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40155> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40101>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has current owner person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/currentOwnerPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "currentOwnerPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40101> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40104> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40018> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40107> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40026>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "custodialHistoryOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/custodialHistoryOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has custodial history of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40026> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40020>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "custodianAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/custodianAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has custodian agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40020> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40119>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has custodian collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/custodianCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "custodianCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40119> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40020> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40135> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40151> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40135>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has custodian corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/custodianCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "custodianCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40135> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40075> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40119> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40151>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has custodian family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/custodianFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "custodianFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40151> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40074> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40119> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40103>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has custodian person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/custodianPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "custodianPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40103> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40073> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40020> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40025>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "dedicateeAgentOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/dedicateeAgentOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has dedicatee agent of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40025> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40113>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has dedicatee collective agent of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/dedicateeCollectiveAgentOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "dedicateeCollectiveAgentOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40113> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40025> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40129> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40145> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40129>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has dedicatee corporate body of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/dedicateeCorporateBodyOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "dedicateeCorporateBodyOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40129> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40075> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40113> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40145>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has dedicatee family of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/dedicateeFamilyOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "dedicateeFamilyOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40145> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40074> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40113> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40097>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has dedicatee person of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/dedicateePersonOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "dedicateePersonOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40097> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40073> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40025> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40006>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "depositorAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/depositorAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has depositor agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40006> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40018> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40123>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has depositor collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/depositorCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "depositorCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40123> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40117> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40006> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40139> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40155> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40139>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has depositor corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/depositorCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "depositorCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40139> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40133> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40123> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40155>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has depositor family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/depositorFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "depositorFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40155> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40149> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40123> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40107>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has depositor person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/depositorPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "depositorPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40107> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40101> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40006> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40056>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "digitalTransferItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/digitalTransferItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has digital transfer (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40056> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40039>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "digitalTransferOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/digitalTransferOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is digital transfer of (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40039> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40087>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has digital transfer of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/digitalTransferOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "digitalTransferOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40087> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40092> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40007>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "donorAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/donorAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has donor agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40007> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40019> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40124>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has donor collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/donorCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "donorCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40124> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40118> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40007> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40140> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40156> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40140>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has donor corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/donorCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "donorCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40140> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40134> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40124> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40156>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has donor family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/donorFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "donorFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40156> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40150> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40124> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40108>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has donor person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/donorPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "donorPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40108> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40102> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40007> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40057>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "electronicReproductionItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/electronicReproductionItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has electronic reproduction (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40057> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40027>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "electronicReproductionOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/electronicReproductionOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is electronic reproduction of (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40027> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40088>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has electronic reproduction of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/electronicReproductionOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "electronicReproductionOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40088> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40092> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40031>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "equivalentItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/equivalentItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has equivalent item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40031> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40046> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40053>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "equivalentItemRelationship"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/equivalentItemRelationship.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has equivalent item relationship with (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40053> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40058>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "facsimileItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/facsimileItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has facsimile (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40058> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40045>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "facsimileOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/facsimileOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is facsimile of (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40045> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40089>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has facsimile of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/facsimileOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "facsimileOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40089> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40092> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40090> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40036>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "filmedWithItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/filmedWithItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is filmed with item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40036> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40029> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40019>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "formerOwnerAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/formerOwnerAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has former owner agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40019> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40007> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40008> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40021> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40108> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40109> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40124> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40125> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40118>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has former owner collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/formerOwnerCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "formerOwnerCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40118> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40120> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40019> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40124> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40125> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40134> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40150> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40134>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has former owner corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/formerOwnerCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "formerOwnerCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40134> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40136> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40118> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40140> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40141> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40150>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has former owner family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/formerOwnerFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "formerOwnerFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40150> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40152> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40118> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40156> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40157> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40102>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has former owner person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/formerOwnerPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "formerOwnerPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40102> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40104> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40019> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40108> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40109> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40022>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "honoureeAgentOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/honoureeAgentOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has honouree agent of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40022> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40126>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has honouree collective agent of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/honoureeCollectiveAgentOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "honoureeCollectiveAgentOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40126> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40022> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40142> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40158> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40142>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has honouree corporate body of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/honoureeCorporateBodyOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "honoureeCorporateBodyOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40142> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40075> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40126> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40158>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has honouree family of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/honoureeFamilyOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "honoureeFamilyOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40158> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40074> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40126> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40110>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has honouree person of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/honoureePersonOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "honoureePersonOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40110> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40073> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40022> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40001>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "identifierForItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/identifierForItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has identifier for item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40081> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00018> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40012>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "illuminatorAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/illuminatorAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has illuminator agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40012> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40093> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40116>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has illuminator collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/illuminatorCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "illuminatorCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40116> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40128> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40012> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40132> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40148> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40132>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has illuminator corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/illuminatorCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "illuminatorCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40132> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40144> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40116> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40148>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has illuminator family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/illuminatorFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "illuminatorFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40148> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40160> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40116> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40100>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has illuminator person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/illuminatorPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "illuminatorPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40100> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40112> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40012> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40050>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "immediateSourceOfAcquisitionOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/immediateSourceOfAcquisitionOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has immediate source of acquisition of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40050> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40014>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "inscriber"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/inscriber.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has inscriber"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40014> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40112> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40063>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "itemAnalysedIn"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/itemAnalysedIn.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is item analysed in"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40063> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40062> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40064>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "itemCommentaryIn"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/itemCommentaryIn.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is item commentary in"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40064> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40062> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40065>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "itemCritiquedIn"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/itemCritiquedIn.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is item critiqued in"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40065> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40062> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40062>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "itemDescribedIn"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/itemDescribedIn.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is item described in"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40062> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40061> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40063> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40064> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40065> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40066> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40067> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40066>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "itemEvaluatedIn"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/itemEvaluatedIn.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is item evaluated in"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40066> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40062> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40067>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "itemReviewedIn"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/temReviewedIn.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is item reviewed in"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40067> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40062> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40049>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "manifestationExemplified"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/manifestationExemplified.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has manifestation exemplified"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40049> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40071> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40003>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "modificationOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/modificationOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has modification of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40003> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40010> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40011> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40028> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40093>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has modifier agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/modifierAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "modifierAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40093> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40128>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has modifier collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/modifierCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "modifierCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40128> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40093> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40144> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40160> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40144>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has modifier corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/modifierCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "modifierCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40144> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40075> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40128> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40160>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has modifier family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/modifierFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "modifierFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40160> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40074> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40128> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40112>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has modifier person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/modifierPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "modifierPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40112> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40073> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40093> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40010>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "noteOnDimensionsOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/noteOnDimensionsOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has note on dimensions of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40010> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40028> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40011>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "noteOnExtentOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/noteOnExtentOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has note on extent of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40011> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40028> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40028>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "noteOnItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/noteOnItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has note on item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40028> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40003> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40035>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "onDiscWithItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/onDiscWithItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is on disc with item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40035> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40029> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40023>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "other agent associated with item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/otherAgentItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has other agent associated with item (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40023> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40021>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "ownerAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/ownerAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has owner agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40021> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40018> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40019> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40101> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40102> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40117> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40118> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40120>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has owner collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/ownerCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "ownerCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40120> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40117> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40118> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40021> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40136> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40152> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40136>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has owner corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/ownerCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "ownerCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40136> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40133> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40134> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40075> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40120> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40152>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has owner family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/ownerFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "ownerFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40152> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40149> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40150> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40074> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40120> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40104>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has owner person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/ownerPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "ownerPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40104> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40101> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40102> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40073> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40021> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40085>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has preferred title of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/preferredTitleOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "peferredTitleOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40085> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40082> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00021> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40059>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "preservationFacsimileItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/preservationFacsimileItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has preservation facsimile (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40059> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40044>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "preservationFacsimileOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/preservationFacsimileOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is preservation facsimile of (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40044> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40090>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has preservation facsimile of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/preservationFacsimileOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "preservationFacsimileOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40090> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40089> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40072>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40072> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedAgentOfItem"@en ;
+        rdfs:label          "has related agent of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedAgentOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40020> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40021> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40023> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40097> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40098> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40099> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40100> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40103> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40104> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40110> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40111> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40112> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40113> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40114> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40115> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40116> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40119> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40120> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40126> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40127> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40128> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40076>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40076> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedCollectiveAgentOfItem"@en ;
+        rdfs:label          "has related collective agent of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedCollectiveAgentOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40113> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40114> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40115> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40116> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40119> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40120> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40126> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40127> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40128> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40075>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40075> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedCorporateBodyOfItem"@en ;
+        rdfs:label          "has related corporate body of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedCorporateBodyOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40129> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40130> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40131> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40132> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40135> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40136> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40142> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40143> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40144> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40070>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40070> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedExpressionOfItem"@en ;
+        rdfs:label          "has related expression of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedExpressionOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40074>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40074> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedFamilyOfItem"@en ;
+        rdfs:label          "has related family of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedFamilyOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40076> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40145> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40146> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40147> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40148> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40151> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40152> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40158> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40159> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40160> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40046>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedItemOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedItemOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has related item of item"@en ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40009> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40029> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40031> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40034> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40046> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40071>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40071> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedManifestationOfItem"@en ;
+        rdfs:label          "has related manifestation of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedManifestationOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40049> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40092> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40079>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40079> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedNomenOfItem"@en ;
+        rdfs:label          "has related nomen of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedNomenOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40081> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40073>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40073> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedPersonOfItem"@en ;
+        rdfs:label          "has related person of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedPersonOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40072> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40097> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40098> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40099> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40100> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40103> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40104> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40110> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40111> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40112> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40077>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40077> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedPlaceOfItem"@en ;
+        rdfs:label          "has related place of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedPlaceOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40068>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40068> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedRDAEntityOfItem"@en ;
+        rdfs:label          "has related RDA entity of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedRDAEntityOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40046> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/P00001> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40078>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40078> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedTimespanOfItem"@en ;
+        rdfs:label          "has related timespan of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedTimespanOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40069>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40069> ;
+        rdf:type            rdf:Property ;
+        reg:name            "relatedWorkOfItem"@en ;
+        rdfs:label          "has related work of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/relatedWorkOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40068> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40061> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40094> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40060>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "reprintedAsItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/reprintedAsItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is reprinted as item (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40060> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40091>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "is reprinted as item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/reprintedAsItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "reprintedAsItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40091> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40092> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40038>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "reprintOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/reprintOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is reprint of (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40038> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40055>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "reproducedAsItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/reproducedAsItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is reproduced as item (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40055> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40092>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "is reproduced as item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/reproducedAsItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "reproducedAsItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40092> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40071> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40092> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40092> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40092> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40092> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40042>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "reproductionOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/reproductionOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is reproduction of (item) (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40042> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40024>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restorationistAgentOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restorationistAgentOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has restorationist agent of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40024> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40093> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40127>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has restorationist collective agent of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restorationistCollectiveAgentOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restorationistCollectiveAgentOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40127> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40128> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40024> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40143> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40159> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40143>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has restorationist corporate body of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restorationistCorporateBodyOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restorationistCorporateBodyOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40143> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40144> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40127> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40159>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has restorationist family of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restorationistFamilyOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restorationistFamilyOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40159> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40160> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40127> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40111>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has restorationist person of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restorationistPersonOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restorationistPersonOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40111> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40112> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40024> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40047>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restrictionOnAccessToItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restrictionOnAccessToItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has restriction on access to item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40047> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40048>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "restrictionOnUseOfItem"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/restrictionOnUseOfItem.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has restriction on use of item"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40048> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40008>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "sellerAgent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/sellerAgent.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has seller agent"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40008> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40019> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40125>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has seller collective agent"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/sellerCollectiveAgent.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "sellerCollectiveAgent" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40125> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40118> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40008> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40141> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40157> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40141>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has seller corporate body"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/sellerCorporateBody.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "sellerCorporateBody" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40141> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40134> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40125> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40157>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has seller family"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/sellerFamily.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "sellerFamily" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40157> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40150> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40125> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40109>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has seller person"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/sellerPerson.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "sellerPerson" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40109> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40102> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40008> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40061>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdf:type            rdf:Property ;
+        reg:name            "subjectItemOf"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/subjectItemOf.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "is subject item of"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40061> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40069> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40062> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00014> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40082>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has title of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/titleOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "titleOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40082> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40081> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40085> ;
+        reg:hasSubproperty  <http://rdaregistry.info/Elements/i/datatype/P40086> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00019> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40084>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has variant access point for item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/variantAccessPointForItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "variantAccessPointForItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40084> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40080> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00022> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40086>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1001> ;
+        rdfs:label          "has variant title of item"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/variantTitleOfItem.en> ;
+        rdf:type            rdf:Property ;
+        reg:name            "variantTitleOfItem" ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40086> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/datatype/P40082> ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/x/datatype/P00023> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40054>
+        rdfs:isDefinedBy    <http://rdaregistry.info/Elements/i/datatype/> ;
+        reg:status          <http://metadataregistry.org/uri/RegStatus/1008> ;
+        rdf:type            rdf:Property ;
+        reg:name            "wholePartItemRelationship"@en ;
+        reg:lexicalAlias    <http://rdaregistry.info/Elements/i/datatype/wholePartItemRelationship.en> ;
+        rdfs:domain         <http://rdaregistry.info/Elements/c/C10003> ;
+        rdfs:label          "has whole-part item relationship with (Deprecated)"@en ;
+        rdfs:subPropertyOf  <http://rdaregistry.info/Elements/i/P40054> .
+
+<http://metadataregistry.org/uri/RegStatus/1001>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Published"@en .
+
+<http://metadataregistry.org/uri/RegStatus/1008>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Deprecated"@en .

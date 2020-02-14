@@ -41,9 +41,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bf:ShelfMarkLcc
-  rdfs:seeAlso <https://gist.github.com/kurtraschke/560162> ;
-.
 iiif2:Collection
   a owl:Class ;
   rdfs:label "IIIF Collection (v2.*)"@en ;
@@ -2130,11 +2127,19 @@ bdo:hasYoungerSister
 bdo:heldAt
   a owl:ObjectProperty ;
   rdfs:domain bdo:ItemPhysicalAsset ;
-  rdfs:label "library"@en ;
+  rdfs:label "holding location"@en ;
   rdfs:range bdo:Place ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
-  skos:definition "The Place (often a Library) that contains the physical holding"@en ;
+  skos:definition "The Place (often a Library) that contains the physical item"@en ;
   skos:editorialNote "was :itemLibrary."@en ;
+.
+bdo:heldBy
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:ItemPhysicalAsset ;
+  rdfs:label "holding agent"@en ;
+  rdfs:range bdo:AgentInRole ;
+  rdfs:seeAlso bdo:ItemPhysicalAsset ;
+  skos:definition "An agent involved in the holding of this item is some capacity."@en ;
 .
 bdo:imageCount
   a owl:DatatypeProperty ;

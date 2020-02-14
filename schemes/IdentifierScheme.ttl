@@ -36,6 +36,7 @@ bf:ShelfMarkLcc
   a bdo:Identifier ;
   a skos:Concept ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
+  rdfs:seeAlso <https://gist.github.com/kurtraschke/560162> ;
   skos:broader bdr:ShelfMark ;
   skos:historyNote "Was bdo:LCCallNumber."@en ;
 .
