@@ -129,9 +129,11 @@ Several points need to be made:
     `bdo:when` and `bdo:heldAt` and do not specify any modeling for how, since we currently have no data of this sort.
   - The `bf:identifiedBy` will be constrained via a shape to
     `bdr:ItemIdentifier` which includes for example:  
+    ```
         bf:ShelfMarkLcc a skos:Concept ;  
             skos:broader bdr:ShelfMark .  
         bdr:ShelfMark a skos:Concept ;  
             skos:broader bdr:ItemIdentifier .  
+    ```
     This is sufficient to capture the idea of a `bf:Sublocation` or
     `bf:physicalLocation`.
