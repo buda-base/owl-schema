@@ -3884,7 +3884,7 @@ There may be more than one Hollis ID for a Work owing to differences in catalogu
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
-bdo:workIllustrations
+bdo:illustrations
   a owl:DatatypeProperty ;
   adm:userTooltip "Provides a string describing the presence of illustrations, portraits, color plates and so on."@en ;
   rdfs:domain bdo:Instance ;
