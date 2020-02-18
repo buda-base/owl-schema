@@ -3480,7 +3480,7 @@ bdo:instanceAuthorshipStatement
   rdfs:label "authorship statement"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workBiblioNote
+bdo:instanceBiblioNote
   a owl:DatatypeProperty ;
   adm:userTooltip "A note regarding a bibliographic feature of the Work"@en ;
   rdfs:domain bdo:Instance ;
