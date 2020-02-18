@@ -4371,7 +4371,7 @@ bdo:publisherLocation
   rdfs:range rdf:langString ;
   owl:deprecated true ;
 .
-bdo:workPublisherName
+bdo:publisherName
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
   adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
