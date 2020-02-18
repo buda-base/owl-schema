@@ -3891,7 +3891,7 @@ bdo:illustrations
   rdfs:label "illustrations"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workIncipit
+bdo:incipit
   a owl:DatatypeProperty ;
   adm:userTooltip "The opening words of the Work"@en ;
   rdfs:domain bdo:Instance ;
