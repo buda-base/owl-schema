@@ -3670,7 +3670,7 @@ bdo:workCBCSiglaZW
   rdfs:label "藏外佛教文獻"@zh-hant ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
-bdo:workCatalogInfo
+bdo:catalogInfo
   a owl:DatatypeProperty ;
   adm:userTooltip "Summary information about the Instance"@en ;
   rdfs:domain bdo:Instance ;
