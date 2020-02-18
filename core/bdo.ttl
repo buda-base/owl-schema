@@ -3473,7 +3473,7 @@ bdo:volumePhysicalDescription
   rdfs:label "physical description"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workAuthorshipStatement
+bdo:instanceAuthorshipStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "Authorship statement for the Work."@en ;
   rdfs:domain bdo:Instance ;
