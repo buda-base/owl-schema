@@ -4362,10 +4362,10 @@ bdo:workPartType
   rdfs:label "part type"@en ;
   rdfs:range bdo:WorkPartType ;
 .
-bdo:workPublisherLocation
+bdo:publisherLocation
   a owl:DatatypeProperty ;
   adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
-  adm:userTooltip "Loction of the publisher of the form of the Work that has been digitized."@en ;
+  adm:userTooltip "Loction of the publisher of the form of the Instance that has been digitized."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
