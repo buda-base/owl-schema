@@ -3756,16 +3756,16 @@ bdo:workDimWidth
   rdfs:label "width"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workEditionStatement
+bdo:editionStatement
   a owl:DatatypeProperty ;
-  adm:userTooltip "An Edition statement expresses information about this Work as an edition."@en ;
+  adm:userTooltip "An Edition statement expresses information about this Instance as an edition."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "edition statement"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:workEvent
   a owl:ObjectProperty ;
-  adm:userTooltip "A description of the what, when and where of an event in the life of a work"@en ;
+  adm:userTooltip "A description of the what, when and where of an event in the life of a instance"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "event"@en ;
   rdfs:range bdo:WorkEvent ;
