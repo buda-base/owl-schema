@@ -2323,12 +2323,12 @@ bdo:hasWife
   rdfs:label "has wife"@en ;
   rdfs:subPropertyOf bdo:hasSpouse ;
 .
-bdo:hasWorkNum
+bdo:hasInstanceNum
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "the number of this work within a containing work"@en ;
   rdfs:domain bdo:Instance ;
-  rdfs:label "has work number"@en ;
+  rdfs:label "has instance number"@en ;
   rdfs:range xsd:string ;
 .
 bdo:hasYoungerBrother
