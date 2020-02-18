@@ -4175,7 +4175,7 @@ bdo:workLocationSide
   rdfs:label "side"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workLocationStatement
+bdo:instanceLocationStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "A statement of the location of this Work in a containing Work or of the pagination present in the text versus the formal location in terms of page images."@en ;
   rdfs:domain bdo:Instance ;
