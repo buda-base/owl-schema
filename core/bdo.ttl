@@ -3677,10 +3677,10 @@ bdo:catalogInfo
   rdfs:label "summary"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workColophon
+bdo:colophon
   a owl:DatatypeProperty ;
   adm:technicalComment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
-  adm:userTooltip "A transcription of the colophon of the Work."@en ;
+  adm:userTooltip "A transcription of the colophon of the Instance."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "colophon"@en ;
   rdfs:range rdf:langString ;
