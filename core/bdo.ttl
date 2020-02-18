@@ -4020,10 +4020,10 @@ bdo:workKaTenSiglaZ
   rdfs:seeAlso <https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php> ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
-bdo:workLangScript
+bdo:langScript
   a owl:ObjectProperty ;
-  adm:catalogingConvention "Every Work should have at least one :workLangScript indicating the primary laguage and script in which the language is presented. There may be more than one :workLangScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
-  adm:userTooltip "Indicates the primary language and script in which the Work is expressed."@en ;
+  adm:catalogingConvention "Every Instance should have at least one :langScript indicating the primary laguage and script in which the language is presented. There may be more than one :langScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
+  adm:userTooltip "Indicates the primary language and script in which the Instance is expressed."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "language"@en ;
   rdfs:range bdo:LangScript ;
