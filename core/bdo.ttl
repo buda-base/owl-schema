@@ -3487,7 +3487,7 @@ bdo:biblioNote
   rdfs:label "bibliographic note"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:instanceBiblioStatus
+bdo:biblioStatus
   a owl:DatatypeProperty ;
   adm:userTooltip "A bibliographic status statement in the language of the Instance"@en ;
   rdfs:domain bdo:Instance ;
