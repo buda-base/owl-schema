@@ -664,10 +664,10 @@ bdr:L8LS15684 a :Lineage ; :status bdr:StatusReleased ;
       :lineageType bdr:LineageLung ;
       :lineageObject bdr:W21662 ;
       :lineageObject bdr:T36 ;
-      :lineageLocation [ a :WorkLocation ;
-            :workLocationPage \"131\" ;
-            :workLocationVolume \"1\" ;
-            :workLocationWork bdr:W1KG16278 ]
+      :lineageLocation [ a :ContentLocation ;
+            :contentLocationPage \"131\" ;
+            :contentLocationVolume \"1\" ;
+            :contentLocationWork bdr:W1KG16278 ]
       :lineageHolder [ a :LineageHolder ;
             :lineageWho bdr:T10MS11142 ]
       :lineageHolder [ a :LineageHolder ;
@@ -732,21 +732,6 @@ bdr:Lwwww a :Lineage ;
   adm:userTooltip "A lineage holder is a Person that is considered to be an authoritative conveyer of a transmission lineage"@en ;
   rdfs:label "lineage holder"@en ;
   rdfs:subClassOf bdo:Facet ;
-.
-bdo:LineageOrNoteOrWork
-  a owl:Class ;
-  adm:technicalComment "the domain of :workLocation for use on :Lineage, or :Note, or :Work"@en ;
-  adm:translationPriority 2 ;
-  rdfs:label "lineage or note or work"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Lineage
-          bdo:Note
-          bdo:BiblioEntity
-        ) ;
-    ] ;
 .
 bdo:LineageType
   rdfs:subClassOf bdo:Type ;
@@ -1479,12 +1464,13 @@ bdo:WorkIncipitTitle
   rdfs:label "Incipit Title"@en ;
   rdfs:subClassOf bdo:WorkTitle ;
 .
-bdo:WorkLocation
+bdo:ContentLocation
   a owl:Class ;
   adm:technicalComment "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
   adm:technicalComment "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
-  adm:userTooltip "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
-  rdfs:label "Work Location"@en ;
+  adm:technicalComment "was :WorkLocation"@en ;
+  adm:userTooltip "The ContentLocation describes the Instance, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
+  rdfs:label "Content Location"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:WorkOtherTitle
@@ -4065,116 +4051,128 @@ bdo:workLinkedAt
   owl:deprecated true ;
   owl:inverseOf bdo:workLinkTo ;
 .
-bdo:workLocation
+bdo:contentLocation
   a owl:ObjectProperty ;
-  adm:technicalComment "the :workLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
+  adm:technicalComment "the :contentLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
   adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
+  adm:technicalComment "was :workLocation"@en ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
           bdo:Lineage
           bdo:Note
-          bdo:Work
+          bdo:Instance
         ) ;
     ] ;
   rdfs:label "location"@en ;
-  rdfs:range bdo:WorkLocation ;
+  rdfs:range bdo:ContentLocation ;
   rdfs:seeAlso bdo:Lineage ;
 .
-bdo:workLocationByFolio
+bdo:contentLocationByFolio
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "If true then the location is specified in terms of folio # and side: verso/recto"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationByFolio"@en ;
   rdfs:label "location by folio"@en ;
   rdfs:range xsd:boolean ;
 .
-bdo:workLocationEndLine
+bdo:contentLocationEndLine
   a owl:DatatypeProperty ;
   adm:userTooltip "The ending line on the ending page that is referenced"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationEndLine"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "end line"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationEndPage
+bdo:contentLocationEndPage
   a owl:DatatypeProperty ;
-  adm:userTooltip "The ending page in the volume of the Work indicated by the other statements for this :WorkLocation"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:userTooltip "The ending page in the volume of the Work indicated by the other statements for this :ContentLocation"@en ;
+  adm:technicalComment "was :workLocationEndPage"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "end page"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationEndPhrase
+bdo:contentLocationEndPhrase
   a owl:DatatypeProperty ;
   adm:catalogingConvention "This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationEndLine specified as well."@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "A count of the ending phrase (in language specific units) of a Work location"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationEndPhrase"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "end phrase"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationEndSide
+bdo:contentLocationEndSide
   a owl:DatatypeProperty ;
-  adm:catalogingConvention "If :workLocationByFolio true then end side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
+  adm:catalogingConvention "If :contentLocationByFolio true then end side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates the ending side of the folio in a folio-based location."@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationEndSide"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "end side"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workLocationEndVolume
+bdo:contentLocationEndVolume
   a owl:DatatypeProperty ;
   adm:catalogingConvention "this should be a positive integer indicating the ending volume (if different from the starting volume) of the Work referenced in this Location"@en ;
-  adm:userTooltip "Indicates the ending volume number of a Work location."@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:userTooltip "Indicates the ending volume number of a Content location."@en ;
+  adm:technicalComment "was :workLocationEndVolume"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "end volume"@en ;
   rdfs:range bdo:IntegerOrString ;
   owl:deprecated true ;
 .
-bdo:workLocationEndVolumeName
+bdo:contentLocationEndVolumeName
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates the ending volume name of a Work location."@en ;
+  adm:technicalComment "was :workLocationEndVolumeName"@en ;
   rdfs:label "location ending volume name"@en ;
   owl:deprecated true ;
 .
-bdo:workLocationLine
+bdo:contentLocationLine
   a owl:DatatypeProperty ;
   adm:userTooltip "The line on the page that is referenced"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationLine"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "line"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationPage
+bdo:contentLocationPage
   a owl:DatatypeProperty ;
-  adm:userTooltip "The page in the volume of the Work indicated by the other statements for this :WorkLocation"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:userTooltip "The page in the volume of the Instance indicated by the other statements for this :ContentLocation"@en ;
+  adm:technicalComment "was :workLocationPage"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "page"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationPhrase
+bdo:contentLocationPhrase
   a owl:DatatypeProperty ;
   adm:catalogingConvention "This should be a positive integer counting from the left side of the page tshegs and shads to the phrase (syllable) that is to be indicated by the location. This is optional and only makes sense if there is a :workLocationLine specified as well."@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "A count of the starting phrase (in language specific units) of a Work location."@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationPhrase"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "phrase"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationSeqNum
+bdo:contentLocationSeqNum
   a owl:DatatypeProperty ;
-  adm:catalogingConvention "in the typical case when an work is completely contained in a single volume then the only loction will have seqnum 1; otherwise, there may be 2 or more additional locations specifying where the parts of a work occur"@en ;
+  adm:catalogingConvention "in the typical case when an instance is completely contained in a single volume then the only location will have seqnum 1; otherwise, there may be 2 or more additional locations specifying where the parts of a work occur"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "sequence number of the work location in a list of locations"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationSeqNum"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "location sequence number"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workLocationSide
+bdo:contentLocationSide
   a owl:DatatypeProperty ;
-  adm:catalogingConvention "If :workLocationByFolio true then side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
+  adm:catalogingConvention "If :contentLocationByFolio true then side should be either \"recto\" or \"verso\" but will likely need to be normalized since there has not been validation in the editor of this field. Most locations are specified in terms of pages."@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Starting side of the folio in a folio-based location."@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationSide"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "side"@en ;
   rdfs:range xsd:string ;
 .
@@ -4185,26 +4183,28 @@ bdo:instanceLocationStatement
   rdfs:label "location statement"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workLocationVolume
+bdo:contentLocationVolume
   a owl:DatatypeProperty ;
   adm:userTooltip "this should be a positive integer indicating the volume of the Work referenced in this Location"@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workLocationVolume"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "volume"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
-bdo:workLocationVolumeName
+bdo:contentLocationVolumeName
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "refers to the volume by name, e.g., ca, ta, nga"@en ;
+  adm:technicalComment "was :workLocationVolumeName"@en ;
   rdfs:label "location volume name"@en ;
 .
-bdo:workLocationWork
+bdo:contentLocationInstance
   a owl:ObjectProperty ;
-  adm:userTooltip "Indicates the Work that the WorkLocation refers to."@en ;
-  rdfs:domain bdo:WorkLocation ;
-  rdfs:label "in work"@en ;
-  rdfs:range bdo:Work ;
-  rdfs:seeAlso bdo:WorkLocation ;
+  adm:userTooltip "Indicates the Instance that the ContentLocation refers to."@en ;
+  adm:technicalComment "was :workLocationWork"@en ;
+  rdfs:domain bdo:ContentLocation ;
+  rdfs:label "in instance"@en ;
+  rdfs:range bdo:Instance ;
 .
 bdo:material
   a owl:ObjectProperty ;
@@ -4263,11 +4263,12 @@ bdo:workPL480
   rdfs:label "pl480"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workPagination
+bdo:contentPagination
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates whether the pagination is absolute across all pages of a Work or relative to the contents of a part of the Work."@en ;
-  rdfs:domain bdo:WorkLocation ;
+  adm:technicalComment "was :workPagination"@en ;
+  rdfs:domain bdo:ContentLocation ;
   rdfs:label "pagination"@en ;
   rdfs:range bdo:PaginationType ;
   rdfs:seeAlso bdo:PaginationType ;
@@ -4333,13 +4334,13 @@ For example, The Kanjur conventionally has a section of Vinaya texts and each of
 
 bdr:SomeKanjurVinayaTextX a :Work ;
       :workPartOf bdr:SomeKanjurVinayaSection ;
-      :workBeginsAt bdr:WorkLocationY001 ;
-      :workEndsAt bdr:WorksLocationY002 .
+      :workBeginsAt bdr:ContentLocationY001 ;
+      :workEndsAt bdr:ContentLocationY002 .
 
 bdr:SomeKanjurVinayaSection a :Work ;
       :workPartOf bdr:W26071 ;
-      :workBeginsAt bdr:WorkLocationZ001 ;
-      :workEndsAt bdr:WorksLocationZ002 ."""@en ;
+      :workBeginsAt bdr:ContentLocationZ001 ;
+      :workEndsAt bdr:ContentLocationZ002 ."""@en ;
   adm:userTooltip "Indicates the direct parent in the hierarchy of the work content"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "part of"@en ;
