@@ -171,7 +171,7 @@ bdo:CarvedEvent
   a owl:Class ;
   adm:userTooltip "The event of carving a work (in woodblocks, stone, etc.)"@en ;
   rdfs:label "Work carved"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
 .
 bdo:Catalog
   a owl:Class ;
@@ -202,7 +202,7 @@ bdo:CompiledEvent
   a owl:Class ;
   adm:userTooltip "The event of compiling / editing a work (mostly collections)"@en ;
   rdfs:label "compiled"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
 .
 bdo:CompletedEvent
   a owl:Class ;
@@ -223,7 +223,7 @@ bdo:CopyEvent
   a owl:Class ;
   adm:userTooltip "An event of copying a work by some means such as manual enscribing, photocopying, etc."@en ;
   rdfs:label "copied"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
 .
 bdo:CoreUnion
   a owl:Class ;
@@ -300,14 +300,14 @@ bdo:EditedEvent
   adm:deprecatedComment "deprecated in favor of :CompiledEvent"@en ;
   adm:userTooltip "An event of editing a :Work"@en ;
   rdfs:label "Work Edited"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
   owl:deprecated true ;
 .
 bdo:EnscribedEvent
   a owl:Class ;
   adm:userTooltip "An event of preparing a written manuscript of a Work"@en ;
   rdfs:label "enscribed"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
 .
 bdo:EntitiesOrFacets
   a owl:Class ;
@@ -535,6 +535,13 @@ bdo:Instance
   adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
   rdfs:label "instance"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
+.
+bdo:InstanceEvent
+  a owl:Class ;
+  adm:technicalComment "An event associated with the production of an :Instance. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
+  adm:userTooltip "An event associated with the production of an Instance."@en ;
+  rdfs:label "Instance Event"@en ;
+  rdfs:subClassOf bdo:Event ;
 .
 bdo:IntegerOrString
   a rdfs:Datatype ;
@@ -1172,7 +1179,7 @@ bdo:PrintedEvent
   a owl:Class ;
   adm:userTooltip "An event of printing a work"@en ;
   rdfs:label "Printed"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
 .
 bdo:ProvenanceNote
   a owl:Class ;
@@ -1184,7 +1191,7 @@ bdo:PublishedEvent
   a owl:Class ;
   adm:userTooltip "An event describing the publication of a work"@en ;
   rdfs:label "Published"@en ;
-  rdfs:subClassOf bdo:WorkEvent ;
+  rdfs:subClassOf bdo:InstanceEvent ;
 .
 bdo:RequestedEvent
   a owl:Class ;
@@ -1446,8 +1453,8 @@ bdo:WorkDkarChagTitle
 .
 bdo:WorkEvent
   a owl:Class ;
-  adm:technicalComment "An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
-  adm:userTooltip "An event associated with the production of a Work."@en ;
+  adm:technicalComment "An event associated with the creation of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
+  adm:userTooltip "An event associated with the creation of a Work."@en ;
   rdfs:label "Work Event"@en ;
   rdfs:subClassOf bdo:Event ;
 .
@@ -2728,6 +2735,13 @@ bdo:instanceErrata
   rdfs:label "errata"@en ;
   rdfs:range rdf:langString ;
 .
+bdo:instanceEvent
+  a owl:ObjectProperty ;
+  adm:userTooltip "A description of the what, when and where of an event in the life of a instance"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "event"@en ;
+  rdfs:range bdo:InstanceEvent ;
+.
 bdo:instanceExtentStatement
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workExtentStatement"@en ;
@@ -4003,7 +4017,7 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
 bdo:workEvent
   a owl:ObjectProperty ;
   adm:userTooltip "A description of the what, when and where of an event in the life of a instance"@en ;
-  rdfs:domain bdo:Instance ;
+  rdfs:domain bdo:Work ;
   rdfs:label "event"@en ;
   rdfs:range bdo:WorkEvent ;
 .
