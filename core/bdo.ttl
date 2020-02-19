@@ -2478,12 +2478,12 @@ bdo:instanceDerivativeOf
   rdfs:range bdo:Instance ;
   owl:inverseOf bdo:instanceHasDerivative ;
 .
-bdo:instanceDimensions
+bdo:dimensionsStatement
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workDimensions"@en ;
   adm:userTooltip "The physical dimensions of the work"@en ;
   rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "physical dimensions"@en ;
+  rdfs:label "dimensions"@en ;
   rdfs:range xsd:string ;
 .
 bdo:instanceErrata
@@ -3735,23 +3735,26 @@ bdr:W30532 is a printing based on woodblocks that have a variety of \"correction
   rdfs:range bdo:Work ;
   owl:inverseOf bdo:workHasDerivative ;
 .
-bdo:workDimHeight
+bdo:dimHeight
   a owl:DatatypeProperty ;
   adm:userTooltip "height or thickness of the physical item of a :Work in cm"@en ;
+  adm:technicalComment "was :workDimHeight"@en ;
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "height"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workDimLength
+bdo:dimLength
   a owl:DatatypeProperty ;
   adm:userTooltip "length of the physical item, of this :Work, that is held or scanned in cm"@en ;
+  adm:technicalComment "was :workDimLength"@en ;
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "length"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workDimWidth
+bdo:dimWidth
   a owl:DatatypeProperty ;
   adm:userTooltip "width of the physical item, of this :Work, that is held or scanned in cm"@en ;
+  adm:technicalComment "was :workDimWidth"@en ;
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "width"@en ;
   rdfs:range xsd:string ;
