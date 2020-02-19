@@ -4033,15 +4033,6 @@ bdo:workLinkTo
   rdfs:range bdo:VirtualWork ;
   owl:inverseOf bdo:workLinkedAt ;
 .
-bdo:workLinkedAt
-  a owl:InverseFunctionalProperty ;
-  adm:translationPriority 2 ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "work linked at"@en ;
-  rdfs:range bdo:VirtualWork ;
-  owl:deprecated true ;
-  owl:inverseOf bdo:workLinkTo ;
-.
 bdo:contentLocation
   a owl:ObjectProperty ;
   adm:technicalComment "the :contentLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
@@ -4408,9 +4399,10 @@ bdo:workRefs
   rdfs:label "reference number"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workScanInfo
+bdo:scanInfo
   a owl:DatatypeProperty ;
   adm:userTooltip "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
+  adm:technicalComment "was :workScanInfo"@en ;
   rdfs:domain bdo:ImageInstance ;
   rdfs:label "scan info"@en ;
   rdfs:range rdf:langString ;
