@@ -2530,7 +2530,7 @@ bdo:instanceHasReproduction
   rdfs:subPropertyOf bdo:instanceHasDerivative ;
   owl:inverseOf bdo:instanceReproductionOf ;
 .
-bdo:instanceHasSourcePrintery
+bdo:hasSourcePrintery
   a owl:ObjectProperty ;
   adm:technicalComment "was :workHasSourcePrintery"@en ;
   adm:userTooltip "used to indicate the printery of a traditional artefact"@en ;
@@ -4478,12 +4478,12 @@ bdo:sourceNote
   rdfs:label "source note"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workSourcePrintery_string
+bdo:sourcePrinteryStatement
   a owl:DatatypeProperty ;
   adm:catalogingConvention """Free-text expression of the source printery for the Work.
 
 Should be converted to a reference to a Place resource"""@en ;
-  adm:userTooltip "Free-text expression of the source printery for the Work."@en ;
+  adm:userTooltip "Free-text expression of the source printery for the Instance."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "source printery"@en ;
   rdfs:range xsd:string ;
