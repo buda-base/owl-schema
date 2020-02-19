@@ -3794,15 +3794,6 @@ bdo:workHasInstance
   rdfs:range bdo:Instance ;
   owl:inverseOf bdo:instanceOf ;
 .
-bdo:workHasNumber
-  a owl:ObjectProperty ;
-  adm:deprecatedComment "now use :serialHasMember"@en ;
-  adm:replaceWithObjectProperty bdo:serialHasMember ;
-  adm:userTooltip "used to reference the number associated with the work in the series"@en ;
-  rdfs:label "number"@en ;
-  owl:deprecated true ;
-  owl:inverseOf bdo:workNumberOf ;
-.
 bdo:workHasParallelsIn
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
@@ -4214,17 +4205,6 @@ bdo:material
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
-.
-bdo:workNumberOf
-  a owl:ObjectProperty ;
-  adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
-  adm:deprecatedComment "now use :serialMemberOf"@en ;
-  adm:replaceWithObjectProperty bdo:serialMemberOf ;
-  adm:userTooltip "Indicates that this Work is a member of a series."@en ;
-  rdfs:domain bdo:Work ;
-  rdfs:label "In"@en ;
-  rdfs:range bdo:SerialWork ;
-  owl:deprecated true ;
 .
 bdo:numberOfVolumes
   a owl:DatatypeProperty ;
