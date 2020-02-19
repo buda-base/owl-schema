@@ -4471,9 +4471,9 @@ bdo:workSideBoxSequenceId
   rdfs:label "side box sequence id"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workSourceNote
+bdo:sourceNote
   a owl:DatatypeProperty ;
-  adm:userTooltip "A note about the origin of the form of the Work that was digitized."@en ;
+  adm:userTooltip "A note about the origin of the Instance (form of a Work) that was digitized."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "source note"@en ;
   rdfs:range rdf:langString ;
