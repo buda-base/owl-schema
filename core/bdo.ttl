@@ -4206,10 +4206,11 @@ bdo:workLocationWork
   rdfs:range bdo:Work ;
   rdfs:seeAlso bdo:WorkLocation ;
 .
-bdo:workMaterial
+bdo:material
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "a component material of the source (can be the type of paper, type of ink, etc.)"@en ;
+  adm:technicalComment "was :workMaterial"@en ;
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "material"@en ;
   rdfs:range bdo:Material ;
