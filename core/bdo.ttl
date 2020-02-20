@@ -16,7 +16,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
-# imports: http://purl.bdrc.io/ontology/types/WorkPartType/
+# imports: http://purl.bdrc.io/ontology/types/PartType/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # prefix: bdo
@@ -82,7 +82,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Transliteration/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/WorkPartType/> ;
+  owl:imports <http://purl.bdrc.io/ontology/types/PartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
 .
@@ -531,6 +531,25 @@ bdo:ImageInstance
 .
 bdo:Instance
   a owl:Class ;
+  adm:technicalComment "Was Work, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "An individual material (or electronic) embodiement, for instance a particular published form."@en ;
+  rdfs:label "instance"@en ;
+  rdfs:subClassOf bdo:BiblioEntity ;
+.
+bdo:SingletonInstance
+  a owl:Class ;
+  adm:userTooltip "An instance that does only have one copy (ex: a manuscript, an art work, etc.)"@en ;
+  rdfs:label "singleton instance"@en ;
+  rdfs:subClassOf bdo:Instance ;
+.
+bdo:BundleInstance
+  a owl:Class ;
+  adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package."@en ;
+  rdfs:label "bundle instance"@en ;
+  rdfs:subClassOf bdo:SingletonInstance ;
+.
+bdo:Instance
+  a owl:Class ;
   adm:technicalComment "Was PublishedWork, changed to align with Bibframe 2.0"@en ;
   adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
   rdfs:label "instance"@en ;
@@ -973,17 +992,17 @@ bdo:PersonName
   rdfs:label "person name"@en ;
   rdfs:subClassOf bdo:Label ;
 .
-bdo:PersonNameOrWorkTitle
+bdo:PersonNameOrBiblioTitle
   a owl:Class ;
   adm:translationPriority 2 ;
   rdfs:comment "domain of :restored and :restoredAlt that are used for name and title variants restored from corrupt textual content"@en ;
-  rdfs:label "person name or work title"@en ;
+  rdfs:label "person name or title of a bibliographic entity"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
       a owl:Class ;
       owl:unionOf (
           bdo:PersonName
-          bdo:WorkTitle
+          bdo:Title
         ) ;
     ] ;
 .
@@ -1409,23 +1428,30 @@ bdo:Work
   rdfs:label "work"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
 .
-bdo:WorkBibliographicalTitle
+bdo:WorkCollection
+  a owl:Class ;
+  adm:technicalComment "Was AbstarctWork, changed to align with Bibframe 2.0"@en ;
+  adm:userTooltip "A work that is made of a collection of other works (ex: gsung bum, canonical collection, etc.)."@en ;
+  rdfs:label "collection"@en ;
+  rdfs:subClassOf bdo:Work ;
+.
+bdo:BibliographicalTitle
   a owl:Class ;
   adm:catalogingConvention """This is the main title of a work, the title by which it is the most often known. If a work has only one title, it must be of type Bibliographic Title. There must be only one bibliographical title per work. 
 
 Title by which a Work is identified for cataloging purposes. There are three usages: (1) Title that is the main title of a Work based on Cover Title, Title Page Title. Spine Title, Colophon Title; (2) Title that is a known or popular abbreviation of the main title of a Work; (3) Title that is a collective convention used to collocate publications of an author that contains several Works (ex: gsung ‘bum)"""@en ;
   adm:userTooltip "The main title of a work, the title by which it is the most often known." ;
   rdfs:label "Bibliographic Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkColophonTitle
+bdo:ColophonTitle
   a owl:Class ;
   adm:catalogingConvention "Title given in the colophon of a Work or text. Include when the title differs from the th full title or title page title"@en ;
   adm:userTooltip "Title given in the colophon of a Work or text"@en ;
   rdfs:label "Colophon Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkCopyrightPageTitle
+bdo:CopyrightPageTitle
   a owl:Class ;
   adm:catalogingConvention """The Copyright Page Title is found on the Cataloging in Publication (CIP) when present. The CIP is typically on the verso of the Title Page in Western publications and often at the end for Chinese pubications. The title should be entered in the language and script as it appears in the original publication - which for Chinese publications is typically zh-hans. The Library of COngress standard for the Title in the CIP is that it includes the title and any subtitle from the title page so for Western materials this data element is redundant with the full :WorkTitlePageTitle and can be ignored for cataloging. For Chinese materials, especially Tibetan publications, the CIP title is typically distinct from that which appears on the Title Page and hence this data can be helpful in distinguishing the Work from others. 
 
@@ -1435,20 +1461,20 @@ In general include the use Copyright Page Title when it differs from the bibliog
   rdfs:label "Copyright page Title"@en ;
   rdfs:seeAlso "http://cip.loc.gov/cipman/"^^xsd:anyURI ;
   rdfs:seeAlso "https://www.loc.gov/publish/cip/news/lccn_art.html"^^xsd:anyURI ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkCoverTitle
+bdo:CoverTitle
   a owl:Class ;
   adm:userTooltip "Title printed on the cover of a Work or text as issued"@en ;
   rdfs:label "Cover Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
 bdo:WorkDkarChagTitle
   a owl:Class ;
   adm:deprecatedComment "retired in favor a the more neutral WorkToCTitle"@en ;
-  adm:replaceWith bdo:WorkToCTitle ;
+  adm:replaceWith bdo:ToCTitle ;
   rdfs:label "Table of Contents Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
   owl:deprecated true ;
 .
 bdo:WorkEvent
@@ -1458,68 +1484,68 @@ bdo:WorkEvent
   rdfs:label "Work Event"@en ;
   rdfs:subClassOf bdo:Event ;
 .
-bdo:WorkFullTitle
+bdo:FullTitle
   a owl:Class ;
   adm:catalogingConvention """Title on the first page of the text of the Tibetan traditional Pecha format. 
 
 Often the Title Page Title for a publication of a reproduction that includes prefatory material distinct from the main Tibetan content is different from the Tibetan title that appears on the first page of the content. See for instance, bdr:W22505"""@en ;
   adm:userTooltip "Title on the first page of the text of the Tibetan traditional Pecha format."@en ;
   rdfs:label "Full Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkHalfTitle
+bdo:HalfTitle
   a owl:Class ;
   adm:catalogingConvention "Title of a publication appearing on a page or folio preceding the title page. Include when present as a distinguishing item of information. The half title page may be missing from later reproductions of a work, Typically the half title is the main title w/o additional subtitling."@en ;
   adm:userTooltip "Title of a publication appearing on a page or folio preceding the title page."@en ;
   rdfs:label "Half Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkIncipitTitle
+bdo:IncipitTitle
   a owl:Class ;
   adm:userTooltip "the title as given, inline, at the beginning of the text"@en ;
   rdfs:label "Incipit Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkOtherTitle
+bdo:OtherTitle
   a owl:Class ;
   adm:catalogingConvention "when a work is known by different titles, the main one is recorded by :WorkBibliographicalTitle and the others with :WorkOtherTitle. This should mainly be used with abstract works."@en ;
   adm:userTooltip "Title that a work is known by other than one of the defined title types"@en ;
   rdfs:label "Other Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkPartType
+bdo:PartType
   rdfs:subClassOf bdo:Type ;
 .
-bdo:WorkReferenceTitle
+bdo:ReferenceTitle
   a owl:Class ;
   adm:translationPriority 2 ;
   adm:userTooltip "for use with abstract works such as from the SEA project that have many different expressions with the same putative title"@en ;
   rdfs:label "Reference Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkRunningTitle
+bdo:RunningTitle
   a owl:Class ;
   adm:catalogingConvention "Title as it appears in the margins or page headers of a Work"@en ;
   adm:userTooltip "Title indicated in the margins or page headers of a Work."@en ;
   rdfs:label "Running Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
   skos:altlabel "Marginal title"@en ;
 .
-bdo:WorkSpineTitle
+bdo:SpineTitle
   a owl:Class ;
   adm:catalogingConvention "use for titles indicated on the spine of a book when it differs from the bibliographical title."@en ;
   adm:userTooltip "title indicated on the spine of a book"@en ;
   rdfs:label "Spine Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkSubtitle
+bdo:Subtitle
   a owl:Class ;
   adm:catalogingConvention "Title that is explanatory. Typically following the main Title Page Title or Cover Title"@en ;
   adm:userTooltip "Title that is explanatory. Typically following the main Title Page Title or Cover Title"@en ;
   rdfs:label "Subtitle"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkTitle
+bdo:Title
   a owl:Class ;
   adm:technicalComment """A title for the Work including the title text and title type: full, sub, etc:
 
@@ -1535,26 +1561,26 @@ bdr:W22083 a :Work ;
   rdfs:label "Title"@en ;
   rdfs:subClassOf bdo:Label ;
 .
-bdo:WorkTitlePageTitle
+bdo:TitlePageTitle
   a owl:Class ;
   adm:catalogingConvention "(1) Title that appears on the title page of a Work; (2) Title of an Individual Work or text that is part of a larger containing Work. Should be included when available. May also be used as the Bibliographic title when no other title is available."@en ;
   adm:userTooltip "Title that appears on the title page of a Work"@en ;
   rdfs:label "Title page title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkTitlePortion
+bdo:TitlePortion
   a owl:Class ;
   adm:catalogingConvention "A Title that is abbreviated, condensed, divided from the main title"@en ;
   adm:userTooltip "Title that is abbreviated, condensed, divided from the main title"@en ;
   rdfs:label "Title portion"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
-bdo:WorkToCTitle
+bdo:ToCTitle
   a owl:Class ;
   adm:catalogingConvention "Use this type for titles in table of contents when they differ from the bibliographical title."@en ;
   adm:userTooltip "A title for a work as it occurs in the table of contents for a Work."@en ;
   rdfs:label "Table of Contents Title"@en ;
-  rdfs:subClassOf bdo:WorkTitle ;
+  rdfs:subClassOf bdo:Title ;
 .
 bdo:WorkType
   rdfs:subClassOf bdo:Type ;
@@ -2976,6 +3002,7 @@ bdo:langScript
   rdfs:domain bdo:Instance ;
   rdfs:label "language"@en ;
   rdfs:range bdo:LangScript ;
+  owl:deprecated true ;
 .
 bdo:legacyOutlineNodeRID
   a owl:AnnotationProperty ;
@@ -3572,7 +3599,7 @@ the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, 
 Such reconstructions are typically approximations to the original and there will often be a primary or preferred form of the name or title in which case the :restored property should be used."""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates a restoration of the original PersonName or WorkTitle"@en ;
-  rdfs:domain bdo:PersonNameOrWorkTitle ;
+  rdfs:domain bdo:PersonNameOrBiblioTitle ;
   rdfs:label "restored"@en ;
   rdfs:range rdf:langString ;
 .
@@ -3594,7 +3621,7 @@ the rdfs:label is tagged as a Sanskrit transliteration in Tranditional Chinese, 
 Such reconstructions are typically approximations to the original and there may be alternatives to the preferred form of the name or title in which case :restoredAlt literals may be recorded."""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "Indicates an alternative restoration of the original PersonName or WorkTitle"@en ;
-  rdfs:domain bdo:PersonNameOrWorkTitle ;
+  rdfs:domain bdo:PersonNameOrBiblioTitle ;
   rdfs:label "restored alternative"@en ;
   rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:restored ;
@@ -3656,7 +3683,7 @@ bdo:serialInstanceOf
 .
 bdo:serialMemberOf
   a owl:ObjectProperty ;
-  adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :workPartOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
+  adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :partOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
   adm:userTooltip "Indicates that this Work is a member of a series."@en ;
   rdfs:domain bdo:SerialMember ;
   rdfs:label "serial member of"@en ;
@@ -4065,21 +4092,21 @@ bdo:workHasParallelsIn
   rdfs:range bdo:Work ;
   rdfs:subPropertyOf bdo:workHasDerivative ;
 .
-bdo:workHasPart
+bdo:hasPart
   a owl:ObjectProperty ;
   adm:userTooltip "links a work and one of its part (a collection and a text in the collection, a text and one of its chapters, etc.)"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "has part"@en ;
   rdfs:range bdo:Instance ;
-  rdfs:seeAlso bdo:workPartOf ;
-  owl:inverseOf bdo:workPartOf ;
+  rdfs:seeAlso bdo:partOf ;
+  owl:inverseOf bdo:partOf ;
 .
-bdo:workHasRoot
+bdo:inRootInstance
   a owl:ObjectProperty ;
   adm:technicalComment """:workHasRoot is typically \"inferred\" via a path expression such as:
 
-    ?hEx bdo:workPartOf+ ?hExW .
-    optional { ?hExW bdo:workPartOf ?hExWP }
+    ?hEx bdo:partOf+ ?hExW .
+    optional { ?hExW bdo:partOf ?hExWP }
     FILTER (!bound(?hExWP))
     ?hExW skos:prefLabel ?hExO .
 
@@ -4280,6 +4307,7 @@ bdo:workObjectType
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "object type"@en ;
   rdfs:range bdo:ObjectType ;
+    owl:deprecated true ;
 .
 bdo:workOtherLangScript
   a owl:ObjectProperty ;
@@ -4292,6 +4320,7 @@ or a text containing handwritten comments in Tibetan might have:
     :workOtherLangScript bdr:BoKhyugYig"""@en ;
   adm:userTooltip "secondary language associated with a work"@en ;
   rdfs:label "other language"@en ;
+  owl:deprecated true ;
 .
 bdo:workPL480
   a owl:DatatypeProperty ;
@@ -4302,7 +4331,7 @@ bdo:workPL480
   rdfs:label "pl480"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workPartIndex
+bdo:partIndex
   a owl:DatatypeProperty ;
   adm:catalogingConvention """The part index is used to provide a simple way to order the parts of a parent :Work. The direct children parts of a :Work are indexed from 1 to n. The direct children of each of these is similarly indexed from 1 to n.
 
@@ -4354,8 +4383,9 @@ bdo:workPartLabel
   rdfs:domain bdo:Instance ;
   rdfs:label "part label"@en ;
   rdfs:range rdf:langString ;
+  owl:deprecated true ;
 .
-bdo:workPartOf
+bdo:partOf
   a owl:ObjectProperty ;
   adm:catalogingConvention """The subject work is a part of the referenced work. The subject work in this case is an <outline:node/> in the legacy metadata. The referenced work may be the root work or another part of the root work such as a section.
 
@@ -4374,11 +4404,11 @@ bdr:SomeKanjurVinayaSection a :Work ;
   rdfs:domain bdo:Instance ;
   rdfs:label "part of"@en ;
   rdfs:range bdo:Instance ;
-  owl:inverseOf bdo:workHasPart ;
+  owl:inverseOf bdo:hasPart ;
 .
-bdo:workPartTreeIndex
+bdo:partTreeIndex
   a owl:DatatypeProperty ;
-  adm:catalogingConvention """the :workPartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For example, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
+  adm:catalogingConvention """the :wpartTreeIndex is a dotted list of indexes of the part among its siblings under each parent up to the root. For example, suppose a part is the second part under the third part under the first part under the fifth part under the root work then the index will be:
 
     5.1.3.2
 
@@ -4389,12 +4419,12 @@ so go to the fifth child of the root then to the first of its children, then to 
   rdfs:label "work part tree index"@en ;
   rdfs:range xsd:string ;
 .
-bdo:workPartType
+bdo:partType
   a owl:ObjectProperty ;
   adm:userTooltip "If the subject work is part of another work, then this reflects the type of part: chapter, section, text, etc."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "part type"@en ;
-  rdfs:range bdo:WorkPartType ;
+  rdfs:range bdo:PartType ;
 .
 bdo:workRefChokLing
   a owl:DatatypeProperty ;
@@ -4480,19 +4510,18 @@ bdo:workSideBoxSequenceId
   rdfs:label "side box sequence id"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workTitle
+bdo:hasTitle
   a owl:ObjectProperty ;
-  adm:userTooltip "Asserts that the subject Work has a particular title."@en ;
+  adm:userTooltip "Asserts that the subject instance has a particular title."@en ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
           bdo:Instance
-          bdo:Work
         ) ;
     ] ;
   rdfs:label "title"@en ;
-  rdfs:range bdo:WorkTitle ;
-  rdfs:seeAlso bdo:WorkTitle ;
+  rdfs:range bdo:Title ;
+  rdfs:seeAlso bdo:Title ;
 .
 bdo:workTranslationOf
   a owl:ObjectProperty ;

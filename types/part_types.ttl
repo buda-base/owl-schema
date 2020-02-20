@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/WorkPartType/
+# baseURI: http://purl.bdrc.io/ontology/types/PartType/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: WorkPartType
 
-@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType/> .
+@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/PartType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -12,38 +12,38 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:WorkPartType
+bdo:PartType
   a owl:Class ;
-  adm:userTooltip "represents the type of a part of a Work such as Chapter, Section and so on"@en ;
-  rdfs:label "Work Part Type"@en ;
+  adm:userTooltip "represents the type of a part of an instance, work or item such as Chapter, Section and so on"@en ;
+  rdfs:label "Part Type"@en ;
 .
-WorkPartType:
+PartType:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
 .
-bdr:WorkChapter
+bdr:PartTypeChapter
   a bdo:WorkPartType ;
   skos:prefLabel "chapter"@en ;
 .
-bdr:WorkFragment
+bdr:PartTypeFragment
   a bdo:WorkPartType ;
-  rdfs:comment "A :WorkFragment is a portion of a \"whole\" work. A :WorkFragment commonly occurs when some pages have been extracted from a \"complete\" :Work and inserted improperly into a different :Work which has then been copied. A fragment is specified as a part of a containing :Work via a :WorkLocation as with any similar :workPartOf"@en ;
+  rdfs:comment "A fragment is a portion of a \"whole\" instance. It commonly occurs when some pages have been extracted from a \"complete\" instance and inserted improperly into a different one. A fragment is specified as a part of a containing instance via a :ContentLocation as with any similar :partOf"@en ;
   skos:prefLabel "fragment"@en ;
 .
-bdr:WorkSection
+bdr:PartTypeSection
   a bdo:WorkPartType ;
   skos:prefLabel "section"@en ;
 .
-bdr:WorkText
+bdr:PartTypeText
   a bdo:WorkPartType ;
   skos:prefLabel "text"@en ;
 .
-bdr:WorkTableOfContent
+bdr:PartTypeTableOfContent
   a bdo:WorkPartType ;
   skos:prefLabel "table of content"@en ;
   skos:prefLabel "dkar chag"@bo-x-ewts ;
 .
-bdr:WorkVolume
+bdr:PartTypeVolume
   a bdo:WorkPartType ;
   skos:prefLabel "volume"@en ;
 .
