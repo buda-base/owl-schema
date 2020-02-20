@@ -3221,14 +3221,7 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
   rdfs:label "note"@en ;
   rdfs:range bdo:Note ;
 .
-bdo:noteLocationStatement
-  a owl:AnnotationProperty ;
-  adm:userTooltip "A string indicating where in the :noteWork to look for the :noteText"@en ;
-  rdfs:domain bdo:Note ;
-  rdfs:label "location"@en ;
-  rdfs:range xsd:string ;
-.
-bdo:noteLocationStatementCBETA
+bdo:locationStatementCBETA
   a owl:AnnotationProperty ;
   adm:catalogingConvention """Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
 
@@ -3241,7 +3234,7 @@ Taisho, Volume 52, Text 2103, page 264, register c, line 18
 (line counting start at 1 and goes from right to left)"""@en ;
   adm:userTooltip "Indicates a location in the Chinese Buddhist Canon."@en ;
   rdfs:label "location statement (in the Chinese Buddhist Canon)"@en ;
-  rdfs:subPropertyOf bdo:noteLocationStatement ;
+  rdfs:subPropertyOf bdo:locationStatement ;
 .
 bdo:noteText
   a owl:AnnotationProperty ;
@@ -3257,9 +3250,9 @@ bdo:noteType
   rdfs:label "location"@en ;
   rdfs:range xsd:string ;
 .
-bdo:noteWork
+bdo:noteSource
   a owl:AnnotationProperty ;
-  adm:userTooltip "The source Work for the noteContent"@en ;
+  adm:userTooltip "The source for the noteContent"@en ;
   rdfs:domain bdo:Note ;
   rdfs:label "source"@en ;
   rdfs:range bdo:BiblioEntity ;
