@@ -2703,10 +2703,10 @@ bdo:inferSubTree
   a owl:AnnotationProperty ;
   rdfs:range xsd:boolean ;
 .
-bdo:instanceComplete
+bdo:isComplete
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workComplete"@en ;
-  adm:userTooltip "true if the instance is complete"@en ;
+  adm:userTooltip "true if the instance or item is complete"@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "complete"@en ;
   rdfs:range xsd:boolean ;
