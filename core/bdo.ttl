@@ -1401,17 +1401,13 @@ There is no distinction between OCR'd and input volumes."""@en ;
   rdfs:label "Etext Volume"@en ;
   rdfs:subClassOf bdo:Volume ;
 .
-bdo:VolumeImageAsset
+bdo:ImageGroup
   a owl:Class ;
-  adm:technicalComment """Each :Volume corresponds to a volume an associated :Work. A :Volume may have a :onDisk property present when the Volume has been digitized and deposited in the online archive.
+  adm:technicalComment """Each :ImageGroup represents a group of images. Most of the time these would correspond to volumes / bundles.
 
-Each :VolumeImageAsset may have a :imageList property which will have a '|' separated list of names of the page image files. This property is present when the subject volume has been digitized and deposited in the online archive. Otherwise, the volume will have properties related to the total number of pages, intro pages and so on as well as relevant information from the originating ScanRequest.
-
-Alternatively, a :VolumeImageAsset may have an :hasManifest property that identifies an :IIIFManifest resource. This will typically occur when the images associated with the :VolumeImageAsset are served from a third-party IIIF server.
-
-Further, the :imageList property will be deprecated in favor of :hasDimensionData which will represent the image specific, name, height and width that is needed to generate a IIIF Manifest on-the-fly. The dimension data is a json array of per image data."""@en ;
+Alternatively, a :ImageGroup may have an :hasManifest property that identifies an :IIIFManifest resource. This will typically occur when the images associated with the :ImageGroup are served from a third-party IIIF server."""@en ;
   adm:userTooltip "Represents a scanned or otherwise digitized set of page images."@en ;
-  rdfs:label "Image Volume"@en ;
+  rdfs:label "Image Group"@en ;
   rdfs:subClassOf bdo:Volume ;
 .
 bdo:VolumePhysicalAsset
@@ -2356,7 +2352,7 @@ bdo:hasIIIFManifest
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
   rdfs:comment "this property refers to a named IIIF Manifest resource. The resource may be local or at another location such as the British Library EAP"@en ;
-  rdfs:domain bdo:VolumeImageAsset ;
+  rdfs:domain bdo:ImageGroup ;
   rdfs:label "has IIIF Manifest"@en ;
   rdfs:range bdo:IIIFManifest ;
 .
@@ -2613,8 +2609,8 @@ bdo:illustrations
 bdo:imageCount
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip "A positive integer indicating the total number of images in the VolumeImageAsset"@en ;
-  rdfs:domain bdo:VolumeImageAsset ;
+  adm:userTooltip "A positive integer indicating the total number of images in the ImageGroup"@en ;
+  rdfs:domain bdo:ImageGroup ;
   rdfs:label "image count"@en ;
   rdfs:range xsd:integer ;
 .
@@ -2648,7 +2644,7 @@ when a name standalone the \":1\" can be dispensed with."""@en ;
   adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive." ;
   adm:translationPriority 2 ;
   adm:userTooltip "The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character."@en ;
-  rdfs:domain bdo:VolumeImageAsset ;
+  rdfs:domain bdo:ImageGroup ;
   rdfs:label "image list"@en ;
   rdfs:range xsd:string ;
   owl:deprecated true ;
@@ -2662,7 +2658,7 @@ bdo:imagesMissing
 This is a rare situation but needs to be handled."""@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "A comma separated list of image indexes that are missing."@en ;
-  rdfs:domain bdo:VolumeImageAsset ;
+  rdfs:domain bdo:ImageGroup ;
   rdfs:label "images missing"@en ;
   rdfs:range xsd:string ;
   owl:deprecated true ;
