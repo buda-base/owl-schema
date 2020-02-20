@@ -1372,12 +1372,12 @@ bdo:UnspecifiedWorkClass
   rdfs:subClassOf bdo:BiblioEntity ;
   owl:deprecated true ;
 .
-bdo:VirtualWork
+bdo:VirtualInstance
   a owl:Class ;
   adm:technicalComment "Virtual works are works made by assembling different other works. Examples: collections, manuscripts reconstituted from fragments in different collections, etc. The hierarchy of works displayed in an embedded reader is also a virtual work."@en ;
   adm:userTooltip "Virtual works are works made by assembling different other works."@en ;
   rdfs:label "Virtual work"@en ;
-  rdfs:subClassOf bdo:BiblioEntity ;
+  rdfs:subClassOf bdo:BundleInstance ;
 .
 bdo:Volume
   a owl:Class ;
@@ -4287,13 +4287,13 @@ bdo:workLccn
   rdfs:range xsd:string ;
   rdfs:subPropertyOf bdo:workRefs ;
 .
-bdo:workLinkTo
+bdo:virtualLinkTo
   a owl:InverseFunctionalProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a member Work of a VirtualWork (an ad hoc collection of Works)"@en ;
-  rdfs:domain bdo:VirtualWork ;
+  adm:userTooltip "Indicates a member Instance of a VirtualInstance"@en ;
+  rdfs:domain bdo:VirtualInstance ;
   rdfs:label "work link to"@en ;
-  rdfs:range bdo:VirtualWork ;
+  rdfs:range bdo:VirtualInstance ;
   owl:inverseOf bdo:workLinkedAt ;
 .
 bdo:workObjectType
