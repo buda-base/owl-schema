@@ -1,0 +1,73 @@
+# baseURI: http://purl.bdrc.io/ontology/shapes/core/
+# imports: http://datashapes.org/dash
+# imports: http://purl.bdrc.io/ontology/core/
+# prefix: bds
+
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bds:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports bdo: ;
+  owl:versionInfo "Initial SHACL constraints" ;
+.
+bds:EntityShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Entity shape"@en ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path skos:prefLabel ;
+      sh:datatype rdf:langString ;
+      sh:description "require unique language from among the listed choices"@en ;
+      sh:languageIn (
+          "en"
+          "zh"
+          "bo"
+          "bo-x-ewts"
+        ) ;
+      sh:minCount 1 ;
+      sh:name "pref label"@en ;
+      sh:order "1"^^xsd:decimal ;
+      sh:uniqueLang true ;
+    ] ;
+  sh:targetClass bdo:Entity ;
+.
+bds:LabelShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Label Shape"@en ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:hasTranslation ;
+      sh:class bdo:Label ;
+      sh:description "this Label may have zero or more tanslations"@en ;
+      sh:inversePath bdo:translationOf ;
+      sh:minCount 0 ;
+      sh:name "label has translation"@en ;
+    ] ;
+  sh:targetClass bdo:Label ;
+.

@@ -1,0 +1,108 @@
+# baseURI: http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/
+# imports: http://datashapes.org/dash
+# imports: http://purl.bdrc.io/ontology/adm/types/Access
+# imports: http://purl.bdrc.io/ontology/core/
+# prefix: bds
+
+@prefix InstanceShapes: <http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/>
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+InstanceShapes:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports bdo: ;
+  owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
+.
+bds:InstanceShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Instance Shape"@en ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:creator ;
+      sh:class bdo:AgentAsCreator ;
+      sh:description "this Instance may have zero or more creators."@en ;
+      sh:minCount 0 ;
+      sh:name "instance has translation"@en ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:instanceOf ;
+      sh:class bdo:Work ;
+      sh:description "this Instance is an instance of at least one Work"@en ;
+      sh:inversePath bdo:hasInstance ;
+      sh:minCount 1 ;
+      sh:name "instance of"@en ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bf:identifiedBy ;
+      sh:inversePath bf:identifies ;
+      sh:class bdo:InstanceIdentifier ;
+      sh:minCount 0 ;
+      sh:name "identifies instance shape"@en ;
+  ] ;
+  sh:targetClass bdo:Instance ;
+.
+bds:PhysicalInstanceShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "PhysicalInstance Shape"@en ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:printMethod ;
+      sh:class bdo:PrintMethod ;
+      sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
+      sh:maxCount 1 ;
+      sh:minCount 0 ;
+      sh:name "instance print method"@en ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:binding ;
+      sh:class bdo:Binding ;
+      sh:description "this PhysicalInstance may have a single Binding"@en ;
+      sh:maxCount 1 ;
+      sh:minCount 0 ;
+      sh:name "instance binding"@en ;
+    ] ;
+  sh:targetClass bdo:PhysicalInstance ;
+.
+bds:SerialInstanceShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "SerialInstance Shape"@en ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path bdo:instanceOf ;
+      sh:class bdo:SerialMember ;
+      sh:description "this is an instance of a SerialMember"@en ;
+      sh:inversePath bdo:hasInstance ;
+      sh:minCount 1 ;
+      sh:name "instance of serial"@en ;
+    ] ;
+  sh:targetClass bdo:SerialInstance ;
+.
