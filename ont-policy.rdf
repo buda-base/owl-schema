@@ -186,6 +186,21 @@
         <altURL    rdf:resource="owl-schema/roles/creators.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/roles/creators.ttl"/>
     </OntologySpec>
+
+    <!-- schemes -->    
+    <OntologySpec>
+        <!-- local version of the FEMCScheme vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/FEMCScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/FEMCScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/FEMCScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the IdentifierScheme vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/IdentifierScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/IdentifierScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/IdentifierScheme.ttl"/>
+    </OntologySpec>
     
     <!-- types -->
     <OntologySpec>
@@ -193,6 +208,13 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Binding/"/>
         <altURL    rdf:resource="owl-schema/types/bindings.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/bindings.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the DateIndication vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/DateIndication/"/>
+        <altURL    rdf:resource="owl-schema/types/date_indications.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/date_indications.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
@@ -238,6 +260,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the PartType vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PartType/"/>
+        <altURL    rdf:resource="owl-schema/types/part_types.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/part_types.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the PlaceType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PlaceType/"/>
         <altURL    rdf:resource="owl-schema/types/place_types.ttl"/>
@@ -266,13 +295,6 @@
     </OntologySpec>
     
     <OntologySpec>
-        <!-- local version of the DateIndication vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/DateIndication/"/>
-        <altURL    rdf:resource="owl-schema/types/date_indications.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/date_indications.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
         <!-- local version of the Tradition vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Tradition/"/>
         <altURL    rdf:resource="owl-schema/types/traditions.ttl"/>
@@ -284,13 +306,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Transliteration/"/>
         <altURL    rdf:resource="owl-schema/types/transliterations.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/transliterations.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the WorkPartType vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/WorkPartType/"/>
-        <altURL    rdf:resource="owl-schema/types/work_part_types.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/work_part_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>

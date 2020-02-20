@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: WorkPartType
 
-@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/PartType/> .
+@prefix PartType: <http://purl.bdrc.io/ontology/types/PartType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
