@@ -19,6 +19,7 @@
 # imports: http://purl.bdrc.io/ontology/types/PartType/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
+# imports: http://purl.bdrc.io/resource/IdentifierScheme/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -85,6 +86,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/PartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
 .
 bdo:Agent
   a owl:Class ;
@@ -3804,182 +3806,6 @@ bdo:volumePhysicalDescription
   rdfs:label "physical description"@en ;
   rdfs:range rdf:langString ;
 .
-bdo:workCBCSiglaA
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla A associated with this Work."@en ;
-  rdfs:label "CBC Sigla A"@en ;
-  rdfs:label "趙城金藏"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaB
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla B associated with this Work."@en ;
-  rdfs:label "CBC Sigla B"@en ;
-  rdfs:label "大藏經補編"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaC
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla C associated with this Work."@en ;
-  rdfs:label "CBC Sigla C"@en ;
-  rdfs:label "中華大藏經-中華書局版"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaD
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla D associated with this Work."@en ;
-  rdfs:label "CBC Sigla D"@en ;
-  rdfs:label "國圖善本"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaF
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla F associated with this Work."@en ;
-  rdfs:label "CBC Sigla F"@en ;
-  rdfs:label "房山石經"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaG
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla G associated with this Work."@en ;
-  rdfs:label "CBC Sigla G"@en ;
-  rdfs:label "佛教大藏經"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaGA
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla GA associated with this Work."@en ;
-  rdfs:label "CBC Sigla GA"@en ;
-  rdfs:label "中國佛寺史志彙刊"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaGB
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla GB associated with this Work."@en ;
-  rdfs:label "CBC Sigla GB"@en ;
-  rdfs:label "中國佛寺志叢刊"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaI
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla I associated with this Work."@en ;
-  rdfs:label "CBC Sigla I"@en ;
-  rdfs:label "北朝佛教石刻拓片百品"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaJ
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla J associated with this Work."@en ;
-  rdfs:label "CBC Sigla J"@en ;
-  rdfs:label "嘉興藏"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaK
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla K associated with this Work."@en ;
-  rdfs:label "CBC Sigla K"@en ;
-  rdfs:label "高麗大藏經-新文豐版"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaL
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla L associated with this Work."@en ;
-  rdfs:label "CBC Sigla L"@en ;
-  rdfs:label "乾隆大藏經-新文豐版"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaM
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla M associated with this Work."@en ;
-  rdfs:label "CBC Sigla M"@en ;
-  rdfs:label "卍正藏經-新文豐版"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaN
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla N associated with this Work."@en ;
-  rdfs:label "CBC Sigla N"@en ;
-  rdfs:label "南傳大藏經"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaP
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla P associated with this Work."@en ;
-  rdfs:label "CBC Sigla P"@en ;
-  rdfs:label "永樂北藏"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaS
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla S associated with this Work."@en ;
-  rdfs:label "CBC Sigla S"@en ;
-  rdfs:label "宋藏遺珍-新文豐版"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaT
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Indicates a CBC Sigla T, Taisho, associated with this Work."@en ;
-  rdfs:label "CBC Sigla T, Taisho"@en ;
-  rdfs:label "Taisho reference number"@en ;
-  rdfs:label "大正藏"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaU
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla U associated with this Work."@en ;
-  rdfs:label "CBC Sigla U"@en ;
-  rdfs:label "洪武南藏"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaX
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla X associated with this Work."@en ;
-  rdfs:label "CBC Sigla X"@en ;
-  rdfs:label "卍續藏"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaY
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla Y associated with this Work."@en ;
-  rdfs:label "CBC Sigla Y"@en ;
-  rdfs:label "印順法師佛學著作集"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaZS
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla ZS associated with this Work."@en ;
-  rdfs:label "CBC Sigla ZS"@en ;
-  rdfs:label "正史佛教資料類編"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workCBCSiglaZW
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates a CBC Sigla ZW associated with this Work."@en ;
-  rdfs:label "CBC Sigla ZW"@en ;
-  rdfs:label "藏外佛教文獻"@zh-hant ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
 bdo:workContainsChapters
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
@@ -4130,18 +3956,6 @@ bdo:workHasTranslation
   rdfs:subPropertyOf bdo:workHasDerivative ;
   owl:inverseOf bdo:workTranslationOf ;
 .
-bdo:workHollis
-  a owl:DatatypeProperty ;
-  adm:catalogingConvention """The Harvard Online Library ID for the Work.
-
-There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"""@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "The Harvard Online Library ID for the Work."@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "hollis id"@en ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
 bdo:workIsAbout
   a owl:ObjectProperty ;
   adm:userTooltip "The referenced Entity (topic, person, work, etc.) is a subject of the Work - something the Work is about."@en ;
@@ -4158,127 +3972,6 @@ bdo:workIsNumbered
   rdfs:label "number in series"@en ;
   rdfs:range xsd:boolean ;
   owl:deprecated true ;
-.
-bdo:workIsbn
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Refers to the International Standard Book Number for the Work"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "ISBN"@en ;
-  rdfs:range xsd:string ;
-.
-bdo:workKDPPOldId
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Khmer Digital Preservation Project Old Id" ;
-  rdfs:label "KDPPOld Id"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaA
-  a owl:DatatypeProperty ;
-  adm:userTooltip "From Paul Hackett's catalogue"@en ;
-  rdfs:label "Pedurma catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/756377542> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaBon
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Reference number in the Bon combined Kanjur and Tenjur"@en ;
-  rdfs:label "bon kanjur catalog number"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaC
-  a owl:DatatypeProperty ;
-  adm:userTooltip "from Mibu's catalogue"@en ;
-  rdfs:label "Cone catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/603601029> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaD
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Derge Kangyur and Tengyur reference numbers, from the Tohoku Catalogue"@en ;
-  rdfs:label "Tohoku catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/976594525> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaDo
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Reference number for this work from the Dolpo Kangyur Catalogue"@en ;
-  rdfs:label "Dolpo Kangyur Catalogue Number"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaG
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
-  rdfs:label "gser bris catalogue number"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaH
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Lhasa Kanjur reference number"@en ;
-  rdfs:label "lha sa catalogue number"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaJ
-  a owl:DatatypeProperty ;
-  adm:userTooltip "From Imaeda's catalogue"@en ;
-  rdfs:label "'jang catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/769115653> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaN
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
-  rdfs:label "narthang number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/718065580> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaQ
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Pecing Kangyur Reference number from the Otani catalogue"@en ;
-  rdfs:label "Otani catalogue reference"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaS
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Reference number from Skorupski's catalogue"@en ;
-  rdfs:label "Stog catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/461960048> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaU
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Urga Kangyur reference number"@en ;
-  rdfs:label "Urga catalogue number"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaV
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Reference number from the Ulaanbaatar catalogue"@en ;
-  rdfs:label "Ulaanbaatar catalogue number"@en ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workKaTenSiglaZ
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Shey Palace manuscript reference number"@en ;
-  rdfs:label "Shey number"@en ;
-  rdfs:seeAlso <https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php> ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workLcCallNumber
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Refers to the Library of Congress Shelf mark call number"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "has LC Call Number"@en ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workLccn
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Refers to the Library of Congress Control Number"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "LCCN"@en ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf bdo:workRefs ;
 .
 bdo:virtualLinkTo
   a owl:InverseFunctionalProperty ;
@@ -4310,15 +4003,6 @@ or a text containing handwritten comments in Tibetan might have:
   adm:userTooltip "secondary language associated with a work"@en ;
   rdfs:label "other language"@en ;
   owl:deprecated true ;
-.
-bdo:workPL480
-  a owl:DatatypeProperty ;
-  adm:catalogingConvention "Id and indication that the Work was prepared and acquired as part of Gene Smith's contribution to the implementation of Public Law 480 in India in the 1960's and 70's"@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Indicates that the Work was acquired as part of Gene Smith's contribution to the implementation of Public Law 480"@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "pl480"@en ;
-  rdfs:range xsd:string ;
 .
 bdo:partIndex
   a owl:DatatypeProperty ;
@@ -4414,58 +4098,6 @@ bdo:partType
   rdfs:domain bdo:Instance ;
   rdfs:label "part type"@en ;
   rdfs:range bdo:PartType ;
-.
-bdo:workRefChokLing
-  a owl:DatatypeProperty ;
-  adm:userTooltip "Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642"@en ;
-  rdfs:label "chokling tersar reference"@en ;
-  rdfs:seeAlso "http://rywiki.tsadra.org/index.php/Catalogue_of_the_New_Treasures_of_Chokgyur_Lingpa_Part_1"^^xsd:anyURI ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workRefIsIAO
-  a owl:DatatypeProperty ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Catalog of the Tucci Tibetan fund in the library of ISMEO"@en ;
-  rdfs:label "IsIAO reference"@en ;
-  rdfs:seeAlso bdr:W19841 ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workRefrKTsG
-  a owl:DatatypeProperty ;
-  adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
-  rdfs:label "rKTs rnying rgyud reference"@en ;
-  rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workRefrKTsK
-  a owl:DatatypeProperty ;
-  adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
-  rdfs:label "rKTs Kangyur reference"@en ;
-  rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workRefrKTsT
-  a owl:DatatypeProperty ;
-  adm:userTooltip "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
-  rdfs:label "rKTs Tengyur reference"@en ;
-  rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
-  rdfs:subPropertyOf bdo:workRefs ;
-.
-bdo:workRefs
-  a owl:DatatypeProperty ;
-  adm:userTooltip "This property groups together all of the various reference number properties derived from various catalogues and such. This property can be used by an editor to easily locate all of the possible reference number properties that might need to be used during cataloging."@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "reference number"@en ;
-  rdfs:range xsd:string ;
-.
-bdo:workSeeHarvard
-  a owl:DatatypeProperty ;
-  adm:technicalComment "what is this used for versus the Hollis ID?"@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "Gives an identifier in the Harvard library catalog."@en ;
-  rdfs:domain bdo:Instance ;
-  rdfs:label "see Harvard"@en ;
-  rdfs:range xsd:string ;
 .
 bdo:workSeriesContent
   a owl:DatatypeProperty ;
