@@ -181,6 +181,7 @@ bdr:TraditionMulasarvastivada
   rdfs:subClassOf bdo:Tradition ;
   skos:prefLabel "Mūlasarvāstivāda"@en ;
   skos:prefLabel "Mūlasarvāstivāda"@sa-x-iast ;
+  skos:prefLabel "Mūlasarvāstivāda"@en ;
   skos:prefLabel "根本說一切有部"@zh-hant ;
 .
 bdr:TraditionNedoKagyu
@@ -227,6 +228,7 @@ bdr:TraditionSarvastivada
   rdfs:subClassOf bdo:Tradition ;
   skos:prefLabel "Sarvāstivāda"@en ;
   skos:prefLabel "Sarvāstivāda"@sa-x-iast ;
+  skos:prefLabel "Sarvāstivāda"@en ;
   skos:prefLabel "說一切有部"@zh-hant ;
 .
 bdr:TraditionShangpaKagyu
@@ -248,8 +250,8 @@ bdr:TraditionTheravada
   a owl:Class ;
   rdfs:subClassOf bdo:Tradition ;
   skos:altLabel "School of the Elders"@en ;
-  skos:prefLabel "Theravāda"@en ;
   skos:prefLabel "Theravāda"@pi-x-iast ;
+  skos:prefLabel "Theravāda"@en ;
 .
 bdr:TraditionTodrukKagyu
   a bdr:TraditionDrukpaKagyu ;
