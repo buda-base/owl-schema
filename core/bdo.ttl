@@ -2809,7 +2809,7 @@ bdo:instanceHasVolume
   rdfs:range bdo:Volume ;
   owl:inverseOf bdo:volumeOf ;
 .
-bdo:instanceLocationStatement
+bdo:contentLocationStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "A statement of the location of this Instance in a containing Instance or of the pagination present in the text versus the formal location in terms of page images."@en ;
   rdfs:domain bdo:Instance ;
@@ -3223,7 +3223,7 @@ In the XML db the notes are restricted to a limited set of items such as top-lev
   rdfs:label "note"@en ;
   rdfs:range bdo:Note ;
 .
-bdo:locationStatementCBETA
+bdo:contentLocationStatementCBETA
   a owl:AnnotationProperty ;
   adm:catalogingConvention """Use this to indicate a location in the Chinese Buddhist Canon using the usual reference system. For instance:
 
@@ -3236,7 +3236,7 @@ Taisho, Volume 52, Text 2103, page 264, register c, line 18
 (line counting start at 1 and goes from right to left)"""@en ;
   adm:userTooltip "Indicates a location in the Chinese Buddhist Canon."@en ;
   rdfs:label "location statement (in the Chinese Buddhist Canon)"@en ;
-  rdfs:subPropertyOf bdo:locationStatement ;
+  rdfs:subPropertyOf bdo:contentLocationStatement ;
 .
 bdo:noteText
   a owl:AnnotationProperty ;
