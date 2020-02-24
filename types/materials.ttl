@@ -18,6 +18,7 @@ bdo:AppliedMaterial
   adm:userTooltip "The material such as ink and so on that is used to impose writing on the base material"@en ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30084> ;
   rdfs:subClassOf bdo:Material ;
+  rdfs:subClassOf bf:AppliedMaterial ;
   adm:translationPriority 2 ;
 .
 bdo:BaseMaterial
@@ -26,6 +27,7 @@ bdo:BaseMaterial
   rdfs:label "base material" ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30208> ;
   rdfs:subClassOf bdo:Material ;
+  rdfs:subClassOf bf:BaseMaterial ;
   adm:translationPriority 2 ;
 .
 bdo:Material
@@ -34,6 +36,7 @@ bdo:Material
   rdfs:label "material"@en ;
   rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30304> ;
   rdfs:seeAlso <http://rdaregistry.info/termList/RDAMaterial> ;
+  rdfs:subClassOf bf:Material ;
 .
 Material:
   a owl:Ontology ;
