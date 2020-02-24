@@ -4,6 +4,7 @@
     "@vocab" : "http://purl.bdrc.io/ontology/core/",
     "adm" : "http://purl.bdrc.io/ontology/admin/",
     "bdd" : "http://purl.bdrc.io/data/",
+    "bf" : "http://id.loc.gov/ontologies/bibframe/",
     "bdo" : "http://purl.bdrc.io/ontology/core/",
     "bdr" : "http://purl.bdrc.io/resource/",
     "bdan" : "http://purl.bdrc.io/annotation/",
@@ -31,52 +32,7 @@
     "corporationRegion" : {
       "@type" : "@id"
     },
-    "creatorArtist" : {
-      "@type" : "@id"
-    },
-    "creatorAttributedAuthor" : {
-      "@type" : "@id"
-    },
-    "creatorBard" : {
-      "@type" : "@id"
-    },
-    "creatorCalligrapher" : {
-      "@type" : "@id"
-    },
-    "creatorCommentator" : {
-      "@type" : "@id"
-    },
-    "creatorContributingAuthor" : {
-      "@type" : "@id"
-    },
-    "creatorEditor" : {
-      "@type" : "@id"
-    },
-    "creatorGeneralAuthor" : {
-      "@type" : "@id"
-    },
-    "creatorMainAuthor" : {
-      "@type" : "@id"
-    },
-    "creatorPandita" : {
-      "@type" : "@id"
-    },
-    "creatorRecipientOfResponseToQuery" : {
-      "@type" : "@id"
-    },
-    "creatorRequester" : {
-      "@type" : "@id"
-    },
-    "creatorReviserOfTranslation" : {
-      "@type" : "@id"
-    },
-    "creatorScribe" : {
-      "@type" : "@id"
-    },
-    "creatorTerton" : {
-      "@type" : "@id"
-    },
-    "creatorTranslator" : {
+    "creator" : {
       "@type" : "@id"
     },
     "eTextHasChunk" : {
@@ -277,28 +233,16 @@
     "isIncarnation" : {
       "@type" : "@id"
     },
-    "itemEtextForWork" : {
+    "instanceOf" : {
       "@type" : "@id"
     },
-    "itemEtextNonPaginatedForWork" : {
-      "@type" : "@id"
-    },
-    "itemEtextPaginatedForWork" : {
-      "@type" : "@id"
-    },
-    "itemForWork" : {
+    "itemForInstance" : {
       "@type" : "@id"
     },
     "itemHasVolume" : {
       "@type" : "@id"
     },
-    "itemImageAssetForWork" : {
-      "@type" : "@id"
-    },
     "itemLibrary" : {
-      "@type" : "@id"
-    },
-    "itemPhysicalAssetForWork" : {
       "@type" : "@id"
     },
     "kinWith" : {
@@ -340,7 +284,7 @@
     "note" : {
       "@type" : "@id"
     },
-    "noteWork" : {
+    "noteSource" : {
       "@type" : "@id"
     },
     "pageHasLine" : {
@@ -427,16 +371,13 @@
     "volumeOf" : {
       "@type" : "@id"
     },
-    "workCreator" : {
-      "@type" : "@id"
-    },
     "workDerivativeOf" : {
       "@type" : "@id"
     },
     "workEvent" : {
       "@type" : "@id"
     },
-    "workExpressionOf" : {
+    "instanceEvent" : {
       "@type" : "@id"
     },
     "workGenre" : {
@@ -445,40 +386,40 @@
     "workHasDerivative" : {
       "@type" : "@id"
     },
-    "workHasExpression" : {
+    "workHasTranslation" : {
       "@type" : "@id"
     },
-    "workHasItem" : {
+    "workHasInstance" : {
       "@type" : "@id"
     },
-    "workHasItemEtext" : {
+    "instanceHasItem" : {
       "@type" : "@id"
     },
-    "workHasItemEtextNonPaginated" : {
+    "itemHasVolume" : {
       "@type" : "@id"
     },
-    "workHasItemEtextPaginated" : {
+    "serialHasMember" : {
       "@type" : "@id"
     },
-    "workHasItemImageAsset" : {
+    "serialInstanceOf" : {
       "@type" : "@id"
     },
-    "workHasItemPhysicalAsset" : {
+    "serialMemberOf" : {
       "@type" : "@id"
     },
-    "workHasNumber" : {
+    "serialHasInstance" : {
       "@type" : "@id"
     },
-    "workHasPart" : {
+    "hasPart" : {
       "@type" : "@id"
     },
-    "workHasReproduction" : {
+    "instanceHasReproduction" : {
       "@type" : "@id"
     },
     "workHasSite" : {
       "@type" : "@id"
     },
-    "workHasSourcePrintery" : {
+    "hasSourcePrintery" : {
       "@type" : "@id"
     },
     "workHasTranslation" : {
@@ -490,49 +431,31 @@
     "workIsSimilarTo" : {
       "@type" : "@id"
     },
-    "workIsbn" : {
-      "@type" : "bdo:ISBN"
-    },
-    "workLangScript" : {
+    "bf:identifiedBy" : {
       "@type" : "@id"
     },
-    "workLcCallNumber" : {
-      "@type" : "bdo:LCCallNumber"
-    },
-    "workLccn" : {
-      "@type" : "bdo:LCCN"
-    },
-    "workLocation" : {
+    "contentLocation" : {
       "@type" : "@id"
     },
-    "workLocationWork" : {
+    "contentLocationInstance" : {
       "@type" : "@id"
     },
-    "workMaterial" : {
-      "@type" : "@id"
-    },
-    "workNumberOf" : {
-      "@type" : "@id"
-    },
-    "workObjectType" : {
-      "@type" : "@id"
-    },
-    "workOtherLangScript" : {
+    "material" : {
       "@type" : "@id"
     },
     "workPagination" : {
       "@type" : "@id"
     },
-    "workPartOf" : {
+    "partOf" : {
       "@type" : "@id"
     },
-    "workPartType" : {
+    "partType" : {
       "@type" : "@id"
     },
     "workReproductionOf" : {
       "@type" : "@id"
     },
-    "workTitle" : {
+    "hasTitle" : {
       "@type" : "@id"
     },
     "workTranslationOf" : {
