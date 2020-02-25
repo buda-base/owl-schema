@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Script/
+# baseURI: http://purl.bdrc.io/resource/ScriptScheme/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Script
+# prefix: ScriptScheme
 
-@prefix Script: <http://purl.bdrc.io/ontology/types/Script/> .
+@prefix ScriptScheme: <http://purl.bdrc.io/resource/ScriptScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -18,133 +18,176 @@ bdo:Script
   rdfs:label "Script"@en ;
   rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
 .
-Script:
-  a owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
 bdr:ScriptBeng
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Beng> ;
   skos:prefLabel "Bengali"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptCyrl
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://lexvo.org/id/script/Cyrl> ;
   skos:prefLabel "Cyrillic"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptDbuCan
   a bdo:Script ;
+  a skos:Concept ;
   skos:prefLabel "Uchen"@en ;
   skos:prefLabel "dbu can/"@bo-x-ewts ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptDbuMed
   a bdo:Script ;
+  a skos:Concept ;
   skos:prefLabel "Ume"@en ;
   skos:prefLabel "dbu med/"@bo-x-ewts ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptDeva
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://lexvo.org/id/script/Deva> ;
   skos:prefLabel "Devanagari"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptEasternNagari
   a bdo:Script ;
-  skos:prefLabel "Eastern Nāgārī"@en ;
+  a skos:Concept ;
   adm:translationPriority 2 ;
+  skos:prefLabel "Eastern Nāgārī"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptGilgitBamiyan1
   a bdo:Script ;
-  skos:prefLabel "Gilgit Bamiyan Type I"@en ;
+  a skos:Concept ;
   adm:translationPriority 2 ;
+  skos:prefLabel "Gilgit Bamiyan Type I"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptGilgitBamiyan2
   a bdo:Script ;
-  skos:prefLabel "Gilgit Bamiyan Type II"@en ;
+  a skos:Concept ;
   adm:translationPriority 2 ;
+  skos:prefLabel "Gilgit Bamiyan Type II"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptGupta
   a bdo:Script ;
-  skos:prefLabel "Gupta"@en ;
+  a skos:Concept ;
   adm:translationPriority 2 ;
+  skos:prefLabel "Gupta"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptHani
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Hani> ;
   skos:prefLabel "Chinese"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptHans
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Hans> ;
   skos:prefLabel "Simplified Chinese"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptHant
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Hant> ;
   skos:prefLabel "Traditional Chinese"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptKhar
   a bdo:Script ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
   rdfs:seeAlso <http://lexvo.org/id/script/Khar> ;
   skos:prefLabel "Kharoshthi"@en ;
   skos:prefLabel "Kharoṣṭhī"@sa-x-iast ;
-  adm:translationPriority 2 ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptKhmr
   a bdo:Script ;
+  a skos:Concept ;
   skos:prefLabel "Khmer"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptKhyugYig
   a bdo:Script ;
+  a skos:Concept ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
   skos:prefLabel "Kyug yig"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptLatn
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
   skos:prefLabel "Latin"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptMong
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://lexvo.org/id/script/Mong> ;
   skos:prefLabel "Classical Mongolian"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptMymr
   a bdo:Script ;
+  a skos:Concept ;
   skos:prefLabel "Burmese"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptNagari
   a bdo:Script ;
+  a skos:Concept ;
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;
+  adm:translationPriority 2 ;
   rdfs:comment "Differs from Eastern Nāgarī"@en ;
   skos:prefLabel "Nāgarī"@en ;
   skos:prefLabel "Nāgarī"@sa-x-iast ;
-  adm:translationPriority 2 ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptNepaleseHooked
   a bdo:Script ;
+  a skos:Concept ;
   skos:altLabel "Bhujimol"@en ;
   skos:prefLabel "Nepalese hooked script"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptNewa
   a bdo:Script ;
+  a skos:Concept ;
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q7237292> ;
   rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
-  skos:prefLabel "Pracalit"@en ;
   skos:altLabel "pracalita"@sa-x-iast ;
+  skos:prefLabel "Pracalit"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptOldOui
   a bdo:Script ;
+  a skos:Concept ;
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q428299> ;
   rdfs:comment "Not in ISO 15924"@en ;
   skos:prefLabel "Old Uighur script"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptPostGupta
   a bdo:Script ;
-  skos:prefLabel "Post-gupta"@en ;
+  a skos:Concept ;
   adm:translationPriority 2 ;
+  skos:prefLabel "Post-gupta"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptRanj
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:comment "This script is not normalized in ISO 15924"@en ;
   rdfs:comment "Use it for Landza and Vartu"@en ;
   rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
@@ -156,44 +199,68 @@ bdr:ScriptRanj
   skos:prefLabel "Ranjana"@en ;
   skos:prefLabel "Rañjanā"@sa-x-iast ;
   skos:prefLabel "lany+dza"@bo-x-ewts ;
+  skos:topConceptOf bdr:ScriptScheme ;
+.
+bdr:ScriptScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Script Scheme"@en ;
+.
+ScriptScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:ScriptSinh
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://www.lexvo.org/page/script/Sinh> ;
   skos:prefLabel "Sinhalese"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptSouthernIndia
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:comment "use for undetermined Southern Indian script"@en ;
   skos:prefLabel "Southern Indian"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptTang
-   a bdo:Script ;
-   rdfs:seeAlso <http://lexvo.org/id/script/Tang> ;
-   skos:prefLabel "Tangut script"@en ;
- .
+  a bdo:Script ;
+  a skos:Concept ;
+  rdfs:seeAlso <http://lexvo.org/id/script/Tang> ;
+  skos:prefLabel "Tangut script"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
+.
 bdr:ScriptThai
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;
   skos:prefLabel "Thai script"@en ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptTibt
   a bdo:Script ;
+  a skos:Concept ;
   rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
   skos:prefLabel "Tibetan Script"@en ;
   skos:prefLabel "bod yig"@bo-x-ewts ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptTirh
   a bdo:Script ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
   rdfs:seeAlso <http://lexvo.org/id/script/Tirh> ;
   skos:altLabel "Maithili"@en ;
   skos:altLabel "Mithilakshar"@en ;
   skos:prefLabel "Tirhuta"@en ;
-  adm:translationPriority 2 ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .
 bdr:ScriptTransitionalGupta
   a bdo:Script ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
   rdfs:comment "Broader category than Post-gupta"@en ;
   skos:prefLabel "Transitional Gupta"@en ;
-  adm:translationPriority 2 ;
+  skos:topConceptOf bdr:ScriptScheme ;
 .

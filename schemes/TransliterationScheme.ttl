@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Transliteration/
+# baseURI: http://purl.bdrc.io/resource/TransliterationScheme/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Transliteration
+# prefix: TransliterationScheme
 
-@prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration/> .
+@prefix TransliterationScheme: <http://purl.bdrc.io/resource/TransliterationScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -18,33 +18,48 @@ bdo:Transliteration
   adm:userTooltip "A transliteration used to represent a language in a non-native script."@en ;
   rdfs:label "Transliteration"@en ;
 .
-Transliteration:
-  a owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
 bdr:TransAlalc
   a bdo:Transliteration ;
+  a skos:Concept ;
   rdfs:seeAlso <https://www.loc.gov/catdir/cpso/roman.html> ;
   skos:prefLabel "ALA-LC"@en ;
+  skos:topConceptOf bdr:TransliterationScheme ;
 .
 bdr:TransEWTS
   a bdo:Transliteration ;
+  a skos:Concept ;
   rdfs:seeAlso <http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/> ;
   skos:prefLabel "Extended Wylie"@en ;
   skos:prefLabel "wa'i li/"@bo-x-ewts ;
+  skos:topConceptOf bdr:TransliterationScheme ;
 .
 bdr:TransIAST
   a bdo:Transliteration ;
+  a skos:Concept ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q194486> ;
   rdfs:comment "International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc."@en ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration> ;
-  adm:sameAsWikidata <http://www.wikidata.org/entity/Q194486> ;
   skos:prefLabel "IAST"@en ;
+  skos:topConceptOf bdr:TransliterationScheme ;
 .
 bdr:TransPinyin
   a bdo:Transliteration ;
+  a skos:Concept ;
   skos:prefLabel "Pinyin"@en ;
+  skos:topConceptOf bdr:TransliterationScheme ;
 .
 bdr:TransSaTibt
   a bdo:Transliteration ;
+  a skos:Concept ;
   skos:prefLabel "Sanskrit transliterated in Tibetan"@en ;
+  skos:topConceptOf bdr:TransliterationScheme ;
+.
+bdr:TransliterationScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Transliteration Scheme"@en ;
+.
+TransliterationScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .

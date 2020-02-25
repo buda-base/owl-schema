@@ -1,8 +1,9 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Language/
+# baseURI: http://purl.bdrc.io/resource/LanguageScheme/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Language
+# prefix: LanguageScheme
 
-@prefix Language: <http://purl.bdrc.io/ontology/types/Language/> .
+@prefix LanguageScheme: <http://purl.bdrc.io/resource/LanguageScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,7 +11,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 
 bdo:Language
   a owl:Class ;
@@ -36,229 +36,234 @@ bdo:langMARCCode
   rdfs:seeAlso <http://lexvo.org/ontology#marcCode> ;
   rdfs:seeAlso <https://www.loc.gov/marc/languages/> ;
 .
-Language:
-  a owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
 bdr:LangAmdoTib
-  a bdr:LangBo ;
-  a owl:Class ;
+  a bdo:Language ;
+  a skos:Concept ;
   bdo:langBCP47Lang "adx" ;
   bdo:langMARCCode "tib" ;
-  rdfs:subClassOf bdr:LangBo ;
+  skos:broader bdr:LangBo ;
   skos:prefLabel "Amdo Tibetan"@en ;
 .
 bdr:LangBo
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "bo" ;
   bdo:langMARCCode "tib" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/bod> ;
   rdfs:seeAlso <https://github.com/buda-base/owl-schema/issues/98> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Tibetan"@en ;
   skos:prefLabel "bod yig"@bo-x-ewts ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangDz
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "dz" ;
   bdo:langMARCCode "dzo" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/dzo> ;
-  rdfs:subClassOf bdo:Language ;
   skos:altLabel "Bhutanese"@en ;
   skos:prefLabel "Dzongkha"@en ;
   skos:prefLabel "rdzong kha/"@bo-x-ewts ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangEn
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "en" ;
   bdo:langMARCCode "eng" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/eng> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "English"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangEs
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "es" ;
   bdo:langMARCCode "spa" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/spa> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Spanish"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangFr
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "fr" ;
   bdo:langMARCCode "fre" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/fra> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "French"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangHi
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "hi" ;
   bdo:langMARCCode "hin" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/hin> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Hindi"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangInc
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "inc" ;
   rdfs:comment "use for undetermined Indic language" ;
   rdfs:seeAlso <http://www.lexvo.org/page/iso639-5/inc> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Indic"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangIt
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "it" ;
   bdo:langMARCCode "ita" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/ita> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Italian"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangKm
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "km" ;
   bdo:langMARCCode "khm" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/khm> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Khmer"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangMn
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "mn" ;
   bdo:langMARCCode "mon" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/mon> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Mongolian"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangNe
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "ne" ;
   bdo:langMARCCode "nep" ;
+  rdfs:comment "This is the macro-language for all dialects of Nepali." ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/nep> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Nepali"@en ;
-  rdfs:comment "This is the macro-language for all dialects of Nepali."
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangNew
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "new" ;
   bdo:langMARCCode "new" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/new> ;
-  rdfs:subClassOf bdo:Language ;
   skos:altLabel "Nepal Bhasa"@en ;
   skos:prefLabel "Newari"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangNl
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "nl" ;
   bdo:langMARCCode "dut" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/nld> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Dutch"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangNo
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "no" ;
   bdo:langMARCCode "nor" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/nor> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Norwegian"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangOui
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "oui" ;
-  rdfs:subClassOf bdo:Language ;
-  skos:prefLabel "Old Uighur"@en ;
   bdo:langMARCCode "uig" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/oui> ;
+  skos:prefLabel "Old Uighur"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangPgd
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "pgd" ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Gandhari"@en ;
   skos:prefLabel "Gāndhārī"@sa-x-iast ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangPi
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "pi" ;
   bdo:langMARCCode "pli" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/pli> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Pali"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangPra
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "pra" ;
   bdo:langMARCCode "pra" ;
   rdfs:comment "use when the language is an unidentified Prakrit language"@en ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-5/pra> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Prakrit"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangRu
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "ru" ;
   bdo:langMARCCode "rus" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/rus> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Russian"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangSa
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "sa" ;
   bdo:langMARCCode "san" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/san> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Sanskrit"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangTxg
-   a bdo:Language ;
-   a owl:Class ;
-   bdo:langBCP47Lang "txg" ;
-   bdo:langMARCCode "sit" ;
-   rdfs:seeAlso <http://lexvo.org/id/iso639-3/txg> ;
-   rdfs:subClassOf bdo:Language ;
-   skos:prefLabel "Tangut"@en ;
- .
+  a bdo:Language ;
+  a skos:Concept ;
+  bdo:langBCP47Lang "txg" ;
+  bdo:langMARCCode "sit" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/txg> ;
+  skos:prefLabel "Tangut"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
+.
 bdr:LangUr
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "ur" ;
   bdo:langMARCCode "urd" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/urd> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Urdu"@en ;
   skos:prefLabel "wu'u tu'u skad"@bo-x-ewts ;
+  skos:topConceptOf bdr:LanguageScheme ;
 .
 bdr:LangZh
   a bdo:Language ;
-  a owl:Class ;
+  a skos:Concept ;
   bdo:langBCP47Lang "zh" ;
   bdo:langMARCCode "chi" ;
   rdfs:seeAlso <http://lexvo.org/id/iso639-3/zho> ;
-  rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Chinese"@en ;
+  skos:topConceptOf bdr:LanguageScheme ;
+.
+bdr:LanguageScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Language Scheme"@en ;
+.
+LanguageScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
