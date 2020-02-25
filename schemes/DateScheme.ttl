@@ -1,0 +1,135 @@
+# baseURI: http://purl.bdrc.io/resource/DateScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: DateScheme
+
+@prefix DateScheme: <http://purl.bdrc.io/resource/DateScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:DateIndication
+  a owl:Class ;
+  adm:translationPriority 2 ;
+  rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
+  rdfs:label "Time Period"@en ;
+  rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
+.
+bdr:ChineseDateIndication
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:definition "A Chinese date usually includes dynasty, reign, era, year, month, day"@en ;
+  skos:prefLabel "Chinese Date"@en ;
+  skos:topConceptOf bdr:DateScheme ;
+.
+bdr:ChineseEra
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:Era ;
+  skos:definition "A (traditional) Chinese Era is reckoned in terms of the reign of an Emperor"@en ;
+  skos:prefLabel "Chinese Era"@en ;
+.
+bdr:DateIndicationTibetan
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:definition "Tibetan dates are designated in terms of the rabjung, year, month and day."@en ;
+  skos:editorialNote "Tibetan dates are usually in terms of a 60-year period (rabjung) designated by number or a combination of an animal and an element, a year within the rabjung, and month and day within the year based on a LuniSolar calendar"@en ;
+  skos:prefLabel "Tibetan Date Indication"@en ;
+  skos:topConceptOf bdr:DateScheme ;
+.
+bdr:DateScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Date Scheme"@en ;
+.
+DateScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:Era
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:definition "An Era is a span of years usually reckoned as starting and ending in reference to a Reference Era"@en ;
+  skos:prefLabel "Era"@en ;
+  skos:topConceptOf bdr:DateScheme ;
+.
+bdr:EraAS
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s A.S."@en ;
+  bdo:yearOffset -690 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  skos:broader bdr:Era ;
+  skos:definition "Anchatsakarat, used in Southeast Asia, starting in 691 B.C.E."@en ;
+  skos:prefLabel "Anchatsakarat (A.S.)"@en ;
+.
+bdr:EraBE
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s B.E."@en ;
+  bdo:yearOffset -543 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  skos:broader bdr:Era ;
+  skos:definition "Buddhist Era (Buddhasakarat), usually starting in 545 B.C.E."@en ;
+  skos:prefLabel "Buddhist Era (B.E.)"@en ;
+.
+bdr:EraCE
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s C.E."@en ;
+  bdo:yearOffset 0 ;
+  skos:broader bdr:Era ;
+  skos:prefLabel "Common Era (C.E.)"@en ;
+.
+bdr:EraCS
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s C.S."@en ;
+  bdo:yearOffset 638 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/7351824935> ;
+  rdfs:seeAlso "http://www.laomanuscripts.net/en/help#3i"^^xsd:anyURI ;
+  skos:broader bdr:Era ;
+  skos:definition "Cunlasakkalat or Cunlasakkarat (‘Little Era’), used in Southeast Asia, beginning in 638 C.E."@en ;
+  skos:prefLabel "Cunlasakkalat Era (C.S.)"@en ;
+.
+bdr:EraMS
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s M.S."@en ;
+  bdo:yearOffset 78 ;
+  rdfs:seeAlso <http://www.worldcat.org/oclc/33047740> ;
+  skos:broader bdr:Era ;
+  skos:definition "Mahasakarat, used in Southeast Asia, starting in 78 C.E."@en ;
+  skos:prefLabel "Mahasakarat (M.S.)"@en ;
+.
+bdr:EraNS
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s N.S."@en ;
+  bdo:yearOffset 879 ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q1268741> ;
+  skos:broader bdr:Era ;
+  skos:definition "Nepal Sambat Era, used in Nepal, starting in 879 C.E."@en ;
+  skos:prefLabel "Nepal Sambat (N.S.)"@en ;
+  skos:prefLabel "Nepal Sambat"@nep-x-iast ;
+.
+bdr:EraVS
+  a bdo:DateIndication ;
+  a skos:Concept ;
+  bdo:uiAbbrFormat "%s V.S."@en ;
+  bdo:yearOffset -57 ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q1370848> ;
+  skos:broader bdr:Era ;
+  skos:definition "Vikram Samvat Era, used in Nepal and India, starting in 56 B.C.E."@en ;
+  skos:prefLabel "Vikram Samvat (V.S. or B.S.)"@en ;
+  skos:prefLabel "Vikram Samvat"@hi-x-iast ;
+.
