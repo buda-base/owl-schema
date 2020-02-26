@@ -2,7 +2,6 @@
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Material/
-# imports: http://purl.bdrc.io/ontology/types/PlaceType/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
@@ -15,6 +14,7 @@
 # imports: http://purl.bdrc.io/resource/LineageScheme/
 # imports: http://purl.bdrc.io/resource/PaginationScheme/
 # imports: http://purl.bdrc.io/resource/PartScheme/
+# imports: http://purl.bdrc.io/resource/PlaceScheme/
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # imports: http://purl.bdrc.io/resource/ScriptScheme/
 # imports: http://purl.bdrc.io/resource/TransliterationScheme/
@@ -70,7 +70,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Material/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/PlaceType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
@@ -83,6 +82,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/LineageScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PaginationScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PartScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/PlaceScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/TransliterationScheme/> ;

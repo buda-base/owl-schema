@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/PlaceType/
+# baseURI: http://purl.bdrc.io/resource/PlaceScheme/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: PlaceType
+# prefix: PlaceScheme
 
-@prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType/> .
+@prefix PlaceScheme: <http://purl.bdrc.io/resource/PlaceScheme/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -14,15 +14,36 @@
 
 bdo:PlaceType
   a owl:Class ;
-  adm:userTooltip "Place types are used to indicate a conventional characterization of a Place, e.g., monastery, cave, river, and so on"@en ;
+  skos:definition "Place types are used to indicate a conventional characterization of a Place, e.g., monastery, cave, river, and so on"@en ;
   rdfs:label "Place Type"@en ;
 .
-PlaceType:
+PlaceScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:PlaceScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Place Scheme"@en ;
+.
+bdr:ConstructedPlace
+  a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:definition "Constructed places include monasteries, towns, palaces and the like"@en ;
+  skos:prefLabel "Constructed Place"@en ;
+  skos:topConceptOf bdr:PlaceScheme ;
+.
+bdr:NaturalPlace
+  a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:definition "Natural places include rivers, mountains, caves and the like"@en ;
+  skos:prefLabel "Natural Place"@en ;
+  skos:topConceptOf bdr:PlaceScheme ;
 .
 bdr:PT0001
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "yulSde" ;
   skos:prefLabel "administrative district"@en ;
   skos:prefLabel "yul sde/"@bo-x-ewts ;
@@ -30,6 +51,8 @@ bdr:PT0001
 .
 bdr:PT0002
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rangSkyongKhul" ;
   skos:prefLabel "autonomous prefecture"@en ;
   skos:prefLabel "rang skyong khul/"@bo-x-ewts ;
@@ -37,6 +60,8 @@ bdr:PT0002
 .
 bdr:PT0003
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rangSkyongLjongs" ;
   skos:prefLabel "autonomous region"@en ;
   skos:prefLabel "rang skyong ljongs/"@bo-x-ewts ;
@@ -44,6 +69,8 @@ bdr:PT0003
 .
 bdr:PT0004
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "zamPa" ;
   skos:prefLabel "bridge"@en ;
   skos:prefLabel "zam pa/"@bo-x-ewts ;
@@ -51,6 +78,8 @@ bdr:PT0004
 .
 bdr:PT0005
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "rong" ;
   skos:prefLabel "canyon"@en ;
   skos:prefLabel "rong /"@bo-x-ewts ;
@@ -58,6 +87,8 @@ bdr:PT0005
 .
 bdr:PT0006
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "durKhrod" ;
   skos:prefLabel "charnel ground"@en ;
   skos:prefLabel "dur khrod/"@bo-x-ewts ;
@@ -65,6 +96,8 @@ bdr:PT0006
 .
 bdr:PT0007
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "skor" ;
   skos:prefLabel "circuit"@en ;
   skos:prefLabel "skor/"@bo-x-ewts ;
@@ -72,6 +105,8 @@ bdr:PT0007
 .
 bdr:PT0008
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "grongKhyer" ;
   skos:prefLabel "city"@en ;
   skos:prefLabel "grong khyer/"@bo-x-ewts ;
@@ -79,12 +114,16 @@ bdr:PT0008
 .
 bdr:PT0009
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   rdfs:comment "Modern or contemporary places defined in terms of current political control such as Chinese counties, provinces and so on"@en ;
   skos:prefLabel "Contemporary Places"@en ;
   skos:prefLabel "deng rabs sa gnas/"@bo-x-ewts ;
 .
 bdr:PT0010
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rgyalKhab" ;
   skos:prefLabel "country"@en ;
   skos:prefLabel "rgyal khab/"@bo-x-ewts ;
@@ -92,6 +131,8 @@ bdr:PT0010
 .
 bdr:PT0011
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rdzong" ;
   skos:prefLabel "county (modern)"@en ;
   skos:prefLabel "rdzong/"@bo-x-ewts ;
@@ -99,6 +140,8 @@ bdr:PT0011
 .
 bdr:PT0012
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "chus" ;
   skos:prefLabel "chus/"@bo-x-ewts ;
   skos:prefLabel "county area"@en ;
@@ -106,6 +149,8 @@ bdr:PT0012
 .
 bdr:PT0013
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "cholKha" ;
   skos:prefLabel "chol kha/"@bo-x-ewts ;
   skos:prefLabel "cultural domain"@en ;
@@ -113,6 +158,8 @@ bdr:PT0013
 .
 bdr:PT0014
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "saKhul" ;
   skos:prefLabel "district"@en ;
   skos:prefLabel "sa khul/"@bo-x-ewts ;
@@ -120,6 +167,8 @@ bdr:PT0014
 .
 bdr:PT0015
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gzhisKa" ;
   skos:prefLabel "estate"@en ;
   skos:prefLabel "gzhis ka/"@bo-x-ewts ;
@@ -127,6 +176,8 @@ bdr:PT0015
 .
 bdr:PT0016
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gruKha" ;
   skos:prefLabel "ferry route"@en ;
   skos:prefLabel "gru kha/"@bo-x-ewts ;
@@ -134,6 +185,8 @@ bdr:PT0016
 .
 bdr:PT0017
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "nagsTshal" ;
   skos:prefLabel "forest"@en ;
   skos:prefLabel "nags tshal/"@bo-x-ewts ;
@@ -141,6 +194,8 @@ bdr:PT0017
 .
 bdr:PT0018
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "mkharRnying" ;
   skos:prefLabel "fortress"@en ;
   skos:prefLabel "mkhar rnying /"@bo-x-ewts ;
@@ -148,6 +203,8 @@ bdr:PT0018
 .
 bdr:PT0019
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "beHu" ;
   skos:prefLabel "be hu/"@bo-x-ewts ;
   skos:prefLabel "hundred household district"@en ;
@@ -155,6 +212,8 @@ bdr:PT0019
 .
 bdr:PT0020
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "sdeTsho" ;
   skos:prefLabel "hamlet"@en ;
   skos:prefLabel "sde tsho/"@bo-x-ewts ;
@@ -162,6 +221,8 @@ bdr:PT0020
 .
 bdr:PT0021
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "riKhrod" ;
   skos:prefLabel "hermitage"@en ;
   skos:prefLabel "ri khrod/"@bo-x-ewts ;
@@ -169,6 +230,8 @@ bdr:PT0021
 .
 bdr:PT0022
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "sbasYul" ;
   skos:prefLabel "hidden land"@en ;
   skos:prefLabel "sbas yul/"@bo-x-ewts ;
@@ -176,6 +239,8 @@ bdr:PT0022
 .
 bdr:PT0023
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "smanKhang" ;
   skos:prefLabel "hospital"@en ;
   skos:prefLabel "sman khang /"@bo-x-ewts ;
@@ -183,6 +248,8 @@ bdr:PT0023
 .
 bdr:PT0024
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gzimsKhang" ;
   skos:prefLabel "gzims khang /"@bo-x-ewts ;
   skos:prefLabel "house"@en ;
@@ -190,6 +257,8 @@ bdr:PT0024
 .
 bdr:PT0025
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "khyimTshang" ;
   skos:prefLabel "household"@en ;
   skos:prefLabel "khyim tshang /"@bo-x-ewts ;
@@ -197,6 +266,8 @@ bdr:PT0025
 .
 bdr:PT0026
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gling" ;
   skos:prefLabel "gling /"@bo-x-ewts ;
   skos:prefLabel "isolated region"@en ;
@@ -204,6 +275,8 @@ bdr:PT0026
 .
 bdr:PT0027
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rgyalPhran" ;
   skos:prefLabel "kingdom"@en ;
   skos:prefLabel "rgyal phran/"@bo-x-ewts ;
@@ -211,6 +284,8 @@ bdr:PT0027
 .
 bdr:PT0028
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "mtsho" ;
   skos:prefLabel "lake"@en ;
   skos:prefLabel "mtsho/"@bo-x-ewts ;
@@ -218,6 +293,8 @@ bdr:PT0028
 .
 bdr:PT0029
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "yulChen" ;
   skos:prefLabel "large area"@en ;
   skos:prefLabel "yul chen/"@bo-x-ewts ;
@@ -225,6 +302,8 @@ bdr:PT0029
 .
 bdr:PT0030
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "dpeMdzodKhang" ;
   skos:prefLabel "dpe mdzod khang /"@bo-x-ewts ;
   skos:prefLabel "library"@en ;
@@ -232,6 +311,8 @@ bdr:PT0030
 .
 bdr:PT0031
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "mda'" ;
   skos:prefLabel "lower valley"@en ;
   skos:prefLabel "mda'/"@bo-x-ewts ;
@@ -239,6 +320,8 @@ bdr:PT0031
 .
 bdr:PT0032
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "khriSde" ;
   skos:prefLabel "khri sde/"@bo-x-ewts ;
   skos:prefLabel "million household district"@en ;
@@ -246,6 +329,8 @@ bdr:PT0032
 .
 bdr:PT0033
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "maNiRdoPhung" ;
   skos:prefLabel "Mani stone"@en ;
   skos:prefLabel "ma Ni rdo phung /"@bo-x-ewts ;
@@ -253,6 +338,8 @@ bdr:PT0033
 .
 bdr:PT0034
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gzimsShag" ;
   skos:prefLabel "gzims shag"@bo-x-ewts ;
   skos:prefLabel "manor"@en ;
@@ -260,6 +347,8 @@ bdr:PT0034
 .
 bdr:PT0035
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "tshong'Dus" ;
   skos:prefLabel "market"@en ;
   skos:prefLabel "tshong 'dus/"@bo-x-ewts ;
@@ -267,6 +356,8 @@ bdr:PT0035
 .
 bdr:PT0036
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "sgrubPhug" ;
   skos:prefLabel "meditation cave"@en ;
   skos:prefLabel "sgrub phug"@bo-x-ewts ;
@@ -274,6 +365,8 @@ bdr:PT0036
 .
 bdr:PT0037
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "dgonPa" ;
   skos:prefLabel "dgon pa/"@bo-x-ewts ;
   skos:prefLabel "monastery"@en ;
@@ -281,6 +374,8 @@ bdr:PT0037
 .
 bdr:PT0038
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "bshadGrwa" ;
   skos:prefLabel "bshad grwa/"@bo-x-ewts ;
   skos:prefLabel "monastic college"@en ;
@@ -288,6 +383,8 @@ bdr:PT0038
 .
 bdr:PT0039
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "khamsTshan" ;
   skos:prefLabel "khams tshan/"@bo-x-ewts ;
   skos:prefLabel "monastic dormitory"@en ;
@@ -295,6 +392,8 @@ bdr:PT0039
 .
 bdr:PT0040
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "grwaTshang" ;
   skos:prefLabel "grwa tshang /"@bo-x-ewts ;
   skos:prefLabel "monastic quarters"@en ;
@@ -302,6 +401,8 @@ bdr:PT0040
 .
 bdr:PT0041
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "blaBrang" ;
   skos:prefLabel "bla brang /"@bo-x-ewts ;
   skos:prefLabel "monastic residence"@en ;
@@ -309,6 +410,8 @@ bdr:PT0041
 .
 bdr:PT0042
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "riBo" ;
   skos:prefLabel "mountain"@en ;
   skos:prefLabel "ri bo/"@bo-x-ewts ;
@@ -316,6 +419,8 @@ bdr:PT0042
 .
 bdr:PT0043
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "laKha" ;
   skos:prefLabel "la kha/"@bo-x-ewts ;
   skos:prefLabel "mountain pass"@en ;
@@ -323,6 +428,8 @@ bdr:PT0043
 .
 bdr:PT0044
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "riRgyud" ;
   skos:prefLabel "mountain range"@en ;
   skos:prefLabel "ri rgyud/"@bo-x-ewts ;
@@ -330,6 +437,8 @@ bdr:PT0044
 .
 bdr:PT0045
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "grongRdal" ;
   skos:prefLabel "grong rdal/"@bo-x-ewts ;
   skos:prefLabel "municipality"@en ;
@@ -337,6 +446,8 @@ bdr:PT0045
 .
 bdr:PT0046
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "khriSkor" ;
   skos:prefLabel "khri skor/"@bo-x-ewts ;
   skos:prefLabel "myriarchy"@en ;
@@ -344,13 +455,17 @@ bdr:PT0046
 .
 bdr:PT0047
   a bdo:PlaceType ;
-  rdfs:comment "Natural features such as rivers, caves, mountain passes and so on"@en ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
+  skos:definition "Natural features such as rivers, caves, mountain passes and so on"@en ;
   skos:prefLabel "Natural Features"@en ;
   skos:prefLabel "rang byung 'khor yug"@bo-x-ewts ;
   skos:prefLabel "自然地域"@zh ;
 .
 bdr:PT0048
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "'brogSde" ;
   skos:prefLabel "'brog sde/"@bo-x-ewts ;
   skos:prefLabel "nomad camp"@en ;
@@ -358,7 +473,9 @@ bdr:PT0048
 .
 bdr:PT0049
   a bdo:PlaceType ;
-  rdfs:comment "Places of unspecified type"@en ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
+  skos:definition "Places of unspecified type"@en ;
   skos:notation "notSpecified" ;
   skos:prefLabel "Not Specified"@en ;
   skos:prefLabel "rigs dbye byas med pa/"@bo-x-ewts ;
@@ -366,6 +483,8 @@ bdr:PT0049
 .
 bdr:PT0050
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "btsunDgon" ;
   skos:prefLabel "btsun dgon/"@bo-x-ewts ;
   skos:prefLabel "nunnery"@en ;
@@ -373,6 +492,8 @@ bdr:PT0050
 .
 bdr:PT0051
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "phoBrang" ;
   skos:prefLabel "palace"@en ;
   skos:prefLabel "pho brang /"@bo-x-ewts ;
@@ -380,6 +501,8 @@ bdr:PT0051
 .
 bdr:PT0052
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "glingKha" ;
   skos:prefLabel "gling kha/"@bo-x-ewts ;
   skos:prefLabel "park"@en ;
@@ -387,6 +510,8 @@ bdr:PT0052
 .
 bdr:PT0053
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gnasChen" ;
   skos:prefLabel "gnas chen/"@bo-x-ewts ;
   skos:prefLabel "pilgrimage site"@en ;
@@ -394,6 +519,8 @@ bdr:PT0053
 .
 bdr:PT0054
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rdoRing" ;
   skos:prefLabel "pillar"@en ;
   skos:prefLabel "rdo ring /"@bo-x-ewts ;
@@ -401,6 +528,8 @@ bdr:PT0054
 .
 bdr:PT0055
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "thang" ;
   skos:prefLabel "plain"@en ;
   skos:prefLabel "thang /"@bo-x-ewts ;
@@ -408,6 +537,8 @@ bdr:PT0055
 .
 bdr:PT0056
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "sngarGyiRdzong" ;
   skos:prefLabel "pre-modern county"@en ;
   skos:prefLabel "sngar gyi rdzong /"@bo-x-ewts ;
@@ -415,6 +546,8 @@ bdr:PT0056
 .
 bdr:PT0057
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "khul" ;
   skos:prefLabel "khul/"@bo-x-ewts ;
   skos:prefLabel "prefecture"@en ;
@@ -422,6 +555,8 @@ bdr:PT0057
 .
 bdr:PT0058
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "sdeDponMnga'Ris" ;
   skos:prefLabel "principality"@en ;
   skos:prefLabel "sde dpon mnga' ris/"@bo-x-ewts ;
@@ -429,6 +564,8 @@ bdr:PT0058
 .
 bdr:PT0059
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "parKhang" ;
   skos:prefLabel "par khang /"@bo-x-ewts ;
   skos:prefLabel "printery"@en ;
@@ -436,6 +573,8 @@ bdr:PT0059
 .
 bdr:PT0060
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "zhingChen" ;
   skos:prefLabel "province"@en ;
   skos:prefLabel "zhing chen/"@bo-x-ewts ;
@@ -443,6 +582,8 @@ bdr:PT0060
 .
 bdr:PT0061
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "ru" ;
   skos:prefLabel "provincial divisions"@en ;
   skos:prefLabel "ru/"@bo-x-ewts ;
@@ -450,7 +591,9 @@ bdr:PT0061
 .
 bdr:PT0062
   a bdo:PlaceType ;
-  rdfs:comment "between region and large mountain range (ex: the Alps)"@en ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
+  skos:definition "between region and large mountain range (ex: the Alps)"@en ;
   skos:notation "sgang" ;
   skos:prefLabel "range"@en ;
   skos:prefLabel "sgang /"@bo-x-ewts ;
@@ -458,6 +601,8 @@ bdr:PT0062
 .
 bdr:PT0063
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   rdfs:comment "Various kinds of semi-formal and historical references to extended geographic areas such as administrative districts, isolated areas, premodern counties and so on."@en ;
   skos:prefLabel "Regions"@en ;
   skos:prefLabel "rten gzhi yul lung /"@bo-x-ewts ;
@@ -465,6 +610,8 @@ bdr:PT0063
 .
 bdr:PT0064
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "sgrubGrwa" ;
   skos:prefLabel "retreat center"@en ;
   skos:prefLabel "sgrub grwa/"@bo-x-ewts ;
@@ -472,6 +619,8 @@ bdr:PT0064
 .
 bdr:PT0065
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "chuBo" ;
   skos:prefLabel "chu bo/"@bo-x-ewts ;
   skos:prefLabel "river"@en ;
@@ -479,6 +628,8 @@ bdr:PT0065
 .
 bdr:PT0066
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "chuRgyud" ;
   skos:prefLabel "chu rgyud/"@bo-x-ewts ;
   skos:prefLabel "river basin"@en ;
@@ -486,6 +637,8 @@ bdr:PT0066
 .
 bdr:PT0067
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "slobGrwa" ;
   skos:prefLabel "school"@en ;
   skos:prefLabel "slob grwa/"@bo-x-ewts ;
@@ -493,6 +646,8 @@ bdr:PT0067
 .
 bdr:PT0068
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "tshoBa" ;
   skos:prefLabel "settlement"@en ;
   skos:prefLabel "tsho ba/"@bo-x-ewts ;
@@ -500,6 +655,8 @@ bdr:PT0068
 .
 bdr:PT0069
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   rdfs:comment "Sites of interest such as monasteries, temples and so on"@en ;
   skos:prefLabel "Sites"@en ;
   skos:prefLabel "brten pa gnas khang /"@bo-x-ewts ;
@@ -507,6 +664,8 @@ bdr:PT0069
 .
 bdr:PT0070
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "yulPhran" ;
   skos:prefLabel "small area"@en ;
   skos:prefLabel "yul phran/"@bo-x-ewts ;
@@ -514,6 +673,8 @@ bdr:PT0070
 .
 bdr:PT0071
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "chuMig" ;
   skos:prefLabel "chu mig"@bo-x-ewts ;
   skos:prefLabel "spring"@en ;
@@ -521,6 +682,8 @@ bdr:PT0071
 .
 bdr:PT0072
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "mchodRten" ;
   skos:prefLabel "mchod rten/"@bo-x-ewts ;
   skos:prefLabel "stupa"@en ;
@@ -528,6 +691,8 @@ bdr:PT0072
 .
 bdr:PT0073
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "stongSde" ;
   skos:prefLabel "stong sde/"@bo-x-ewts ;
   skos:prefLabel "thousand household district"@en ;
@@ -535,6 +700,8 @@ bdr:PT0073
 .
 bdr:PT0074
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "lhaKhang" ;
   skos:prefLabel "lha khang /"@bo-x-ewts ;
   skos:prefLabel "temple"@en ;
@@ -542,12 +709,16 @@ bdr:PT0074
 .
 bdr:PT0075
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:prefLabel "gtsug lag khang /"@bo-x-ewts ;
   skos:prefLabel "temple complex"@en ;
   skos:prefLabel "寺庙"@zh-hans ;
 .
 bdr:PT0076
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "bangSo" ;
   skos:prefLabel "bang so/"@bo-x-ewts ;
   skos:prefLabel "tomb"@en ;
@@ -555,6 +726,8 @@ bdr:PT0076
 .
 bdr:PT0077
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "shang" ;
   skos:prefLabel "shang /"@bo-x-ewts ;
   skos:altLabel "zhang /"@bo-x-ewts ;
@@ -562,6 +735,8 @@ bdr:PT0077
 .
 bdr:PT0078
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "srolRgyunGyiSaMing" ;
   skos:prefLabel "srol rgyun sa ming /"@bo-x-ewts ;
   skos:prefLabel "traditional"@en ;
@@ -569,6 +744,8 @@ bdr:PT0078
 .
 bdr:PT0079
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "srolRgyunSaKhul" ;
   skos:prefLabel "srol rgyun sa khul/"@bo-x-ewts ;
   skos:prefLabel "traditional region"@en ;
@@ -576,6 +753,8 @@ bdr:PT0079
 .
 bdr:PT0080
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "gterGnas" ;
   skos:prefLabel "gter gnas/"@bo-x-ewts ;
   skos:prefLabel "treasure site"@en ;
@@ -583,6 +762,8 @@ bdr:PT0080
 .
 bdr:PT0081
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "ruSde" ;
   skos:prefLabel "ru sde/"@bo-x-ewts ;
   skos:prefLabel "tribal territory"@en ;
@@ -590,6 +771,8 @@ bdr:PT0081
 .
 bdr:PT0082
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "phu" ;
   skos:prefLabel "phu/"@bo-x-ewts ;
   skos:prefLabel "upper valley"@en ;
@@ -597,6 +780,8 @@ bdr:PT0082
 .
 bdr:PT0083
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:NaturalPlace ;
   skos:notation "lungPa" ;
   skos:prefLabel "lung pa/"@bo-x-ewts ;
   skos:prefLabel "valley"@en ;
@@ -604,6 +789,8 @@ bdr:PT0083
 .
 bdr:PT0084
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "grongTsho" ;
   skos:prefLabel "grong tsho/"@bo-x-ewts ;
   skos:prefLabel "village"@en ;
@@ -611,6 +798,8 @@ bdr:PT0084
 .
 bdr:PT0085
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "grongSde" ;
   skos:prefLabel "grong sde/"@bo-x-ewts ;
   skos:prefLabel "village district"@en ;
@@ -618,6 +807,8 @@ bdr:PT0085
 .
 bdr:PT0086
   a bdo:PlaceType ;
+  a skos:Concept ;
+  skos:broader bdr:ConstructedPlace ;
   skos:notation "rdzongSridGzhungGnasSa" ;
   skos:prefLabel "county seat"@en ;
   skos:prefLabel "rdzong srid gzhung gnas sa/"@bo-x-ewts ;
