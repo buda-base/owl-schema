@@ -14,8 +14,10 @@
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # imports: http://purl.bdrc.io/resource/GenderScheme/
 # imports: http://purl.bdrc.io/resource/IdentifierScheme/
-# imports: http://purl.bdrc.io/resource/LangScriptScheme/
+# imports: http://purl.bdrc.io/resource/LanguageScheme/
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
+# imports: http://purl.bdrc.io/resource/ScriptScheme/
+# imports: http://purl.bdrc.io/resource/TransliterationScheme/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -80,8 +82,10 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/LangScriptScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/LanguageScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/TransliterationScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
 bdo:Agent
@@ -694,9 +698,6 @@ bdo:Label
   a owl:Class ;
   rdfs:label "Label" ;
   rdfs:subClassOf bdo:Facet ;
-.
-bdo:LangScript
-  rdfs:subClassOf bdo:Type ;
 .
 bdo:LangStringOrNoColophon
   a rdfs:Datatype ;
@@ -2846,14 +2847,18 @@ bdo:labelConnection
   rdfs:range bdo:Label ;
   skos:definition "indicates a connection between two bdo:Labels"@en ;
 .
-bdo:langScript
+bdo:language
   a owl:ObjectProperty ;
-  rdfs:domain bdo:Instance ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Instance
+          bdo:Work
+        ) ;
+    ] ;
   rdfs:label "language"@en ;
-  rdfs:range bdo:LangScript ;
-  owl:deprecated true ;
-  skos:definition "Indicates the primary language and script in which the Instance is expressed."@en ;
-  skos:editorialNote "Every Instance should have at least one :langScript indicating the primary laguage and script in which the language is presented. There may be more than one :langScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
+  rdfs:range bdo:Language ;
+  skos:definition "language in which a Work or Instance is expressed"@en ;
 .
 bdo:legacyOutlineNodeRID
   a owl:AnnotationProperty ;
@@ -3545,6 +3550,13 @@ bdo:scanInfo
   skos:definition "Where and by whom the Work was scanned (or requested to be scanned)"@en ;
   skos:editorialNote "was :workScanInfo"@en ;
 .
+bdo:script
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "script"@en ;
+  rdfs:range bdo:Script ;
+  skos:definition "The script (Tibetan, Devanagari, etc.)"@en ;
+.
 bdo:seqNum
   a owl:DatatypeProperty ;
   rdfs:label "sequence number"@en ;
@@ -3614,6 +3626,15 @@ bdo:translationOf
   rdfs:label "translation of"@en ;
   rdfs:subPropertyOf bdo:labelConnection ;
   skos:definition "This label is a translation of the object label to a language indicated in the language tag"@en ;
+.
+bdo:transliteration
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "transliteration"@en ;
+  rdfs:range bdo:Transliteration ;
+  skos:definition "A transliteration for a given language and script."@en ;
+  skos:editorialNote "A transliteration for a language and script. Mostly this will apply for Pali situations since texts are always written in a transliteration of Pali in a Romanization or script of a language such as Thai."@en ;
 .
 bdo:transliterationOf
   a owl:ObjectProperty ;
@@ -3806,19 +3827,6 @@ bdo:workObjectType
   rdfs:range bdo:ObjectType ;
   owl:deprecated true ;
   skos:definition "the type of content: manuscript, blockprint, etc"@en ;
-.
-bdo:workOtherLangScript
-  a owl:ObjectProperty ;
-  rdfs:label "other language"@en ;
-  owl:deprecated true ;
-  skos:definition "secondary language associated with a work"@en ;
-  skos:editorialNote """The :workOtherLangScript is used to indicate language script combinations that occur in secondary or subsidiary roles within a :Work. For example, a preface in Chinese for a primary Tibetan text could be indicated via:
-
-    :workOtherLangScript bdr:ZhNative
-
-or a text containing handwritten comments in Tibetan might have:
-
-    :workOtherLangScript bdr:BoKhyugYig"""@en ;
 .
 bdo:workPartLabel
   a owl:DatatypeProperty ;
