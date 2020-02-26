@@ -1,0 +1,66 @@
+# baseURI: http://purl.bdrc.io/resource/PartScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: PartScheme
+
+@prefix PartScheme: <http://purl.bdrc.io/resource/PartScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:PartType
+  a owl:Class ;
+  rdfs:label "Part Type"@en ;
+  skos:definition "represents the type of a part of an instance, work or item such as Chapter, Section and so on"@en ;
+.
+bdr:PartScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "(work) Part Scheme"@en ;
+.
+PartScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:PartTypeChapter
+  a bdo:PartType ;
+  a skos:Concept ;
+  skos:prefLabel "chapter"@en ;
+  skos:topConceptOf bdr:PartScheme ;
+.
+bdr:PartTypeFragment
+  a bdo:PartType ;
+  a skos:Concept ;
+  skos:editorialNote "A fragment is a portion of a \"whole\" instance. It commonly occurs when some pages have been extracted from a \"complete\" instance and inserted improperly into a different one. A fragment is specified as a part of a containing instance via a :ContentLocation as with any similar :partOf"@en ;
+  skos:prefLabel "fragment"@en ;
+  skos:topConceptOf bdr:PartScheme ;
+.
+bdr:PartTypeSection
+  a bdo:PartType ;
+  a skos:Concept ;
+  skos:prefLabel "section"@en ;
+  skos:topConceptOf bdr:PartScheme ;
+.
+bdr:PartTypeTableOfContent
+  a bdo:PartType ;
+  a skos:Concept ;
+  skos:prefLabel "dkar chag"@bo-x-ewts ;
+  skos:prefLabel "table of content"@en ;
+  skos:topConceptOf bdr:PartScheme ;
+.
+bdr:PartTypeText
+  a bdo:PartType ;
+  a skos:Concept ;
+  skos:prefLabel "text"@en ;
+  skos:topConceptOf bdr:PartScheme ;
+.
+bdr:PartTypeVolume
+  a bdo:PartType ;
+  a skos:Concept ;
+  skos:prefLabel "volume"@en ;
+  skos:topConceptOf bdr:PartScheme ;
+.
