@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/PaginationType/
+# baseURI: http://purl.bdrc.io/resource/PaginationScheme/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: PaginationType
+# prefix: PaginationScheme
 
-@prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType/> .
+@prefix PaginationScheme: <http://purl.bdrc.io/resource/PaginationScheme/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -15,24 +15,33 @@
 
 bdo:PaginationType
   a owl:Class ;
-  adm:catalogingConvention """Indicates whether the outlining is relative or absolute. This refers to the convention for WorkLocation information. Almost all outlining is done with absolute pagination.
+  skos:editorialNote """Indicates whether the outlining is relative or absolute. This refers to the convention for WorkLocation information. Almost all outlining is done with absolute pagination.
 
 Relative pagination uses pagination in the content of the work while absolute counts from the first image of a scanned volume an since there are 2 scanned pages of metadata in each volume, absolute pagination generally starts at 3."""@en ;
-  adm:userTooltip "The pagination type indicates whether pagination is absolute across all pages of a Work or relative to a text within a Work"@en ;
+  skos:definition "The pagination type indicates whether pagination is absolute across all pages of a Work or relative to a text within a Work"@en ;
   rdfs:label "pagination type"@en ;
   adm:translationPriority 2 ;
 .
-PaginationType:
+PaginationScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:PaginationScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Pagination Scheme"@en ;
 .
 bdr:PaginationAbsolute
   a bdo:PaginationType ;
+  a skos:Concept ;
   skos:prefLabel "absolute pagination"@en ;
   adm:translationPriority 2 ;
+  skos:topConceptOf bdr:PaginationScheme ;
 .
 bdr:PaginationRelative
   a bdo:PaginationType ;
+  a skos:Concept ;
   skos:prefLabel "relative pagination"@en ;
   adm:translationPriority 2 ;
+  skos:topConceptOf bdr:PaginationScheme ;
 .

@@ -219,6 +219,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the PaginationType vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/PaginationScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/PaginationScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/PaginationScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the PrintMethod vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/PrintMethodScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/PrintMethodScheme.ttl"/>
@@ -253,13 +260,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Material/"/>
         <altURL    rdf:resource="owl-schema/types/materials.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/materials.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the PaginationType vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PaginationType/"/>
-        <altURL    rdf:resource="owl-schema/types/pagination_types.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/pagination_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
