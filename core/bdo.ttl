@@ -1,9 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
-# imports: http://purl.bdrc.io/ontology/types/LineageType/
 # imports: http://purl.bdrc.io/ontology/types/Material/
-# imports: http://purl.bdrc.io/ontology/types/PaginationType/
 # imports: http://purl.bdrc.io/ontology/types/PartType/
 # imports: http://purl.bdrc.io/ontology/types/PlaceType/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
@@ -15,6 +13,8 @@
 # imports: http://purl.bdrc.io/resource/GenderScheme/
 # imports: http://purl.bdrc.io/resource/IdentifierScheme/
 # imports: http://purl.bdrc.io/resource/LanguageScheme/
+# imports: http://purl.bdrc.io/resource/LineageScheme/
+# imports: http://purl.bdrc.io/resource/PaginationScheme/
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # imports: http://purl.bdrc.io/resource/ScriptScheme/
 # imports: http://purl.bdrc.io/resource/TransliterationScheme/
@@ -69,9 +69,7 @@ bdo:
   rdfs:label "Buda core ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/LineageType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Material/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/PaginationType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/PartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/PlaceType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
@@ -83,6 +81,8 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/LanguageScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/LineageScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/PaginationScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/TransliterationScheme/> ;
@@ -368,9 +368,6 @@ bdo:Entity
   adm:translationPriority 2 ;
   rdfs:label "Entity"@en ;
   skos:definition "Entities are the principle types or concepts in the BDRC ontology. Individuals of type subclass of :Entity will correspond to distinct individuals in the domain of discourse of BDRC, such as Persons, Places, and Works."@en ;
-.
-bdo:Era
-  rdfs:subClassOf bdo:Type ;
 .
 bdo:Etext
   a owl:Class ;

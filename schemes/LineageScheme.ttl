@@ -1,0 +1,119 @@
+# baseURI: http://purl.bdrc.io/resource/LineageScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: LineageScheme
+
+@prefix LineageScheme: <http://purl.bdrc.io/resource/LineageScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:LineageType
+  a owl:Class ;
+  rdfs:label "lineage type"@en ;
+  skos:definition "Subclasses record different lineage types by culture, e.g., Tibetan or Chinese"@en ;
+.
+bdr:LT0001
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "dbang"@bo-x-ewts ;
+  skos:prefLabel "empowerment"@en ;
+.
+bdr:LT0002
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "dmar khrid"@bo-x-ewts ;
+  skos:prefLabel "essential instruction"@en ;
+.
+bdr:LT0003
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "gdams ngag"@bo-x-ewts ;
+  skos:prefLabel "oral instruction"@en ;
+.
+bdr:LT0004
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "instruction"@en ;
+  skos:prefLabel "khrid"@bo-x-ewts ;
+.
+bdr:LT0005
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "lung"@bo-x-ewts ;
+  skos:prefLabel "reading transmission"@en ;
+.
+bdr:LT0006
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "man ngag"@bo-x-ewts ;
+  skos:prefLabel "quintessential instruction"@en ;
+.
+bdr:LT0007
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "gsal kha ma"@bo-x-ewts ;
+  skos:prefLabel "not specified"@en ;
+.
+bdr:LT0008
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "direct transmission"@en ;
+  skos:prefLabel "nye brgyud"@bo-x-ewts ;
+.
+bdr:LT0009
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "long lineage transmission"@en ;
+  skos:prefLabel "ring brgyud"@bo-x-ewts ;
+.
+bdr:LT0010
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "rjes gnang"@bo-x-ewts ;
+  skos:prefLabel "short empowerment"@en ;
+.
+bdr:LT0011
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "lineage of vows"@en ;
+  skos:prefLabel "sdom brgyud"@bo-x-ewts ;
+.
+bdr:LT0012
+  a bdo:LineageType ;
+  a skos:Concept ;
+  skos:broader bdr:TibetanLineage ;
+  skos:prefLabel "oral lineage"@en ;
+  skos:prefLabel "snyan brgyud"@bo-x-ewts ;
+.
+bdr:LineageScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Lineage Scheme"@en ;
+.
+LineageScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:TibetanLineage
+  a bdo:LineageType ;
+  a skos:Concept ;
+  rdfs:label "Tibetan Lineage"@en ;
+  skos:definition "Tibetan lineage type records the Tibetan form of a transmission lineage such as empowerment, pith instruction, and so on"@en ;
+  skos:topConceptOf bdr:LineageScheme ;
+.

@@ -219,6 +219,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the LineageType vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/LineageScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/LineageScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/LineageScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the PaginationType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/PaginationScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/PaginationScheme.ttl"/>
@@ -247,13 +254,6 @@
     </OntologySpec>
     
     <!-- ======== types ======== -->
-    
-    <OntologySpec>
-        <!-- local version of the LineageType vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/LineageType/"/>
-        <altURL    rdf:resource="owl-schema/types/lineage_types.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/lineage_types.ttl"/>
-    </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Material vocabulary -->
