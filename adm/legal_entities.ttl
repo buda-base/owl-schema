@@ -137,6 +137,12 @@ bda:LD_IA_Metadata
   rdfs:comment "From a private communication: \"most metadata comes from others. sometimes others declare something, but we make not claims about it.\""@en ;
   skos:prefLabel "Provided by Internet Archive, No copyright claim"@en ;
 .
+bda:LD_WD_Metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseCC0 ;
+  adm:provider bda:CP034 ;
+  skos:prefLabel "Provided by Wikidata under CC0 license"@en ;
+.
 bda:LD_DILA_BSADP
   a adm:LegalData ;
   adm:license bda:LicenseCCBYSA3U ;
