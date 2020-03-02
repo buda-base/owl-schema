@@ -3,7 +3,6 @@
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
-# imports: http://purl.bdrc.io/ontology/types/WorkType/
 # imports: http://purl.bdrc.io/resource/BindingScheme/
 # imports: http://purl.bdrc.io/resource/DateScheme/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
@@ -71,7 +70,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
   owl:imports <http://purl.bdrc.io/resource/BindingScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/DateScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
@@ -3876,15 +3874,6 @@ bdo:workTranslationOf
   owl:inverseOf bdo:hasTranslation ;
   skos:definition "This work is a translation of the reference work."@en ;
   skos:editorialNote "The subject work is identified as a translation of the referenced work. This will be used, for example, when the subject work is a Tibetan translation of a referenced Sanskrit work."@en ;
-.
-bdo:workType
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:BiblioEntity ;
-  rdfs:label "work type"@en ;
-  rdfs:range bdo:WorkType ;
-  rdfs:seeAlso bdo:WorkType ;
-  owl:deprecated true ;
-  skos:historyNote "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
 .
 bdo:yearInEra
   a owl:DatatypeProperty ;

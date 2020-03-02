@@ -290,11 +290,4 @@
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/traditions.ttl"/>
     </OntologySpec>
     
-    <OntologySpec>
-        <!-- local version of the WorkType vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/WorkType/"/>
-        <altURL    rdf:resource="owl-schema/types/work_types.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/work_types.ttl"/>
-    </OntologySpec>
-    
 </rdf:RDF>
