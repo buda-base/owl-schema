@@ -1,0 +1,202 @@
+# baseURI: http://purl.bdrc.io/resource/MaterialScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: MaterialScheme
+
+@prefix MaterialScheme: <http://purl.bdrc.io/resource/MaterialScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:Material
+  a owl:Class ;
+  rdfs:label "Material"@en ;
+  rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30304> ;
+  rdfs:seeAlso <http://rdaregistry.info/termList/RDAMaterial> ;
+  rdfs:subClassOf bf:Material ;
+  skos:definition "Materials include the base material on which the printing appears and the applied material such as ink and so on"@en ;
+.
+bdr:AppliedMaterial
+  a bdo:Material ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30084> ;
+  skos:definition "The material such as ink and so on that is used to impose writing on the base material"@en ;
+  skos:prefLabel "applied material"@en ;
+  skos:topConceptOf bdr:MaterialScheme ;
+.
+bdr:AppliedMaterial_BlackInk
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:AppliedMaterial ;
+  skos:prefLabel "black ink"@en ;
+.
+bdr:AppliedMaterial_GoldLeaf
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:AppliedMaterial ;
+  skos:prefLabel "gold leaf"@en ;
+.
+bdr:AppliedMaterial_IndigoDye
+  a bdo:Material ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:AppliedMaterial ;
+  skos:editorialNote "paper dyed with indigo is called Nīlapattra in some contexts"@en ;
+  skos:prefLabel "indigo dye"@en ;
+.
+bdr:AppliedMaterial_Poison
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:AppliedMaterial ;
+  skos:editorialNote "poison (usually arsenic), giving a yellow hue"@en ;
+  skos:editorialNote "usually used to keep away insects and people who would want to take part of the manuscript and turn it into a magical tincture for consumption"@en ;
+  skos:prefLabel "poison"@en ;
+.
+bdr:AppliedMaterial_RedInk
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:AppliedMaterial ;
+  skos:prefLabel "red ink"@en ;
+.
+bdr:AppliedMaterial_SilverLeaf
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:AppliedMaterial ;
+  skos:prefLabel "silver leaf"@en ;
+.
+bdr:BaseMaterial
+  a bdo:Material ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:seeAlso <http://rdaregistry.info/Elements/m/P30208> ;
+  skos:definition "underlying physical material of a manifestation of a Work"@en ;
+  skos:prefLabel "base material" ;
+  skos:topConceptOf bdr:MaterialScheme ;
+.
+bdr:MaterialBirchBark
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:MaterialWood ;
+  skos:prefLabel "bhūrjapattra"@sa-x-iast ;
+  skos:prefLabel "birch bark"@en ;
+.
+bdr:MaterialCloth
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:BaseMaterial ;
+  skos:prefLabel "cloth"@en ;
+.
+bdr:MaterialCoryphaPalmLeaf
+  a bdo:Material ;
+  a skos:Concept ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q856001> ;
+  skos:broader bdr:MaterialPalmLeaf ;
+  skos:prefLabel "palm leaf (corypha)"@en ;
+.
+bdr:MaterialDeshog
+  a bdo:Material ;
+  a skos:Concept ;
+  rdfs:seeAlso <http://bhutan.ims.tuwien.ac.at/ahtcde00/c-viex/j-02-03-02-11/start.html> ;
+  rdfs:seeAlso bdr:MaterialLoktaPaper ;
+  rdfs:seeAlso <https://www.jstor.org/stable/23657810> ;
+  skos:altLabel "dezo paper"@en ;
+  skos:broader bdr:MaterialPaper ;
+  skos:editorialNote "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Bhutan, distinct from the Lokta paper."@en ;
+  skos:prefLabel "deshog paper"@en ;
+.
+bdr:MaterialDigital
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:BaseMaterial ;
+  skos:editorialNote "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
+  skos:prefLabel "digital material"@en ;
+.
+bdr:MaterialKhoiPaper
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:MaterialPaper ;
+  skos:prefLabel "khoi paper"@en ;
+.
+bdr:MaterialLoktaPaper
+  a bdo:Material ;
+  a skos:Concept ;
+  adm:sameAsWikidata <http://www.wikidata.org/entity/Q6668765> ;
+  rdfs:seeAlso bdr:MaterialDeshog ;
+  skos:broader bdr:MaterialPaper ;
+  skos:editorialNote "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Nepal, distinct from the Deshog paper."@en ;
+  skos:prefLabel "lokta paper"@en ;
+.
+bdr:MaterialMixed
+  a bdo:Material ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  skos:broader bdr:BaseMaterial ;
+  skos:prefLabel "mixed materials"@en ;
+.
+bdr:MaterialMultiLayerPaper
+  a bdo:Material ;
+  a skos:Concept ;
+  owl:deprecated true ;
+  skos:broader bdr:MaterialPaper ;
+  skos:editorialNote "deprecated in favor of AppliedMaterial_Poison"@en ;
+  skos:editorialNote "used for some manuscripts in Nepal"@en ;
+  skos:prefLabel "multi-layer paper"@en ;
+.
+bdr:MaterialPalmLeaf
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:BaseMaterial ;
+  skos:prefLabel "palm leaf"@en ;
+.
+bdr:MaterialPalmyraPalmLeaf
+  a bdo:Material ;
+  a skos:Concept ;
+  rdfs:seeAlso <http://www.wikidata.org/entity/Q310912> ;
+  skos:broader bdr:MaterialPalmLeaf ;
+  skos:prefLabel "palm leaf (palmyra)"@en ;
+.
+bdr:MaterialPaper
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:BaseMaterial ;
+  skos:prefLabel "paper"@en ;
+.
+bdr:MaterialRicePaper
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:MaterialPaper ;
+  skos:prefLabel "rice paper"@en ;
+.
+bdr:MaterialSaPaper
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:MaterialPaper ;
+  skos:prefLabel "sa paper"@en ;
+.
+bdr:MaterialScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Material Scheme"@en ;
+.
+MaterialScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:MaterialStone
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:BaseMaterial ;
+  skos:prefLabel "stone"@en ;
+.
+bdr:MaterialWood
+  a bdo:Material ;
+  a skos:Concept ;
+  skos:broader bdr:BaseMaterial ;
+  skos:prefLabel "wood"@en ;
+.
