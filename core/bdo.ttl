@@ -4,6 +4,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://purl.bdrc.io/resource/BindingScheme/
+# imports: http://purl.bdrc.io/resource/ContentMethodScheme/
 # imports: http://purl.bdrc.io/resource/DateScheme/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # imports: http://purl.bdrc.io/resource/GenderScheme/
@@ -71,6 +72,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
   owl:imports <http://purl.bdrc.io/resource/BindingScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/ContentMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/DateScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
@@ -106,49 +108,11 @@ bdo:AgentInRole
   skos:definition "property linking an entity or event to the agents and roles they play"@en ;
   skos:editorialNote ":AgentInRole represents some :Agent performing an action in a particular :Role in a context represented by the subject and property that refer to the :AgenInRole"@en ;
 .
-bdo:Agents
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:label "Agents"@en ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Agent
-          foaf:Agent
-        ) ;
-    ] ;
-  skos:definition "The various sorts of agents represented in the ontology, such as Persons, Organizations and so on"@en ;
-.
-bdo:AgentsOrAgentInRole
-  a owl:Class ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:AgentInRole
-          bdo:Agents
-        ) ;
-    ] ;
-.
 bdo:AhistoricalAgent
   a owl:Class ;
   rdfs:label "Ahistorical agent"@en ;
   rdfs:subClassOf bdo:SingleAgent ;
   skos:definition "An ahistorical agent may be a deity or other non-human agent that is said to exist outside of human history"@en ;
-.
-bdo:AnyOrganization
-  a owl:Class ;
-  rdfs:label "any organization"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Organization
-        ) ;
-    ] ;
-  owl:deprecated true ;
-  skos:definition "Any sort of organization"@en ;
-  skos:historyNote "deprecated in favor of setting the range of :agent to :Agents"@en ;
 .
 bdo:AuthoredEvent
   a owl:Class ;
@@ -171,6 +135,9 @@ bdo:BibliographicalTitle
   skos:editorialNote """This is the main title of a work, the title by which it is the most often known. If a work has only one title, it must be of type Bibliographic Title. There must be only one bibliographical title per work. 
 
 Title by which a Work is identified for cataloging purposes. There are three usages: (1) Title that is the main title of a Work based on Cover Title, Title Page Title. Spine Title, Colophon Title; (2) Title that is a known or popular abbreviation of the main title of a Work; (3) Title that is a collective convention used to collocate publications of an author that contains several Works (ex: gsung ‘bum)"""@en ;
+.
+bdo:Binding
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:BundleInstance
   a owl:Class ;
@@ -236,6 +203,9 @@ bdo:ContentLocation
   skos:editorialNote "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
   skos:editorialNote "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
   skos:editorialNote "was :WorkLocation"@en ;
+.
+bdo:ContentMethod
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:CopyEvent
   a owl:Class ;
@@ -645,8 +615,10 @@ In some cases, such as texts from the Asian Classics Input Project (ACIP), pagin
 .
 bdo:ItemMicrofilmAsset
   a owl:Class ;
-  rdfs:label "Item microfilm asset" ;
+  adm:translationPriority 2 ;
+  rdfs:label "microfilm asset"@en ;
   rdfs:subClassOf bdo:ItemPhysicalAsset ;
+  skos:definition "An :ItemMicrofilmAsset describes the physical microfilm from which the associated Instance were digitized."@en ;
 .
 bdo:ItemPhysicalAsset
   a owl:Class ;
@@ -1229,6 +1201,9 @@ bdo:PlaceRebuilt
 bdo:PlaceType
   rdfs:subClassOf bdo:Type ;
 .
+bdo:PrintMethod
+  rdfs:subClassOf bdo:Type ;
+.
 bdo:PrintedEvent
   a owl:Class ;
   rdfs:label "Printed"@en ;
@@ -1566,7 +1541,7 @@ bdo:agent
   a owl:ObjectProperty ;
   rdfs:domain bdo:AgentInRole ;
   rdfs:label "agent"@en ;
-  rdfs:range bdo:Agents ;
+  rdfs:range bdo:Agent ;
   skos:definition "identifies the agent participating in an :AgentInRole"@en ;
 .
 bdo:appliedMaterial
@@ -1806,6 +1781,15 @@ bdo:contentLocationVolumeName
   skos:definition "refers to the volume by name, e.g., ca, ta, nga"@en ;
   skos:editorialNote "was :workLocationVolumeName"@en ;
 .
+bdo:contentMethod
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "content method"@en ;
+  rdfs:range bdo:ContentMethod ;
+  skos:definition "the method used to create the content"@en ;
+  skos:editorialNote "was :workObjectType"@en ;
+.
 bdo:contentPagination
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
@@ -2016,7 +2000,13 @@ bdo:eventWho
   a owl:ObjectProperty ;
   rdfs:domain bdo:Event ;
   rdfs:label "who"@en ;
-  rdfs:range bdo:AgentsOrAgentInRole ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:AgentInRole
+          bdo:Agent
+        ) ;
+    ] ;
   skos:definition "associates an event with one or more agent"@en ;
 .
 bdo:femcConversionOf
@@ -2418,7 +2408,7 @@ bdo:hasSteward
   adm:translationPriority 2 ;
   rdfs:domain bdo:TextualEntity ;
   rdfs:label "has steward"@en ;
-  rdfs:range bdo:Agents ;
+  rdfs:range bdo:Agent ;
   skos:definition "An organization that preserves and makes metadata and images/etexts available digitally"@en ;
   skos:editorialNote "A steward of (a Collection of) Textual Item(s) is an organization that preserves and makes metadata and images/etexts available digitally.  A steward may be an :Organization or an adm:Organization."@en ;
 .
@@ -3028,7 +3018,7 @@ bdo:memberOf
 bdo:microfilmCanister
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:domain bdo:ItemMicrofilmAsset ;
   rdfs:label "microfilm canister"@en ;
   rdfs:range xsd:string ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
@@ -3037,16 +3027,16 @@ bdo:microfilmCanister
 bdo:microfilmItem
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:ItemMicrofilmAsset ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "item from microfilm"@en ;
-  rdfs:range bdo:ObjectTypeMicrofilm ;
+  rdfs:range bdo:ItemMicrofilmAsset ;
   skos:definition "The microfilm item from which the instance was digitized."@en ;
   skos:editorialNote "was :workMicrofilm"@en ;
 .
 bdo:microfilmStrip
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:domain bdo:ItemMicrofilmAsset ;
   rdfs:label "microfilm strip id"@en ;
   rdfs:range xsd:string ;
   skos:definition "indicates the id of the film strip that contains the digitized content"@en ;
@@ -3443,7 +3433,9 @@ bdo:placeWBArea
 .
 bdo:printMethod
   a owl:ObjectProperty ;
+  rdfs:domain bdo:Instance ;
   rdfs:label "print method"@en ;
+  rdfs:range bdo:PrintMethod ;
   skos:definition "Indicates the printing method used for a PhysicalInstance associated with some Work."@en ;
 .
 bdo:publisherLocation
@@ -3527,15 +3519,21 @@ Such reconstructions are typically approximations to the original and there may 
 .
 bdo:role
   a owl:ObjectProperty ;
-  rdfs:domain bdo:Agents ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:AgentInRole
+          bdo:Agent
+        ) ;
+    ] ;
   rdfs:label "role"@en ;
   rdfs:range bdo:Role ;
-  skos:definition "Associates a Role with eiher an Agents or an AgentInRole."@en ;
-  skos:editorialNote """The :role property associates a :Role with eiher an :Agents or an :AgentInRole.
+  skos:definition "Associates a Role with eiher an Agent or an AgentInRole."@en ;
+  skos:editorialNote """The :role property associates a :Role with eiher an :Agent or an :AgentInRole.
 
 When used with an :Agents the triple is asserting that the subject is commonly found performing in the target :Role
 
-When used in an :AgentInRole, the associated :Agents is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
+When used in an :AgentInRole, the associated :Agent is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
 .
 bdo:scanInfo
   a owl:DatatypeProperty ;
@@ -3814,15 +3812,6 @@ bdo:workIsNumbered
   skos:definition "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
   skos:historyNote "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
 .
-bdo:workObjectType
-  a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "object type"@en ;
-  rdfs:range bdo:ObjectType ;
-  owl:deprecated true ;
-  skos:definition "the type of content: manuscript, blockprint, etc"@en ;
-.
 bdo:workPartLabel
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
@@ -3896,107 +3885,9 @@ bdo:yearOffset
 bdr:LanguageTaxonomy
   a bdo:Type ;
 .
-bdr:ObjectTypeAutograph
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "A manuscript written by the hand of the author"@en ;
-  rdfs:label "autograph manuscript"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeBlockPrint
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "a :Work which content was produced by a method consisting of a relief process in which a design is cut into and printed from the surface of a wood block"@en ;
-  rdfs:label "blockprint"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeComputerInput
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:label "computer input"@en ;
-.
-bdr:ObjectTypeFacsimile
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "facsimile"@en ;
-  rdfs:label "facsimile"@en ;
-.
-bdr:ObjectTypeLeporello
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "leporello"@en ;
-  rdfs:label "leporello"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeLongPalmLeaf
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "long palm leaf"@en ;
-  rdfs:label "long palm leaf"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeManuscript
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "used with a :Work which content was handwritten and that through some unspecified sequence of further copying actions came to be scanned"@en ;
-  rdfs:label "manuscript"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeMicrofilm
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  adm:translationPriority 2 ;
-  rdfs:label "microfilm"@en ;
-  skos:definition "the images for the associated work were digitized from microfilm"@en ;
-.
-bdr:ObjectTypeOCR
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:label "OCR"@en ;
-.
-bdr:ObjectTypeParPhud
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "\"first fruit\" printing from a set of xylographs. par phud"@en ;
-  rdfs:label "first printing"@en ;
-.
-bdr:ObjectTypeTypeSet
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:label "typeset"@en ;
-.
-rdfs:comment
-  skos:editorialNote """As a convention in the BDRC ontology, use rdfs:comment for summary and contents statements about a resource rather than adding additional properties.
-
-We take the view that the summary or contents statements can be treated in a manner similar to the use of rdfs:label as a way of providing a short description of a resource"""@en ;
-.
-rdfs:label
-  skos:editorialNote "The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle"@en ;
-.
-owl:Thing
-  skos:editorialNote "The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle concepts (:Entity) that constitute BUDA's domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types."@en ;
-.
 owl:sameAs
   bdo:inferSubTree true ;
 .
-skos:altLabel
-  skos:editorialNote "A variant label for entities such as :Place, :Corporation and so on"@en ;
-.
-skos:hiddenLabel
-  skos:editorialNote "Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset"@en ;
-.
-skos:prefLabel
-  skos:editorialNote "The preferred human-readable label for a resource. For a Work this is typically the bibliographic title and will be repeated in a WorkTitle, similarly for Persons"@en ;
-.
-vcard:country-name
-  skos:editorialNote "map the country for a Library address"@en ;
-.
-vcard:locality
-  skos:editorialNote "use for city for a Library address"@en ;
-.
-vcard:region
-  skos:editorialNote "use for state in Library address"@en ;
-.
-vcard:street-address
-  skos:editorialNote "concatenate with the street number for a Library address"@en ;
+foaf:Agent
+  rdfs:subClassOf bdo:Agent ;
 .

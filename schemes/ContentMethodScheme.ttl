@@ -1,0 +1,61 @@
+# baseURI: http://purl.bdrc.io/resource/ContentMethodScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: ContentMethodScheme
+
+@prefix ContentMethodScheme: <http://purl.bdrc.io/resource/ContentMethodScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:ContentMethod
+  a owl:Class ;
+  adm:translationPriority 2 ;
+  rdfs:label "Content method"@en ;
+  skos:definition "The method used to create content"@en ;
+.
+bdr:ContentMethodScheme
+  a skos:ConceptScheme ;
+  adm:translationPriority 2 ;
+  skos:prefLabel "ContentMethod Scheme"@en ;
+.
+ContentMethodScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:ContentMethod_ComputerInput
+  a bdo:ContentMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Computer Input"@en ;
+  skos:definition "Indicates that the content was created via computer input."@en ;
+  skos:topConceptOf bdr:ContentMethodScheme ;
+.
+bdr:ContentMethod_Facsimile
+  a bdo:ContentMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Facsimile"@en ;
+  skos:definition "Indicates that the content was created via Facsimile."@en ;
+  skos:topConceptOf bdr:ContentMethodScheme ;
+.
+bdr:ContentMethod_OCR
+  a bdo:ContentMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "OCR"@en ;
+  skos:definition "Indicates that the content was created via OCR."@en ;
+  skos:topConceptOf bdr:ContentMethodScheme ;
+.
+bdr:ContentMethod_Typeset
+  a bdo:ContentMethod ;
+  a skos:Concept ;
+  adm:translationPriority 2 ;
+  rdfs:label "Typeset"@en ;
+  skos:definition "Indicates that the content was created via Typesetting."@en ;
+  skos:topConceptOf bdr:ContentMethodScheme ;
+.

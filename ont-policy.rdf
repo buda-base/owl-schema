@@ -184,6 +184,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the Content Method vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/ContentMethodScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/ContentMethodScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/ContentMethodScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the Date vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/DateScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/DateScheme.ttl"/>
