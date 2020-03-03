@@ -613,6 +613,7 @@ bdo:ItemMicrofilmAsset
   a owl:Class ;
   rdfs:label "Item microfilm asset" ;
   rdfs:subClassOf bdo:ItemPhysicalAsset ;
+  adm:userTooltip "An :ItemMicrofilmAsset describes the physical microfilm from which the associated Instance was digitized."@en ;
 .
 bdo:ItemPhysicalAsset
   a owl:Class ;
@@ -808,13 +809,6 @@ bdo:ObjectType
   adm:userTooltip "Print type indicates the form of the Work such as blockprint, palm-leaf, manuscript, and so on"@en ;
   rdfs:label "print type"@en ;
   rdfs:subClassOf bdo:Type ;
-.
-bdo:ObjectTypeMicrofilm
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "the images for the associated work were digitized from microfilm"@en ;
-  rdfs:label "microfilm"@en ;
-  rdfs:subClassOf bdo:ObjectType ;
 .
 bdo:Organization
   a owl:Class ;
@@ -3176,7 +3170,7 @@ bdo:microfilmCanister
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "indicates the id of the canister that the microfilm was stored in"@en ;
-  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:domain bdo:ItemMicrofilmAsset ;
   rdfs:label "microfilm canister"@en ;
   rdfs:range xsd:string ;
   rdfs:seeAlso bdo:ItemPhysicalAsset ;
@@ -3194,7 +3188,7 @@ bdo:microfilmStrip
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
   adm:userTooltip "indicates the id of the film strip that contains the digitized content"@en ;
-  rdfs:domain bdo:ObjectTypeMicrofilm ;
+  rdfs:domain bdo:ItemMicrofilmAsset ;
   rdfs:label "microfilm strip id"@en ;
   rdfs:range xsd:string ;
 .
