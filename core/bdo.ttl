@@ -18,6 +18,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://purl.bdrc.io/ontology/types/PartType/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
+# imports: http://purl.bdrc.io/resource/ContentMethodScheme/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # imports: http://purl.bdrc.io/resource/IdentifierScheme/
 # prefix: bdo
@@ -85,6 +86,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Transliteration/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/PartType/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
+  owl:imports <http://purl.bdrc.io/resource/ContentMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
 .
@@ -220,6 +222,9 @@ bdo:ContentLocation
   adm:userTooltip "The ContentLocation describes the Instance, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
   rdfs:label "Content Location"@en ;
   rdfs:subClassOf bdo:Facet ;
+.
+bdo:ContentMethod
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:CopyEvent
   a owl:Class ;
@@ -3982,14 +3987,14 @@ bdo:virtualLinkTo
   rdfs:range bdo:VirtualInstance ;
   owl:inverseOf bdo:workLinkedAt ;
 .
-bdo:workObjectType
+bdo:contentMethod
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
-  adm:userTooltip "the type of content: manuscript, blockprint, etc"@en ;
-  rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "object type"@en ;
-  rdfs:range bdo:ObjectType ;
-    owl:deprecated true ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "content method"@en ;
+  rdfs:range bdo:ContentMethod ;
+  adm:userTooltip "the method for creating the content"@en ;
+  skos:editorialNote "was :workObjectType"@en ;
 .
 bdo:workOtherLangScript
   a owl:ObjectProperty ;
@@ -4189,68 +4194,6 @@ bdr:ChineseDateNotSpecified
 .
 bdr:LanguageTaxonomy
   a bdo:Type ;
-.
-bdr:ObjectTypeAutograph
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "A manuscript written by the hand of the author"@en ;
-  rdfs:label "autograph manuscript"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeBlockPrint
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "a :Work which content was produced by a method consisting of a relief process in which a design is cut into and printed from the surface of a wood block"@en ;
-  rdfs:label "blockprint"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeComputerInput
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:label "computer input"@en ;
-.
-bdr:ObjectTypeFacsimile
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "facsimile"@en ;
-  rdfs:label "facsimile"@en ;
-.
-bdr:ObjectTypeLeporello
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "leporello"@en ;
-  rdfs:label "leporello"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeLongPalmLeaf
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "long palm leaf"@en ;
-  rdfs:label "long palm leaf"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeManuscript
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "used with a :Work which content was handwritten and that through some unspecified sequence of further copying actions came to be scanned"@en ;
-  rdfs:label "manuscript"@en ;
-  owl:deprecated true ;
-.
-bdr:ObjectTypeOCR
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:label "OCR"@en ;
-.
-bdr:ObjectTypeParPhud
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:comment "\"first fruit\" printing from a set of xylographs. par phud"@en ;
-  rdfs:label "first printing"@en ;
-.
-bdr:ObjectTypeTypeSet
-  a bdo:ObjectType ;
-  a owl:NamedIndividual ;
-  rdfs:label "typeset"@en ;
 .
 bdr:PrintMethod_Lithography
   a bdo:PrintMethod_Offset ;
