@@ -1,7 +1,7 @@
-# baseURI: http://purl.bdrc.io/ontology/translations/TranslationsBo/
-# prefix: TranslationsBo
+# baseURI: http://purl.bdrc.io/ontology/translations/CoreBo/
+# prefix: CoreBo
 
-@prefix TranslationsBo: <http://purl.bdrc.io/ontology/translations/TranslationsBo/> .
+@prefix CoreBo: <http://purl.bdrc.io/ontology/translations/CoreBo/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -14,7 +14,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 
-TranslationsBo:
+CoreBo:
   a owl:Ontology ;
 .
 
