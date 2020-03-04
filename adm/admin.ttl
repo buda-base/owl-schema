@@ -8,6 +8,8 @@
 # imports: http://purl.bdrc.io/ontology/adm/types/Status/
 # imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/translations/CoreBo/ ;
+# imports: http://purl.bdrc.io/ontology/translations/AdmBo/ ;
 # prefix: adm
 
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -42,6 +44,8 @@ adm:
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
   owl:imports bdo: ;
+  owl:imports <http://purl.bdrc.io/ontology/translations/CoreBo/> ;
+  owl:imports <http://purl.bdrc.io/ontology/translations/AdmBo/> ;
 .
 adm:Access
   rdfs:subClassOf adm:Type ;
