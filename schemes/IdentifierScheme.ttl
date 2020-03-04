@@ -40,6 +40,9 @@ bf:ShelfMarkLcc
   skos:broader bf:ShelfMark ;
   skos:historyNote "Was bdo:LCCallNumber."@en ;
 .
+bf:identifiedBy
+  rdfs:label "identified by"@en ;
+.
 bdo:Identifier
   a owl:Class ;
   rdfs:label "Identifier"@en ;
