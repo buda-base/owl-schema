@@ -2,7 +2,6 @@
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
-# imports: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://purl.bdrc.io/resource/BindingScheme/
 # imports: http://purl.bdrc.io/resource/ContentMethodScheme/
 # imports: http://purl.bdrc.io/resource/DateScheme/
@@ -17,6 +16,7 @@
 # imports: http://purl.bdrc.io/resource/PlaceScheme/
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # imports: http://purl.bdrc.io/resource/ScriptScheme/
+# imports: http://purl.bdrc.io/resource/TraditionScheme/
 # imports: http://purl.bdrc.io/resource/TransliterationScheme/
 # prefix: bdo
 
@@ -70,7 +70,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
   owl:imports <http://purl.bdrc.io/resource/BindingScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ContentMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/DateScheme/> ;
@@ -85,6 +84,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/PlaceScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/TraditionScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/TransliterationScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .

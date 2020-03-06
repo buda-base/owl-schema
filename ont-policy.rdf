@@ -275,12 +275,20 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the Tradition vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/TraditionScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/TraditionScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/TraditionScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the Transliteration vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/TransliterationScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/TransliterationScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/TransliterationScheme.ttl"/>
     </OntologySpec>
     
+
     <!-- ======== types ======== -->
     
     <OntologySpec>
@@ -288,13 +296,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Taxonomy/"/>
         <altURL    rdf:resource="owl-schema/types/taxonomy.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/taxonomy.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the Tradition vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Tradition/"/>
-        <altURL    rdf:resource="owl-schema/types/traditions.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/types/traditions.ttl"/>
     </OntologySpec>
     
 </rdf:RDF>
