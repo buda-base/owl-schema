@@ -68,6 +68,7 @@
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
 
+
     <!-- ======== user ontologies ======== -->
     
     <OntologySpec>
@@ -78,6 +79,7 @@
         <prefix    rdf:datatype="&xsd;string">bdou</prefix>        
     </OntologySpec>
     
+
     <!-- ======== bdo admin ontologies ======== -->
     
     <OntologySpec>
@@ -160,20 +162,6 @@
     
     <!-- ======== roles ======== -->
 
-    <OntologySpec>
-        <!-- local version of the ChineseMonastic vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/roles/ChineseMonastic/"/>
-        <altURL    rdf:resource="owl-schema/roles/chinese_monastic.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/roles/chinese_monastic.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the Creator vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/roles/Creator/"/>
-        <altURL    rdf:resource="owl-schema/roles/creators.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/roles/creators.ttl"/>
-    </OntologySpec>
-
     <!-- ======== schemes ======== -->
 
     <OntologySpec>
@@ -182,12 +170,26 @@
         <altURL    rdf:resource="owl-schema/schemes/BindingScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/BindingScheme.ttl"/>
     </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of the ChineseMonastic vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/ChineseMonasticScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/ChineseMonasticScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/ChineseMonasticScheme.ttl"/>
+    </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Content Method vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/ContentMethodScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/ContentMethodScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/ContentMethodScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the Creator vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/CreatorScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/CreatorScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/CreatorScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>

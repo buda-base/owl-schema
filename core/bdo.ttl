@@ -1,9 +1,9 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
-# imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
 # imports: http://purl.bdrc.io/resource/BindingScheme/
+# imports: http://purl.bdrc.io/resource/ChineseMonasticScheme/
 # imports: http://purl.bdrc.io/resource/ContentMethodScheme/
+# imports: http://purl.bdrc.io/resource/CreatorScheme/
 # imports: http://purl.bdrc.io/resource/DateScheme/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # imports: http://purl.bdrc.io/resource/GenderScheme/
@@ -67,11 +67,11 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
-  owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
   owl:imports <http://purl.bdrc.io/resource/BindingScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/ChineseMonasticScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ContentMethodScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/CreatorScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/DateScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
