@@ -202,8 +202,8 @@ bdo:ContentLocation
   rdfs:label "Content Location"@en ;
   rdfs:subClassOf bdo:Facet ;
   skos:definition "The ContentLocation describes the Instance, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
-  skos:editorialNote "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
-  skos:editorialNote "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
+  skos:editorialNote "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase"@en ;
+  skos:editorialNote "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location"@en ;
   skos:editorialNote "was :WorkLocation"@en ;
 .
 bdo:ContentMethod
@@ -1521,14 +1521,6 @@ bdo:WorkEvent
   rdfs:subClassOf bdo:Event ;
   skos:definition "An event associated with the production of a Work."@en ;
   skos:editorialNote "An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
-.
-bdo:WorkLocation
-  a owl:Class ;
-  rdfs:label "Work Location"@en ;
-  rdfs:subClassOf bdo:Facet ;
-  skos:definition "The WorkLocation describes the Work, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
-  skos:editorialNote "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
-  skos:editorialNote "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
 .
 bdo:WorkType
   rdfs:subClassOf bdo:Type ;
