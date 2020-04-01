@@ -256,6 +256,13 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the PersonNameType vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/PersonNameScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/PersonNameScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/PersonNameScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
         <!-- local version of the PlaceType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/resource/PlaceScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/PlaceScheme.ttl"/>

@@ -1,0 +1,163 @@
+# baseURI: http://purl.bdrc.io/resource/PersonNameScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: PersonNameScheme
+
+@prefix PersonNameScheme: <http://purl.bdrc.io/resource/PersonNameScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdr:PersonNameType
+  a owl:Class ;
+  rdfs:label "Person Name Type"@en ;
+  skos:definition "represents the type of a Person Name"@en ;
+.
+bdr:PersonNameScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Person Name Type Scheme"@en ;
+.
+PersonNameScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:PersonNameTypeBodhisattvaVowName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Bodhisattva vow name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The name received by the Person upon taking their Bodhisattva vows"@en ;
+.
+bdr:PersonNameTypeChineseName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Chinese Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  owl:deprecated true ;
+  skos:definition "The Person's name as generally known in Chinese traditions"@en ;
+.
+bdr:PersonNameTypeCommonName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Common Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The name by which a Person is commonly known"@en ;
+.
+bdr:PersonNameTypeCorporateName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Organization Position Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "Name by which a Person is known by virtue of their position within an Organization"@en ;
+.
+bdr:PersonNameTypeFamilyName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Family Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The name of a Person's family. Surname"@en ;
+.
+bdr:PersonNameTypeFinalOrdinationName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Final Ordination Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The name given to a Person upon their receiving final ordination"@en ;
+.
+bdr:PersonNameTypeFirstOrdinationName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "First Ordination Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The name given to a Person upon their receiving first ordination"@en ;
+.
+bdr:PersonNameTypeGterStonTitle
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Terton Title"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The title bestowed upon a Person who has discovered a terma"@en ;
+.
+bdr:PersonNameTypeOfficeTitle
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Office Title"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The Title of a Person occupying a given office"@en ;
+.
+bdr:PersonNameTypeOtherName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Other Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "an otherwise unspecified type of person name"@en ;
+.
+bdr:PersonNameTypePenName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Pen Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "name used by the author in the colophons of his works"@en ;
+.
+bdr:PersonNameTypePersonalName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Personal Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The name a Person is known by, typically at birth, independent of offices, seats, and so on"@en ;
+.
+bdr:PersonNameTypePrimaryName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Primary Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The primary name by which a Person is known"@en ;
+  skos:editorialNote "what is the difference with :PersonCommonName"@en ;
+.
+bdr:PersonNameTypePrimaryTitle
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Primary Title"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "The primary or common title by which a Person is known."@en ;
+.
+bdr:PersonNameTypeReversal
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "reversed name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "Reverses 'firstname lastname' to 'lastname, firstname'"@en ;
+.
+bdr:PersonNameTypeSecretInitiatoryName
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Secret Initiatory Name"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "A name bestowed on Person upon receiving certain empowerments"@en ;
+.
+bdr:PersonNameTypeTitle
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "other title"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "an otherwise unspecified type of person title"@en ;
+.
+bdr:PersonNameTypeTulkuTitle
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "Tulku Title"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "A title bestowed on a Person who is recognized as a reincarnation of a distinguished Person"@en ;
+.
+bdr:PersonNameTypeVariantOrthography
+  a bdo:PersonNameType ;
+  a skos:Concept ;
+  skos:prefLabel "variant orthography"@en ;
+  skos:topConceptOf bdr:PersonNameScheme ;
+  skos:definition "An accepted variant writing of a name"@en ;
+.

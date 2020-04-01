@@ -13,6 +13,7 @@
 # imports: http://purl.bdrc.io/resource/MaterialScheme/
 # imports: http://purl.bdrc.io/resource/PaginationScheme/
 # imports: http://purl.bdrc.io/resource/PartScheme/
+# imports: http://purl.bdrc.io/resource/PersonNameScheme/
 # imports: http://purl.bdrc.io/resource/PlaceScheme/
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # imports: http://purl.bdrc.io/resource/ScriptScheme/
@@ -82,6 +83,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/MaterialScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PaginationScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PartScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/PersonNameScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PlaceScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
@@ -871,31 +873,6 @@ bdo:PersonBirth
   rdfs:subClassOf bdo:PersonEvent ;
   skos:definition "Birth Event for a Person"@en ;
 .
-bdo:PersonBodhisattvaVowName
-  a owl:Class ;
-  rdfs:label "Bodhisattva vow name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The name received by the Person upon taking their Bodhisattva vows"@en ;
-.
-bdo:PersonChineseName
-  a owl:Class ;
-  rdfs:label "Chinese Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  owl:deprecated true ;
-  skos:definition "The Person's name as generally known in Chinese traditions"@en ;
-.
-bdo:PersonCommonName
-  a owl:Class ;
-  rdfs:label "Common Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The name by which a Person is commonly known"@en ;
-.
-bdo:PersonCorporateName
-  a owl:Class ;
-  rdfs:label "Organization Position Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "Name by which a Person is known by virtue of their position within an Organization"@en ;
-.
 bdo:PersonDeath
   a owl:Class ;
   rdfs:label "Death"@en ;
@@ -923,29 +900,11 @@ bdo:PersonEventNotSpecified
   rdfs:subClassOf bdo:PersonEvent ;
   skos:definition "An otherwise unspecified type of Person Event"@en ;
 .
-bdo:PersonFamilyName
-  a owl:Class ;
-  rdfs:label "Family Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The name of a Person's family. Surname"@en ;
-.
 bdo:PersonFinalOrdination
   a owl:Class ;
   rdfs:label "Final Ordination"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
   skos:definition "The Event of a Person receiving their final ordination"@en ;
-.
-bdo:PersonFinalOrdinationName
-  a owl:Class ;
-  rdfs:label "Final Ordination Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The name given to a Person upon their receiving final ordination"@en ;
-.
-bdo:PersonFirstOrdinationName
-  a owl:Class ;
-  rdfs:label "First Ordination Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The name given to a Person upon their receiving first ordination"@en ;
 .
 bdo:PersonFoundsMonastery
   a owl:Class ;
@@ -961,12 +920,6 @@ bdo:PersonGterMaDiscovery
   rdfs:label "Discovers Terma"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
   skos:definition "The Event of a Person discovering a terma"@en ;
-.
-bdo:PersonGterStonTitle
-  a owl:Class ;
-  rdfs:label "Terton Title"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The title bestowed upon a Person who has discovered a terma"@en ;
 .
 bdo:PersonInResidence
   a owl:Class ;
@@ -1004,31 +957,14 @@ bdo:PersonName
             [ a bdr:PersonPrimaryName ; 
               rdfs:label \"dri med 'od zer\"@bo-x-ewts ] ."""@en ;
 .
-bdo:PersonNameOrBiblioTitle
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:comment "domain of :restored and :restoredAlt that are used for name and title variants restored from corrupt textual content"@en ;
-  rdfs:label "person name or title of a bibliographic entity"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:PersonName
-          bdo:Title
-        ) ;
-    ] ;
+bdo:PersonNameType
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:PersonOccupiesSeat
   a owl:Class ;
   rdfs:label "Occupies Seat"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
   skos:definition "The Event of a Person occupying a Seat"@en ;
-.
-bdo:PersonOfficeTitle
-  a owl:Class ;
-  rdfs:label "Office Title"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The Title of a Person occupying a given office"@en ;
 .
 bdo:PersonOrCorporation
   a owl:Class ;
@@ -1075,73 +1011,12 @@ bdo:PersonOrTopic
     ] ;
   owl:deprecated true ;
 .
-bdo:PersonOtherName
-  a owl:Class ;
-  rdfs:label "Other Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "an otherwise unspecified type of person name"@en ;
-.
-bdo:PersonPenName
-  a owl:Class ;
-  rdfs:label "Pen Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "name used by the author in the colophons of his works"@en ;
-.
-bdo:PersonPersonalName
-  a owl:Class ;
-  rdfs:label "Personal Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The name a Person is known by, typically at birth, independent of offices, seats, and so on"@en ;
-.
-bdo:PersonPrimaryName
-  a owl:Class ;
-  rdfs:label "Primary Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The primary name by which a Person is known"@en ;
-  skos:editorialNote "what is the difference with :PersonCommonName"@en ;
-.
-bdo:PersonPrimaryTitle
-  a owl:Class ;
-  rdfs:label "Primary Title"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "The primary or common title by which a Person is known."@en ;
-.
 bdo:PersonRabByungOrdination
   a owl:Class ;
   rdfs:label "Preliminary Ordination"@en ;
   rdfs:label "rab byung"@bo-x-ewts ;
   rdfs:subClassOf bdo:PersonEvent ;
   skos:definition "A preliminary to monastic ordination, when someone takes the five root vows"@en ;
-.
-bdo:PersonReversal
-  a owl:Class ;
-  rdfs:label "reversed name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "Reverses 'firstname lastname' to 'lastname, firstname'"@en ;
-.
-bdo:PersonSecretInitiatoryName
-  a owl:Class ;
-  rdfs:label "Secret Initiatory Name"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "A name bestowed on Person upon receiving certain empowerments"@en ;
-.
-bdo:PersonTitle
-  a owl:Class ;
-  rdfs:label "other title"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "an otherwise unspecified type of person title"@en ;
-.
-bdo:PersonTulkuTitle
-  a owl:Class ;
-  rdfs:label "Tulku Title"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "A title bestowed on a Person who is recognized as a reincarnation of a distinguished Person"@en ;
-.
-bdo:PersonVariantOrthography
-  a owl:Class ;
-  rdfs:label "variant orthography"@en ;
-  rdfs:subClassOf bdo:PersonName ;
-  skos:definition "An accepted variant writing of a name"@en ;
 .
 bdo:PhysicalInstance
   a owl:Class ;
@@ -2012,7 +1887,9 @@ bdo:femcConversionOf
 .
 bdo:gender
   a owl:ObjectProperty ;
+  rdfs:domain bdo:SingleAgent ;
   rdfs:label "gender"@en ;
+  rdfs:range bdo:Gender ;
   skos:definition "The gender of the Person"@en ;
 .
 bdo:hasAunt
@@ -2815,8 +2692,9 @@ bdo:itemVolumes
 bdo:kinWith
   a owl:ObjectProperty ;
   a owl:SymmetricProperty ;
-  bdo:inferSubTree true ;
+  rdfs:domain bdo:Person ;
   rdfs:label "kin with"@en ;
+  rdfs:range bdo:Person ;
   skos:definition "Root property that expresses some kinship relation between the subject and object Persons."@en ;
 .
 bdo:labelConnection
@@ -3276,6 +3154,13 @@ bdo:personName
   rdfs:range bdo:PersonName ;
   skos:definition "describe a name for a Person"@en ;
 .
+bdo:personNameType
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:PersonName ;
+  rdfs:label "name type"@en ;
+  rdfs:range bdo:PersonNameType ;
+  skos:definition "describe a name type for a Person"@en ;
+.
 bdo:personOfSect
   a owl:ObjectProperty ;
   rdfs:domain bdo:Person ;
@@ -3470,7 +3355,7 @@ indicates that bdr:W22084 is considered to be scanned images from a reproduction
 bdo:restored
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:PersonNameOrBiblioTitle ;
+  rdfs:domain bdo:Label ;
   rdfs:label "restored"@en ;
   rdfs:range rdf:langString ;
   skos:definition "Indicates a restoration of the original PersonName or WorkTitle"@en ;
@@ -3491,7 +3376,7 @@ Such reconstructions are typically approximations to the original and there will
 bdo:restoredAlt
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:PersonNameOrBiblioTitle ;
+  rdfs:domain bdo:Label ;
   rdfs:label "restored alternative"@en ;
   rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:restored ;
