@@ -3,29 +3,9 @@
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: PersonShapes
 
-@prefix Binding: <http://purl.bdrc.io/ontology/types/Binding/> .
-@prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
-@prefix Creator: <http://purl.bdrc.io/ontology/roles/Creator/> .
-@prefix DateIndication: <http://purl.bdrc.io/ontology/types/DateIndication/> .
-@prefix FEMCScheme: <http://purl.bdrc.io/resource/FEMCScheme/> .
-@prefix Identifier: <http://purl.bdrc.io/ontology/types/Identifier/> .
-@prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript/> .
-@prefix Language: <http://purl.bdrc.io/ontology/types/Language/> .
-@prefix LineageType: <http://purl.bdrc.io/ontology/types/LineageType/> .
-@prefix Material: <http://purl.bdrc.io/ontology/types/Material/> .
-@prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType/> .
 @prefix PersonShapes: <http://purl.bdrc.io/ontology/shapes/core/PersonShapes/> .
-@prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType/> .
-@prefix PrintMethodScheme: <http://purl.bdrc.io/resource/PrintMethodScheme/> .
-@prefix Script: <http://purl.bdrc.io/ontology/types/Script/> .
-@prefix Taxonomy: <http://purl.bdrc.io/ontology/types/Taxonomy/> .
-@prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition/> .
-@prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration/> .
-@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType/> .
-@prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admin.data/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
