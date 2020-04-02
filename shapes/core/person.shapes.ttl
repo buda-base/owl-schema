@@ -51,6 +51,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bds:AssociatedPersonsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Kinshp relations"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
 bds:FemaleShape
   a sh:NodeShape ;
   rdfs:label "Female Shape"@en ;
@@ -63,22 +68,11 @@ bds:IdentityPropertyGroup
   rdfs:label "Identity relations"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:AssociatedPersonsPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
 bds:KinshipPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
   sh:group bds:AssociatedPersonsPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
-.
-bds:StudentTeacherPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Student/Teacher relations"@en ;
-  sh:group bds:AssociatedPersonsPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:MaleShape
   a sh:NodeShape ;
@@ -454,20 +448,20 @@ bds:PersonShape-personStudentOf
   a sh:PropertyShape ;
   sh:path bdo:personStudentOf ;
   dash:editor dash:InstancesSelectEditor ;
+  sh:class bdo:Person ;
   sh:description "this Person may have zero or more teachers."@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "student of"@en ;
-  sh:class bdo:Person ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-personTeacherOf
   a sh:PropertyShape ;
   sh:path bdo:personTeacherOf ;
   dash:editor dash:InstancesSelectEditor ;
+  sh:class bdo:Person ;
   sh:description "this Person may have zero or more students."@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
-  sh:class bdo:Person ;
   sh:order "1"^^xsd:decimal ;
 .
 PersonShapes:
@@ -475,4 +469,10 @@ PersonShapes:
   owl:imports <http://datashapes.org/dash> ;
   owl:imports bdo: ;
   owl:versionInfo "SHACL constraints for Person" ;
+.
+bds:StudentTeacherPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Student/Teacher relations"@en ;
+  sh:group bds:AssociatedPersonsPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
 .
