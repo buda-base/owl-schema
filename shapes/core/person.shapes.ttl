@@ -63,10 +63,22 @@ bds:IdentityPropertyGroup
   rdfs:label "Identity relations"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:KinshipPropertyGroup
+bds:AssociatedPersonsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
   sh:order "3"^^xsd:decimal ;
+.
+bds:KinshipPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Kinshp relations"@en ;
+  sh:group bds:AssociatedPersonsPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:StudentTeacherPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Student/Teacher relations"@en ;
+  sh:group bds:AssociatedPersonsPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
 .
 bds:MaleShape
   a sh:NodeShape ;
@@ -77,7 +89,7 @@ bds:MaleShape
 .
 bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
+  rdfs:label "Name relations"@en ;
 .
 bds:PersonNameShape
   a sh:NodeShape ;
@@ -437,6 +449,26 @@ bds:PersonShape-personName
   sh:node bds:PersonNameShape ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal ;
+.
+bds:PersonShape-personStudentOf
+  a sh:PropertyShape ;
+  sh:path bdo:personStudentOf ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more teachers."@en ;
+  sh:group bds:StudentTeacherPropertyGroup ;
+  sh:name "student of"@en ;
+  sh:class bdo:Person ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:PersonShape-personTeacherOf
+  a sh:PropertyShape ;
+  sh:path bdo:personTeacherOf ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more students."@en ;
+  sh:group bds:StudentTeacherPropertyGroup ;
+  sh:name "teacher of"@en ;
+  sh:class bdo:Person ;
+  sh:order "1"^^xsd:decimal ;
 .
 PersonShapes:
   a owl:Ontology ;
