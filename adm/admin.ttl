@@ -94,12 +94,12 @@ adm:LogEntry
 .
 adm:Organization
   a owl:Class ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of foaf:Organization "@en ;
   adm:translationPriority 2 ;
   rdfs:comment "An administrative organization is one that is only relevant to the administrative data (ex: a content provider of images or metadata)"@en ;
   rdfs:label "organization"@en ;
   rdfs:subClassOf adm:Entity ;
+  owl:deprecated true ;
 .
 adm:Outline
   a owl:Class ;
@@ -178,9 +178,8 @@ adm:WorkOrAdmOutline
 adm:access
   a owl:AnnotationProperty ;
   a owl:ObjectProperty ;
-  owl:deprecated true ;
-  adm:deprecatedComment "this Union is not used anywhere and can be removed w/o further consideration"@en ;
   adm:catalogingConvention "Access to images should be indicated in the item, not the work"@en ;
+  adm:deprecatedComment "this Union is not used anywhere and can be removed w/o further consideration"@en ;
   adm:technicalComment """adm:access is used on adm:AdminData for which:
 
     adm:adminAbout/rdf:type/rdfs:subClassOf bdo:Item
@@ -191,6 +190,7 @@ i.e., the access is about the content associated with a :Work not the metadata a
   rdfs:label "access"@en ;
   rdfs:range adm:Access ;
   rdfs:seeAlso adm:Access ;
+  owl:deprecated true ;
 .
 adm:adminAbout
   a owl:AnnotationProperty ;
@@ -207,30 +207,30 @@ adm:adminAbout
 .
 adm:attributionName
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :attributionName"@en ;
   rdfs:comment "Name used when attributing a work or images to the corresponding author or provider"@en ;
   rdfs:domain bdo:Entity ;
   rdfs:label "attribution name"@en ;
   rdfs:range rdf:langString ;
+  owl:deprecated true ;
 .
 adm:attributionStatement
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :attributionStatement"@en ;
   rdfs:comment "Complete statement used when attributing a work or images to the corresponding author or provider"@en ;
   rdfs:domain bdo:Entity ;
   rdfs:label "attribution statement"@en ;
   rdfs:range rdf:langString ;
+  owl:deprecated true ;
 .
 adm:attributionURL
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :attributionURL"@en ;
   rdfs:comment "URL used when attributing a work or images to the corresponding author or provider"@en ;
   rdfs:domain bdo:Entity ;
   rdfs:label "attribution url"@en ;
   rdfs:range xsd:anyURI ;
+  owl:deprecated true ;
 .
 adm:canonicalHtml
   a owl:AnnotationProperty ;
@@ -304,32 +304,32 @@ adm:convertValueToClass
 .
 adm:copyrightOwner
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :copyrightOwner "@en ;
   rdfs:comment "The copyright holder to the metadata representation of the :Entity resource"@en ;
   rdfs:domain adm:LegalData ;
   rdfs:label "copyright holder to resource metadata"@en ;
   rdfs:range adm:Organization ;
   rdfs:seeAlso adm:Organization ;
+  owl:deprecated true ;
 .
 adm:defaultContentLicense
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :defaultContentLicense "@en ;
   adm:translationPriority 2 ;
   rdfs:comment "For a given provider the default content license to use"@en ;
   rdfs:domain adm:ContentProvider ;
   rdfs:label "default content license"@en ;
   rdfs:range bdo:License ;
+  owl:deprecated true ;
 .
 adm:defaultMetadataLicense
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :defaultMetadataLicense "@en ;
   adm:translationPriority 2 ;
   rdfs:domain adm:ContentProvider ;
   rdfs:label "default metadata license"@en ;
   rdfs:range bdo:License ;
+  owl:deprecated true ;
 .
 adm:deprecatedComment
   a owl:AnnotationProperty ;
@@ -354,7 +354,6 @@ adm:geoRestriction
   rdfs:label "geo restriction"@en ;
   rdfs:range bdo:Place ;
 .
-
 adm:gitPath
   a owl:DatatypeProperty ;
   adm:translationPriority 2 ;
@@ -418,13 +417,13 @@ adm:imagesStatus
 .
 adm:inRegion
   a owl:ObjectProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :inRegion "@en ;
   adm:translationPriority 2 ;
   rdfs:comment "The region or plaorganization or person that provided the eText or image content"@en ;
   rdfs:domain adm:Organization ;
   rdfs:label "in region"@en ;
   rdfs:range bdo:Place ;
+  owl:deprecated true ;
 .
 adm:initialProvider
   a owl:ObjectProperty ;
@@ -452,7 +451,6 @@ adm:legacyImageGroupRID
 .
 adm:license
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "this property is now defined in bdo core as bdo:license" ;
   adm:translationPriority 2 ;
   rdfs:comment "The license under which access to the metadata representation of the :Entity resource is provided"@en ;
@@ -460,6 +458,7 @@ adm:license
   rdfs:label "license"@en ;
   rdfs:range bdo:License ;
   rdfs:seeAlso bdo:License ;
+  owl:deprecated true ;
 .
 adm:logDate
   a owl:AnnotationProperty ;
@@ -793,13 +792,13 @@ adm:technicalComment
 .
 adm:termsOfUse
   a owl:AnnotationProperty ;
-  owl:deprecated true ;
   adm:deprecatedComment "deprecated in favor of :termsOfUse "@en ;
   rdfs:comment "The terms of use for the metadata representation of the :Entity resource"@en ;
   rdfs:domain adm:LegalData ;
   rdfs:label "terms of use for the resource metadata"@en ;
   rdfs:range adm:TermsOfUse ;
   rdfs:seeAlso adm:TermsOfUse ;
+  owl:deprecated true ;
 .
 adm:translationPriority
   a owl:AnnotationProperty ;

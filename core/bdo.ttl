@@ -22,8 +22,8 @@
 # imports: http://purl.bdrc.io/resource/PrintMethodScheme/
 # imports: http://purl.bdrc.io/resource/ScriptScheme/
 # imports: http://purl.bdrc.io/resource/SubjectScheme/
-# imports: http://purl.bdrc.io/resource/TraditionScheme/
 # imports: http://purl.bdrc.io/resource/TermsOfUseScheme/
+# imports: http://purl.bdrc.io/resource/TraditionScheme/
 # imports: http://purl.bdrc.io/resource/TransliterationScheme/
 # prefix: bdo
 
@@ -103,12 +103,6 @@ bdo:
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
 bdo:Access
-  rdfs:subClassOf bdo:Type ;
-.
-bdo:ConceptProvider
-  rdfs:subClassOf bdo:Type ;
-.
-bdo:TermsOfUse
   rdfs:subClassOf bdo:Type ;
 .
 bdo:Agent
@@ -1235,6 +1229,9 @@ bdo:Subtitle
 bdo:Taxonomy
   rdfs:subClassOf bdo:Type ;
 .
+bdo:TermsOfUse
+  rdfs:subClassOf bdo:Type ;
+.
 bdo:TextualEntity
   a owl:Class ;
   adm:translationPriority 2 ;
@@ -1425,14 +1422,24 @@ bdo:WorkEvent
   skos:definition "An event associated with the production of a Work."@en ;
   skos:editorialNote "An event associated with the production of a :Work. Event information is gathered from colophons and publication data presented in the publishede form of texts"@en ;
 .
-bdo:WorkType
-  rdfs:subClassOf bdo:Type ;
-.
 bdo:abbreviationOf
   a owl:ObjectProperty ;
   rdfs:label "abbreviation of"@en ;
   rdfs:subPropertyOf bdo:labelConnection ;
   skos:definition "indicates that this label is a shortened. abbreviated form of the object label"@en ;
+.
+bdo:access
+  a owl:AnnotationProperty ;
+  adm:catalogingConvention "Access to images should be indicated in the item, not the work"@en ;
+  adm:technicalComment """bdo:access is used on bdo:Item for which:
+
+    rdfs:subClassOf bdo:Item
+
+i.e., the access is about the content associated with a :Work not the metadata about the :Work""" ;
+  rdfs:comment "The type of online access permitted for the etext and/or images for an Item."@en ;
+  rdfs:domain bdo:Item ;
+  rdfs:label "access"@en ;
+  rdfs:range bdo:Access ;
 .
 bdo:agent
   a owl:ObjectProperty ;
@@ -1448,6 +1455,27 @@ bdo:appliedMaterial
   rdfs:range bdo:Material ;
   rdfs:subProperyOf bf:appliedMaterial ;
   skos:definition "Indicates the material applied on a work (ink, golden leaf, etc.)"@en ;
+.
+bdo:attributionName
+  a owl:AnnotationProperty ;
+  rdfs:comment "Name used when attributing a work or images to the corresponding author or provider"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution name"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:attributionStatement
+  a owl:AnnotationProperty ;
+  rdfs:comment "Complete statement used when attributing a work or images to the corresponding author or provider"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution statement"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:attributionURL
+  a owl:AnnotationProperty ;
+  rdfs:comment "URL used when attributing a work or images to the corresponding author or provider"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution url"@en ;
+  rdfs:range xsd:anyURI ;
 .
 bdo:authorshipStatement
   a owl:DatatypeProperty ;
@@ -1703,6 +1731,20 @@ bdo:conversionOf
   rdfs:subPropertyOf bdo:labelConnection ;
   skos:definition "This label is a conversion of the object label from one orthographic form to another in the same language, e.g., Khmer"@en ;
 .
+bdo:copyrightOwner
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Instance
+          bdo:LegalData
+          bdo:Work
+        ) ;
+    ] ;
+  rdfs:label "copyright owner"@en ;
+  rdfs:range bdo:ContentProvider ;
+  skos:definition "Indicates the content provider that owns copyright for the associated entity (Work, Instance, Metadata, etc)."@en ;
+.
 bdo:corporationMemberType
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
@@ -1753,27 +1795,6 @@ bdo:dateIndication
   rdfs:range bdo:DateIndication ;
   skos:editorialNote "Not Used: associates a :Date with at most one :ChineseDateIndication such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :DateIndication metadata"@en ;
 .
-bdo:attributionName
-  a owl:AnnotationProperty ;
-  rdfs:comment "Name used when attributing a work or images to the corresponding author or provider"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "attribution name"@en ;
-  rdfs:range rdf:langString ;
-.
-bdo:attributionStatement
-  a owl:AnnotationProperty ;
-  rdfs:comment "Complete statement used when attributing a work or images to the corresponding author or provider"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "attribution statement"@en ;
-  rdfs:range rdf:langString ;
-.
-bdo:attributionURL
-  a owl:AnnotationProperty ;
-  rdfs:comment "URL used when attributing a work or images to the corresponding author or provider"@en ;
-  rdfs:domain bdo:Entity ;
-  rdfs:label "attribution url"@en ;
-  rdfs:range xsd:anyURI ;
-.
 bdo:defaultContentLicense
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
@@ -1788,14 +1809,6 @@ bdo:defaultMetadataLicense
   rdfs:domain bdo:ContentProvider ;
   rdfs:label "default metadata license"@en ;
   rdfs:range bdo:License ;
-.
-bdo:inRegion
-  a owl:ObjectProperty ;
-  adm:translationPriority 2 ;
-  rdfs:comment "A geographic region where an organization is primarily located"@en ;
-  rdfs:domain bdo:Organization ;
-  rdfs:label "in region"@en ;
-  rdfs:range bdo:Place ;
 .
 bdo:derivativeOf
   a owl:ObjectProperty ;
@@ -2491,6 +2504,14 @@ bdo:inCollection
   skos:definition "This instance is contained at the identified institution."@en ;
   skos:editorialNote "was :workCollection."@en ;
 .
+bdo:inRegion
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:comment "A geographic region where an organization is primarily located"@en ;
+  rdfs:domain bdo:Organization ;
+  rdfs:label "in region"@en ;
+  rdfs:range bdo:Place ;
+.
 bdo:inRootInstance
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
@@ -2796,19 +2817,6 @@ bdo:legacyOutlineNodeRID
   rdfs:label "legacy outline node rid"@en ;
   rdfs:range xsd:string ;
   skos:definition "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
-.
-bdo:access
-  a owl:AnnotationProperty ;
-  adm:catalogingConvention "Access to images should be indicated in the item, not the work"@en ;
-  adm:technicalComment """bdo:access is used on bdo:Item for which:
-
-    rdfs:subClassOf bdo:Item
-
-i.e., the access is about the content associated with a :Work not the metadata about the :Work""" ;
-  rdfs:comment "The type of online access permitted for the etext and/or images for an Item."@en ;
-  rdfs:domain bdo:Item ;
-  rdfs:label "access"@en ;
-  rdfs:range bdo:Access ;
 .
 bdo:license
   a owl:ObjectProperty ;
@@ -3407,20 +3415,6 @@ bdo:printMethod
   rdfs:range bdo:PrintMethod ;
   skos:definition "Indicates the printing method used for a PhysicalInstance associated with some Work."@en ;
 .
-bdo:copyrightOwner
-  a owl:ObjectProperty ;
-  rdfs:domain [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Instance
-          bdo:LegalData
-          bdo:Work
-        ) ;
-    ] ;
-  rdfs:label "copyright owner"@en ;
-  rdfs:range bdo:ContentProvider ;
-  skos:definition "Indicates the content provider that owns copyright for the associated entity (Work, Instance, Metadata, etc)."@en ;
-.
 bdo:provider
   a owl:ObjectProperty ;
   rdfs:domain [
@@ -3433,25 +3427,6 @@ bdo:provider
   rdfs:label "content provider"@en ;
   rdfs:range bdo:ContentProvider ;
   skos:definition "Indicates the content provider for the associated entity (Work, Instance, Metadata, etc)."@en ;
-.
-bdo:termsOfUse
-  a owl:ObjectProperty ;
-  rdfs:comment "The terms of use for the metadata representation of the :Entity resource"@en ;
-  rdfs:domain [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Item
-          bdo:LegalData
-        ) ;
-    ] ;
-  rdfs:label "terms of use for the resource metadata"@en ;
-  rdfs:range [
-      a owl:Thing ;
-      owl:unionOf (
-          bdo:TermsOfUse
-          xsd:anyURI
-        ) ;
-    ] ;
 .
 bdo:publisherLocation
   a owl:DatatypeProperty ;
@@ -3628,6 +3603,25 @@ bdo:sourcePrinteryStatement
   skos:editorialNote """Free-text expression of the source printery for the Work.
 
 Should be converted to a reference to a Place resource"""@en ;
+.
+bdo:termsOfUse
+  a owl:ObjectProperty ;
+  rdfs:comment "The terms of use for the metadata representation of the :Entity resource"@en ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Item
+          bdo:LegalData
+        ) ;
+    ] ;
+  rdfs:label "terms of use for the resource metadata"@en ;
+  rdfs:range [
+      a owl:Thing ;
+      owl:unionOf (
+          bdo:TermsOfUse
+          xsd:anyURI
+        ) ;
+    ] ;
 .
 bdo:translationOf
   a owl:ObjectProperty ;

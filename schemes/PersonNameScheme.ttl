@@ -12,7 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdr:PersonNameType
+bdo:PersonNameType
   a owl:Class ;
   rdfs:label "Person Name Type"@en ;
   skos:definition "represents the type of a Person Name"@en ;
