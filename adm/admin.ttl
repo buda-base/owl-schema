@@ -3,7 +3,6 @@
 # imports: http://purl.bdrc.io/ontology/adm/LegalData/
 # imports: http://purl.bdrc.io/ontology/adm/types/Access/
 # imports: http://purl.bdrc.io/ontology/adm/types/GitRepo/
-# imports: http://purl.bdrc.io/ontology/adm/types/License/
 # imports: http://purl.bdrc.io/ontology/adm/types/OutlineType/
 # imports: http://purl.bdrc.io/ontology/adm/types/Status/
 # imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
@@ -37,7 +36,6 @@ adm:
   owl:imports <http://purl.bdrc.io/ontology/adm/LegalData/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Access/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/GitRepo/> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/License/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/OutlineType/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
@@ -95,9 +93,6 @@ adm:ImagesStatus
 .
 adm:LegalData
   rdfs:subClassOf owl:Thing ;
-.
-adm:License
-  rdfs:subClassOf adm:Type ;
 .
 adm:LogEntry
   a owl:Class ;
@@ -322,14 +317,14 @@ adm:defaultContentLicense
   rdfs:comment "For a given provider the default content license to use"@en ;
   rdfs:domain adm:ContentProvider ;
   rdfs:label "default content license"@en ;
-  rdfs:range adm:License ;
+  rdfs:range bdo:License ;
 .
 adm:defaultMetadataLicense
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
   rdfs:domain adm:ContentProvider ;
   rdfs:label "default metadata license"@en ;
-  rdfs:range adm:License ;
+  rdfs:range bdo:License ;
 .
 adm:deprecatedComment
   a owl:AnnotationProperty ;
@@ -441,12 +436,14 @@ adm:legacyImageGroupRID
 .
 adm:license
   a owl:AnnotationProperty ;
+  owl:deprecated true ;
+  adm:deprecatedComment "this property is now defined in bdo core as bdo:license" ;
   adm:translationPriority 2 ;
   rdfs:comment "The license under which access to the metadata representation of the :Entity resource is provided"@en ;
   rdfs:domain adm:LegalData ;
   rdfs:label "license"@en ;
-  rdfs:range adm:License ;
-  rdfs:seeAlso adm:License ;
+  rdfs:range bdo:License ;
+  rdfs:seeAlso bdo:License ;
 .
 adm:logDate
   a owl:AnnotationProperty ;

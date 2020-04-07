@@ -9,6 +9,7 @@
 # imports: http://purl.bdrc.io/resource/GenderScheme/
 # imports: http://purl.bdrc.io/resource/IdentifierScheme/
 # imports: http://purl.bdrc.io/resource/LanguageScheme/
+# imports: http://purl.bdrc.io/resource/LicenseScheme/
 # imports: http://purl.bdrc.io/resource/LineageScheme/
 # imports: http://purl.bdrc.io/resource/MaterialScheme/
 # imports: http://purl.bdrc.io/resource/PaginationScheme/
@@ -79,6 +80,7 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/LanguageScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/LicenseScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/LineageScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/MaterialScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/PaginationScheme/> ;
@@ -683,6 +685,9 @@ bdo:LangStringOrNoColophon
 bdo:Language
   rdfs:subClassOf bdo:Type ;
 .
+bdo:License
+  rdfs:subClassOf bdo:Type ;
+.
 bdo:Lineage
   a owl:Class ;
   rdfs:label "Lineage"@en ;
@@ -1210,7 +1215,7 @@ bdo:Taxonomy
 bdo:TextualEntity
   a owl:Class ;
   adm:translationPriority 2 ;
-  rdfs:comment ":TextualEntity is a subclass of :Work, or :Item or :Etext that is constructed so that the adm:license range can be applied across"@en ;
+  rdfs:comment ":TextualEntity is a subclass of :Work, or :Item or :Etext that is constructed so that the bdo:license range can be applied across"@en ;
   rdfs:label "textual entity"@en ;
   rdfs:subClassOf bdo:CoreUnion ;
   rdfs:subClassOf [
@@ -2727,13 +2732,18 @@ bdo:legacyOutlineNodeRID
 .
 bdo:license
   a owl:ObjectProperty ;
-  adm:replaceWith adm:license ;
-  rdfs:domain bdo:TextualEntity ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Work
+          bdo:Instance
+          adm:AdminData
+          adm:LegalData
+        ) ;
+    ] ;
   rdfs:label "license"@en ;
-  rdfs:seeAlso bdo:License ;
-  owl:deprecated true ;
-  skos:definition "The license under which access to the Work is provided"@en ;
-  skos:historyNote "deprecated by adm:license"@en ;
+  rdfs:range bdo:License ;
+  skos:definition "The license under which access to the Work, Instance or admindata is provided"@en ;
 .
 bdo:lineageDownFrom
   a owl:ObjectProperty ;

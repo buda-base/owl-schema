@@ -1,11 +1,12 @@
 # baseURI: http://purl.bdrc.io/ontology/adm/LegalData/
 # imports: http://purl.bdrc.io/ontology/adm/ContentProvider/
 # imports: http://purl.bdrc.io/ontology/adm/types/Access/
-# imports: http://purl.bdrc.io/ontology/adm/types/License/
+# imports: http://purl.bdrc.io/resource/LicenseScheme/
 # imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # prefix: LegalData
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix LegalData: <http://purl.bdrc.io/ontology/adm/LegalData/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
@@ -21,20 +22,20 @@
 
 eftr:LegalData a adm:LegalData ;
     adm:copyrightOwner eftr:EFT ;
-    adm:license bda:LicenseCC0 ;
+    bdo:license bdr:LicenseCC0 ;
     adm:provider eftr:EFT ;
     skos:prefLabel "Metadata related to the translations by 84000, provided under the CC0 License"@en ;
 .
 bda:LD_BDRC_Copyright
   a adm:LegalData ;
-  adm:license bda:LicenseAllRightsReserved ;
+  bdo:license bdr:LicenseAllRightsReserved ;
   adm:provider bda:CP021 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "Provided by BDRC, under copyright, all rights reserved"@en ;
 .
 bda:LD_BDRC_PD
   a adm:LegalData ;
-  adm:license bda:LicensePublicDomain ;
+  bdo:license bdr:LicensePublicDomain ;
   adm:provider bda:CP021 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "Provided by BDRC, Public domain"@en ;
@@ -43,7 +44,7 @@ bda:LD_BDRC_CC0
   a adm:LegalData ;
   adm:provider bda:CP021 ;
   adm:copyrightOwner bda:CP021 ;
-  adm:license bda:LicenseCC0 ;
+  bdo:license bdr:LicenseCC0 ;
   adm:termsOfUse bda:TermsOfUseBDRCGeneral ;
   skos:prefLabel "Provided by BDRC under the CC0 license"@en ;
 .
@@ -51,13 +52,13 @@ bda:LD_rKTs_CC0
   a adm:LegalData ;
   adm:provider bda:CP036 ;
   adm:copyrightOwner bda:CP036 ;
-  adm:license bda:LicenseCC0 ;
+  bdo:license bdr:LicenseCC0 ;
   skos:prefLabel "Provided by rKTs under the CC0 license"@en ;
 .
 bda:LD_CUDL_metadata
   a adm:LegalData ;
   adm:copyrightOwner bda:CP025 ;
-  adm:license bda:LicenseCCBYNC30U ;
+  bdo:license bdr:LicenseCCBYNC30U ;
   adm:provider bda:CP025 ;
   adm:termsOfUse "https://cudl.lib.cam.ac.uk/terms/"^^xsd:anyURI ;
   skos:prefLabel "Provided by CUDL under the CC BY NC 3.0 license, see original metadata record for more information"@en ;
@@ -65,7 +66,7 @@ bda:LD_CUDL_metadata
 bda:LD_CUDL_content
   a adm:LegalData ;
   adm:copyrightOwner bda:CP025 ;
-  adm:license bda:LicenseAllRightsReserved ;
+  bdo:license bdr:LicenseAllRightsReserved ;
   adm:provider bda:CP025 ;
   adm:termsOfUse "https://cudl.lib.cam.ac.uk/terms/"^^xsd:anyURI ;
   skos:prefLabel "Provided by CUDL, copyright is claimed on the images, see terms of use"@en ;
@@ -73,33 +74,33 @@ bda:LD_CUDL_content
 bda:LD_EAP_metadata
   a adm:LegalData ;
   adm:copyrightOwner bda:CP026 ;
-  adm:license bda:LicenseCC0 ;
+  bdo:license bdr:LicenseCC0 ;
   adm:provider bda:CP026 ;
   skos:prefLabel "Provided by EAP under the CC0 license"@en ;
 .
 bda:LD_EAP_content
   a adm:LegalData ;
   adm:copyrightOwner bda:CP026 ;
-  adm:license bda:LicenseAllRightsReserved ;
+  bdo:license bdr:LicenseAllRightsReserved ;
   adm:provider bda:CP026 ;
   skos:prefLabel "Provided by EAP, copyright is semi-explicitely claimed, see terms of use"@en ;
 .
 bda:LD_SBB_content
   a adm:LegalData ;
-  adm:license bda:LicensePublicDomain ;
+  bdo:license bdr:LicensePublicDomain ;
   adm:provider bda:CP037 ;
   skos:prefLabel "Provided by Staatsbibliothek zu Berlin, copyright unspecified, interpreted as Public Domain"@en ;
 .
 bda:LD_LOC_PD
   a adm:LegalData ;
-  adm:license bda:LicensePublicDomain ;
+  bdo:license bdr:LicensePublicDomain ;
   adm:provider bda:CP038 ;
   skos:prefLabel "Provided by Library of Congress, Public Domain"@en ;
   adm:termsOfUse "https://www.loc.gov/legal/"^^xsd:anyURI ;
 .
 bda:LD_LOC_metadata
   a adm:LegalData ;
-  adm:license bda:LicenseCC0 ;
+  bdo:license bdr:LicenseCC0 ;
   adm:provider bda:CP038 ;
   skos:prefLabel "Provided by Library of Congress, CC0 license"@en ;
   adm:termsOfUse "https://www.loc.gov/legal/"^^xsd:anyURI ;
@@ -107,51 +108,51 @@ bda:LD_LOC_metadata
 bda:LD_GRETIL
   a adm:LegalData ;
   adm:copyrightOwner bda:CP028 ;
-  adm:license bda:LicenseCC0 ;
+  bdo:license bdr:LicenseCC0 ;
   adm:provider bda:CP028 ;
   skos:prefLabel "Provided by GRETIL under the CC0 license"@en ;
 .
 bda:LD_SAT_images
   a adm:LegalData ;
   adm:copyrightOwner bda:CP030 ;
-  adm:license bda:LicenseCCBYNCSA4U ;
+  bdo:license bdr:LicenseCCBYNCSA4U ;
   adm:provider bda:CP030 ;
   skos:prefLabel "Provided by SAT under the CC BY-NC-SA 4.0 license"@en ;
 .
 bda:LD_BNF_PD
   a adm:LegalData ;
-  adm:license bda:LicensePublicDomain ;
+  bdo:license bdr:LicensePublicDomain ;
   adm:provider bda:CP022 ;
   skos:prefLabel "Source gallica.bnf.fr / BnF, Public domain"@en ;
 .
 bda:LD_IA_PD
   a adm:LegalData ;
-  adm:license bda:LicensePublicDomain ;
+  bdo:license bdr:LicensePublicDomain ;
   adm:provider bda:CP029 ;
   skos:prefLabel "Provided by Internet Archive, Public domain"@en ;
 .
 bda:LD_IA_Metadata
   a adm:LegalData ;
-  adm:license bda:LicenseNoKnownCopyright ;
+  bdo:license bdr:LicenseNoKnownCopyright ;
   adm:provider bda:CP029 ;
   rdfs:comment "From a private communication: \"most metadata comes from others. sometimes others declare something, but we make not claims about it.\""@en ;
   skos:prefLabel "Provided by Internet Archive, No copyright claim"@en ;
 .
 bda:LD_DILA_BSADP
   a adm:LegalData ;
-  adm:license bda:LicenseCCBYSA3U ;
+  bdo:license bdr:LicenseCCBYSA3U ;
   adm:provider bda:CP048 ;
   skos:prefLabel "Provided by DILA, Creative Commons BY-NC-SA 3.0 Unported License"@en ;
 .
 bda:LD_NGMPP_Metadata
   a adm:LegalData ;
-  adm:license bda:LicenseCopyrightUndetermined ;
+  bdo:license bdr:LicenseCopyrightUndetermined ;
   adm:provider bda:CP049 ;
   skos:prefLabel "Provided by NGMPP, Copyright Undetermined"@en ;
 .
 bda:LD_SRC_Metadata
   a adm:LegalData ;
-  adm:license bda:LicenseCopyrightUndetermined ;
+  bdo:license bdr:LicenseCopyrightUndetermined ;
   adm:provider bda:CP050 ;
   skos:prefLabel "Provided by Sakya Research Center, Copyright Undetermined"@en ;
 .
@@ -159,7 +160,7 @@ LegalData:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Access/> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/License/> ;
+  owl:imports <http://purl.bdrc.io/resource/LicenseScheme/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
 .
 adm:LegalData
