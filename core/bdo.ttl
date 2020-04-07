@@ -1,14 +1,17 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/types/Taxonomy/
+# imports: http://purl.bdrc.io/resource/AccessScheme/
 # imports: http://purl.bdrc.io/resource/BindingScheme/
 # imports: http://purl.bdrc.io/resource/ChineseMonasticScheme/
 # imports: http://purl.bdrc.io/resource/ContentMethodScheme/
+# imports: http://purl.bdrc.io/resource/ContentProviderScheme/
 # imports: http://purl.bdrc.io/resource/CreatorScheme/
 # imports: http://purl.bdrc.io/resource/DateScheme/
 # imports: http://purl.bdrc.io/resource/FEMCScheme/
 # imports: http://purl.bdrc.io/resource/GenderScheme/
 # imports: http://purl.bdrc.io/resource/IdentifierScheme/
 # imports: http://purl.bdrc.io/resource/LanguageScheme/
+# imports: http://purl.bdrc.io/resource/LegalScheme/
 # imports: http://purl.bdrc.io/resource/LicenseScheme/
 # imports: http://purl.bdrc.io/resource/LineageScheme/
 # imports: http://purl.bdrc.io/resource/MaterialScheme/
@@ -20,6 +23,7 @@
 # imports: http://purl.bdrc.io/resource/ScriptScheme/
 # imports: http://purl.bdrc.io/resource/SubjectScheme/
 # imports: http://purl.bdrc.io/resource/TraditionScheme/
+# imports: http://purl.bdrc.io/resource/TermsOfUseScheme/
 # imports: http://purl.bdrc.io/resource/TransliterationScheme/
 # prefix: bdo
 
@@ -71,15 +75,18 @@ bdo:
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
+  owl:imports <http://purl.bdrc.io/resource/AccessScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/BindingScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ChineseMonasticScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ContentMethodScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/ContentProviderScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/CreatorScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/DateScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/LanguageScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/LegalScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/LicenseScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/LineageScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/MaterialScheme/> ;
@@ -90,9 +97,19 @@ bdo:
   owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/SubjectScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/TermsOfUseScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/TraditionScheme/> ;
   owl:imports <http://purl.bdrc.io/resource/TransliterationScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
+.
+bdo:Access
+  rdfs:subClassOf bdo:Type ;
+.
+bdo:ConceptProvider
+  rdfs:subClassOf bdo:Type ;
+.
+bdo:TermsOfUse
+  rdfs:subClassOf bdo:Type ;
 .
 bdo:Agent
   a owl:Class ;
@@ -212,6 +229,9 @@ bdo:ContentLocation
 .
 bdo:ContentMethod
   rdfs:subClassOf bdo:Type ;
+.
+bdo:ContentProvider
+  rdfs:subClassOf bdo:Organization ;
 .
 bdo:CopyEvent
   a owl:Class ;
@@ -683,6 +703,9 @@ bdo:LangStringOrNoColophon
     ] ;
 .
 bdo:Language
+  rdfs:subClassOf bdo:Type ;
+.
+bdo:LegalData
   rdfs:subClassOf bdo:Type ;
 .
 bdo:License
@@ -1730,6 +1753,50 @@ bdo:dateIndication
   rdfs:range bdo:DateIndication ;
   skos:editorialNote "Not Used: associates a :Date with at most one :ChineseDateIndication such as a :ChineseDynasty or reign of an Emperor. Not currently used pending import of :DateIndication metadata"@en ;
 .
+bdo:attributionName
+  a owl:AnnotationProperty ;
+  rdfs:comment "Name used when attributing a work or images to the corresponding author or provider"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution name"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:attributionStatement
+  a owl:AnnotationProperty ;
+  rdfs:comment "Complete statement used when attributing a work or images to the corresponding author or provider"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution statement"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:attributionURL
+  a owl:AnnotationProperty ;
+  rdfs:comment "URL used when attributing a work or images to the corresponding author or provider"@en ;
+  rdfs:domain bdo:Entity ;
+  rdfs:label "attribution url"@en ;
+  rdfs:range xsd:anyURI ;
+.
+bdo:defaultContentLicense
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:comment "For a given provider the default content license to use"@en ;
+  rdfs:domain bdo:ContentProvider ;
+  rdfs:label "default content license"@en ;
+  rdfs:range bdo:License ;
+.
+bdo:defaultMetadataLicense
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:domain bdo:ContentProvider ;
+  rdfs:label "default metadata license"@en ;
+  rdfs:range bdo:License ;
+.
+bdo:inRegion
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:comment "A geographic region where an organization is primarily located"@en ;
+  rdfs:domain bdo:Organization ;
+  rdfs:label "in region"@en ;
+  rdfs:range bdo:Place ;
+.
 bdo:derivativeOf
   a owl:ObjectProperty ;
   rdfs:comment """This work is a derivative of the referenced work. This means that it may be a later edition or a version with some \"corrections\"/changes to the content of the referenced work.
@@ -2730,6 +2797,19 @@ bdo:legacyOutlineNodeRID
   rdfs:range xsd:string ;
   skos:definition "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
 .
+bdo:access
+  a owl:AnnotationProperty ;
+  adm:catalogingConvention "Access to images should be indicated in the item, not the work"@en ;
+  adm:technicalComment """bdo:access is used on bdo:Item for which:
+
+    rdfs:subClassOf bdo:Item
+
+i.e., the access is about the content associated with a :Work not the metadata about the :Work""" ;
+  rdfs:comment "The type of online access permitted for the etext and/or images for an Item."@en ;
+  rdfs:domain bdo:Item ;
+  rdfs:label "access"@en ;
+  rdfs:range bdo:Access ;
+.
 bdo:license
   a owl:ObjectProperty ;
   rdfs:domain [
@@ -3326,6 +3406,52 @@ bdo:printMethod
   rdfs:label "print method"@en ;
   rdfs:range bdo:PrintMethod ;
   skos:definition "Indicates the printing method used for a PhysicalInstance associated with some Work."@en ;
+.
+bdo:copyrightOwner
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Instance
+          bdo:LegalData
+          bdo:Work
+        ) ;
+    ] ;
+  rdfs:label "copyright owner"@en ;
+  rdfs:range bdo:ContentProvider ;
+  skos:definition "Indicates the content provider that owns copyright for the associated entity (Work, Instance, Metadata, etc)."@en ;
+.
+bdo:provider
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Item
+          bdo:LegalData
+        ) ;
+    ] ;
+  rdfs:label "content provider"@en ;
+  rdfs:range bdo:ContentProvider ;
+  skos:definition "Indicates the content provider for the associated entity (Work, Instance, Metadata, etc)."@en ;
+.
+bdo:termsOfUse
+  a owl:ObjectProperty ;
+  rdfs:comment "The terms of use for the metadata representation of the :Entity resource"@en ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          bdo:Item
+          bdo:LegalData
+        ) ;
+    ] ;
+  rdfs:label "terms of use for the resource metadata"@en ;
+  rdfs:range [
+      a owl:Thing ;
+      owl:unionOf (
+          bdo:TermsOfUse
+          xsd:anyURI
+        ) ;
+    ] ;
 .
 bdo:publisherLocation
   a owl:DatatypeProperty ;

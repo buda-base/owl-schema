@@ -92,38 +92,10 @@
     </OntologySpec>
     
     <OntologySpec>
-        <!-- local version of the Access vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/Access/"/>
-        <altURL    rdf:resource="owl-schema/adm/types/access_types.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/access_types.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the ContentProvider vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/ContentProvider/"/>
-        <altURL    rdf:resource="owl-schema/adm/content_providers.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/content_providers.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
         <!-- local version of the GitRepo vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/GitRepo/"/>
         <altURL    rdf:resource="owl-schema/adm/types/git_repos.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/git_repos.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the LegalData vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/LegalData/"/>
-        <altURL    rdf:resource="owl-schema/adm/legal_entities.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/legal_entities.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the License vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/License/"/>
-        <altURL    rdf:resource="owl-schema/adm/types/license_types.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/license_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
@@ -138,13 +110,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/Status/"/>
         <altURL    rdf:resource="owl-schema/adm/types/status_types.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/status_types.ttl"/>
-    </OntologySpec>
-    
-    <OntologySpec>
-        <!-- local version of the TermsOfUse vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/TermsOfUse/"/>
-        <altURL    rdf:resource="owl-schema/adm/types/terms_of_use.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/adm/types/terms_of_use.ttl"/>
     </OntologySpec>
     
     
@@ -163,6 +128,13 @@
     <!-- ======== roles ======== -->
 
     <!-- ======== schemes ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the Access Types vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/AccessScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/AccessScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/AccessScheme.ttl"/>
+    </OntologySpec>
 
     <OntologySpec>
         <!-- local version of the Bindings vocabulary -->
@@ -183,6 +155,13 @@
         <publicURI rdf:resource="http://purl.bdrc.io/resource/ContentMethodScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/ContentMethodScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/ContentMethodScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the ContentProvider vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/ContentProviderScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/ContentProviderScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/ContentProviderScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
@@ -225,6 +204,20 @@
         <publicURI rdf:resource="http://purl.bdrc.io/resource/LanguageScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/LanguageScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/LanguageScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the LegalData vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/LegalDataScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/LegalDataScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/LegalDataScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the License vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/LicenseScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/LicenseScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/LicenseScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
@@ -288,6 +281,13 @@
         <publicURI rdf:resource="http://purl.bdrc.io/resource/SubjectScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/SubjectScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/SubjectScheme.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- local version of the TermsOfUse vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/resource/TermsOfUseScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/TermsOfUseScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/master/schemes/TermsOfUseScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>

@@ -1,10 +1,11 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
-# prefix: TermsOfUse
+# baseURI: http://purl.bdrc.io/resource/TermsOfUseScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: TermsOfUseScheme
 
-@prefix TermsOfUse: <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> .
+@prefix TermsOfUseScheme: <http://purl.bdrc.io/resource/TermsOfUseScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,21 +13,20 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-adm:TermsOfUse
+bdo:TermsOfUse
   a owl:Class ;
-  rdfs:comment "Individuals of type adm:TermsOfUse are statements regarding the intended uses that may be made of a class of resources"@en ;
   rdfs:label "Terms of Use"@en ;
+  skos:definition "Individuals of type bdo:TermsOfUse are statements regarding the intended uses that may be made of a class of resources"@en ;
 .
-TermsOfUse:
-  a owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
-.
-bda:TermsOfUseBDRCEtexts
-  a adm:TermsOfUse ;
+bdr:TermsOfUseBDRCEtexts
+  a bdo:TermsOfUse ;
+  a skos:Concept ;
   rdfs:comment "Terms of use of BDRC Etexts"@en ;
+  skos:topConceptOf bdr:TermsOfUseScheme ;
 .
-bda:TermsOfUseBDRCGeneral
-  a adm:TermsOfUse ;
+bdr:TermsOfUseBDRCGeneral
+  a bdo:TermsOfUse ;
+  a skos:Concept ;
   rdfs:comment """Public Domain Policy
 This policy applies only to content in the Public Domain, additional restrictions can apply to Public Domain content, see Restricted Content Policy.
 
@@ -131,18 +131,34 @@ BDRC may modify this Agreement from time to time, and your continued use of the 
 
 We welcome your input. Please contact us with any comments or questions at inquiry"""@en ;
   skos:prefLabel "BDRC General Terms of Use"@en ;
+  skos:topConceptOf bdr:TermsOfUseScheme ;
 .
-bda:TermsOfUseBDRCImages
-  a adm:TermsOfUse ;
+bdr:TermsOfUseBDRCImages
+  a bdo:TermsOfUse ;
+  a skos:Concept ;
   skos:prefLabel "BDRC scanned images terms of use"@en ;
+  skos:topConceptOf bdr:TermsOfUseScheme ;
 .
-bda:TermsOfUseBDRCMetadata
-  a adm:TermsOfUse ;
+bdr:TermsOfUseBDRCMetadata
+  a bdo:TermsOfUse ;
+  a skos:Concept ;
   rdfs:comment "The terms of use of the metadata shoud be spelled out here"@en ;
   skos:prefLabel "Metadata Terms of Use"@en ;
+  skos:topConceptOf bdr:TermsOfUseScheme ;
 .
-bda:TermsOfUseBDRCSourceCode
-  a adm:TermsOfUse ;
+bdr:TermsOfUseBDRCSourceCode
+  a bdo:TermsOfUse ;
+  a skos:Concept ;
   rdfs:comment "Terms of use for source code goes here"@en ;
   skos:prefLabel "Source code Terms of Use"@en ;
+  skos:topConceptOf bdr:TermsOfUseScheme ;
+.
+bdr:TermsOfUseScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "TermsOfUse Scheme"@en ;
+.
+TermsOfUseScheme:
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial Versiom" ;
 .

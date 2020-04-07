@@ -1,0 +1,213 @@
+# baseURI: http://purl.bdrc.io/resource/LegalScheme/
+# imports: http://purl.bdrc.io/resource/ContentProviderScheme/
+# imports: http://purl.bdrc.io/resource/LicenseScheme/
+# imports: http://purl.bdrc.io/resource/TermsOfUseScheme/
+# prefix: LegalScheme
+
+@prefix LegalScheme: <http://purl.bdrc.io/resource/LegalScheme/> .
+@prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eftr: <http://purl.84000.co/resource/core/> .
+
+eftr:LegalData 
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner eftr:EFT ;
+  bdo:license bdr:LicenseCC0 ;
+  bdo:provider eftr:EFT ;
+  skos:prefLabel "Metadata related to the translations by 84000, provided under the CC0 License"@en ;
+.
+bdr:LD_BDRC_Copyright
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicenseAllRightsReserved ;
+  bdo:provider bdr:CP021 ;
+  bdo:termsOfUse bdr:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "Provided by BDRC, under copyright, all rights reserved"@en ;
+.
+bdr:LD_BDRC_PD
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicensePublicDomain ;
+  bdo:provider bdr:CP021 ;
+  bdo:termsOfUse bdr:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "Provided by BDRC, Public domain"@en ;
+.
+bdr:LD_BDRC_CC0
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:provider bdr:CP021 ;
+  bdo:copyrightOwner bdr:CP021 ;
+  bdo:license bdr:LicenseCC0 ;
+  bdo:termsOfUse bdr:TermsOfUseBDRCGeneral ;
+  skos:prefLabel "Provided by BDRC under the CC0 license"@en ;
+.
+bdr:LD_rKTs_CC0
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:provider bdr:CP036 ;
+  bdo:copyrightOwner bdr:CP036 ;
+  bdo:license bdr:LicenseCC0 ;
+  skos:prefLabel "Provided by rKTs under the CC0 license"@en ;
+.
+bdr:LD_CUDL_metadata
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner bdr:CP025 ;
+  bdo:license bdr:LicenseCCBYNC30U ;
+  bdo:provider bdr:CP025 ;
+  bdo:termsOfUse "https://cudl.lib.cam.ac.uk/terms/"^^xsd:anyURI ;
+  skos:prefLabel "Provided by CUDL under the CC BY NC 3.0 license, see original metadata record for more information"@en ;
+.
+bdr:LD_CUDL_content
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner bdr:CP025 ;
+  bdo:license bdr:LicenseAllRightsReserved ;
+  bdo:provider bdr:CP025 ;
+  bdo:termsOfUse "https://cudl.lib.cam.ac.uk/terms/"^^xsd:anyURI ;
+  skos:prefLabel "Provided by CUDL, copyright is claimed on the images, see terms of use"@en ;
+.
+bdr:LD_EAP_metadata
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner bdr:CP026 ;
+  bdo:license bdr:LicenseCC0 ;
+  bdo:provider bdr:CP026 ;
+  skos:prefLabel "Provided by EAP under the CC0 license"@en ;
+.
+bdr:LD_EAP_content
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner bdr:CP026 ;
+  bdo:license bdr:LicenseAllRightsReserved ;
+  bdo:provider bdr:CP026 ;
+  skos:prefLabel "Provided by EAP, copyright is semi-explicitely claimed, see terms of use"@en ;
+.
+bdr:LD_SBB_content
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicensePublicDomain ;
+  bdo:provider bdr:CP037 ;
+  skos:prefLabel "Provided by Staatsbibliothek zu Berlin, copyright unspecified, interpreted as Public Domain"@en ;
+.
+bdr:LD_LOC_PD
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicensePublicDomain ;
+  bdo:provider bdr:CP038 ;
+  skos:prefLabel "Provided by Library of Congress, Public Domain"@en ;
+  bdo:termsOfUse "https://www.loc.gov/legal/"^^xsd:anyURI ;
+.
+bdr:LD_LOC_metadata
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicenseCC0 ;
+  bdo:provider bdr:CP038 ;
+  skos:prefLabel "Provided by Library of Congress, CC0 license"@en ;
+  bdo:termsOfUse "https://www.loc.gov/legal/"^^xsd:anyURI ;
+.
+bdr:LD_GRETIL
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner bdr:CP028 ;
+  bdo:license bdr:LicenseCC0 ;
+  bdo:provider bdr:CP028 ;
+  skos:prefLabel "Provided by GRETIL under the CC0 license"@en ;
+.
+bdr:LD_SAT_images
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:copyrightOwner bdr:CP030 ;
+  bdo:license bdr:LicenseCCBYNCSA4U ;
+  bdo:provider bdr:CP030 ;
+  skos:prefLabel "Provided by SAT under the CC BY-NC-SA 4.0 license"@en ;
+.
+bdr:LD_BNF_PD
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicensePublicDomain ;
+  bdo:provider bdr:CP022 ;
+  skos:prefLabel "Source gallica.bnf.fr / BnF, Public domain"@en ;
+.
+bdr:LD_IA_PD
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicensePublicDomain ;
+  bdo:provider bdr:CP029 ;
+  skos:prefLabel "Provided by Internet Archive, Public domain"@en ;
+.
+bdr:LD_IA_Metadata
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicenseNoKnownCopyright ;
+  bdo:provider bdr:CP029 ;
+  rdfs:comment "From a private communication: \"most metadata comes from others. sometimes others declare something, but we make not claims about it.\""@en ;
+  skos:prefLabel "Provided by Internet Archive, No copyright claim"@en ;
+.
+bdr:LD_DILA_BSADP
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicenseCCBYSA3U ;
+  bdo:provider bdr:CP048 ;
+  skos:prefLabel "Provided by DILA, Creative Commons BY-NC-SA 3.0 Unported License"@en ;
+.
+bdr:LD_NGMPP_Metadata
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicenseCopyrightUndetermined ;
+  bdo:provider bdr:CP049 ;
+  skos:prefLabel "Provided by NGMPP, Copyright Undetermined"@en ;
+.
+bdr:LD_SRC_Metadata
+  a bdo:LegalData ;
+  a skos:Concept ;
+  skos:topConceptOf bdr:LegalDataScheme ;
+  bdo:license bdr:LicenseCopyrightUndetermined ;
+  bdo:provider bdr:CP050 ;
+  skos:prefLabel "Provided by Sakya Research Center, Copyright Undetermined"@en ;
+.
+bdr:LegalScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "LegalData Scheme"@en ;
+.
+LegalScheme:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/resource/ContentProviderScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/LicenseScheme/> ;
+  owl:imports <http://purl.bdrc.io/resource/TermsOfUseScheme/> ;
+.
+bdo:LegalData
+  a owl:Class ;
+  rdfs:label "Legal data"@en ;
+  skos:definition "Ties together info about ContentProvider, License, and TermsOfUse"@en ;
+.
