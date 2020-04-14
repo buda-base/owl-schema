@@ -201,7 +201,7 @@
     
     <OntologySpec>
         <!-- local version of the Content Method vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/resource/ContentMethodScheme/"/>
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/ContentMethodScheme/"/>
         <altURL    rdf:resource="owl-schema/schemes/ContentMethodScheme.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/ContentMethodScheme.ttl"/>
     </OntologySpec>
