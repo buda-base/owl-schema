@@ -292,6 +292,7 @@ bdr:IdentifierScheme
 IdentifierScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:InstanceIdentifier
   a bdo:Identifier ;
