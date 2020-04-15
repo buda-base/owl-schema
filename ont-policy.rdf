@@ -201,23 +201,23 @@
     
     <OntologySpec>
         <!-- local version of the Content Method vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/ContentMethodScheme/"/>
-        <altURL    rdf:resource="owl-schema/schemes/ContentMethodScheme.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/ContentMethodScheme.ttl"/>
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/core/ContentMethodScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/core/ContentMethodScheme.ttl"/>
     </OntologySpec>
 
     <OntologySpec>
         <!-- local version of the FEMCScheme vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/FEMCScheme/"/>
-        <altURL    rdf:resource="owl-schema/schemes/FEMCScheme.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/FEMCScheme.ttl"/>
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/taxonomy/FEMCScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/taxonomy/FEMCScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the IdentifierScheme vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/IdentifierScheme/"/>
-        <altURL    rdf:resource="owl-schema/schemes/IdentifierScheme.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/IdentifierScheme.ttl"/>
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/"/>
+        <altURL    rdf:resource="owl-schema/schemes/core/IdentifierScheme.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/owl-schema/abstractworks/schemes/core/IdentifierScheme.ttl"/>
     </OntologySpec>
 
 

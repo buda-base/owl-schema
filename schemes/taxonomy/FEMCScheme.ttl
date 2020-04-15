@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/schemes/FEMCScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: FEMCScheme
 
-@prefix FEMCScheme: <http://purl.bdrc.io/ontology/schemes/FEMCScheme/> .
+@prefix FEMCScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
