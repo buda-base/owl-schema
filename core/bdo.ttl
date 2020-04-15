@@ -1583,6 +1583,11 @@ bdo:abbreviationOf
   rdfs:label "abbreviation of"@en ;
   rdfs:subPropertyOf bdo:labelConnection ;
 .
+bdo:dummyProp
+  a owl:ObjectProperty ;
+  adm:userTooltip "A property for testing webhooks"@en ;
+  rdfs:label "dummy property"@en ;
+.
 bdo:agent
   a owl:ObjectProperty ;
   adm:userTooltip "identifies the agent participating in an :AgentInRole"@en ;
