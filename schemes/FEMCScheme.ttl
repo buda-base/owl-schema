@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/FEMCScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/FEMCScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: FEMCScheme
 
-@prefix FEMCScheme: <http://purl.bdrc.io/resource/FEMCScheme/> .
+@prefix FEMCScheme: <http://purl.bdrc.io/ontology/schemes/FEMCScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -20,7 +20,7 @@ bdr:FEMCScheme
 FEMCScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  owl:versionInfo "Initial version ;
 .
 bdr:FEMC_Scheme_I
   a bdo:Topic ;
