@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/TermsOfUseScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/TermsOfUseScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: TermsOfUseScheme
 
-@prefix TermsOfUseScheme: <http://purl.bdrc.io/resource/TermsOfUseScheme/> .
+@prefix TermsOfUseScheme: <http://purl.bdrc.io/ontology/schemes/core/TermsOfUseScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .

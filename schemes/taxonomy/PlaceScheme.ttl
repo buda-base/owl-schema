@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/PlaceScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/PlaceScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: PlaceScheme
 
-@prefix PlaceScheme: <http://purl.bdrc.io/resource/PlaceScheme/> .
+@prefix PlaceScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/PlaceScheme/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

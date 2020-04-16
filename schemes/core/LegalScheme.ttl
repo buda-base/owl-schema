@@ -1,10 +1,10 @@
-# baseURI: http://purl.bdrc.io/resource/LegalScheme/
-# imports: http://purl.bdrc.io/resource/ContentProviderScheme/
-# imports: http://purl.bdrc.io/resource/LicenseScheme/
-# imports: http://purl.bdrc.io/resource/TermsOfUseScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/LegalScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/ContentProviderScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/LicenseScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/TermsOfUseScheme/
 # prefix: LegalScheme
 
-@prefix LegalScheme: <http://purl.bdrc.io/resource/LegalScheme/> .
+@prefix LegalScheme: <http://purl.bdrc.io/ontology/schemes/core/LegalScheme/> .
 @prefix : <http://purl.bdrc.io/ontology/core/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -202,9 +202,10 @@ bdr:LegalScheme
 .
 LegalScheme:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/resource/ContentProviderScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/LicenseScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/TermsOfUseScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/ContentProviderScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/LicenseScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/TermsOfUseScheme/> ;
+  owl:versionInfo "Initial version" ;
 .
 bdo:LegalData
   a owl:Class ;

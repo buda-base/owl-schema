@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/SubjectScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/SubjectScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: SubjectScheme
 
-@prefix SubjectScheme: <http://purl.bdrc.io/resource/SubjectScheme/> .
+@prefix SubjectScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/SubjectScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .

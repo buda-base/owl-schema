@@ -1,6 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/ChineseMonasticScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/ChineseMonasticScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: ChineseMonasticScheme
 
-@prefix ChineseMonasticScheme: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
+@prefix ChineseMonasticScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/ChineseMonastic/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -18,6 +20,7 @@ bdo:ChineseMonastic
 ChineseMonasticScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:ChineseMonasticScheme
   a skos:ConceptScheme ;

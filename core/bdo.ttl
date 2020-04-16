@@ -1,30 +1,29 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/types/Taxonomy/
-# imports: http://purl.bdrc.io/resource/AccessScheme/
-# imports: http://purl.bdrc.io/resource/BindingScheme/
-# imports: http://purl.bdrc.io/resource/ChineseMonasticScheme/
-# imports: http://purl.bdrc.io/resource/ContentMethodScheme/
-# imports: http://purl.bdrc.io/resource/ContentProviderScheme/
-# imports: http://purl.bdrc.io/resource/CreatorScheme/
-# imports: http://purl.bdrc.io/resource/DateScheme/
-# imports: http://purl.bdrc.io/resource/FEMCScheme/
-# imports: http://purl.bdrc.io/resource/GenderScheme/
-# imports: http://purl.bdrc.io/resource/IdentifierScheme/
-# imports: http://purl.bdrc.io/resource/LanguageScheme/
-# imports: http://purl.bdrc.io/resource/LegalScheme/
-# imports: http://purl.bdrc.io/resource/LicenseScheme/
-# imports: http://purl.bdrc.io/resource/LineageScheme/
-# imports: http://purl.bdrc.io/resource/MaterialScheme/
-# imports: http://purl.bdrc.io/resource/PaginationScheme/
-# imports: http://purl.bdrc.io/resource/PartScheme/
-# imports: http://purl.bdrc.io/resource/PersonNameScheme/
-# imports: http://purl.bdrc.io/resource/PlaceScheme/
-# imports: http://purl.bdrc.io/resource/PrintMethodScheme/
-# imports: http://purl.bdrc.io/resource/ScriptScheme/
-# imports: http://purl.bdrc.io/resource/SubjectScheme/
-# imports: http://purl.bdrc.io/resource/TermsOfUseScheme/
-# imports: http://purl.bdrc.io/resource/TraditionScheme/
-# imports: http://purl.bdrc.io/resource/TransliterationScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/AccessScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/BindingScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/CreatorScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/DateScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/GenderScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/LanguageScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/LegalScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/LicenseScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/MaterialScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/PaginationScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/PartScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/PersonNameScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/PrintMethodScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/ScriptScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/TermsOfUseScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/TransliterationScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/ChineseMonasticScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/ContentProviderScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/LineageScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/PlaceScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/SubjectScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/TraditionScheme/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -74,32 +73,31 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/types/Taxonomy/> ;
-  owl:imports <http://purl.bdrc.io/resource/AccessScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/BindingScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/ChineseMonasticScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/ContentMethodScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/ContentProviderScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/CreatorScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/DateScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/FEMCScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/GenderScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/IdentifierScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/LanguageScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/LegalScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/LicenseScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/LineageScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/MaterialScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/PaginationScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/PartScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/PersonNameScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/PlaceScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/PrintMethodScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/ScriptScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/SubjectScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/TermsOfUseScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/TraditionScheme/> ;
-  owl:imports <http://purl.bdrc.io/resource/TransliterationScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/AccessScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/BindingScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/CreatorScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/DateScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/GenderScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/LanguageScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/LegalScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/LicenseScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/MaterialScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/PaginationScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/PartScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/PersonNameScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/PrintMethodScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/ScriptScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/TermsOfUseScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/TransliterationScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/ChineseMonasticScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/ContentProviderScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/LineageScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/PlaceScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/SubjectScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/TraditionScheme/> ;
   owl:versionInfo "This is a WIP evolving the current produciton ontology to one more conformant with community expectations" ;
 .
 bdo:Access

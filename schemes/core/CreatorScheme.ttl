@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/CreatorScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/CreatorScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: CreatorScheme
 
-@prefix CreatorScheme: <http://purl.bdrc.io/resource/CreatorScheme/> .
+@prefix CreatorScheme: <http://purl.bdrc.io/ontology/schemes/core/CreatorScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -24,6 +24,7 @@ bdr:CreatorScheme
 CreatorScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:R0ER0009
   a bdo:Creator ;

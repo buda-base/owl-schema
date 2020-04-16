@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/BindingScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/BindingScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: BindingScheme
 
-@prefix BindingScheme: <http://purl.bdrc.io/resource/BindingScheme/> .
+@prefix BindingScheme: <http://purl.bdrc.io/ontology/schemes/core/BindingScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -24,6 +24,7 @@ bdr:BindingScheme
 BindingScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:Binding_Codex
   a bdo:Binding ;

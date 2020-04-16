@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/TransliterationScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/TransliterationScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: TransliterationScheme
 
-@prefix TransliterationScheme: <http://purl.bdrc.io/resource/TransliterationScheme/> .
+@prefix TransliterationScheme: <http://purl.bdrc.io/ontology/schemes/core/TransliterationScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .

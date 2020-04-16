@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/LineageScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/LineageScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: LineageScheme
 
-@prefix LineageScheme: <http://purl.bdrc.io/resource/LineageScheme/> .
+@prefix LineageScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/LineageScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
