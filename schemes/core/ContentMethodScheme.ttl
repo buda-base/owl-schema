@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/ContentMethodScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: ContentMethodScheme
 
-@prefix ContentMethodScheme: <http://purl.bdrc.io/resource/ContentMethodScheme/> .
+@prefix ContentMethodScheme: <http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .

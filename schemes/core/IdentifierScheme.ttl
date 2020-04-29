@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/resource/IdentifierScheme/
+# baseURI: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: IdentifierScheme
 
-@prefix IdentifierScheme: <http://purl.bdrc.io/resource/IdentifierScheme/> .
+@prefix IdentifierScheme: <http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -292,6 +292,7 @@ bdr:IdentifierScheme
 IdentifierScheme:
   a owl:Ontology ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
 .
 bdr:InstanceIdentifier
   a bdo:Identifier ;
