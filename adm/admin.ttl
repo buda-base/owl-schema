@@ -754,6 +754,11 @@ adm:seeOtherToL
   rdfs:label "See Treasury of Lives entry"@en ;
   rdfs:subPropertyOf adm:seeOther ;
 .
+adm:seeOtherCBETA
+  a owl:AnnotationProperty ;
+  rdfs:label "see on CBETA"@en ;
+  rdfs:subPropertyOf adm:seeOther ;
+.
 adm:statementScore
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
