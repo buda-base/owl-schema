@@ -3604,6 +3604,7 @@ bdo:placeIsNear
   adm:deprecatedComment "deprecated because not actually used in legacy data and not well defined"@en ;
   adm:userTooltip "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
   rdfs:domain bdo:Place ;
+  skos:prefLabel "is near"@en ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
 .
