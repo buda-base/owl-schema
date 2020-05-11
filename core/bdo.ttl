@@ -239,7 +239,7 @@ bdo:CompletedEvent
 bdo:ContentLocation
   a owl:Class ;
   adm:technicalComment "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
-  adm:technicalComment "parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
+  adm:technicalComment "Parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
   adm:technicalComment "was :WorkLocation"@en ;
   adm:userTooltip "The ContentLocation describes the Instance, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
   rdfs:label "Content Location"@en ;
