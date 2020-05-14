@@ -72,6 +72,10 @@ bdr:MaterialBirchBark
   skos:prefLabel "bhūrjapattra"@sa-x-iast ;
   skos:prefLabel "birch bark"@en ;
 .
+bdr:MaterialCardboard
+  a bdo:BaseMaterial ;
+  skos:prefLabel "cardboard"@en ;
+.
 bdr:MaterialCloth
   a bdo:BaseMaterial ;
   skos:prefLabel "cloth"@en ;
@@ -120,7 +124,6 @@ bdr:MaterialMultiLayerPaper
 .
 bdr:MaterialPalmLeaf
   a bdo:BaseMaterial ;
-  a owl:Class ;
   rdfs:subClassOf bdo:BaseMaterial ;
   skos:prefLabel "palm leaf"@en ;
 .
@@ -131,9 +134,15 @@ bdr:MaterialPalmyraPalmLeaf
 .
 bdr:MaterialPaper
   a bdo:BaseMaterial ;
-  a owl:Class ;
   rdfs:subClassOf bdo:BaseMaterial ;
   skos:prefLabel "paper"@en ;
+.
+bdr:MaterialParchment
+  a bdo:BaseMaterial ;
+  rdfs:subClassOf bdo:BaseMaterial ;
+  skos:prefLabel "parchment"@en ;
+  skos:altLabel "animal membrane"@en ;
+  owl:sameAs <http://www.wikidata.org/entity/Q226697> ;
 .
 bdr:MaterialRicePaper
   a bdr:MaterialPaper ;
@@ -149,7 +158,6 @@ bdr:MaterialStone
 .
 bdr:MaterialWood
   a bdo:BaseMaterial ;
-  a owl:Class ;
   rdfs:subClassOf bdo:BaseMaterial ;
   skos:prefLabel "wood"@en ;
 .
