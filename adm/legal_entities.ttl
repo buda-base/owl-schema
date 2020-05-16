@@ -159,7 +159,7 @@ bda:LD_SRC_Metadata
   a adm:LegalData ;
   adm:license bda:LicenseCopyrightUndetermined ;
   adm:provider bda:CP050 ;
-  skos:prefLabel "Provided by Sakya Research Center, Copyright Undetermined"@en ;
+  skos:prefLabel "Provided by Sakya Research Centre, Copyright Undetermined"@en ;
 .
 LegalData:
   a owl:Ontology ;

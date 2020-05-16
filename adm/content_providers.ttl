@@ -342,7 +342,7 @@ bda:CP050
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:prefLabel "SRC" ;
-  skos:altLabel "Sakya Research Center"@en ;
+  skos:altLabel "Sakya Research Centre"@en ;
   skos:altLabel "ས་སྐྱ་ཞིབ་འཇུག་ཁང་།"@bo ;
   foaf:homepage "https://sakyaresearch.org"^^xsd:anyURI ;
 .
