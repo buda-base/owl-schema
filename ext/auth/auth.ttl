@@ -8,6 +8,7 @@
 @prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdu: <http://purl.bdrc.io/resource-nc/user/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -92,6 +93,20 @@ aut:authId
   rdfs:domain aut:UserProfile ;
   rdfs:label "authentification id"@en ;
   rdfs:range xsd:string ;
+
+aut:connection
+  a owl:DatatypeProperty ;
+  rdfs:comment "The auth0 authentication mode used by this user"@en ;
+  rdfs:domain aut:UserProfile ;
+  rdfs:label "user authentification mode"@en ;
+  rdfs:range xsd:string ;
+
+aut:isSocial
+  a owl:DatatypeProperty ;
+  rdfs:comment "is this user a social network user?"@en ;
+  rdfs:domain aut:UserProfile ;
+  rdfs:label "is social"@en ;
+  rdfs:range xsd:string ;
 .
 aut:desc
   a owl:DatatypeProperty ;
@@ -103,6 +118,21 @@ aut:desc
   rdfs:label "description"@en ;
   rdfs:range rdf:PlainLiteral ;
 .
+
+aut:forMethod
+  a owl:DatatypeProperty ;
+  rdfs:comment "A list of authorized http methods for a given endpoint"@en ;
+  rdfs:domain aut:Endpoint ; 
+  rdfs:label "for method"@en ;
+  rdfs:range rdf:PlainLiteral ;
+.
+aut:hasBudaUser
+  a owl:ObjectProperty ;
+  rdfs:comment "This property links a Userprofile to a BudaUser."@en ;
+  rdfs:domain aut:UserProfile ;  
+  rdfs:label "has BudaUser"@en ;
+  rdfs:range bdu:User ;
+
 aut:forGroup
   a owl:ObjectProperty ;
   rdfs:comment "Besides linking a UserProfile to the groups he belongs to, this property also links a specific endpoint to its authorized groups resources."@en ;
