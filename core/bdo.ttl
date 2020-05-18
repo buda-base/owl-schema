@@ -613,6 +613,7 @@ bdo:Instance
   adm:technicalComment "Was Work, changed to align with Bibframe 2.0"@en ;
   adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
   adm:userTooltip "An individual material (or electronic) embodiement, for instance a particular published form."@en ;
+  bdo:inferSubTree true ;
   rdfs:label "instance"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
 .
@@ -1549,6 +1550,7 @@ bdo:Work
   a owl:Class ;
   adm:technicalComment "Was AbstarctWork, changed to align with Bibframe 2.0"@en ;
   adm:userTooltip "An abstract or conceptual work is the idea of a work, as opposed to an expression or manifestation which is a specific edition or witness."@en ;
+  bdo:inferSubTree true ;
   rdfs:label "work"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
 .
