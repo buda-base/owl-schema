@@ -142,6 +142,14 @@ bdr:LangMn
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Mongolian"@en ;
 .
+bdr:LangMy
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "my" ;
+  bdo:langMARCCode "bur" ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Burmese"@en ;
+.
 bdr:LangNe
   a bdo:Language ;
   a owl:Class ;
