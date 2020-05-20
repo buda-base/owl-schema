@@ -62,7 +62,7 @@ See [this thread](https://www.ietf.org/mail-archive/web/ietf-languages/current/m
 [ALA-LC](https://www.loc.gov/catdir/cpso/roman.html) is the only transliteration schema that is documented in some specifications. There are two different standards to specify it:
 
 - the tag standardized in IANA registry: `-alalc97` (ex: `sa-alalc97`)
-- the name `alaloc` is used in the [CLDR data](http://unicode.org/repos/cldr/trunk/common/bcp47/transform.xml) ([doc](http://www.unicode.org/reports/tr35/#BCP47_T_Extension), [source](https://www.iana.org/assignments/language-tag-extensions-registry/language-tag-extensions-registry)). It seems the way to use the CLDR tag would be by adding the suffix `-t-m0-alaloc` to the language (ex: `sa-t-m0-alaloc`).
+- the name `alaloc` is used in the [CLDR data](http://unicode.org/repos/cldr/trunk/common/bcp47/transform.xml) ([doc](http://www.unicode.org/reports/tr35/#BCP47_T_Extension), [source](https://www.iana.org/assignments/language-tag-extensions-registry/language-tag-extensions-registry)). The way to use the CLDR tag is indicated in [RFC6497](https://tools.ietf.org/html/rfc6497) and would be for example for Sanskrit `sa-t-sa-m0-alaloc`.
 
 We opened two tickets on the CLDR data to get some transliteration scheme normalized: [EWTS](http://unicode.org/cldr/trac/ticket/10547) and [IAST](http://unicode.org/cldr/trac/ticket/10548).
 
