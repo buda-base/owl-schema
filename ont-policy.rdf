@@ -46,7 +46,7 @@
     <DocumentManagerPolicy>
         <!-- policy for controlling the document manager's behaviour -->
         <processImports rdf:datatype="&xsd;boolean">true</processImports>
-        <cacheModels    rdf:datatype="&xsd;boolean">true</cacheModels>
+        <cacheModels    rdf:datatype="&xsd;boolean">false</cacheModels>
         <ignoreImport   rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2002/07/owl#"/>
