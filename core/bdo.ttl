@@ -1205,7 +1205,7 @@ bdo:PhysicalInstance
 bdo:Place
   a owl:Class ;
   adm:catalogingConvention "Places are geographic entities such as: monasteries, villages, counties, provinces, rivers, caves and so on. Places are modeled in terms of subclasses that indicate the type of \"real world\" place that is referred to"@en ;
-  adm:technicalComment "Names are represented by rdfs:label"@en ;
+  adm:technicalComment "Names are represented by rdfs:label."@en ;
   adm:userTooltip "Places are geographic entities such as: monasteries, villages, counties, rivers, caves and so on"@en ;
   rdfs:label "Place"@en ;
   rdfs:subClassOf bdo:Entity ;
