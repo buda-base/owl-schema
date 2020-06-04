@@ -147,6 +147,6 @@ bdr:R0ER0030
 .
 bdr:Unspecified
   a bdo:Creator ;
-  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation or composition process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
+  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation or composition process, without allowing us to further specify the specific role they played in that process."@en ;
   skos:prefLabel "unspecified"@en ;
 .

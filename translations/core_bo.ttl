@@ -1320,24 +1320,6 @@ bdr:TransPinyin skos:prefLabel "phin yig "@bo-x-ewts .
 
 bdr:TransSaTibt skos:prefLabel "sngags yig"@bo-x-ewts .
 
-bdr:UNKNOWN_Corporation rdfs:label "lhan tshogs gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Lineage rdfs:label "brgyud pa gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Organization rdfs:label "tshogs sde gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Person rdfs:label "gsal kha med pa'i mi sna/"@bo-x-ewts .
-
-bdr:UNKNOWN_Place rdfs:label "sa gnas gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Product rdfs:label "ca dngos gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Role rdfs:label "las 'gan gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Topic rdfs:label "brjod gzhi gsal kha med pa/"@bo-x-ewts .
-
-bdr:UNKNOWN_Work rdfs:label "brtsam chos gsal kha med pa/"@bo-x-ewts .
-
 bdr:Unspecified skos:prefLabel "las 'gan gsal kha med pa/"@bo-x-ewts .
 
 bdr:WorkChapter skos:prefLabel "le'u/"@bo-x-ewts .
