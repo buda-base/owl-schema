@@ -4224,6 +4224,11 @@ skos:altLabel
   rdfs:label "variant label"@en ;
   rdfs:subPropertyOf rdfs:label ;
 .
+skos:closeMatch
+  a owl:AnnotationProperty ;
+  adm:catalogingConvention "Use when entities are different but similar enough to be conflated for the casual user."@en ;
+  rdfs:label "close match"@en ;
+.
 skos:hiddenLabel
   a owl:AnnotationProperty ;
   adm:catalogingConvention "Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset"@en ;
