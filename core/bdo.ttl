@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/core/Unknown/
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
@@ -67,7 +66,6 @@ bdo:
   a owl:Ontology ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
-  owl:imports <http://purl.bdrc.io/ontology/core/Unknown/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
@@ -2099,7 +2097,7 @@ The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, t
 .
 bdo:creatorUnspecified
   a owl:ObjectProperty ;
-  adm:catalogingConvention "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process. Use bdr:UNKNOWN_Person when no specific person is known"@en ;
+  adm:catalogingConvention "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process."@en ;
   adm:userTooltip "A person that evidence tells us only that they were involved in the production of the Work."@en ;
   rdfs:label "unspecified"@en ;
   rdfs:subPropertyOf bdo:workCreator ;
