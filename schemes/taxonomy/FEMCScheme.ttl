@@ -374,22 +374,22 @@ bdr:FEMC_Scheme_V_3
 .
 bdr:NTFEMC_Scheme_I01
   a bdo:Note ;
-  bdo:noteText "I" ;
+  bdo:noteText "I"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_II01
   a bdo:Note ;
-  bdo:noteText "II" ;
+  bdo:noteText "II"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III01
   a bdo:Note ;
-  bdo:noteText "III" ;
+  bdo:noteText "III"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_101
   a bdo:Note ;
-  bdo:noteText "III.1" ;
+  bdo:noteText "III.1"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_102
@@ -399,7 +399,7 @@ bdr:NTFEMC_Scheme_III_102
 .
 bdr:NTFEMC_Scheme_III_201
   a bdo:Note ;
-  bdo:noteText "III.2" ;
+  bdo:noteText "III.2"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_202
@@ -409,7 +409,7 @@ bdr:NTFEMC_Scheme_III_202
 .
 bdr:NTFEMC_Scheme_III_301
   a bdo:Note ;
-  bdo:noteText "III.3" ;
+  bdo:noteText "III.3"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_302
@@ -419,7 +419,7 @@ bdr:NTFEMC_Scheme_III_302
 .
 bdr:NTFEMC_Scheme_III_401
   a bdo:Note ;
-  bdo:noteText "III.4" ;
+  bdo:noteText "III.4"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_402
@@ -429,12 +429,12 @@ bdr:NTFEMC_Scheme_III_402
 .
 bdr:NTFEMC_Scheme_III_501
   a bdo:Note ;
-  bdo:noteText "III.5" ;
+  bdo:noteText "III.5"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_601
   a bdo:Note ;
-  bdo:noteText "III.6" ;
+  bdo:noteText "III.6"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_III_602
@@ -444,22 +444,22 @@ bdr:NTFEMC_Scheme_III_602
 .
 bdr:NTFEMC_Scheme_II_101
   a bdo:Note ;
-  bdo:noteText "II.1" ;
+  bdo:noteText "II.1"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_II_201
   a bdo:Note ;
-  bdo:noteText "II.2" ;
+  bdo:noteText "II.2"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_IV01
   a bdo:Note ;
-  bdo:noteText "IV" ;
+  bdo:noteText "IV"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_IV_101
   a bdo:Note ;
-  bdo:noteText "IV.1" ;
+  bdo:noteText "IV.1"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_IV_102
@@ -469,7 +469,7 @@ bdr:NTFEMC_Scheme_IV_102
 .
 bdr:NTFEMC_Scheme_IV_201
   a bdo:Note ;
-  bdo:noteText "IV.2" ;
+  bdo:noteText "IV.2"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_IV_202
@@ -479,7 +479,7 @@ bdr:NTFEMC_Scheme_IV_202
 .
 bdr:NTFEMC_Scheme_I_101
   a bdo:Note ;
-  bdo:noteText "I.1" ;
+  bdo:noteText "I.1"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_I_102
@@ -489,7 +489,7 @@ bdr:NTFEMC_Scheme_I_102
 .
 bdr:NTFEMC_Scheme_I_201
   a bdo:Note ;
-  bdo:noteText "I.2" ;
+  bdo:noteText "I.2"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_I_202
@@ -499,27 +499,27 @@ bdr:NTFEMC_Scheme_I_202
 .
 bdr:NTFEMC_Scheme_I_301
   a bdo:Note ;
-  bdo:noteText "I.3" ;
+  bdo:noteText "I.3"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_V01
   a bdo:Note ;
-  bdo:noteText "V" ;
+  bdo:noteText "V"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VI01
   a bdo:Note ;
-  bdo:noteText "VI" ;
+  bdo:noteText "VI"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VII01
   a bdo:Note ;
-  bdo:noteText "VII" ;
+  bdo:noteText "VII"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VIII01
   a bdo:Note ;
-  bdo:noteText "VIII" ;
+  bdo:noteText "VIII"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VIII02
@@ -529,17 +529,17 @@ bdr:NTFEMC_Scheme_VIII02
 .
 bdr:NTFEMC_Scheme_VI_101
   a bdo:Note ;
-  bdo:noteText "VI.1" ;
+  bdo:noteText "VI.1"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VI_201
   a bdo:Note ;
-  bdo:noteText "VI.2" ;
+  bdo:noteText "VI.2"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VI_301
   a bdo:Note ;
-  bdo:noteText "VI.3" ;
+  bdo:noteText "VI.3"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VI_302
@@ -549,7 +549,7 @@ bdr:NTFEMC_Scheme_VI_302
 .
 bdr:NTFEMC_Scheme_VI_401
   a bdo:Note ;
-  bdo:noteText "VI.4" ;
+  bdo:noteText "VI.4"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VI_402
@@ -559,17 +559,17 @@ bdr:NTFEMC_Scheme_VI_402
 .
 bdr:NTFEMC_Scheme_VI_501
   a bdo:Note ;
-  bdo:noteText "VI.5" ;
+  bdo:noteText "VI.5"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_VI_601
   a bdo:Note ;
-  bdo:noteText "VI.6" ;
+  bdo:noteText "VI.6"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_V_101
   a bdo:Note ;
-  bdo:noteText "V.1" ;
+  bdo:noteText "V.1"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_V_102
@@ -579,12 +579,12 @@ bdr:NTFEMC_Scheme_V_102
 .
 bdr:NTFEMC_Scheme_V_201
   a bdo:Note ;
-  bdo:noteText "V.2" ;
+  bdo:noteText "V.2"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_V_301
   a bdo:Note ;
-  bdo:noteText "V.3" ;
+  bdo:noteText "V.3"@en ;
   bdo:noteType "FEMC Classification Code" ;
 .
 bdr:NTFEMC_Scheme_V_302
