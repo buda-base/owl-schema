@@ -3301,9 +3301,9 @@ bdo:noteText
 .
 bdo:noteType
   a owl:AnnotationProperty ;
-  adm:userTooltip "A string indicating where in the :noteSource to look for the :noteText"@en ;
+  adm:userTooltip "A string indicating a kind of Note. Used only w FEMC taxonomy notes"@en ;
   rdfs:domain bdo:Note ;
-  rdfs:label "location"@en ;
+  rdfs:label "note type"@en ;
   rdfs:range xsd:string ;
 .
 bdo:numberOfVolumes
