@@ -182,7 +182,7 @@ bdo:BundleInstance
   a owl:Class ;
   adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package."@en ;
   rdfs:label "bundle instance"@en ;
-  rdfs:subClassOf bdo:Instance ;
+  rdfs:subClassOf bdo:SerialInstance ;
 .
 bdo:CarvedEvent
   a owl:Class ;
@@ -1513,7 +1513,7 @@ bdo:VirtualInstance
   adm:technicalComment "Virtual works are works made by assembling different other works. Examples: collections, manuscripts reconstituted from fragments in different collections, etc. The hierarchy of works displayed in an embedded reader is also a virtual work."@en ;
   adm:userTooltip "Virtual works are works made by assembling different other works."@en ;
   rdfs:label "Virtual work"@en ;
-  rdfs:subClassOf bdo:Instance ;
+  rdfs:subClassOf bdo:BundleInstance ;
 .
 bdo:Volume
   a owl:Class ;
