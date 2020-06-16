@@ -1,6 +1,9 @@
 # baseURI: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://purl.bdrc.io/ontology/roles/Creator/
+# imports: http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
+# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://purl.bdrc.io/ontology/types/DateIndication/
 # imports: http://purl.bdrc.io/ontology/types/Gender/
@@ -17,9 +20,6 @@
 # imports: http://purl.bdrc.io/ontology/types/Tradition/
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
-# imports: http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/
-# imports: http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/
-# imports: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
 # prefix: bdo
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
@@ -68,6 +68,9 @@ bdo:
   rdfs:label "Buda core ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
   owl:imports <http://purl.bdrc.io/ontology/roles/Creator/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> ;
+  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Binding/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/DateIndication/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Gender/> ;
@@ -84,9 +87,6 @@ bdo:
   owl:imports <http://purl.bdrc.io/ontology/types/Tradition/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/Transliteration/> ;
   owl:imports <http://purl.bdrc.io/ontology/types/WorkType/> ;
-  owl:imports <http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/> ;
-  owl:imports <http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> ;
-  owl:imports <http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> ;
 .
 bdo:Agent
   a owl:Class ;
@@ -182,7 +182,7 @@ bdo:BundleInstance
   a owl:Class ;
   adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package."@en ;
   rdfs:label "bundle instance"@en ;
-  rdfs:subClassOf bdo:SingletonInstance ;
+  rdfs:subClassOf bdo:Instance ;
 .
 bdo:CarvedEvent
   a owl:Class ;
@@ -236,8 +236,8 @@ bdo:CompletedEvent
 .
 bdo:ContentLocation
   a owl:Class ;
-  adm:technicalComment "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
   adm:technicalComment "Parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location" ;
+  adm:technicalComment "The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase" ;
   adm:technicalComment "was :WorkLocation"@en ;
   adm:userTooltip "The ContentLocation describes the Instance, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
   rdfs:label "Content Location"@en ;
@@ -1363,7 +1363,7 @@ bdo:SingleAgent
 .
 bdo:SingletonInstance
   a owl:Class ;
-  adm:userTooltip "An instance that does only have one copy (ex: a manuscript, an art work, etc.)"@en ;
+  adm:userTooltip "An instance that has only one copy (ex: a manuscript, an art work, etc.). A singleton instance may have reproductions"@en ;
   rdfs:label "singleton instance"@en ;
   rdfs:subClassOf bdo:Instance ;
 .
@@ -1513,7 +1513,7 @@ bdo:VirtualInstance
   adm:technicalComment "Virtual works are works made by assembling different other works. Examples: collections, manuscripts reconstituted from fragments in different collections, etc. The hierarchy of works displayed in an embedded reader is also a virtual work."@en ;
   adm:userTooltip "Virtual works are works made by assembling different other works."@en ;
   rdfs:label "Virtual work"@en ;
-  rdfs:subClassOf bdo:BundleInstance ;
+  rdfs:subClassOf bdo:Instance ;
 .
 bdo:Volume
   a owl:Class ;
@@ -3604,9 +3604,9 @@ bdo:placeIsNear
   adm:deprecatedComment "deprecated because not actually used in legacy data and not well defined"@en ;
   adm:userTooltip "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
   rdfs:domain bdo:Place ;
-  skos:prefLabel "is near"@en ;
   rdfs:range bdo:Place ;
   owl:deprecated true ;
+  skos:prefLabel "is near"@en ;
 .
 bdo:placeLat
   a owl:DatatypeProperty ;
