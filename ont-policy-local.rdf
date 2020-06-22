@@ -19,7 +19,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY jena    'http://jena.hpl.hp.com/schemas/'>
 
-    <!ENTITY git     'https://raw.githubusercontent.com/buda-base/'>
+    <!ENTITY local   'file:///Users/chris/git/'>
 
     <!ENTITY rdf     'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
     <!ENTITY rdfs    'http://www.w3.org/2000/01/rdf-schema#'>
@@ -63,7 +63,7 @@
     <OntologySpec>
         <!-- local version of the auth vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/ext/auth/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/ext/auth/auth.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/ext/auth/auth.ttl"/>
         <prefix    rdf:datatype="&xsd;string">aut</prefix>
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/authSchema"/>
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
@@ -74,7 +74,7 @@
     <OntologySpec>
         <!-- local version of the auth vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/ext/user/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/ext/user/budauser.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/ext/user/budauser.ttl"/>
         <prefix    rdf:datatype="&xsd;string">bdou</prefix>        
     </OntologySpec>
     
@@ -84,7 +84,7 @@
     <OntologySpec>
         <!-- local version of the admin vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/admin/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/admin.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/admin.ttl"/>
         <prefix    rdf:datatype="&xsd;string">adm</prefix>
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
@@ -92,7 +92,7 @@
     <OntologySpec>
         <!-- local version of the Access vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/Access/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/types/access_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/types/access_types.ttl"/>
     </OntologySpec>
 
 
@@ -101,7 +101,7 @@
     <OntologySpec>
         <!-- local version of the Admin translations vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/translations/AdmBo/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/translations/adm_bo.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/translations/adm_bo.ttl"/>
     </OntologySpec>
 
 
@@ -110,43 +110,43 @@
     <OntologySpec>
         <!-- local version of the ContentProvider vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/ContentProvider/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/content_providers.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/content_providers.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the GitRepo vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/GitRepo/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/types/git_repos.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/types/git_repos.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the LegalData vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/LegalData/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/legal_entities.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/legal_entities.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the License vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/License/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/types/license_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/types/license_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the OutlineType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/OutlineType/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/types/outline_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/types/outline_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Status vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/Status/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/types/status_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/types/status_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the TermsOfUse vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/adm/types/TermsOfUse/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/adm/types/terms_of_use.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/adm/types/terms_of_use.ttl"/>
     </OntologySpec>
     
     
@@ -156,7 +156,7 @@
     <OntologySpec>
         <!-- local version of the bdo vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/core/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/core/bdo.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/core/bdo.ttl"/>
         <prefix    rdf:datatype="&xsd;string">bdo</prefix>        
         <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
     </OntologySpec>
@@ -167,13 +167,13 @@
     <OntologySpec>
         <!-- local version of the ChineseMonastic vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/roles/ChineseMonastic/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/roles/chinese_monastic.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/roles/chinese_monastic.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Creator vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/roles/Creator/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/roles/creators.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/roles/creators.ttl"/>
     </OntologySpec>
 
 
@@ -182,19 +182,19 @@
     <OntologySpec>
         <!-- local version of the Content Method vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/schemes/core/ContentMethodScheme.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/schemes/core/ContentMethodScheme.ttl"/>
     </OntologySpec>
 
     <OntologySpec>
         <!-- local version of the FEMCScheme vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/schemes/taxonomy/FEMCScheme.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/schemes/taxonomy/FEMCScheme.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the IdentifierScheme vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/schemes/core/IdentifierScheme.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/schemes/core/IdentifierScheme.ttl"/>
     </OntologySpec>
 
 
@@ -203,7 +203,7 @@
     <OntologySpec>
         <!-- local version of the Admin translations vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/translations/CoreBo/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/translations/core_bo.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/translations/core_bo.ttl"/>
     </OntologySpec>
     
     
@@ -212,97 +212,97 @@
     <OntologySpec>
         <!-- local version of the Binding vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Binding/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/bindings.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/bindings.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the DateIndication vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/DateIndication/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/date_indications.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/date_indications.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Gender vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Gender/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/gender.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/gender.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the LangScript vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/LangScript/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/lang_scripts.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/lang_scripts.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Language vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Language/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/languages.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/languages.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the LineageType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/LineageType/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/lineage_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/lineage_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Material vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Material/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/materials.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/materials.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the PaginationType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PaginationType/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/pagination_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/pagination_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the PartType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PartType/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/part_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/part_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the PlaceType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PlaceType/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/place_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/place_types.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the PrintMethod vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PrintMethod/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/print_methods.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/print_methods.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Script vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Script/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/scripts.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/scripts.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Taxonomy vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Taxonomy/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/taxonomy.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/taxonomy.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Tradition vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Tradition/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/traditions.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/traditions.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the Transliteration vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Transliteration/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/transliterations.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/transliterations.ttl"/>
     </OntologySpec>
     
     <OntologySpec>
         <!-- local version of the WorkType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/WorkType/"/>
-        <altURL    rdf:resource="&git;owl-schema/master/types/work_types.ttl"/>
+        <altURL    rdf:resource="&local;owl-schema/types/work_types.ttl"/>
     </OntologySpec>
     
 </rdf:RDF>
