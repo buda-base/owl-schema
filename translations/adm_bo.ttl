@@ -1,36 +1,21 @@
-# baseURI: http://purl.bdrc.io/ontology/translations/AdmBo/
-# prefix: AdmBo
-
-@prefix AdmBo: <http://purl.bdrc.io/ontology/translations/AdmBo/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
-@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
-@prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
-
-AdmBo:
-  a owl:Ontology ;
-.
 
 bda:AccessFairUse skos:prefLabel "tshul mthun bkol spyod/"@bo-x-ewts .
 
-bda:AccessMixed skos:prefLabel "phyed phyed chog mchan can/"@bo-x-ewts .
+bda:AccessMixed skos:prefLabel "chog mchan yod med bsres ma can/"@bo-x-ewts .
 
-bda:AccessOpen skos:prefLabel "chog mchan kun ldan/"@bo-x-ewts .
+bda:AccessOpen skos:prefLabel "bkag rgya med pa/"@bo-x-ewts .
 
-bda:AccessRestrictedByQuality skos:prefLabel "spus tshad zhan pa'i bka' rgya can/"@bo-x-ewts .
+bda:AccessRestrictedByQuality skos:prefLabel "spus tshad zhan pa'i bkag rgya can/"@bo-x-ewts .
 
-bda:AccessRestrictedByTbrc skos:prefLabel "[BDRC ]bka' rgya can/"@bo-x-ewts .
+bda:AccessRestrictedByTbrc skos:prefLabel "nang bstan dpe tshogs lte gnas kyi bkag rgya can/"@bo-x-ewts .
 
 bda:AccessRestrictedSealed skos:prefLabel "bka' rgya ma/"@bo-x-ewts .
 
-bda:AccessRestrictedTemporarily skos:prefLabel "'phral gyi bka' rgya can/"@bo-x-ewts .
+bda:AccessRestrictedTemporarily skos:prefLabel "gnas skabs ring gi bkag rgya can/"@bo-x-ewts .
 
 bda:CP001 skos:prefLabel "dam chos 'byung gnas/"@bo-x-ewts .
 
@@ -62,67 +47,71 @@ bda:CP030 skos:prefLabel "Tokyo slob grwa chen mo'i [SAT ]'phrul yig gter mdzod/
 
 bda:CP048 skos:prefLabel "d+hi la slob chen dpe tho gcig gyur/"@bo-x-ewts .
 
-bda:LD_BDRC_CC0 skos:prefLabel "nang bstan dpe tshogs bsti gnas kyis mthun sbyor byas pa/[ CC0 ]bka' khrol can/"@bo-x-ewts .
+bda:LD_BDRC_CC0 skos:prefLabel "nang bstan dpe tshogs lte gnas kyis mthun sbyor byas pa/[ CC0 ]bka' 'khrol can/"@bo-x-ewts .
 
-bda:LD_BDRC_Copyright skos:prefLabel "[BDRC ]nas mthun sbyor byas pa/_thams cad bdag dbang gis zin yod/"@bo-x-ewts .
+bda:LD_BDRC_Copyright skos:prefLabel "[BDRC ]nas mthun sbyor byas pa/_tshang mar bdag dbang yod/"@bo-x-ewts .
 
-bda:LD_BDRC_PD skos:prefLabel "nang bstan dpe tshogs bsti gnas kyis mthun sbyor byas pa/_spyi spyod khyab khongs/"@bo-x-ewts .
+bda:LD_BDRC_PD skos:prefLabel "nang bstan dpe tshogs lte gnas kyis mthun sbyor byas/_spyi spyod khyab khongs/"@bo-x-ewts .
 
 bda:LD_BNF_PD skos:prefLabel "h+pha ran si rgyal yongs dpe mdzod nas mthun sbyor byas pa/_spyi spyod chab khongs/"@bo-x-ewts .
 
-bda:LD_CUDL_content skos:prefLabel "[CUDL ]nas mthun sbyor byas pa/_bdag dbang can gyi gsher par/_spyod khrims skor la gzigs/"@bo-x-ewts .
+bda:LD_CUDL_content skos:prefLabel "[CUDL ]nas mthun sbyor byas pa/_bdag dbang can gyi gsher par/_spyod khrims la gzigs/"@bo-x-ewts .
 
-bda:LD_CUDL_metadata skos:prefLabel "[CUDL ]mthun sbyor byas pa/[ CC BY-NC 3.0]bka' khrol can/_zhib gzigs 'dod na ma khungs dan grangs gong mar gzigs/"@bo-x-ewts .
+bda:LD_CUDL_metadata skos:prefLabel "[CUDL ]mthun sbyor byas pa/[ CC BY-NC 3.0]bka' 'khrol/_gnas tshul zhib phra ma phyi'i dan grangs gong mar gzigs/"@bo-x-ewts .
 
-bda:LD_DILA_BSADP skos:prefLabel "d+hi la nas mthun sbyor byas pa/[ BY-NC-SA 3.0]bka' khrol can/_rgyal khab bye brag par bcos bstun ma byas pa/"@bo-x-ewts .
+bda:LD_DILA_BSADP skos:prefLabel "d+hi la nas mthun sbyor byas pa/[ BY-NC-SA 3.0]bka' 'khrol_rgyal khab bye brag par bcos bstun ma byas pa/"@bo-x-ewts .
 
 bda:LD_EAP_content skos:prefLabel "[EAP ]kyis mthun sbyor byas pa/_bdag dbang gsal kha med/_spyod khrims la gzigs/"@bo-x-ewts .
 
-bda:LD_EAP_metadata skos:prefLabel "[EAP ]mthun sbyor byas pa/[ CC0]bka' khrol can/"@bo-x-ewts .
+bda:LD_EAP_metadata skos:prefLabel "[EAP ]mthun sbyor byas pa/[ CC0]bka' 'khrol can/"@bo-x-ewts .
 
-bda:LD_GRETIL skos:prefLabel "[GRETIL ]nas mthun sbyor byas pa/[ CC0]bka' khrol can/"@bo-x-ewts .
+bda:LD_GRETIL skos:prefLabel "[GRETIL ]nas mthun sbyor byas pa/[ CC0]bka' 'khrol can/"@bo-x-ewts .
 
-bda:LD_IA_Metadata skos:prefLabel "'dzam gling drwa mdzod nas mthun sbyor byas pa/_bdag dbang gsal bshad med pa/"@bo-x-ewts .
+bda:LD_IA_Metadata skos:prefLabel "'dzam gling drwa mdzod nas mthun sbyor byas/_bdag dbang gsal bshad med pa/"@bo-x-ewts .
 
-bda:LD_IA_PD skos:prefLabel "'dzam gling drwa mdzod kyis mthun sbyor byas pa/_spyi spyod khyab khong /"@bo-x-ewts .
+bda:LD_IA_PD skos:prefLabel "'dzam gling drwa mdzod kyis mthun sbyor byas pa/_spyi spyod khyab khongs/"@bo-x-ewts .
 
 bda:LD_LOC_PD skos:prefLabel "a ri'i gros tshogs gong ma'i dpe mdzod nas mthun sbyor byas pa/_spyi spyod khyab khongs/"@bo-x-ewts .
 
-bda:LD_LOC_metadata skos:prefLabel "a ri'i gros tshogs gong ma'i dpe mdzod nas mthun sbyor byas pa/[ CC0]bka' khrol can/"@bo-x-ewts .
+bda:LD_LOC_metadata skos:prefLabel "a ri'i gros tshogs gong ma'i dpe mdzod nas mthun sbyor byas pa/[ CC0]bka' 'khrol can/"@bo-x-ewts .
 
 bda:LD_NGMCP_Metadata skos:prefLabel "[NGMCP ]nas mthun sbyor byas pa/_bdag dbang gsal bshad med pa/"@bo-x-ewts .
 
-bda:LD_SAT_images skos:prefLabel "[SAT ]nas mthun sbyor byas pa/[ CC BY-NC-SA 4.0]bka' khrol can/"@bo-x-ewts .
+bda:LD_NGMPP_Metadata skos:prefLabel "[NGMPP ]yis mthun sbyor byas pa/_bdag dbang gsal bshad med/"@bo-x-ewts .
 
-bda:LD_SBB_content skos:prefLabel "jar man rgyal yongs dpe mdzod kyis mthun sbyor byas pa/_bdag dbang gsal kha med/_spyi spyod khyabs khongs su tshud shag"@bo-x-ewts .
+bda:LD_SAT_images skos:prefLabel "[SAT ]nas mthun sbyor byas pa/[ CC BY-NC-SA 4.0]bka' 'khrol can/"@bo-x-ewts .
 
-bda:LD_SRC_Metadata skos:prefLabel "sa skya zhib 'jug tshogs pas mthun sbyor byas pa/_bdag dbang gtan khel med/"@bo-x-ewts .
+bda:LD_SBB_content skos:prefLabel "'jar man rgyal yongs dpe mdzod kyis mthun sbyor byas pa/_bdag dbang gsal kha med/_spyi spyod khyabs khongs su tshud yod/"@bo-x-ewts .
 
-bda:LD_rKTs_CC0 skos:prefLabel "bka' bstan zhib 'jug tshogs pas mthun sbyor byas/[ CC0]bka' khrol can/"@bo-x-ewts .
+bda:LD_SRC_Metadata skos:prefLabel "rgyal yongs sa chen gyis mthun sbyor byas pa/_bdag dbang thag gcod med pa/"@bo-x-ewts .
 
-bda:LicenseAllRightsReserved skos:prefLabel "thams cad bdag dbang gis zin pa/"@bo-x-ewts .
+bda:LD_WD_Metadata skos:prefLabel "wi gi dan grangs kyis mthun sbyor byas pa/_spyi spyod gsar skrun klad gor [(CC0) ]gyi bka' 'khrol can/"@bo-x-ewts .
 
-bda:LicenseCC0 skos:prefLabel "spyi la dbang ba'i gsar skrun/[ (CC0)]"@bo-x-ewts .
+bda:LD_rKTs_CC0 skos:prefLabel "bka' bstan zhib 'jug tshogs pas mthun sbyor byas/[ CC0]bka' 'khrol can/"@bo-x-ewts .
+
+bda:LicenseAllRightsReserved skos:prefLabel "tshang mar bdag dbang yod/"@bo-x-ewts .
+
+bda:LicenseCC0 skos:prefLabel "spyi spyod gsar skrun klad gor/[ (CC0) ]"@bo-x-ewts .
 
 bda:LicenseCCBYNC30U skos:prefLabel "[CCBYNC30U]"@bo-x-ewts .
 
-bda:LicenseCCBYNCND3U skos:prefLabel "spyi la dbang ba'i gsar skrun bka' khrol/[ BY-NC-ND 3.0 ]bka' khrol can/"@bo-x-ewts .
+bda:LicenseCCBYNCND3U skos:prefLabel "spyi spyod gsar skrun bka' 'khrol/[ BY-NC-ND 3.0 ]bka' 'khrol can/"@bo-x-ewts .
 
-bda:LicenseCCBYNCSA3U skos:prefLabel "spyi la dbang ba'i gsar skrun bka' khrol/[ CC BY-NC-SA 3.0 ]bcos bstun ma byas pa/"@bo-x-ewts .
+bda:LicenseCCBYNCSA3U skos:prefLabel "spyi la dbang ba'i gsar skrun bka' 'khrol/[ CC BY-NC-SA 3.0 ]bcos bstun ma byas pa/"@bo-x-ewts .
 
-bda:LicenseCCBYNCSA4U skos:prefLabel "spyi la dbang ba'i gsar skrun bka' khrol/[ BY-NC-SA 4.0 ]bka' khrol can/"@bo-x-ewts .
+bda:LicenseCCBYNCSA4U skos:prefLabel "spyi spyod gsar skrun bka' 'khrol/[ BY-NC-SA 4.0 ]bka' 'khrol can/"@bo-x-ewts .
 
-bda:LicenseCCBYSA3U skos:prefLabel "spyi la dbang ba'i gsar skrun bka' khrol/[ CC BY-SA 3.0 ]bcos bstun ma byas pa/"@bo-x-ewts .
+bda:LicenseCCBYSA3U skos:prefLabel "spyi spyod gsar skrun bka' 'khrol/[ CC BY-SA 3.0 ]bcos bstun ma byas pa/"@bo-x-ewts .
 
-bda:LicenseCCBYSA4U skos:prefLabel "spyi la dbang ba'i gsar skrun bka' khrol/[ BY-SA 4.0 ]bcos bstun ma byas pa/"@bo-x-ewts .
+bda:LicenseCCBYSA4U skos:prefLabel "spyi spyod gsar skrun bka' 'khrol/[ BY-SA 4.0 ]bcos bstun ma byas pa/"@bo-x-ewts .
 
 bda:LicenseCopyrightUndetermined skos:prefLabel "bdag dbang gsal bshad med pa/"@bo-x-ewts .
 
-bda:LicenseMixed skos:prefLabel "phyed phyed bka' khrol can/"@bo-x-ewts .
+bda:LicenseMixed skos:prefLabel "bka' 'khrol yod med bsres ma can/"@bo-x-ewts .
 
 bda:LicenseNoKnownCopyright skos:prefLabel "bdag dbang med shas che/"@bo-x-ewts .
 
-bda:LicenseODCBY10 skos:prefLabel "spyi la dbang ba'i dan grangs bka' khrol/[ (ODC-By) v1.0]"@bo-x-ewts .
+bda:LicenseODCBY10 skos:prefLabel "spyi la dbang ba'i dan grangs bka' 'khrol/[ (ODC-By) v1.0]"@bo-x-ewts .
 
 bda:LicensePublicDomain skos:prefLabel "spyi spyod khyab khongs/"@bo-x-ewts .
 
@@ -140,13 +129,13 @@ bda:StatusReleased skos:prefLabel "'grem spel zin pa/"@bo-x-ewts .
 
 bda:StatusReleasedPendingWithdrawal skos:prefLabel "phyi bshol la phyogs pa/"@bo-x-ewts .
 
-bda:StatusScanned skos:prefLabel "gsher 'beb zin pa/"@bo-x-ewts .
+bda:StatusScanned skos:prefLabel "gsher 'bebs zin pa/"@bo-x-ewts .
 
 bda:StatusSeekingOut skos:prefLabel "'tshol mus/"@bo-x-ewts .
 
-bda:StatusWithdrawn skos:prefLabel "phyir 'then pa/"@bo-x-ewts .
+bda:StatusWithdrawn skos:prefLabel "phyir 'then/"@bo-x-ewts .
 
-adm:Access rdfs:label "chog mchan rigs/"@bo-x-ewts .
+adm:Access rdfs:label "chog mchan gyi rigs/"@bo-x-ewts .
 
 adm:ContentProvider rdfs:label "bkag rgya'i rigs/"@bo-x-ewts .
 
@@ -154,7 +143,7 @@ adm:ImagesStatus rdfs:label "gsher par gnas babs/"@bo-x-ewts .
 
 adm:LegalData rdfs:label "khrims mthun dan grangs/"@bo-x-ewts .
 
-adm:License rdfs:label "bka' khrol ni/"@bo-x-ewts .
+adm:License rdfs:label "bka' 'khrol/"@bo-x-ewts .
 
 adm:LogEntry rdfs:label "zin tho/"@bo-x-ewts .
 
@@ -174,11 +163,11 @@ adm:canonicalHtml rdfs:label "drwa thag"@bo-x-ewts .
 
 adm:catalogingConvention rdfs:label "dkar chag sgrig lugs/"@bo-x-ewts .
 
-adm:copyrightOwner rdfs:label "dan grangs gong ma'i bdag dbang bzung mkhan/"@bo-x-ewts .
+adm:copyrightOwner rdfs:label "dan grangs gong ma'i bdag dbang 'dzin mkhan/"@bo-x-ewts .
 
 adm:hasLegal rdfs:label "khrims lugs gnas tshul/"@bo-x-ewts .
 
-adm:initialProvider rdfs:label "dan grangs gong ma dang por mthun sbyor byed mkhan/"@bo-x-ewts .
+adm:initialProvider rdfs:label "dan grangs gong ma thog mar mkho sprod byed mkhan/"@bo-x-ewts .
 
 adm:isRestrictedInChina rdfs:label "rgya nag gi bka' rgya can/"@bo-x-ewts .
 
@@ -192,7 +181,7 @@ adm:logWho rdfs:label "'god mkhan/"@bo-x-ewts .
 
 adm:metadataLegal rdfs:label "dan grangs gong ma'i khrims lugs gnas tshul/"@bo-x-ewts .
 
-adm:originalRecord rdfs:label "khungs kyi drwa tshigs la gzigs/"@bo-x-ewts .
+adm:originalRecord rdfs:label "yong khungs kyi drwa tshigs la gzigs/"@bo-x-ewts .
 
 adm:outlineAuthorStatement rdfs:label "dkar chag sgrig mkhan/"@bo-x-ewts .
 
@@ -214,15 +203,17 @@ adm:sameAsWorldCat rdfs:label "'dzam gling dkar chag dang mtshungs/"@bo-x-ewts .
 
 adm:sameAsrKTs rdfs:label "bka' bstan zhib 'jug tshogs pa dang mtshungs/"@bo-x-ewts .
 
-adm:seeOtherHA rdfs:label "hi ma la yi rgyu rtsal drwa tshigs su gzigs/"@bo-x-ewts .
+adm:seeOtherCBETA rdfs:label "[CBETA ]drwa tshigs la gzigs/"@bo-x-ewts .
+
+adm:seeOtherHA rdfs:label "hi ma la ya'i sgyu rtsal drwa tshigs su gzigs/"@bo-x-ewts .
 
 adm:seeOtherSAT rdfs:label "[SAT ]drwa tshigs la gzigs/"@bo-x-ewts .
 
-adm:seeOtherSRC rdfs:label "sa skya zhib 'jug drwa tshigs dang mtshungs/"@bo-x-ewts .
+adm:seeOtherSRC rdfs:label "sa skya zhib 'jug drwa tshigs la gzigs/"@bo-x-ewts .
 
 adm:seeOtherToL rdfs:label "rnam thar mdzod la gzigs/"@bo-x-ewts .
 
-adm:status rdfs:label "gnas babs ni/"@bo-x-ewts .
+adm:status rdfs:label "gnas babs/"@bo-x-ewts .
 
 adm:termsOfUse rdfs:label "dan grangs gong ma'i spyod khrims/"@bo-x-ewts .
 
