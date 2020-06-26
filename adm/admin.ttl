@@ -427,7 +427,7 @@ adm:initialProvider
   rdfs:range adm:ContentProvider ;
   rdfs:seeAlso adm:ContentProvider ;
 .
-adm:isRestrictedInChina
+adm:restrictedInChina
   a owl:AnnotationProperty ;
   rdfs:comment "Has value true if the contents of the associated Work are restricted in China"@en ;
   rdfs:domain adm:AdminData ;
