@@ -83,7 +83,7 @@ bda:LD_SAT_images skos:prefLabel "[SAT ]nas mthun sbyor byas pa/[ CC BY-NC-SA 4.
 
 bda:LD_SBB_content skos:prefLabel "'jar man rgyal yongs dpe mdzod kyis mthun sbyor byas pa/_bdag dbang gsal kha med/_spyi spyod khyabs khongs su tshud yod/"@bo-x-ewts .
 
-bda:LD_SRC_Metadata skos:prefLabel "rgyal yongs sa chen gyis mthun sbyor byas pa/_bdag dbang thag gcod med pa/"@bo-x-ewts .
+bda:LD_SRC_Metadata skos:prefLabel "rgyal yongs sa chen gyis mthun sbyor byas pa/_bdag dbang nges gtan med pa/"@bo-x-ewts .
 
 bda:LD_WD_Metadata skos:prefLabel "wi gi dan grangs kyis mthun sbyor byas pa/_spyi spyod gsar skrun klad gor [(CC0) ]gyi bka' 'khrol can/"@bo-x-ewts .
 

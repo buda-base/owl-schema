@@ -113,9 +113,9 @@ bdo:PersonAffiliation rdfs:label "khongs gtogs/"@bo-x-ewts .
 
 bdo:PersonAssumesOffice rdfs:label "las 'gan khur dus/"@bo-x-ewts .
 
-bdo:PersonAssumesSeat rdfs:label "khri ru 'khod lo/"@bo-x-ewts .
+bdo:PersonAssumesSeat rdfs:label "khri ru 'khod pa/"@bo-x-ewts .
 
-bdo:PersonBirth rdfs:label "'khrungs lo/"@bo-x-ewts .
+bdo:PersonBirth rdfs:label "'khrungs pa/"@bo-x-ewts .
 
 bdo:PersonBodhisattvaVowName rdfs:label "byang sdom gyi mtshan/"@bo-x-ewts .
 
@@ -123,7 +123,7 @@ bdo:PersonCommonName rdfs:label "yongs grags kyi mtshan/"@bo-x-ewts .
 
 bdo:PersonCorporateName rdfs:label "tshogs sde'i go gnas kyi ming /"@bo-x-ewts .
 
-bdo:PersonDeath rdfs:label "'das lo/"@bo-x-ewts .
+bdo:PersonDeath rdfs:label "'das grongs/"@bo-x-ewts .
 
 bdo:PersonDivorce rdfs:label "gza' 'thor byung dus/"@bo-x-ewts .
 
@@ -181,11 +181,11 @@ bdo:PhysicalInstance rdfs:label "gzugs can dpe cha/"@bo-x-ewts .
 
 bdo:Place rdfs:label "sa gnas/"@bo-x-ewts .
 
-bdo:PlaceAbandoned rdfs:label "bdag med du skyur ba'i lo dus/"@bo-x-ewts .
+bdo:PlaceAbandoned rdfs:label "bdag med gyur ba/"@bo-x-ewts .
 
 bdo:PlaceConverted rdfs:label "grub mtha' brje sgyur/"@bo-x-ewts .
 
-bdo:PlaceDestroyed rdfs:label "gtor bcom byas lo/"@bo-x-ewts .
+bdo:PlaceDestroyed rdfs:label "gtor bcom/"@bo-x-ewts .
 
 bdo:PlaceEvent rdfs:label "sa gnas dang 'brel ba'i gnas tshul/"@bo-x-ewts .
 
@@ -344,6 +344,8 @@ bdo:dimHeight rdfs:label "mtho tshad/"@bo-x-ewts .
 bdo:dimLength rdfs:label "ring tshad/"@bo-x-ewts .
 
 bdo:dimWidth rdfs:label "zheng tshad/"@bo-x-ewts .
+
+bdo:dimensionsStatement adm:userTooltip "po ti'i che chung /"@bo-x-ewts .
 
 bdo:eTextHasPage rdfs:label "shog ngos/"@bo-x-ewts .
 
@@ -506,7 +508,7 @@ bdo:instanceExtentStatement rdfs:label "shog grangs gsal bshad/"@bo-x-ewts .
 
 bdo:instanceHasDerivative rdfs:label "bshus ma/"@bo-x-ewts .
 
-bdo:instanceHasItem rdfs:label "bye brag gi dngos po/"@bo-x-ewts .
+bdo:instanceHasItem rdfs:label "dpe cha/"@bo-x-ewts .
 
 bdo:instanceHasReproduction rdfs:label "bskyar skrun/"@bo-x-ewts .
 
@@ -584,7 +586,7 @@ bdo:numberOfVolumes rdfs:label "po ti'i grangs/"@bo-x-ewts .
 
 bdo:onDate rdfs:label "lo dus/"@bo-x-ewts .
 
-bdo:onYear rdfs:label "byung ba'i lo/"@bo-x-ewts .
+bdo:onYear rdfs:label "lo tshigs/"@bo-x-ewts .
 
 bdo:pageHasLine rdfs:label "yig phreng /"@bo-x-ewts .
 
@@ -1464,7 +1466,7 @@ rdfs:label rdfs:label "ming byang /"@bo-x-ewts .
 
 rdfs:seeAlso rdfs:label "gzhan yang gzigs/"@bo-x-ewts .
 
-skos:altLabel rdfs:label "ming byang gi rnam grangs/"@bo-x-ewts .
+skos:altLabel rdfs:label "mtshan gyi rnam grangs/"@bo-x-ewts .
 
 skos:hiddenLabel rdfs:label "sbas pa'i ming byang /"@bo-x-ewts .
 
