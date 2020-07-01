@@ -2171,12 +2171,12 @@ Used to provide stand-off markup for the pagination of eText in correspondence w
   rdfs:label "page"@en ;
   rdfs:range bdo:EtextPage ;
 .
-bdo:eTextInItem
+bdo:eTextInInstance
   a owl:ObjectProperty ;
-  adm:userTooltip "The reference to the :ItemEtext indicates the item that contains the volume that this Etext is contained in"@en ;
+  adm:userTooltip "The reference to the instance the etext is in"@en ;
   rdfs:domain bdo:Etext ;
-  rdfs:label "in item"@en ;
-  rdfs:range bdo:ItemEtext ;
+  rdfs:label "in instance"@en ;
+  rdfs:range bdo:EtextInstance ;
   rdfs:seeAlso bdo:Etext ;
 .
 bdo:eTextInVolume
