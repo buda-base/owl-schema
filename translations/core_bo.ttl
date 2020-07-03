@@ -578,8 +578,6 @@ bdo:noteSource rdfs:label "khungs/"@bo-x-ewts .
 
 bdo:noteText rdfs:label "yi ge/"@bo-x-ewts .
 
-bdo:noteType rdfs:label "yod sa'i mtshams/"@bo-x-ewts .
-
 bdo:noteWork rdfs:label "khungs/"@bo-x-ewts .
 
 bdo:numberOfVolumes rdfs:label "po ti'i grangs/"@bo-x-ewts .
@@ -629,6 +627,10 @@ bdo:placeLong rdfs:label "gzhung thig"@bo-x-ewts .
 bdo:placeType rdfs:label "sa gnas rigs/"@bo-x-ewts .
 
 bdo:printMethod rdfs:label "par ma'i rigs/"@bo-x-ewts .
+
+bdo:publisherLocation rdfs:label "par gnas/"@bo-x-ewts .
+
+bdo:publisherName rdfs:label "par mkhan/"@bo-x-ewts .
 
 bdo:role rdfs:label "las 'gan/"@bo-x-ewts .
 
