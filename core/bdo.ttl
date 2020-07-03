@@ -3695,7 +3695,6 @@ bdo:publisherLocation
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher location"@en ;
   rdfs:range rdf:langString ;
-  owl:deprecated true ;
 .
 bdo:publisherName
   a owl:DatatypeProperty ;
@@ -3704,7 +3703,6 @@ bdo:publisherName
   rdfs:domain bdo:Instance ;
   rdfs:label "publisher name"@en ;
   rdfs:range rdf:langString ;
-  owl:deprecated true ;
 .
 bdo:restored
   a owl:DatatypeProperty ;
