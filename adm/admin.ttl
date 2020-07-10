@@ -552,7 +552,7 @@ adm:place_TLM_adminEmail
   adm:translationPriority 2 ;
   rdfs:comment "The admin email is used to send requests for new users to be added to the Library." ;
   rdfs:domain bdo:Place ;
-  rdfs:label "tlm admin email"@en ;
+  rdfs:label "admin email"@en ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_code
@@ -568,15 +568,15 @@ adm:place_TLM_librarian
   adm:translationPriority 2 ;
   rdfs:comment "The librarian property records the name of the group of users that are permitted to add/update/delete Library holdings. The group name will conventionally be named by lower-casing the TLM/code and appending \"librarian\". for example, \"dzllibrarian\""@en ;
   rdfs:domain bdo:Place ;
-  rdfs:label "tlm librarian group"@en ;
+  rdfs:label "librarian group"@en ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_librarianEmail
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
   rdfs:domain bdo:Place ;
-  rdfs:label "The librarian email is used to send requests to the library staff."@en ;
-  rdfs:label "tlm librarian email"@en ;
+  rdfs:comment "The librarian email is used to send requests to the library staff."@en ;
+  rdfs:label "librarian email"@en ;
   rdfs:range xsd:string ;
 .
 adm:place_TLM_num

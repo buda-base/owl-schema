@@ -609,8 +609,7 @@ bdo:Instance
   a owl:Class ;
   adm:technicalComment "Was PublishedWork, changed to align with Bibframe 2.0"@en ;
   adm:technicalComment "Was Work, changed to align with Bibframe 2.0"@en ;
-  adm:userTooltip "A Work fo which there is at least one physical manifestation. Versus Abstract Work"@en ;
-  adm:userTooltip "An individual material (or electronic) embodiement, for instance a particular published form."@en ;
+  adm:userTooltip "An expression of a work, for instance a particular published form."@en ;
   bdo:inferSubTree true ;
   rdfs:label "instance"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
