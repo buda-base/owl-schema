@@ -3610,7 +3610,7 @@ bdo:placeIsNear
 bdo:placeLat
   a owl:DatatypeProperty ;
   a owl:FunctionalProperty ;
-  adm:userTooltip "The latitude of the Place"@en ;
+  adm:userTooltip "The latitude of the place, using GPS coordinates (WGS84), formatted as decimal degrees"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "latitude"@en ;
   rdfs:range xsd:string ;
@@ -3626,7 +3626,7 @@ bdo:placeLocatedIn
 bdo:placeLong
   a owl:DatatypeProperty ;
   a owl:FunctionalProperty ;
-  adm:userTooltip "The longitude of the Place"@en ;
+  adm:userTooltip "The longitude of the place, using GPS coordinates (WGS84), formatted as decimal degrees"@en ;
   rdfs:domain bdo:Place ;
   rdfs:label "longitude"@en ;
   rdfs:range xsd:string ;
