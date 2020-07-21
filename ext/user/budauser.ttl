@@ -18,9 +18,6 @@
 @prefix bdgup: <http://purl.bdrc.io/graph-nc/user-private/> .
 @base <http://www.w3.org/2002/07/owl#> .
 
-[ rdf:type owl:Ontology
- ] .
-
 #################################################################
 #    Annotation properties
 #################################################################
@@ -32,22 +29,15 @@ bdou:isActive rdf:type owl:AnnotationProperty ;
                           bdu:User .
 
 
-###  http://purl.bdrc.io/ontology/ext/user/preferredLangTags
-bdou:preferredLangTags rdf:type owl:AnnotationProperty ;
-                       rdfs:range rdf:PlainLiteral ,
-                                  xsd:string ;
-                       rdfs:domain bdou:User .
-
-
 ###  http://purl.bdrc.io/ontology/ext/user/publicProps
 bdou:publicProps rdf:type owl:AnnotationProperty ;
-                 rdfs:range rdf:PlainLiteral ,
+                 rdfs:range rdf:langString ,
                             xsd:anyURI ;
                  rdfs:domain bdou:User .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
-rdfs:comment rdfs:range rdf:PlainLiteral ;
+rdfs:comment rdfs:range rdf:langString ;
              rdfs:domain bdou:User .
 
 
@@ -64,13 +54,13 @@ owl:topDataProperty rdf:type owl:AnnotationProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty ;
-              rdfs:range rdf:PlainLiteral ;
+              rdfs:range rdf:langString ;
               rdfs:domain bdou:User .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:range rdf:PlainLiteral ;
+               rdfs:range rdf:langString ;
                rdfs:domain bdou:User .
 
 
@@ -187,19 +177,22 @@ bdou:lastVisit rdf:type owl:DatatypeProperty ;
 ###  http://purl.bdrc.io/ontology/ext/user/mainResidenceArea
 bdou:mainResidenceArea rdf:type owl:DatatypeProperty ;
                        rdfs:domain bdou:User ;
-                       rdfs:range rdf:PlainLiteral .
+                       rdfs:range bdo:Place .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/mainResidenceCountry
 bdou:mainResidenceCountry rdf:type owl:DatatypeProperty ;
                           rdfs:domain bdou:User ;
-                          rdfs:range rdf:PlainLiteral .
+                          rdfs:range bdo:Place .
 
+bdou:Khams a bdo:Place .
+bdou:Amdo a bdo:Place . 
+bdou:UTsang a bdo:Place . 
 
 ###  http://purl.bdrc.io/ontology/ext/user/onKeyword
 bdou:onKeyword rdf:type owl:DatatypeProperty ;
                rdfs:domain bdou:SearchBookmark ;
-               rdfs:range rdf:PlainLiteral .
+               rdfs:range rdf:langString .
 
 
 ###  http://purl.bdrc.io/ontology/ext/user/onPage
@@ -211,7 +204,7 @@ bdou:onPage rdf:type owl:DatatypeProperty ;
 ###  http://purl.bdrc.io/ontology/ext/user/preferredLangTags
 bdou:preferredLangTags rdf:type owl:DatatypeProperty ;
                        rdfs:domain bdou:User ;
-                       rdfs:range rdf:PlainLiteral .
+                       rdfs:range xsd:string .
 
 
 #################################################################
@@ -299,7 +292,7 @@ foaf:Person rdf:type owl:Class .
 #################################################################
 
 ###  http://purl.bdrc.io/resource-nc/user/InteresrResearch
-bdu:InteresrResearch rdf:type owl:NamedIndividual ,
+bdu:InterestResearch rdf:type owl:NamedIndividual ,
                               bdou:InterestType .
 
 
