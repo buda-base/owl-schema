@@ -160,4 +160,6 @@ Some Burushaski titles appear from time to time in the Tibetan canon (see Derge 
 
 ## See also
 - [BIBFRAME Conventions](http://connect.ala.org/node/271553) and [this thread](https://listserv.loc.gov/cgi-bin/wa?A1=ind1712&L=BIBFRAME#7)
+- [The BIBFRAME And MARC Bibliographic Encoding for Languages (BABEL) Final Report](https://www.loc.gov/aba/pcc/taskgroup/BABEL-Final-Report.docx)
+- [W3C guidelines](https://www.w3.org/International/questions/qa-choosing-language-tags)
 - [SARIT Guidelines](http://sarit.indology.info/apps/sarit-pm/docs/encoding-guidelines-simple.html#The-xmlid-and-xmllang-attributes)
