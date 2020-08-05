@@ -213,6 +213,8 @@ bda:CP032
   a adm:ContentProvider ;
   a foaf:Organization ;
   skos:altLabel "Treasury of Lives"@en ;
+  adm:defaultMetadataLicense bdr:LicenseCC0 ;
+  adm:termsOfUse "https://treasuryoflives.org/terms"^^xsd:anyURI ;
   skos:prefLabel "ToL" ;
   foaf:homepage "https://treasuryoflives.org/"^^xsd:anyURI ;
 .
