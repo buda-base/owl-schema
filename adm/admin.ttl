@@ -8,8 +8,8 @@
 # imports: http://purl.bdrc.io/ontology/adm/types/Status/
 # imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # imports: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/translations/CoreBo/ ;
-# imports: http://purl.bdrc.io/ontology/translations/AdmBo/ ;
+# imports: http://purl.bdrc.io/ontology/translations/AdmBo/
+# imports: http://purl.bdrc.io/ontology/translations/CoreBo/
 # prefix: adm
 
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -44,8 +44,8 @@ adm:
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Status/> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ;
   owl:imports bdo: ;
-  owl:imports <http://purl.bdrc.io/ontology/translations/CoreBo/> ;
   owl:imports <http://purl.bdrc.io/ontology/translations/AdmBo/> ;
+  owl:imports <http://purl.bdrc.io/ontology/translations/CoreBo/> ;
 .
 adm:Access
   rdfs:subClassOf adm:Type ;
@@ -75,9 +75,21 @@ adm:Assertion
   rdfs:label "Assertion"@en ;
   rdfs:subClassOf adm:Entity ;
 .
+adm:ContentLogEntry
+  a owl:Class ;
+  rdfs:comment "Log entries for ImageGroups to record content management events such scan creation, sync'ing etc"@en ;
+  rdfs:label "Log Entry"@en ;
+  rdfs:subClassOf adm:LogEntry ;
+.
 adm:ContentProvider
   rdfs:label "Content provider" ;
   rdfs:subClassOf adm:Organization ;
+.
+adm:CreateGraph
+  a owl:Class ;
+  rdfs:comment "Log entry for metadata graph creation"@en ;
+  rdfs:label "Create Graph Log Entry"@en ;
+  rdfs:subClassOf adm:GraphLogEntry ;
 .
 adm:Entity
   a owl:Class ;
@@ -94,8 +106,20 @@ adm:Facet
 adm:GitRepo
   rdfs:subClassOf adm:Type ;
 .
+adm:GraphLogEntry
+  a owl:Class ;
+  rdfs:comment "Log entries for metadata management events such as graph creation, update, withdrawl, etc"@en ;
+  rdfs:label "Graph Log Entry"@en ;
+  rdfs:subClassOf adm:LogEntry ;
+.
 adm:ImagesStatus
   rdfs:subClassOf adm:Type ;
+.
+adm:ImagesUpdated
+  a owl:Class ;
+  rdfs:comment "Log entry for images updating such as duplicate deletion, images conversion, etc"@en ;
+  rdfs:label "Images updated Log Entry"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
 .
 adm:LegalData
   rdfs:subClassOf owl:Thing ;
@@ -108,6 +132,12 @@ adm:LogEntry
   rdfs:comment "Log entries for :Entity updates. Includes the agent, date and message explaing the update."@en ;
   rdfs:label "Log Entry"@en ;
   rdfs:subClassOf adm:Facet ;
+.
+adm:MinorUpdateGraph
+  a owl:Class ;
+  rdfs:comment "Log entry for metadata graph minor update"@en ;
+  rdfs:label "Minor Update Graph Log Entry"@en ;
+  rdfs:subClassOf adm:GraphLogEntry ;
 .
 adm:Organization
   a owl:Class ;
@@ -160,6 +190,24 @@ adm:ProductOrg
   rdfs:comment "The name of a ProductOrg is represented by rdfs:label"@en ;
   rdfs:subClassOf adm:Facet ;
 .
+adm:ReinstateGraph
+  a owl:Class ;
+  rdfs:comment "Log entry for metadata graph reinstatement"@en ;
+  rdfs:label "Reinstate Graph Log Entry"@en ;
+  rdfs:subClassOf adm:GraphLogEntry ;
+.
+adm:Reordered
+  a owl:Class ;
+  rdfs:comment "Log entry for image reordiner within an ImageGroup."@en ;
+  rdfs:label "Images reordered Log Entry"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
+.
+adm:ScanRequested
+  a owl:Class ;
+  rdfs:comment "Log entry for image scan request"@en ;
+  rdfs:label "Scan requested Log Entry"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
+.
 adm:StatementAnnotationBody
   a owl:Class ;
   adm:translationPriority 2 ;
@@ -170,6 +218,12 @@ adm:StatementAnnotationBody
 adm:Status
   rdfs:subClassOf adm:Type ;
 .
+adm:Synced
+  a owl:Class ;
+  rdfs:comment "Log entry for image syncing to archive"@en ;
+  rdfs:label "Images synced Log Entry"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
+.
 adm:TermsOfUse
   rdfs:subClassOf adm:Type ;
 .
@@ -177,6 +231,18 @@ adm:Type
   a owl:Class ;
   adm:translationPriority 2 ;
   rdfs:comment "adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology."@en ;
+.
+adm:UpdateGraph
+  a owl:Class ;
+  rdfs:comment "Log entry for metadata graph update"@en ;
+  rdfs:label "Update Graph Log Entry"@en ;
+  rdfs:subClassOf adm:GraphLogEntry ;
+.
+adm:WithdrawGraph
+  a owl:Class ;
+  rdfs:comment "Log entry for metadata graph withdrawl"@en ;
+  rdfs:label "Withdraw Graph Log Entry"@en ;
+  rdfs:subClassOf adm:GraphLogEntry ;
 .
 adm:WorkOrAdmOutline
   a owl:Class ;
@@ -427,13 +493,6 @@ adm:initialProvider
   rdfs:range adm:ContentProvider ;
   rdfs:seeAlso adm:ContentProvider ;
 .
-adm:restrictedInChina
-  a owl:AnnotationProperty ;
-  rdfs:comment "Has value true if the contents of the associated Work are restricted in China"@en ;
-  rdfs:domain adm:AdminData ;
-  rdfs:label "is restricted in China"@en ;
-  rdfs:range xsd:boolean ;
-.
 adm:legacyImageGroupRID
   a owl:AnnotationProperty ;
   adm:migrationComment "records the original imagegroup rid from which the volume information was migrated"@en ;
@@ -574,8 +633,8 @@ adm:place_TLM_librarian
 adm:place_TLM_librarianEmail
   a owl:AnnotationProperty ;
   adm:translationPriority 2 ;
-  rdfs:domain bdo:Place ;
   rdfs:comment "The librarian email is used to send requests to the library staff."@en ;
+  rdfs:domain bdo:Place ;
   rdfs:label "librarian email"@en ;
   rdfs:range xsd:string ;
 .
@@ -653,6 +712,13 @@ adm:replaceWithObjectProperty
   rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
   rdfs:label "replace with Object property"@en ;
   rdfs:subPropertyOf adm:replaceWith ;
+.
+adm:restrictedInChina
+  a owl:AnnotationProperty ;
+  rdfs:comment "Has value true if the contents of the associated Work are restricted in China"@en ;
+  rdfs:domain adm:AdminData ;
+  rdfs:label "is restricted in China"@en ;
+  rdfs:range xsd:boolean ;
 .
 adm:sameAsBDRC
   a owl:AnnotationProperty ;
@@ -734,6 +800,11 @@ adm:seeOther
   rdfs:label "see other"@en ;
   rdfs:range xsd:anyURI ;
 .
+adm:seeOtherCBETA
+  a owl:AnnotationProperty ;
+  rdfs:label "see on CBETA"@en ;
+  rdfs:subPropertyOf adm:seeOther ;
+.
 adm:seeOtherHA
   a owl:AnnotationProperty ;
   rdfs:label "see Himalayan Art entry"@en ;
@@ -752,11 +823,6 @@ adm:seeOtherSRC
 adm:seeOtherToL
   a owl:AnnotationProperty ;
   rdfs:label "See Treasury of Lives entry"@en ;
-  rdfs:subPropertyOf adm:seeOther ;
-.
-adm:seeOtherCBETA
-  a owl:AnnotationProperty ;
-  rdfs:label "see on CBETA"@en ;
   rdfs:subPropertyOf adm:seeOther ;
 .
 adm:statementScore
