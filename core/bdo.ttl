@@ -1690,9 +1690,9 @@ bdo:contentLocationEndLine
 bdo:contentLocationEndPage
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workLocationEndPage"@en ;
-  adm:userTooltip "The ending page in the volume of the Work indicated by the other statements for this :ContentLocation"@en ;
+  adm:userTooltip "The ending image number in the image group of the Work indicated by the other statements for this :ContentLocation"@en ;
   rdfs:domain bdo:ContentLocation ;
-  rdfs:label "end page"@en ;
+  rdfs:label "end image number"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:contentLocationEndPhrase
@@ -1752,9 +1752,9 @@ bdo:contentLocationLine
 bdo:contentLocationPage
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workLocationPage"@en ;
-  adm:userTooltip "The page in the volume of the Instance indicated by the other statements for this :ContentLocation"@en ;
+  adm:userTooltip "The image number in the image group of the Instance indicated by the other statements for this :ContentLocation"@en ;
   rdfs:domain bdo:ContentLocation ;
-  rdfs:label "page"@en ;
+  rdfs:label "image number"@en ;
   rdfs:range bdo:IntegerOrString ;
 .
 bdo:contentLocationPhrase
