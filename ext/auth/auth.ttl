@@ -98,21 +98,21 @@ aut:created_at
   rdfs:comment "The creation date of the auth0 user bdrc account"@en ;
   rdfs:domain aut:UserProfile ;
   rdfs:label "creation date"@en ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:dateTime ;
 .
 aut:updated_at
   a owl:DatatypeProperty ;
   rdfs:comment "The last update time and date of the auth0 user bdrc account"@en ;
   rdfs:domain aut:UserProfile ;
   rdfs:label "last update time"@en ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:dateTime ;
 .
 aut:last_login
   a owl:DatatypeProperty ;
   rdfs:comment "The last login time and date of the auth0 user bdrc account"@en ;
   rdfs:domain aut:UserProfile ;
   rdfs:label "last login time"@en ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:dateTime ;
 .
 aut:desc
   a owl:DatatypeProperty ;
