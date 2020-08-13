@@ -139,6 +139,13 @@ adm:MinorUpdateGraph
   rdfs:label "Minor Update Graph Log Entry"@en ;
   rdfs:subClassOf adm:GraphLogEntry ;
 .
+adm:ContentQC
+  a owl:Class ;
+  rdfs:comment "Log entry indicating completion of content QC."@en ;
+  rdfs:label "Content QC'd Log Entry"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
+.
+
 adm:Organization
   a owl:Class ;
   adm:translationPriority 2 ;
