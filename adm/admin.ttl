@@ -101,8 +101,8 @@ adm:ContentQC
 .
 adm:DataLogEntry
   a owl:Class ;
-  rdfs:comment "Log entries for metadata management events such as graph creation, update, withdrawl, etc"@en ;
-  rdfs:label "Graph Log Entry"@en ;
+  rdfs:comment "Log entries for data management events such as creation, update, withdrawl, etc"@en ;
+  rdfs:label "Data Log Entry"@en ;
   rdfs:subClassOf adm:LogEntry ;
 .
 adm:Entity
