@@ -31,6 +31,14 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bda:BatchMethod
+  a adm:LogMethod ;
+  skos:prefLabel "Batch method {en}" ;
+.
+bda:ManualMethod
+  a adm:LogMethod ;
+  skos:prefLabel "Manual method {en}" ;
+.
 adm:
   a owl:Ontology ;
   rdfs:comment "This is the buda admin ontology comprising classes, and properties with domains and ranges that add administrative items for use in the Buda platform"@en ;
@@ -85,11 +93,17 @@ adm:ContentProvider
   rdfs:label "Content provider" ;
   rdfs:subClassOf adm:Organization ;
 .
-adm:CreateGraph
+adm:ContentQC
   a owl:Class ;
-  rdfs:comment "Log entry for metadata graph creation"@en ;
-  rdfs:label "Create Graph Log Entry"@en ;
-  rdfs:subClassOf adm:GraphLogEntry ;
+  rdfs:comment "Log entry indicating completion of content QC."@en ;
+  rdfs:label "Content QC'd Log Entry"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
+.
+adm:DataLogEntry
+  a owl:Class ;
+  rdfs:comment "Log entries for metadata management events such as graph creation, update, withdrawl, etc"@en ;
+  rdfs:label "Graph Log Entry"@en ;
+  rdfs:subClassOf adm:LogEntry ;
 .
 adm:Entity
   a owl:Class ;
@@ -106,12 +120,6 @@ adm:Facet
 adm:GitRepo
   rdfs:subClassOf adm:Type ;
 .
-adm:GraphLogEntry
-  a owl:Class ;
-  rdfs:comment "Log entries for metadata management events such as graph creation, update, withdrawl, etc"@en ;
-  rdfs:label "Graph Log Entry"@en ;
-  rdfs:subClassOf adm:LogEntry ;
-.
 adm:ImagesStatus
   rdfs:subClassOf adm:Type ;
 .
@@ -120,6 +128,18 @@ adm:ImagesUpdated
   rdfs:comment "Log entry for images updating such as duplicate deletion, images conversion, etc"@en ;
   rdfs:label "Images updated Log Entry"@en ;
   rdfs:subClassOf adm:ContentLogEntry ;
+.
+adm:InitialDataCreation
+  a owl:Class ;
+  rdfs:comment "Log entry for initial data creation"@en ;
+  rdfs:label "Initial Data Log Entry"@en ;
+  rdfs:subClassOf adm:DataLogEntry ;
+.
+adm:InitialDataImport
+  a owl:Class ;
+  rdfs:comment "Log entry for initial data creation"@en ;
+  rdfs:label "Initial Data Log Entry"@en ;
+  rdfs:subClassOf adm:DataLogEntry ;
 .
 adm:LegalData
   rdfs:subClassOf owl:Thing ;
@@ -133,19 +153,17 @@ adm:LogEntry
   rdfs:label "Log Entry"@en ;
   rdfs:subClassOf adm:Facet ;
 .
-adm:MinorUpdateGraph
+adm:LogMethod
   a owl:Class ;
-  rdfs:comment "Log entry for metadata graph minor update"@en ;
-  rdfs:label "Minor Update Graph Log Entry"@en ;
-  rdfs:subClassOf adm:GraphLogEntry ;
+  rdfs:label "Log method" ;
+  rdfs:subClassOf adm:Type ;
 .
-adm:ContentQC
+adm:MinorUpdateData
   a owl:Class ;
-  rdfs:comment "Log entry indicating completion of content QC."@en ;
-  rdfs:label "Content QC'd Log Entry"@en ;
-  rdfs:subClassOf adm:ContentLogEntry ;
+  rdfs:comment "Log entry for minor data update"@en ;
+  rdfs:label "Minor Data Update  Log Entry"@en ;
+  rdfs:subClassOf adm:DataLogEntry ;
 .
-
 adm:Organization
   a owl:Class ;
   adm:translationPriority 2 ;
@@ -197,11 +215,11 @@ adm:ProductOrg
   rdfs:comment "The name of a ProductOrg is represented by rdfs:label"@en ;
   rdfs:subClassOf adm:Facet ;
 .
-adm:ReinstateGraph
+adm:ReinstateData
   a owl:Class ;
-  rdfs:comment "Log entry for metadata graph reinstatement"@en ;
-  rdfs:label "Reinstate Graph Log Entry"@en ;
-  rdfs:subClassOf adm:GraphLogEntry ;
+  rdfs:comment "Log entry for data reinstatement"@en ;
+  rdfs:label "Reinstate Data Log Entry"@en ;
+  rdfs:subClassOf adm:DataLogEntry ;
 .
 adm:Reordered
   a owl:Class ;
@@ -239,17 +257,17 @@ adm:Type
   adm:translationPriority 2 ;
   rdfs:comment "adm:Type is a type used in the implementation of an administrative entity in the BDRC ontology."@en ;
 .
-adm:UpdateGraph
+adm:UpdateData
   a owl:Class ;
-  rdfs:comment "Log entry for metadata graph update"@en ;
-  rdfs:label "Update Graph Log Entry"@en ;
-  rdfs:subClassOf adm:GraphLogEntry ;
+  rdfs:comment "Log entry for data update"@en ;
+  rdfs:label "Update Data Log Entry"@en ;
+  rdfs:subClassOf adm:DataLogEntry ;
 .
-adm:WithdrawGraph
+adm:WithdrawData
   a owl:Class ;
-  rdfs:comment "Log entry for metadata graph withdrawl"@en ;
-  rdfs:label "Withdraw Graph Log Entry"@en ;
-  rdfs:subClassOf adm:GraphLogEntry ;
+  rdfs:comment "Log entry for data withdrawl"@en ;
+  rdfs:label "Withdraw Data Log Entry"@en ;
+  rdfs:subClassOf adm:DataLogEntry ;
 .
 adm:WorkOrAdmOutline
   a owl:Class ;
@@ -518,6 +536,13 @@ adm:license
   rdfs:range adm:License ;
   rdfs:seeAlso adm:License ;
 .
+adm:logAgent
+  a owl:AnnotationProperty ;
+  rdfs:comment "what software performed the update  described by the log entry"@en ;
+  rdfs:domain adm:LogEntry ;
+  rdfs:label "script"@en ;
+  rdfs:range xsd:string ;
+.
 adm:logDate
   a owl:AnnotationProperty ;
   rdfs:comment "When the update  described by the log entry was performed"@en ;
@@ -538,6 +563,13 @@ adm:logMessage
   rdfs:domain adm:LogEntry ;
   rdfs:label "message"@en ;
   rdfs:range rdf:langString ;
+.
+adm:logMethod
+  a owl:AnnotationProperty ;
+  rdfs:comment "batch or manual data initialization or update"@en ;
+  rdfs:domain adm:LogEntry ;
+  rdfs:label "script"@en ;
+  rdfs:range adm:LogMethod ;
 .
 adm:logWho
   a owl:AnnotationProperty ;
