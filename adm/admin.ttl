@@ -141,6 +141,16 @@ adm:InitialDataImport
   rdfs:label "Initial Data Log Entry"@en ;
   rdfs:subClassOf adm:DataLogEntry ;
 .
+adm:InitialOutlineData
+  a owl:Class ;
+  rdfs:label "Initial outline data"@en ;
+  rdfs:subClassOf adm:InitialDataCreation ;
+.
+adm:InitialOutlineDataImport
+  a owl:Class ;
+  rdfs:label "Initial outline data import"@en ;
+  rdfs:subClassOf adm:InitialDataImport ;
+.
 adm:LegalData
   rdfs:subClassOf owl:Thing ;
 .
@@ -262,6 +272,11 @@ adm:UpdateData
   rdfs:comment "Log entry for data update"@en ;
   rdfs:label "Update Data Log Entry"@en ;
   rdfs:subClassOf adm:DataLogEntry ;
+.
+adm:UpdateOutlineData
+  a owl:Class ;
+  rdfs:label "Update outline data"@en ;
+  rdfs:subClassOf adm:UpdateData ;
 .
 adm:WithdrawData
   a owl:Class ;
