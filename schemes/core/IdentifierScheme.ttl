@@ -4,9 +4,11 @@
 
 @prefix IdentifierScheme: <http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -291,6 +293,7 @@ bdr:IdentifierScheme
 .
 IdentifierScheme:
   a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Initial version" ;
 .

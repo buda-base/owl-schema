@@ -6,6 +6,7 @@
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,6 +19,7 @@ adm:OutlineType
 .
 OutlineType:
   a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 bda:OutlineTypeCompositeVolume

@@ -4,8 +4,10 @@
 
 @prefix FEMCScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -26,6 +28,7 @@ bdr:FEMCScheme
 .
 FEMCScheme:
   a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Initial version" ;
 .

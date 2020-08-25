@@ -19,7 +19,7 @@
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix iiif2: <http://iiif.io/api/presentation/2#> .
 @prefix iiif3: <http://iiif.io/api/presentation/3#> .
@@ -41,6 +41,7 @@ bda:ManualMethod
 .
 adm:
   a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
   rdfs:comment "This is the buda admin ontology comprising classes, and properties with domains and ranges that add administrative items for use in the Buda platform"@en ;
   rdfs:label "Buda admin ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/adm/ContentProvider/> ;

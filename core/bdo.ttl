@@ -30,7 +30,7 @@
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix iiif2: <http://iiif.io/api/presentation/2#> .
 @prefix iiif3: <http://iiif.io/api/presentation/3#> .
@@ -64,6 +64,7 @@ iiif3:Manifest
 .
 bdo:
   a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
   rdfs:comment "This is the core buda ontology comprising classes, and properties with domains and ranges"@en ;
   rdfs:label "Buda core ontology"@en ;
   owl:imports <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> ;
@@ -4186,7 +4187,7 @@ bdr:PrintMethod_Lithography
   a bdo:PrintMethod_Offset ;
   skos:prefLabel "lithography"@en ;
 .
-dcterms:modified
+dct:modified
   a owl:AnnotationProperty ;
 .
 rdfs:comment
