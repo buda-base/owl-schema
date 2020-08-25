@@ -21,6 +21,7 @@
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
 # prefix: bdo
+# added to cause reload of ontology
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
