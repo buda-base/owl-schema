@@ -114,25 +114,17 @@ bdo:Agents
   adm:translationPriority 2 ;
   adm:userTooltip "The various sorts of agents represented in the ontology, such as Persons, Organizations and so on"@en ;
   rdfs:label "Agents"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Agent
-          foaf:Agent
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Agent
+      foaf:Agent
+    ) ;
 .
 bdo:AgentsOrAgentInRole
   a owl:Class ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:AgentInRole
-          bdo:Agents
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Agents
+      bdo:AgentInRole
+    ) ;
 .
 bdo:AhistoricalAgent
   a owl:Class ;
@@ -145,13 +137,7 @@ bdo:AnyOrganization
   adm:deprecatedComment "deprecated in favor of setting the range of :agent to :Agents"@en ;
   adm:userTooltip "Any sort of organization"@en ;
   rdfs:label "any organization"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Organization
-        ) ;
-    ] ;
+  rdfs:subClassOf bdo:Organization ;
   owl:deprecated true ;
 .
 bdo:AuthoredEvent
@@ -265,13 +251,6 @@ In general include the use Copyright Page Title when it differs from the bibliog
   rdfs:seeAlso "https://www.loc.gov/publish/cip/news/lccn_art.html"^^xsd:anyURI ;
   rdfs:subClassOf bdo:Title ;
 .
-bdo:CoreUnion
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:comment "a union of core ontology classes"@en ;
-  rdfs:label "core union"@en ;
-  rdfs:subClassOf bdo:Union ;
-.
 bdo:Corporation
   a owl:Class ;
   adm:technicalComment "The Names of individual Corporations are represented by rdfs:label"@en ;
@@ -360,15 +339,11 @@ bdo:EntitiesOrFacets
   adm:translationPriority 2 ;
   rdfs:comment "class of various resources that may have :Note attached"@en ;
   rdfs:label "entity or facet"@en ;
-  rdfs:subClassOf bdo:MixedUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Entity
-          bdo:Facet
-          bdo:IIIFEntity
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Entity
+      bdo:Facet
+      bdo:IIIFEntity
+    ) ;
 .
 bdo:Entity
   a owl:Class ;
@@ -484,14 +459,10 @@ bdo:EventOrPeriod
   adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
   adm:technicalComment "domain of various date properties"@en ;
   rdfs:label "Event or DateIndication"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Event
-          bdo:DateIndication
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Event
+      bdo:DateIndication
+    ) ;
   owl:deprecated true ;
 .
 bdo:Facet
@@ -529,27 +500,19 @@ bdo:IIIF2Or3Collection
   a owl:Class ;
   adm:translationPriority 2 ;
   rdfs:label "iiif v2 or v3 collection"@en ;
-  rdfs:subClassOf bdo:IIIFUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          iiif2:Collection
-          iiif3:Collection
-        ) ;
-    ] ;
+  owl:unionOf (
+      iiif2:Collection
+      iiif3:Collection
+    ) ;
 .
 bdo:IIIF2Or3Manifest
   a owl:Class ;
   adm:translationPriority 2 ;
   rdfs:label "iiif v2 or v3 manifest"@en ;
-  rdfs:subClassOf bdo:IIIFUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          iiif2:Manifest
-          iiif3:Manifest
-        ) ;
-    ] ;
+  owl:unionOf (
+      iiif2:Manifest
+      iiif3:Manifest
+    ) ;
 .
 bdo:IIIFCollection
   a owl:Class ;
@@ -567,13 +530,6 @@ bdo:IIIFManifest
   adm:userTooltip "can be v2.1.* or v3.0.*"@en ;
   rdfs:label "IIIF Manifest"@en ;
   rdfs:subClassOf bdo:IIIFEntity ;
-.
-bdo:IIIFUnion
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "a union of iiif classes"@en ;
-  rdfs:label "iiif union"@en ;
-  rdfs:subClassOf bdo:Union ;
 .
 bdo:ISBN
   a rdfs:Datatype ;
@@ -835,13 +791,6 @@ bdo:LineageType
 bdo:Material
   rdfs:subClassOf bdo:Type ;
 .
-bdo:MixedUnion
-  a owl:Class ;
-  adm:translationPriority 2 ;
-  rdfs:comment "a union of core and adm classes"@en ;
-  rdfs:label "mixed union"@en ;
-  rdfs:subClassOf bdo:Union ;
-.
 bdo:NoColophon
   a rdfs:Datatype ;
   adm:catalogingConvention "Used to indicated that a Work has no colophon vs a Work for which the colophon has not been recorded in the metadata."@en ;
@@ -1061,14 +1010,10 @@ bdo:PersonNameOrBiblioTitle
   adm:translationPriority 2 ;
   rdfs:comment "domain of :restored and :restoredAlt that are used for name and title variants restored from corrupt textual content"@en ;
   rdfs:label "person name or title of a bibliographic entity"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:PersonName
-          bdo:Title
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:PersonName
+      bdo:Title
+    ) ;
 .
 bdo:PersonOccupiesSeat
   a owl:Class ;
@@ -1088,14 +1033,10 @@ bdo:PersonOrCorporation
   rdfs:comment "Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event"@en ;
   rdfs:comment "deprecated in favor of :Agent"@en ;
   rdfs:label "person or coporation"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Corporation
-          bdo:Person
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Corporation
+      bdo:Person
+    ) ;
   owl:deprecated true ;
 .
 bdo:PersonOrPlace
@@ -1103,28 +1044,20 @@ bdo:PersonOrPlace
   adm:translationPriority 2 ;
   rdfs:comment "domain of :DDBCAId which is used to record ids of Dharma Drum authority resources"@en ;
   rdfs:label "person or place"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Person
-          bdo:Place
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Person
+      bdo:Place
+    ) ;
 .
 bdo:PersonOrTopic
   a owl:Class ;
   rdfs:comment "Used as the domain for several properties that may refer to either a :Person or an ahistorical agent represented as a :Topic"@en ;
   rdfs:comment "deprecated in favor of :SingleAgent. The domains of the affected properties will be adjusted to :SingleAgent"@en ;
   rdfs:label "person or topic"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Person
-          bdo:Topic
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Person
+      bdo:Topic
+    ) ;
   owl:deprecated true ;
 .
 bdo:PersonOtherName
@@ -1389,15 +1322,11 @@ bdo:TextualEntity
   adm:translationPriority 2 ;
   rdfs:comment ":TextualEntity is a subclass of :Work, or :Item or :Etext that is constructed so that the adm:license range can be applied across"@en ;
   rdfs:label "textual entity"@en ;
-  rdfs:subClassOf bdo:CoreUnion ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          bdo:Etext
-          bdo:Item
-          bdo:BiblioEntity
-        ) ;
-    ] ;
+  owl:unionOf (
+      bdo:Etext
+      bdo:Item
+      bdo:BiblioEntity
+    ) ;
 .
 bdo:ThirdRevisedEvent
   a owl:Class ;
@@ -1494,9 +1423,6 @@ bdo:UnicodeWork
   rdfs:label "Unicode work (etext)" ;
   rdfs:subClassOf bdo:BiblioEntity ;
   owl:deprecated true ;
-.
-bdo:Union
-  a owl:Class ;
 .
 bdo:UnspecifiedWorkClass
   a owl:Class ;
