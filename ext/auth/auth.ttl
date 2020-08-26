@@ -5,6 +5,7 @@
 @prefix : <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix adr: <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
 @prefix aut: <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
