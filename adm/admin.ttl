@@ -716,6 +716,14 @@ adm:productAllowByAddr
   rdfs:domain adm:ProductOrg ;
   rdfs:range xsd:string ;
 .
+adm:productHasDigitalInstance
+  a owl:ObjectProperty ;
+  adm:translationPriority 2 ;
+  rdfs:comment "refers to digital instances that are collected together for some purpose such as a Core Text Collection or other administrative purpose."@en ;
+  rdfs:domain adm:Product ;
+  rdfs:label "has digital instance"@en ;
+  rdfs:range bdo:DigitalInstance ;
+.
 adm:productHasOrg
   a owl:ObjectProperty ;
   adm:translationPriority 2 ;
