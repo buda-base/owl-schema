@@ -21,7 +21,6 @@
 # imports: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://purl.bdrc.io/ontology/types/WorkType/
 # prefix: bdo
-# added to cause reload of ontology
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -460,11 +459,11 @@ bdo:EventOrPeriod
   adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
   adm:technicalComment "domain of various date properties"@en ;
   rdfs:label "Event or DateIndication"@en ;
+  owl:deprecated true ;
   owl:unionOf (
       bdo:Event
       bdo:DateIndication
     ) ;
-  owl:deprecated true ;
 .
 bdo:Facet
   a owl:Class ;
@@ -1034,11 +1033,11 @@ bdo:PersonOrCorporation
   rdfs:comment "Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event"@en ;
   rdfs:comment "deprecated in favor of :Agent"@en ;
   rdfs:label "person or coporation"@en ;
+  owl:deprecated true ;
   owl:unionOf (
       bdo:Corporation
       bdo:Person
     ) ;
-  owl:deprecated true ;
 .
 bdo:PersonOrPlace
   a owl:Class ;
@@ -1055,11 +1054,11 @@ bdo:PersonOrTopic
   rdfs:comment "Used as the domain for several properties that may refer to either a :Person or an ahistorical agent represented as a :Topic"@en ;
   rdfs:comment "deprecated in favor of :SingleAgent. The domains of the affected properties will be adjusted to :SingleAgent"@en ;
   rdfs:label "person or topic"@en ;
+  owl:deprecated true ;
   owl:unionOf (
       bdo:Person
       bdo:Topic
     ) ;
-  owl:deprecated true ;
 .
 bdo:PersonOtherName
   a owl:Class ;
@@ -1523,6 +1522,12 @@ bdo:appliedMaterial
   rdfs:domain bdo:PhysicalInstance ;
   rdfs:label "applied material"@en ;
   rdfs:range bdo:AppliedMaterial ;
+.
+bdo:associatedTradition
+  a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a Tradition that the subject is associated with"@en ;
+  rdfs:label "associated tradition"@en ;
+  rdfs:range bdo:Tradition ;
 .
 bdo:authorshipStatement
   a owl:DatatypeProperty ;
@@ -3439,10 +3444,12 @@ bdo:personOfSect
 .
 bdo:personOfTradition
   a owl:ObjectProperty ;
+  adm:deprecatedComment "retired in favor of :associatedTradition"@en ;
   adm:userTooltip "Indicates a Tradition that the Person is associated with."@en ;
   rdfs:domain bdo:Person ;
   rdfs:label "person of tradition" ;
   rdfs:range bdo:Tradition ;
+  owl:deprecated true ;
 .
 bdo:personStudentOf
   a owl:ObjectProperty ;
@@ -3501,10 +3508,12 @@ bdo:placeEvent
 .
 bdo:placeEventAffiliation
   a owl:ObjectProperty ;
+  adm:deprecatedComment "retired in favor of :associatedTradition"@en ;
   adm:userTooltip "Refers to the Tradition that the place event is affiliated with."@en ;
   rdfs:domain bdo:PlaceEvent ;
   rdfs:label "affiliated tradition"@en ;
   rdfs:range bdo:Tradition ;
+  owl:deprecated true ;
 .
 bdo:placeGB2260-2013
   a owl:DatatypeProperty ;
