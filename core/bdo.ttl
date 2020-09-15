@@ -140,6 +140,13 @@ bdo:AnyOrganization
   rdfs:subClassOf bdo:Organization ;
   owl:deprecated true ;
 .
+bdo:ArchivesCollection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "A collection maintained by a national archive"@en ;
+  rdfs:label "Archives Collection" ;
+  rdfs:subClassOf bdo:InstitutionalCollection ;
+.
 bdo:AuthoredEvent
   a owl:Class ;
   adm:userTooltip "The event of authoring a work"@en ;
@@ -195,12 +202,21 @@ bdo:ChineseDate
 bdo:ChineseMonastic
   rdfs:subClassOf bdo:Role ;
 .
+bdo:Collection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "Designates a collection of Bibliographic entities"@en ;
+  rdfs:label "Collection" ;
+  rdfs:subClassOf bdo:Entity ;
+.
 bdo:CollectionInstitution
   a owl:Class ;
+  adm:deprecatedComment "remove, not used"@en ;
   adm:translationPriority 2 ;
   adm:userTooltip "An Insitution containing a collection of works such as \"Bibliothèque EFEO - Preah Vanarât Ken Vong\", \"Fragile Palm Leaves Foundation\" or \"National Library of Mongolia\""@en ;
   rdfs:label "Collection institution" ;
   rdfs:subClassOf bdo:Organization ;
+  owl:deprecated true ;
 .
 bdo:ColophonTitle
   a owl:Class ;
@@ -496,6 +512,13 @@ bdo:HalfTitle
   rdfs:label "Half Title"@en ;
   rdfs:subClassOf bdo:Title ;
 .
+bdo:HouseholdCollection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "A collection maintained in a household"@en ;
+  rdfs:label "Household Collection" ;
+  rdfs:subClassOf bdo:Collection ;
+.
 bdo:IIIF2Or3Collection
   a owl:Class ;
   adm:translationPriority 2 ;
@@ -577,6 +600,13 @@ bdo:InstanceEvent
   adm:userTooltip "An event associated with the production of an Instance."@en ;
   rdfs:label "Instance Event"@en ;
   rdfs:subClassOf bdo:Event ;
+.
+bdo:InstitutionalCollection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "A collection maintained by an institution"@en ;
+  rdfs:label "Institutional Collection" ;
+  rdfs:subClassOf bdo:Collection ;
 .
 bdo:IntegerOrString
   a rdfs:Datatype ;
@@ -790,6 +820,13 @@ bdo:LineageType
 .
 bdo:Material
   rdfs:subClassOf bdo:Type ;
+.
+bdo:MonasticCollection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "A collection maintained by a monastery"@en ;
+  rdfs:label "Monastic Collection" ;
+  rdfs:subClassOf bdo:InstitutionalCollection ;
 .
 bdo:NoColophon
   a rdfs:Datatype ;
@@ -1300,6 +1337,13 @@ bdo:SingletonInstance
   rdfs:label "singleton instance"@en ;
   rdfs:subClassOf bdo:Instance ;
 .
+bdo:SpecialCollection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "A collection maintained by a Library"@en ;
+  rdfs:label "Special Collection" ;
+  rdfs:subClassOf bdo:InstitutionalCollection ;
+.
 bdo:SpineTitle
   a owl:Class ;
   adm:catalogingConvention "use for titles indicated on the spine of a book when it differs from the bibliographical title."@en ;
@@ -1578,6 +1622,28 @@ bdo:chunkContents
   rdfs:label "contents"@en ;
   rdfs:range rdf:langString ;
   rdfs:seeAlso bdo:Etext ;
+.
+bdo:collectionAgent
+  a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the agent that holds the collection"@en ;
+  rdfs:domain bdo:Collection ;
+  rdfs:label "has agent"@en ;
+  rdfs:range bdo:Agents ;
+.
+bdo:collectionMember
+  a owl:ObjectProperty ;
+  adm:userTooltip "Indicates a BiblioEntity that is a member of the Collection"@en ;
+  rdfs:domain bdo:Collection ;
+  rdfs:label "has member"@en ;
+  rdfs:range bdo:BiblioEntity ;
+  owl:inverseOf bdo:inCollection ;
+.
+bdo:collectionPlace
+  a owl:ObjectProperty ;
+  adm:userTooltip "Indicates the place where the collection resides."@en ;
+  rdfs:domain bdo:Collection ;
+  rdfs:label "at place"@en ;
+  rdfs:range bdo:Place ;
 .
 bdo:colophon
   a owl:DatatypeProperty ;
@@ -2646,12 +2712,12 @@ This is a rare situation but needs to be handled."""@en ;
 .
 bdo:inCollection
   a owl:ObjectProperty ;
-  adm:technicalComment "was :workCollection"@en ;
   adm:translationPriority 2 ;
-  adm:userTooltip "This instance is contained at the identified institution"@en ;
-  rdfs:domain bdo:Instance ;
+  adm:userTooltip "The subject is contained in a collection"@en ;
+  rdfs:domain bdo:BiblioEntity ;
   rdfs:label "in collection"@en ;
-  rdfs:range bdo:CollectionInstitution ;
+  rdfs:range bdo:Collection ;
+  owl:inverseOf bdo:collectionMember ;
 .
 bdo:inRootInstance
   a owl:ObjectProperty ;

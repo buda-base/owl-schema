@@ -718,11 +718,13 @@ adm:productAllowByAddr
 .
 adm:productHasDigitalInstance
   a owl:ObjectProperty ;
+  adm:deprecatedComment "retired in favor of bdo:collectionMember"@en ;
   adm:translationPriority 2 ;
   rdfs:comment "refers to digital instances that are collected together for some purpose such as a Core Text Collection or other administrative purpose."@en ;
   rdfs:domain adm:Product ;
   rdfs:label "has digital instance"@en ;
   rdfs:range bdo:DigitalInstance ;
+  owl:deprecated true ;
 .
 adm:productHasOrg
   a owl:ObjectProperty ;
