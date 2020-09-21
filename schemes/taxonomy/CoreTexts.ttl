@@ -1,0 +1,129 @@
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/CoreTextsScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: CoreTextsScheme
+
+@prefix CoreTextsScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/CoreTextsScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+CoreTextsScheme:
+  a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:CoreTextsScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Core Texts Collection Scheme"@en ;
+.
+bdr:PRHD01
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 1"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PRHD02
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 2"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PRHD03
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 3"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR00JW501092
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 4"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR1GS49488
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 5"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01JW11672
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 6"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR3JW7543
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 7"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR60CTX96
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 8"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC09
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 9"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC10
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 10"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC11
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 11"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC12
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 12"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC13
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 13"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC14
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 14"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC15
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 15"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC16
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 16"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
+bdr:PR01CTC17
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Core Text Collection 17"@en ;
+  skos:topConceptOf bdr:CoreTextsScheme ;
+.
