@@ -1,0 +1,87 @@
+# baseURI: http://purl.bdrc.io/ontology/schemes/taxonomy/ThirdPartyScheme/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: ThirdPartyScheme
+
+@prefix ThirdPartyScheme: <http://purl.bdrc.io/ontology/schemes/taxonomy/ThirdPartyScheme/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ThirdPartyScheme:
+  a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Initial version" ;
+.
+bdr:ThirdPartyScheme
+  a skos:ConceptScheme ;
+  skos:prefLabel "Third Party Collection Scheme"@en ;
+.
+bdr:PR1NLM00
+  a bdo:ArchivesCollection ;
+  a skos:Concept ;
+  skos:prefLabel "National Library of Mongolia"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1FPL01
+  a bdo:PrivateCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Fragile Palm Leaves Project"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1EAP1150
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "British Library Endangered Archives Project #1150"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1NGMPP00
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Nepal German Manuscript Preservation Project"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1PEMAKOD00
+  a bdo:PrivateCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Dungkar Choji Collection of Nyingma texts from Pemakoe Tibet"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1TIBET00
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Tibetan Book Evolution and Technology (TiBET) Project"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1KDPP00
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Khmer Digital Preservation Project"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1LOKESH01
+  a bdo:PrivateCollection ;
+  a skos:Concept ;
+  skos:prefLabel "The Lokesh Chandra Collection part 1"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1CIHTS00
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "Central Institute for Higher Tibetan Studies"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.
+bdr:PR1VIENNA00
+  a bdo:SpecialCollection ;
+  a skos:Concept ;
+  skos:prefLabel "University of Vienna - Tibetan Manuscript Project Vienna (TMPV)"@en ;
+  skos:topConceptOf bdr:ThirdPartyScheme ;
+.

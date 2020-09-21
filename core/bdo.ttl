@@ -512,13 +512,6 @@ bdo:HalfTitle
   rdfs:label "Half Title"@en ;
   rdfs:subClassOf bdo:Title ;
 .
-bdo:HouseholdCollection
-  a owl:Class ;
-  adm:translationPriority 1 ;
-  adm:userTooltip "A collection maintained in a household"@en ;
-  rdfs:label "Household Collection" ;
-  rdfs:subClassOf bdo:Collection ;
-.
 bdo:IIIF2Or3Collection
   a owl:Class ;
   adm:translationPriority 2 ;
@@ -1233,6 +1226,13 @@ bdo:PrintedEvent
   adm:userTooltip "An event of printing a work"@en ;
   rdfs:label "Printed"@en ;
   rdfs:subClassOf bdo:InstanceEvent ;
+.
+bdo:PrivateCollection
+  a owl:Class ;
+  adm:translationPriority 1 ;
+  adm:userTooltip "A collection maintained by a private individual or organization"@en ;
+  rdfs:label "Private Collection" ;
+  rdfs:subClassOf bdo:Collection ;
 .
 bdo:ProvenanceNote
   a owl:Class ;
