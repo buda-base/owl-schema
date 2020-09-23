@@ -4128,7 +4128,7 @@ bdo:workSeriesNumber
   a owl:DatatypeProperty ;
   adm:userTooltip "This is the number or other id of this SerialInstance in a SerialWork."@en ;
   rdfs:domain bdo:SerialInstance ;
-  rdfs:label "series member id"@en ;
+  rdfs:label "issue"@en ;
   rdfs:range xsd:string ;
 .
 bdo:workSideBoxSequenceId
