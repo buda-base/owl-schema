@@ -1320,8 +1320,8 @@ bdo:SerialMember
 bdo:SerialWork
   a owl:Class ;
   adm:technicalComment "Was SerialWork now split into an (abstract) Work Class and an Instance Class, changed to align with Bibframe 2.0"@en ;
-  adm:userTooltip "An (abstreact) Work representing a series of volumes/numbers published over time"@en ;
-  rdfs:label "Serial Work"@en ;
+  adm:userTooltip "An Work representing a series of volumes/numbers published over time"@en ;
+  rdfs:label "Series"@en ;
   rdfs:seeAlso <https://www.abc-clio.com/ODLIS/odlis_S.aspx?#serial> ;
   rdfs:subClassOf bdo:Work ;
 .
