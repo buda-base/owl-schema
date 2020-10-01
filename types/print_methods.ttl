@@ -80,4 +80,10 @@ bdr:PrintMethod_Relief_WoodBlock
 bdr:PrintMethod_Xerography
   a bdo:PrintMethod ;
   skos:prefLabel "xerography"@en ;
+  skos:altLabel "lithography"@en ;
+.
+bdr:PrintMethod_Modern
+  a bdo:PrintMethod ;
+  skos:prefLabel "modern"@en ;
+  rdfs:comment "modern print, undetermined process"@en ;
 .
