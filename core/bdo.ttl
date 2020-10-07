@@ -1610,8 +1610,8 @@ bdo:binding
 .
 bdo:catalogInfo
   a owl:DatatypeProperty ;
-  adm:userTooltip "Summary information about the Instance"@en ;
-  rdfs:domain bdo:Instance ;
+  adm:userTooltip "Short description of the work"@en ;
+  rdfs:domain bdo:Work ;
   rdfs:label "summary"@en ;
   rdfs:range rdf:langString ;
 .
@@ -2581,9 +2581,9 @@ bdo:hasSon
 bdo:hasSourcePrintery
   a owl:ObjectProperty ;
   adm:technicalComment "was :workHasSourcePrintery"@en ;
-  adm:userTooltip "used to indicate the printery of a traditional artefact"@en ;
+  adm:userTooltip "used to indicate the place of production of a traditional artefact (manuscript or woodblock)"@en ;
   rdfs:domain bdo:PhysicalInstance ;
-  rdfs:label "printed at"@en ;
+  rdfs:label "place of production"@en ;
   rdfs:range bdo:Place ;
 .
 bdo:hasSpouse
