@@ -331,9 +331,9 @@ bdr:KaTenSiglaA
 bdr:KaTenSiglaBon
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "bon kanjur catalog number"@en ;
+  rdfs:label "Bon Katen catalog number"@en ;
   skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number in the Bon combined Kanjur and Tenjur"@en ;
+  skos:definition "Reference number in the Bon Katen"@en ;
 .
 bdr:KaTenSiglaC
   a bdo:Identifier ;
@@ -342,6 +342,13 @@ bdr:KaTenSiglaC
   rdfs:seeAlso <http://www.worldcat.org/oclc/603601029> ;
   skos:broader bdr:KaTenSiglaIdentifier ;
   skos:definition "from Mibu's catalogue"@en ;
+.
+bdr:KaTenSiglaCx
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "Golden Mustang Kangyur reference number"@en ;
+  skos:broader bdr:KaTenSiglaIdentifier ;
+  skos:definition "from rKTs"@en ;
 .
 bdr:KaTenSiglaD
   a bdo:Identifier ;
@@ -354,23 +361,44 @@ bdr:KaTenSiglaD
 bdr:KaTenSiglaDo
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "Dolpo Kangyur Catalogue Number"@en ;
+  rdfs:label "Dolpo Kangyur Number"@en ;
   skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number for this work from the Dolpo Kangyur Catalogue"@en ;
+  skos:definition "Reference number for this work from the Dolpo Kangyur"@en ;
+.
+bdr:KaTenSiglaEg
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "Egoo Canonical Collection Number"@en ;
+  skos:broader bdr:KaTenSiglaIdentifier ;
+  skos:definition "Reference number for this work from the Egoo Canonical Collection"@en ;
+.
+bdr:KaTenSiglaF
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "Phugdrak Kangyur Number"@en ;
+  skos:broader bdr:KaTenSiglaIdentifier ;
+  skos:definition "Reference number for this work from the Phugdrak Kangyur"@en ;
 .
 bdr:KaTenSiglaG
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "gser bris catalogue number"@en ;
+  rdfs:label "Ganden Kangyur reference number"@en ;
   skos:broader bdr:KaTenSiglaIdentifier ;
   skos:definition "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
 .
 bdr:KaTenSiglaH
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "lha sa catalogue number"@en ;
+  rdfs:label "Lhasa Kangyur number"@en ;
   skos:broader bdr:KaTenSiglaIdentifier ;
   skos:definition "Lhasa Kanjur reference number"@en ;
+.
+bdr:KaTenSiglaHe
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "Hemis Kangyur (I) reference number"@en ;
+  skos:broader bdr:KaTenSiglaIdentifier ;
+  skos:definition "from rKTs"@en ;
 .
 bdr:KaTenSiglaIdentifier
   a bdo:Identifier ;
@@ -382,7 +410,7 @@ bdr:KaTenSiglaIdentifier
 bdr:KaTenSiglaJ
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "'jang catalogue number"@en ;
+  rdfs:label "Jang catalogue number"@en ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/769115653> ;
   skos:broader bdr:KaTenSiglaIdentifier ;
   skos:definition "From Imaeda's catalogue"@en ;
@@ -390,7 +418,7 @@ bdr:KaTenSiglaJ
 bdr:KaTenSiglaN
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "narthang number"@en ;
+  rdfs:label "Narthang number"@en ;
   rdfs:seeAlso <http://www.worldcat.org/oclc/718065580> ;
   skos:broader bdr:KaTenSiglaIdentifier ;
   skos:definition "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
@@ -422,7 +450,7 @@ bdr:KaTenSiglaV
   a skos:Concept ;
   rdfs:label "Ulaanbaatar catalogue number"@en ;
   skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number from the Ulaanbaatar catalogue"@en ;
+  skos:definition "Reference number from the Ulaanbaatar Kangyur"@en ;
 .
 bdr:KaTenSiglaZ
   a bdo:Identifier ;
