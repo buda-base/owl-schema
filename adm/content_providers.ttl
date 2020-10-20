@@ -57,7 +57,7 @@ bda:CP003
 bda:CP004
   a adm:ContentProvider ;
   a foaf:Organization ;
-  skos:prefLabel "Guru Lama of Sachen International"@en ;
+  skos:prefLabel "Sachen International, Guru Lama"@en ;
   foaf:homepage "http://www.sakyalibrary.com/home/page/966a3738-446b-4787-898b-59e434b725e9"^^xsd:anyURI ;
   adm:termsOfUse "http://www.sakyalibrary.com/home/page/966a3738-446b-4787-898b-59e434b725e9"^^xsd:anyURI ;
   adm:attributionStatement "These texts were published in digital format in 2015 by the International Buddhist Academy in conjunction with Sachen International of Lama Guru."@en ;
