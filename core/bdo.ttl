@@ -619,28 +619,6 @@ bdo:Item
   rdfs:label "Item"@en ;
   rdfs:subClassOf bdo:BiblioEntity ;
 .
-bdo:ItemEtextNonPaginated
-  a owl:Class ;
-  adm:technicalComment """An eText created by manual inputting. Input etexts are prepared manually and used to typeset printed versions of texts in the case of many contemporary Tibetan publications. :ItemEtextNonPaginated eTexts generally do not provide alignment with digitized pages.
-
-:ItemEtextNonPaginated generally only have a known relationship to a Work but there is generally not a known page correspondence to the :Item. In some cases, there is no known correspondence to the physical volume structure of the :Work. It may be possible to derive this information later."""@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "An etext that does not include correspondence to any digitized images of the Work"@en ;
-  rdfs:label "Non Paginated Etext Item"@en ;
-  rdfs:subClassOf bdo:ItemEtext ;
-.
-bdo:ItemEtextPaginated
-  a owl:Class ;
-  adm:technicalComment """An eText created via OCR or manual input where pagination has been maintained in the eText of a set of digitized page images.
-
-Paginated etexts are searchable Unicode documents that correspond to image assets in BUDA. Paginated etexts are primarily used as searchable metadata that can help to identify digitized images of interest. These texts should not be expected to be error-free but rather treated as hints providing access to the image archive. :ItemEtextPaginated have known pagination correspondence to an :ItemImageAsset from which they are derived.
-
-In some cases, such as texts from the Asian Classics Input Project (ACIP), pagination information is maintained in the :ItemEtextPaginated, even though there might not be a known correspondence to the image asset."""@en ;
-  adm:translationPriority 2 ;
-  adm:userTooltip "An etext with pagination corresponding to digitized images of the Work"@en ;
-  rdfs:label "Paginated Etext Item"@en ;
-  rdfs:subClassOf bdo:ItemEtext ;
-.
 bdo:ItemMicrofilmAsset
   a owl:Class ;
   adm:userTooltip "An :ItemMicrofilmAsset describes the physical microfilm from which the associated Instance was digitized."@en ;
