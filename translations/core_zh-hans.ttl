@@ -1,0 +1,313 @@
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+bdo:BibliographicalTitle rdfs:label "目录中的标题"@zh-hans .
+
+bdo:CompletedEvent rdfs:label "写作"@zh-hans .
+
+bdo:EnscribedEvent rdfs:label "抄写于"@zh-hans .
+
+bdo:EtextLine rdfs:label "行"@zh-hans .
+
+bdo:Item rdfs:label "单件"@zh-hans .
+
+bdo:PersonBodhisattvaVowName rdfs:label "受菩萨戒时所得名"@zh-hans .
+
+bdo:PersonCommonName rdfs:label "常见名"@zh-hans .
+
+bdo:PersonCorporateName rdfs:label "因职务而得名"@zh-hans .
+
+bdo:PersonDeath rdfs:label "亡故"@zh-hans .
+
+bdo:PersonEvent rdfs:label "生平事件"@zh-hans .
+
+bdo:PersonEventNotSpecified rdfs:label "未归类生平事件"@zh-hans .
+
+bdo:PersonGterStonTitle rdfs:label "伏藏师名号"@zh-hans .
+
+bdo:PersonLeavesSeat rdfs:label "离开法座"@zh-hans .
+
+bdo:PersonMarriage rdfs:label "婚姻"@zh-hans .
+
+bdo:PersonPenName rdfs:label "自署名号"@zh-hans .
+
+bdo:PersonPrimaryTitle rdfs:label "主要头衔 "@zh-hans .
+
+bdo:PersonTitle rdfs:label "其他称号"@zh-hans .
+
+bdo:PlaceEvent rdfs:label "发生地点"@zh-hans .
+
+bdo:RevealedEvent rdfs:label "发掘"@zh-hans .
+
+bdo:RunningTitle rdfs:label "逐页标题"@zh-hans .
+
+bdo:VolumeImageAsset rdfs:label "扫描图片集"@zh-hans .
+
+bdo:WorkBibliographicalTitle rdfs:label "目录中的标题"@zh-hans .
+
+bdo:WorkLocation rdfs:label "在相关作品中的位置"@zh-hans .
+
+bdo:WorkRunningTitle rdfs:label "逐页标题"@zh-hans .
+
+bdo:baseMaterial rdfs:label "材质"@zh-hans .
+
+bdo:biblioNote rdfs:label "书目注释"@zh-hans .
+
+bdo:contentLocation rdfs:label "位置"@zh-hans .
+
+bdo:contentLocationEndLine rdfs:label "末尾句"@zh-hans .
+
+bdo:contentLocationLine rdfs:label "行"@zh-hans .
+
+bdo:contentLocationStatementCBETA rdfs:label "（汉文大藏经中的）位置说明"@zh-hans .
+
+bdo:eTextInVolume rdfs:label "卷数"@zh-hans .
+
+bdo:eventWho rdfs:label "由谁添加"@zh-hans .
+
+bdo:hasGrandmother rdfs:label "祖母"@zh-hans .
+
+bdo:hasOlderSister rdfs:label "姐姐"@zh-hans .
+
+bdo:hasParentSibling rdfs:label "亲兄弟姐妹"@zh-hans .
+
+bdo:hasPart rdfs:label "包含"@zh-hans .
+
+bdo:instanceOf rdfs:label "该实例所属作品"@zh-hans .
+
+bdo:instancePrintery rdfs:label "印经院"@zh-hans .
+
+bdo:itemForInstance rdfs:label "该单件所属实例"@zh-hans .
+
+bdo:itemLibrary rdfs:label "原件收藏于"@zh-hans .
+
+bdo:lineageHolder rdfs:label "传承人"@zh-hans .
+
+bdo:noteLocationStatement rdfs:label "位置"@zh-hans .
+
+bdo:noteLocationStatementCBETA rdfs:label "（汉文大藏经中的）位置说明"@zh-hans .
+
+bdo:noteText rdfs:label "文本"@zh-hans .
+
+bdo:pageHasLine rdfs:label "行"@zh-hans .
+
+bdo:personEventRole rdfs:label "事件中的角色"@zh-hans .
+
+bdo:personOfSect rdfs:label "宗派归属"@zh-hans .
+
+bdo:personStudentOf rdfs:label "老师"@zh-hans .
+
+bdo:placeContains rdfs:label "包含"@zh-hans .
+
+bdo:placeLat rdfs:label "纬度"@zh-hans .
+
+bdo:sourceNote rdfs:label "作品来源"@zh-hans .
+
+bdo:workBiblioNote rdfs:label "书目注释"@zh-hans .
+
+bdo:workCBCSiglaT rdfs:label "大正藏"@zh-hans .
+
+bdo:workGenre rdfs:label "类型"@zh-hans .
+
+bdo:workHasInstance rdfs:label "作品包含的实例"@zh-hans .
+
+bdo:workHasPart rdfs:label "包含"@zh-hans .
+
+bdo:workKaTenSiglaC rdfs:label "卓尼目录号"@zh-hans .
+
+bdo:workLccn rdfs:label "国会图书馆控制号（LCCN）"@zh-hans .
+
+bdo:workLocation rdfs:label "位置"@zh-hans .
+
+bdo:workLocationEndLine rdfs:label "结尾句"@zh-hans .
+
+bdo:workLocationLine rdfs:label "行"@zh-hans .
+
+bdo:workLocationWork rdfs:label "作品"@zh-hans .
+
+bdo:workSourceNote rdfs:label "作品来源"@zh-hans .
+
+bdr:ObjectTypeFacsimile rdfs:label "影印件"@zh-hans .
+
+bdr:PT0001 skos:prefLabel "地区（古）"@zh-hans .
+
+bdr:PT0002 skos:prefLabel "自治州"@zh-hans .
+
+bdr:PT0003 skos:prefLabel "自治区"@zh-hans .
+
+bdr:PT0004 skos:prefLabel "桥"@zh-hans .
+
+bdr:PT0005 skos:prefLabel "峡谷"@zh-hans .
+
+bdr:PT0006 skos:prefLabel "石经堆"@zh-hans .
+
+bdr:PT0007 skos:prefLabel "围"@zh-hans .
+
+bdr:PT0008 skos:prefLabel "城市"@zh-hans .
+
+bdr:PT0010 skos:prefLabel "国家"@zh-hans .
+
+bdr:PT0011 skos:prefLabel "县"@zh-hans .
+
+bdr:PT0012 skos:prefLabel "区"@zh-hans .
+
+bdr:PT0013 skos:prefLabel "文化区域"@zh-hans .
+
+bdr:PT0014 skos:prefLabel "地区（专区）"@zh-hans .
+
+bdr:PT0015 skos:prefLabel "庄园"@zh-hans .
+
+bdr:PT0016 skos:prefLabel "渡口"@zh-hans .
+
+bdr:PT0017 skos:prefLabel "森林"@zh-hans .
+
+bdr:PT0018 skos:prefLabel "城堡"@zh-hans .
+
+bdr:PT0019 skos:prefLabel "百户区"@zh-hans .
+
+bdr:PT0020 skos:prefLabel "村落"@zh-hans .
+
+bdr:PT0021 skos:prefLabel "隐修地"@zh-hans .
+
+bdr:PT0022 skos:prefLabel "秘境"@zh-hans .
+
+bdr:PT0023 skos:prefLabel "医院"@zh-hans .
+
+bdr:PT0024 skos:prefLabel "住宅"@zh-hans .
+
+bdr:PT0025 skos:prefLabel "家庭"@zh-hans .
+
+bdr:PT0026 skos:prefLabel "州"@zh-hans .
+
+bdr:PT0027 skos:prefLabel "王国"@zh-hans .
+
+bdr:PT0028 skos:prefLabel "湖"@zh-hans .
+
+bdr:PT0029 skos:prefLabel "大区"@zh-hans .
+
+bdr:PT0030 skos:prefLabel "书馆"@zh-hans .
+
+bdr:PT0031 skos:prefLabel "下河谷"@zh-hans .
+
+bdr:PT0032 skos:prefLabel "万户区"@zh-hans .
+
+bdr:PT0033 skos:prefLabel "石经堆"@zh-hans .
+
+bdr:PT0034 skos:prefLabel "府邸"@zh-hans .
+
+bdr:PT0035 skos:prefLabel "集市（市场）"@zh-hans .
+
+bdr:PT0036 skos:prefLabel "修行洞"@zh-hans .
+
+bdr:PT0037 skos:prefLabel "寺院"@zh-hans .
+
+bdr:PT0038 skos:prefLabel "讲经院"@zh-hans .
+
+bdr:PT0039 skos:prefLabel "僧舍"@zh-hans .
+
+bdr:PT0040 skos:prefLabel "扎仓（僧院）"@zh-hans .
+
+bdr:PT0041 skos:prefLabel "喇嘛行宫"@zh-hans .
+
+bdr:PT0042 skos:prefLabel "山"@zh-hans .
+
+bdr:PT0043 skos:prefLabel "山口"@zh-hans .
+
+bdr:PT0044 skos:prefLabel "山脉"@zh-hans .
+
+bdr:PT0045 skos:prefLabel "城镇"@zh-hans .
+
+bdr:PT0046 skos:prefLabel "万户区"@zh-hans .
+
+bdr:PT0048 skos:prefLabel "牧营"@zh-hans .
+
+bdr:PT0049 skos:prefLabel "未分类"@zh-hans .
+
+bdr:PT0050 skos:prefLabel "尼姑庵"@zh-hans .
+
+bdr:PT0051 skos:prefLabel "宫殿"@zh-hans .
+
+bdr:PT0052 skos:prefLabel "公园"@zh-hans .
+
+bdr:PT0053 skos:prefLabel "圣地"@zh-hans .
+
+bdr:PT0054 skos:prefLabel "石碑"@zh-hans .
+
+bdr:PT0055 skos:prefLabel "平川"@zh-hans .
+
+bdr:PT0056 skos:prefLabel "宗（旧制）"@zh-hans .
+
+bdr:PT0057 skos:prefLabel "传统地区"@zh-hans .
+
+bdr:PT0058 skos:prefLabel "郡国"@zh-hans .
+
+bdr:PT0059 skos:prefLabel "印经院"@zh-hans .
+
+bdr:PT0060 skos:prefLabel "省"@zh-hans .
+
+bdr:PT0061 skos:prefLabel "茹"@zh-hans .
+
+bdr:PT0062 skos:prefLabel "岗"@zh-hans .
+
+bdr:PT0064 skos:prefLabel "闭关院"@zh-hans .
+
+bdr:PT0065 skos:prefLabel "江河"@zh-hans .
+
+bdr:PT0066 skos:prefLabel "流域"@zh-hans .
+
+bdr:PT0067 skos:prefLabel "学校"@zh-hans .
+
+bdr:PT0068 skos:prefLabel "氏族部落"@zh-hans .
+
+bdr:PT0070 skos:prefLabel "小乡"@zh-hans .
+
+bdr:PT0071 skos:prefLabel "圣泉"@zh-hans .
+
+bdr:PT0072 skos:prefLabel "佛塔"@zh-hans .
+
+bdr:PT0073 skos:prefLabel "千户区"@zh-hans .
+
+bdr:PT0074 skos:prefLabel "宇"@zh-hans .
+
+bdr:PT0075 skos:prefLabel "寺庙"@zh-hans .
+
+bdr:PT0076 skos:prefLabel "陵墓"@zh-hans .
+
+bdr:PT0078 skos:prefLabel "传统地名"@zh-hans .
+
+bdr:PT0079 skos:prefLabel "传统地区"@zh-hans .
+
+bdr:PT0080 skos:prefLabel "伏藏地"@zh-hans .
+
+bdr:PT0081 skos:prefLabel "联盟部落"@zh-hans .
+
+bdr:PT0082 skos:prefLabel "上河谷"@zh-hans .
+
+bdr:PT0083 skos:prefLabel "河谷"@zh-hans .
+
+bdr:PT0084 skos:prefLabel "村（现代）"@zh-hans .
+
+bdr:PT0085 skos:prefLabel "村镇"@zh-hans .
+
+bdr:PT0086 skos:prefLabel "县城"@zh-hans .
+
+bdr:PartTypeText skos:prefLabel "文本"@zh-hans .
+
+bdr:R0ER0009 skos:prefLabel "笔受"@zh-hans .
+
+bdr:R0ER0017 skos:prefLabel "译主"@zh-hans .
+
+bdr:R0ER0027 skos:prefLabel "伪作"@zh-hans .
+
+bdr:TR0001 skos:prefLabel "三阶教"@zh-hans .
+
+bdr:TR0002 skos:prefLabel "天台宗"@zh-hans .
+
+bdr:TR0003 skos:prefLabel "禅宗"@zh-hans .
+
+bdr:TraditionDharmaguptaka skos:prefLabel "法藏部"@zh-hans .
+
+bdr:WorkText skos:prefLabel "文本"@zh-hans .
+

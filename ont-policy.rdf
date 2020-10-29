@@ -102,6 +102,11 @@
         <altURL    rdf:resource="translations/adm_bo.ttl"/>
     </OntologySpec>
 
+    <OntologySpec>
+        <!-- local version of the Admin translations vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/translations/AdmZhHans/"/>
+        <altURL    rdf:resource="translations/adm_zh-hans.ttl"/>
+    </OntologySpec>
 
     <!-- types -->    
     
@@ -204,6 +209,11 @@
         <altURL    rdf:resource="translations/core_bo.ttl"/>
     </OntologySpec>
     
+    <OntologySpec>
+        <!-- local version of the Admin translations vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/translations/CoreZhHans/"/>
+        <altURL    rdf:resource="translations/core_zh-hans.ttl"/>
+    </OntologySpec>
     
     <!-- types -->
 

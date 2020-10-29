@@ -1,0 +1,221 @@
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+bda:AccessFairUse skos:prefLabel "合理使用"@zh-hans .
+
+bda:AccessMixed skos:prefLabel "混合的访问权限"@zh-hans .
+
+bda:AccessOpen skos:prefLabel "开放访问"@zh-hans .
+
+bda:AccessRestrictedByQuality skos:prefLabel "因质量不佳而未开放访问"@zh-hans .
+
+bda:AccessRestrictedByTbrc skos:prefLabel "佛教数字档案馆未开放此资源的访问权"@zh-hans .
+
+bda:AccessRestrictedSealed skos:prefLabel "为传统规定而未开放访问"@zh-hans .
+
+bda:AccessRestrictedTemporarily skos:prefLabel "暂时未开放访问"@zh-hans .
+
+bda:CP001 skos:prefLabel "法要下载（噶玛列谢林佛学院）"@zh-hans .
+
+bda:CP002 skos:prefLabel "直贡澈赞"@zh-hans .
+
+bda:CP003 skos:prefLabel "Esukhia"@zh-hans .
+
+bda:CP004 skos:prefLabel "Guru Lama of Sachen International"@zh-hans .
+
+bda:CP005 skos:prefLabel "喇荣佛学院的噶玛德勒"@zh-hans .
+
+bda:CP006 skos:prefLabel "尼泊尔吉祥山印刷厂"@zh-hans .
+
+bda:CP007 skos:prefLabel "协庆寺"@zh-hans .
+
+bda:CP008 skos:prefLabel "祖古桑阿"@zh-hans .
+
+bda:CP009 skos:prefLabel "Namsel藏文识别技术 "@zh-hans .
+
+bda:CP010 skos:prefLabel "金刚明佛学院"@zh-hans .
+
+bda:CP011 skos:prefLabel "多种"@zh-hans .
+
+bda:CP025 skos:prefLabel "CUDL"@zh-hans .
+
+bda:CP029 skos:prefLabel "互联网档案馆（Internet Archive）"@zh-hans .
+
+bda:CP030 skos:prefLabel "SAT大正新修大藏经数据库"@zh-hans .
+
+bda:CP048 skos:prefLabel "佛学规范资料库"@zh-hans .
+
+bda:LD_BDRC_CC0 skos:prefLabel "由佛教数字资源中心提供，基于通用 (CC0 1.0)协议"@zh-hans .
+
+bda:LD_BDRC_Copyright skos:prefLabel "由佛教数字档案馆提供，版权归佛教数字档案馆所有"@zh-hans .
+
+bda:LD_BDRC_PD skos:prefLabel "由佛教数字档案馆提供，属于公有领域"@zh-hans .
+
+bda:LD_BNF_PD skos:prefLabel "gallica.bnf.fr / BnF的资源，属于公有领域"@zh-hans .
+
+bda:LD_CUDL_content skos:prefLabel "由CUDL提供，图片有版权要求，请参阅其使用条款"@zh-hans .
+
+bda:LD_CUDL_metadata skos:prefLabel "由CUDL提供，基于通用(CC BY NC 3.0)协议，更多信息请见原始元数据记录"@zh-hans .
+
+bda:LD_DILA_BSADP skos:prefLabel "由法鼓文理学院提供，知识共享许可协议：署名-非商业性使用-相同方式共享 3.0 未本地化版本 (BY-NC-SA 3.0)"@zh-hans .
+
+bda:LD_EAP_content skos:prefLabel "由EAP提供，版权部分明示，请参阅其使用条款"@zh-hans .
+
+bda:LD_EAP_metadata skos:prefLabel "由EAP提供，基于通用 (CC0 1.0)协议"@zh-hans .
+
+bda:LD_GRETIL skos:prefLabel "由GRETIL提供，基于通用(CC0 1.0)协议"@zh-hans .
+
+bda:LD_IA_Metadata skos:prefLabel "由互联网档案馆（Internet Archive）提供，无版权要求"@zh-hans .
+
+bda:LD_IA_PD skos:prefLabel "由Internet Archive提供，属于公有领域"@zh-hans .
+
+bda:LD_LOC_PD skos:prefLabel "由国会图书馆提供，属于公有领域"@zh-hans .
+
+bda:LD_LOC_metadata skos:prefLabel "由国会图书馆提供，基于通用 (CC0 1.0)协议"@zh-hans .
+
+bda:LD_NGMCP_Metadata skos:prefLabel "由NGMCP提供，版权尚未确定"@zh-hans .
+
+bda:LD_NGMPP_Metadata skos:prefLabel "由NGMPP提供，版权尚未确定"@zh-hans .
+
+bda:LD_SAT_images skos:prefLabel "由CUDL提供，基于通用(CC BY-NC-SA 4.0)协议，"@zh-hans .
+
+bda:LD_SBB_content skos:prefLabel "由柏林国家图书馆提供，版权未明示，视作共有领域"@zh-hans .
+
+bda:LD_SRC_Metadata skos:prefLabel "由Sakya Research Centre提供，版权尚未明确"@zh-hans .
+
+bda:LD_WD_Metadata skos:prefLabel "由维基数据提供，基于通用(CC0 1.0)协议"@zh-hans .
+
+bda:LD_rKTs_CC0 skos:prefLabel "由rKTs提供，基于通用 (CC0 1.0)协议"@zh-hans .
+
+bda:LicenseAllRightsReserved skos:prefLabel "保留所有权利"@zh-hans .
+
+bda:LicenseCC0 skos:prefLabel "知识共享许可协议：通用 (CC0)"@zh-hans .
+
+bda:LicenseCCBYNC30U skos:prefLabel "署名-非商业性使用 3.0 未本地化版本 (CC BY-NC 3.0)"@zh-hans .
+
+bda:LicenseCCBYNCND3U skos:prefLabel "知识共享许可协议：署名-非商业性使用-禁止演绎 3.0 未本地化版本 (CC BY-NC-ND 3.0)"@zh-hans .
+
+bda:LicenseCCBYNCSA3U skos:prefLabel "知识共享许可协议：署名-非商业性使用-相同方式共享 3.0 未本地化版本 (BY-NC-SA 3.0)"@zh-hans .
+
+bda:LicenseCCBYNCSA4U skos:prefLabel "知识共享许可协议：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)"@zh-hans .
+
+bda:LicenseCCBYSA3U skos:prefLabel "知识共享许可协议：署名-相同方式共享 3.0 未本地化版本 (BY-SA 3.0)"@zh-hans .
+
+bda:LicenseCCBYSA4U skos:prefLabel "署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)"@zh-hans .
+
+bda:LicenseCopyrightUndetermined skos:prefLabel "版权尚未确定"@zh-hans .
+
+bda:LicenseMixed skos:prefLabel "混合的协议"@zh-hans .
+
+bda:LicenseNoKnownCopyright skos:prefLabel "版权不详"@zh-hans .
+
+bda:LicenseODCBY10 skos:prefLabel "知识共享署名许可协议 (ODC-By) v1.0"@zh-hans .
+
+bda:LicensePublicDomain skos:prefLabel "公有领域"@zh-hans .
+
+bda:StatusAccessioned skos:prefLabel "已收录"@zh-hans .
+
+bda:StatusAcquiring skos:prefLabel "获取中"@zh-hans .
+
+bda:StatusEditing skos:prefLabel "编辑中"@zh-hans .
+
+bda:StatusOnHold skos:prefLabel "保留中"@zh-hans .
+
+bda:StatusProvisional skos:prefLabel "暂时"@zh-hans .
+
+bda:StatusReleased skos:prefLabel "已发布"@zh-hans .
+
+bda:StatusReleasedPendingWithdrawal skos:prefLabel "待撤中"@zh-hans .
+
+bda:StatusScanned skos:prefLabel "已扫描"@zh-hans .
+
+bda:StatusSeekingOut skos:prefLabel "寻求中"@zh-hans .
+
+bda:StatusWithdrawn skos:prefLabel "已撤回"@zh-hans .
+
+adm:Access rdfs:label "工作访问类型"@zh-hans .
+
+adm:ContentProvider rdfs:label "工作访问类型"@zh-hans .
+
+adm:ImagesStatus rdfs:label "图像状态"@zh-hans ;
+    adm:userTooltip "图片信息资产的信息资产管理器状态常数"@zh-hans .
+
+adm:LegalData rdfs:label "法律信息"@zh-hans .
+
+adm:License rdfs:label "协议"@zh-hans .
+
+adm:LogEntry rdfs:label "日志条目"@zh-hans .
+
+adm:Product rdfs:label "成品"@zh-hans .
+
+adm:Status rdfs:label "状态"@zh-hans ;
+    adm:userTooltip "状态常数：实体元数据：已发布，临时的，等等"@zh-hans .
+
+adm:access rdfs:label "访问权限"@zh-hans .
+
+adm:attributionName rdfs:label "相关作者或提供者的名字"@zh-hans .
+
+adm:attributionStatement rdfs:label "相关作者或提供者的声明"@zh-hans .
+
+adm:attributionURL rdfs:label "相关作者或提供者的url"@zh-hans .
+
+adm:canonicalHtml rdfs:label "链接"@zh-hans .
+
+adm:catalogingConvention rdfs:label "编目惯例"@zh-hans .
+
+adm:copyrightOwner rdfs:label "资源元数据的版权所有者"@zh-hans .
+
+adm:hasLegal rdfs:label "法律信息"@zh-hans .
+
+adm:initialProvider rdfs:label "元数据的初始提供者"@zh-hans .
+
+adm:isRestrictedInChina rdfs:label "尚未开放中国地区的访问"@zh-hans .
+
+adm:logDate rdfs:label "时间"@zh-hans .
+
+adm:logEntry rdfs:label "日志条目"@zh-hans .
+
+adm:logMessage rdfs:label "说明"@zh-hans .
+
+adm:logWho rdfs:label "由谁添加"@zh-hans .
+
+adm:metadataLegal rdfs:label "元数据的法律信息"@zh-hans .
+
+adm:originalRecord rdfs:label "查看来源"@zh-hans .
+
+adm:outlineAuthorStatement rdfs:label "大纲的作者"@zh-hans .
+
+adm:sameAsBDRC rdfs:label "与佛教数字资源中心一致"@zh-hans .
+
+adm:sameAsCBCAt rdfs:label "与CBC@一致"@zh-hans .
+
+adm:sameAsDILA rdfs:label "与法鼓文理学院一致"@zh-hans .
+
+adm:sameAsMBBT rdfs:label "与Markus Bingenheimer's Bibliography of Translations一致"@zh-hans .
+
+adm:sameAsToL rdfs:label "与Treasury of Lives一致"@zh-hans .
+
+adm:sameAsVIAF rdfs:label "与VIAF一致"@zh-hans .
+
+adm:sameAsWikidata rdfs:label "与维基数据一致"@zh-hans .
+
+adm:sameAsWorldCat rdfs:label "与WorldCat一致"@zh-hans .
+
+adm:sameAsrKTs rdfs:label "与rKTs一致"@zh-hans .
+
+adm:seeOtherCBETA rdfs:label "在中华电子佛典协会上查看"@zh-hans .
+
+adm:seeOtherHA rdfs:label "见Himalayan Art相关条目"@zh-hans .
+
+adm:seeOtherSAT rdfs:label "在SAT上查看"@zh-hans .
+
+adm:seeOtherSRC rdfs:label "见Sakya Research Center相关条目"@zh-hans .
+
+adm:seeOtherToL rdfs:label "见Treasury of Lives相关条目"@zh-hans .
+
+adm:status rdfs:label "有status"@zh-hans .
+
+adm:termsOfUse rdfs:label "资源元数据的使用条款"@zh-hans .
+
