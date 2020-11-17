@@ -357,3 +357,10 @@ bda:CP051
   skos:altLabel "Saint Petersburg Institute of Oriental Manuscripts"@en ;
   foaf:homepage "http://www.orientalstudies.ru/"^^xsd:anyURI ;
 .
+bda:CP052
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "IDP" ;
+  skos:altLabel "International Dunhuang Project"@en ;
+  foaf:homepage "http://idp.bl.uk"^^xsd:anyURI ;
+.

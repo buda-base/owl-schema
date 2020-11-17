@@ -162,6 +162,12 @@ bda:LD_SRC_Metadata
   adm:provider bda:CP050 ;
   skos:prefLabel "Provided by Sakya Research Centre, Copyright Undetermined"@en ;
 .
+bda:LD_IDP_metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseCopyrightUndetermined ;
+  adm:provider bda:CP052 ;
+  skos:prefLabel "Provided by the International Dunhuang Project, copyright unknown, see original metadata record for more information"@en ;
+.
 LegalData:
   a owl:Ontology ;
   dct:license bda:LicenseCC0 ;
