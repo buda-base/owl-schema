@@ -2806,9 +2806,9 @@ bdo:instanceEvent
 bdo:instanceExtentStatement
   a owl:DatatypeProperty ;
   adm:technicalComment "was :workExtentStatement"@en ;
-  adm:userTooltip "A statement of the extent of the Instance"@en ;
+  adm:userTooltip "A statement of the extent of the instance"@en ;
   rdfs:domain bdo:Instance ;
-  rdfs:label "extent statement"@en ;
+  rdfs:label "extent"@en ;
   rdfs:range xsd:string ;
 .
 bdo:instanceHasDerivative
