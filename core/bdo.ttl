@@ -309,7 +309,7 @@ bdo:CorporationMemberMonastic
 bdo:CorporationMemberNotSpecified
   a owl:Class ;
   adm:userTooltip "An otherwise unspecified member of an organization"@en ;
-  rdfs:label "member (unspecified type)"@en ;
+  rdfs:label "Member"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:CoverTitle
