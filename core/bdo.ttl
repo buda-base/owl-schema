@@ -285,7 +285,7 @@ bdr:Czzzz a :Corporation ;
                         [ a CorporationMemberByMarriage ;
                          :corporationMember bdr:Pxxxxx ] ."""@en ;
   adm:userTooltip "A member of an organization based on some attributes of the "@en ;
-  rdfs:label "Corporation member"@en ;
+  rdfs:label "member"@en ;
   rdfs:subClassOf bdo:Facet ;
 .
 bdo:CorporationMemberByBlood
@@ -304,12 +304,6 @@ bdo:CorporationMemberMonastic
   a owl:Class ;
   adm:userTooltip "An member of a monastic organization"@en ;
   rdfs:label "Monastic member"@en ;
-  rdfs:subClassOf bdo:CorporationMember ;
-.
-bdo:CorporationMemberNotSpecified
-  a owl:Class ;
-  adm:userTooltip "An otherwise unspecified member of an organization"@en ;
-  rdfs:label "Member"@en ;
   rdfs:subClassOf bdo:CorporationMember ;
 .
 bdo:CoverTitle
