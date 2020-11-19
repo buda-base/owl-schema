@@ -1218,6 +1218,13 @@ bdo:PublishedEvent
   rdfs:label "Published"@en ;
   rdfs:subClassOf bdo:InstanceEvent ;
 .
+bdo:ReconstructedTitle
+  a owl:Class ;
+  adm:translationPriority 2 ;
+  adm:userTooltip "a title that does not appear in the original artefact"@en ;
+  rdfs:label "Reconstructed Title"@en ;
+  rdfs:subClassOf bdo:Title ;
+.
 bdo:ReferenceTitle
   a owl:Class ;
   adm:translationPriority 2 ;
