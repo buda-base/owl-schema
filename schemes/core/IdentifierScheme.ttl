@@ -62,6 +62,13 @@ bdr:BibliographicIdentifier
   skos:narrower bdr:WorkIdentifier ;
   skos:topConceptOf bdr:IdentifierScheme ;
 .
+bdr:WDSBB
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "Waddell"@en ;
+  skos:broader bdr:InstanceIdentifier ;
+  skos:definition "Indicates the Waddell identifier in the collection at the Stabi in Berlin"@en ;
+.
 bdr:CBCSiglaA
   a bdo:Identifier ;
   a skos:Concept ;
