@@ -91,6 +91,12 @@ bda:LD_SBB_content
   adm:provider bda:CP037 ;
   skos:prefLabel "Provided by Staatsbibliothek zu Berlin, copyright unspecified, interpreted as Public Domain"@en ;
 .
+bda:LD_SBB_metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseNoKnownCopyright ;
+  adm:provider bda:CP037 ;
+  skos:prefLabel "Provided by Staatsbibliothek zu Berlin, copyright unspecified"@en ;
+.
 bda:LD_LOC_PD
   a adm:LegalData ;
   adm:license bda:LicensePublicDomain ;
