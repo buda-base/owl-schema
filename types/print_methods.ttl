@@ -21,27 +21,27 @@ bdo:PrintMethod
 .
 bdo:PrintMethod_Intaglio
   a owl:Class ;
-  rdfs:label "Print method Intaglio" ;
+  rdfs:label "Intaglio" ;
   adm:userTooltip "Indicates an Intaglio method was used."@en ;
   rdfs:subClassOf bdo:PrintMethod ;
   adm:translationPriority 2 ;
 .
 bdo:PrintMethod_Manuscript
   a owl:Class ;
-  rdfs:label "Print method Manuscript"@en ;
+  rdfs:label "Manuscript"@en ;
   adm:userTooltip "Indicates that the Work was handwritten."@en ;
   rdfs:subClassOf bdo:PrintMethod ;
 .
 bdo:PrintMethod_Offset
   a owl:Class ;
-  rdfs:label "Print method Offset"@en ;
+  rdfs:label "Offset"@en ;
   adm:userTooltip "Indicates an offset method method was used."@en ;
   rdfs:subClassOf bdo:PrintMethod ;
   adm:translationPriority 2 ;
 .
 bdo:PrintMethod_Relief
   a owl:Class ;
-  rdfs:label "Print method Relief" ;
+  rdfs:label "Relief" ;
   adm:userTooltip "Indicates a relief method such as carved woodblocks were used."@en ;
   rdfs:subClassOf bdo:PrintMethod ;
   adm:translationPriority 2 ;

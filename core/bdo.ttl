@@ -1632,6 +1632,13 @@ bdo:colophon
   rdfs:label "colophon"@en ;
   rdfs:range rdf:langString ;
 .
+bdo:explicit
+  a owl:DatatypeProperty ;
+  adm:userTooltip "A transcription of the explicit of the Instance (a part of the colophon)."@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "explicit"@en ;
+  rdfs:range rdf:langString ;
+.
 bdo:contentLocation
   a owl:ObjectProperty ;
   adm:technicalComment "the :contentLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ;
