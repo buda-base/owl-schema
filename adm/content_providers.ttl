@@ -364,3 +364,10 @@ bda:CP052
   skos:altLabel "International Dunhuang Project"@en ;
   foaf:homepage "http://idp.bl.uk"^^xsd:anyURI ;
 .
+bda:CP053
+  a adm:ContentProvider ;
+  a foaf:Organization ;
+  skos:prefLabel "Leiden University Libraries" ;
+  skos:altLabel "Leiden University Libraries Digital Collections"@en ;
+  foaf:homepage "https://digitalcollections.universiteitleiden.nl/"^^xsd:anyURI ;
+.

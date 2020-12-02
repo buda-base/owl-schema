@@ -46,6 +46,11 @@ bda:LicenseCCBYSA3U
   rdfs:seeAlso <http://creativecommons.org/licenses/by-sa/3.0/> ;
   skos:prefLabel "Creative Commons BY-SA 3.0 Unported"@en ;
 .
+bda:LicenseCCBY4
+  a adm:License ;
+  rdfs:seeAlso <http://creativecommons.org/licenses/by/4.0/> ;
+  skos:prefLabel "Creative Commons Attribution 4.0 International (CC BY 4.0)"@en ;
+.
 bda:LicenseCCBYSA4U
   a adm:License ;
   rdfs:seeAlso <http://creativecommons.org/licenses/by-sa/4.0/> ;

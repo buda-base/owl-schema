@@ -160,19 +160,31 @@ bda:LD_NGMPP_Metadata
   a adm:LegalData ;
   adm:license bda:LicenseCopyrightUndetermined ;
   adm:provider bda:CP049 ;
-  skos:prefLabel "Provided by NGMPP, Copyright Undetermined"@en ;
+  skos:prefLabel "Provided by NGMPP, Copyright undetermined"@en ;
 .
 bda:LD_SRC_Metadata
   a adm:LegalData ;
   adm:license bda:LicenseCopyrightUndetermined ;
   adm:provider bda:CP050 ;
-  skos:prefLabel "Provided by Sakya Research Centre, Copyright Undetermined"@en ;
+  skos:prefLabel "Provided by Sakya Research Centre, Copyright undetermined"@en ;
 .
 bda:LD_IDP_metadata
   a adm:LegalData ;
   adm:license bda:LicenseCopyrightUndetermined ;
   adm:provider bda:CP052 ;
   skos:prefLabel "Provided by the International Dunhuang Project, copyright unknown, see original metadata record for more information"@en ;
+.
+bda:LD_LULDC_metadata
+  a adm:LegalData ;
+  adm:license bda:LicenseCCBY4 ;
+  adm:provider bda:CP053 ;
+  skos:prefLabel "Provided by Leiden University Libraries under Creative Commons Attribution License (CC BY 4.0)"@en ;
+.
+bda:LD_LULDC_content
+  a adm:LegalData ;
+  adm:license bda:LicenseCopyrightUndetermined ;
+  adm:provider bda:CP053 ;
+  skos:prefLabel "Content provided by Leiden University Libraries, copyright Undetermined.y"@en ;
 .
 LegalData:
   a owl:Ontology ;
