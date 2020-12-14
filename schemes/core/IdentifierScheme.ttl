@@ -480,11 +480,10 @@ bdr:MARCCountryCode
 bdr:PL480
   a bdo:Identifier ;
   a skos:Concept ;
-  rdfs:label "pl480"@en ;
+  rdfs:label "LOC overseas acq no."@en ;
   skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Indicates that the Work was acquired as part of Gene Smith's contribution to the implementation of Public Law 480"@en ;
-  skos:editorialNote "Id and indication that the Work was prepared and acquired as part of Gene Smith's contribution to the implementation of Public Law 480 in India in the 1960's and 70's"@en ;
-  skos:historyNote "Was bdo:workPL480."@en ;
+  skos:definition "Indicates the overseas acquisition number at Library of Congress."@en ;
+  skos:editorialNote "Do not fill for works not created by Gene in the PL480 period."@en ;
 .
 bdr:PlaceIdentifier
   a bdo:Identifier ;
