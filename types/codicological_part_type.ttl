@@ -1,0 +1,61 @@
+# baseURI: http://purl.bdrc.io/ontology/types/CodicologicalPartType/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: CodicologicalPartType
+
+@prefix CodicologicalPartType: <http://purl.bdrc.io/ontology/types/CodicologicalPartType/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:CodicologicalPartType
+  a owl:Class ;
+  adm:userTooltip "represents the codicological type of an instance (or part), typically used in the Southeast Asian context"@en ;
+  rdfs:label "Codicological Part Type"@en ;
+.
+CodicologicalPartType:
+  a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:BundleSet
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "set of bundles"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:Bundle
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "bundle"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:FascicleSet
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "set of fascicles"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:Fascicle
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "fascicle"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:FasciclePart
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "part of a fascicle"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:FolioSet
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "set of loose folios"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:Folio
+  a bdo:CodicologicalPartType ;
+  skos:prefLabel "loose folio"@en ;
+  adm:translationPriority 2 ;
+.

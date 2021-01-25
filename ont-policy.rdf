@@ -270,7 +270,19 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PartType/"/>
         <altURL    rdf:resource="types/part_types.ttl"/>
     </OntologySpec>
-    
+
+    <OntologySpec>
+        <!-- local version of the TypeOfCopy vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/TypeOfCopy/"/>
+        <altURL    rdf:resource="types/type_of_copy.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of the CodicologicalPartType vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/CodicologicalPartType/"/>
+        <altURL    rdf:resource="types/codicological_part_types.ttl"/>
+    </OntologySpec>
+
     <OntologySpec>
         <!-- local version of the PlaceType vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/PlaceType/"/>

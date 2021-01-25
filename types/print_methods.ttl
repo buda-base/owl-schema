@@ -29,7 +29,7 @@ bdo:PrintMethod_Intaglio
 bdo:PrintMethod_Manuscript
   a owl:Class ;
   rdfs:label "Manuscript"@en ;
-  adm:userTooltip "Indicates that the Work was handwritten."@en ;
+  adm:userTooltip "Indicates that the Work was produced manually"@en ;
   rdfs:subClassOf bdo:PrintMethod ;
 .
 bdo:PrintMethod_Offset
@@ -63,7 +63,12 @@ bdr:PrintMethod_Intaglio_Zinc
 .
 bdr:PrintMethod_Manuscript
   a bdo:PrintMethod_Manuscript ;
-  skos:prefLabel "manuscript"@en ;
+  skos:prefLabel "manuscript (using ink)"@en ;
+.
+bdr:PrintMethod_ManuscriptStylus
+  a bdo:PrintMethod_Manuscript ;
+  skos:prefLabel "manuscript (carved using a stylus)"@en ;
+  adm:userTooltip "The manuscript was carved with a stylus cutter (typically the case in the Southeast Asian context)"@en ;
 .
 bdr:PrintMethod_Relief_Letterpress
   a bdo:PrintMethod_Relief ;

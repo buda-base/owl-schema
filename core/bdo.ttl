@@ -255,6 +255,12 @@ bdo:CopyEvent
   rdfs:label "copied"@en ;
   rdfs:subClassOf bdo:InstanceEvent ;
 .
+bdo:OriginalCopyEvent
+  a owl:Class ;
+  adm:userTooltip "An event of originally copying the text. Happens in some contexts (ex: Burmese), where manuscripts can have an attributed original scribe (acring somewhat as an editor) even though the physical copy we have is a copy of the 'original' copy."@en ;
+  rdfs:label "Originally copied"@en ;
+  rdfs:subClassOf bdo:InstanceEvent ;
+.
 bdo:CopyrightPageTitle
   a owl:Class ;
   adm:catalogingConvention """The Copyright Page Title is found on the Cataloging in Publication (CIP) when present. The CIP is typically on the verso of the Title Page in Western publications and often at the end for Chinese pubications. The title should be entered in the language and script as it appears in the original publication - which for Chinese publications is typically zh-hans. The Library of COngress standard for the Title in the CIP is that it includes the title and any subtitle from the title page so for Western materials this data element is redundant with the full :WorkTitlePageTitle and can be ignored for cataloging. For Chinese materials, especially Tibetan publications, the CIP title is typically distinct from that which appears on the Title Page and hence this data can be helpful in distinguishing the Work from others. 
@@ -1093,6 +1099,24 @@ bdo:PersonPrimaryTitle
   rdfs:label "Primary Title"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
+bdo:PersonOfficialTitle
+  a owl:Class ;
+  adm:userTooltip "The official title given to a person. In the Burmese context these would be given by the King, or in other rare contexts by the colonial administration."@en ;
+  rdfs:label "Official Title"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
+bdo:PersonOriginName
+  a owl:Class ;
+  adm:userTooltip "The name of the person that is associated with the person's place of origin. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  rdfs:label "Origin name"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
+bdo:PersonResidenceName
+  a owl:Class ;
+  adm:userTooltip "The name of the person that is associated with the person's place of residence. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  rdfs:label "Residence name"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
 bdo:PersonRabByungOrdination
   a owl:Class ;
   adm:userTooltip "A preliminary to monastic ordination, when someone takes the five root vows"@en ;
@@ -1552,11 +1576,53 @@ bdo:associatedTradition
   rdfs:label "associated tradition"@en ;
   rdfs:range bdo:Tradition ;
 .
+bdo:custodialHistory
+  a owl:DatatypeProperty ;
+  adm:userTooltip "A note on the custodial history of the physical object"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "custodial history"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:excerpt
+  a owl:DatatypeProperty ;
+  adm:userTooltip "An excerpt from the text"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "excerpt"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:excerptBeginning
+  a owl:DatatypeProperty ;
+  adm:userTooltip "An excerpt from the beginning of the text (skipping the incipit, hommage, etc.)"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "excerpt (beginning)"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:excerptEnd
+  a owl:DatatypeProperty ;
+  adm:userTooltip "An excerpt from the end of the text (before the colophon)"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "excerpt (end)"@en ;
+  rdfs:range rdf:langString ;
+.
 bdo:authorshipStatement
   a owl:DatatypeProperty ;
   adm:userTooltip "Authorship statement for the Instance."@en ;
   rdfs:domain bdo:Instance ;
   rdfs:label "authorship statement"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:ownershipStatement
+  a owl:DatatypeProperty ;
+  adm:userTooltip "Statement of ownership indicated in the instance"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "authorship statement"@en ;
+  rdfs:range rdf:langString ;
+.
+bdo:sponsoshipStatement
+  a owl:DatatypeProperty ;
+  adm:userTooltip "Statement of sponsorship of the instance (typically the donor of a manuscript copy, not the work itself) indicated in the instance"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "sponsorship statement"@en ;
   rdfs:range rdf:langString ;
 .
 bdo:baseMaterial
@@ -3426,6 +3492,20 @@ bdo:partType
   rdfs:domain bdo:Instance ;
   rdfs:label "part type"@en ;
   rdfs:range bdo:PartType ;
+.
+bdo:codicologicalpartType
+  a owl:ObjectProperty ;
+  adm:userTooltip "In the case of an instance or a part, this reflects how the part is organized codicologically"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "codicological part type"@en ;
+  rdfs:range bdo:CodicologicalPartType ;
+.
+bdo:typeOfCopy
+  a owl:ObjectProperty ;
+  adm:userTooltip "The type of copy"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "type of copy"@en ;
+  rdfs:range bdo:TypeOfCopy ;
 .
 bdo:personConsortOf
   a owl:ObjectProperty ;

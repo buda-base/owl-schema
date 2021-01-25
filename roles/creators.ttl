@@ -57,10 +57,7 @@ bdr:R0ER0014
 .
 bdr:R0ER0015
   a bdo:Creator ;
-  rdfs:comment """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
-
-Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
-a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
+  rdfs:comment """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. (ex. bdr:MW1KG4337)."""@en ;
   skos:prefLabel "compiler"@en ;
   skos:altLabel "editor"@en ;
 .
@@ -92,43 +89,35 @@ bdr:R0ER0020
 .
 bdr:R0ER0021
   a bdo:Creator ;
-  rdfs:comment """An individual to whom answers in a Work are addressed. Cf., W22146:
-
-Study of the history of Buddhism in Tibet. Wirtten by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
+  rdfs:comment """An individual to whom answers in a Work are addressed (ex: bdr:MW22146)"""@en ;
   skos:prefLabel "recipient of response to query"@en ;
 .
 bdr:R0ER0022
   a bdo:Creator ;
-  rdfs:comment "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
+  rdfs:comment "a person who recites a text in its original (typically Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with \"IndicScholar\" (see below)"@en ;
   skos:prefLabel "reciter"@en ;
 .
 bdr:R0ER0023
   a bdo:Creator ;
-  rdfs:comment """An individual who is known to have revised a previoius work or translation. Cf., W3CN4970:
-
-The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
+  rdfs:comment """An individual who is known to have revised a previoius work or translation (ex. bdr:MW3CN4970)"""@en ;
   skos:prefLabel "reviser"@en ;
   skos:altLabel "corrector"@en ;
 .
 bdr:R0ER0024
   a bdo:Creator ;
-  rdfs:comment "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
+  rdfs:comment "An individual who physically wrote the text. Can be during recitation by the author (ex. bdr:W8145)"@en ;
   skos:prefLabel "scribe"@en ;
   skos:prefLabel "yi ge ba/"@bo-x-ewts ;
 .
 bdr:R0ER0025
   a bdo:Creator ;
-  rdfs:comment """An individual who revealed the Work as treasure texts. Cf., W25816:
-
-Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak"""@en ;
+  rdfs:comment """An individual who revealed the Work as treasure texts (specific to the Tibetan context)"""@en ;
   skos:prefLabel "tertön"@en ;
   skos:prefLabel "གཏེར་སྟོན།"@bo ;
 .
 bdr:R0ER0026
   a bdo:Creator ;
-  rdfs:comment """A translator of the Work. Cf., W8LS25412:
-
-The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
+  rdfs:comment """A translator of the Work"""@en ;
   skos:prefLabel "translator"@en ;
 .
 bdr:R0ER0027
@@ -139,17 +128,28 @@ bdr:R0ER0027
 .
 bdr:R0ER0028
   a bdo:Creator ;
-  rdfs:comment "a person who requests the author to compose the work"@en ;
+  rdfs:comment "a person who requests the author (resp. scribe) to compose the work (resp. instance)"@en ;
   skos:prefLabel "requester"@en ;
+  skos:altLabel "instigator"@en ;
 .
 bdr:R0ER0030
   a bdo:Creator ;
-  rdfs:comment "a person who sponsors a work (most of the time a translation)"@en ;
+  rdfs:comment "a person who sponsors a work or instance"@en ;
   skos:prefLabel "sponsor"@en ;
   skos:prefLabel "yon bdag"@bo-x-ewts ;
 .
+bdr:R0ER0031
+  a bdo:Creator ;
+  rdfs:comment "a person who is attributed as the original scribe of a manuscript, even though the manuscript itself is a copy of this 'original' copy. Happens in the Burmese context."@en ;
+  skos:prefLabel "original scribe"@en ;
+.
+bdr:R0ER0032
+  a bdo:Creator ;
+  rdfs:comment "In some contexts (Tibetan, Burmese), we have records of instructions by a certain teacher, even though the author of the actual instruction record are not the teacher themselves. This role represents the teacher."@en ;
+  skos:prefLabel "instructions of"@en ;
+.
 bdr:Unspecified
   a bdo:Creator ;
-  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the translation or composition process, without allowing us to further specify the specific role they played in that process."@en ;
+  rdfs:comment "a person for whom our source or evidence tells us only that they were involved in the production of a work or instance, without allowing us to further specify the specific role they played in that process."@en ;
   skos:prefLabel "unspecified"@en ;
 .

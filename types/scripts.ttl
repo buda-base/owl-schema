@@ -115,6 +115,26 @@ bdr:ScriptMymr
   a bdo:Script ;
   skos:prefLabel "Burmese"@en ;
 .
+bdr:ScriptMymrSquare
+  a bdo:Script ;
+  skos:prefLabel "Square Burmese script"@en ;
+.
+bdr:ScriptMymrTS
+  a bdo:Script ;
+  skos:prefLabel "'Tamarind seed' Burmese script"@en ;
+.
+bdr:ScriptMymrRound
+  a bdo:Script ;
+  skos:prefLabel "Round Burmese script"@en ;
+.
+bdr:ScriptMymrDiamond
+  a bdo:Script ;
+  skos:prefLabel "Diamond-shaped Burmese script"@en ;
+.
+bdr:ScriptMymrCursive
+  a bdo:Script ;
+  skos:prefLabel "Cursive Burmese script"@en ;
+.
 bdr:ScriptNagari
   a bdo:Script ;
   adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;

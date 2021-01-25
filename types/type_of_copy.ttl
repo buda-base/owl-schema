@@ -1,0 +1,51 @@
+# baseURI: http://purl.bdrc.io/ontology/types/TypeOfCopy/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: TypeOfCopy
+
+@prefix TypeOfCopy: <http://purl.bdrc.io/ontology/types/TypeOfCopy/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:TypeOfCopy
+  a owl:Class ;
+  adm:userTooltip "represents the type of copy (values are tuned for Southeast Asian philology)"@en ;
+  rdfs:label "Type of copy"@en ;
+.
+TypeOfCopy:
+  a owl:Ontology ;
+  dct:license bda:LicenseCC0 ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+bdr:NonSpecific
+  a bdo:TypeOfCopy ;
+  skos:prefLabel "non-specific copy with scribal mistakes"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:ScribeSpecific
+  a bdo:TypeOfCopy ;
+  skos:prefLabel "scribe-specific copy"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:Edition
+  a bdo:TypeOfCopy ;
+  skos:prefLabel "edition"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:RecensionVariant
+  a bdo:TypeOfCopy ;
+  skos:prefLabel "recension variant"@en ;
+  adm:translationPriority 2 ;
+.
+bdr:TransmitionVariant
+  a bdo:TypeOfCopy ;	
+  skos:prefLabel "transmision variant"@en ;
+  adm:translationPriority 2 ;
+.
