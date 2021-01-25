@@ -96,8 +96,8 @@ adm:ContentProvider
 .
 adm:ContentQC
   a owl:Class ;
-  rdfs:comment "Log entry indicating completion of content QC."@en ;
-  rdfs:label "Content QC'd Log Entry"@en ;
+  rdfs:comment "Log entry indicating completion of content Quality Control"@en ;
+  rdfs:label "Content QC'd"@en ;
   rdfs:subClassOf adm:ContentLogEntry ;
 .
 adm:DataLogEntry
@@ -127,7 +127,7 @@ adm:ImagesStatus
 adm:ImagesUpdated
   a owl:Class ;
   rdfs:comment "Log entry for images updating such as duplicate deletion, images conversion, etc"@en ;
-  rdfs:label "Images updated Log Entry"@en ;
+  rdfs:label "Images updated"@en ;
   rdfs:subClassOf adm:ContentLogEntry ;
 .
 adm:InitialDataCreation
@@ -235,13 +235,19 @@ adm:ReinstateData
 adm:Reordered
   a owl:Class ;
   rdfs:comment "Log entry for image reordiner within an ImageGroup."@en ;
-  rdfs:label "Images reordered Log Entry"@en ;
+  rdfs:label "Images reordered"@en ;
   rdfs:subClassOf adm:ContentLogEntry ;
 .
 adm:ScanRequested
   a owl:Class ;
   rdfs:comment "Log entry for image scan request"@en ;
-  rdfs:label "Scan requested Log Entry"@en ;
+  rdfs:label "Scan requested"@en ;
+  rdfs:subClassOf adm:ContentLogEntry ;
+.
+adm:Scanned
+  a owl:Class ;
+  rdfs:comment "Log entry for image scanning process"@en ;
+  rdfs:label "Scan done"@en ;
   rdfs:subClassOf adm:ContentLogEntry ;
 .
 adm:StatementAnnotationBody
