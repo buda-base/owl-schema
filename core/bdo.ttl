@@ -3000,6 +3000,13 @@ bdo:isComplete
   rdfs:label "complete"@en ;
   rdfs:range xsd:boolean ;
 .
+bdo:isDamaged
+  a owl:DatatypeProperty ;
+  adm:userTooltip "true if the instance or item is damaged"@en ;
+  rdfs:domain bdo:Instance ;
+  rdfs:label "damaged"@en ;
+  rdfs:range xsd:boolean ;
+.
 bdo:isIncarnation
   a owl:ObjectProperty ;
   adm:catalogingConvention "isIncarnation records which being (Person or Topic) this individual is an incarnation of and optionally what sort of incarnation (body speech, mind, etc). There are 1,456 individuals out of 18,320, that are marked as being incarnations of some being. Of these, 18 are marked with per:incarnationOf_relation and 5 are marked with per:incarnationOf_secondary."@en ;
