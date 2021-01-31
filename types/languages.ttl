@@ -245,6 +245,15 @@ bdr:LangSa
   rdfs:subClassOf bdo:Language ;
   skos:prefLabel "Sanskrit"@en ;
 .
+bdr:LangSi
+  a bdo:Language ;
+  a owl:Class ;
+  bdo:langBCP47Lang "si" ;
+  bdo:langMARCCode "sin" ;
+  rdfs:seeAlso <http://lexvo.org/id/iso639-3/sin> ;
+  rdfs:subClassOf bdo:Language ;
+  skos:prefLabel "Sinhala"@en ;
+.
 bdr:LangTxg
   a bdo:Language ;
   a owl:Class ;
