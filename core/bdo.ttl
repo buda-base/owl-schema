@@ -174,7 +174,7 @@ bdo:Binding
 .
 bdo:BundleInstance
   a owl:Class ;
-  adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package."@en ;
+  adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package. It typically has no associated work."@en ;
   rdfs:label "bundle instance"@en ;
   rdfs:subClassOf bdo:SerialInstance ;
 .
@@ -4119,6 +4119,24 @@ bdo:workHasParallelsIn
   adm:userTooltip "This work has some parallels in another work, meaning it displays intertextuality patterns."@en ;
   rdfs:domain bdo:Work ;
   rdfs:label "parallels in"@en ;
+  rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workHasDerivative ;
+.
+bdo:workHasParallelPartsIn
+  a owl:ObjectProperty ;
+  a owl:SymmetricProperty ;
+  adm:userTooltip "This work has some parallels parts in another work, meaning some parts display intertextuality patterns but not the whole text."@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "parallels parts in"@en ;
+  rdfs:range bdo:Work ;
+  rdfs:subPropertyOf bdo:workHasDerivative ;
+.
+bdo:workExtractOf
+  a owl:ObjectProperty ;
+  a owl:SymmetricProperty ;
+  adm:userTooltip "This work is an extract of another work"@en ;
+  rdfs:domain bdo:Work ;
+  rdfs:label "extract of"@en ;
   rdfs:range bdo:Work ;
   rdfs:subPropertyOf bdo:workHasDerivative ;
 .
