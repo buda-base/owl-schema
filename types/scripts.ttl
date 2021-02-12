@@ -39,11 +39,13 @@ bdr:ScriptDbuCan
   a bdo:Script ;
   skos:prefLabel "Uchen"@en ;
   skos:prefLabel "dbu can/"@bo-x-ewts ;
+  skos:broader bdr:ScriptTibt ;
 .
 bdr:ScriptDbuMed
   a bdo:Script ;
   skos:prefLabel "Ume"@en ;
   skos:prefLabel "dbu med/"@bo-x-ewts ;
+  skos:broader bdr:ScriptTibt ;
 .
 bdr:ScriptDeva
   a bdo:Script ;
@@ -100,6 +102,7 @@ bdr:ScriptKhyugYig
   a bdo:Script ;
   skos:prefLabel "'khyug yig"@bo-x-ewts ;
   skos:prefLabel "Kyug yig"@en ;
+  skos:broader bdr:ScriptTibt ;
 .
 bdr:ScriptLatn
   a bdo:Script ;
@@ -118,22 +121,27 @@ bdr:ScriptMymr
 bdr:ScriptMymrSquare
   a bdo:Script ;
   skos:prefLabel "Square Burmese script"@en ;
+  skos:broader bdr:ScriptMymr ;
 .
 bdr:ScriptMymrTS
   a bdo:Script ;
   skos:prefLabel "'Tamarind seed' Burmese script"@en ;
+  skos:broader bdr:ScriptMymr ;
 .
 bdr:ScriptMymrRound
   a bdo:Script ;
   skos:prefLabel "Round Burmese script"@en ;
+  skos:broader bdr:ScriptMymr ;
 .
 bdr:ScriptMymrDiamond
   a bdo:Script ;
   skos:prefLabel "Diamond-shaped Burmese script"@en ;
+  skos:broader bdr:ScriptMymr ;
 .
 bdr:ScriptMymrCursive
   a bdo:Script ;
   skos:prefLabel "Cursive Burmese script"@en ;
+  skos:broader bdr:ScriptMymr ;
 .
 bdr:ScriptNagari
   a bdo:Script ;
@@ -169,11 +177,12 @@ bdr:ScriptPostGupta
 bdr:ScriptRanj
   a bdo:Script ;
   rdfs:comment "This script is not normalized in ISO 15924"@en ;
-  rdfs:comment "Use it for Landza and Vartu"@en ;
+  rdfs:comment "Use it for Ranjana, Landza and Vartu"@en ;
   rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
   skos:altLabel "Kutika"@en ;
   skos:altLabel "Pāla"@sa-x-iast ;
   skos:altLabel "Vartu"@en ;
+  skos:altLabel "vartu"@sa-x-iast ;
   skos:altLabel "lany+tsa"@bo-x-ewts ;
   skos:altLabel "wartu"@bo-x-ewts ;
   skos:prefLabel "Ranjana"@en ;

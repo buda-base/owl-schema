@@ -880,6 +880,12 @@ bdo:PersonBirth
   rdfs:label "Birth"@en ;
   rdfs:subClassOf bdo:PersonEvent ;
 .
+bdo:PersonFlourished
+  a owl:Class ;
+  adm:userTooltip "When a person's activity occured. This is a range of dates, indicated with :notBefore / :notAfter"@en ;
+  rdfs:label "Flourished"@en ;
+  rdfs:subClassOf bdo:PersonEvent ;
+.
 bdo:PersonBodhisattvaVowName
   a owl:Class ;
   adm:userTooltip "The name received by the Person upon taking their Bodhisattva vows"@en ;
@@ -1107,14 +1113,32 @@ bdo:PersonOfficialTitle
 .
 bdo:PersonOriginName
   a owl:Class ;
-  adm:userTooltip "The name of the person that is associated with the person's place of origin. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  adm:userTooltip "Name associated with the person's place of origin. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
   rdfs:label "Origin name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
 bdo:PersonResidenceName
   a owl:Class ;
-  adm:userTooltip "The name of the person that is associated with the person's place of residence. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  adm:userTooltip "Name associated with the person's place of residence. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
   rdfs:label "Residence name"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
+bdo:PersonMonasteryName
+  a owl:Class ;
+  adm:userTooltip "Monastic name associated with the person's monastery of residence. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  rdfs:label "Residence Monastery name"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
+bdo:PersonMonasticPositionName
+  a owl:Class ;
+  adm:userTooltip "Monastic name of the person that is associated with the person's position in monastic hierarchy or sectarian groups. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  rdfs:label "Residence Monastery name"@en ;
+  rdfs:subClassOf bdo:PersonName ;
+.
+bdo:PersonDonorName
+  a owl:Class ;
+  adm:userTooltip "Monastic name associated with the name of the donor who sponsored a monastery of residence. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
+  rdfs:label "Residence Monastery name"@en ;
   rdfs:subClassOf bdo:PersonName ;
 .
 bdo:PersonRabByungOrdination
