@@ -4014,7 +4014,7 @@ bdo:volumePagesIntro
 .
 bdo:volumePagesTbrcIntro
   a owl:DatatypeProperty ;
-  adm:userTooltip "The number of digitized metadata pages added by TBRC (now BDRC). Originally this was 2 pages and more recently condensed to a single non-blank page however a second blank page 2 was included to simplify processing of volumes for display and so on. The intention being to capture some relevant metadata in along with the digitized images so that the volume is essentially standalone."@en ;
+  adm:userTooltip "The number of digitized metadata pages added by TBRC (now BDRC). Originally this was 2 pages and more recently condensed to a single non-blank page however a second blank page 2 was included to simplify processing of volumes for display and so on. The intention being to capture some relevant metadata in along with the digitized images so that the volume is essentially standalone. Note that for historical reasons this can be greater than the total number of images if we don't have any image for the image group."@en ;
   rdfs:domain bdo:Volume ;
   rdfs:label "nb. pages of TBRC intro"@en ;
   rdfs:range xsd:integer ;
