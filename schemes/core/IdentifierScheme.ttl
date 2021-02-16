@@ -69,6 +69,13 @@ bdr:WDSBB
   skos:broader bdr:InstanceIdentifier ;
   skos:definition "Indicates the Waddell identifier in the collection at the Stabi in Berlin"@en ;
 .
+bdr:IDNGMPP
+  a bdo:Identifier ;
+  a skos:Concept ;
+  rdfs:label "NGMPP Reel Number"@en ;
+  skos:broader bdr:InstanceIdentifier ;
+  skos:definition "Indicates the NGMPP Reel Number"@en ;
+.
 bdr:CBCSiglaA
   a bdo:Identifier ;
   a skos:Concept ;
