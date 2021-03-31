@@ -1,8 +1,7 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Gender/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Gender
 
 @prefix Gender: <http://purl.bdrc.io/ontology/types/Gender/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -12,32 +11,37 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+
+<http://purl.bdrc.io/ontology/types/Gender/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
 
 bdo:Gender
-  a owl:Class ;
-  adm:userTooltip "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
-  rdfs:label "Gender"@en ;
-.
-Gender:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:label "Gender"@en ;
+	adm:userTooltip "The Gender Type records the gender of a :Person if known. If the gender is not known, then bdr:GenderNotSpecified is used."@en ;
+	.
+
 bdr:GenderFemale
-  a bdo:Gender ;
-  skos:prefLabel "female"@en ;
-.
+	a bdo:Gender ;
+	skos:prefLabel "female"@en ;
+	.
+
 bdr:GenderMale
-  a bdo:Gender ;
-  skos:prefLabel "male"@en ;
-.
+	a bdo:Gender ;
+	skos:prefLabel "male"@en ;
+	.
+
 bdr:GenderMixed
-  a bdo:Gender ;
-  skos:prefLabel "mixed gender"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Gender ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "mixed gender"@en ;
+	.
+
 bdr:GenderNotSpecified
-  a bdo:Gender ;
-  skos:prefLabel "gender not specified"@en ;
-.
+	a bdo:Gender ;
+	skos:prefLabel "gender not specified"@en ;
+	.
+

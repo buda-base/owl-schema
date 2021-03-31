@@ -1,6 +1,3 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Taxonomy/
-# prefix: Taxonomy
-
 @prefix Taxonomy: <http://purl.bdrc.io/ontology/types/Taxonomy/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
@@ -10,12 +7,19 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/Taxonomy/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	.
 
 bdo:Taxonomy
-  a owl:Class ;
-  adm:technicalComment """A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
+	a owl:Class ;
+	rdfs:label "Taxonomy"@en ;
+	adm:technicalComment
+		'''A :Taxonomy individual represents a hierarchical organization of a collection of individuals - usually instances of a subclass of :Type. For example, the individuals of type :Tradition are organized via the bdr:TraditionTaxonomy.
 
 Assertions using :taxSubClass and :taxElementOf object properties organize the set of typed individuals into a class/subclass hierarchy. Typed indivduals can be asserted to be :taxSubClass of other individuals or of the :Taxonomy individual itself - the :Taxonomy individual is the root of the class/subclass hierarchy.
 
@@ -42,7 +46,7 @@ permits one to assert that
 
     bdr:G521 :placeEvent 
                     [ a :PlaceFounded ;
-                      :onOrAbout  \"1150\" ;
+                      :onOrAbout  "1150" ;
                       :placeEventAffiliation bdr:TraditionKagyu ] ,
                     [ a :PlaceConverted ;
                       :placeEventAffiliation bdr:TraditionNyingma ] .
@@ -51,20 +55,20 @@ and
 
     bdr:G1KR781 :placeEvent
                     [ a :PlaceFounded ;
-                      :onOrAbout  \"1660\" ;
+                      :onOrAbout  "1660" ;
                       :placeEventAffiliation bdr:TraditionKagyu ] ,
                     [ a :PlaceConverted ;
-                      :onOrAbout  \"1674\" ;
+                      :onOrAbout  "1674" ;
                       :placeEventAffiliation bdr:TraditionGeluk ] .
 
 
 Using typed individuals provides a straightforward approach to localization by simply attaching rdfs:label in the various languages to each of the typed individuals so that bdr:TraditionNyingma will have the zh, bo, and en labels needed to display in an application.
 
-Using typed individuals allows to provide a uniform approach to typing names, events, groups and so on rather than using owl:class/subclass relations in some cases and sub-properties (data or object) in other cases."""@en ;
-  adm:technicalComment """Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a \"coherent\" set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
+Using typed individuals allows to provide a uniform approach to typing names, events, groups and so on rather than using owl:class/subclass relations in some cases and sub-properties (data or object) in other cases.'''@en ,
+		'''Rules should be added to indicate that :taxElementOf and :taxSubClass should be used with a "coherent" set of individuals of some :Type. In other words the set of individuals related among themselves and a :Taxonomy individual should be all of the same :Type (or maybe family of types).
 
-Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:TraditionDrukpaKagyu find also instances of bdr:TraditionTodrukKagyu and so on."""@en ;
-  adm:technicalComment """Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
+Futher there should be inference rules for :taxElementOf and :taxSubClass so that queries for bdr:TraditionDrukpaKagyu find also instances of bdr:TraditionTodrukKagyu and so on.'''@en ,
+		"""Support for multiple Taxonomies organizing the same set of inidividuals is provided by using the Annotation properties :taxSubclassProperty and :taxElementOfProperty:
 
 bdr:TraditionTaxonomy a :Taxonomy ;
       :taxSubclassProperty :taxSubclass ;
@@ -76,38 +80,44 @@ bdr:OtherTaxonomy a :Taxonomy ;
       :taxSubclassProperty :taxSubclass02 ;
       :taxElementOfProperty :taxElementOf02 .
 
-Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously."""@en ;
-  rdfs:label "Taxonomy"@en ;
-  adm:translationPriority 2 ;
-.
-Taxonomy:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-.
+Would allow for bdr:OtherTaxonomy to organize the same set of Tradition individuals unambiguously."""@en
+		;
+	adm:translationPriority "2"^^xsd:integer ;
+	.
+
 bdo:taxHasSubClass
-  a owl:ObjectProperty ;
-  rdfs:label """This represents a "has-a" relationship in taxonomies."""@en ;
-  rdfs:seeAlso "https://en.wikipedia.org/wiki/Has-a"^^xsd:anyURI ;
-  rdfs:label "has subtype"@en ;
-  skos:altLabel "has hyponym"@en ;
-  owl:inverseOf bdo:taxSubClassOf ;
-  adm:translationPriority 2 ;
-.
+	a owl:ObjectProperty ;
+	rdfs:label
+		'This represents a "has-a" relationship in taxonomies.'@en ,
+		"has subtype"@en
+		;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:seeAlso "https://en.wikipedia.org/wiki/Has-a"^^xsd:anyURI ;
+	owl:inverseOf bdo:taxSubClassOf ;
+	skos:altLabel "has hyponym"@en ;
+	.
+
 bdo:taxSubClassOf
-  a owl:ObjectProperty ;
-  rdfs:label """This represents a "is-a" relationship in taxonomies."""@en ;
-  rdfs:seeAlso "https://en.wikipedia.org/wiki/Is-a"^^xsd:anyURI ;
-  rdfs:label "is a"@en ;
-  skos:altLabel "has hypernym"@en ;
-  rdfs:seeAlso bdo:Taxonomy ;
-  adm:translationPriority 2 ;
-.
+	a owl:ObjectProperty ;
+	rdfs:label
+		'This represents a "is-a" relationship in taxonomies.'@en ,
+		"is a"@en
+		;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:seeAlso
+		bdo:Taxonomy ,
+		"https://en.wikipedia.org/wiki/Is-a"^^xsd:anyURI
+		;
+	skos:altLabel "has hypernym"@en ;
+	.
+
 bdo:taxSubclassRelation
-  a owl:AnnotationProperty ;
-  rdfs:comment "This identifies a property that is used in a custom taxonomy to represent the subclass relation for the taxonomy"@en ;
-  rdfs:domain bdo:Taxonomy ;
-  rdfs:label "has "@en ;
-  rdfs:range owl:ObjectProperty ;
-  rdfs:seeAlso bdo:Taxonomy ;
-  adm:translationPriority 2 ;
-.
+	a owl:AnnotationProperty ;
+	rdfs:label "has "@en ;
+	rdfs:comment "This identifies a property that is used in a custom taxonomy to represent the subclass relation for the taxonomy"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:domain bdo:Taxonomy ;
+	rdfs:range owl:ObjectProperty ;
+	rdfs:seeAlso bdo:Taxonomy ;
+	.
+

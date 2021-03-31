@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/roles/ChineseMonastic/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: ChineseMonastic
 
 @prefix : <http://purl.bdrc.io/ontology/core/> .
 @prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
@@ -15,65 +13,96 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/roles/ChineseMonastic/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
 bdo:ChineseMonastic
-  a owl:Class ;
-  rdfs:comment "Roles referred to in various Chinese Gaosengzhuan 高僧傳 \"Biographies of eminent monks\""@en ;
-  rdfs:label "Chinese monastic role"@en ;
-.
-ChineseMonastic:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:label "Chinese monastic role"@en ;
+	rdfs:comment 'Roles referred to in various Chinese Gaosengzhuan 高僧傳 "Biographies of eminent monks"'@en ;
+	.
+
 bdr:R0ER0001
-  a :ChineseMonastic ;
-  skos:altLabel "亡身"@zh-hant ;
-  skos:altLabel "燒身"@zh-hant ;
-  skos:altLabel "燒身供養"@zh-hant ;
-  skos:prefLabel "self-immolator"@en ;
-  skos:prefLabel "遺身"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:altLabel
+		"亡身"@zh-hant ,
+		"燒身"@zh-hant ,
+		"燒身供養"@zh-hant
+		;
+	skos:prefLabel
+		"self-immolator"@en ,
+		"遺身"@zh-hant
+		;
+	.
+
 bdr:R0ER0002
-  a :ChineseMonastic ;
-  skos:prefLabel "public preacher"@en ;
-  skos:prefLabel "唱導"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:prefLabel
+		"public preacher"@en ,
+		"唱導"@zh-hant
+		;
+	.
+
 bdr:R0ER0003
-  a :ChineseMonastic ;
-  skos:altLabel "神異"@zh-hant ;
-  skos:prefLabel "miracle worker"@en ;
-  skos:prefLabel "感通"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:altLabel "神異"@zh-hant ;
+	skos:prefLabel
+		"miracle worker"@en ,
+		"感通"@zh-hant
+		;
+	.
+
 bdr:R0ER0004
-  a :ChineseMonastic ;
-  skos:prefLabel "Vinaya expert"@en ;
-  skos:prefLabel "明律"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:prefLabel
+		"Vinaya expert"@en ,
+		"明律"@zh-hant
+		;
+	.
+
 bdr:R0ER0005
-  a :ChineseMonastic ;
-  skos:altLabel "誦經"@zh-hant ;
-  skos:prefLabel "sutra recitator and chanter"@en ;
-  skos:prefLabel "經師"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:altLabel "誦經"@zh-hant ;
+	skos:prefLabel
+		"sutra recitator and chanter"@en ,
+		"經師"@zh-hant
+		;
+	.
+
 bdr:R0ER0006
-  a :ChineseMonastic ;
-  skos:prefLabel "meditator"@en ;
-  skos:prefLabel "習禪"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:prefLabel
+		"meditator"@en ,
+		"習禪"@zh-hant
+		;
+	.
+
 bdr:R0ER0007
-  a :ChineseMonastic ;
-  rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
-  skos:prefLabel "promoter of merit"@en ;
-  skos:prefLabel "興福"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	rdfs:comment "For example, constructor of monasteries, stupas, images and so on to gain merit"@en ;
+	skos:prefLabel
+		"promoter of merit"@en ,
+		"興福"@zh-hant
+		;
+	.
+
 bdr:R0ER0008
-  a :ChineseMonastic ;
-  skos:prefLabel "Dharma protector (human)"@en ;
-  skos:prefLabel "護法"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	skos:prefLabel
+		"Dharma protector (human)"@en ,
+		"護法"@zh-hant
+		;
+	.
+
 bdr:R0ER0029
-  a :ChineseMonastic ;
-  skos:prefLabel "Diverse Abilities and Vocal Virtue"@en ;
-  rdfs:comment "use it only for the biographies in this category of Taisho T2060."@en ;
-  skos:prefLabel "雜科聲德"@zh-hant ;
-.
+	a bdo:ChineseMonastic ;
+	rdfs:comment "use it only for the biographies in this category of Taisho T2060."@en ;
+	skos:prefLabel
+		"Diverse Abilities and Vocal Virtue"@en ,
+		"雜科聲德"@zh-hant
+		;
+	.
+

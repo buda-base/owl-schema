@@ -1,8 +1,8 @@
-# baseURI: http://purl.bdrc.io/ontology/types/TimePeriod/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: TimePeriod
 
 @prefix TimePeriod: <http://purl.bdrc.io/ontology/types/TimePeriod/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -11,43 +11,52 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+
+<http://purl.bdrc.io/ontology/types/TimePeriod/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
 
 bdo:ChineseDynasty
-  a owl:Class ;
-  rdfs:label "Chinese Dynasty"@en ;
-  rdfs:label "王朝"@zh-hans ;
-  rdfs:subClassOf bdo:ChinesePeriods ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:ChinesePeriods ;
+	rdfs:label
+		"Chinese Dynasty"@en ,
+		"王朝"@zh-hans
+		;
+	adm:translationPriority "2"^^xsd:integer ;
+	.
+
 bdo:ChineseEra
-  a owl:Class ;
-  rdfs:label "Chinese reign" ;
-  rdfs:subClassOf bdo:ChinesePeriods ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:ChinesePeriods ;
+	rdfs:label "Chinese reign"^^xsd:string ;
+	adm:translationPriority "2"^^xsd:integer ;
+	.
+
 bdo:ChinesePeriods
-  a owl:Class ;
-  rdfs:label "Chinese periods"@en ;
-  rdfs:subClassOf bdo:TimePeriod ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:TimePeriod ;
+	rdfs:label "Chinese periods"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	.
+
 bdo:QuarterCentury
-  a owl:Class ;
-  rdfs:label "Quarter Century"@en ;
-  rdfs:subClassOf bdo:TimePeriod ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:TimePeriod ;
+	rdfs:label "Quarter Century"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	.
+
 bdo:TimePeriod
-  a owl:Class ;
-  rdfs:comment "Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ;
-  rdfs:comment "Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western \"Common Era\" reckoning."@en ;
-  rdfs:label "Time Period"@en ;
-  rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
-  adm:translationPriority 2 ;
-.
-TimePeriod:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:label "Time Period"@en ;
+	rdfs:comment
+		"Not currently used. May be incorporated as more info on Chinese dates and so on are included"@en ,
+		'Time periods are specified in terms of year ranges via :notBefore and :notAfter. Years are signed integers using Western "Common Era" reckoning.'@en
+		;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:seeAlso "bdo:EventOrPeriod"^^xsd:anyURI ;
+	.
+

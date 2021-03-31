@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Script/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Script
 
 @prefix Script: <http://purl.bdrc.io/ontology/types/Script/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -14,218 +12,276 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/types/Script/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
 bdo:Script
-  a owl:Class ;
-  adm:userTooltip "A script in which a language is written. For example, DbuCan, DbuMed, Devanagari, Latin, etc."@en ;
-  rdfs:label "Script"@en ;
-  rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
-.
-Script:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:label "Script"@en ;
+	adm:userTooltip "A script in which a language is written. For example, DbuCan, DbuMed, Devanagari, Latin, etc."@en ;
+	rdfs:seeAlso <http://lexvo.org/ontology#Script> ;
+	.
+
 bdr:ScriptBeng
-  a bdo:Script ;
-  rdfs:seeAlso <http://www.lexvo.org/page/script/Beng> ;
-  skos:prefLabel "Bengali"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.lexvo.org/page/script/Beng> ;
+	skos:prefLabel "Bengali"@en ;
+	.
+
 bdr:ScriptCyrl
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Cyrl> ;
-  skos:prefLabel "Cyrillic"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Cyrl> ;
+	skos:prefLabel "Cyrillic"@en ;
+	.
+
 bdr:ScriptDbuCan
-  a bdo:Script ;
-  skos:prefLabel "Uchen"@en ;
-  skos:prefLabel "dbu can/"@bo-x-ewts ;
-  skos:broader bdr:ScriptTibt ;
-.
+	a bdo:Script ;
+	skos:broader bdr:ScriptTibt ;
+	skos:prefLabel
+		"Uchen"@en ,
+		"dbu can/"@bo-x-ewts
+		;
+	.
+
 bdr:ScriptDbuMed
-  a bdo:Script ;
-  skos:prefLabel "Ume"@en ;
-  skos:prefLabel "dbu med/"@bo-x-ewts ;
-  skos:broader bdr:ScriptTibt ;
-.
+	a bdo:Script ;
+	skos:broader bdr:ScriptTibt ;
+	skos:prefLabel
+		"Ume"@en ,
+		"dbu med/"@bo-x-ewts
+		;
+	.
+
 bdr:ScriptDeva
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Deva> ;
-  skos:prefLabel "Devanagari"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Deva> ;
+	skos:prefLabel "Devanagari"@en ;
+	.
+
 bdr:ScriptEasternNagari
-  a bdo:Script ;
-  skos:prefLabel "Eastern Nāgārī"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "Eastern Nāgārī"@en ;
+	.
+
 bdr:ScriptGilgitBamiyan1
-  a bdo:Script ;
-  skos:prefLabel "Gilgit Bamiyan Type I"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "Gilgit Bamiyan Type I"@en ;
+	.
+
 bdr:ScriptGilgitBamiyan2
-  a bdo:Script ;
-  skos:prefLabel "Gilgit Bamiyan Type II"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "Gilgit Bamiyan Type II"@en ;
+	.
+
 bdr:ScriptGupta
-  a bdo:Script ;
-  skos:prefLabel "Gupta"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "Gupta"@en ;
+	.
+
 bdr:ScriptHani
-  a bdo:Script ;
-  rdfs:seeAlso <http://www.lexvo.org/page/script/Hani> ;
-  skos:prefLabel "Chinese"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.lexvo.org/page/script/Hani> ;
+	skos:prefLabel "Chinese"@en ;
+	.
+
 bdr:ScriptHans
-  a bdo:Script ;
-  rdfs:seeAlso <http://www.lexvo.org/page/script/Hans> ;
-  skos:prefLabel "Simplified Chinese"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.lexvo.org/page/script/Hans> ;
+	skos:prefLabel "Simplified Chinese"@en ;
+	.
+
 bdr:ScriptHant
-  a bdo:Script ;
-  rdfs:seeAlso <http://www.lexvo.org/page/script/Hant> ;
-  skos:prefLabel "Traditional Chinese"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.lexvo.org/page/script/Hant> ;
+	skos:prefLabel "Traditional Chinese"@en ;
+	.
+
 bdr:ScriptKhar
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Khar> ;
-  skos:prefLabel "Kharoshthi"@en ;
-  skos:prefLabel "Kharoṣṭhī"@sa-x-iast ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Khar> ;
+	skos:prefLabel
+		"Kharoshthi"@en ,
+		"Kharoṣṭhī"@sa-x-iast
+		;
+	.
+
 bdr:ScriptKhmr
-  a bdo:Script ;
-  skos:prefLabel "Khmer"@en ;
-.
+	a bdo:Script ;
+	skos:prefLabel "Khmer"@en ;
+	.
+
 bdr:ScriptKhyugYig
-  a bdo:Script ;
-  skos:prefLabel "'khyug yig"@bo-x-ewts ;
-  skos:prefLabel "Kyug yig"@en ;
-  skos:broader bdr:ScriptTibt ;
-.
+	a bdo:Script ;
+	skos:broader bdr:ScriptTibt ;
+	skos:prefLabel
+		"'khyug yig"@bo-x-ewts ,
+		"Kyug yig"@en
+		;
+	.
+
 bdr:ScriptLatn
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
-  skos:prefLabel "Latin"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Latn> ;
+	skos:prefLabel "Latin"@en ;
+	.
+
 bdr:ScriptMong
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Mong> ;
-  skos:prefLabel "Classical Mongolian"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Mong> ;
+	skos:prefLabel "Classical Mongolian"@en ;
+	.
+
 bdr:ScriptMymr
-  a bdo:Script ;
-  skos:prefLabel "Burmese"@en ;
-.
-bdr:ScriptMymrSquare
-  a bdo:Script ;
-  skos:prefLabel "Square Burmese script"@en ;
-  skos:broader bdr:ScriptMymr ;
-.
-bdr:ScriptMymrTS
-  a bdo:Script ;
-  skos:prefLabel "'Tamarind seed' Burmese script"@en ;
-  skos:broader bdr:ScriptMymr ;
-.
-bdr:ScriptMymrRound
-  a bdo:Script ;
-  skos:prefLabel "Round Burmese script"@en ;
-  skos:broader bdr:ScriptMymr ;
-.
-bdr:ScriptMymrDiamond
-  a bdo:Script ;
-  skos:prefLabel "Diamond-shaped Burmese script"@en ;
-  skos:broader bdr:ScriptMymr ;
-.
+	a bdo:Script ;
+	skos:prefLabel "Burmese"@en ;
+	.
+
 bdr:ScriptMymrCursive
-  a bdo:Script ;
-  skos:prefLabel "Cursive Burmese script"@en ;
-  skos:broader bdr:ScriptMymr ;
-.
+	a bdo:Script ;
+	skos:broader bdr:ScriptMymr ;
+	skos:prefLabel "Cursive Burmese script"@en ;
+	.
+
+bdr:ScriptMymrDiamond
+	a bdo:Script ;
+	skos:broader bdr:ScriptMymr ;
+	skos:prefLabel "Diamond-shaped Burmese script"@en ;
+	.
+
+bdr:ScriptMymrRound
+	a bdo:Script ;
+	skos:broader bdr:ScriptMymr ;
+	skos:prefLabel "Round Burmese script"@en ;
+	.
+
+bdr:ScriptMymrSquare
+	a bdo:Script ;
+	skos:broader bdr:ScriptMymr ;
+	skos:prefLabel "Square Burmese script"@en ;
+	.
+
+bdr:ScriptMymrTS
+	a bdo:Script ;
+	skos:broader bdr:ScriptMymr ;
+	skos:prefLabel "'Tamarind seed' Burmese script"@en ;
+	.
+
 bdr:ScriptNagari
-  a bdo:Script ;
-  adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;
-  rdfs:comment "Differs from Eastern Nāgarī"@en ;
-  skos:prefLabel "Nāgarī"@en ;
-  skos:prefLabel "Nāgarī"@sa-x-iast ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	rdfs:comment "Differs from Eastern Nāgarī"@en ;
+	adm:sameAsWikidata <http://www.wikidata.org/entity/Q1509215> ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel
+		"Nāgarī"@en ,
+		"Nāgarī"@sa-x-iast
+		;
+	.
+
 bdr:ScriptNepaleseHooked
-  a bdo:Script ;
-  skos:altLabel "Bhujimol"@en ;
-  skos:prefLabel "Nepalese hooked script"@en ;
-.
+	a bdo:Script ;
+	skos:altLabel "Bhujimol"@en ;
+	skos:prefLabel "Nepalese hooked script"@en ;
+	.
+
 bdr:ScriptNewa
-  a bdo:Script ;
-  adm:sameAsWikidata <http://www.wikidata.org/entity/Q7237292> ;
-  rdfs:comment "ISO 15924 \"Newa\", 333"@en ;
-  skos:prefLabel "Pracalit"@en ;
-  skos:altLabel "pracalita"@sa-x-iast ;
-.
+	a bdo:Script ;
+	rdfs:comment 'ISO 15924 "Newa", 333'@en ;
+	adm:sameAsWikidata <http://www.wikidata.org/entity/Q7237292> ;
+	skos:altLabel "pracalita"@sa-x-iast ;
+	skos:prefLabel "Pracalit"@en ;
+	.
+
 bdr:ScriptOldOui
-  a bdo:Script ;
-  adm:sameAsWikidata <http://www.wikidata.org/entity/Q428299> ;
-  rdfs:comment "Not in ISO 15924"@en ;
-  skos:prefLabel "Old Uighur script"@en ;
-.
+	a bdo:Script ;
+	rdfs:comment "Not in ISO 15924"@en ;
+	adm:sameAsWikidata <http://www.wikidata.org/entity/Q428299> ;
+	skos:prefLabel "Old Uighur script"@en ;
+	.
+
 bdr:ScriptPostGupta
-  a bdo:Script ;
-  skos:prefLabel "Post-gupta"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "Post-gupta"@en ;
+	.
+
 bdr:ScriptRanj
-  a bdo:Script ;
-  rdfs:comment "This script is not normalized in ISO 15924"@en ;
-  rdfs:comment "Use it for Ranjana, Landza and Vartu"@en ;
-  rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
-  skos:altLabel "Kutika"@en ;
-  skos:altLabel "Pāla"@sa-x-iast ;
-  skos:altLabel "Vartu"@en ;
-  skos:altLabel "vartu"@sa-x-iast ;
-  skos:altLabel "lany+tsa"@bo-x-ewts ;
-  skos:altLabel "wartu"@bo-x-ewts ;
-  skos:prefLabel "Ranjana"@en ;
-  skos:prefLabel "Rañjanā"@sa-x-iast ;
-  skos:prefLabel "lany+dza"@bo-x-ewts ;
-.
+	a bdo:Script ;
+	rdfs:comment
+		"This script is not normalized in ISO 15924"@en ,
+		"Use it for Ranjana, Landza and Vartu"@en
+		;
+	rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
+	skos:altLabel
+		"Kutika"@en ,
+		"Pāla"@sa-x-iast ,
+		"Vartu"@en ,
+		"lany+tsa"@bo-x-ewts ,
+		"vartu"@sa-x-iast ,
+		"wartu"@bo-x-ewts
+		;
+	skos:prefLabel
+		"Ranjana"@en ,
+		"Rañjanā"@sa-x-iast ,
+		"lany+dza"@bo-x-ewts
+		;
+	.
+
 bdr:ScriptSinh
-  a bdo:Script ;
-  rdfs:seeAlso <http://www.lexvo.org/page/script/Sinh> ;
-  skos:prefLabel "Sinhalese"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.lexvo.org/page/script/Sinh> ;
+	skos:prefLabel "Sinhalese"@en ;
+	.
+
 bdr:ScriptSouthernIndia
-  a bdo:Script ;
-  rdfs:comment "use for undetermined Southern Indian script"@en ;
-  skos:prefLabel "Southern Indian"@en ;
-.
+	a bdo:Script ;
+	rdfs:comment "use for undetermined Southern Indian script"@en ;
+	skos:prefLabel "Southern Indian"@en ;
+	.
+
 bdr:ScriptTang
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Tang> ;
-  skos:prefLabel "Tangut script"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Tang> ;
+	skos:prefLabel "Tangut script"@en ;
+	.
+
 bdr:ScriptThai
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;
-  skos:prefLabel "Thai script"@en ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Thai> ;
+	skos:prefLabel "Thai script"@en ;
+	.
+
 bdr:ScriptTibt
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
-  skos:prefLabel "Tibetan Script"@en ;
-  skos:prefLabel "bod yig"@bo-x-ewts ;
-.
+	a bdo:Script ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
+	skos:prefLabel
+		"Tibetan Script"@en ,
+		"bod yig"@bo-x-ewts
+		;
+	.
+
 bdr:ScriptTirh
-  a bdo:Script ;
-  rdfs:seeAlso <http://lexvo.org/id/script/Tirh> ;
-  skos:altLabel "Maithili"@en ;
-  skos:altLabel "Mithilakshar"@en ;
-  skos:prefLabel "Tirhuta"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:seeAlso <http://lexvo.org/id/script/Tirh> ;
+	skos:altLabel
+		"Maithili"@en ,
+		"Mithilakshar"@en
+		;
+	skos:prefLabel "Tirhuta"@en ;
+	.
+
 bdr:ScriptTransitionalGupta
-  a bdo:Script ;
-  rdfs:comment "Broader category than Post-gupta"@en ;
-  skos:prefLabel "Transitional Gupta"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:Script ;
+	rdfs:comment "Broader category than Post-gupta"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "Transitional Gupta"@en ;
+	.
+

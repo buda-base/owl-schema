@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/CodicologicalPartType/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: CodicologicalPartType
 
 @prefix CodicologicalPartType: <http://purl.bdrc.io/ontology/types/CodicologicalPartType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -14,48 +12,57 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/types/CodicologicalPartType/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
 bdo:CodicologicalPartType
-  a owl:Class ;
-  adm:userTooltip "represents the codicological type of an instance (or part), typically used in the Southeast Asian context"@en ;
-  rdfs:label "Codicological Part Type"@en ;
-.
-CodicologicalPartType:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
-bdr:BundleSet
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "set of bundles"@en ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:label "Codicological Part Type"@en ;
+	adm:userTooltip "represents the codicological type of an instance (or part), typically used in the Southeast Asian context"@en ;
+	.
+
 bdr:Bundle
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "bundle"@en ;
-  adm:translationPriority 2 ;
-.
-bdr:FascicleSet
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "set of fascicles"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "bundle"@en ;
+	.
+
+bdr:BundleSet
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "set of bundles"@en ;
+	.
+
 bdr:Fascicle
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "fascicle"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "fascicle"@en ;
+	.
+
 bdr:FasciclePart
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "part of a fascicle"@en ;
-  adm:translationPriority 2 ;
-.
-bdr:FolioSet
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "set of loose folios"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "part of a fascicle"@en ;
+	.
+
+bdr:FascicleSet
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "set of fascicles"@en ;
+	.
+
 bdr:Folio
-  a bdo:CodicologicalPartType ;
-  skos:prefLabel "loose folio"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "loose folio"@en ;
+	.
+
+bdr:FolioSet
+	a bdo:CodicologicalPartType ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "set of loose folios"@en ;
+	.
+
