@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/Transliteration/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: Transliteration
 
 @prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -14,40 +12,49 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/types/Transliteration/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
 bdo:Transliteration
-  a owl:Class ;
-  adm:technicalComment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
-  adm:userTooltip "A transliteration used to represent a language in a non-native script."@en ;
-  rdfs:label "Transliteration"@en ;
-.
-Transliteration:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:label "Transliteration"@en ;
+	adm:technicalComment "A transliteration used to represent a language in a non-native script. For example, Extend Wylie transliteration of Tibetan written in Latin script, or Pinyin a Romanization of Chinese"@en ;
+	adm:userTooltip "A transliteration used to represent a language in a non-native script."@en ;
+	.
+
 bdr:TransAlalc
-  a bdo:Transliteration ;
-  rdfs:seeAlso <https://www.loc.gov/catdir/cpso/roman.html> ;
-  skos:prefLabel "ALA-LC"@en ;
-.
+	a bdo:Transliteration ;
+	rdfs:seeAlso <https://www.loc.gov/catdir/cpso/roman.html> ;
+	skos:prefLabel "ALA-LC"@en ;
+	.
+
 bdr:TransEWTS
-  a bdo:Transliteration ;
-  rdfs:seeAlso <http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/> ;
-  skos:prefLabel "Extended Wylie"@en ;
-  skos:prefLabel "wa'i li/"@bo-x-ewts ;
-.
+	a bdo:Transliteration ;
+	rdfs:seeAlso <http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/> ;
+	skos:prefLabel
+		"Extended Wylie"@en ,
+		"wa'i li/"@bo-x-ewts
+		;
+	.
+
 bdr:TransIAST
-  a bdo:Transliteration ;
-  rdfs:comment "International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc."@en ;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration> ;
-  adm:sameAsWikidata <http://www.wikidata.org/entity/Q194486> ;
-  skos:prefLabel "IAST"@en ;
-.
+	a bdo:Transliteration ;
+	rdfs:comment "International Alphabet of Sanskrit Transliteration, used to translitterate indic languages like Sanskrit, Pali, Hindi, etc."@en ;
+	adm:sameAsWikidata <http://www.wikidata.org/entity/Q194486> ;
+	rdfs:seeAlso <https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration> ;
+	skos:prefLabel "IAST"@en ;
+	.
+
 bdr:TransPinyin
-  a bdo:Transliteration ;
-  skos:prefLabel "Pinyin"@en ;
-.
+	a bdo:Transliteration ;
+	skos:prefLabel "Pinyin"@en ;
+	.
+
 bdr:TransSaTibt
-  a bdo:Transliteration ;
-  skos:prefLabel "Sanskrit transliterated in Tibetan"@en ;
-.
+	a bdo:Transliteration ;
+	skos:prefLabel "Sanskrit transliterated in Tibetan"@en ;
+	.
+

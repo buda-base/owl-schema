@@ -1,8 +1,7 @@
-# baseURI: http://purl.bdrc.io/ontology/types/PrintMethod/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: PrintMethod
 
 @prefix PrintMethod: <http://purl.bdrc.io/ontology/types/PrintMethod/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -12,83 +11,96 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+
+<http://purl.bdrc.io/ontology/types/PrintMethod/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
 
 bdo:PrintMethod
-  a owl:Class ;
-  adm:userTooltip "Indicates the Printing Method, e.g., blockprint, manuscript, xerography, and so on"@en ;
-  rdfs:label "Print method" ;
-.
+	a owl:Class ;
+	rdfs:label "Print method"^^xsd:string ;
+	adm:userTooltip "Indicates the Printing Method, e.g., blockprint, manuscript, xerography, and so on"@en ;
+	.
+
 bdo:PrintMethod_Intaglio
-  a owl:Class ;
-  rdfs:label "Intaglio" ;
-  adm:userTooltip "Indicates an Intaglio method was used."@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:PrintMethod ;
+	rdfs:label "Intaglio"^^xsd:string ;
+	adm:translationPriority "2"^^xsd:integer ;
+	adm:userTooltip "Indicates an Intaglio method was used."@en ;
+	.
+
 bdo:PrintMethod_Manuscript
-  a owl:Class ;
-  rdfs:label "Manuscript"@en ;
-  adm:userTooltip "Indicates that the Work was produced manually"@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:PrintMethod ;
+	rdfs:label "Manuscript"@en ;
+	adm:userTooltip "Indicates that the Work was produced manually"@en ;
+	.
+
 bdo:PrintMethod_Offset
-  a owl:Class ;
-  rdfs:label "Offset"@en ;
-  adm:userTooltip "Indicates an offset method method was used."@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-  adm:translationPriority 2 ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:PrintMethod ;
+	rdfs:label "Offset"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	adm:userTooltip "Indicates an offset method method was used."@en ;
+	.
+
 bdo:PrintMethod_Relief
-  a owl:Class ;
-  rdfs:label "Relief" ;
-  adm:userTooltip "Indicates a relief method such as carved woodblocks were used."@en ;
-  rdfs:subClassOf bdo:PrintMethod ;
-  adm:translationPriority 2 ;
-.
-PrintMethod:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:subClassOf bdo:PrintMethod ;
+	rdfs:label "Relief"^^xsd:string ;
+	adm:translationPriority "2"^^xsd:integer ;
+	adm:userTooltip "Indicates a relief method such as carved woodblocks were used."@en ;
+	.
+
 bdr:PrintMethod_Intaglio_Copper
-  a bdo:PrintMethod_Intaglio ;
-  skos:prefLabel "copper intaglio"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:PrintMethod_Intaglio ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "copper intaglio"@en ;
+	.
+
 bdr:PrintMethod_Intaglio_Zinc
-  a bdo:PrintMethod_Intaglio ;
-  skos:prefLabel "zinc intaglio"@en ;
-  adm:translationPriority 2 ;
-.
+	a bdo:PrintMethod_Intaglio ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "zinc intaglio"@en ;
+	.
+
 bdr:PrintMethod_Manuscript
-  a bdo:PrintMethod_Manuscript ;
-  skos:prefLabel "manuscript (using ink)"@en ;
-.
+	a bdo:PrintMethod_Manuscript ;
+	skos:prefLabel "manuscript (using ink)"@en ;
+	.
+
 bdr:PrintMethod_ManuscriptStylus
-  a bdo:PrintMethod_Manuscript ;
-  skos:prefLabel "manuscript (carved using a stylus)"@en ;
-  adm:userTooltip "The manuscript was carved with a stylus cutter (typically the case in the Southeast Asian context)"@en ;
-.
-bdr:PrintMethod_Relief_Letterpress
-  a bdo:PrintMethod_Relief ;
-  rdfs:comment "mechanical relief printing typically via wood"@en ;
-  skos:prefLabel "letterpress"@en ;
-  adm:translationPriority 2 ;
-.
-bdr:PrintMethod_Relief_WoodBlock
-  a bdo:PrintMethod_Relief ;
-  rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
-  skos:altLabel "xylograph"@en ;
-  skos:prefLabel "woodblock"@en ;
-.
-bdr:PrintMethod_Xerography
-  a bdo:PrintMethod ;
-  skos:prefLabel "xerography"@en ;
-  skos:altLabel "lithography"@en ;
-.
+	a bdo:PrintMethod_Manuscript ;
+	adm:userTooltip "The manuscript was carved with a stylus cutter (typically the case in the Southeast Asian context)"@en ;
+	skos:prefLabel "manuscript (carved using a stylus)"@en ;
+	.
+
 bdr:PrintMethod_Modern
-  a bdo:PrintMethod ;
-  skos:prefLabel "modern"@en ;
-  rdfs:comment "modern print, undetermined process"@en ;
-.
+	a bdo:PrintMethod ;
+	rdfs:comment "modern print, undetermined process"@en ;
+	skos:prefLabel "modern"@en ;
+	.
+
+bdr:PrintMethod_Relief_Letterpress
+	a bdo:PrintMethod_Relief ;
+	rdfs:comment "mechanical relief printing typically via wood"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	skos:prefLabel "letterpress"@en ;
+	.
+
+bdr:PrintMethod_Relief_WoodBlock
+	a bdo:PrintMethod_Relief ;
+	rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
+	skos:altLabel "xylograph"@en ;
+	skos:prefLabel "woodblock"@en ;
+	.
+
+bdr:PrintMethod_Xerography
+	a bdo:PrintMethod ;
+	skos:altLabel "lithography"@en ;
+	skos:prefLabel "xerography"@en ;
+	.
+

@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/types/WorkType/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: WorkType
 
 @prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -14,41 +12,48 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/types/WorkType/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
 bdo:WorkType
-  a owl:Class ;
-  adm:migrationComment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
-  adm:deprecatedComment "deprecated in favor of using appropriate subclasses of :Work"@en ;
-  rdfs:label "type of work"@en ;
-  owl:deprecated true ;
-.
-WorkType:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+	a owl:Class ;
+	rdfs:label "type of work"@en ;
+	adm:deprecatedComment "deprecated in favor of using appropriate subclasses of :Work"@en ;
+	adm:migrationComment "The type of Work - from legacy metadata: publishedWork, unicodeText, etc. This is from the <work:info @nodeType/>"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
+	.
+
 bdr:WorkTypeAbstractWork
-  a bdo:WorkType ;
-  owl:deprecated true ;
-  skos:prefLabel "abstract work"@en ;
-.
+	a bdo:WorkType ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:prefLabel "abstract work"@en ;
+	.
+
 bdr:WorkTypePublishedWork
-  a bdo:WorkType ;
-  owl:deprecated true ;
-  skos:prefLabel "published work"@en ;
-.
+	a bdo:WorkType ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:prefLabel "published work"@en ;
+	.
+
 bdr:WorkTypeSeries
-  a bdo:WorkType ;
-  owl:deprecated true ;
-  skos:prefLabel "series"@en ;
-.
+	a bdo:WorkType ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:prefLabel "series"@en ;
+	.
+
 bdr:WorkTypeUnicodeText
-  a bdo:WorkType ;
-  owl:deprecated true ;
-  skos:prefLabel "unicode text"@en ;
-.
+	a bdo:WorkType ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:prefLabel "unicode text"@en ;
+	.
+
 bdr:WorkTypeVirtualWork
-  a bdo:WorkType ;
-  rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
-  owl:deprecated true ;
-  skos:prefLabel "virtual work"@en ;
-.
+	a bdo:WorkType ;
+	rdfs:comment "A :VirtualWork is a collection of :Works (whole works, parts of, fragments) and :Volumes{@en}. For example, Products, CTCs, manuscriptsre-assembled from fragments across bundles, a shedra syllabus, and so on"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:prefLabel "virtual work"@en ;
+	.
+
