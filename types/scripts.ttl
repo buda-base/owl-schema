@@ -234,6 +234,13 @@ bdr:ScriptRanj
 		;
 	.
 
+bdr:ScriptSoyo
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q8009382> ;
+	skos:prefLabel "Soyombo"@en ;
+	skos:prefLabel "svayambhu"@sa-x-iast ;
+	.
+
 bdr:ScriptSinh
 	a bdo:Script ;
 	rdfs:seeAlso <http://www.lexvo.org/page/script/Sinh> ;
