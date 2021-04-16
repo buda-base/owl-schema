@@ -787,6 +787,7 @@ bdo:LangStringOrNoColophon
 			rdf:langString
 		) ;
 	] ;
+	skos:editorialNote "This union generates a load error in Protege. Since it is valid RDF, we presume it is a Protege bug."@en ;
 	.
 
 bdo:Language
@@ -5029,4 +5030,3 @@ foaf:Entity
 	adm:catalogingConvention "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
 	rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
 	.
-
