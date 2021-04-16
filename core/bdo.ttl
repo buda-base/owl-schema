@@ -2669,6 +2669,7 @@ bdo:hasAunt
 	rdfs:subPropertyOf bdo:hasParentSibling ;
 	rdfs:label "has aunt"@en ;
 	adm:userTooltip "Indicates an Aunt of the Person"@en ;
+	skos:definition "Indicates an Aunt of the Person"@en ;
 	.
 
 bdo:hasBrother
@@ -2676,6 +2677,7 @@ bdo:hasBrother
 	rdfs:subPropertyOf bdo:hasSibling ;
 	rdfs:label "has brother"@en ;
 	adm:userTooltip "Indicates a Brother of the Person"@en ;
+	skos:definition "Indicates a Brother of the Person"@en ;
 	.
 
 bdo:hasBrotherInLaw
@@ -2683,6 +2685,7 @@ bdo:hasBrotherInLaw
 	rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 	rdfs:label "has brother in-law"@en ;
 	adm:userTooltip "Indicates a Brother-in-law of the Person"@en ;
+	skos:definition "Indicates a Brother-in-law of the Person"@en ;
 	.
 
 bdo:hasChild
@@ -2691,6 +2694,7 @@ bdo:hasChild
 	rdfs:label "has child"@en ;
 	adm:userTooltip "Indicates a Child of the Person"@en ;
 	owl:inverseOf bdo:hasParent ;
+	skos:definition "Indicates a Child of the Person"@en ;
 	.
 
 bdo:hasCousin
@@ -2701,6 +2705,7 @@ bdo:hasCousin
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has cousin"@en ;
 	adm:userTooltip "Indicates a Cousin of the Person"@en ;
+	skos:definition "Indicates a Cousin of the Person"@en ;
 	.
 
 bdo:hasDaughter
@@ -2708,6 +2713,7 @@ bdo:hasDaughter
 	rdfs:subPropertyOf bdo:hasChild ;
 	rdfs:label "has daughter"@en ;
 	adm:userTooltip "Indicates a Daughter of the Person"@en ;
+	skos:definition "Indicates a Daughter of the Person"@en ;
 	.
 
 bdo:hasFascicles
@@ -2724,6 +2730,7 @@ bdo:hasFather
 	rdfs:subPropertyOf bdo:hasParent ;
 	rdfs:label "has father"@en ;
 	adm:userTooltip "Indicates the Father of the Person"@en ;
+	skos:definition "Indicates the Father of the Person"@en ;
 	.
 
 bdo:hasFatherInLaw
@@ -2731,6 +2738,7 @@ bdo:hasFatherInLaw
 	rdfs:subPropertyOf bdo:hasParentInLaw ;
 	rdfs:label "has father in-law"@en ;
 	adm:userTooltip "Indicates the Father-in-law of the Person"@en ;
+	skos:definition "Indicates the Father-in-law of the Person"@en ;
 	.
 
 bdo:hasGrandChild
@@ -2739,6 +2747,7 @@ bdo:hasGrandChild
 	rdfs:label "has grandchild"@en ;
 	adm:userTooltip "Indicates a Grandchild of the Person"@en ;
 	owl:inverseOf bdo:hasGrandParent ;
+	skos:definition "Indicates a Grandchild of the Person"@en ;
 	.
 
 bdo:hasGrandParent
@@ -2746,6 +2755,7 @@ bdo:hasGrandParent
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has grandparent"@en ;
 	adm:userTooltip "Indicates a Grandparent of the Person"@en ;
+	skos:definition "Indicates a Grandparent of the Person"@en ;
 	.
 
 bdo:hasGranddaughter
@@ -2753,6 +2763,7 @@ bdo:hasGranddaughter
 	rdfs:subPropertyOf bdo:hasGrandChild ;
 	rdfs:label "has granddaughter"@en ;
 	adm:userTooltip "Indicates a Granddaughter of the Person"@en ;
+	skos:definition "Indicates a Granddaughter of the Person"@en ;
 	.
 
 bdo:hasGrandfather
@@ -2760,6 +2771,7 @@ bdo:hasGrandfather
 	rdfs:subPropertyOf bdo:hasGrandParent ;
 	rdfs:label "has grandfather"@en ;
 	adm:userTooltip "Indicates a Grandfather of the Person"@en ;
+	skos:definition "Indicates a Grandfather of the Person"@en ;
 	.
 
 bdo:hasGrandmother
@@ -2767,6 +2779,7 @@ bdo:hasGrandmother
 	rdfs:subPropertyOf bdo:hasGrandParent ;
 	rdfs:label "has grandmother"@en ;
 	adm:userTooltip "Indicates a Grandmother of the Person"@en ;
+	skos:definition "Indicates a Grandmother of the Person"@en ;
 	.
 
 bdo:hasGrandson
@@ -2774,6 +2787,7 @@ bdo:hasGrandson
 	rdfs:subPropertyOf bdo:hasGrandChild ;
 	rdfs:label "has grandson"@en ;
 	adm:userTooltip "Indicates a Grandson of the Person"@en ;
+	skos:definition "Indicates a Grandson of the Person"@en ;
 	.
 
 bdo:hasHusband
@@ -2781,6 +2795,7 @@ bdo:hasHusband
 	rdfs:subPropertyOf bdo:hasSpouse ;
 	rdfs:label "has husband"@en ;
 	adm:userTooltip "Indicates a Husband of the Person"@en ;
+	skos:definition "Indicates a Husband of the Person"@en ;
 	.
 
 bdo:hasIIIFCollection
@@ -2805,6 +2820,7 @@ bdo:hasInLaw
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has in-law"@en ;
 	adm:userTooltip "Indicates an in-law of the Person"@en ;
+	skos:definition "Indicates an in-law of the Person"@en ;
 	.
 
 bdo:hasIncarnation
@@ -2888,6 +2904,7 @@ bdo:hasMaternalAunt
 	rdfs:subPropertyOf bdo:hasAunt ;
 	rdfs:label "has maternal aunt"@en ;
 	adm:userTooltip "Indicates a Maternal aunt of the Person"@en ;
+	skos:definition "Indicates a Maternal aunt of the Person"@en ;
 	.
 
 bdo:hasMaternalUncle
@@ -2895,6 +2912,7 @@ bdo:hasMaternalUncle
 	rdfs:subPropertyOf bdo:hasUncle ;
 	rdfs:label "has maternal uncle"@en ;
 	adm:userTooltip "Indicates a Maternal uncle of the Person"@en ;
+	skos:definition "Indicates a Maternal uncle of the Person"@en ;
 	.
 
 bdo:hasMother
@@ -2902,6 +2920,7 @@ bdo:hasMother
 	rdfs:subPropertyOf bdo:hasParent ;
 	rdfs:label "has mother"@en ;
 	adm:userTooltip "Indicates the Mother of the Person"@en ;
+	skos:definition "Indicates the Mother of the Person"@en ;
 	.
 
 bdo:hasMotherInLaw
@@ -2909,6 +2928,7 @@ bdo:hasMotherInLaw
 	rdfs:subPropertyOf bdo:hasParentInLaw ;
 	rdfs:label "has mother in-law"@en ;
 	adm:userTooltip "Indicates a Mother-in-law of the Person"@en ;
+	skos:definition "Indicates a Mother-in-law of the Person"@en ;
 	.
 
 bdo:hasNephew
@@ -2916,6 +2936,7 @@ bdo:hasNephew
 	rdfs:subPropertyOf bdo:hasNibling ;
 	rdfs:label "has nephew"@en ;
 	adm:userTooltip "Indicates a Nephew of the Person"@en ;
+	skos:definition "Indicates a Nephew of the Person"@en ;
 	.
 
 bdo:hasNibling
@@ -2923,6 +2944,7 @@ bdo:hasNibling
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has nibling"@en ;
 	adm:userTooltip "Indicates a Nibling of the Person"@en ;
+	skos:definition "Indicates a Nibling of the Person"@en ;
 	.
 
 bdo:hasNiece
@@ -2930,6 +2952,7 @@ bdo:hasNiece
 	rdfs:subPropertyOf bdo:hasNibling ;
 	rdfs:label "has niece"@en ;
 	adm:userTooltip "Indicates a Niece of the Person"@en ;
+	skos:definition "Indicates a Niece of the Person"@en ;
 	.
 
 bdo:hasOlderBrother
@@ -2937,6 +2960,7 @@ bdo:hasOlderBrother
 	rdfs:subPropertyOf bdo:hasBrother ;
 	rdfs:label "has older brother"@en ;
 	adm:userTooltip "Indicates an Older brother of the Person"@en ;
+	skos:definition "Indicates an Older brother of the Person"@en ;
 	.
 
 bdo:hasOlderSister
@@ -2944,6 +2968,7 @@ bdo:hasOlderSister
 	rdfs:subPropertyOf bdo:hasSister ;
 	rdfs:label "has older sister"@en ;
 	adm:userTooltip "Indicates an Older sister of the Person"@en ;
+	skos:definition "Indicates an Older sister of the Person"@en ;
 	.
 
 bdo:hasParent
@@ -2951,6 +2976,7 @@ bdo:hasParent
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has parent"@en ;
 	adm:userTooltip "Indicates a Parent of the Person"@en ;
+	skos:definition "Indicates a Parent of the Person"@en ;
 	.
 
 bdo:hasParentInLaw
@@ -2958,6 +2984,7 @@ bdo:hasParentInLaw
 	rdfs:subPropertyOf bdo:hasInLaw ;
 	rdfs:label "has parent in-law"@en ;
 	adm:userTooltip "Indicates a Parent-in-law of the Person"@en ;
+	skos:definition "Indicates a Parent-in-law of the Person"@en ;
 	.
 
 bdo:hasParentSibling
@@ -2965,6 +2992,7 @@ bdo:hasParentSibling
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has parent sibling"@en ;
 	adm:userTooltip "Indicates an Parent sibling of the Person"@en ;
+	skos:definition "Indicates an Parent sibling of the Person"@en ;
 	.
 
 bdo:hasPart
@@ -2982,6 +3010,7 @@ bdo:hasPaternalAunt
 	rdfs:subPropertyOf bdo:hasAunt ;
 	rdfs:label "has paternal aunt"@en ;
 	adm:userTooltip "Indicates a Paternal aunt of the Person"@en ;
+	skos:definition "Indicates a Paternal aunt of the Person"@en ;
 	.
 
 bdo:hasPaternalUncle
@@ -2989,6 +3018,7 @@ bdo:hasPaternalUncle
 	rdfs:subPropertyOf bdo:hasUncle ;
 	rdfs:label "has paternal uncle"@en ;
 	adm:userTooltip "Indicates a Paternal uncle of the Person"@en ;
+	skos:definition "Indicates a Paternal uncle of the Person"@en ;
 	.
 
 bdo:hasSibling
@@ -2999,6 +3029,7 @@ bdo:hasSibling
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has sibling"@en ;
 	adm:userTooltip "Indicates a Sibling of the Person"@en ;
+	skos:definition "Indicates a Sibling of the Person"@en ;
 	.
 
 bdo:hasSiblingInLaw
@@ -3006,6 +3037,7 @@ bdo:hasSiblingInLaw
 	rdfs:subPropertyOf bdo:hasInLaw ;
 	rdfs:label "has sibling in-law"@en ;
 	adm:userTooltip "Indicates a Sibling-in-law of the Person"@en ;
+	skos:definition "Indicates a Sibling-in-law of the Person"@en ;
 	.
 
 bdo:hasSister
@@ -3013,6 +3045,7 @@ bdo:hasSister
 	rdfs:subPropertyOf bdo:hasSibling ;
 	rdfs:label "has sister"@en ;
 	adm:userTooltip "Indicates a Sister of the Person"@en ;
+	skos:definition "Indicates a Sister of the Person"@en ;
 	.
 
 bdo:hasSisterInLaw
@@ -3020,6 +3053,7 @@ bdo:hasSisterInLaw
 	rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 	rdfs:label "has sister in-law"@en ;
 	adm:userTooltip "Indicates a Sister-in-law of the Person"@en ;
+	skos:definition "Indicates a Sister-in-law of the Person"@en ;
 	.
 
 bdo:hasSon
@@ -3027,6 +3061,7 @@ bdo:hasSon
 	rdfs:subPropertyOf bdo:hasChild ;
 	rdfs:label "has son"@en ;
 	adm:userTooltip "Indicates a Son of the Person"@en ;
+	skos:definition "Indicates a Son of the Person"@en ;
 	.
 
 bdo:hasSourcePrintery
@@ -3046,6 +3081,7 @@ bdo:hasSpouse
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has spouse"@en ;
 	adm:userTooltip "Indicates a Spouse of the Person"@en ;
+	skos:definition "Indicates a Spouse of the Person"@en ;
 	.
 
 bdo:hasSteward
@@ -3077,6 +3113,7 @@ bdo:hasUncle
 	rdfs:subPropertyOf bdo:hasParentSibling ;
 	rdfs:label "has uncle"@en ;
 	adm:userTooltip "Indicates an Uncle of the Person"@en ;
+	skos:definition "Indicates an Uncle of the Person"@en ;
 	.
 
 bdo:hasUnknownKinship
@@ -3087,6 +3124,7 @@ bdo:hasUnknownKinship
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has unknown kinship with"@en ;
 	adm:userTooltip "Indicates a Person with an unknown kinship relation to the Person"@en ;
+	skos:definition "Indicates a Person with an unknown kinship relation to the Person"@en ;
 	.
 
 bdo:hasWife
@@ -3094,6 +3132,7 @@ bdo:hasWife
 	rdfs:subPropertyOf bdo:hasSpouse ;
 	rdfs:label "has wife"@en ;
 	adm:userTooltip "Indicates a Wife of the Person"@en ;
+	skos:definition "Indicates a Wife of the Person"@en ;
 	.
 
 bdo:hasYoungerBrother
@@ -3101,6 +3140,7 @@ bdo:hasYoungerBrother
 	rdfs:subPropertyOf bdo:hasBrother ;
 	rdfs:label "has younger brother"@en ;
 	adm:userTooltip "Indicates a Younger brother of the Person"@en ;
+	skos:definition "Indicates a Younger brother of the Person"@en ;
 	.
 
 bdo:hasYoungerSister
@@ -3108,6 +3148,7 @@ bdo:hasYoungerSister
 	rdfs:subPropertyOf bdo:hasSister ;
 	rdfs:label "has younger sister"@en ;
 	adm:userTooltip "Indicates a Younger sister of the Person"@en ;
+	skos:definition "Indicates a Younger sister of the Person"@en ;
 	.
 
 bdo:illustrations
