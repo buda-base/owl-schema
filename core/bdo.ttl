@@ -2666,10 +2666,16 @@ bdo:femcConversionOf
 
 bdo:hasAunt
 	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:hasParentSibling ;
+	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has aunt"@en ;
 	adm:userTooltip "Indicates an Aunt of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
 	skos:definition "Indicates an Aunt of the Person"@en ;
+	skos:scopeNote "An aunt is the sister of one's parent or the wife of one's uncle."@en ;
 	.
 
 bdo:hasBrother
@@ -2677,6 +2683,15 @@ bdo:hasBrother
 	rdfs:subPropertyOf bdo:hasSibling ;
 	rdfs:label "has brother"@en ;
 	adm:userTooltip "Indicates a Brother of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasSon
+	) ;
 	skos:definition "Indicates a Brother of the Person"@en ;
 	.
 
@@ -2685,7 +2700,13 @@ bdo:hasBrotherInLaw
 	rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 	rdfs:label "has brother in-law"@en ;
 	adm:userTooltip "Indicates a Brother-in-law of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
 	skos:definition "Indicates a Brother-in-law of the Person"@en ;
+	skos:scopeNote "A brother-in-law is the brother of one's spouse or the husband of one's sister or sister-in-law."@en ;
 	.
 
 bdo:hasChild
@@ -2706,6 +2727,7 @@ bdo:hasCousin
 	rdfs:label "has cousin"@en ;
 	adm:userTooltip "Indicates a Cousin of the Person"@en ;
 	skos:definition "Indicates a Cousin of the Person"@en ;
+	skos:editorialNote "Assuming this encompasses more than first cousins, a property chain axiom (hasParent hasNibling) is invalid."@en ;
 	.
 
 bdo:hasDaughter
@@ -2713,6 +2735,11 @@ bdo:hasDaughter
 	rdfs:subPropertyOf bdo:hasChild ;
 	rdfs:label "has daughter"@en ;
 	adm:userTooltip "Indicates a Daughter of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
 	skos:definition "Indicates a Daughter of the Person"@en ;
 	.
 
@@ -2730,6 +2757,11 @@ bdo:hasFather
 	rdfs:subPropertyOf bdo:hasParent ;
 	rdfs:label "has father"@en ;
 	adm:userTooltip "Indicates the Father of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
 	skos:definition "Indicates the Father of the Person"@en ;
 	.
 
@@ -2738,6 +2770,10 @@ bdo:hasFatherInLaw
 	rdfs:subPropertyOf bdo:hasParentInLaw ;
 	rdfs:label "has father in-law"@en ;
 	adm:userTooltip "Indicates the Father-in-law of the Person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasSpouse
+		bdo:hasFather
+	) ;
 	skos:definition "Indicates the Father-in-law of the Person"@en ;
 	.
 
@@ -2747,6 +2783,10 @@ bdo:hasGrandChild
 	rdfs:label "has grandchild"@en ;
 	adm:userTooltip "Indicates a Grandchild of the Person"@en ;
 	owl:inverseOf bdo:hasGrandParent ;
+	owl:propertyChainAxiom (
+		bdo:hasChild
+		bdo:hasChild
+	) ;
 	skos:definition "Indicates a Grandchild of the Person"@en ;
 	.
 
@@ -2755,6 +2795,10 @@ bdo:hasGrandParent
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has grandparent"@en ;
 	adm:userTooltip "Indicates a Grandparent of the Person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasParent
+	) ;
 	skos:definition "Indicates a Grandparent of the Person"@en ;
 	.
 
@@ -2763,6 +2807,15 @@ bdo:hasGranddaughter
 	rdfs:subPropertyOf bdo:hasGrandChild ;
 	rdfs:label "has granddaughter"@en ;
 	adm:userTooltip "Indicates a Granddaughter of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasChild
+		bdo:hasDaughter
+	) ;
 	skos:definition "Indicates a Granddaughter of the Person"@en ;
 	.
 
@@ -2771,6 +2824,15 @@ bdo:hasGrandfather
 	rdfs:subPropertyOf bdo:hasGrandParent ;
 	rdfs:label "has grandfather"@en ;
 	adm:userTooltip "Indicates a Grandfather of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasFather
+	) ;
 	skos:definition "Indicates a Grandfather of the Person"@en ;
 	.
 
@@ -2779,6 +2841,15 @@ bdo:hasGrandmother
 	rdfs:subPropertyOf bdo:hasGrandParent ;
 	rdfs:label "has grandmother"@en ;
 	adm:userTooltip "Indicates a Grandmother of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasMother
+	) ;
 	skos:definition "Indicates a Grandmother of the Person"@en ;
 	.
 
@@ -2787,6 +2858,15 @@ bdo:hasGrandson
 	rdfs:subPropertyOf bdo:hasGrandChild ;
 	rdfs:label "has grandson"@en ;
 	adm:userTooltip "Indicates a Grandson of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasChild
+		bdo:hasSon
+	) ;
 	skos:definition "Indicates a Grandson of the Person"@en ;
 	.
 
@@ -2795,6 +2875,11 @@ bdo:hasHusband
 	rdfs:subPropertyOf bdo:hasSpouse ;
 	rdfs:label "has husband"@en ;
 	adm:userTooltip "Indicates a Husband of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
 	skos:definition "Indicates a Husband of the Person"@en ;
 	.
 
@@ -2905,6 +2990,7 @@ bdo:hasMaternalAunt
 	rdfs:label "has maternal aunt"@en ;
 	adm:userTooltip "Indicates a Maternal aunt of the Person"@en ;
 	skos:definition "Indicates a Maternal aunt of the Person"@en ;
+	skos:scopeNote "A maternal aunt is an aunt related through one's mother."@en ;
 	.
 
 bdo:hasMaternalUncle
@@ -2913,6 +2999,7 @@ bdo:hasMaternalUncle
 	rdfs:label "has maternal uncle"@en ;
 	adm:userTooltip "Indicates a Maternal uncle of the Person"@en ;
 	skos:definition "Indicates a Maternal uncle of the Person"@en ;
+	skos:scopeNote "A maternal uncle is an uncle related through one's mother."@en ;
 	.
 
 bdo:hasMother
@@ -2920,6 +3007,11 @@ bdo:hasMother
 	rdfs:subPropertyOf bdo:hasParent ;
 	rdfs:label "has mother"@en ;
 	adm:userTooltip "Indicates the Mother of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
 	skos:definition "Indicates the Mother of the Person"@en ;
 	.
 
@@ -2928,6 +3020,10 @@ bdo:hasMotherInLaw
 	rdfs:subPropertyOf bdo:hasParentInLaw ;
 	rdfs:label "has mother in-law"@en ;
 	adm:userTooltip "Indicates a Mother-in-law of the Person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasSpouse
+		bdo:hasMother
+	) ;
 	skos:definition "Indicates a Mother-in-law of the Person"@en ;
 	.
 
@@ -2936,7 +3032,13 @@ bdo:hasNephew
 	rdfs:subPropertyOf bdo:hasNibling ;
 	rdfs:label "has nephew"@en ;
 	adm:userTooltip "Indicates a Nephew of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
 	skos:definition "Indicates a Nephew of the Person"@en ;
+	skos:scopeNote "A nephew is the son of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasNibling
@@ -2945,6 +3047,7 @@ bdo:hasNibling
 	rdfs:label "has nibling"@en ;
 	adm:userTooltip "Indicates a Nibling of the Person"@en ;
 	skos:definition "Indicates a Nibling of the Person"@en ;
+	skos:scopeNote "A nibling is one's niece or nephew; i.e., the child of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasNiece
@@ -2952,7 +3055,13 @@ bdo:hasNiece
 	rdfs:subPropertyOf bdo:hasNibling ;
 	rdfs:label "has niece"@en ;
 	adm:userTooltip "Indicates a Niece of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
 	skos:definition "Indicates a Niece of the Person"@en ;
+	skos:scopeNote "A niece is the daughter of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasOlderBrother
@@ -2984,15 +3093,11 @@ bdo:hasParentInLaw
 	rdfs:subPropertyOf bdo:hasInLaw ;
 	rdfs:label "has parent in-law"@en ;
 	adm:userTooltip "Indicates a Parent-in-law of the Person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasSpouse
+		bdo:hasParent
+	) ;
 	skos:definition "Indicates a Parent-in-law of the Person"@en ;
-	.
-
-bdo:hasParentSibling
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:kinWith ;
-	rdfs:label "has parent sibling"@en ;
-	adm:userTooltip "Indicates an Parent sibling of the Person"@en ;
-	skos:definition "Indicates an Parent sibling of the Person"@en ;
 	.
 
 bdo:hasPart
@@ -3011,6 +3116,7 @@ bdo:hasPaternalAunt
 	rdfs:label "has paternal aunt"@en ;
 	adm:userTooltip "Indicates a Paternal aunt of the Person"@en ;
 	skos:definition "Indicates a Paternal aunt of the Person"@en ;
+	skos:scopeNote "A paternal aunt is an aunt related through one's father."@en ;
 	.
 
 bdo:hasPaternalUncle
@@ -3019,6 +3125,7 @@ bdo:hasPaternalUncle
 	rdfs:label "has paternal uncle"@en ;
 	adm:userTooltip "Indicates a Paternal uncle of the Person"@en ;
 	skos:definition "Indicates a Paternal uncle of the Person"@en ;
+	skos:scopeNote "A paternal uncle is an uncle related through one's father."@en ;
 	.
 
 bdo:hasSibling
@@ -3029,6 +3136,10 @@ bdo:hasSibling
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has sibling"@en ;
 	adm:userTooltip "Indicates a Sibling of the Person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasChild
+	) ;
 	skos:definition "Indicates a Sibling of the Person"@en ;
 	.
 
@@ -3038,6 +3149,7 @@ bdo:hasSiblingInLaw
 	rdfs:label "has sibling in-law"@en ;
 	adm:userTooltip "Indicates a Sibling-in-law of the Person"@en ;
 	skos:definition "Indicates a Sibling-in-law of the Person"@en ;
+	skos:scopeNote "A sibling-in-law is the sibling of one's spouse or the spouse of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasSister
@@ -3045,6 +3157,15 @@ bdo:hasSister
 	rdfs:subPropertyOf bdo:hasSibling ;
 	rdfs:label "has sister"@en ;
 	adm:userTooltip "Indicates a Sister of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasDaughter
+	) ;
 	skos:definition "Indicates a Sister of the Person"@en ;
 	.
 
@@ -3053,7 +3174,13 @@ bdo:hasSisterInLaw
 	rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 	rdfs:label "has sister in-law"@en ;
 	adm:userTooltip "Indicates a Sister-in-law of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
 	skos:definition "Indicates a Sister-in-law of the Person"@en ;
+	skos:scopeNote "A sister-in-law is the sister of one's spouse or the wife of one's brother or brother-in-law."@en ;	
 	.
 
 bdo:hasSon
@@ -3061,6 +3188,11 @@ bdo:hasSon
 	rdfs:subPropertyOf bdo:hasChild ;
 	rdfs:label "has son"@en ;
 	adm:userTooltip "Indicates a Son of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
 	skos:definition "Indicates a Son of the Person"@en ;
 	.
 
@@ -3110,10 +3242,16 @@ bdo:hasTitle
 
 bdo:hasUncle
 	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:hasParentSibling ;
+	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has uncle"@en ;
 	adm:userTooltip "Indicates an Uncle of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
 	skos:definition "Indicates an Uncle of the Person"@en ;
+	skos:scopeNote "An uncle is the brother of one's parent or the husband of one's aunt."@en ;
 	.
 
 bdo:hasUnknownKinship
@@ -3132,6 +3270,11 @@ bdo:hasWife
 	rdfs:subPropertyOf bdo:hasSpouse ;
 	rdfs:label "has wife"@en ;
 	adm:userTooltip "Indicates a Wife of the Person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
 	skos:definition "Indicates a Wife of the Person"@en ;
 	.
 
