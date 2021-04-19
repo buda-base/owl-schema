@@ -623,7 +623,7 @@ bdo:ISBN
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "International Standard Book Number"@en ;
 	bdo:dataTypeExpression "^(97(8|9))?\\d{9}(\\d|X)$"^^xsd:string ;
-	rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf>;
+	rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
 	.
 
 bdo:ImageGroup
@@ -5214,3 +5214,4 @@ foaf:Entity
 	adm:catalogingConvention "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
 	rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
 	.
+
