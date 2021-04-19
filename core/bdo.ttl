@@ -3180,7 +3180,7 @@ bdo:hasSisterInLaw
 		owl:hasValue bdr:GenderFemale ;
 	] ;
 	skos:definition "Indicates a Sister-in-law of the Person"@en ;
-	skos:scopeNote "A sister-in-law is the sister of one's spouse or the wife of one's brother or brother-in-law."@en ;	
+	skos:scopeNote "A sister-in-law is the sister of one's spouse or the wife of one's brother or brother-in-law."@en ;
 	.
 
 bdo:hasSon
@@ -5214,3 +5214,4 @@ foaf:Entity
 	adm:catalogingConvention "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
 	rdfs:seeAlso <http://xmlns.com/foaf/spec/> ;
 	.
+
