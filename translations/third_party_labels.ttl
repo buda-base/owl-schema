@@ -18,6 +18,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bf:ShelfMark
+	rdfs:label "Shelf location"@en ;
+	skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
+	.
+
+bf:identifiedBy
+	rdfs:label "identified by"@en ;
+	.
+
 iiif2:Collection
 	rdfs:label "IIIF Collection (v2.*)"@en ;
 	.
@@ -35,70 +44,73 @@ iiif3:Manifest
 	.
 
 rdfs:comment
-	rdfs:label "Comment"@en ;
+	rdfs:label
+		"Comment"@en ,
+		"mchan/"@bo-x-ewts
+		;
 	.
 
 rdfs:label
-	rdfs:label "label"@en ;
-	# adm:catalogingConvention "The rdfs:label is used in the BDRC ontology to provide a label in the :PersonName and :WorkTitle"@en ;
+	rdfs:label
+		"label"@en ,
+		"ming byang /"@bo-x-ewts
+		;
 	.
 
 rdfs:seeAlso
-	rdfs:label "see also"@en ;
+	rdfs:label
+		"gzhan yang gzigs/"@bo-x-ewts ,
+		"see also"@en
+		;
 	.
 
 xsd:date
 	a rdfs:Datatype ;
 	.
 
-# owl:Thing
-#	adm:technicalComment "The most basic class in the BUDA ontology is owl:thing. Subclasses of owl:thing are (1) the principle # # concepts (:Entity) that constitute BUDA's domain of discourse, (2) facets (n-ary properties) of the principle concepts, (3) features # of an :Entity or :Facet, such the types of resources such as place events, work titles, or features such as WorkTitles, and (4) relevant classes from third party ontologies that BDRC refers to in constructing concepts, facets and types."@en ;
-#	.
-
 owl:sameAs
 	rdfs:label "same as"@en ;
 	.
 
 skos:altLabel
-	rdfs:label "variant label"@en ;
-	# adm:catalogingConvention "A variant label for entities such as :Place, :Corporation and so on"@en ;
+	rdfs:label
+		"mtshan gyi rnam grangs/"@bo-x-ewts ,
+		"variant label"@en
+		;
 	.
 
 skos:closeMatch
 	rdfs:label "close match"@en ;
-	# adm:catalogingConvention "Use when entities are different but similar enough to be conflated for the casual user."@en ;
 	.
 
 skos:hiddenLabel
-	rdfs:label "hidden label"@en ;
-	# adm:catalogingConvention "Used to represent a mispelling of a label that is otherwise intended to be retained in the dataset"@en ;
+	rdfs:label
+		"hidden label"@en ,
+		"sbas pa'i ming byang /"@bo-x-ewts
+		;
 	.
 
 skos:prefLabel
-	rdfs:label "preferred label"@en ;
-	# adm:catalogingConvention "The preferred human-readable label for a resource. For a Work this is typically the bibliographic title and will be repeated in a WorkTitle, similarly for Persons"@en ;
+	rdfs:label
+		"ming byang rtse gra/"@bo-x-ewts ,
+		"preferred label"@en
+		;
 	.
 
 vcard:Address
 	rdfs:label "VCARD Address"@en ;
-	# adm:catalogingConvention "The components of the address for a physical location."@en ;
-	# adm:translationPriority "2"^^xsd:integer ;
 	.
 
 vcard:Entity
 	rdfs:label "VCARD Entity"@en ;
-	# adm:catalogingConvention "Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled."@en ;
-	# adm:translationPriority "2"^^xsd:integer ;
 	.
 
 vcard:country-name
 	rdfs:label "country"@en ;
-	# adm:catalogingConvention "map the country for a Library address"@en ;
 	.
 
 vcard:locality
 	rdfs:label "locality"@en ;
-	# adm:catalogingConvention "use for city for a Library address"@en ;
 	.
 
 vcard:postal-code
@@ -107,53 +119,17 @@ vcard:postal-code
 
 vcard:region
 	rdfs:label "region"@en ;
-	# adm:catalogingConvention "use for state in Library address"@en ;
 	.
 
 vcard:street-address
 	rdfs:label "street address"@en ;
-	# adm:catalogingConvention "concatenate with the street number for a Library address"@en ;
 	.
 
 foaf:Agent
 	rdfs:label "Agent"@en ;
-	# adm:catalogingConvention "The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots. The Agent class is the class of agents things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group."@en ;
 	.
 
 foaf:Entity
 	rdfs:label "FOAF Entity"@en ;
-	# adm:catalogingConvention "Friend of a Friend (FOAF) is a project devoted to linking people and information using the Web. Regardless of whether information is in people's heads, in physical or digital documents, or in the form of factual data, it can be linked. FOAF classes used in the BDRC ontology are used primarily for administrative purposes since FOAF is not itself a cultural heritage vocabulary."@en ;
 	.
 
-bf:ShelfMark
-  rdfs:label "Shelf location"@en ;
-  skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
-.
-
-bf:identifiedBy
-  rdfs:label "identified by"@en ;
-.
-
-rdfs:comment
-	rdfs:label "mchan/"@bo-x-ewts ;
-	.
-
-rdfs:label
-	rdfs:label "ming byang /"@bo-x-ewts ;
-	.
-
-rdfs:seeAlso
-	rdfs:label "gzhan yang gzigs/"@bo-x-ewts ;
-	.
-
-skos:altLabel
-	rdfs:label "mtshan gyi rnam grangs/"@bo-x-ewts ;
-	.
-
-skos:hiddenLabel
-	rdfs:label "sbas pa'i ming byang /"@bo-x-ewts ;
-	.
-
-skos:prefLabel
-	rdfs:label "ming byang rtse gra/"@bo-x-ewts ;
-	.
