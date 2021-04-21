@@ -778,17 +778,6 @@ bdo:LangScript
 	rdfs:subClassOf bdo:Type ;
 	.
 
-bdo:LangStringOrNoColophon
-	a rdfs:Datatype ;
-	owl:equivalentClass [
-		a rdfs:Datatype ;
-		owl:unionOf (
-			bdo:NoColophon
-			rdf:langString
-		) ;
-	] ;
-	.
-
 bdo:Language
 	rdfs:subClassOf bdo:Type ;
 	.
@@ -1924,7 +1913,13 @@ bdo:colophon
 	adm:technicalComment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
 	adm:userTooltip "A transcription of the colophon of the Instance."@en ;
 	rdfs:domain bdo:Instance ;
-	rdfs:range rdf:langString ;
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf (
+			xsd:integer
+			rdf:langString
+		) ;
+	] ;
 	.
 
 bdo:contentLocation
