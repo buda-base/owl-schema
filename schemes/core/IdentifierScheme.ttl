@@ -15,36 +15,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bf:Isbn
-  a bdo:Identifier ;
-  a skos:Concept ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:historyNote "Was bdo:ISBN."@en ;
-.
-bf:Lccn
-  a bdo:Identifier ;
-  a skos:Concept ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:historyNote "Was bdo:LCCN."@en ;
-.
-bf:ShelfMark
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Shelf location"@en ;
-  skos:broader bdr:ItemIdentifier ;
-  skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
-.
-bf:ShelfMarkLcc
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:seeAlso <https://www.loc.gov/catdir/cpso/lcco/> ;
-  rdfs:seeAlso <https://gist.github.com/kurtraschke/560162> ;
-  skos:broader bf:ShelfMark ;
-  skos:historyNote "Was bdo:LCCallNumber."@en ;
-.
-bf:identifiedBy
-  rdfs:label "identified by"@en ;
-.
 bdo:Identifier
   a owl:Class ;
   rdfs:label "Identifier"@en ;

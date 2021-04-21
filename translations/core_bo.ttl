@@ -2919,27 +2919,3 @@ bdr:ZhUnspecified
 	skos:prefLabel "rgya yig[ (]yig gzugs ci rigs/[)]"@bo-x-ewts ;
 	.
 
-rdfs:comment
-	rdfs:label "mchan/"@bo-x-ewts ;
-	.
-
-rdfs:label
-	rdfs:label "ming byang /"@bo-x-ewts ;
-	.
-
-rdfs:seeAlso
-	rdfs:label "gzhan yang gzigs/"@bo-x-ewts ;
-	.
-
-skos:altLabel
-	rdfs:label "mtshan gyi rnam grangs/"@bo-x-ewts ;
-	.
-
-skos:hiddenLabel
-	rdfs:label "sbas pa'i ming byang /"@bo-x-ewts ;
-	.
-
-skos:prefLabel
-	rdfs:label "ming byang rtse gra/"@bo-x-ewts ;
-	.
-

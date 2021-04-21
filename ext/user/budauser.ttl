@@ -37,40 +37,10 @@ bdou:publicProps rdf:type owl:AnnotationProperty ;
                  rdfs:domain bdou:User .
 
 
-###  http://www.w3.org/2000/01/rdf-schema#comment
-rdfs:comment rdfs:range rdf:langString ;
-             rdfs:domain bdou:User .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#seeAlso
-rdfs:seeAlso rdfs:range xsd:anyURI ;
-             rdfs:domain bdou:User .
-
-
-###  http://www.w3.org/2002/07/owl#topDataProperty
-owl:topDataProperty rdf:type owl:AnnotationProperty ;
-                    rdfs:range xsd:datetime ;
-                    rdfs:domain bdu:User .
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-skos:altLabel rdf:type owl:AnnotationProperty ;
-              rdfs:range rdf:langString ;
-              rdfs:domain bdou:User .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:range rdf:langString ;
-               rdfs:domain bdou:User .
-
 
 #################################################################
 #    Datatypes
 #################################################################
-
-###  http://www.w3.org/2001/XMLSchema#datetime
-xsd:datetime rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -129,16 +99,6 @@ bdou:resourceHistory rdf:type owl:ObjectProperty ;
 bdou:searchHistory rdf:type owl:ObjectProperty ;
                    rdfs:domain bdou:User ;
                    rdfs:range bdou:Bookmark .
-
-
-###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdfs:domain bdou:User .
-
-
-###  http://xmlns.com/foaf/0.1/interest
-foaf:interest rdf:type owl:ObjectProperty ;
-              rdfs:domain bdou:User ;
-              rdfs:range bdo:Entity .
 
 
 #################################################################
@@ -279,13 +239,6 @@ bdou:User rdf:type owl:Class ;
           rdfs:subClassOf bdo:Person ,
                           foaf:Person .
 
-
-###  http://www.w3.org/2002/07/owl#Class
-owl:Class rdf:type owl:Class .
-
-
-###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class .
 
 
 #################################################################
