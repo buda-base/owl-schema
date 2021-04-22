@@ -246,6 +246,15 @@ bdr:ScriptSouthernIndia
 	skos:prefLabel "Southern Indian"@en ;
 	.
 
+bdr:ScriptSoyo
+	a bdo:Script ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q8009382> ;
+	skos:prefLabel
+		"Soyombo"@en ,
+		"svayambhu"@sa-x-iast
+		;
+	.
+
 bdr:ScriptTang
 	a bdo:Script ;
 	rdfs:seeAlso <http://lexvo.org/id/script/Tang> ;

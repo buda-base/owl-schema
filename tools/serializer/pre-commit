@@ -84,7 +84,7 @@ function findJava() {
 function findSerializerJar() {
 
   if [ "${RDF_TOOLKIT_JAR}" == "" ] ; then
-    RDF_TOOLKIT_JAR="$PWD/tools/rdf-toolkit.jar"
+    RDF_TOOLKIT_JAR="$PWD/tools/serializer/rdf-toolkit.jar"
   fi
 
   if [ -f "${RDF_TOOLKIT_JAR}" ] ; then
