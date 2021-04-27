@@ -155,7 +155,7 @@ bdo:AnyOrganization
 bdo:ArchivesCollection
 	a owl:Class ;
 	rdfs:subClassOf bdo:InstitutionalCollection ;
-	rdfs:label "Archives Collection"^^xsd:string ;
+	rdfs:label "Archives Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "A collection maintained by a national archive"@en ;
 	.
@@ -182,7 +182,7 @@ bdo:BibliographicalTitle
 	adm:catalogingConvention """This is the main title of a work, the title by which it is the most often known. If a work has only one title, it must be of type Bibliographic Title. There must be only one bibliographical title per work. 
 
 Title by which a Work is identified for cataloging purposes. There are three usages: (1) Title that is the main title of a Work based on Cover Title, Title Page Title. Spine Title, Colophon Title; (2) Title that is a known or popular abbreviation of the main title of a Work; (3) Title that is a collective convention used to collocate publications of an author that contains several Works (ex: gsung ‘bum)"""@en ;
-	adm:userTooltip "The main title of a work, the title by which it is the most often known."^^xsd:string ;
+	adm:userTooltip "The main title of a work, the title by which it is the most often known."@en ;
 	.
 
 bdo:Binding
@@ -206,7 +206,7 @@ bdo:CarvedEvent
 bdo:Catalog
 	a owl:Class ;
 	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "Catalog"^^xsd:string ;
+	rdfs:label "Catalog"@en ;
 	adm:deprecatedComment "remove, not needed"@en ;
 	adm:userTooltip "A catalog such as the Tohoku or the FEMC Volumes I, II, or III"@en ;
 	owl:deprecated "true"^^xsd:boolean ;
@@ -227,7 +227,7 @@ bdo:ChineseMonastic
 bdo:Collection
 	a owl:Class ;
 	rdfs:subClassOf bdo:Entity ;
-	rdfs:label "Collection"^^xsd:string ;
+	rdfs:label "Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "Designates a collection of Bibliographic entities"@en ;
 	.
@@ -235,7 +235,7 @@ bdo:Collection
 bdo:CollectionInstitution
 	a owl:Class ;
 	rdfs:subClassOf bdo:Organization ;
-	rdfs:label "Collection institution"^^xsd:string ;
+	rdfs:label "Collection institution"@en ;
 	adm:deprecatedComment "remove, not used"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip 'An Insitution containing a collection of works such as "Bibliothèque EFEO - Preah Vanarât Ken Vong", "Fragile Palm Leaves Foundation" or "National Library of Mongolia"'@en ;
@@ -269,8 +269,8 @@ bdo:ContentLocation
 	rdfs:subClassOf bdo:Facet ;
 	rdfs:label "Content Location"@en ;
 	adm:technicalComment
-		"Parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location"^^xsd:string ,
-		"The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase"^^xsd:string ,
+		"Parent facet of Work locations by page and folio. The XSD defn is located in common.xsd but is move to Work in the new ontology since that is a more appropriate location"@en ,
+		"The following explains the intent of splitting an Outline into chunks when outlining very large works. This is why there is a <o:location/> element spec'd in the outline.xsd; however, this feature has not been used in this manner but rather as a redundant marker of which work is being outlined. In the case that the Outline is the detail of a particular Text then the location typically will specify the Work and Volume (relative to 1) that contains the Outlined Text. Thus Locations on the sub-structure need only mention page, line and phrase"@en ,
 		"was :WorkLocation"@en
 		;
 	adm:userTooltip "The ContentLocation describes the Instance, Volume, Page and so on at which something of interest occurs, e.g., the beginning or end of a Work that is contained in another Work; or a reference to the source of a Lineage"@en ;
@@ -298,10 +298,7 @@ In general include the use Copyright Page Title when it differs from the bibliog
 		"use for the title on the copyright page when it differs from the bibliographical title."@en
 		;
 	adm:userTooltip "Title appearing on the copyright page of a Work, if present."@en ;
-	rdfs:seeAlso
-		"http://cip.loc.gov/cipman/"^^xsd:anyURI ,
-		"https://www.loc.gov/publish/cip/news/lccn_art.html"^^xsd:anyURI
-		;
+	rdfs:seeAlso <https://www.loc.gov/publish/cip/news/lccn_art.html> ;
 	.
 
 bdo:Corporation
@@ -374,7 +371,7 @@ bdo:DateIndication
 bdo:DigitalInstance
 	a owl:Class ;
 	rdfs:subClassOf bdo:Instance ;
-	rdfs:label "Digital instance"^^xsd:string ;
+	rdfs:label "Digital instance"@en ;
 	.
 
 bdo:EditedEvent
@@ -623,7 +620,7 @@ bdo:ISBN
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "International Standard Book Number"@en ;
 	bdo:dataTypeExpression "^(97(8|9))?\\d{9}(\\d|X)$"^^xsd:string ;
-	rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf> ;
 	.
 
 bdo:ImageGroup
@@ -674,7 +671,7 @@ bdo:InstanceEvent
 bdo:InstitutionalCollection
 	a owl:Class ;
 	rdfs:subClassOf bdo:Collection ;
-	rdfs:label "Institutional Collection"^^xsd:string ;
+	rdfs:label "Institutional Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "A collection maintained by an institution"@en ;
 	.
@@ -702,7 +699,7 @@ bdo:Item
 bdo:ItemMicrofilmAsset
 	a owl:Class ;
 	rdfs:subClassOf bdo:ItemPhysicalAsset ;
-	rdfs:label "Item microfilm asset"^^xsd:string ;
+	rdfs:label "Item microfilm asset"@en ;
 	adm:userTooltip "An :ItemMicrofilmAsset describes the physical microfilm from which the associated Instance was digitized."@en ;
 	.
 
@@ -771,7 +768,7 @@ bdo:LCCallNumber
 bdo:Label
 	a owl:Class ;
 	rdfs:subClassOf bdo:Facet ;
-	rdfs:label "Label"^^xsd:string ;
+	rdfs:label "Label"@en ;
 	.
 
 bdo:LangScript
@@ -816,7 +813,7 @@ bdr:L8LS15684 a :Lineage ; :status bdr:StatusReleased ;
 		"Names are represented by rdfs:label"@en
 		;
 	adm:userTooltip "A (transmission) lineage is a collectiomn of sequences of lineage holders passing a lineage through time"@en ;
-	rdfs:seeAlso "https://link.springer.com/article/10.1023%2FA%3A1004844115222?LI=true"^^xsd:anyURI ;
+	rdfs:seeAlso <https://link.springer.com/article/10.1023%2FA%3A1004844115222?LI=true> ;
 	.
 
 bdo:LineageEvent
@@ -879,7 +876,7 @@ bdo:Material
 bdo:MonasticCollection
 	a owl:Class ;
 	rdfs:subClassOf bdo:InstitutionalCollection ;
-	rdfs:label "Monastic Collection"^^xsd:string ;
+	rdfs:label "Monastic Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "A collection maintained by a monastery"@en ;
 	.
@@ -1025,7 +1022,7 @@ bdo:PersonDivorce
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonEvent ;
 	rdfs:label "Divorce"@en ;
-	adm:userTooltip "Event occurring upon a divorce of the Person"@en ;
+	adm:userTooltip "Event occurring upon a divorce of the person"@en ;
 	.
 
 bdo:PersonDonorName
@@ -1417,7 +1414,7 @@ bdo:PrintedEvent
 bdo:PrivateCollection
 	a owl:Class ;
 	rdfs:subClassOf bdo:Collection ;
-	rdfs:label "Private Collection"^^xsd:string ;
+	rdfs:label "Private Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "A collection maintained by a private individual or organization"@en ;
 	.
@@ -1498,21 +1495,21 @@ bdo:Script
 bdo:SecondRevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Second revised event"^^xsd:string ;
+	rdfs:label "Second revised event"@en ;
 	adm:userTooltip "An event describing the second revision of a work"@en ;
 	.
 
 bdo:SecondTranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Second translated event"^^xsd:string ;
+	rdfs:label "Second translated event"@en ;
 	adm:userTooltip "An event describing the second translation of a work"@en ;
 	.
 
 bdo:SerialInstance
 	a owl:Class ;
 	rdfs:subClassOf bdo:Instance ;
-	rdfs:label "Series Member instance"^^xsd:string ;
+	rdfs:label "Series Member instance"@en ;
 	adm:technicalComment "Was SerialWork, changed to align with Bibframe 2.0"@en ;
 	adm:userTooltip "An instance of a SeriesMember."@en ;
 	.
@@ -1520,7 +1517,7 @@ bdo:SerialInstance
 bdo:SerialMember
 	a owl:Class ;
 	rdfs:subClassOf bdo:Work ;
-	rdfs:label "Series Member"^^xsd:string ;
+	rdfs:label "Series Member"@en ;
 	adm:seeAlso bdo:SerialInstance ;
 	adm:technicalComment "The (abstract) :SeriesNumber resource contains the Work metadata associated with a number of a :SerialWork  "@en ;
 	adm:userTooltip "The Work metadata about a member of a :SerialWork"@en ;
@@ -1552,7 +1549,7 @@ bdo:SingletonInstance
 bdo:SpecialCollection
 	a owl:Class ;
 	rdfs:subClassOf bdo:InstitutionalCollection ;
-	rdfs:label "Special Collection"^^xsd:string ;
+	rdfs:label "Special Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "A collection maintained by a Library"@en ;
 	.
@@ -1592,14 +1589,14 @@ bdo:TextualEntity
 bdo:ThirdRevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Third revised event"^^xsd:string ;
+	rdfs:label "Third revised event"@en ;
 	adm:userTooltip "An event describing the third revision of a work"@en ;
 	.
 
 bdo:ThirdTranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Third translated event"^^xsd:string ;
+	rdfs:label "Third translated event"@en ;
 	adm:userTooltip "An event describing the third translation of a work"@en ;
 	.
 
@@ -1691,7 +1688,7 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 bdo:UnicodeWork
 	a owl:Class ;
 	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "Unicode work (etext)"^^xsd:string ;
+	rdfs:label "Unicode work (etext)"@en ;
 	adm:deprecatedComment "replace with EtextInstance"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "Indicates a searchable etext Work versus digitized page images."@en ;
@@ -2660,31 +2657,56 @@ bdo:femcConversionOf
 
 bdo:hasAunt
 	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:hasParentSibling ;
+	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has aunt"@en ;
-	adm:userTooltip "Indicates an Aunt of the Person"@en ;
+	adm:userTooltip "Indicates an aunt of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	skos:definition "Indicates an aunt of the person"@en ;
+	skos:scopeNote "An aunt is the sister of one's parent or the wife of one's uncle."@en ;
 	.
 
 bdo:hasBrother
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSibling ;
 	rdfs:label "has brother"@en ;
-	adm:userTooltip "Indicates a Brother of the Person"@en ;
+	adm:userTooltip "Indicates a brother of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasSon
+	) ;
+	skos:definition "Indicates a brother of the person"@en ;
 	.
 
 bdo:hasBrotherInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 	rdfs:label "has brother in-law"@en ;
-	adm:userTooltip "Indicates a Brother-in-law of the Person"@en ;
+	adm:userTooltip "Indicates a brother-in-law of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	skos:definition "Indicates a brother-in-law of the person"@en ;
+	skos:scopeNote "A brother-in-law is the brother of one's spouse or the husband of one's sister or sister-in-law."@en ;
 	.
 
 bdo:hasChild
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has child"@en ;
-	adm:userTooltip "Indicates a Child of the Person"@en ;
+	adm:userTooltip "Indicates a child of the person"@en ;
 	owl:inverseOf bdo:hasParent ;
+	skos:definition "Indicates a child of the person"@en ;
 	.
 
 bdo:hasCousin
@@ -2694,14 +2716,22 @@ bdo:hasCousin
 		;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has cousin"@en ;
-	adm:userTooltip "Indicates a Cousin of the Person"@en ;
+	adm:userTooltip "Indicates a cousin of the person"@en ;
+	skos:definition "Indicates a cousin of the person"@en ;
+	skos:editorialNote "Assuming this encompasses more than first cousins, a property chain axiom (hasParent hasNibling) is invalid."@en ;
 	.
 
 bdo:hasDaughter
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasChild ;
 	rdfs:label "has daughter"@en ;
-	adm:userTooltip "Indicates a Daughter of the Person"@en ;
+	adm:userTooltip "Indicates a daughter of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	skos:definition "Indicates a daughter of the person"@en ;
 	.
 
 bdo:hasFascicles
@@ -2717,64 +2747,131 @@ bdo:hasFather
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasParent ;
 	rdfs:label "has father"@en ;
-	adm:userTooltip "Indicates the Father of the Person"@en ;
+	adm:userTooltip "Indicates the father of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	skos:definition "Indicates the father of the person"@en ;
 	.
 
 bdo:hasFatherInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasParentInLaw ;
 	rdfs:label "has father in-law"@en ;
-	adm:userTooltip "Indicates the Father-in-law of the Person"@en ;
+	adm:userTooltip "Indicates the father-in-law of the person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasSpouse
+		bdo:hasfather
+	) ;
+	skos:definition "Indicates the father-in-law of the person"@en ;
 	.
 
 bdo:hasGrandChild
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has grandchild"@en ;
-	adm:userTooltip "Indicates a Grandchild of the Person"@en ;
+	adm:userTooltip "Indicates a grandchild of the person"@en ;
 	owl:inverseOf bdo:hasGrandParent ;
+	owl:propertyChainAxiom (
+		bdo:hasChild
+		bdo:hasChild
+	) ;
+	skos:definition "Indicates a grandchild of the person"@en ;
 	.
 
 bdo:hasGrandParent
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has grandparent"@en ;
-	adm:userTooltip "Indicates a Grandparent of the Person"@en ;
+	adm:userTooltip "Indicates a grandparent of the person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasParent
+	) ;
+	skos:definition "Indicates a grandparent of the person"@en ;
 	.
 
 bdo:hasGranddaughter
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasGrandChild ;
 	rdfs:label "has granddaughter"@en ;
-	adm:userTooltip "Indicates a Granddaughter of the Person"@en ;
+	adm:userTooltip "Indicates a granddaughter of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasChild
+		bdo:hasDaughter
+	) ;
+	skos:definition "Indicates a granddaughter of the person"@en ;
 	.
 
 bdo:hasGrandfather
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasGrandParent ;
 	rdfs:label "has grandfather"@en ;
-	adm:userTooltip "Indicates a Grandfather of the Person"@en ;
+	adm:userTooltip "Indicates a grandfather of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasFather
+	) ;
+	skos:definition "Indicates a grandfather of the person"@en ;
 	.
 
 bdo:hasGrandmother
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasGrandParent ;
 	rdfs:label "has grandmother"@en ;
-	adm:userTooltip "Indicates a Grandmother of the Person"@en ;
+	adm:userTooltip "Indicates a grandmother of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasMother
+	) ;
+	skos:definition "Indicates a grandmother of the person"@en ;
 	.
 
 bdo:hasGrandson
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasGrandChild ;
 	rdfs:label "has grandson"@en ;
-	adm:userTooltip "Indicates a Grandson of the Person"@en ;
+	adm:userTooltip "Indicates a grandson of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasChild
+		bdo:hasSon
+	) ;
+	skos:definition "Indicates a grandson of the person"@en ;
 	.
 
 bdo:hasHusband
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSpouse ;
 	rdfs:label "has husband"@en ;
-	adm:userTooltip "Indicates a Husband of the Person"@en ;
+	adm:userTooltip "Indicates a husband of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	skos:definition "Indicates a husband of the person"@en ;
 	.
 
 bdo:hasIIIFCollection
@@ -2798,7 +2895,8 @@ bdo:hasInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has in-law"@en ;
-	adm:userTooltip "Indicates an in-law of the Person"@en ;
+	adm:userTooltip "Indicates an in-law of the person"@en ;
+	skos:definition "Indicates an in-law of the person"@en ;
 	.
 
 bdo:hasIncarnation
@@ -2881,84 +2979,116 @@ bdo:hasMaternalAunt
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasAunt ;
 	rdfs:label "has maternal aunt"@en ;
-	adm:userTooltip "Indicates a Maternal aunt of the Person"@en ;
+	adm:userTooltip "Indicates a maternal aunt of the person"@en ;
+	skos:definition "Indicates a maternal aunt of the person"@en ;
+	skos:scopeNote "A maternal aunt is an aunt related through one's mother."@en ;
 	.
 
 bdo:hasMaternalUncle
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasUncle ;
 	rdfs:label "has maternal uncle"@en ;
-	adm:userTooltip "Indicates a Maternal uncle of the Person"@en ;
+	adm:userTooltip "Indicates a maternal uncle of the person"@en ;
+	skos:definition "Indicates a maternal uncle of the person"@en ;
+	skos:scopeNote "A maternal uncle is an uncle related through one's mother."@en ;
 	.
 
 bdo:hasMother
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasParent ;
 	rdfs:label "has mother"@en ;
-	adm:userTooltip "Indicates the Mother of the Person"@en ;
+	adm:userTooltip "Indicates the mother of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	skos:definition "Indicates the mother of the person"@en ;
 	.
 
 bdo:hasMotherInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasParentInLaw ;
 	rdfs:label "has mother in-law"@en ;
-	adm:userTooltip "Indicates a Mother-in-law of the Person"@en ;
+	adm:userTooltip "Indicates a mother-in-law of the person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasSpouse
+		bdo:hasMother
+	) ;
+	skos:definition "Indicates a mother-in-law of the person"@en ;
 	.
 
 bdo:hasNephew
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasNibling ;
 	rdfs:label "has nephew"@en ;
-	adm:userTooltip "Indicates a Nephew of the Person"@en ;
+	adm:userTooltip "Indicates a nephew of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	skos:definition "Indicates a nephew of the person"@en ;
+	skos:scopeNote "A nephew is the son of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasNibling
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has nibling"@en ;
-	adm:userTooltip "Indicates a Nibling of the Person"@en ;
+	adm:userTooltip "Indicates a nibling of the person"@en ;
+	skos:definition "Indicates a nibling of the person"@en ;
+	skos:scopeNote "A nibling is one's niece or nephew; i.e., the child of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasNiece
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasNibling ;
 	rdfs:label "has niece"@en ;
-	adm:userTooltip "Indicates a Niece of the Person"@en ;
+	adm:userTooltip "Indicates a niece of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	skos:definition "Indicates a niece of the person"@en ;
+	skos:scopeNote "A niece is the daughter of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasOlderBrother
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasBrother ;
 	rdfs:label "has older brother"@en ;
-	adm:userTooltip "Indicates an Older brother of the Person"@en ;
+	adm:userTooltip "Indicates an older brother of the person"@en ;
+	skos:definition "Indicates an older brother of the person"@en ;
 	.
 
 bdo:hasOlderSister
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSister ;
 	rdfs:label "has older sister"@en ;
-	adm:userTooltip "Indicates an Older sister of the Person"@en ;
+	adm:userTooltip "Indicates an older sister of the person"@en ;
+	skos:definition "Indicates an older sister of the person"@en ;
 	.
 
 bdo:hasParent
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has parent"@en ;
-	adm:userTooltip "Indicates a Parent of the Person"@en ;
+	adm:userTooltip "Indicates a parent of the person"@en ;
+	skos:definition "Indicates a parent of the person"@en ;
 	.
 
 bdo:hasParentInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasInLaw ;
 	rdfs:label "has parent in-law"@en ;
-	adm:userTooltip "Indicates a Parent-in-law of the Person"@en ;
-	.
-
-bdo:hasParentSibling
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:kinWith ;
-	rdfs:label "has parent sibling"@en ;
-	adm:userTooltip "Indicates an Parent sibling of the Person"@en ;
+	adm:userTooltip "Indicates a parent-in-law of the person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasSpouse
+		bdo:hasParent
+	) ;
+	skos:definition "Indicates a parent-in-law of the person"@en ;
 	.
 
 bdo:hasPart
@@ -2975,14 +3105,18 @@ bdo:hasPaternalAunt
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasAunt ;
 	rdfs:label "has paternal aunt"@en ;
-	adm:userTooltip "Indicates a Paternal aunt of the Person"@en ;
+	adm:userTooltip "Indicates a paternal aunt of the person"@en ;
+	skos:definition "Indicates a paternal aunt of the person"@en ;
+	skos:scopeNote "A paternal aunt is an aunt related through one's father."@en ;
 	.
 
 bdo:hasPaternalUncle
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasUncle ;
 	rdfs:label "has paternal uncle"@en ;
-	adm:userTooltip "Indicates a Paternal uncle of the Person"@en ;
+	adm:userTooltip "Indicates a paternal uncle of the person"@en ;
+	skos:definition "Indicates a paternal uncle of the person"@en ;
+	skos:scopeNote "A paternal uncle is an uncle related through one's father."@en ;
 	.
 
 bdo:hasSibling
@@ -2992,35 +3126,65 @@ bdo:hasSibling
 		;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has sibling"@en ;
-	adm:userTooltip "Indicates a Sibling of the Person"@en ;
+	adm:userTooltip "Indicates a sibling of the person"@en ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasChild
+	) ;
+	skos:definition "Indicates a sibling of the person"@en ;
 	.
 
 bdo:hasSiblingInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasInLaw ;
 	rdfs:label "has sibling in-law"@en ;
-	adm:userTooltip "Indicates a Sibling-in-law of the Person"@en ;
+	adm:userTooltip "Indicates a sibling-in-law of the person"@en ;
+	skos:definition "Indicates a sibling-in-law of the person"@en ;
+	skos:scopeNote "A sibling-in-law is the sibling of one's spouse or the spouse of one's sibling or sibling-in-law."@en ;
 	.
 
 bdo:hasSister
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSibling ;
 	rdfs:label "has sister"@en ;
-	adm:userTooltip "Indicates a Sister of the Person"@en ;
+	adm:userTooltip "Indicates a sister of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	owl:propertyChainAxiom (
+		bdo:hasParent
+		bdo:hasDaughter
+	) ;
+	skos:definition "Indicates a sister of the person"@en ;
 	.
 
 bdo:hasSisterInLaw
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSiblingInLaw ;
 	rdfs:label "has sister in-law"@en ;
-	adm:userTooltip "Indicates a Sister-in-law of the Person"@en ;
+	adm:userTooltip "Indicates a sister-in-law of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	skos:definition "Indicates a sister-in-law of the person"@en ;
+	skos:scopeNote "A sister-in-law is the sister of one's spouse or the wife of one's brother or brother-in-law."@en ;
 	.
 
 bdo:hasSon
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasChild ;
 	rdfs:label "has son"@en ;
-	adm:userTooltip "Indicates a Son of the Person"@en ;
+	adm:userTooltip "Indicates a son of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	skos:definition "Indicates a son of the person"@en ;
 	.
 
 bdo:hasSourcePrintery
@@ -3039,7 +3203,8 @@ bdo:hasSpouse
 		;
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has spouse"@en ;
-	adm:userTooltip "Indicates a Spouse of the Person"@en ;
+	adm:userTooltip "Indicates a spouse of the person"@en ;
+	skos:definition "Indicates a spouse of the person"@en ;
 	.
 
 bdo:hasSteward
@@ -3068,9 +3233,16 @@ bdo:hasTitle
 
 bdo:hasUncle
 	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:hasParentSibling ;
+	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has uncle"@en ;
-	adm:userTooltip "Indicates an Uncle of the Person"@en ;
+	adm:userTooltip "Indicates an uncle of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderMale ;
+	] ;
+	skos:definition "Indicates an uncle of the person"@en ;
+	skos:scopeNote "An uncle is the brother of one's parent or the husband of one's aunt."@en ;
 	.
 
 bdo:hasUnknownKinship
@@ -3081,27 +3253,36 @@ bdo:hasUnknownKinship
 	rdfs:subPropertyOf bdo:kinWith ;
 	rdfs:label "has unknown kinship with"@en ;
 	adm:userTooltip "Indicates a Person with an unknown kinship relation to the Person"@en ;
+	skos:definition "Indicates a Person with an unknown kinship relation to the Person"@en ;
 	.
 
 bdo:hasWife
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSpouse ;
 	rdfs:label "has wife"@en ;
-	adm:userTooltip "Indicates a Wife of the Person"@en ;
+	adm:userTooltip "Indicates a wife of the person"@en ;
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty bdo:personGender ;
+		owl:hasValue bdr:GenderFemale ;
+	] ;
+	skos:definition "Indicates a wife of the person"@en ;
 	.
 
 bdo:hasYoungerBrother
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasBrother ;
 	rdfs:label "has younger brother"@en ;
-	adm:userTooltip "Indicates a Younger brother of the Person"@en ;
+	adm:userTooltip "Indicates a younger brother of the person"@en ;
+	skos:definition "Indicates a younger brother of the person"@en ;
 	.
 
 bdo:hasYoungerSister
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:hasSister ;
 	rdfs:label "has younger sister"@en ;
-	adm:userTooltip "Indicates a Younger sister of the Person"@en ;
+	adm:userTooltip "Indicates a younger sister of the person"@en ;
+	skos:definition "Indicates a younger sister of the person"@en ;
 	.
 
 bdo:illustrations
@@ -3149,7 +3330,7 @@ There are odd naming situations where a single name stands alone and the next na
     :imageList \"1CZ7740001.tif:43|1CZ7740043a.tif|1CZ7740044.tif:472\"
 
 when a name standalone the \":1\" can be dispensed with."""@en ;
-	adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive."^^xsd:string ;
+	adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive."@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character."@en ;
 	rdfs:domain bdo:ImageGroup ;
@@ -3813,7 +3994,7 @@ bdo:note
 	rdfs:label "note"@en ;
 	adm:catalogingConvention '''the :note annotation adds language tagged string and optionally a reference to a Work and a simple text description of a location in a Work, e.g., "pp. 231-3".
 
-In the XML db the notes are restricted to a limited set of items such as top-level resources and Outline Nodes, Place Events and so on. In this model there are no limitations on where notes can be attached. They can be attached directly to any owl:NamedIndividual or property. In particular one could add a note to the per:name property on an individual that provides evidence for the particular per:name assertion.'''^^xsd:string ;
+In the XML db the notes are restricted to a limited set of items such as top-level resources and Outline Nodes, Place Events and so on. In this model there are no limitations on where notes can be attached. They can be attached directly to any owl:NamedIndividual or property. In particular one could add a note to the per:name property on an individual that provides evidence for the particular per:name assertion.'''@en ;
 	adm:userTooltip "Associates a Note containing: a comment, Work, and location in the Work."@en ;
 	rdfs:domain bdo:EntitiesOrFacets ;
 	rdfs:range bdo:Note ;
@@ -4036,7 +4217,7 @@ bdo:personEventRole
 bdo:personGender
 	a owl:ObjectProperty ;
 	rdfs:label "gender"@en ;
-	adm:userTooltip "The gender of the Person"@en ;
+	adm:userTooltip "The gender of the person"@en ;
 	rdfs:domain bdo:Person ;
 	rdfs:range bdo:Gender ;
 	.
@@ -4053,7 +4234,7 @@ bdo:personIsNonActor
 	a owl:DatatypeProperty ;
 	rdfs:label "non actor"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest."^^xsd:string ;
+	adm:userTooltip "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest."@en ;
 	rdfs:domain bdo:Person ;
 	rdfs:range xsd:boolean ;
 	owl:deprecated "true"^^xsd:boolean ;
@@ -4080,7 +4261,7 @@ bdo:personOfSect
 
 bdo:personOfTradition
 	a owl:ObjectProperty ;
-	rdfs:label "person of tradition"^^xsd:string ;
+	rdfs:label "person of tradition"@en ;
 	adm:deprecatedComment "retired in favor of :associatedTradition"@en ;
 	adm:userTooltip "Indicates a Tradition that the Person is associated with."@en ;
 	rdfs:domain bdo:Person ;
@@ -4242,7 +4423,7 @@ bdo:placeRegionPoly
 	a owl:DatatypeProperty ;
 	rdfs:label "region poly"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "The object of this property is an xsd:string representing a geoJSON Polygon or Mulit-Polygon. See http://geojson.org/geojson-spec.html"^^xsd:string ;
+	adm:userTooltip "The object of this property is an xsd:string representing a geoJSON Polygon or Mulit-Polygon. See http://geojson.org/geojson-spec.html"@en ;
 	rdfs:domain bdo:Place ;
 	rdfs:range xsd:string ;
 	.
@@ -4397,7 +4578,7 @@ bdo:seqNum
 
 bdo:serialHasInstance
 	a owl:ObjectProperty ;
-	rdfs:label "serial has instance"^^xsd:string ;
+	rdfs:label "serial has instance"@en ;
 	rdfs:domain bdo:SerialMember ;
 	rdfs:range bdo:SerialInstance ;
 	owl:inverseOf bdo:serialInstanceOf ;
@@ -4613,7 +4794,7 @@ bdo:workCreator
 	rdfs:label "creator"@en ;
 	adm:deprecatedComment
 		"deprecated in favor of :creator and associated :AgentAsCreator"@en ,
-		"deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent"^^xsd:string
+		"deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent"@en
 		;
 	adm:userTooltip "Identifies the type and person that are a creator of the work"@en ;
 	bdo:inferSubTree "true"^^xsd:boolean ;
@@ -4679,7 +4860,7 @@ bdo:workFEMCManuscriptCode
 	rdfs:subPropertyOf bdo:workRefs ;
 	rdfs:label "FEMC Manuscript code"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "FEMC Manuscript Code"^^xsd:string ;
+	adm:userTooltip "FEMC Manuscript Code"@en ;
 	.
 
 bdo:workGenre
@@ -4861,7 +5042,7 @@ bdo:workType
 bdo:yearInEra
 	a owl:DatatypeProperty ;
 	rdfs:label "year in era"@en ;
-	adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive."^^xsd:string ;
+	adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive."@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "The year in era is relative to the yearOffset for the Era"@en ;
 	rdfs:domain bdo:DateIndication ;
@@ -4969,7 +5150,7 @@ vcard:Entity
 	rdfs:label "VCARD Entity"@en ;
 	adm:catalogingConvention "Entities used from VCARD, primarily for contemporary addresses. VCARD provides am appropriate vocabulary for expressing the address information associated with Libraries in the TLM project,among other cases where physical addresses are modeled."@en ;
 	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:seeAlso "https://www.w3.org/TR/vcard-rdf"^^xsd:string ;
+	rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf> ;
 	.
 
 vcard:country-name
