@@ -225,6 +225,7 @@ adm:Product
 	a owl:Class ;
 	rdfs:subClassOf adm:Entity ;
 	rdfs:label "Product"@en ;
+	owl:deprecated true ;
 	rdfs:comment
 		"""A collection of Works that are distributed together. Historically this has meant on a CDROM, DVDROM or hard drive. Nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still hard drive collections prepared from Products.
 
@@ -252,6 +253,7 @@ adm:ProductOrProductOrg
 	rdfs:label "product or product organization"@en ;
 	rdfs:comment "used as domain for properties recording CTC subscriber info"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:ProductOrg
@@ -262,6 +264,7 @@ adm:ProductOrg
 		"The name of a ProductOrg is represented by rdfs:label"@en
 		;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:ReinstateData
@@ -831,6 +834,7 @@ adm:productAllowByAddr
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:ProductOrg ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:productHasDigitalInstance
@@ -853,6 +857,7 @@ adm:productHasOrg
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:ProductOrProductOrg ;
 	rdfs:range adm:ProductOrg ;
+	owl:deprecated true ;
 	.
 
 adm:productIncludes
@@ -862,6 +867,7 @@ adm:productIncludes
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:Product ;
 	rdfs:range adm:Product ;
+	owl:deprecated true ;
 	.
 
 adm:replaceWith
@@ -1126,6 +1132,7 @@ adm:workInProduct
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:BiblioEntity ;
 	rdfs:range adm:Product ;
+	owl:deprecated true ;
 	.
 
 adm:workLegacyNode
