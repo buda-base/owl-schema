@@ -72,6 +72,18 @@ It is important to notice that roles are used for application level access contr
   rdfs:label "role"@en ;
   rdfs:subClassOf aut:Entity ;
 .
+aut:Subscriber
+  a owl:Class ;
+  rdfs:comment """A Subscribing institution, can be composed of multiple organizations (campus, library, office, etc.)."""@en ;
+  rdfs:label "subscriber"@en ;
+  rdfs:subClassOf aut:Entity ;
+.
+aut:SubscriberOrganization
+  a owl:Class ;
+  rdfs:comment """A distinct part of a subscribing institution"""@en ;
+  rdfs:label "subscriber organization"@en ;
+  rdfs:subClassOf aut:Subscriber ;
+.
 aut:UserProfile
   a owl:Class ;
   rdfs:comment """The UserProfile object represents any person registered to the system. A user may belong to a Group and may have a Role.
@@ -173,6 +185,13 @@ aut:hasRole
   rdfs:domain aut:UserProfile ;
   rdfs:range aut:Role ;
 .
+aut:hasIPAddress
+  a owl:DatatypeProperty ;
+  rdfs:comment """An IP address associated with an organization, can contain a subnet mask"""@en ;
+  rdfs:domain aut:Subscriber ;
+  rdfs:label "IP addresses"@en ;
+  rdfs:range xsd:string ;
+.
 aut:path
   a owl:DatatypeProperty ;
   rdfs:comment """The unique path of a given Endpoint or web service. This path is unique for the application associated with this Endpoint.
@@ -189,15 +208,18 @@ This property is used for checking access rights against protected resources ava
   rdfs:label "policy"@en ;
   rdfs:range adm:Access ;
 .
-
 aut:personalAccess
   a owl:ObjectProperty ;
   rdfs:comment "A resource Id based access authorization"@en ;
   rdfs:domain aut:UserProfile ;
   rdfs:label "personal access"@en ;
-  rdfs:range bdo:Entity ;
 .
-
+aut:subscribedTo
+  a owl:ObjectProperty ;
+  rdfs:comment "What the subscriber subscribed to (usually a bdo:Collection)"@en ;
+  rdfs:domain aut:Subscriber ;
+  rdfs:label "subscribed to"@en ;
+.
 aut:forAnyStatus
   a owl:DatatypeProperty ;
   rdfs:comment "set the permission to get access to any resource, regardless the status, for all the users of a given group"@en ;
