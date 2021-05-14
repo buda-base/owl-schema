@@ -86,10 +86,10 @@ bda:GR0010
 .
 bda:GR0011
   a adm:GitRepo ;
-  adm:gitRepoName "products" ;
-  adm:gitUrl "https://gitlab.com/bdrc-data/products"^^xsd:anyURI ;
-  rdfs:comment "git repo for Product resources"@en ;
-  skos:prefLabel "Products repo"@en ;
+  adm:gitRepoName "collections" ;
+  adm:gitUrl "https://gitlab.com/bdrc-data/collections"^^xsd:anyURI ;
+  rdfs:comment "git repo for collection resources"@en ;
+  skos:prefLabel "Collections repo"@en ;
 .
 bda:GR0012
   a adm:GitRepo ;
@@ -111,6 +111,13 @@ bda:GR0014
   adm:gitUrl "https://gitlab.com/bdrc-data/iinstances"^^xsd:anyURI ;
   rdfs:comment "git repo for Electronic instance resources"@en ;
   skos:prefLabel "Image Instances repo"@en ;
+.
+bda:GR0015
+  a adm:GitRepo ;
+  adm:gitRepoName "subscribers" ;
+  adm:gitUrl "https://gitlab.com/bdrc-data/subscribers"^^xsd:anyURI ;
+  rdfs:comment "git repo for Subscriber resources"@en ;
+  skos:prefLabel "Subscribers repo"@en ;
 .
 GitRepo:
   a owl:Ontology ;
