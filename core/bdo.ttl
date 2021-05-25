@@ -2457,10 +2457,18 @@ bdo:dateIndication
 	rdfs:range bdo:DateIndication ;
 	.
 
+bdo:digitalLendingPossible
+	a owl:DatatypeProperty ;
+	rdfs:label "digital lending possible"@en ;
+	adm:userTooltip "Indicates if the digital instance can be in a Controlled Digital Lending program. In other words, indicates if a physical copy circulates."@en ;
+	rdfs:seeAlso <https://controlleddigitallending.org/> ;
+	rdfs:domain bdo:DigitalInstance ;
+	rdfs:range xsd:boolean ;
+	.
+
 bdo:dimHeight
 	a owl:DatatypeProperty ;
 	rdfs:label "height"@en ;
-	adm:technicalComment "was :workDimHeight"@en ;
 	adm:userTooltip "height or thickness of the physical item of a :Work in cm"@en ;
 	rdfs:domain bdo:PhysicalInstance ;
 	rdfs:range xsd:string ;
@@ -2469,7 +2477,6 @@ bdo:dimHeight
 bdo:dimLength
 	a owl:DatatypeProperty ;
 	rdfs:label "length"@en ;
-	adm:technicalComment "was :workDimLength"@en ;
 	adm:userTooltip "length of the physical item, of this :Work, that is held or scanned in cm"@en ;
 	rdfs:domain bdo:PhysicalInstance ;
 	rdfs:range xsd:string ;
@@ -4478,7 +4485,6 @@ bdo:printMethod
 bdo:publisherLocation
 	a owl:DatatypeProperty ;
 	rdfs:label "publisher location"@en ;
-	adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
 	adm:userTooltip "Loction of the publisher of the form of the Instance that has been digitized."@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
@@ -4487,10 +4493,16 @@ bdo:publisherLocation
 bdo:publisherName
 	a owl:DatatypeProperty ;
 	rdfs:label "publisher name"@en ;
-	adm:deprecatedComment "deprecated in favor of :PublishedEvent"@en ;
 	adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
+	.
+
+bdo:qualityGrade
+	a owl:DatatypeProperty ;
+	rdfs:label "quality of digital reproduction"@en ;
+	adm:userTooltip "The associated with the subject (can be a :DigitalInstance), using a grade from 0 to 5."@en ;
+	rdfs:range xsd:integer ;
 	.
 
 bdo:restored

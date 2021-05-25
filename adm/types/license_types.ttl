@@ -91,7 +91,6 @@ bda:LicenseCopyrightUndetermined
 License:
   a owl:Ontology ;
   dct:license bda:LicenseCC0 ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 adm:License
   a owl:Class ;

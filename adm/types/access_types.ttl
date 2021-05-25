@@ -24,33 +24,33 @@ bda:AccessMixed
 .
 bda:AccessOpen
   a adm:Access ;
-  rdfs:comment "The contents of the Work are freely avaiable in their entirety."@en ;
+  rdfs:comment "The contents are made openly accessible"@en ;
   skos:prefLabel "Open Access"@en ;
 .
 bda:AccessRestrictedByQuality
   a adm:Access ;
-  rdfs:comment "The quality of the scanning or eText conversion to poor to warrant making it available online."@en ;
+  rdfs:comment "The quality of the scanning or eText conversion too poor to warrant making it available online."@en ;
   skos:prefLabel "Restricted by Quality"@en ;
+  owl:deprecated true ;
 .
 bda:AccessRestrictedByTbrc
   a adm:Access ;
-  rdfs:comment "BDRC is restricting access to the Work."@en ;
+  rdfs:comment "BDRC is restricting access to the content"@en ;
   skos:prefLabel "Restricted by BDRC"@en ;
 .
 bda:AccessRestrictedSealed
   a adm:Access ;
-  rdfs:comment "The Work is sealed by tradition."@en ;
+  rdfs:comment "The content is sealed by tradition."@en ;
   skos:prefLabel "Restricted Sealed"@en ;
 .
 bda:AccessRestrictedTemporarily
   a adm:Access ;
-  rdfs:comment "The Work is temporarily restricted."@en ;
+  rdfs:comment "The content is temporarily restricted."@en ;
   skos:prefLabel "Temporarily Restricted"@en ;
 .
 Access:
   a owl:Ontology ;
   dct:license bda:LicenseCC0 ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 adm:Access
   a owl:Class ;

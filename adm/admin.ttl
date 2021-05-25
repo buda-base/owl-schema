@@ -610,12 +610,13 @@ adm:imagesStatus
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:PublishedWork ;
 	rdfs:range adm:ImagesStatus ;
+	owl:deprecated true ;
 	.
 
 adm:inRegion
 	a owl:ObjectProperty ;
 	rdfs:label "in region"@en ;
-	rdfs:comment "The region or plaorganization or person that provided the eText or image content"@en ;
+	rdfs:comment "The region of the organization or person that provided the eText or image content"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:Organization ;
 	rdfs:range bdo:Place ;
@@ -628,6 +629,7 @@ adm:initialProvider
 	rdfs:domain adm:LegalData ;
 	rdfs:range adm:ContentProvider ;
 	rdfs:seeAlso adm:ContentProvider ;
+	owl:deprecated true ;
 	.
 
 adm:legacyImageGroupRID
@@ -638,6 +640,7 @@ adm:legacyImageGroupRID
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:VolumeImageAsset ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:license
@@ -710,6 +713,7 @@ adm:migrationComment
 	rdfs:subPropertyOf rdfs:comment ;
 	rdfs:label "migration comment"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:originalRecord

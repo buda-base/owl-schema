@@ -20,7 +20,6 @@ adm:OutlineType
 OutlineType:
   a owl:Ontology ;
   dct:license bda:LicenseCC0 ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bda:OutlineTypeCompositeVolume
   a adm:OutlineType ;

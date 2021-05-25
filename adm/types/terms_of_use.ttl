@@ -21,7 +21,6 @@ adm:TermsOfUse
 TermsOfUse:
   a owl:Ontology ;
   dct:license bda:LicenseCC0 ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 bda:TermsOfUseBDRCEtexts
   a adm:TermsOfUse ;
