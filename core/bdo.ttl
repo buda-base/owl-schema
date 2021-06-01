@@ -1844,6 +1844,7 @@ bdo:biblioStatus
 	adm:userTooltip "A bibliographic status statement in the language of the Instance"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
+	owl:deprecated true ;
 	.
 
 bdo:binding
@@ -1910,13 +1911,7 @@ bdo:colophon
 	adm:technicalComment "This was the description of type colophon which was used primarily (exclusively?) on <outline:node/>s. It is now part of the extended bibliographic model allowing to tag any sort of Work with a colophon"@en ;
 	adm:userTooltip "A transcription of the colophon of the Instance."@en ;
 	rdfs:domain bdo:Instance ;
-	rdfs:range [
-		a owl:Class ;
-		owl:unionOf (
-			xsd:integer
-			rdf:langString
-		) ;
-	] ;
+	rdfs:range rdf:langString ;
 	.
 
 bdo:contentLocation
@@ -2239,6 +2234,13 @@ bdo:creatorCommentator
 	rdfs:label "commentator"@en ;
 	adm:userTooltip "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
 	owl:deprecated "true"^^xsd:boolean ;
+	.
+
+bdo:volumeNote
+	a owl:DatatypeProperty ;
+	rdfs:label "volumes note"@en ;
+	rdfs:domain bdo:BiblioEntity ;
+	rdfs:range xsd:string ;
 	.
 
 bdo:creatorCompiler
@@ -3590,6 +3592,7 @@ This is generally not the source printery of the original wood block prints that
 	adm:userTooltip "Free text comment on where the copy of the Instance that was digitized was printed."@en ;
 	rdfs:domain bdo:PhysicalInstance ;
 	rdfs:range rdf:langString ;
+	owl:deprecated true ;
 	.
 
 bdo:instanceReproductionOf

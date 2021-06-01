@@ -363,10 +363,7 @@ adm:WorkOrAdmOutline
 	.
 
 adm:access
-	a
-		owl:AnnotationProperty ,
-		owl:ObjectProperty
-		;
+	a owl:ObjectProperty ;
 	rdfs:label "access"@en ;
 	rdfs:comment "The type of online access permitted for the etext and/or images for a Work."@en ;
 	adm:catalogingConvention "Access to images should be indicated in the item, not the work"@en ;
@@ -381,7 +378,7 @@ i.e., the access is about the content associated with a :Work not the metadata a
 	.
 
 adm:adminAbout
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "admin data about resource"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:AdminData ;
@@ -474,6 +471,7 @@ adm:convertProperty
 The value of this property should be an explanation of the needed conversion as an rdf:langString"""@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:range rdf:langString ;
+	owl:deprecated true ;
 	.
 
 adm:convertToClass
@@ -484,6 +482,7 @@ adm:convertToClass
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain owl:Thing ;
 	rdfs:range owl:Thing ;
+	owl:deprecated true ;
 	.
 
 adm:convertToProperty
@@ -491,6 +490,7 @@ adm:convertToProperty
 	rdfs:subPropertyOf adm:conversionAnnotations ;
 	rdfs:comment "Indicates that the annotated property is to be converted directly to a statement in terms of another property. The value of this annotation is the target property to convert to."@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:convertValueToClass
@@ -498,10 +498,11 @@ adm:convertValueToClass
 	rdfs:subPropertyOf adm:conversionAnnotations ;
 	rdfs:comment "Indicates that the value of the property being converted is to be an instance of the designated class"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:copyrightOwner
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "copyright holder to resource metadata"@en ;
 	rdfs:comment "The copyright holder to the metadata representation of the :Entity resource"@en ;
 	rdfs:domain adm:LegalData ;
@@ -510,7 +511,7 @@ adm:copyrightOwner
 	.
 
 adm:defaultContentLicense
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "default content license"@en ;
 	rdfs:comment "For a given provider the default content license to use"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -519,7 +520,7 @@ adm:defaultContentLicense
 	.
 
 adm:defaultMetadataLicense
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "default metadata license"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:ContentProvider ;
@@ -597,14 +598,14 @@ adm:graphId
 	.
 
 adm:hasLegal
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "legal info"@en ;
 	rdfs:domain adm:AdminData ;
 	rdfs:range adm:LegalData ;
 	.
 
 adm:imagesStatus
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "images status"@en ;
 	rdfs:comment "records the images asset status for a :PublishedWork"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -644,7 +645,7 @@ adm:legacyImageGroupRID
 	.
 
 adm:license
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "license"@en ;
 	rdfs:comment "The license under which access to the metadata representation of the :Entity resource is provided"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -670,7 +671,7 @@ adm:logDate
 	.
 
 adm:logEntry
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "log entry"@en ;
 	rdfs:comment "Log entry for updates to resources"@en ;
 	rdfs:domain bdo:Entity ;
@@ -686,7 +687,7 @@ adm:logMessage
 	.
 
 adm:logMethod
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "script"@en ;
 	rdfs:comment "batch or manual data initialization or update"@en ;
 	rdfs:domain adm:LogEntry ;
@@ -694,7 +695,7 @@ adm:logMethod
 	.
 
 adm:logWho
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "who"@en ;
 	rdfs:comment "who performed the update  described by the log entry"@en ;
 	rdfs:domain adm:LogEntry ;
@@ -725,9 +726,9 @@ adm:originalRecord
 	.
 
 adm:outline
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "had outline"@en ;
-	rdfs:comment "The referenced admin:Outline contains the root-level information from an Outline for this Work"@en ;
+	rdfs:comment "The referenced adm:Outline contains the root-level information from an Outline for this Work"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:BiblioEntity ;
 	rdfs:range adm:Outline ;
@@ -743,7 +744,7 @@ adm:outlineAuthorStatement
 	.
 
 adm:outlineLogEntry
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "outline log entry"@en ;
 	adm:migrationComment "Migration hint: Used to migrate the log entries from Outlines that are being converted to many individual works"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -752,7 +753,7 @@ adm:outlineLogEntry
 	.
 
 adm:outlineType
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "outline type"@en ;
 	rdfs:comment "records the legacy outline type"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -824,7 +825,7 @@ adm:place_TLM_num
 	.
 
 adm:place_TLM_taxonomy
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "TLM taxonomy"@en ;
 	rdfs:comment "Identifies a Taxonomy that specifies the Library's shelf classification. By convention the taxonomy should have maximum depth of 4 levels - this constraint allows for a manageable GUI design."@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -875,7 +876,7 @@ adm:productIncludes
 	.
 
 adm:replaceWith
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "replace with another rdfs:Resource"@en ;
 	rdfs:comment "used when replacing one resource by another when the subproperties are all too specific. Typical situations are duplicated resurces where one is withdrawn and so on"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -889,6 +890,7 @@ adm:replaceWithClass
 	rdfs:label "replace with a Class"@en ;
 	rdfs:comment "used when deprecating a vocabulary item in favor of a Class"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:replaceWithDataProperty
@@ -897,6 +899,7 @@ adm:replaceWithDataProperty
 	rdfs:label "replace with a Data property"@en ;
 	rdfs:comment "used when deprecating a vocabulary item in favor of a Data property"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:replaceWithIndividual
@@ -905,6 +908,7 @@ adm:replaceWithIndividual
 	rdfs:label "replace with an Individual"@en ;
 	rdfs:comment "used when deprecating a vocabulary item in favor of an Individual"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:replaceWithObjectProperty
@@ -913,6 +917,7 @@ adm:replaceWithObjectProperty
 	rdfs:label "replace with Object property"@en ;
 	rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
+	owl:deprecated true ;
 	.
 
 adm:restrictedInChina
@@ -924,7 +929,7 @@ adm:restrictedInChina
 	.
 
 adm:sameAsBDRC
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as BDRC"@en ;
 	rdfs:comment "Indicates the equivalent resource in BDRC"@en ;
@@ -932,7 +937,7 @@ adm:sameAsBDRC
 	.
 
 adm:sameAsCBCAt
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as CBC@"@en ;
 	rdfs:comment "this resource is about the same resource as the CBC@ resource"@en ;
@@ -940,7 +945,7 @@ adm:sameAsCBCAt
 	.
 
 adm:sameAsDILA
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as DILA"@en ;
 	rdfs:comment "this resource is about the same resource as the DILA resource"@en ;
@@ -948,7 +953,7 @@ adm:sameAsDILA
 	.
 
 adm:sameAsMBBT
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as Markus Bingenheimer's Bibliography of Translations"@en ;
 	rdfs:comment "this resource is about the same resource as the resource in Markus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
@@ -956,7 +961,7 @@ adm:sameAsMBBT
 	.
 
 adm:sameAsToL
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as Treasury of Lives"@en ;
 	rdfs:comment "this resource is about the same resource as the Treasury of Lives resource"@en ;
@@ -964,7 +969,7 @@ adm:sameAsToL
 	.
 
 adm:sameAsVIAF
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "VIAF"@en ;
 	rdfs:comment "this resource is about the same resource as the VIAF resource"@en ;
@@ -972,7 +977,7 @@ adm:sameAsVIAF
 	.
 
 adm:sameAsWikidata
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as Wikidata"@en ;
 	rdfs:comment "this resource is about the same resource as the Wikidata resource"@en ;
@@ -980,7 +985,7 @@ adm:sameAsWikidata
 	.
 
 adm:sameAsWorldCat
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as WorldCat"@en ;
 	rdfs:comment "this resource is about the same resource as the WorldCat resource"@en ;
@@ -988,7 +993,7 @@ adm:sameAsWorldCat
 	.
 
 adm:sameAsrKTs
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
 	rdfs:label "same as rKTs"@en ;
 	rdfs:comment "this resource is about the same resource as the rKTs resource"@en ;
@@ -1054,7 +1059,7 @@ adm:statementScore
 	.
 
 adm:status
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "has status"@en ;
 	rdfs:comment "records the status of the associated resource metadata"@en ;
 	rdfs:domain bdo:Entity ;
@@ -1077,7 +1082,7 @@ adm:technicalComment
 	.
 
 adm:termsOfUse
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "terms of use for the resource metadata"@en ;
 	rdfs:comment "The terms of use for the metadata representation of the :Entity resource"@en ;
 	rdfs:domain adm:LegalData ;
@@ -1107,18 +1112,21 @@ adm:volumeQcDate
 	a owl:AnnotationProperty ;
 	rdfs:domain bdo:Volume ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:volumeQcNote
 	a owl:AnnotationProperty ;
 	rdfs:domain bdo:Volume ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:volumeQcPerson
 	a owl:AnnotationProperty ;
 	rdfs:domain bdo:Volume ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:volumeScanVenue
@@ -1127,10 +1135,11 @@ adm:volumeScanVenue
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:Item ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:workInProduct
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "in product"@en ;
 	rdfs:comment "This :Work is included in the referenced admin:Product"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
@@ -1155,6 +1164,7 @@ adm:workVolumesNote
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:BiblioEntity ;
 	rdfs:range xsd:string ;
+	owl:deprecated true ;
 	.
 
 adm:work_desc_date
