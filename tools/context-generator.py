@@ -18,7 +18,6 @@ VIAF = "http://viaf.org/viaf/"
 RKTS = "http://purl.rkts.eu/resource/"
 
 PREFIXES = {
-    "": BDO,
     "bdo": BDO,
     "bda": BDA,
     "bdu": BDU,
@@ -46,13 +45,19 @@ NSM = NamespaceManager(rdflib.Graph())
 for p, ns in PREFIXES.items():
     NSM.bind(p, Namespace(ns))
 
-
 def add_static(ctx):
     for p, ns in PREFIXES.items():
         ctx[p] = ns
     ctx["type"] = "@type"
     ctx["id"] = "@id"
     ctx["@vocab"] = BDO
+    ctx["adm:hasAdmin"] = { "@reverse": "http://purl.bdrc.io/ontology/admin/adminAbout" }
+
+def shortname(r):
+    pref, _, lname = NSM.compute_qname_strict(r)
+    if pref == 'bdo':
+        return lname
+    return pref+":"+lname
 
 def add_datatype_prop(model, prop, ctx):
     if ((prop, OWL.deprecated, None)) in model:
@@ -66,11 +71,11 @@ def add_datatype_prop(model, prop, ctx):
     if len(ranges) < 1:
         return
     r = ranges[0]
-    rpref, _, rlname = NSM.compute_qname_strict(r)
-    ppref, _, plname = NSM.compute_qname_strict(prop)
-    if (ppref.startswith("ns") or rpref.startswith("bdo")):
+    rshort = shortname(r)
+    pshort = shortname(prop)
+    if (pshort.startswith("ns") or ":" not in rshort):
         return
-    ctx[ppref+":"+plname] = { "@type" : rpref+":"+rlname }
+    ctx[pshort] = { "@type" : rshort }
 
 def add_file(fname, ctx):
     model = rdflib.Graph()
@@ -78,8 +83,8 @@ def add_file(fname, ctx):
     for p, _, _ in model.triples((None,  RDF.type, OWL.ObjectProperty)):
         if ((p, OWL.deprecated, None)) in model:
             continue
-        pref, _, lname = NSM.compute_qname_strict(p)
-        ctx[pref+":"+lname] = { "@type" : "@id" }
+        pshort = shortname(p)
+        ctx[pshort] = { "@type" : "@id" }
     for p, _, _ in model.triples((None,  RDF.type, OWL.AnnotationProperty)):
         add_datatype_prop(model, p, ctx)
     for p, _, _ in model.triples((None,  RDF.type, OWL.DatatypeProperty)):
@@ -92,6 +97,6 @@ def main():
     for g in PATHS:
         for fname in glob.glob(g, recursive=True):
             add_file(fname, ctx)
-    print(json.dumps(ctx, sort_keys=True, indent=2))
+    print(json.dumps(res, sort_keys=True, indent=2))
 
 main()
