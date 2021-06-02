@@ -21,6 +21,7 @@ PREFIXES = {
     "bdo": BDO,
     "bda": BDA,
     "bdu": BDU,
+    "bdr": BDR,
     "bf": BF,
     "adm": ADM,
     "bdg": BDG,
@@ -47,6 +48,8 @@ for p, ns in PREFIXES.items():
 
 def add_static(ctx):
     for p, ns in PREFIXES.items():
+        if p == "bdo":
+            continue
         ctx[p] = ns
     ctx["type"] = "@type"
     ctx["id"] = "@id"

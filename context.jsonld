@@ -199,7 +199,7 @@
     },
     "bda": "http://purl.bdrc.io/admindata/",
     "bdg": "http://purl.bdrc.io/graph/",
-    "bdo": "http://purl.bdrc.io/ontology/core/",
+    "bdr": "http://purl.bdrc.io/resource/",
     "bdu": "http://purl.bdrc.io/resource-nc/user/",
     "bf": "http://id.loc.gov/ontologies/bibframe/",
     "biblioNote": {
