@@ -1,522 +1,952 @@
 {
-  "@context" : {
-    "type" : "@type",
-    "@vocab" : "http://purl.bdrc.io/ontology/core/",
-    "adm" : "http://purl.bdrc.io/ontology/admin/",
-    "bdd" : "http://purl.bdrc.io/data/",
-    "bf" : "http://id.loc.gov/ontologies/bibframe/",
-    "bdo" : "http://purl.bdrc.io/ontology/core/",
-    "bdr" : "http://purl.bdrc.io/resource/",
-    "bdan" : "http://purl.bdrc.io/annotation/",
-    "bdac" : "http://purl.bdrc.io/anncollection/",
-    "owl" : "http://www.w3.org/2002/07/owl#",
-    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-    "skos" : "http://www.w3.org/2004/02/skos/core#",
-    "tbr" : "http://purl.bdrc.io/ontology/toberemoved/",
-    "tmp" : "http://purl.bdrc.io/ontology/tmp/",
-    "vcard" : "http://www.w3.org/2006/vcard/ns#",
-    "xsd" : "http://www.w3.org/2001/XMLSchema#",
-    "contentProvider" : {
-      "@type" : "@id"
+  "@context": {
+    "@vocab": "http://purl.bdrc.io/ontology/core/",
+    "abbreviationOf": {
+      "@type": "@id"
     },
-    "corporationHasMember" : {
-      "@type" : "@id"
+    "adm": "http://purl.bdrc.io/ontology/admin/",
+    "adm:access": {
+      "@type": "@id"
     },
-    "corporationMember" : {
-      "@type" : "@id"
+    "adm:adminAbout": {
+      "@type": "@id"
     },
-    "corporationMemberType" : {
-      "@type" : "@id"
+    "adm:attributionName": {
+      "@type": "rdf:langString"
     },
-    "corporationRegion" : {
-      "@type" : "@id"
+    "adm:attributionStatement": {
+      "@type": "rdf:langString"
     },
-    "creator" : {
-      "@type" : "@id"
+    "adm:attributionURL": {
+      "@type": "xsd:anyURI"
     },
-    "eTextHasChunk" : {
-      "@type" : "@id"
+    "adm:canonicalHtml": {
+      "@type": "xsd:anyURI"
     },
-    "eTextHasPage" : {
-      "@type" : "@id"
+    "adm:catalogingConvention": {
+      "@type": "rdf:langString"
     },
-    "eTextInItem" : {
-      "@type" : "@id"
+    "adm:copyrightOwner": {
+      "@type": "@id"
     },
-    "eTextResource" : {
-      "@type" : "@id"
+    "adm:defaultContentLicense": {
+      "@type": "@id"
     },
-    "eventPeriod" : {
-      "@type" : "@id"
+    "adm:defaultMetadataLicense": {
+      "@type": "@id"
     },
-    "eventWhere" : {
-      "@type" : "@id"
+    "adm:facetIndex": {
+      "@type": "xsd:int"
     },
-    "eventWho" : {
-      "@type" : "@id"
+    "adm:gitPath": {
+      "@type": "xsd:string"
     },
-    "hasAunt" : {
-      "@type" : "@id"
+    "adm:gitRepo": {
+      "@type": "@id"
     },
-    "hasBrother" : {
-      "@type" : "@id"
+    "adm:gitRepoName": {
+      "@type": "xsd:string"
     },
-    "hasBrotherInLaw" : {
-      "@type" : "@id"
+    "adm:gitRevision": {
+      "@type": "xsd:string"
     },
-    "hasChild" : {
-      "@type" : "@id"
+    "adm:gitUrl": {
+      "@type": "xsd:anyURI"
     },
-    "hasCousin" : {
-      "@type" : "@id"
+    "adm:hasAdmin": {
+      "@reverse": "http://purl.bdrc.io/ontology/admin/adminAbout"
     },
-    "hasDaughter" : {
-      "@type" : "@id"
+    "adm:hasLegal": {
+      "@type": "@id"
     },
-    "hasDimensions" : {
-      "@type" : "xsd:anyURI"
+    "adm:inRegion": {
+      "@type": "@id"
     },
-    "hasFather" : {
-      "@type" : "@id"
+    "adm:license": {
+      "@type": "@id"
     },
-    "hasFatherInLaw" : {
-      "@type" : "@id"
+    "adm:logAgent": {
+      "@type": "xsd:string"
     },
-    "hasGrandChild" : {
-      "@type" : "@id"
+    "adm:logDate": {
+      "@type": "xsd:dateTime"
     },
-    "hasGrandParent" : {
-      "@type" : "@id"
+    "adm:logEntry": {
+      "@type": "@id"
     },
-    "hasGranddaughter" : {
-      "@type" : "@id"
+    "adm:logMessage": {
+      "@type": "rdf:langString"
     },
-    "hasGrandfather" : {
-      "@type" : "@id"
+    "adm:logMethod": {
+      "@type": "@id"
     },
-    "hasGrandmother" : {
-      "@type" : "@id"
+    "adm:logWho": {
+      "@type": "@id"
     },
-    "hasGrandson" : {
-      "@type" : "@id"
+    "adm:originalRecord": {
+      "@type": "xsd:anyURI"
     },
-    "hasHusband" : {
-      "@type" : "@id"
+    "adm:outline": {
+      "@type": "@id"
     },
-    "hasInLaw" : {
-      "@type" : "@id"
+    "adm:outlineAuthorStatement": {
+      "@type": "xsd:string"
     },
-    "hasIncarnation" : {
-      "@type" : "@id"
+    "adm:outlineLogEntry": {
+      "@type": "@id"
     },
-    "hasIncarnationActivities" : {
-      "@type" : "@id"
+    "adm:outlineType": {
+      "@type": "@id"
     },
-    "hasIncarnationBody" : {
-      "@type" : "@id"
+    "adm:place_TLM_accession": {
+      "@type": "xsd:string"
     },
-    "hasIncarnationGeneral" : {
-      "@type" : "@id"
+    "adm:place_TLM_admin": {
+      "@type": "xsd:string"
     },
-    "hasIncarnationMind" : {
-      "@type" : "@id"
+    "adm:place_TLM_adminEmail": {
+      "@type": "xsd:string"
     },
-    "hasIncarnationQualities" : {
-      "@type" : "@id"
+    "adm:place_TLM_code": {
+      "@type": "xsd:string"
     },
-    "hasIncarnationSpeech" : {
-      "@type" : "@id"
+    "adm:place_TLM_librarian": {
+      "@type": "xsd:string"
     },
-    "hasIncarnationYangtse" : {
-      "@type" : "@id"
+    "adm:place_TLM_librarianEmail": {
+      "@type": "xsd:string"
     },
-    "hasManifest" : {
-      "@type" : "@id"
+    "adm:place_TLM_num": {
+      "@type": "xsd:string"
     },
-    "hasMaternalAunt" : {
-      "@type" : "@id"
+    "adm:place_TLM_taxonomy": {
+      "@type": "@id"
     },
-    "hasMaternalUncle" : {
-      "@type" : "@id"
+    "adm:replaceWith": {
+      "@type": "@id"
     },
-    "hasMother" : {
-      "@type" : "@id"
+    "adm:restrictedInChina": {
+      "@type": "xsd:boolean"
     },
-    "hasMotherInLaw" : {
-      "@type" : "@id"
+    "adm:sameAsBDRC": {
+      "@type": "@id"
     },
-    "hasNephew" : {
-      "@type" : "@id"
+    "adm:sameAsCBCAt": {
+      "@type": "@id"
     },
-    "hasNibling" : {
-      "@type" : "@id"
+    "adm:sameAsDILA": {
+      "@type": "@id"
     },
-    "hasNiece" : {
-      "@type" : "@id"
+    "adm:sameAsMBBT": {
+      "@type": "@id"
     },
-    "hasOlderBrother" : {
-      "@type" : "@id"
+    "adm:sameAsToL": {
+      "@type": "@id"
     },
-    "hasOlderSister" : {
-      "@type" : "@id"
+    "adm:sameAsVIAF": {
+      "@type": "@id"
     },
-    "hasParent" : {
-      "@type" : "@id"
+    "adm:sameAsWikidata": {
+      "@type": "@id"
     },
-    "hasParentInLaw" : {
-      "@type" : "@id"
+    "adm:sameAsWorldCat": {
+      "@type": "@id"
     },
-    "hasParentSibling" : {
-      "@type" : "@id"
+    "adm:sameAsrKTs": {
+      "@type": "@id"
     },
-    "hasPaternalAunt" : {
-      "@type" : "@id"
+    "adm:seeAlsoDoc": {
+      "@type": "xsd:anyURI"
     },
-    "hasPaternalUncle" : {
-      "@type" : "@id"
+    "adm:seeOther": {
+      "@type": "xsd:anyURI"
     },
-    "hasSibling" : {
-      "@type" : "@id"
+    "adm:statementScore": {
+      "@type": "xsd:integer"
     },
-    "hasSiblingInLaw" : {
-      "@type" : "@id"
+    "adm:status": {
+      "@type": "@id"
     },
-    "hasSister" : {
-      "@type" : "@id"
+    "adm:termsOfUse": {
+      "@type": "@id"
     },
-    "hasSisterInLaw" : {
-      "@type" : "@id"
+    "adm:translationPriority": {
+      "@type": "xsd:integer"
     },
-    "hasSon" : {
-      "@type" : "@id"
+    "adm:userTooltip": {
+      "@type": "rdf:langString"
     },
-    "hasSpouse" : {
-      "@type" : "@id"
+    "adm:workLegacyNode": {
+      "@type": "xsd:string"
     },
-    "hasUncle" : {
-      "@type" : "@id"
+    "adm:work_desc_date": {
+      "@type": "xsd:string"
     },
-    "hasUnknownKinship" : {
-      "@type" : "@id"
+    "agent": {
+      "@type": "@id"
     },
-    "hasWife" : {
-      "@type" : "@id"
+    "appliedMaterial": {
+      "@type": "@id"
     },
-    "hasYoungerBrother" : {
-      "@type" : "@id"
+    "associatedTradition": {
+      "@type": "@id"
     },
-    "hasYoungerSister" : {
-      "@type" : "@id"
+    "authorshipStatement": {
+      "@type": "rdf:langString"
     },
-    "incarnationActivities" : {
-      "@type" : "@id"
+    "baseMaterial": {
+      "@type": "@id"
     },
-    "incarnationBody" : {
-      "@type" : "@id"
+    "bda": "http://purl.bdrc.io/admindata/",
+    "bdg": "http://purl.bdrc.io/graph/",
+    "bdo": "http://purl.bdrc.io/ontology/core/",
+    "bdu": "http://purl.bdrc.io/resource-nc/user/",
+    "bf": "http://id.loc.gov/ontologies/bibframe/",
+    "biblioNote": {
+      "@type": "rdf:langString"
     },
-    "incarnationGeneral" : {
-      "@type" : "@id"
+    "binding": {
+      "@type": "@id"
     },
-    "incarnationMind" : {
-      "@type" : "@id"
+    "catalogInfo": {
+      "@type": "rdf:langString"
     },
-    "incarnationQualities" : {
-      "@type" : "@id"
+    "chunkContents": {
+      "@type": "rdf:langString"
     },
-    "incarnationSpeech" : {
-      "@type" : "@id"
+    "codicologicalpartType": {
+      "@type": "@id"
     },
-    "incarnationYangtse" : {
-      "@type" : "@id"
+    "collectionAgent": {
+      "@type": "@id"
     },
-    "isIncarnation" : {
-      "@type" : "@id"
+    "collectionMember": {
+      "@type": "@id"
     },
-    "instanceOf" : {
-      "@type" : "@id"
+    "collectionPlace": {
+      "@type": "@id"
     },
-    "itemForInstance" : {
-      "@type" : "@id"
+    "colophon": {
+      "@type": "rdf:langString"
     },
-    "itemHasVolume" : {
-      "@type" : "@id"
+    "contentLocation": {
+      "@type": "@id"
     },
-    "itemLibrary" : {
-      "@type" : "@id"
+    "contentLocationByFolio": {
+      "@type": "xsd:boolean"
     },
-    "kinWith" : {
-      "@type" : "@id"
+    "contentLocationEndSide": {
+      "@type": "xsd:string"
     },
-    "language" : {
-      "@type" : "@id"
+    "contentLocationInstance": {
+      "@type": "@id"
     },
-    "lineageDownFrom" : {
-      "@type" : "@id"
+    "contentLocationSeqNum": {
+      "@type": "xsd:string"
     },
-    "lineageDownTo" : {
-      "@type" : "@id"
+    "contentLocationSide": {
+      "@type": "xsd:string"
     },
-    "lineageFrom" : {
-      "@type" : "@id"
+    "contentLocationStatement": {
+      "@type": "xsd:string"
     },
-    "lineageHolder" : {
-      "@type" : "@id"
+    "contentMethod": {
+      "@type": "@id"
     },
-    "lineageObject" : {
-      "@type" : "@id"
+    "contentPagination": {
+      "@type": "@id"
     },
-    "lineageReceived" : {
-      "@type" : "@id"
+    "conversionOf": {
+      "@type": "@id"
     },
-    "lineageRef" : {
-      "@type" : "@id"
+    "corporationHasMember": {
+      "@type": "@id"
     },
-    "lineageType" : {
-      "@type" : "@id"
+    "corporationMember": {
+      "@type": "@id"
     },
-    "lineageWho" : {
-      "@type" : "@id"
+    "corporationMemberType": {
+      "@type": "@id"
     },
-    "lineageWork" : {
-      "@type" : "@id"
+    "corporationRegion": {
+      "@type": "@id"
     },
-    "note" : {
-      "@type" : "@id"
+    "correctionOf": {
+      "@type": "@id"
     },
-    "noteSource" : {
-      "@type" : "@id"
+    "creator": {
+      "@type": "@id"
     },
-    "pageHasLine" : {
-      "@type" : "@id"
+    "custodialHistory": {
+      "@type": "rdf:langString"
     },
-    "paginatedBy" : {
-      "@type" : "@id"
+    "dateApproximate": {
+      "@type": "xsd:boolean"
     },
-    "personEvent" : {
-      "@type" : "@id"
+    "dateIndication": {
+      "@type": "@id"
     },
-    "personEventCorporation" : {
-      "@type" : "@id"
+    "digitalLendingPossible": {
+      "@type": "xsd:boolean"
     },
-    "personEventRole" : {
-      "@type" : "@id"
+    "dila": "http://purl.dila.edu.tw/resource/",
+    "dimHeight": {
+      "@type": "xsd:string"
     },
-    "personGender" : {
-      "@type" : "@id"
+    "dimLength": {
+      "@type": "xsd:string"
     },
-    "personHasConsort" : {
-      "@type" : "@id"
+    "dimWidth": {
+      "@type": "xsd:string"
     },
-    "personName" : {
-      "@type" : "@id"
+    "dimensionsStatement": {
+      "@type": "xsd:string"
     },
-    "personOfSect" : {
-      "@type" : "@id"
+    "eTextHasChunk": {
+      "@type": "@id"
     },
-    "personStudentOf" : {
-      "@type" : "@id"
+    "eTextHasPage": {
+      "@type": "@id"
     },
-    "personTeacherOf" : {
-      "@type" : "@id"
+    "eTextInInstance": {
+      "@type": "@id"
     },
-    "placeAddress" : {
-      "@type" : "@id"
+    "eTextInVolume": {
+      "@type": "xsd:integer"
     },
-    "placeContains" : {
-      "@type" : "@id"
+    "eTextIsVolume": {
+      "@type": "xsd:integer"
     },
-    "placeEvent" : {
-      "@type" : "@id"
+    "eTextResource": {
+      "@type": "@id"
     },
-    "placeEventAffiliation" : {
-      "@type" : "@id"
+    "eTextSourcePath": {
+      "@type": "xsd:string"
     },
-    "placeIsNear" : {
-      "@type" : "@id"
+    "eTextTitle": {
+      "@type": "rdf:langString"
     },
-    "placeLocatedIn" : {
-      "@type" : "@id"
+    "eTextVolumeIndex": {
+      "@type": "xsd:integer"
     },
-    "placeType" : {
-      "@type" : "@id"
+    "editionStatement": {
+      "@type": "rdf:langString"
     },
-    "script" : {
-      "@type" : "@id"
+    "eventText": {
+      "@type": "xsd:string"
     },
-    "seeAlso" : {
-      "@type" : "@id"
+    "eventWhere": {
+      "@type": "@id"
     },
-    "sliceEndChunk" : {
-      "@type" : "bdo:SliceLoc"
+    "eventWho": {
+      "@type": "@id"
     },
-    "sliceStartChunk" : {
-      "@type" : "bdo:SliceLoc"
+    "excerpt": {
+      "@type": "rdf:langString"
     },
-    "taxHasSubClass" : {
-      "@type" : "@id"
+    "excerptBeginning": {
+      "@type": "rdf:langString"
     },
-    "taxSubClassOf" : {
-      "@type" : "@id"
+    "excerptEnd": {
+      "@type": "rdf:langString"
     },
-    "taxSubclassRelation" : {
-      "@type" : "@id"
+    "explicit": {
+      "@type": "rdf:langString"
     },
-    "transliteration" : {
-      "@type" : "@id"
+    "femcConversionOf": {
+      "@type": "@id"
     },
-    "volumeHasEtext" : {
-      "@type" : "@id"
+    "hasAunt": {
+      "@type": "@id"
     },
-    "volumeOf" : {
-      "@type" : "@id"
+    "hasBrother": {
+      "@type": "@id"
     },
-    "workDerivativeOf" : {
-      "@type" : "@id"
+    "hasBrotherInLaw": {
+      "@type": "@id"
     },
-    "workEvent" : {
-      "@type" : "@id"
+    "hasChild": {
+      "@type": "@id"
     },
-    "instanceEvent" : {
-      "@type" : "@id"
+    "hasCousin": {
+      "@type": "@id"
     },
-    "workGenre" : {
-      "@type" : "@id"
+    "hasDaughter": {
+      "@type": "@id"
     },
-    "workHasDerivative" : {
-      "@type" : "@id"
+    "hasFascicles": {
+      "@type": "xsd:string"
     },
-    "workHasTranslation" : {
-      "@type" : "@id"
+    "hasFather": {
+      "@type": "@id"
     },
-    "workHasInstance" : {
-      "@type" : "@id"
+    "hasFatherInLaw": {
+      "@type": "@id"
     },
-    "instanceHasItem" : {
-      "@type" : "@id"
+    "hasGrandChild": {
+      "@type": "@id"
     },
-    "itemHasVolume" : {
-      "@type" : "@id"
+    "hasGrandParent": {
+      "@type": "@id"
     },
-    "serialHasMember" : {
-      "@type" : "@id"
+    "hasGranddaughter": {
+      "@type": "@id"
     },
-    "serialInstanceOf" : {
-      "@type" : "@id"
+    "hasGrandfather": {
+      "@type": "@id"
     },
-    "serialMemberOf" : {
-      "@type" : "@id"
+    "hasGrandmother": {
+      "@type": "@id"
     },
-    "serialHasInstance" : {
-      "@type" : "@id"
+    "hasGrandson": {
+      "@type": "@id"
     },
-    "hasPart" : {
-      "@type" : "@id"
+    "hasHusband": {
+      "@type": "@id"
     },
-    "instanceHasReproduction" : {
-      "@type" : "@id"
+    "hasIIIFCollection": {
+      "@type": "@id"
     },
-    "workHasSite" : {
-      "@type" : "@id"
+    "hasIIIFManifest": {
+      "@type": "@id"
     },
-    "hasSourcePrintery" : {
-      "@type" : "@id"
+    "hasInLaw": {
+      "@type": "@id"
     },
-    "workHasTranslation" : {
-      "@type" : "@id"
+    "hasIncarnation": {
+      "@type": "@id"
     },
-    "workIsAbout" : {
-      "@type" : "@id"
+    "hasIncarnationActivities": {
+      "@type": "@id"
     },
-    "workIsSimilarTo" : {
-      "@type" : "@id"
+    "hasIncarnationBody": {
+      "@type": "@id"
     },
-    "bf:identifiedBy" : {
-      "@type" : "@id"
+    "hasIncarnationGeneral": {
+      "@type": "@id"
     },
-    "contentLocation" : {
-      "@type" : "@id"
+    "hasIncarnationMind": {
+      "@type": "@id"
     },
-    "contentLocationInstance" : {
-      "@type" : "@id"
+    "hasIncarnationQualities": {
+      "@type": "@id"
     },
-    "material" : {
-      "@type" : "@id"
+    "hasIncarnationSpeech": {
+      "@type": "@id"
     },
-    "workPagination" : {
-      "@type" : "@id"
+    "hasIncarnationYangtse": {
+      "@type": "@id"
     },
-    "partOf" : {
-      "@type" : "@id"
+    "hasInstanceNum": {
+      "@type": "xsd:string"
     },
-    "partType" : {
-      "@type" : "@id"
+    "hasMaternalAunt": {
+      "@type": "@id"
     },
-    "workReproductionOf" : {
-      "@type" : "@id"
+    "hasMaternalUncle": {
+      "@type": "@id"
     },
-    "hasTitle" : {
-      "@type" : "@id"
+    "hasMother": {
+      "@type": "@id"
     },
-    "workTranslationOf" : {
-      "@type" : "@id"
+    "hasMotherInLaw": {
+      "@type": "@id"
     },
-    "workType" : {
-      "@type" : "@id"
+    "hasNephew": {
+      "@type": "@id"
     },
-    "adm:access" : {
-      "@type" : "@id"
+    "hasNibling": {
+      "@type": "@id"
     },
-    "adm:convertToClass" : {
-      "@type" : "@id"
+    "hasNiece": {
+      "@type": "@id"
     },
-    "adm:license" : {
-      "@type" : "@id"
+    "hasOlderBrother": {
+      "@type": "@id"
     },
-    "adm:logDate" : {
-      "@type" : "xsd:dateTime"
+    "hasOlderSister": {
+      "@type": "@id"
     },
-    "adm:logEntry" : {
-      "@type" : "@id"
+    "hasParent": {
+      "@type": "@id"
     },
-    "adm:logWho" : {
-      "@type" : "@id"
+    "hasParentInLaw": {
+      "@type": "@id"
     },
-    "adm:outline" : {
-      "@type" : "@id"
+    "hasPart": {
+      "@type": "@id"
     },
-    "adm:outlineLogEntry" : {
-      "@type" : "@id"
+    "hasPaternalAunt": {
+      "@type": "@id"
     },
-    "adm:outlineType" : {
-      "@type" : "@id"
+    "hasPaternalUncle": {
+      "@type": "@id"
     },
-    "adm:place_TLM_taxonomy" : {
-      "@type" : "@id"
+    "hasSibling": {
+      "@type": "@id"
     },
-    "adm:productHasOrg" : {
-      "@type" : "@id"
+    "hasSiblingInLaw": {
+      "@type": "@id"
     },
-    "adm:productIncludes" : {
-      "@type" : "@id"
+    "hasSister": {
+      "@type": "@id"
     },
-    "adm:status" : {
-      "@type" : "@id"
+    "hasSisterInLaw": {
+      "@type": "@id"
     },
-    "adm:workInProduct" : {
-      "@type" : "@id"
+    "hasSon": {
+      "@type": "@id"
     },
-    "rdf:subject" : {
-      "@type" : "@id"
+    "hasSourcePrintery": {
+      "@type": "@id"
     },
-    "rdf:predicate" : {
-      "@type" : "@id"
+    "hasSpouse": {
+      "@type": "@id"
     },
-    "adm:supportedBy" : {
-      "@type" : "@id"
+    "hasSteward": {
+      "@type": "@id"
     },
-    "adm:contradictedBy" : {
-      "@type" : "@id"
+    "hasTitle": {
+      "@type": "@id"
+    },
+    "hasUncle": {
+      "@type": "@id"
+    },
+    "hasUnknownKinship": {
+      "@type": "@id"
+    },
+    "hasWife": {
+      "@type": "@id"
+    },
+    "hasYoungerBrother": {
+      "@type": "@id"
+    },
+    "hasYoungerSister": {
+      "@type": "@id"
+    },
+    "id": "@id",
+    "illustrations": {
+      "@type": "xsd:string"
+    },
+    "imageCount": {
+      "@type": "xsd:integer"
+    },
+    "inCollection": {
+      "@type": "@id"
+    },
+    "inRootInstance": {
+      "@type": "@id"
+    },
+    "incarnationActivities": {
+      "@type": "@id"
+    },
+    "incarnationBody": {
+      "@type": "@id"
+    },
+    "incarnationGeneral": {
+      "@type": "@id"
+    },
+    "incarnationMind": {
+      "@type": "@id"
+    },
+    "incarnationQualities": {
+      "@type": "@id"
+    },
+    "incarnationSpeech": {
+      "@type": "@id"
+    },
+    "incarnationYangtse": {
+      "@type": "@id"
+    },
+    "incipit": {
+      "@type": "rdf:langString"
+    },
+    "inferSubTree": {
+      "@type": "xsd:boolean"
+    },
+    "instanceCreator": {
+      "@type": "@id"
+    },
+    "instanceDerivativeOf": {
+      "@type": "@id"
+    },
+    "instanceErrata": {
+      "@type": "rdf:langString"
+    },
+    "instanceEvent": {
+      "@type": "@id"
+    },
+    "instanceExtentStatement": {
+      "@type": "xsd:string"
+    },
+    "instanceHasDerivative": {
+      "@type": "@id"
+    },
+    "instanceHasItem": {
+      "@type": "@id"
+    },
+    "instanceHasReproduction": {
+      "@type": "@id"
+    },
+    "instanceHasVolume": {
+      "@type": "@id"
+    },
+    "instanceOf": {
+      "@type": "@id"
+    },
+    "instanceReproductionOf": {
+      "@type": "@id"
+    },
+    "interpretationOf": {
+      "@type": "@id"
+    },
+    "isComplete": {
+      "@type": "xsd:boolean"
+    },
+    "isDamaged": {
+      "@type": "xsd:boolean"
+    },
+    "isIncarnation": {
+      "@type": "@id"
+    },
+    "isRoot": {
+      "@type": "xsd:boolean"
+    },
+    "itemBDRCHoldingStatement": {
+      "@type": "xsd:string"
+    },
+    "itemCopies": {
+      "@type": "xsd:string"
+    },
+    "itemException": {
+      "@type": "rdf:langString"
+    },
+    "itemForInstance": {
+      "@type": "@id"
+    },
+    "itemLibrary": {
+      "@type": "@id"
+    },
+    "itemMissingVolumes": {
+      "@type": "xsd:string"
+    },
+    "itemShelf": {
+      "@type": "xsd:string"
+    },
+    "itemVolumes": {
+      "@type": "xsd:integer"
+    },
+    "kinWith": {
+      "@type": "@id"
+    },
+    "labelConnection": {
+      "@type": "@id"
+    },
+    "legacyOutlineNodeRID": {
+      "@type": "xsd:string"
+    },
+    "lineageDownFrom": {
+      "@type": "@id"
+    },
+    "lineageDownTo": {
+      "@type": "@id"
+    },
+    "lineageFrom": {
+      "@type": "@id"
+    },
+    "lineageHolder": {
+      "@type": "@id"
+    },
+    "lineageObject": {
+      "@type": "@id"
+    },
+    "lineageReceived": {
+      "@type": "@id"
+    },
+    "lineageRef": {
+      "@type": "@id"
+    },
+    "lineageType": {
+      "@type": "@id"
+    },
+    "lineageWho": {
+      "@type": "@id"
+    },
+    "lineageWork": {
+      "@type": "@id"
+    },
+    "material": {
+      "@type": "@id"
+    },
+    "microfilmCanister": {
+      "@type": "xsd:string"
+    },
+    "microfilmItem": {
+      "@type": "@id"
+    },
+    "microfilmStrip": {
+      "@type": "xsd:string"
+    },
+    "migration_exception": {
+      "@type": "xsd:string"
+    },
+    "notAfter": {
+      "@type": "xsd:gYear"
+    },
+    "notBefore": {
+      "@type": "xsd:gYear"
+    },
+    "noteText": {
+      "@type": "rdf:langString"
+    },
+    "noteType": {
+      "@type": "xsd:string"
+    },
+    "numberOfVolumes": {
+      "@type": "xsd:integer"
+    },
+    "onDate": {
+      "@type": "xsd:date"
+    },
+    "onYear": {
+      "@type": "xsd:gYear"
+    },
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "ownershipStatement": {
+      "@type": "rdf:langString"
+    },
+    "pageHasLine": {
+      "@type": "@id"
+    },
+    "paginatedBy": {
+      "@type": "@id"
+    },
+    "partIndex": {
+      "@type": "xsd:integer"
+    },
+    "partOf": {
+      "@type": "@id"
+    },
+    "partTreeIndex": {
+      "@type": "xsd:string"
+    },
+    "partType": {
+      "@type": "@id"
+    },
+    "personConsortOf": {
+      "@type": "@id"
+    },
+    "personEvent": {
+      "@type": "@id"
+    },
+    "personEventCorporation": {
+      "@type": "@id"
+    },
+    "personEventRole": {
+      "@type": "@id"
+    },
+    "personGender": {
+      "@type": "@id"
+    },
+    "personHasConsort": {
+      "@type": "@id"
+    },
+    "personName": {
+      "@type": "@id"
+    },
+    "personOfSect": {
+      "@type": "@id"
+    },
+    "personStudentOf": {
+      "@type": "@id"
+    },
+    "personTeacherOf": {
+      "@type": "@id"
+    },
+    "placeAccuracy": {
+      "@type": "xsd:string"
+    },
+    "placeAddress": {
+      "@type": "@id"
+    },
+    "placeChgisId": {
+      "@type": "xsd:string"
+    },
+    "placeContains": {
+      "@type": "@id"
+    },
+    "placeEvent": {
+      "@type": "@id"
+    },
+    "placeGB2260-2013": {
+      "@type": "xsd:string"
+    },
+    "placeGonpaPerEcumen": {
+      "@type": "xsd:string"
+    },
+    "placeLat": {
+      "@type": "xsd:string"
+    },
+    "placeLocatedIn": {
+      "@type": "@id"
+    },
+    "placeLong": {
+      "@type": "xsd:string"
+    },
+    "placeMARCCountryCode": {
+      "@type": "xsd:string"
+    },
+    "placeRegionPoly": {
+      "@type": "xsd:string"
+    },
+    "placeType": {
+      "@type": "@id"
+    },
+    "placeWB2000": {
+      "@type": "xsd:integer"
+    },
+    "placeWB2010": {
+      "@type": "xsd:integer"
+    },
+    "placeWBArea": {
+      "@type": "xsd:integer"
+    },
+    "printMethod": {
+      "@type": "@id"
+    },
+    "publisherLocation": {
+      "@type": "rdf:langString"
+    },
+    "publisherName": {
+      "@type": "rdf:langString"
+    },
+    "qualityGrade": {
+      "@type": "xsd:integer"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "restored": {
+      "@type": "rdf:langString"
+    },
+    "restoredAlt": {
+      "@type": "rdf:langString"
+    },
+    "rkts": "http://purl.rkts.eu/resource/",
+    "role": {
+      "@type": "@id"
+    },
+    "scanInfo": {
+      "@type": "rdf:langString"
+    },
+    "script": {
+      "@type": "@id"
+    },
+    "serialHasInstance": {
+      "@type": "@id"
+    },
+    "serialHasMember": {
+      "@type": "@id"
+    },
+    "serialInstanceOf": {
+      "@type": "@id"
+    },
+    "serialMemberOf": {
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sourceNote": {
+      "@type": "rdf:langString"
+    },
+    "sponsoshipStatement": {
+      "@type": "rdf:langString"
+    },
+    "translationOf": {
+      "@type": "@id"
+    },
+    "transliteration": {
+      "@type": "@id"
+    },
+    "transliterationOf": {
+      "@type": "@id"
+    },
+    "type": "@type",
+    "typeOfCopy": {
+      "@type": "@id"
+    },
+    "uiAbbrFormat": {
+      "@type": "xsd:string"
+    },
+    "viaf": "http://viaf.org/viaf/",
+    "volumeHasEtext": {
+      "@type": "@id"
+    },
+    "volumeName": {
+      "@type": "rdf:langString"
+    },
+    "volumeNote": {
+      "@type": "xsd:string"
+    },
+    "volumeOf": {
+      "@type": "@id"
+    },
+    "volumePagesIntro": {
+      "@type": "xsd:integer"
+    },
+    "volumePagesTbrcIntro": {
+      "@type": "xsd:integer"
+    },
+    "volumePagesText": {
+      "@type": "xsd:integer"
+    },
+    "volumePagesTotal": {
+      "@type": "xsd:integer"
+    },
+    "volumePhysicalDescription": {
+      "@type": "rdf:langString"
+    },
+    "wd": "http://www.wikidata.org/entity/",
+    "workDerivativeOf": {
+      "@type": "@id"
+    },
+    "workEvent": {
+      "@type": "@id"
+    },
+    "workExtractOf": {
+      "@type": "@id"
+    },
+    "workGenre": {
+      "@type": "@id"
+    },
+    "workHasDerivative": {
+      "@type": "@id"
+    },
+    "workHasInstance": {
+      "@type": "@id"
+    },
+    "workHasParallelPartsIn": {
+      "@type": "@id"
+    },
+    "workHasParallelsIn": {
+      "@type": "@id"
+    },
+    "workHasTranslation": {
+      "@type": "@id"
+    },
+    "workIsAbout": {
+      "@type": "@id"
+    },
+    "workSeriesNumber": {
+      "@type": "xsd:string"
+    },
+    "workSideBoxSequenceId": {
+      "@type": "rdf:langString"
+    },
+    "workTranslationOf": {
+      "@type": "@id"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "yearOffset": {
+      "@type": "xsd:integer"
     }
   }
 }
