@@ -11,20 +11,11 @@
     "adm:adminAbout": {
       "@type": "@id"
     },
-    "adm:attributionName": {
-      "@type": "rdf:langString"
-    },
-    "adm:attributionStatement": {
-      "@type": "rdf:langString"
-    },
     "adm:attributionURL": {
       "@type": "xsd:anyURI"
     },
     "adm:canonicalHtml": {
       "@type": "xsd:anyURI"
-    },
-    "adm:catalogingConvention": {
-      "@type": "rdf:langString"
     },
     "adm:copyrightOwner": {
       "@type": "@id"
@@ -38,17 +29,8 @@
     "adm:facetIndex": {
       "@type": "xsd:int"
     },
-    "adm:gitPath": {
-      "@type": "xsd:string"
-    },
     "adm:gitRepo": {
       "@type": "@id"
-    },
-    "adm:gitRepoName": {
-      "@type": "xsd:string"
-    },
-    "adm:gitRevision": {
-      "@type": "xsd:string"
     },
     "adm:gitUrl": {
       "@type": "xsd:anyURI"
@@ -65,17 +47,11 @@
     "adm:license": {
       "@type": "@id"
     },
-    "adm:logAgent": {
-      "@type": "xsd:string"
-    },
     "adm:logDate": {
       "@type": "xsd:dateTime"
     },
     "adm:logEntry": {
       "@type": "@id"
-    },
-    "adm:logMessage": {
-      "@type": "rdf:langString"
     },
     "adm:logMethod": {
       "@type": "@id"
@@ -89,44 +65,17 @@
     "adm:outline": {
       "@type": "@id"
     },
-    "adm:outlineAuthorStatement": {
-      "@type": "xsd:string"
-    },
     "adm:outlineLogEntry": {
       "@type": "@id"
     },
     "adm:outlineType": {
       "@type": "@id"
     },
-    "adm:place_TLM_accession": {
-      "@type": "xsd:string"
-    },
-    "adm:place_TLM_admin": {
-      "@type": "xsd:string"
-    },
-    "adm:place_TLM_adminEmail": {
-      "@type": "xsd:string"
-    },
-    "adm:place_TLM_code": {
-      "@type": "xsd:string"
-    },
-    "adm:place_TLM_librarian": {
-      "@type": "xsd:string"
-    },
-    "adm:place_TLM_librarianEmail": {
-      "@type": "xsd:string"
-    },
-    "adm:place_TLM_num": {
-      "@type": "xsd:string"
-    },
     "adm:place_TLM_taxonomy": {
       "@type": "@id"
     },
     "adm:replaceWith": {
       "@type": "@id"
-    },
-    "adm:restrictedInChina": {
-      "@type": "xsd:boolean"
     },
     "adm:sameAsBDRC": {
       "@type": "@id"
@@ -161,26 +110,11 @@
     "adm:seeOther": {
       "@type": "xsd:anyURI"
     },
-    "adm:statementScore": {
-      "@type": "xsd:integer"
-    },
     "adm:status": {
       "@type": "@id"
     },
     "adm:termsOfUse": {
       "@type": "@id"
-    },
-    "adm:translationPriority": {
-      "@type": "xsd:integer"
-    },
-    "adm:userTooltip": {
-      "@type": "rdf:langString"
-    },
-    "adm:workLegacyNode": {
-      "@type": "xsd:string"
-    },
-    "adm:work_desc_date": {
-      "@type": "xsd:string"
     },
     "agent": {
       "@type": "@id"
@@ -191,9 +125,6 @@
     "associatedTradition": {
       "@type": "@id"
     },
-    "authorshipStatement": {
-      "@type": "rdf:langString"
-    },
     "baseMaterial": {
       "@type": "@id"
     },
@@ -202,17 +133,8 @@
     "bdr": "http://purl.bdrc.io/resource/",
     "bdu": "http://purl.bdrc.io/resource-nc/user/",
     "bf": "http://id.loc.gov/ontologies/bibframe/",
-    "biblioNote": {
-      "@type": "rdf:langString"
-    },
     "binding": {
       "@type": "@id"
-    },
-    "catalogInfo": {
-      "@type": "rdf:langString"
-    },
-    "chunkContents": {
-      "@type": "rdf:langString"
     },
     "codicologicalpartType": {
       "@type": "@id"
@@ -226,29 +148,11 @@
     "collectionPlace": {
       "@type": "@id"
     },
-    "colophon": {
-      "@type": "rdf:langString"
-    },
     "contentLocation": {
       "@type": "@id"
     },
-    "contentLocationByFolio": {
-      "@type": "xsd:boolean"
-    },
-    "contentLocationEndSide": {
-      "@type": "xsd:string"
-    },
     "contentLocationInstance": {
       "@type": "@id"
-    },
-    "contentLocationSeqNum": {
-      "@type": "xsd:string"
-    },
-    "contentLocationSide": {
-      "@type": "xsd:string"
-    },
-    "contentLocationStatement": {
-      "@type": "xsd:string"
     },
     "contentMethod": {
       "@type": "@id"
@@ -277,31 +181,10 @@
     "creator": {
       "@type": "@id"
     },
-    "custodialHistory": {
-      "@type": "rdf:langString"
-    },
-    "dateApproximate": {
-      "@type": "xsd:boolean"
-    },
     "dateIndication": {
       "@type": "@id"
     },
-    "digitalLendingPossible": {
-      "@type": "xsd:boolean"
-    },
     "dila": "http://purl.dila.edu.tw/resource/",
-    "dimHeight": {
-      "@type": "xsd:string"
-    },
-    "dimLength": {
-      "@type": "xsd:string"
-    },
-    "dimWidth": {
-      "@type": "xsd:string"
-    },
-    "dimensionsStatement": {
-      "@type": "xsd:string"
-    },
     "eTextHasChunk": {
       "@type": "@id"
     },
@@ -311,47 +194,14 @@
     "eTextInInstance": {
       "@type": "@id"
     },
-    "eTextInVolume": {
-      "@type": "xsd:integer"
-    },
-    "eTextIsVolume": {
-      "@type": "xsd:integer"
-    },
     "eTextResource": {
       "@type": "@id"
-    },
-    "eTextSourcePath": {
-      "@type": "xsd:string"
-    },
-    "eTextTitle": {
-      "@type": "rdf:langString"
-    },
-    "eTextVolumeIndex": {
-      "@type": "xsd:integer"
-    },
-    "editionStatement": {
-      "@type": "rdf:langString"
-    },
-    "eventText": {
-      "@type": "xsd:string"
     },
     "eventWhere": {
       "@type": "@id"
     },
     "eventWho": {
       "@type": "@id"
-    },
-    "excerpt": {
-      "@type": "rdf:langString"
-    },
-    "excerptBeginning": {
-      "@type": "rdf:langString"
-    },
-    "excerptEnd": {
-      "@type": "rdf:langString"
-    },
-    "explicit": {
-      "@type": "rdf:langString"
     },
     "femcConversionOf": {
       "@type": "@id"
@@ -373,9 +223,6 @@
     },
     "hasDaughter": {
       "@type": "@id"
-    },
-    "hasFascicles": {
-      "@type": "xsd:string"
     },
     "hasFather": {
       "@type": "@id"
@@ -436,9 +283,6 @@
     },
     "hasIncarnationYangtse": {
       "@type": "@id"
-    },
-    "hasInstanceNum": {
-      "@type": "xsd:string"
     },
     "hasMaternalAunt": {
       "@type": "@id"
@@ -525,12 +369,6 @@
       "@type": "@id"
     },
     "id": "@id",
-    "illustrations": {
-      "@type": "xsd:string"
-    },
-    "imageCount": {
-      "@type": "xsd:integer"
-    },
     "inCollection": {
       "@type": "@id"
     },
@@ -558,26 +396,14 @@
     "incarnationYangtse": {
       "@type": "@id"
     },
-    "incipit": {
-      "@type": "rdf:langString"
-    },
-    "inferSubTree": {
-      "@type": "xsd:boolean"
-    },
     "instanceCreator": {
       "@type": "@id"
     },
     "instanceDerivativeOf": {
       "@type": "@id"
     },
-    "instanceErrata": {
-      "@type": "rdf:langString"
-    },
     "instanceEvent": {
       "@type": "@id"
-    },
-    "instanceExtentStatement": {
-      "@type": "xsd:string"
     },
     "instanceHasDerivative": {
       "@type": "@id"
@@ -600,26 +426,8 @@
     "interpretationOf": {
       "@type": "@id"
     },
-    "isComplete": {
-      "@type": "xsd:boolean"
-    },
-    "isDamaged": {
-      "@type": "xsd:boolean"
-    },
     "isIncarnation": {
       "@type": "@id"
-    },
-    "isRoot": {
-      "@type": "xsd:boolean"
-    },
-    "itemBDRCHoldingStatement": {
-      "@type": "xsd:string"
-    },
-    "itemCopies": {
-      "@type": "xsd:string"
-    },
-    "itemException": {
-      "@type": "rdf:langString"
     },
     "itemForInstance": {
       "@type": "@id"
@@ -627,23 +435,11 @@
     "itemLibrary": {
       "@type": "@id"
     },
-    "itemMissingVolumes": {
-      "@type": "xsd:string"
-    },
-    "itemShelf": {
-      "@type": "xsd:string"
-    },
-    "itemVolumes": {
-      "@type": "xsd:integer"
-    },
     "kinWith": {
       "@type": "@id"
     },
     "labelConnection": {
       "@type": "@id"
-    },
-    "legacyOutlineNodeRID": {
-      "@type": "xsd:string"
     },
     "lineageDownFrom": {
       "@type": "@id"
@@ -678,17 +474,8 @@
     "material": {
       "@type": "@id"
     },
-    "microfilmCanister": {
-      "@type": "xsd:string"
-    },
     "microfilmItem": {
       "@type": "@id"
-    },
-    "microfilmStrip": {
-      "@type": "xsd:string"
-    },
-    "migration_exception": {
-      "@type": "xsd:string"
     },
     "notAfter": {
       "@type": "xsd:gYear"
@@ -696,14 +483,11 @@
     "notBefore": {
       "@type": "xsd:gYear"
     },
-    "noteText": {
-      "@type": "rdf:langString"
+    "note": {
+      "@type": "@id"
     },
-    "noteType": {
-      "@type": "xsd:string"
-    },
-    "numberOfVolumes": {
-      "@type": "xsd:integer"
+    "noteSource": {
+      "@type": "@id"
     },
     "onDate": {
       "@type": "xsd:date"
@@ -712,8 +496,8 @@
       "@type": "xsd:gYear"
     },
     "owl": "http://www.w3.org/2002/07/owl#",
-    "ownershipStatement": {
-      "@type": "rdf:langString"
+    "owl:sameAs": {
+      "@type": "@id"
     },
     "pageHasLine": {
       "@type": "@id"
@@ -721,14 +505,8 @@
     "paginatedBy": {
       "@type": "@id"
     },
-    "partIndex": {
-      "@type": "xsd:integer"
-    },
     "partOf": {
       "@type": "@id"
-    },
-    "partTreeIndex": {
-      "@type": "xsd:string"
     },
     "partType": {
       "@type": "@id"
@@ -763,14 +541,8 @@
     "personTeacherOf": {
       "@type": "@id"
     },
-    "placeAccuracy": {
-      "@type": "xsd:string"
-    },
     "placeAddress": {
       "@type": "@id"
-    },
-    "placeChgisId": {
-      "@type": "xsd:string"
     },
     "placeContains": {
       "@type": "@id"
@@ -778,65 +550,20 @@
     "placeEvent": {
       "@type": "@id"
     },
-    "placeGB2260-2013": {
-      "@type": "xsd:string"
-    },
-    "placeGonpaPerEcumen": {
-      "@type": "xsd:string"
-    },
-    "placeLat": {
-      "@type": "xsd:string"
-    },
     "placeLocatedIn": {
       "@type": "@id"
-    },
-    "placeLong": {
-      "@type": "xsd:string"
-    },
-    "placeMARCCountryCode": {
-      "@type": "xsd:string"
-    },
-    "placeRegionPoly": {
-      "@type": "xsd:string"
     },
     "placeType": {
       "@type": "@id"
     },
-    "placeWB2000": {
-      "@type": "xsd:integer"
-    },
-    "placeWB2010": {
-      "@type": "xsd:integer"
-    },
-    "placeWBArea": {
-      "@type": "xsd:integer"
-    },
     "printMethod": {
       "@type": "@id"
     },
-    "publisherLocation": {
-      "@type": "rdf:langString"
-    },
-    "publisherName": {
-      "@type": "rdf:langString"
-    },
-    "qualityGrade": {
-      "@type": "xsd:integer"
-    },
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "restored": {
-      "@type": "rdf:langString"
-    },
-    "restoredAlt": {
-      "@type": "rdf:langString"
-    },
     "rkts": "http://purl.rkts.eu/resource/",
     "role": {
       "@type": "@id"
-    },
-    "scanInfo": {
-      "@type": "rdf:langString"
     },
     "script": {
       "@type": "@id"
@@ -854,11 +581,15 @@
       "@type": "@id"
     },
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "sourceNote": {
-      "@type": "rdf:langString"
+    "skos:closeMatch": {
+      "@type": "@id"
     },
-    "sponsoshipStatement": {
-      "@type": "rdf:langString"
+    "tmp": "http://purl.bdrc.io/ontology/tmp/",
+    "tmp:hasRole": {
+      "@type": "@id"
+    },
+    "tmp:thumbnailIIIFService": {
+      "@type": "@id"
     },
     "translationOf": {
       "@type": "@id"
@@ -873,36 +604,12 @@
     "typeOfCopy": {
       "@type": "@id"
     },
-    "uiAbbrFormat": {
-      "@type": "xsd:string"
-    },
     "viaf": "http://viaf.org/viaf/",
     "volumeHasEtext": {
       "@type": "@id"
     },
-    "volumeName": {
-      "@type": "rdf:langString"
-    },
-    "volumeNote": {
-      "@type": "xsd:string"
-    },
     "volumeOf": {
       "@type": "@id"
-    },
-    "volumePagesIntro": {
-      "@type": "xsd:integer"
-    },
-    "volumePagesTbrcIntro": {
-      "@type": "xsd:integer"
-    },
-    "volumePagesText": {
-      "@type": "xsd:integer"
-    },
-    "volumePagesTotal": {
-      "@type": "xsd:integer"
-    },
-    "volumePhysicalDescription": {
-      "@type": "rdf:langString"
     },
     "wd": "http://www.wikidata.org/entity/",
     "workDerivativeOf": {
@@ -935,18 +642,9 @@
     "workIsAbout": {
       "@type": "@id"
     },
-    "workSeriesNumber": {
-      "@type": "xsd:string"
-    },
-    "workSideBoxSequenceId": {
-      "@type": "rdf:langString"
-    },
     "workTranslationOf": {
       "@type": "@id"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "yearOffset": {
-      "@type": "xsd:integer"
-    }
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
   }
 }

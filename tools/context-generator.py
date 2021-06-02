@@ -11,6 +11,7 @@ BDA = "http://purl.bdrc.io/admindata/"
 BDU = "http://purl.bdrc.io/resource-nc/user/"
 BF = "http://id.loc.gov/ontologies/bibframe/"
 BDG = "http://purl.bdrc.io/graph/"
+TMP = "http://purl.bdrc.io/ontology/tmp/"
 ADM = "http://purl.bdrc.io/ontology/admin/"
 WD = "http://www.wikidata.org/entity/"
 DILA = "http://purl.dila.edu.tw/resource/"
@@ -33,7 +34,8 @@ PREFIXES = {
     "wd": WD,
     "viaf": VIAF,
     "dila": DILA,
-    "rkts": RKTS
+    "rkts": RKTS,
+    "tmp": TMP
 }
 
 PATHS = [
@@ -55,6 +57,10 @@ def add_static(ctx):
     ctx["id"] = "@id"
     ctx["@vocab"] = BDO
     ctx["adm:hasAdmin"] = { "@reverse": "http://purl.bdrc.io/ontology/admin/adminAbout" }
+    ctx["owl:sameAs"] = { "@type": "@id" }
+    ctx["skos:closeMatch"] = { "@type": "@id" }
+    ctx["tmp:hasRole"] = { "@type": "@id" }
+    ctx["tmp:thumbnailIIIFService"] = { "@type": "@id" }
 
 def shortname(r):
     pref, _, lname = NSM.compute_qname_strict(r)
@@ -75,6 +81,8 @@ def add_datatype_prop(model, prop, ctx):
         return
     r = ranges[0]
     rshort = shortname(r)
+    if rshort in ["xsd:string", "rdf:langString", "xsd:boolean", "xsd:integer", "xsd:float"]:
+        return
     pshort = shortname(prop)
     if (pshort.startswith("ns") or ":" not in rshort):
         return
