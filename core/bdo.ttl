@@ -117,15 +117,6 @@ bdo:AhistoricalAgent
 	adm:userTooltip "An ahistorical agent may be a deity or other non-human agent that is said to exist outside of human history"@en ;
 	.
 
-bdo:AnyOrganization
-	a owl:Class ;
-	rdfs:subClassOf bdo:Organization ;
-	rdfs:label "any organization"@en ;
-	adm:deprecatedComment "deprecated in favor of setting the range of :agent to :Agents"@en ;
-	adm:userTooltip "Any sort of organization"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:ArchivesCollection
 	a owl:Class ;
 	rdfs:subClassOf bdo:InstitutionalCollection ;
@@ -177,15 +168,6 @@ bdo:CarvedEvent
 	adm:userTooltip "The event of carving a work (in woodblocks, stone, etc.)"@en ;
 	.
 
-bdo:Catalog
-	a owl:Class ;
-	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "Catalog"@en ;
-	adm:deprecatedComment "remove, not needed"@en ;
-	adm:userTooltip "A catalog such as the Tohoku or the FEMC Volumes I, II, or III"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:ChineseDate
 	a owl:Class ;
 	rdfs:subClassOf bdo:Date ;
@@ -204,16 +186,6 @@ bdo:Collection
 	rdfs:label "Collection"@en ;
 	adm:translationPriority "1"^^xsd:integer ;
 	adm:userTooltip "Designates a collection of Bibliographic entities"@en ;
-	.
-
-bdo:CollectionInstitution
-	a owl:Class ;
-	rdfs:subClassOf bdo:Organization ;
-	rdfs:label "Collection institution"@en ;
-	adm:deprecatedComment "remove, not used"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip 'An Insitution containing a collection of works such as "Bibliothèque EFEO - Preah Vanarât Ken Vong", "Fragile Palm Leaves Foundation" or "National Library of Mongolia"'@en ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:ColophonTitle
@@ -346,15 +318,6 @@ bdo:DigitalInstance
 	a owl:Class ;
 	rdfs:subClassOf bdo:Instance ;
 	rdfs:label "Digital instance"@en ;
-	.
-
-bdo:EditedEvent
-	a owl:Class ;
-	rdfs:subClassOf bdo:InstanceEvent ;
-	rdfs:label "Work Edited"@en ;
-	adm:deprecatedComment "deprecated in favor of :CompiledEvent"@en ;
-	adm:userTooltip "An event of editing a :Work"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:EnscribedEvent
@@ -497,18 +460,6 @@ bdo:Event
 	rdfs:label "Event"@en ;
 	adm:technicalComment "Class of all the various event classes in the ontology: PersonEvent, PlaceEvent, LineageReceived, etc"@en ;
 	adm:userTooltip "The class of the various sorts of events: Persons, Places, Works, and Lineages"@en ;
-	.
-
-bdo:EventOrPeriod
-	a owl:Class ;
-	rdfs:label "Event or DateIndication"@en ;
-	adm:deprecatedComment "deprecated as a bad idea. not used"@en ;
-	adm:technicalComment "domain of various date properties"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	owl:unionOf (
-		bdo:Event
-		bdo:DateIndication
-	) ;
 	.
 
 bdo:Facet
@@ -963,14 +914,6 @@ bdo:PersonBodhisattvaVowName
 	adm:userTooltip "The name received by the Person upon taking their Bodhisattva vows"@en ;
 	.
 
-bdo:PersonChineseName
-	a owl:Class ;
-	rdfs:subClassOf bdo:PersonName ;
-	rdfs:label "Chinese Name"@en ;
-	adm:userTooltip "The Person's name as generally known in Chinese traditions"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:PersonCommonName
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonName ;
@@ -1056,16 +999,6 @@ bdo:PersonFlourished
 	rdfs:subClassOf bdo:PersonEvent ;
 	rdfs:label "Flourished"@en ;
 	adm:userTooltip "When a person's activity occured. This is a range of dates, indicated with :notBefore / :notAfter"@en ;
-	.
-
-bdo:PersonFoundsMonastery
-	a owl:Class ;
-	rdfs:subClassOf bdo:PersonEvent ;
-	rdfs:label "Founds Monastery"@en ;
-	adm:deprecatedComment "this Person event is deprecated in favor of modeling via PlaceEvent"@en ;
-	adm:replaceWithClass bdo:PlaceFounded ;
-	adm:userTooltip "The Event of a Person founding a Monastery"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:PersonGterMaDiscovery
@@ -1167,21 +1100,6 @@ bdo:PersonOfficialTitle
 	rdfs:subClassOf bdo:PersonName ;
 	rdfs:label "Official Title"@en ;
 	adm:userTooltip "The official title given to a person. In the Burmese context these would be given by the King, or in other rare contexts by the colonial administration."@en ;
-	.
-
-bdo:PersonOrCorporation
-	a owl:Class ;
-	rdfs:label "person or coporation"@en ;
-	rdfs:comment
-		"Union class of Persons and Corporations. Used when a specific :Person or a :Corporation may be the object of a property, e.g., :eventWho on a :WorkPublished event"@en ,
-		"deprecated in favor of :Agent"@en
-		;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated "true"^^xsd:boolean ;
-	owl:unionOf (
-		bdo:Corporation
-		bdo:Person
-	) ;
 	.
 
 bdo:PersonOrPlace
@@ -1659,27 +1577,6 @@ The set of such individuals may be further organized via :Taxonomy but need not 
 	adm:userTooltip "Types are used to indicate features names, titles, events and so on."@en ;
 	.
 
-bdo:UnicodeWork
-	a owl:Class ;
-	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "Unicode work (etext)"@en ;
-	adm:deprecatedComment "replace with EtextInstance"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "Indicates a searchable etext Work versus digitized page images."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:UnspecifiedWorkClass
-	a owl:Class ;
-	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "Unspecified work class"@en ;
-	adm:deprecatedComment "not used, not needed"@en ;
-	adm:technicalComment "This is the class of migrated works for which no work type was indicated. Needs repair after migration"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "Works for which no work type was indicated"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:VirtualInstance
 	a owl:Class ;
 	rdfs:subClassOf bdo:BundleInstance ;
@@ -1735,15 +1632,6 @@ bdo:WorkCollection
 	rdfs:label "collection"@en ;
 	adm:technicalComment "Was AbstarctWork, changed to align with Bibframe 2.0"@en ;
 	adm:userTooltip "A work that is made of a collection of other works (ex: gsung bum, canonical collection, etc.)."@en ;
-	.
-
-bdo:WorkDkarChagTitle
-	a owl:Class ;
-	rdfs:subClassOf bdo:Title ;
-	rdfs:label "Table of Contents Title"@en ;
-	adm:deprecatedComment "retired in favor a the more neutral WorkToCTitle"@en ;
-	adm:replaceWith bdo:ToCTitle ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:WorkEvent
@@ -1810,15 +1698,6 @@ bdo:biblioNote
 	adm:userTooltip "A note regarding a bibliographic feature of the Instance"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
-	.
-
-bdo:biblioStatus
-	a owl:DatatypeProperty ;
-	rdfs:label "bibliographic status statement"@en ;
-	adm:userTooltip "A bibliographic status statement in the language of the Instance"@en ;
-	rdfs:domain bdo:Instance ;
-	rdfs:range rdf:langString ;
-	owl:deprecated true ;
 	.
 
 bdo:binding
@@ -2159,250 +2038,6 @@ bdo:creator
 	rdfs:range bdo:AgentAsCreator ;
 	.
 
-bdo:creatorAmanuensis
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label
-		"amanuensis"@en ,
-		"筆受"@zh-hant
-		;
-	adm:userTooltip "A person who writes down a translation in Chinese, in a capacity something like a scribe."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorArtist
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "artist"@en ;
-	adm:userTooltip "An artist who provided illustrations and or other non-textual content such as tables, graphs, and the like"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorAttributedAuthor
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "attributed author"@en ;
-	adm:userTooltip "A creator identified by a separate source as an author of the Work"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorBard
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "bard"@en ;
-	adm:userTooltip "for a Work of verse a poet who composed the verse"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorCalligrapher
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "calligrapher"@en ;
-	adm:userTooltip "For a handwritten Work an individual that drew the text or carved it on woord blocks"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorCommentator
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "commentator"@en ;
-	adm:userTooltip "A person that provided a commentary included in a Work. Used when a Work conventionally comprises root texts and one or more commentaries."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:volumeNote
-	a owl:DatatypeProperty ;
-	rdfs:label "volumes note"@en ;
-	rdfs:domain bdo:BiblioEntity ;
-	rdfs:range xsd:string ;
-	.
-
-bdo:creatorCompiler
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "compiler"@en ;
-	adm:catalogingConvention """a person who assembles a text out of pre-existing smaller texts or portions, such that the larger text has the nature of a compilation, anthology, chrestomathy etc. Cf., W1KG4337:
-
-Liturgical texts including supplication and recitations for liberating beings from the bardo states. Editor: 
-a ti bstan pa'i rgyal mtshan, rdzogs chen 03 (P7404)"""@en ;
-	adm:userTooltip "A person who assembles a text out of pre-existing smaller texts or portions"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorContributingAuthor
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "contributing author"@en ;
-	adm:catalogingConvention "An individual that author one or more parts of a Work. Used in situations where the Work has a few contributors that are singled out as properties of the Work or when only partial authorship is known, cf. W23280"@en ;
-	adm:userTooltip "An individual that author one or more parts of a Work."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorEditor
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "editor"@en ;
-	adm:deprecatedComment "deprecated in favor of bdo:Compiler"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorForger
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label
-		"forger"@en ,
-		"偽作"@zh-hant
-		;
-	adm:catalogingConvention 'a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was "translated" by a person other than the forger (i.e. with a false ascription attached).'@en ;
-	adm:userTooltip "A person who produces a text, but then knowingly presents it as the end result of some other process of composition"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorGeneralAuthor
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "general author"@en ;
-	adm:deprecatedComment "deprecated in favor of :MainAuthor"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorHeadTranslator
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label
-		"head translator"@en ,
-		"譯主"@zh-hant
-		;
-	adm:catalogingConvention "The person identified explicitly or treated by the tradition implicitly as the head of the translation group or workshop that produced a translation. Such persons may be explicitly identified by the tradition as such, but often our knowledge that this was in fact a person's role is implicit or inferred from other knowledge about the composition of the translation group."@en ;
-	adm:userTooltip "The person identified by tradition implicitly as the head of the translation group"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorIndicScholar
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "Indic Scholar"@en ;
-	adm:catalogingConvention 'in the case of Chinese texts, the persons who function in the translation group as experts in the Indic traditions in question can sometimes be identified primarily by other function labels, such as "head translator"; we use this creator type primarily as an equivalent for persons whom the Chinese tradition states "handled the Indic text", Chn. (shou) zhi Fan (wen) [手]執梵[文], (shou) zhi Hu (ben) [手]執胡[本] etc.; this role can also overlap with that of "reciter"'@en ;
-	adm:userTooltip "Persons who function in the translation group as experts in the Indic traditions"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorMainAuthor
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "main author"@en ;
-	adm:catalogingConvention 'the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the "author" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the "author" of a commentary'@en ;
-	adm:userTooltip "The actual author of a text"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorOralTranslator
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "oral translator"@en ;
-	adm:catalogingConvention "a person who actually renders a text from a foreign language into Chinese, in a manner that the tradition clearly states was spoken rather than written; Chn. chuanyu 傳語, kouxuan 口宣[...言], chuanyi 傳譯, duyu 度語 etc."@en ;
-	adm:userTooltip "a person who translates an orally transmitted text"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorPandita
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "pandita"@en ;
-	adm:deprecatedComment "deprecated in favor of :IndicScholar"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorRecipientOfResponseToQuery
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "recipient of response to query"@en ;
-	adm:catalogingConvention """An individual to whom answers in a Work are addressed. Cf., W22146:
-
-Study of the history of Buddhism in Tibet. Written by the 16th century author, Yagde Dulzin Khyenrab Gyatso. Written in response to polemical questions by Karmapa 08 Mikyo Dorje (1507-1554) raised against the Nyingma order."""@en ;
-	adm:userTooltip "An individual to whom answers in a Work are addressed"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorReciter
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "reciter"@en ;
-	adm:catalogingConvention 'a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation; Chn. koushou 口授, tongxuan 同宣 etc., though this function can also sometimes overlap with "IndicScholar" (see below)'@en ;
-	adm:userTooltip "a person who recites an original text (usually Indic) in an original (usually Indic) language during the process of translation"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorRequester
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "requester"@en ;
-	adm:catalogingConvention "An individual who requested the author to write the Work"@en ;
-	adm:deprecatedComment "deprecated - not used"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorReviser
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "reviser"@en ;
-	adm:catalogingConvention """An individual who is known to have revised a previous work or translation. Cf., W3CN4970:
-
-The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-	adm:userTooltip "An individual who is known to have revised a previous work or translation."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorReviserOfTranslation
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "reviser of translation"@en ;
-	adm:catalogingConvention """An individual who is known to have revised a previoius translation. Cf., W3CN4970:
-
-The root text of Pramanavartika by Dharmakirti translated by Khache Kelden Gyalpo and Ngog Lotsava Loden Sherap and revised by Shakyashri Bhadra and Sapan Kunga Gyatsen."""@en ;
-	adm:userTooltip "An individual who is known to have revised a previous translation."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorScribe
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "scribe"@en ;
-	adm:userTooltip "An individual that wrote the text typically during recitation by the author. Cf., W8145"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorTerton
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "tertön"@en ;
-	adm:catalogingConvention """An individual who revealed the Work as treasure texts. Cf., W25816:
-
-Practice text for the secret sadhana of Ganapati according to revelations by Diri Chodrak"""@en ;
-	adm:userTooltip "An individual who revealed the Work as treasure texts."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorTranslator
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "translator"@en ;
-	adm:catalogingConvention """A translator of the Work. Cf., W8LS25412:
-
-The glorious blissful garland ,the root sadhana of the dakini by Jigme Lingpa, translated by Tulku Thondup"""@en ;
-	adm:userTooltip "A translator of the Work."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:creatorUnspecified
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf bdo:workCreator ;
-	rdfs:label "unspecified"@en ;
-	adm:catalogingConvention "a person for whom our source or evidence tells us only that they were involved in the translation process, without allowing us to further specify the specific role they played in that process."@en ;
-	adm:userTooltip "A person that evidence tells us only that they were involved in the production of the Work."@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:custodialHistory
 	a owl:DatatypeProperty ;
 	rdfs:label "custodial history"@en ;
@@ -2437,9 +2072,9 @@ bdo:digitalLendingPossible
 	a owl:DatatypeProperty ;
 	rdfs:label "digital lending possible"@en ;
 	adm:userTooltip "Indicates if the digital instance can be in a Controlled Digital Lending program. In other words, indicates if a physical copy circulates."@en ;
-	rdfs:seeAlso <https://controlleddigitallending.org/> ;
 	rdfs:domain bdo:DigitalInstance ;
 	rdfs:range xsd:boolean ;
+	rdfs:seeAlso <https://controlleddigitallending.org/> ;
 	.
 
 bdo:dimHeight
@@ -3285,42 +2920,6 @@ bdo:imageCount
 	rdfs:range xsd:integer ;
 	.
 
-bdo:imageList
-	a owl:DatatypeProperty ;
-	rdfs:label "image list"@en ;
-	adm:catalogingConvention """The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character. In the normal situations the image names are incremented by one to generate image-count names.
-
-The typical case is a collection of tiffs:
-
-    :imageList \"020640001.tif:463\"
-
-which represents images named:
-
-    020640001.tif, 020640002.tif, 020640003.tif, . . . 020640463.tif
-
-Volumes that have some jpeg color material will appear like:
-
-    :imageList \"I1KG9330001.tif:2|\"I1KG9330003.jpg:561\"
-
-which encodes the first two TBRC metadata pages and the remainder as jpg images.
-
-Sometimes there are volumes that are a mix of color and bitonal images, typical the front matter might be jpg and the remainder tif:
-
-    :imageList \"I2PD44320001.tif:2|I2PD44320003.jpg:3|I2PD44320006.tif:606\"
-
-There are odd naming situations where a single name stands alone and the next name is explicitly indicated:
-
-    :imageList \"1CZ7740001.tif:43|1CZ7740043a.tif|1CZ7740044.tif:472\"
-
-when a name standalone the \":1\" can be dispensed with."""@en ;
-	adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive."@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "The string value is formatted as a sequence of image-name:image-counts separated by the pipe, '|', character."@en ;
-	rdfs:domain bdo:ImageGroup ;
-	rdfs:range xsd:string ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:imagesMissing
 	a owl:DatatypeProperty ;
 	rdfs:label "images missing"@en ;
@@ -3555,20 +3154,6 @@ bdr:W26071 a Work ;
 	owl:inverseOf bdo:workHasInstance ;
 	.
 
-bdo:instancePrintery
-	a owl:DatatypeProperty ;
-	rdfs:label "printery"@en ;
-	adm:catalogingConvention """Free text comment on where the copy of the Work that was digitized was printed.
-
-This is generally not the source printery of the original wood block prints that were later photocopied and digitized"""@en ;
-	adm:technicalComment "was :workPrintery"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "Free text comment on where the copy of the Instance that was digitized was printed."@en ;
-	rdfs:domain bdo:PhysicalInstance ;
-	rdfs:range rdf:langString ;
-	owl:deprecated true ;
-	.
-
 bdo:instanceReproductionOf
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:instanceDerivativeOf ;
@@ -3729,16 +3314,6 @@ bdo:labelConnection
 	rdfs:range bdo:Label ;
 	.
 
-bdo:langScript
-	a owl:ObjectProperty ;
-	rdfs:label "language"@en ;
-	adm:catalogingConvention "Every Instance should have at least one :langScript indicating the primary laguage and script in which the language is presented. There may be more than one :langScript when there are multiple languages used for primary text. For example, a dictionary with entries in Chinese, Sanskrit and Tibetan would list all three languages and their corresponding scripts via three :workLangScript statements"@en ;
-	adm:userTooltip "Indicates the primary language and script in which the Instance is expressed."@en ;
-	rdfs:domain bdo:Instance ;
-	rdfs:range bdo:LangScript ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:legacyOutlineNodeRID
 	a owl:AnnotationProperty ;
 	rdfs:label "legacy outline node rid"@en ;
@@ -3746,17 +3321,6 @@ bdo:legacyOutlineNodeRID
 	adm:userTooltip "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
 	rdfs:domain bdo:Work ;
 	rdfs:range xsd:string ;
-	.
-
-bdo:license
-	a owl:ObjectProperty ;
-	rdfs:label "license"@en ;
-	adm:deprecatedComment "deprecated by adm:license"@en ;
-	adm:replaceWith adm:license ;
-	adm:userTooltip "The license under which access to the Work is provided"@en ;
-	rdfs:domain bdo:TextualEntity ;
-	rdfs:seeAlso bdo:License ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:lineageDownFrom
@@ -4026,22 +3590,6 @@ bdo:onDate
 	rdfs:range xsd:date ;
 	.
 
-bdo:onOrAbout
-	a owl:DatatypeProperty ;
-	rdfs:subPropertyOf bdo:eventWhen ;
-	rdfs:label "circa"@en ;
-	adm:deprecatedComment "deprecated in favor of :onDate, :onYear, :notBefore, and :notAfter"@en ;
-	adm:replaceWith
-		bdo:notAfter ,
-		bdo:notBefore ,
-		bdo:onDate ,
-		bdo:onYear
-		;
-	rdfs:domain bdo:Event ;
-	rdfs:range xsd:string ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:onYear
 	a owl:DatatypeProperty ;
 	rdfs:subPropertyOf bdo:eventWhen ;
@@ -4214,16 +3762,6 @@ bdo:personHasConsort
 	rdfs:range bdo:Person ;
 	.
 
-bdo:personIsNonActor
-	a owl:DatatypeProperty ;
-	rdfs:label "non actor"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "A non-Tibetan individual that has been included in the db because they are translators, or authors of some work of interest."@en ;
-	rdfs:domain bdo:Person ;
-	rdfs:range xsd:boolean ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:personName
 	a
 		owl:IrreflexiveProperty ,
@@ -4241,16 +3779,6 @@ bdo:personOfSect
 	adm:userTooltip "Indicates a school, tradition, or sect that the Person is associated with."@en ;
 	rdfs:domain bdo:Person ;
 	rdfs:range bdo:Topic ;
-	.
-
-bdo:personOfTradition
-	a owl:ObjectProperty ;
-	rdfs:label "person of tradition"@en ;
-	adm:deprecatedComment "retired in favor of :associatedTradition"@en ;
-	adm:userTooltip "Indicates a Tradition that the Person is associated with."@en ;
-	rdfs:domain bdo:Person ;
-	rdfs:range bdo:Tradition ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:personStudentOf
@@ -4315,16 +3843,6 @@ bdo:placeEvent
 	rdfs:range bdo:PlaceEvent ;
 	.
 
-bdo:placeEventAffiliation
-	a owl:ObjectProperty ;
-	rdfs:label "affiliated tradition"@en ;
-	adm:deprecatedComment "retired in favor of :associatedTradition"@en ;
-	adm:userTooltip "Refers to the Tradition that the place event is affiliated with."@en ;
-	rdfs:domain bdo:PlaceEvent ;
-	rdfs:range bdo:Tradition ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:placeGB2260-2013
 	a owl:DatatypeProperty ;
 	rdfs:label "GB2260-2013"@en ;
@@ -4344,19 +3862,6 @@ Gonpa per ecumen would be how many temples are there per one sq km of land area 
 	adm:userTooltip "The number of monasteries per ecumen in this Place (presumably a region) from data provided by Karl Ryavec"@en ;
 	rdfs:domain bdo:Place ;
 	rdfs:range xsd:string ;
-	.
-
-bdo:placeIsNear
-	a
-		owl:ObjectProperty ,
-		owl:SymmetricProperty
-		;
-	adm:deprecatedComment "deprecated because not actually used in legacy data and not well defined"@en ;
-	adm:userTooltip "Indicates that this Place is near to another - typically because of some reference in a document. In other words, there is some textual reason for mentioning the nearness; otherwise, the metadata could be filled with gratuitous nearness assertions."@en ;
-	rdfs:domain bdo:Place ;
-	rdfs:range bdo:Place ;
-	owl:deprecated "true"^^xsd:boolean ;
-	skos:prefLabel "is near"@en ;
 	.
 
 bdo:placeLat
@@ -4707,6 +4212,13 @@ bdo:volumeName
 	rdfs:range rdf:langString ;
 	.
 
+bdo:volumeNote
+	a owl:DatatypeProperty ;
+	rdfs:label "volumes note"@en ;
+	rdfs:domain bdo:BiblioEntity ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:volumeNumber
 	a owl:DatatypeProperty ;
 	rdfs:label "volume number"@en ;
@@ -4766,46 +4278,6 @@ bdo:volumePhysicalDescription
 	adm:userTooltip "A description of the physical appearance of a Volume of the Item."@en ;
 	rdfs:domain bdo:VolumePhysicalAsset ;
 	rdfs:range rdf:langString ;
-	.
-
-bdo:workContainsChapters
-	a owl:DatatypeProperty ;
-	rdfs:label "chapters contained"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "records the chapters of a larger Work contained in this Work"@en ;
-	rdfs:domain bdo:Work ;
-	rdfs:range xsd:string ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:workCreator
-	a owl:ObjectProperty ;
-	rdfs:label "creator"@en ;
-	adm:deprecatedComment
-		"deprecated in favor of :creator and associated :AgentAsCreator"@en ,
-		"deprecated in favor of bdo:Role/bdo:Creator and :role in a bdo:WorkEvent"@en
-		;
-	adm:userTooltip "Identifies the type and person that are a creator of the work"@en ;
-	bdo:inferSubTree "true"^^xsd:boolean ;
-	rdfs:domain [
-		a owl:Class ;
-		owl:unionOf (
-			bdo:Work
-			bdo:WorkEvent
-		) ;
-	] ;
-	rdfs:range bdo:Person ;
-	rdfs:seeAlso bdo:creator ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:workDateOfWriting
-	a owl:DatatypeProperty ;
-	rdfs:label "date of writing"@en ;
-	adm:deprecatedComment "deprecated in favor of :CompletedEvent."@en ;
-	rdfs:domain bdo:Work ;
-	rdfs:range xsd:string ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:workDerivativeOf
@@ -4907,15 +4379,6 @@ bdo:workHasParallelsIn
 	rdfs:range bdo:Work ;
 	.
 
-bdo:workHasSite
-	a owl:ObjectProperty ;
-	rdfs:label "has site"@en ;
-	adm:deprecatedComment "deprecated in favor of the various :WorkEvents."@en ;
-	adm:userTooltip "A :WorkSite describes where some activity associated with a Work occurred. This was a component of the Outline nodes but has been folded into the general bibliographic model applicable to all :Work(s)"@en ;
-	rdfs:domain bdo:BiblioEntity ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:workHasTranslation
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:workHasDerivative ;
@@ -4933,61 +4396,6 @@ bdo:workIsAbout
 	adm:userTooltip "The referenced Entity (topic, person, work, etc.) is a subject of the Work - something the Work is about."@en ;
 	rdfs:domain bdo:Work ;
 	rdfs:range bdo:Entity ;
-	.
-
-bdo:workIsNumbered
-	a owl:DatatypeProperty ;
-	rdfs:label "number in series"@en ;
-	adm:deprecatedComment "this is not useful. It is sufficient that the Work be a SerialWork"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "True if this Work is part of a series. In which case it should have a :workSeriesNumber"@en ;
-	rdfs:domain bdo:BiblioEntity ;
-	rdfs:range xsd:boolean ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:workOtherLangScript
-	a owl:ObjectProperty ;
-	rdfs:label "other language"@en ;
-	adm:technicalComment """The :workOtherLangScript is used to indicate language script combinations that occur in secondary or subsidiary roles within a :Work. For example, a preface in Chinese for a primary Tibetan text could be indicated via:
-
-    :workOtherLangScript bdr:ZhNative
-
-or a text containing handwritten comments in Tibetan might have:
-
-    :workOtherLangScript bdr:BoKhyugYig"""@en ;
-	adm:userTooltip "secondary language associated with a work"@en ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:workPartLabel
-	a owl:DatatypeProperty ;
-	rdfs:label "part label"@en ;
-	adm:catalogingConvention 'Use this property to reflect a label/name for a "synthetic" part of a work such as "Sutra Basket" or "Guhyagarbha Commentaries" that is not identified directly in a composite work such Kangyur or Kama but that helps to highlight the organization of composite work'@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "A label that helps to highlight the organization of composite work"@en ;
-	rdfs:domain bdo:Instance ;
-	rdfs:range rdf:langString ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:workSeriesContent
-	a owl:DatatypeProperty ;
-	rdfs:label "series content"@en ;
-	adm:technicalComment "does not appear to be used."@en ;
-	rdfs:domain bdo:BiblioEntity ;
-	rdfs:range rdf:langString ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:workSeriesName
-	a owl:DatatypeProperty ;
-	rdfs:label "series name"@en ;
-	adm:catalogingConvention "do not use for new records, a proper work should be created for the series."@en ;
-	adm:technicalComment "the series name should be a Label/Title on a :SerialWork"@en ;
-	rdfs:domain bdo:SerialMember ;
-	rdfs:range rdf:langString ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:workSeriesNumber
@@ -5018,27 +4426,6 @@ bdo:workTranslationOf
 	owl:inverseOf bdo:workHasTranslation ;
 	.
 
-bdo:workType
-	a owl:ObjectProperty ;
-	rdfs:label "work type"@en ;
-	adm:deprecatedComment "deprecated in favor of simply using the proper sublcass of :Work, e.g., :AbstractWork, :PublishedWork, and so on"@en ;
-	rdfs:domain bdo:BiblioEntity ;
-	rdfs:range bdo:WorkType ;
-	rdfs:seeAlso bdo:WorkType ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-bdo:yearInEra
-	a owl:DatatypeProperty ;
-	rdfs:label "year in era"@en ;
-	adm:technicalComment "If this property is present it indicates that digitized images of the volume are present in the archive."@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "The year in era is relative to the yearOffset for the Era"@en ;
-	rdfs:domain bdo:DateIndication ;
-	rdfs:range xsd:integer ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
 bdo:yearOffset
 	a owl:DatatypeProperty ;
 	rdfs:label "year offset"@en ;
@@ -5063,3 +4450,4 @@ bdr:PrintMethod_Lithography
 	a bdo:PrintMethod_Offset ;
 	skos:prefLabel "lithography"@en ;
 	.
+

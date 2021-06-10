@@ -294,10 +294,6 @@ adm:LogEntry
 	rdfs:label "zin tho/"@bo-x-ewts ;
 	.
 
-adm:Product
-	rdfs:label "dpe tshogs/"@bo-x-ewts ;
-	.
-
 adm:Status
 	rdfs:label "gnas babs/"@bo-x-ewts ;
 	.
@@ -332,10 +328,6 @@ adm:copyrightOwner
 
 adm:hasLegal
 	rdfs:label "khrims lugs gnas tshul/"@bo-x-ewts ;
-	.
-
-adm:initialProvider
-	rdfs:label "dan grangs gong ma thog mar mkho sprod byed mkhan/"@bo-x-ewts ;
 	.
 
 adm:isRestrictedInChina

@@ -221,52 +221,6 @@ adm:OutlineType
 	rdfs:subClassOf adm:Type ;
 	.
 
-adm:Product
-	a owl:Class ;
-	rdfs:subClassOf adm:Entity ;
-	rdfs:label "Product"@en ;
-	owl:deprecated true ;
-	rdfs:comment
-		"""A collection of Works that are distributed together. Historically this has meant on a CDROM, DVDROM or hard drive. Nowadays, Products are used mostly to collect Works that are made available to institutional subscribers online via IP-address validation. Although there are still hard drive collections prepared from Products.
-
-IP-address validation is supported by adding to a Product sets of address ranges organized by organizations, like UCB, TUMS etc. When the migration ontology is normalized these sets of address ranges should be given their own resource outside of the Product resource since the model of institutional subscriptions is being changed so that it is not Product centric.
-
-Products have decs:contents rather than a :name (but this can be added during normalization). 
-
-The various Works that are contained in the Product include an inProduct element that refers back to the Product. So to find all the Works that are contained in a Product is a simple query. to locate all Works that refer to a given Product via wrk:inProduct."""^^xsd:string ,
-		"Names are represented by rdfs:label"@en
-		;
-	.
-
-adm:ProductOrProductOrg
-	a owl:Class ;
-	rdfs:subClassOf
-		adm:AdmUnion ,
-		[
-			a owl:Class ;
-			owl:unionOf (
-				adm:Product
-				adm:ProductOrg
-			) ;
-		]
-		;
-	rdfs:label "product or product organization"@en ;
-	rdfs:comment "used as domain for properties recording CTC subscriber info"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
-adm:ProductOrg
-	a owl:Class ;
-	rdfs:subClassOf adm:Facet ;
-	rdfs:comment
-		"A unit of organization for IP-address based access control, e.g., the University of California System, PR99UCS01. A ProductOrg may have zero or more ProductOrg members, via productHasOrg, to allow for organizing large multi-level organizations such as the U. California system. Also a ProductOrg may have zero or more productHasAllow assertions to indicate IP address ranges that are allowed access."@en ,
-		"The name of a ProductOrg is represented by rdfs:label"@en
-		;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
 adm:ReinstateData
 	a owl:Class ;
 	rdfs:subClassOf adm:DataLogEntry ;
@@ -459,48 +413,6 @@ adm:contradictedBy
 	rdfs:domain adm:StatementAnnotationBody ;
 	.
 
-adm:conversionAnnotations
-	a owl:AnnotationProperty ;
-	.
-
-adm:convertProperty
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:conversionAnnotations ;
-	rdfs:comment """this annotation indicates that the annotated property is to be converted to some other expression, typically to a form that is expressed in terms of a common 3rd-party ontology such as bibframe or foaf.
-
-The value of this property should be an explanation of the needed conversion as an rdf:langString"""@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:range rdf:langString ;
-	owl:deprecated true ;
-	.
-
-adm:convertToClass
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:conversionAnnotations ;
-	rdfs:label "convert to Class"@en ;
-	rdfs:comment "this annotation is used to indicate that uses of the annotated class are to be replaced by the inidcated class"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain owl:Thing ;
-	rdfs:range owl:Thing ;
-	owl:deprecated true ;
-	.
-
-adm:convertToProperty
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:conversionAnnotations ;
-	rdfs:comment "Indicates that the annotated property is to be converted directly to a statement in terms of another property. The value of this annotation is the target property to convert to."@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
-adm:convertValueToClass
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:conversionAnnotations ;
-	rdfs:comment "Indicates that the value of the property being converted is to be an instance of the designated class"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
 adm:copyrightOwner
 	a owl:ObjectProperty ;
 	rdfs:label "copyright holder to resource metadata"@en ;
@@ -525,14 +437,6 @@ adm:defaultMetadataLicense
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:ContentProvider ;
 	rdfs:range adm:License ;
-	.
-
-adm:deprecatedComment
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf rdfs:comment ;
-	rdfs:label "deprecation comment"@en ;
-	rdfs:comment "short explanation of why a vocabulary item is being deprecated."@en ;
-	adm:translationPriority "2"^^xsd:integer ;
 	.
 
 adm:facetIndex
@@ -604,16 +508,6 @@ adm:hasLegal
 	rdfs:range adm:LegalData ;
 	.
 
-adm:imagesStatus
-	a owl:ObjectProperty ;
-	rdfs:label "images status"@en ;
-	rdfs:comment "records the images asset status for a :PublishedWork"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain bdo:PublishedWork ;
-	rdfs:range adm:ImagesStatus ;
-	owl:deprecated true ;
-	.
-
 adm:inRegion
 	a owl:ObjectProperty ;
 	rdfs:label "in region"@en ;
@@ -621,27 +515,6 @@ adm:inRegion
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain adm:Organization ;
 	rdfs:range bdo:Place ;
-	.
-
-adm:initialProvider
-	a owl:ObjectProperty ;
-	rdfs:label "initial provider of metadata"@en ;
-	rdfs:comment "The initial provider of the metadata representation and/or images of the :Entity resource. For example, EAP105/1 has adm:initialProvider bdo:G1KG116095 and adm:contentProvider bda:Provider_BL_EAP"@en ;
-	rdfs:domain adm:LegalData ;
-	rdfs:range adm:ContentProvider ;
-	rdfs:seeAlso adm:ContentProvider ;
-	owl:deprecated true ;
-	.
-
-adm:legacyImageGroupRID
-	a owl:AnnotationProperty ;
-	rdfs:label "legacy imagegroup rid"@en ;
-	rdfs:comment "the original TBRC imagegroup rid for use in redirect references using the rid"@en ;
-	adm:migrationComment "records the original imagegroup rid from which the volume information was migrated"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain bdo:VolumeImageAsset ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
 	.
 
 adm:license
@@ -707,14 +580,6 @@ adm:metadataLegal
 	rdfs:subPropertyOf adm:hasLegal ;
 	rdfs:label "metadata legal info"@en ;
 	rdfs:comment "Legal data about the metadata of the record"@en ;
-	.
-
-adm:migrationComment
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf rdfs:comment ;
-	rdfs:label "migration comment"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
 	.
 
 adm:originalRecord
@@ -833,48 +698,6 @@ adm:place_TLM_taxonomy
 	rdfs:range bdo:Taxonomy ;
 	.
 
-adm:productAllowByAddr
-	a owl:AnnotationProperty ;
-	rdfs:comment "The prodcutAllowByAddr has an xsd:string with the format of a cidr IP address range, e.g., 128.2.8.0/24. These address ranges are used to permit access to collections of works"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain adm:ProductOrg ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
-	.
-
-adm:productHasDigitalInstance
-	a owl:ObjectProperty ;
-	rdfs:label "has digital instance"@en ;
-	rdfs:comment "refers to digital instances that are collected together for some purpose such as a Core Text Collection or other administrative purpose."@en ;
-	adm:deprecatedComment "retired in favor of bdo:collectionMember"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain adm:Product ;
-	rdfs:range bdo:DigitalInstance ;
-	owl:deprecated "true"^^xsd:boolean ;
-	.
-
-adm:productHasOrg
-	a owl:ObjectProperty ;
-	rdfs:comment
-		"Allows to compose an organization in terms of sub-organizations. Useful for large organizations such as University of California system for which there are many address ranges for each campus such as UC Berkeley and UCLA and so on"@en ,
-		"organization"@en
-		;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain bdo:ProductOrProductOrg ;
-	rdfs:range adm:ProductOrg ;
-	owl:deprecated true ;
-	.
-
-adm:productIncludes
-	a owl:AnnotationProperty ;
-	rdfs:label "includes"@en ;
-	rdfs:comment "A Product may include another Product for the purpose of including access information in support of the subscription service."@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain adm:Product ;
-	rdfs:range adm:Product ;
-	owl:deprecated true ;
-	.
-
 adm:replaceWith
 	a owl:ObjectProperty ;
 	rdfs:label "replace with another rdfs:Resource"@en ;
@@ -882,42 +705,6 @@ adm:replaceWith
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain rdfs:Resource ;
 	rdfs:range rdfs:Resource ;
-	.
-
-adm:replaceWithClass
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:replaceWith ;
-	rdfs:label "replace with a Class"@en ;
-	rdfs:comment "used when deprecating a vocabulary item in favor of a Class"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
-adm:replaceWithDataProperty
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:replaceWith ;
-	rdfs:label "replace with a Data property"@en ;
-	rdfs:comment "used when deprecating a vocabulary item in favor of a Data property"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
-adm:replaceWithIndividual
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:replaceWith ;
-	rdfs:label "replace with an Individual"@en ;
-	rdfs:comment "used when deprecating a vocabulary item in favor of an Individual"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
-	.
-
-adm:replaceWithObjectProperty
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf adm:replaceWith ;
-	rdfs:label "replace with Object property"@en ;
-	rdfs:comment "used when deprecating a vocabulary item in favor of an Object property"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	owl:deprecated true ;
 	.
 
 adm:restrictedInChina
@@ -1108,46 +895,6 @@ adm:userTooltip
 	rdfs:range rdf:langString ;
 	.
 
-adm:volumeQcDate
-	a owl:AnnotationProperty ;
-	rdfs:domain bdo:Volume ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
-	.
-
-adm:volumeQcNote
-	a owl:AnnotationProperty ;
-	rdfs:domain bdo:Volume ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
-	.
-
-adm:volumeQcPerson
-	a owl:AnnotationProperty ;
-	rdfs:domain bdo:Volume ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
-	.
-
-adm:volumeScanVenue
-	a owl:AnnotationProperty ;
-	adm:migrationComment "this property is used to migrate the venue attribute from scanrequest. it records where the scanning was to take place"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain bdo:Item ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
-	.
-
-adm:workInProduct
-	a owl:ObjectProperty ;
-	rdfs:label "in product"@en ;
-	rdfs:comment "This :Work is included in the referenced admin:Product"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain bdo:BiblioEntity ;
-	rdfs:range adm:Product ;
-	owl:deprecated true ;
-	.
-
 adm:workLegacyNode
 	a owl:DatatypeProperty ;
 	rdfs:label "has legacy node"@en ;
@@ -1155,16 +902,6 @@ adm:workLegacyNode
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:WorkOrAdmOutline ;
 	rdfs:range xsd:string ;
-	.
-
-adm:workVolumesNote
-	a owl:AnnotationProperty ;
-	rdfs:label "volumes note"@en ;
-	adm:migrationComment "Migration hint: When not empty the <pubinfo:volumes/> is a note regarding how many and which volumes have been acquired, scanned and so on."@en ;
-	adm:translationPriority "2"^^xsd:integer ;
-	rdfs:domain bdo:BiblioEntity ;
-	rdfs:range xsd:string ;
-	owl:deprecated true ;
 	.
 
 adm:work_desc_date
@@ -1185,16 +922,6 @@ bdo:Agents
 			foaf:Agent
 		) ;
 	] ;
-	.
-
-bdo:AnyOrganization
-	rdfs:subClassOf [
-		owl:unionOf (
-			adm:Organization
-			bdo:Organization
-		) ;
-	] ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:BiblioEntity

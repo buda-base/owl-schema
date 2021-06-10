@@ -295,10 +295,6 @@ adm:LogEntry
 	rdfs:label "日志条目"@zh-hans ;
 	.
 
-adm:Product
-	rdfs:label "成品"@zh-hans ;
-	.
-
 adm:Status
 	rdfs:label "状态"@zh-hans ;
 	adm:userTooltip "状态常数：实体元数据：已发布，临时的，等等"@zh-hans ;
@@ -334,10 +330,6 @@ adm:copyrightOwner
 
 adm:hasLegal
 	rdfs:label "法律信息"@zh-hans ;
-	.
-
-adm:initialProvider
-	rdfs:label "元数据的初始提供者"@zh-hans ;
 	.
 
 adm:isRestrictedInChina

@@ -609,10 +609,6 @@ bdo:biblioNote
 	rdfs:label "dpe tho'i zin bris/"@bo-x-ewts ;
 	.
 
-bdo:biblioStatus
-	rdfs:label "dpe tho'i gnas babs/"@bo-x-ewts ;
-	.
-
 bdo:binding
 	rdfs:label "'go tshem/"@bo-x-ewts ;
 	.
@@ -1227,10 +1223,6 @@ bdo:placeEvent
 	rdfs:label "gnas tshul/"@bo-x-ewts ;
 	.
 
-bdo:placeEventAffiliation
-	rdfs:label "yan lag gi chos brgyud/"@bo-x-ewts ;
-	.
-
 bdo:placeLat
 	rdfs:label "'phred thig"@bo-x-ewts ;
 	.
@@ -1335,10 +1327,6 @@ bdo:workBiblioNote
 	rdfs:label "dpe tho'i zin bris/"@bo-x-ewts ;
 	.
 
-bdo:workBiblioStatus
-	rdfs:label "dpe tho'i gnas babs/"@bo-x-ewts ;
-	.
-
 bdo:workCBCSiglaT
 	rdfs:label "tI sho rgya yig bka' bstan gyi ka rtags/[ (T]rtags can[)]"@bo-x-ewts ;
 	.
@@ -1353,26 +1341,6 @@ bdo:workColophon
 
 bdo:workDerivativeOf
 	rdfs:label "bshu sgrig byas pa'i khungs/"@bo-x-ewts ;
-	.
-
-bdo:workDimHeight
-	rdfs:label "mtho tshad/"@bo-x-ewts ;
-	.
-
-bdo:workDimLength
-	rdfs:label "ring tshad/"@bo-x-ewts ;
-	.
-
-bdo:workDimWidth
-	rdfs:label "zheng tshad/"@bo-x-ewts ;
-	.
-
-bdo:workEditionStatement
-	rdfs:label "par skrun gsal bshad/"@bo-x-ewts ;
-	.
-
-bdo:workEvent
-	rdfs:label "gnas tshul/"@bo-x-ewts ;
 	.
 
 bdo:workGenre
@@ -1391,28 +1359,12 @@ bdo:workHasParallelsIn
 	rdfs:label "mthun chos/"@bo-x-ewts ;
 	.
 
-bdo:workHasPart
-	rdfs:label "nang gses/"@bo-x-ewts ;
-	.
-
 bdo:workHasTranslation
 	rdfs:label "'gyur/"@bo-x-ewts ;
 	.
 
-bdo:workIllustrations
-	rdfs:label "par ris/"@bo-x-ewts ;
-	.
-
-bdo:workIncipit
-	rdfs:label "mtshan byang bar ma/"@bo-x-ewts ;
-	.
-
 bdo:workIsAbout
 	rdfs:label "brjod gzhi/"@bo-x-ewts ;
-	.
-
-bdo:workIsbn
-	rdfs:label "[ISBN ]rgyal spyi'i dpe rtags/"@bo-x-ewts ;
 	.
 
 bdo:workKaTenSiglaA
@@ -1519,10 +1471,6 @@ bdo:workNumberOfVolumes
 	rdfs:label "po ti'i grangs/"@bo-x-ewts ;
 	.
 
-bdo:workOtherLangScript
-	rdfs:label "skad yig gzhan/"@bo-x-ewts ;
-	.
-
 bdo:workPartOf
 	rdfs:label "'phros gzhi/"@bo-x-ewts ;
 	.
@@ -1557,18 +1505,6 @@ bdo:workScanInfo
 
 bdo:workSeriesNumber
 	rdfs:label "deb phreng ang /"@bo-x-ewts ;
-	.
-
-bdo:workSideBoxSequenceId
-	rdfs:label "le tshan ang /"@bo-x-ewts ;
-	.
-
-bdo:workSourceNote
-	rdfs:label "ma yig dang 'brel ba'i zin bris/"@bo-x-ewts ;
-	.
-
-bdo:workTitle
-	rdfs:label "mtshan byang /"@bo-x-ewts ;
 	.
 
 bdo:workTranslationOf
