@@ -88,6 +88,34 @@ def add_datatype_prop(model, prop, ctx):
         return
     ctx[pshort] = { "@type" : rshort }
 
+def add_annotation_prop(model, prop, ctx):
+    if ((prop, OWL.deprecated, None)) in model:
+        return
+    ranges = []
+    for _, _, r in model.triples((prop, RDFS.range, None)):
+        ranges.append(r)
+    if len(ranges) > 1:
+        print("too many ranges on %s" % p)
+        return
+    if len(ranges) < 1:
+        return
+    r = ranges[0]
+    pshort = shortname(prop)
+    
+    for _, _, t in models.triples((r, RDF.type)):
+        if t != RDFS.Datatype:
+            ctx[pshort] = { "@type" : "@id" }
+            return
+        else:
+            break
+    rshort = shortname(r)
+    if rshort in ["xsd:string", "rdf:langString", "xsd:boolean", "xsd:integer", "xsd:float"]:
+        return
+    
+    if (pshort.startswith("ns") or ":" not in rshort):
+        return
+    ctx[pshort] = { "@type" : rshort }
+
 def add_file(fname, ctx):
     model = rdflib.Graph()
     model.parse(str(fname), format="ttl")

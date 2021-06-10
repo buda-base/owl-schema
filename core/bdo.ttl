@@ -4000,7 +4000,7 @@ bdo:notBefore
 	.
 
 bdo:note
-	a owl:ObjectProperty ;
+	a owl:AnnotationProperty ;
 	rdfs:label "note"@en ;
 	adm:catalogingConvention '''the :note annotation adds language tagged string and optionally a reference to a Work and a simple text description of a location in a Work, e.g., "pp. 231-3".
 
