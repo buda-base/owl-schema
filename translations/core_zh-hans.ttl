@@ -1560,16 +1560,3 @@ bdr:ZhHans skos:prefLabel "中文 (简体)"@zh-hans .
 bdr:ZhHant skos:prefLabel "中文 (繁体)"@zh-hans .
 
 bdr:ZhUnspecified skos:prefLabel "中文（字体未详）"@zh-hans .
-
-rdfs:comment rdfs:label "注解"@zh-hans .
-
-rdfs:label rdfs:label "标签"@zh-hans .
-
-rdfs:seeAlso rdfs:label "另见"@zh-hans .
-
-skos:altLabel rdfs:label "标签异体"@zh-hans .
-
-skos:hiddenLabel rdfs:label "隐藏标签"@zh-hans .
-
-skos:prefLabel rdfs:label "首选标签"@zh-hans .
-
