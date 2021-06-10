@@ -1,0 +1,141 @@
+@prefix : <http://purl.bdrc.io/ontology/core/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bf:ShelfMark
+	rdfs:label "Shelf location"@en ;
+	skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
+	.
+
+bf:identifiedBy
+	rdfs:label "identified by"@en ;
+	.
+
+iiif2:Collection
+	rdfs:label "IIIF Collection (v2.*)"@en ;
+	.
+
+iiif2:Manifest
+	rdfs:label "IIIF v2 Manifest"@en ;
+	.
+
+iiif3:Collection
+	rdfs:label "IIIF Collection (v3.*)"@en ;
+	.
+
+iiif3:Manifest
+	rdfs:label "IIIF v3 Manifest"@en ;
+	.
+
+rdfs:comment
+	rdfs:label
+		"Comment"@en ,
+		"mchan/"@bo-x-ewts ,
+		"注解"@zh-hans
+		;
+	.
+
+rdfs:label
+	rdfs:label
+		"label"@en ,
+		"ming byang /"@bo-x-ewts ,
+		"注解"@zh-hans
+		;
+	.
+
+rdfs:seeAlso
+	rdfs:label
+		"gzhan yang gzigs/"@bo-x-ewts ,
+		"see also"@en ,
+		"另见"@zh-hans
+		;
+	.
+
+xsd:date
+	a rdfs:Datatype ;
+	.
+
+owl:sameAs
+	rdfs:label "same as"@en ;
+	.
+
+skos:altLabel
+	rdfs:label
+		"mtshan gyi rnam grangs/"@bo-x-ewts ,
+		"variant label"@en ,
+		"标签异体"@zh-hans
+		;
+	.
+
+skos:closeMatch
+	rdfs:label "close match"@en ;
+	.
+
+skos:hiddenLabel
+	rdfs:label
+		"hidden label"@en ,
+		"sbas pa'i ming byang /"@bo-x-ewts ,
+		"隐藏标签"@zh-hans
+		;
+	.
+
+skos:prefLabel
+	rdfs:label
+		"ming byang rtse gra/"@bo-x-ewts ,
+		"preferred label"@en ,
+		"首选标签"@zh-hans
+		;
+	.
+
+vcard:Address
+	rdfs:label "VCARD Address"@en ;
+	.
+
+vcard:Entity
+	rdfs:label "VCARD Entity"@en ;
+	.
+
+vcard:country-name
+	rdfs:label "country"@en ;
+	.
+
+vcard:locality
+	rdfs:label "locality"@en ;
+	.
+
+vcard:postal-code
+	rdfs:label "postal code"@en ;
+	.
+
+vcard:region
+	rdfs:label "region"@en ;
+	.
+
+vcard:street-address
+	rdfs:label "street address"@en ;
+	.
+
+foaf:Agent
+	rdfs:label "Agent"@en ;
+	.
+
+foaf:Entity
+	rdfs:label "FOAF Entity"@en ;
+	.
+
