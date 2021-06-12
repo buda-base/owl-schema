@@ -3223,14 +3223,15 @@ bdo:itemBDRCHoldingStatement
 	adm:userTooltip "A free-text statement of the holdings by BDRC of this Item (and its relatives)."@en ;
 	rdfs:domain bdo:Item ;
 	rdfs:range xsd:string ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:itemCopies
 	a owl:DatatypeProperty ;
 	rdfs:label "number of copies"@en ;
-	adm:catalogingConvention "The number of copies of the :Work in this holding. Must be greater than zero."@en ;
+	adm:catalogingConvention "The number of copies of this holding. Must be greater than zero."@en ;
 	adm:translationPriority "2"^^xsd:integer ;
-	adm:userTooltip "The number of copies of the Work in this holding"@en ;
+	adm:userTooltip "The number of copies of this holding"@en ;
 	rdfs:domain bdo:ItemPhysicalAsset ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso bdo:ItemPhysicalAsset ;
@@ -4133,7 +4134,6 @@ Should be converted to a reference to a Place resource"""@en ;
 	adm:userTooltip "Free-text expression of the source printery for the Instance."@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
-	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:sponsoshipStatement
