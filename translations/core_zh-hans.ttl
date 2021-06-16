@@ -1404,6 +1404,10 @@ bdo:serialMemberOf
 	rdfs:label "系列作品的编号"@zh-hans ;
 	.
 
+bdo:seriesNumber
+	rdfs:label "系列中的编号"@zh-hans ;
+	.
+
 bdo:sourceNote
 	rdfs:label "作品来源"@zh-hans ;
 	.
@@ -1633,10 +1637,6 @@ bdo:workRefs
 
 bdo:workScanInfo
 	rdfs:label "扫描信息"@zh-hans ;
-	.
-
-bdo:workSeriesNumber
-	rdfs:label "系列中的编号"@zh-hans ;
 	.
 
 bdo:workSideBoxSequenceId

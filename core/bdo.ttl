@@ -1413,6 +1413,7 @@ bdo:SerialMember
 	adm:seeAlso bdo:SerialInstance ;
 	adm:technicalComment "The (abstract) :SeriesNumber resource contains the Work metadata associated with a number of a :SerialWork  "@en ;
 	adm:userTooltip "The Work metadata about a member of a :SerialWork"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:SerialWork
@@ -4076,6 +4077,7 @@ bdo:serialHasInstance
 	rdfs:label "serial has instance"@en ;
 	rdfs:domain bdo:SerialMember ;
 	rdfs:range bdo:SerialInstance ;
+	owl:deprecated "true"^^xsd:boolean ;
 	owl:inverseOf bdo:serialInstanceOf ;
 	.
 
@@ -4085,6 +4087,7 @@ bdo:serialHasMember
 	adm:userTooltip "used to reference the number associated with the work in the series"@en ;
 	rdfs:domain bdo:SerialWork ;
 	rdfs:range bdo:SerialMember ;
+	owl:deprecated "true"^^xsd:boolean ;
 	owl:inverseOf bdo:serialMemberOf ;
 	.
 
@@ -4093,6 +4096,7 @@ bdo:serialInstanceOf
 	rdfs:label "serial instance of"@en ;
 	rdfs:domain bdo:SerialInstance ;
 	rdfs:range bdo:SerialMember ;
+	owl:deprecated "true"^^xsd:boolean ;
 	owl:inverseOf bdo:serialHasInstance ;
 	.
 
@@ -4101,8 +4105,15 @@ bdo:serialMemberOf
 	rdfs:label "serial member of"@en ;
 	adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :partOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
 	adm:userTooltip "Indicates that this Work is a member of a series."@en ;
-	rdfs:domain bdo:SerialMember ;
 	rdfs:range bdo:SerialWork ;
+	.
+
+bdo:seriesNumber
+	a owl:DatatypeProperty ;
+	rdfs:label "issue"@en ;
+	adm:userTooltip "This is the number or other id of this SerialInstance in a SerialWork."@en ;
+	rdfs:domain bdo:SerialInstance ;
+	rdfs:range xsd:string ;
 	.
 
 bdo:sliceEndChar
@@ -4404,6 +4415,7 @@ bdo:workSeriesNumber
 	adm:userTooltip "This is the number or other id of this SerialInstance in a SerialWork."@en ;
 	rdfs:domain bdo:SerialInstance ;
 	rdfs:range xsd:string ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:workSideBoxSequenceId

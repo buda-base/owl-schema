@@ -1279,6 +1279,10 @@ bdo:serialMemberOf
 	rdfs:label "dpe tshogs/"@bo-x-ewts ;
 	.
 
+bdo:seriesNumber
+	rdfs:label "deb phreng ang /"@bo-x-ewts ;
+	.
+
 bdo:sourceNote
 	rdfs:label "ma yig dang 'brel ba'i zin bris/"@bo-x-ewts ;
 	.
@@ -1501,10 +1505,6 @@ bdo:workRefs
 
 bdo:workScanInfo
 	rdfs:label "gsher 'bebs kyi skor/"@bo-x-ewts ;
-	.
-
-bdo:workSeriesNumber
-	rdfs:label "deb phreng ang /"@bo-x-ewts ;
 	.
 
 bdo:workTranslationOf
