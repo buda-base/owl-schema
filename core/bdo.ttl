@@ -487,6 +487,7 @@ Often the Title Page Title for a publication of a reproduction that includes pre
 
 bdo:Gender
 	rdfs:subClassOf bdo:Type ;
+	skos:definition "A category into which humans are divided on the basis of their reproductive functions."@en ;
 	.
 
 bdo:GeneralNote
@@ -3796,6 +3797,7 @@ bdo:personGender
 	adm:userTooltip "The gender of the person"@en ;
 	rdfs:domain bdo:Person ;
 	rdfs:range bdo:Gender ;
+	skos:definition "The gender of the person."@en ;
 	.
 
 bdo:personHasConsort
