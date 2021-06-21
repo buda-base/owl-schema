@@ -561,8 +561,8 @@ adm:logMessage
 
 adm:logMethod
 	a owl:ObjectProperty ;
-	rdfs:label "script"@en ;
-	rdfs:comment "batch or manual data initialization or update"@en ;
+	rdfs:label "method"@en ;
+	rdfs:comment "whether the data change is manual or part of a batch"@en ;
 	rdfs:domain adm:LogEntry ;
 	rdfs:range adm:LogMethod ;
 	.
