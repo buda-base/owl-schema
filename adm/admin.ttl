@@ -51,12 +51,14 @@
 
 bda:BatchMethod
 	a adm:LogMethod ;
-	skos:prefLabel "Batch method"@en ;
+	rdfs:comment "This modification has been made as part of an automated batch"^^xsd:string ;
+	skos:prefLabel "Batch"@en ;
 	.
 
 bda:ManualMethod
 	a adm:LogMethod ;
-	skos:prefLabel "Manual method"@en ;
+	rdfs:comment "This modification has been made manually"@en ;
+	skos:prefLabel "Manual"@en ;
 	.
 
 adm:Access
