@@ -51,12 +51,12 @@
 
 bda:BatchMethod
 	a adm:LogMethod ;
-	skos:prefLabel "Batch method {en}"^^xsd:string ;
+	skos:prefLabel "Batch method"@en ;
 	.
 
 bda:ManualMethod
 	a adm:LogMethod ;
-	skos:prefLabel "Manual method {en}"^^xsd:string ;
+	skos:prefLabel "Manual method"@en ;
 	.
 
 adm:Access
@@ -191,7 +191,7 @@ adm:LogEntry
 adm:LogMethod
 	a owl:Class ;
 	rdfs:subClassOf adm:Type ;
-	rdfs:label "Log method"^^xsd:string ;
+	rdfs:label "Log method"@en ;
 	.
 
 adm:MinorUpdateData
