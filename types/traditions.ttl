@@ -52,6 +52,7 @@ bdr:TR0003
 
 bdr:TraditionBardrukKagyu
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107337995> ;
 	skos:altLabel "Middle Drukpa Kagyu"@en ;
 	skos:prefLabel
 		"Bardruk Kagyu"@en ,
@@ -70,6 +71,7 @@ bdr:TraditionBaromKagyu
 
 bdr:TraditionBodong
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338009> ;
 	skos:prefLabel
 		"Bodong"@en ,
 		"bo dong /"@bo-x-ewts
@@ -87,6 +89,7 @@ bdr:TraditionBon
 
 bdr:TraditionChod
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338013> ;
 	skos:prefLabel
 		"Chod"@en ,
 		"gcod/"@bo-x-ewts
@@ -164,6 +167,7 @@ bdr:TraditionJonang
 
 bdr:TraditionJordruk
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338020> ;
 	skos:altLabel "Six Branch Vajra Yoga"@en ;
 	skos:prefLabel
 		"Kalacakra"@en ,
@@ -240,6 +244,7 @@ bdr:TraditionNedoKagyu
 
 bdr:TraditionNgorSakya
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338027> ;
 	rdfs:comment "one of sa ngor tsar gsum"@en ;
 	skos:prefLabel
 		"Ngor Sakya"@en ,
@@ -258,6 +263,7 @@ bdr:TraditionNyingma
 
 bdr:TraditionOrgyenNyengyu
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338033> ;
 	skos:prefLabel
 		"The Three Vajras"@en ,
 		"o rgyan bsnyen sgrub/"@bo-x-ewts
@@ -397,6 +403,7 @@ bdr:TraditionYelpaKagyu
 
 bdr:TraditionZhalu
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338039> ;
 	rdfs:comment """term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala
  	
 འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།"""@en ;
@@ -413,6 +420,7 @@ bdr:TraditionZhalu
 
 bdr:TraditionZhije
 	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q107338047> ;
 	skos:prefLabel
 		"Shije"@en ,
 		"zhi byed/"@bo-x-ewts
