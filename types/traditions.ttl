@@ -18,56 +18,13 @@
 	owl:imports <http://www.w3.org/2004/02/skos/core> ;
 	.
 
-bdo:ChineseTradition
-	a owl:Class ;
-	rdfs:subClassOf bdo:Tradition ;
-	rdfs:label "Chinese tradition"@en ;
-	adm:userTooltip "A Chinese Buddhist school or tradition, e.g., Tintai"@en ;
-	.
-
-bdo:TibetanTradition
-	a owl:Class ;
-	rdfs:subClassOf bdo:Tradition ;
-	rdfs:label "Tibetan Tradition"@en ;
-	adm:userTooltip "Individuals represent various (Tibetan) Buddhist traditions, e.g., Karma Kagyu, Bon, or Nyingma"@en ;
-	.
-
 bdo:Tradition
 	a owl:Class ;
-	rdfs:label "type of tradition"@en ;
-	adm:userTooltip "subclasses record different types of tradition by culture, e.g., Tibetan or Chinese"@en ;
-	.
-
-bdr:EightMinorKagyuTraditions
-	a
-		bdr:TraditionDakpoKagyu ,
-		owl:Class
-		;
-	rdfs:subClassOf bdr:TraditionDakpoKagyu ;
-	skos:prefLabel "Eight Minor Kagyu Traditions"@en ;
-	.
-
-bdr:EightPracticeLineages
-	a
-		bdo:TibetanTradition ,
-		owl:Class
-		;
-	rdfs:subClassOf bdo:TibetanTradition ;
-	skos:prefLabel "The Eight Practice Lineages"@en ;
-	.
-
-bdr:FourMainKagyuTraditions
-	a
-		bdr:TraditionDakpoKagyu ,
-		owl:Class
-		;
-	rdfs:subClassOf bdr:TraditionDakpoKagyu ;
-	skos:altLabel "Four Greater"@en ;
-	skos:prefLabel "Main Dagpo Kagyu"@en ;
+	rdfs:label "Tradition"@en ;
 	.
 
 bdr:TR0001
-	a bdo:ChineseTradition ;
+	a bdo:Tradition ;
 	skos:prefLabel
 		"Three stages school"@en ,
 		"三階教"@zh-hant
@@ -75,7 +32,7 @@ bdr:TR0001
 	.
 
 bdr:TR0002
-	a bdo:ChineseTradition ;
+	a bdo:Tradition ;
 	skos:prefLabel
 		"Tiantai school"@en ,
 		"天台宗"@zh-hant
@@ -83,7 +40,7 @@ bdr:TR0002
 	.
 
 bdr:TR0003
-	a bdo:ChineseTradition ;
+	a bdo:Tradition ;
 	skos:prefLabel
 		"Zen school"@en ,
 		"禪宗"@zh-hant
@@ -91,45 +48,50 @@ bdr:TR0003
 	.
 
 bdr:TraditionBardrukKagyu
-	a bdr:TraditionDrukpaKagyu ;
+	a bdo:Tradition ;
 	skos:altLabel "Middle Drukpa Kagyu"@en ;
-	skos:prefLabel "Bardruk Kagyu"@en ;
+	skos:prefLabel
+		"Bardruk Kagyu"@en ,
+		"bar 'brug bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionBaromKagyu
-	a bdr:FourMainKagyuTraditions ;
-	skos:prefLabel "Barom Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"'ba' rom bka' brgyud/"@bo-x-ewts ,
+		"Barom Kagyu"@en
+		;
 	.
 
 bdr:TraditionBodong
-	a
-		bdo:TibetanTradition ,
-		owl:Class
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Bodong"@en ,
+		"bo dong /"@bo-x-ewts
 		;
-	rdfs:subClassOf bdo:TibetanTradition ;
-	skos:prefLabel "Bodong"@en ;
 	.
 
 bdr:TraditionBon
-	a
-		bdo:TibetanTradition ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q815628> ;
+	skos:prefLabel
+		"Bon"@en ,
+		"bon/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdo:TibetanTradition ;
-	skos:prefLabel "Bon"@en ;
 	.
 
 bdr:TraditionChod
-	a bdr:TraditionZhije ;
-	skos:prefLabel "Chod"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Chod"@en ,
+		"gcod/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionDakpoKagyu
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
-		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q471187> ;
 	rdfs:comment
 		"""A note is in order regarding the two forms Dkar brgyud pa and Bka' brgyud pa. The term Bka' brgyud pa simply applies to any line of transmission of an esoteric teaching from teacher to disciple. We can properly speak of a Jo nang Bka' brgyud pa or Dge ldan Bka' brgyud pa for the Jo nang pa and Dge lugs pa sects. The adherents of the sects that practice the teachings centering around the Phyag rgya chm po and the Na ro chos drug are properly referred to as the Dwags po Bka' brgyud pa because these teachings were all transmitted through Sgam po pa. Similar teachings and practices centering around the Ni gu chos drug are distinctive of the Shangs pa Bka' brgyud pa. These traditions with their offshoots are often incorrectly referred to two simply as Bka' brgyud pa. 
 
@@ -150,12 +112,8 @@ See page 40, E.Gene Smith, \"Among Tibetan Texts\""""@en ,
 	.
 
 bdr:TraditionDharmaguptaka
-	a
-		bdo:Tradition ,
-		owl:Class
-		;
-	rdfs:subClassOf bdo:Tradition ;
-	rdfs:seeAlso <https://en.wikipedia.org/wiki/Dharmaguptaka> ;
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q2445824> ;
 	skos:prefLabel
 		"Dhammaguttā"@pi-x-iast ,
 		"Dharmaguptaka"@en ,
@@ -165,58 +123,61 @@ bdr:TraditionDharmaguptaka
 	.
 
 bdr:TraditionDrigungKagyu
-	a bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Drigung Kagyu"@en ;
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q737235> ;
+	skos:prefLabel
+		"'bri gung bka' brgyud/"@bo-x-ewts ,
+		"Drigung Kagyu"@en
+		;
 	.
 
 bdr:TraditionDrukpaKagyu
-	a
-		bdr:EightMinorKagyuTraditions ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q784270> ;
+	skos:prefLabel
+		"'brug pa bka' brgyud/"@bo-x-ewts ,
+		"Drukpa Kagyu"@en
 		;
-	rdfs:subClassOf bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Drukpa Kagyu"@en ;
 	.
 
 bdr:TraditionGeluk
-	a
-		bdr:TraditionKadam ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q319218> ;
+	skos:prefLabel
+		"Geluk"@en ,
+		"dge lugs/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:TraditionKadam ;
-	skos:prefLabel "Geluk"@en ;
 	.
 
 bdr:TraditionJonang
-	a
-		bdo:TibetanTradition ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q1702893> ;
+	skos:prefLabel
+		"Jonang"@en ,
+		"jo nang /"@bo-x-ewts
 		;
-	rdfs:subClassOf bdo:TibetanTradition ;
-	skos:prefLabel "Jonang"@en ;
 	.
 
 bdr:TraditionJordruk
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
-		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
+	a bdo:Tradition ;
 	skos:altLabel "Six Branch Vajra Yoga"@en ;
-	skos:prefLabel "Kalacakra"@en ;
+	skos:prefLabel
+		"Kalacakra"@en ,
+		"dus 'khor/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionKadam
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q588362> ;
+	skos:prefLabel
+		"Kadam"@en ,
+		"bka' gdams pa/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
-	skos:prefLabel "Kadam"@en ;
 	.
 
 bdr:TraditionKagyu
-	a bdr:EightPracticeLineages ;
+	a bdo:Tradition ;
 	skos:prefLabel
 		"Kagyu"@en ,
 		"bka' brgyud/"@bo-x-ewts
@@ -224,32 +185,33 @@ bdr:TraditionKagyu
 	.
 
 bdr:TraditionKarmaKagyu
-	a
-		bdr:FourMainKagyuTraditions ,
-		owl:Class
-		;
-	rdfs:subClassOf bdr:FourMainKagyuTraditions ;
+	a bdo:Tradition ;
 	skos:altLabel "Kamtsang Kagyu"@en ;
-	skos:prefLabel "Karma Kagyu"@en ;
+	skos:prefLabel
+		"Karma Kagyu"@en ,
+		"kam tshang bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionMadrukKagyu
-	a bdr:TraditionDrukpaKagyu ;
+	a bdo:Tradition ;
 	skos:altLabel "Lower Drukpa Kagyu"@en ;
-	skos:prefLabel "Medruk Kagyu"@en ;
+	skos:prefLabel
+		"Medruk Kagyu"@en ,
+		"smad drug bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionMartsangKagyu
-	a bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Martsang Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Martsang Kagyu"@en ,
+		"smar tshang bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionMulasarvastivada
-	a
-		bdo:Tradition ,
-		owl:Class
-		;
-	rdfs:subClassOf bdo:Tradition ;
+	a bdo:Tradition ;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/Mulasarvastivada> ;
 	skos:prefLabel
 		"Mūlasarvāstivāda"@en ,
@@ -259,64 +221,67 @@ bdr:TraditionMulasarvastivada
 	.
 
 bdr:TraditionNedoKagyu
-	a bdr:TraditionKarmaKagyu ;
-	skos:prefLabel "Nedo Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Nedo Kagyu"@en ,
+		"gnas mdo bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionNgorSakya
-	a bdr:TraditionSakya ;
+	a bdo:Tradition ;
 	rdfs:comment "one of sa ngor tsar gsum"@en ;
-	skos:prefLabel "Ngor Sakya"@en ;
+	skos:prefLabel
+		"Ngor Sakya"@en ,
+		"ngor pa/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionNyingma
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Nyingma"@en ,
+		"rnying ma/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
-	skos:prefLabel "Nyingma"@en ;
 	.
 
 bdr:TraditionOrgyenNyengyu
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
+	a bdo:Tradition ;
+	skos:prefLabel
+		"The Three Vajras"@en ,
+		"o rgyan bsnyen sgrub/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
-	skos:prefLabel "The Three Vajras"@en ;
 	.
 
 bdr:TraditionPhagGruKagyu
-	a bdr:FourMainKagyuTraditions ;
-	skos:prefLabel "Phagdru Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Phagdru Kagyu"@en ,
+		"phag gru bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionRime
-	a
-		bdo:TibetanTradition ,
-		owl:Class
-		;
-	rdfs:subClassOf bdo:TibetanTradition ;
+	a bdo:Tradition ;
 	rdfs:comment "Some might not count Rime as a Tradition but since there are Works and Persons who are identified as such it is approapriate to include for purposes of classification"@en ;
-	skos:prefLabel "Rime"@en ;
+	skos:prefLabel
+		"Rime"@en ,
+		"ris med/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionSakya
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q650035> ;
+	skos:prefLabel
+		"Sakya"@en ,
+		"sa skya/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
-	skos:prefLabel "Sakya"@en ;
 	.
 
 bdr:TraditionSarvastivada
-	a
-		bdo:Tradition ,
-		owl:Class
-		;
-	rdfs:subClassOf bdo:Tradition ;
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q633994> ;
 	skos:prefLabel
 		"Sarvāstivāda"@en ,
 		"Sarvāstivāda"@sa-x-iast ,
@@ -325,30 +290,33 @@ bdr:TraditionSarvastivada
 	.
 
 bdr:TraditionShangpaKagyu
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q365116> ;
+	skos:prefLabel
+		"Shangpa Kagyu"@en ,
+		"shangs pa bka' brgyud/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
-	skos:prefLabel "Shangpa Kagyu"@en ;
 	.
 
 bdr:TraditionShugsepKagyu
-	a bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Shugsep Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Shugsep Kagyu"@en ,
+		"shug gseb bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionTaklungKagyu
-	a bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Taklung Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Taklung Kagyu"@en ,
+		"stag lung bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionTheravada
-	a
-		bdo:Tradition ,
-		owl:Class
-		;
-	rdfs:subClassOf bdo:Tradition ;
+	a bdo:Tradition ;
+	owl:sameAs <http://www.wikidata.org/entity/Q132265> ;
 	skos:altLabel "School of the Elders"@en ;
 	skos:prefLabel
 		"Theravāda"@en ,
@@ -357,13 +325,13 @@ bdr:TraditionTheravada
 	.
 
 bdr:TraditionTodrukKagyu
-	a bdr:TraditionDrukpaKagyu ;
+	a bdo:Tradition ;
 	skos:altLabel "Upper Drukpa Kagyu"@en ;
 	skos:prefLabel "Todruk Kagyu"@en ;
 	.
 
 bdr:TraditionTrophuKagyu
-	a bdr:EightMinorKagyuTraditions ;
+	a bdo:Tradition ;
 	skos:prefLabel
 		"khro phu bka' brgyud"@bo-x-ewts ,
 		"trophu kagyu"@en
@@ -371,32 +339,40 @@ bdr:TraditionTrophuKagyu
 	.
 
 bdr:TraditionTsalpaKagyu
-	a bdr:FourMainKagyuTraditions ;
-	skos:prefLabel "Tsalpa Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Tsalpa Kagyu"@en ,
+		"tshal pa bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionTsarSakya
-	a bdr:TraditionSakya ;
+	a bdo:Tradition ;
 	rdfs:comment "one of  sa ngor tsar gsum"@en ;
-	skos:prefLabel "Tsar Sakya"@en ;
+	skos:prefLabel
+		"Tsar Sakya"@en ,
+		"tshar pa/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionYazangKagyu
-	a bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Yazang Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Yazang Kagyu"@en ,
+		"g.ya' bzang bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionYelpaKagyu
-	a bdr:EightMinorKagyuTraditions ;
-	skos:prefLabel "Yelpa Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Yelpa Kagyu"@en ,
+		"yel pa bka' brgyud/"@bo-x-ewts
+		;
 	.
 
 bdr:TraditionZhalu
-	a
-		bdr:TraditionKadam ,
-		owl:Class
-		;
-	rdfs:subClassOf bdr:TraditionKadam ;
+	a bdo:Tradition ;
 	rdfs:comment """term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala
  	
 འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།"""@en ;
@@ -413,16 +389,18 @@ bdr:TraditionZhalu
 	.
 
 bdr:TraditionZhije
-	a
-		bdr:EightPracticeLineages ,
-		owl:Class
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Shije"@en ,
+		"zhi byed/"@bo-x-ewts
 		;
-	rdfs:subClassOf bdr:EightPracticeLineages ;
-	skos:prefLabel "Shije"@en ;
 	.
 
 bdr:TraditionZurmangKagyu
-	a bdr:TraditionKarmaKagyu ;
-	skos:prefLabel "Zurmang Kagyu"@en ;
+	a bdo:Tradition ;
+	skos:prefLabel
+		"Zurmang Kagyu"@en ,
+		"zur mang bka' brgyud/"@bo-x-ewts
+		;
 	.
 

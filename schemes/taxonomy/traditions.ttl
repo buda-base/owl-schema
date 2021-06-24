@@ -1,0 +1,260 @@
+@prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdr:TR0001
+	a bdo:ChineseTradition ;
+	.
+
+bdr:TR0002
+	a bdo:ChineseTradition ;
+	.
+
+bdr:TR0003
+	a bdo:ChineseTradition ;
+	.
+
+bdr:TraditionBardrukKagyu
+	a bdr:TraditionDrukpaKagyu ;
+	.
+
+bdr:TraditionBaromKagyu
+	a bdr:FourMainKagyuTraditions ;
+	.
+
+bdr:TraditionBodong
+	a
+		bdo:TibetanTradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:TibetanTradition ;
+	.
+
+bdr:TraditionBon
+	a
+		bdo:TibetanTradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:TibetanTradition ;
+	.
+
+bdr:TraditionChod
+	a bdr:TraditionZhije ;
+	.
+
+bdr:TraditionDakpoKagyu
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionDharmaguptaka
+	a
+		bdo:Tradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:Tradition ;
+	.
+
+bdr:TraditionDrigungKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionDrukpaKagyu
+	a
+		bdr:EightMinorKagyuTraditions ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionGeluk
+	a
+		bdr:TraditionKadam ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:TraditionKadam ;
+	.
+
+bdr:TraditionJonang
+	a
+		bdo:TibetanTradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:TibetanTradition ;
+	.
+
+bdr:TraditionJordruk
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionKadam
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionKagyu
+	a bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionKarmaKagyu
+	a
+		bdr:FourMainKagyuTraditions ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:FourMainKagyuTraditions ;
+	.
+
+bdr:TraditionMadrukKagyu
+	a bdr:TraditionDrukpaKagyu ;
+	.
+
+bdr:TraditionMartsangKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionMulasarvastivada
+	a
+		bdo:Tradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:Tradition ;
+	.
+
+bdr:TraditionNedoKagyu
+	a bdr:TraditionKarmaKagyu ;
+	.
+
+bdr:TraditionNgorSakya
+	a bdr:TraditionSakya ;
+	.
+
+bdr:TraditionNyingma
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionOrgyenNyengyu
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionPhagGruKagyu
+	a bdr:FourMainKagyuTraditions ;
+	.
+
+bdr:TraditionRime
+	a
+		bdo:TibetanTradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:TibetanTradition ;
+	.
+
+bdr:TraditionSakya
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionSarvastivada
+	a
+		bdo:Tradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:Tradition ;
+	.
+
+bdr:TraditionShangpaKagyu
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionShugsepKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionTaklungKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionTheravada
+	a
+		bdo:Tradition ,
+		owl:Class
+		;
+	rdfs:subClassOf bdo:Tradition ;
+	.
+
+bdr:TraditionTodrukKagyu
+	a bdr:TraditionDrukpaKagyu ;
+	.
+
+bdr:TraditionTrophuKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionTsalpaKagyu
+	a bdr:FourMainKagyuTraditions ;
+	.
+
+bdr:TraditionTsarSakya
+	a bdr:TraditionSakya ;
+	.
+
+bdr:TraditionYazangKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionYelpaKagyu
+	a bdr:EightMinorKagyuTraditions ;
+	.
+
+bdr:TraditionZhalu
+	a
+		bdr:TraditionKadam ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:TraditionKadam ;
+	.
+
+bdr:TraditionZhije
+	a
+		bdr:EightPracticeLineages ,
+		owl:Class
+		;
+	rdfs:subClassOf bdr:EightPracticeLineages ;
+	.
+
+bdr:TraditionZurmangKagyu
+	a bdr:TraditionKarmaKagyu ;
+	.
+
