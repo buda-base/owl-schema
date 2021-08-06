@@ -678,6 +678,10 @@ bdo:biblioNote
 	rdfs:label "书目注释"@zh-hans ;
 	.
 
+bdo:biblioStatus
+	rdfs:label "实例所描述的书目状况"@zh-hans ;
+	.
+
 bdo:binding
 	rdfs:label "装订方式"@zh-hans ;
 	.
@@ -1133,6 +1137,10 @@ bdo:instanceOf
 	rdfs:label "该实例所属作品"@zh-hans ;
 	.
 
+bdo:instancePrintery
+	rdfs:label "印经院"@zh-hans ;
+	.
+
 bdo:instanceReproductionOf
 	rdfs:label "实例属于某作品的重制"@zh-hans ;
 	adm:userTooltip "主题中的实例是所指实例的复制品，如复印件或者扫描件等等。"@zh-hans ;
@@ -1355,6 +1363,10 @@ bdo:placeEvent
 	rdfs:label "事件"@zh-hans ;
 	.
 
+bdo:placeEventAffiliation
+	rdfs:label "所属传统"@zh-hans ;
+	.
+
 bdo:placeLat
 	rdfs:label "纬度"@zh-hans ;
 	.
@@ -1404,10 +1416,6 @@ bdo:serialMemberOf
 	rdfs:label "系列作品的编号"@zh-hans ;
 	.
 
-bdo:seriesNumber
-	rdfs:label "系列中的编号"@zh-hans ;
-	.
-
 bdo:sourceNote
 	rdfs:label "作品来源"@zh-hans ;
 	.
@@ -1452,12 +1460,44 @@ bdo:workAuthorshipStatement
 	rdfs:label "著作者身份说明"@zh-hans ;
 	.
 
+bdo:workBiblioNote
+	rdfs:label "书目注释"@zh-hans ;
+	.
+
+bdo:workBiblioStatus
+	rdfs:label "实例所描述的书目状况"@zh-hans ;
+	.
+
 bdo:workCBCSiglaT
 	rdfs:label "大正藏"@zh-hans ;
 	.
 
+bdo:workCatalogInfo
+	rdfs:label "摘要"@zh-hans ;
+	.
+
+bdo:workColophon
+	rdfs:label "跋文"@zh-hans ;
+	.
+
 bdo:workDerivativeOf
 	rdfs:label "衍生自"@zh-hans ;
+	.
+
+bdo:workDimHeight
+	rdfs:label "厚度"@zh-hans ;
+	.
+
+bdo:workDimLength
+	rdfs:label "长度"@zh-hans ;
+	.
+
+bdo:workDimWidth
+	rdfs:label "宽度"@zh-hans ;
+	.
+
+bdo:workEditionStatement
+	rdfs:label "版本说明"@zh-hans ;
 	.
 
 bdo:workEvent
@@ -1486,8 +1526,16 @@ bdo:workHasParallelsIn
 	rdfs:label "平行段落"@zh-hans ;
 	.
 
+bdo:workHasPart
+	rdfs:label "包含"@zh-hans ;
+	.
+
 bdo:workHasTranslation
 	rdfs:label "译本"@zh-hans ;
+	.
+
+bdo:workIllustrations
+	rdfs:label "插图"@zh-hans ;
 	.
 
 bdo:workIncipit
@@ -1607,6 +1655,10 @@ bdo:workNumberOfVolumes
 	rdfs:label "总卷数"@zh-hans ;
 	.
 
+bdo:workOtherLangScript
+	rdfs:label "其他语言"@zh-hans ;
+	.
+
 bdo:workPartOf
 	rdfs:label "属于"@zh-hans ;
 	.
@@ -1639,8 +1691,20 @@ bdo:workScanInfo
 	rdfs:label "扫描信息"@zh-hans ;
 	.
 
+bdo:workSeriesNumber
+	rdfs:label "系列中的编号"@zh-hans ;
+	.
+
 bdo:workSideBoxSequenceId
 	rdfs:label "文集中的作品编号"@zh-hans ;
+	.
+
+bdo:workSourceNote
+	rdfs:label "作品来源"@zh-hans ;
+	.
+
+bdo:workTitle
+	rdfs:label "标题"@zh-hans ;
 	.
 
 bdo:workTranslationOf
