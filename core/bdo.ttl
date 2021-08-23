@@ -3321,7 +3321,7 @@ bdo:legacyOutlineNodeRID
 	rdfs:label "legacy outline node rid"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
-	rdfs:domain bdo:Work ;
+	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
 	.
 
@@ -3884,6 +3884,7 @@ bdo:placeLocatedIn
 	adm:userTooltip "Identifies a Place that this Place is located in."@en ;
 	rdfs:domain bdo:Place ;
 	rdfs:range bdo:Place ;
+	owl:inverseOf bdo:placeContains ;
 	.
 
 bdo:placeLong
@@ -4075,9 +4076,8 @@ bdo:seqNum
 bdo:serialHasInstance
 	a owl:ObjectProperty ;
 	rdfs:label "serial has instance"@en ;
-	rdfs:domain bdo:SerialMember ;
+	rdfs:domain bdo:SerialWork ;
 	rdfs:range bdo:SerialInstance ;
-	owl:deprecated "true"^^xsd:boolean ;
 	owl:inverseOf bdo:serialInstanceOf ;
 	.
 
@@ -4095,8 +4095,7 @@ bdo:serialInstanceOf
 	a owl:ObjectProperty ;
 	rdfs:label "serial instance of"@en ;
 	rdfs:domain bdo:SerialInstance ;
-	rdfs:range bdo:SerialMember ;
-	owl:deprecated "true"^^xsd:boolean ;
+	rdfs:range bdo:SerialWork ;
 	owl:inverseOf bdo:serialHasInstance ;
 	.
 
@@ -4106,6 +4105,7 @@ bdo:serialMemberOf
 	adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :partOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
 	adm:userTooltip "Indicates that this Work is a member of a series."@en ;
 	rdfs:range bdo:SerialWork ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:seriesNumber
@@ -4331,8 +4331,8 @@ bdo:workFEMCManuscriptCode
 	a owl:DatatypeProperty ;
 	rdfs:subPropertyOf bdo:workRefs ;
 	rdfs:label "FEMC Manuscript code"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "FEMC Manuscript Code"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:workGenre
