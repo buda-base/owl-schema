@@ -156,7 +156,7 @@ bdo:Binding
 
 bdo:BundleInstance
 	a owl:Class ;
-	rdfs:subClassOf bdo:SerialInstance ;
+	rdfs:subClassOf bdo:Instance ;
 	rdfs:label "bundle instance"@en ;
 	adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package. It typically has no associated work."@en ;
 	.
@@ -1965,6 +1965,7 @@ bdo:contentMethod
 	adm:userTooltip "the method for creating the content"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range bdo:ContentMethod ;
+	owl:deprecated "true"^^xsd:boolean ;
 	skos:editorialNote "was :workObjectType"@en ;
 	.
 
@@ -3624,6 +3625,7 @@ bdo:paginatedBy
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:TextualEntity ;
 	rdfs:range bdo:Item ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:partIndex

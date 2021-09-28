@@ -214,17 +214,15 @@ bdr:ScriptPostGupta
 
 bdr:ScriptRanj
 	a bdo:Script ;
-	rdfs:comment
-		"This script is not normalized in ISO 15924"@en ,
-		"Use it for Ranjana, Landza and Vartu"@en
-		;
+	rdfs:comment "This script is not normalized in ISO 15924"@en ;
 	rdfs:seeAlso <http://scriptsource.org/scr/Qabb> ;
 	skos:altLabel
 		"Kutika"@en ,
+		"Kuṭila"@sa-x-iast ,
 		"Pāla"@sa-x-iast ,
-		"Vartu"@en ,
+		"Siddhānta"@sa-x-iast ,
+		"Vartu"@sa-x-iast ,
 		"lany+tsa"@bo-x-ewts ,
-		"vartu"@sa-x-iast ,
 		"wartu"@bo-x-ewts
 		;
 	skos:prefLabel
