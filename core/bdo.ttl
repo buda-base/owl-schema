@@ -3278,6 +3278,7 @@ bdo:itemMissingVolumes
 	adm:userTooltip "A comma separated list of numbers and ranges of missing volumes"@en ;
 	rdfs:domain bdo:Item ;
 	rdfs:range xsd:string ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:itemShelf
@@ -3295,6 +3296,7 @@ bdo:itemVolumes
 	adm:userTooltip "The number of volumes in the item"@en ;
 	rdfs:domain bdo:Item ;
 	rdfs:range xsd:integer ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:kinWith
@@ -3522,6 +3524,13 @@ bdo:migration_exception
 	rdfs:range xsd:string ;
 	.
 
+bdo:missingVolumes
+	a owl:DatatypeProperty ;
+	rdfs:label "missing volumes"@en ;
+	adm:catalogingConvention 'A comma separated list of volume numbers and ranges of missing volumes for the Item. For example: "3-4,11,17,81-88,101"'@en ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:notAfter
 	a owl:DatatypeProperty ;
 	rdfs:subPropertyOf bdo:eventWhen ;
@@ -3578,9 +3587,6 @@ bdo:noteType
 bdo:numberOfVolumes
 	a owl:DatatypeProperty ;
 	rdfs:label "number of volumes"@en ;
-	adm:catalogingConvention 'This is the number of volumes associated with the original instance. Typically this is for a published work. The value may differ from the "actual" number of volumes in an associated Item owing to missing volumes.'@en ;
-	adm:userTooltip "This is the number of volumes associated with the original instance."@en ;
-	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:integer ;
 	.
 
