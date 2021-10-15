@@ -3970,7 +3970,7 @@ bdo:placeWBArea
 bdo:printMethod
 	a owl:ObjectProperty ;
 	rdfs:label "print method"@en ;
-	adm:userTooltip "Indicates the printing method of the Item associated with the Work."@en ;
+	adm:userTooltip "Indicates the printing method of the Instance"@en ;
 	rdfs:domain bdo:PhysicalInstance ;
 	rdfs:range bdo:PrintMethod ;
 	.
@@ -3978,7 +3978,6 @@ bdo:printMethod
 bdo:publisherLocation
 	a owl:DatatypeProperty ;
 	rdfs:label "publisher location"@en ;
-	adm:userTooltip "Loction of the publisher of the form of the Instance that has been digitized."@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
 	.
@@ -3986,7 +3985,6 @@ bdo:publisherLocation
 bdo:publisherName
 	a owl:DatatypeProperty ;
 	rdfs:label "publisher name"@en ;
-	adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
 	.
@@ -3996,6 +3994,13 @@ bdo:qualityGrade
 	rdfs:label "quality of digital reproduction"@en ;
 	adm:userTooltip "The associated with the subject (can be a :DigitalInstance), using a grade from 0 to 5."@en ;
 	rdfs:range xsd:integer ;
+	.
+
+bdo:reproductionPrintMethod
+	a owl:ObjectProperty ;
+	rdfs:label "print method of the reproduction (in the case of digitization of microfilms, facsimile, etc.)"@en ;
+	rdfs:domain bdo:Instance ;
+	rdfs:range bdo:PrintMethod ;
 	.
 
 bdo:restored
