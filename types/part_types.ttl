@@ -37,7 +37,8 @@ bdr:PartTypeCodex
 
 bdr:PartTypeCollection
 	a bdo:PartType ;
-	skos:prefLabel "chapter"@en ;
+	skos:definition "use it only for edited collections and not reproductions"@en ;
+	skos:prefLabel "collection (edited)"@en ;
 	.
 
 bdr:PartTypeDigitalCodex
