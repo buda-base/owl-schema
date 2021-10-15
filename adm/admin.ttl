@@ -744,8 +744,8 @@ adm:sameAsDILA
 adm:sameAsMBBT
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
-	rdfs:label "same as Markus Bingenheimer's Bibliography of Translations"@en ;
-	rdfs:comment "this resource is about the same resource as the resource in Markus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
+	rdfs:label "same as Marcus Bingenheimer's Bibliography of Translations"@en ;
+	rdfs:comment "this resource is about the same resource as the resource in Marcus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
 	rdfs:domain bdo:Entity ;
 	.
 
