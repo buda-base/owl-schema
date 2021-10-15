@@ -25,23 +25,57 @@ bdo:PartType
 	.
 
 bdr:PartTypeChapter
-	a bdo:WorkPartType ;
+	a bdo:PartType ;
 	skos:prefLabel "chapter"@en ;
 	.
 
+bdr:PartTypeCodex
+	a bdo:PartType ;
+	skos:definition "set of unrelated codicological units that are put together in a new codicological unit"@en ;
+	skos:prefLabel "codex"@en ;
+	.
+
+bdr:PartTypeCollection
+	a bdo:PartType ;
+	skos:prefLabel "chapter"@en ;
+	.
+
+bdr:PartTypeDigitalCodex
+	a bdo:PartType ;
+	skos:definition "codex that has been put together digitally and has no physical reality"@en ;
+	skos:prefLabel "digital codex"@en ;
+	.
+
+bdr:PartTypeFascicle
+	a bdo:PartType ;
+	skos:prefLabel "fascicle"@en ;
+	.
+
 bdr:PartTypeFragment
-	a bdo:WorkPartType ;
-	rdfs:comment 'A fragment is a portion of a "whole" instance. It commonly occurs when some pages have been extracted from a "complete" instance and inserted improperly into a different one. A fragment is specified as a part of a containing instance via a :ContentLocation as with any similar :partOf'@en ;
+	a bdo:PartType ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:definition 'A fragment is a portion of a "whole" instance. It commonly occurs when some pages have been extracted from a "complete" instance and inserted improperly into a different one. A fragment is specified as a part of a containing instance via a :ContentLocation as with any similar :partOf'@en ;
 	skos:prefLabel "fragment"@en ;
 	.
 
+bdr:PartTypeReproductionCodex
+	a bdo:PartType ;
+	skos:definition "modern edition that is a set of facsimile of unrelated codicological units"@en ;
+	skos:prefLabel "reproduction codex"@en ;
+	.
+
 bdr:PartTypeSection
-	a bdo:WorkPartType ;
+	a bdo:PartType ;
 	skos:prefLabel "section"@en ;
 	.
 
+bdr:PartTypeSetOfFascicles
+	a bdo:PartType ;
+	skos:prefLabel "set of fascicles"@en ;
+	.
+
 bdr:PartTypeTableOfContent
-	a bdo:WorkPartType ;
+	a bdo:PartType ;
 	skos:prefLabel
 		"dkar chag"@bo-x-ewts ,
 		"table of content"@en
@@ -49,12 +83,12 @@ bdr:PartTypeTableOfContent
 	.
 
 bdr:PartTypeText
-	a bdo:WorkPartType ;
+	a bdo:PartType ;
 	skos:prefLabel "text"@en ;
 	.
 
 bdr:PartTypeVolume
-	a bdo:WorkPartType ;
+	a bdo:PartType ;
 	skos:prefLabel "volume"@en ;
 	.
 
