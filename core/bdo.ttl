@@ -998,7 +998,7 @@ bdo:PersonFlourished
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonEvent ;
 	rdfs:label "Flourished"@en ;
-	adm:userTooltip "When a person's activity occured. This is a range of dates, indicated with :notBefore / :notAfter"@en ;
+	adm:userTooltip "When a person's activity occured (less specific than birth or date)"@en ;
 	.
 
 bdo:PersonGterMaDiscovery
@@ -1564,6 +1564,15 @@ bdo:TranslationRevisedEvent
 
 bdo:Transliteration
 	rdfs:subClassOf bdo:Type ;
+	.
+
+bdo:TulkuLine
+	a owl:Class ;
+	rdfs:subClassOf bdo:Role ;
+	skos:prefLabel
+		"Tulku line"@en ,
+		"skye brgyud"@bo-x-ewts
+		;
 	.
 
 bdo:Type
@@ -3754,6 +3763,7 @@ bdo:personEventRole
 	adm:userTooltip "Indicates a Role that is occupied by a Person associated with the PersonEvent."@en ;
 	rdfs:domain bdo:PersonEvent ;
 	rdfs:range bdo:Role ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:personGender
@@ -3998,7 +4008,7 @@ bdo:qualityGrade
 
 bdo:reproductionPrintMethod
 	a owl:ObjectProperty ;
-	rdfs:label "print method of the reproduction (in the case of digitization of microfilms, facsimile, etc.)"@en ;
+	rdfs:label "print method of the reproduction"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range bdo:PrintMethod ;
 	.
@@ -4052,13 +4062,7 @@ Such reconstructions are typically approximations to the original and there may 
 bdo:role
 	a owl:ObjectProperty ;
 	rdfs:label "role"@en ;
-	adm:catalogingConvention """The :role property associates a :Role with eiher an :Agents or an :AgentInRole.
-
-When used with an :Agents the triple is asserting that the subject is commonly found performing in the target :Role
-
-When used in an :AgentInRole, the associated :Agents is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
 	adm:userTooltip "Associates a Role with eiher an Agents or an AgentInRole."@en ;
-	rdfs:domain bdo:Agents ;
 	rdfs:range bdo:Role ;
 	.
 
@@ -4469,10 +4473,5 @@ bdr:ChineseDateNotSpecified
 
 bdr:LanguageTaxonomy
 	a bdo:Type ;
-	.
-
-bdr:PrintMethod_Lithography
-	a bdo:PrintMethod_Offset ;
-	skos:prefLabel "lithography"@en ;
 	.
 
