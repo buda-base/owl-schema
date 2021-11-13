@@ -288,6 +288,15 @@ bdr:LangPi
 	skos:prefLabel "Pali"@en ;
 	.
 
+bdr:LangPiKm
+	a
+		bdo:Language ,
+		owl:Class
+		;
+	skos:description "Pali with Khmer gloss"@en ;
+	skos:prefLabel "Pali and Khmer"@en ;
+	.
+
 bdr:LangPra
 	a
 		bdo:Language ,

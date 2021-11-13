@@ -81,6 +81,7 @@ bdr:PrintMethod_ManuscriptStylus
 
 bdr:PrintMethod_Microfilm
 	a bdo:PrintMethod ;
+	rdfs:comment "Microfilm, microfiche, etc. Most of the time this is an intermediate reproduction."@en ;
 	skos:prefLabel "microfilm"@en ;
 	.
 
@@ -106,6 +107,7 @@ bdr:PrintMethod_Relief_WoodBlock
 
 bdr:PrintMethod_Xerography
 	a bdo:PrintMethod ;
+	rdfs:comment "facsimile from the 20th c., photocopies, etc."@en ;
 	skos:altLabel "lithography"@en ;
 	skos:prefLabel "xerography"@en ;
 	.
