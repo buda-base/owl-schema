@@ -1978,7 +1978,6 @@ bdo:contentMethod
 	adm:userTooltip "the method for creating the content"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range bdo:ContentMethod ;
-	owl:deprecated "true"^^xsd:boolean ;
 	skos:editorialNote "was :workObjectType"@en ;
 	.
 
