@@ -3,6 +3,8 @@
 # imports: http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/
 # imports: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
 # imports: http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/
+# imports: http://purl.bdrc.io/ontology/translations/CoreBo/
+# imports: http://purl.bdrc.io/ontology/translations/CoreZhHans/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://purl.bdrc.io/ontology/types/DateIndication/
 # imports: http://purl.bdrc.io/ontology/types/Gender/
@@ -49,6 +51,8 @@
 		<http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/> ,
 		<http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> ,
 		<http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> ,
+		<http://purl.bdrc.io/ontology/translations/CoreBo/> ,
+		<http://purl.bdrc.io/ontology/translations/CoreZhHans/> ,
 		<http://purl.bdrc.io/ontology/types/Binding/> ,
 		<http://purl.bdrc.io/ontology/types/DateIndication/> ,
 		<http://purl.bdrc.io/ontology/types/Gender/> ,
