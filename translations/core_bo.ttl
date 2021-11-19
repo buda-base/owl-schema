@@ -653,6 +653,10 @@ bdo:contentLocationVolume
 	rdfs:label "pod/"@bo-x-ewts ;
 	.
 
+bdo:contentMethod
+	rdfs:label "yi ge gtag thabs/"@bo-x-ewts ;
+	.
+
 bdo:conversionOf
 	rdfs:label "dag cha gzhan/"@bo-x-ewts ;
 	.
@@ -2357,6 +2361,10 @@ bdr:PrintMethod_Lithography
 
 bdr:PrintMethod_Manuscript
 	skos:prefLabel "bris ma/"@bo-x-ewts ;
+	.
+
+bdr:PrintMethod_Modern
+	rdfs:label "lcags par gtab tshul/"@bo-x-ewts ;
 	.
 
 bdr:PrintMethod_Relief_WoodBlock
