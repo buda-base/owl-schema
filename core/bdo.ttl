@@ -2278,6 +2278,13 @@ bdo:explicit
 	rdfs:range rdf:langString ;
 	.
 
+bdo:extentStatement
+	a owl:DatatypeProperty ;
+	rdfs:label "extent"@en ;
+	adm:userTooltip "A statement of the extent (mostly for instances)"@en ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:femcConversionOf
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf
@@ -3087,6 +3094,7 @@ bdo:instanceExtentStatement
 	adm:userTooltip "A statement of the extent of the instance"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:instanceHasDerivative

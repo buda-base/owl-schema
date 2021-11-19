@@ -730,6 +730,10 @@ bdo:eventWho
 	rdfs:label "su dang su/"@bo-x-ewts ;
 	.
 
+bdo:extentStatement
+	rdfs:label "shog grangs gsal bshad/"@bo-x-ewts ;
+	.
+
 bdo:femcConversionOf
 	rdfs:label "[FEMC ]dkar chag 'gyur khungs/"@bo-x-ewts ;
 	.
@@ -997,10 +1001,6 @@ bdo:instanceDimensions
 
 bdo:instanceEvent
 	rdfs:label "gnas tshul/"@bo-x-ewts ;
-	.
-
-bdo:instanceExtentStatement
-	rdfs:label "shog grangs gsal bshad/"@bo-x-ewts ;
 	.
 
 bdo:instanceHasDerivative

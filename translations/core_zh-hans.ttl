@@ -823,6 +823,11 @@ bdo:eventWho
 	rdfs:label "由谁添加"@zh-hans ;
 	.
 
+bdo:extentStatement
+	rdfs:label "范围说明"@zh-hans ;
+	adm:userTooltip "关于实例范围的说明"@zh-hans ;
+	.
+
 bdo:femcConversionOf
 	rdfs:label "转写自柬埔寨出版基金(FEMC)目录"@zh-hans ;
 	adm:userTooltip "此标签基于柬埔寨出版基金(FEMC)目录的修订版"@zh-hans ;
@@ -1104,11 +1109,6 @@ bdo:instanceDimensions
 bdo:instanceEvent
 	rdfs:label "事件"@zh-hans ;
 	adm:userTooltip "对某一实例的一个事件的内容、时间和地点的描述。"@zh-hans ;
-	.
-
-bdo:instanceExtentStatement
-	rdfs:label "范围说明"@zh-hans ;
-	adm:userTooltip "关于实例范围的说明"@zh-hans ;
 	.
 
 bdo:instanceHasDerivative
