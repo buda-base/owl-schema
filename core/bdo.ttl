@@ -2375,7 +2375,7 @@ bdo:hasDaughter
 
 bdo:hasFascicles
 	a owl:DatatypeProperty ;
-	rdfs:label "has fascicles"@en ;
+	rdfs:label "fascicles"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "A list of fascicles contained in the physical instance of a Work"@en ;
 	rdfs:domain bdo:PhysicalInstance ;
