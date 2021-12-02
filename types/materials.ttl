@@ -126,7 +126,11 @@ bdr:MaterialDigital
 
 bdr:MaterialKhoiPaper
 	a bdr:MaterialPaper ;
-	skos:prefLabel "khoi paper"@en ;
+	rdfs:comment "Paper made from the bark of the streblus asper."@en ;
+	skos:prefLabel
+		"khoi paper"@en ,
+		"snāy"@km-x-twktt
+		;
 	.
 
 bdr:MaterialLoktaPaper

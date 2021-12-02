@@ -260,6 +260,12 @@
     </OntologySpec>
     
     <OntologySpec>
+        <!-- local version of the Format vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Format/"/>
+        <altURL    rdf:resource="types/formats.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
         <!-- local version of the Material vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Material/"/>
         <altURL    rdf:resource="types/materials.ttl"/>

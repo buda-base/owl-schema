@@ -1,0 +1,50 @@
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix Format: <http://purl.bdrc.io/ontology/types/Format/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/Format/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
+bdo:Format
+	a owl:Class ;
+	rdfs:label "format"@en ;
+	adm:userTooltip "Formats are concepts related to the physical size or layout of instances."@en ;
+	rdfs:seeAlso
+		<http://www.rdaregistry.info/termList/bookFormat/> ,
+		<http://www.rdaregistry.info/termList/layout/>
+		;
+	.
+
+bdr:FormatLongPalmLeaf
+	a bdo:Format ;
+	rdfs:comment "Concept used in the Khmer-Thai communities, designating the most common type of palm leaf format, generally between 50 and 60 centimeters in length and around 5 centimeters in width."@en ;
+	skos:altLabel "sastrā slịk rịt"@km-x-twktt ;
+	skos:prefLabel
+		"long palm leaf"@en ,
+		"satrā"@km-x-twktt
+		;
+	.
+
+bdr:FormatShortPalmLeaf
+	a bdo:Format ;
+	rdfs:comment """Concept used in the Khmer-Thai communities, designating a palm leaf format ranging from less than 10
+to about 50 centimeters in length and around 5 centimeters in width."""@en ;
+	skos:prefLabel
+		"short palm leaf"@en ,
+		"vān"@km-x-twktt
+		;
+	.
+

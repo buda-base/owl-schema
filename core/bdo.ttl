@@ -7,6 +7,7 @@
 # imports: http://purl.bdrc.io/ontology/translations/CoreZhHans/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://purl.bdrc.io/ontology/types/DateIndication/
+# imports: http://purl.bdrc.io/ontology/types/Format/
 # imports: http://purl.bdrc.io/ontology/types/Gender/
 # imports: http://purl.bdrc.io/ontology/types/LangScript/
 # imports: http://purl.bdrc.io/ontology/types/Language/
@@ -55,6 +56,7 @@
 		<http://purl.bdrc.io/ontology/translations/CoreZhHans/> ,
 		<http://purl.bdrc.io/ontology/types/Binding/> ,
 		<http://purl.bdrc.io/ontology/types/DateIndication/> ,
+		<http://purl.bdrc.io/ontology/types/Format/> ,
 		<http://purl.bdrc.io/ontology/types/Gender/> ,
 		<http://purl.bdrc.io/ontology/types/LangScript/> ,
 		<http://purl.bdrc.io/ontology/types/Language/> ,
@@ -2292,6 +2294,14 @@ bdo:femcConversionOf
 		;
 	rdfs:label "femc conversion of"@en ;
 	adm:userTooltip "This label is a (spelling) correction and conversion from the FEMC catalogs"@en ;
+	.
+
+bdo:format
+	a owl:ObjectProperty ;
+	rdfs:label "format"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	adm:userTooltip "the physical format or layout of the entity"@en ;
+	rdfs:range bdo:Format ;
 	.
 
 bdo:hasAunt

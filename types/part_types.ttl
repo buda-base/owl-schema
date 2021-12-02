@@ -49,7 +49,10 @@ bdr:PartTypeDigitalCodex
 
 bdr:PartTypeFascicle
 	a bdo:PartType ;
-	skos:prefLabel "fascicle"@en ;
+	skos:prefLabel
+		"fascicle"@en ,
+		"khsè"@km-x-twktt
+		;
 	.
 
 bdr:PartTypeFragment
