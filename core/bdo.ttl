@@ -3998,6 +3998,13 @@ bdo:placeWBArea
 	rdfs:range xsd:integer ;
 	.
 
+bdo:preservationGrade
+	a owl:DatatypeProperty ;
+	rdfs:label "quality of preservation"@en ;
+	adm:userTooltip "The quality of the physical preservation, using a grade from 0 (almost destroyed) to 5 (perfect)."@en ;
+	rdfs:range xsd:integer ;
+	.
+
 bdo:printMethod
 	a owl:ObjectProperty ;
 	rdfs:label "print method"@en ;
@@ -4023,7 +4030,7 @@ bdo:publisherName
 bdo:qualityGrade
 	a owl:DatatypeProperty ;
 	rdfs:label "quality of digital reproduction"@en ;
-	adm:userTooltip "The associated with the subject (can be a :DigitalInstance), using a grade from 0 to 5."@en ;
+	adm:userTooltip "The quality of the digital reproduction, using a grade from 0 (barely legible) to 5 (perfect)."@en ;
 	rdfs:range xsd:integer ;
 	.
 

@@ -189,11 +189,11 @@ bdr:CBCSiglaK
 		skos:Concept
 		;
 	rdfs:label
-		"CBC Sigla K"@en ,
+		"Koreana number"@en ,
 		"高麗大藏經-新文豐版"@zh-hant
 		;
 	skos:broader bdr:CBCSiglaIdentifier ;
-	skos:definition "Indicates a CBC Sigla K associated with this Instance."@en ;
+	skos:definition "The Koreana number, as indicated in the catalog by Lewis R. Lancaster."@en ;
 	.
 
 bdr:CBCSiglaL
@@ -267,12 +267,11 @@ bdr:CBCSiglaT
 		skos:Concept
 		;
 	rdfs:label
-		"CBC Sigla T, Taisho"@en ,
 		"Taisho reference number"@en ,
 		"大正藏"@zh-hant
 		;
 	skos:broader bdr:CBCSiglaIdentifier ;
-	skos:definition "Indicates a CBC Sigla T, Taisho, associated with this Instance."@en ;
+	skos:definition "Indicates the Taisho number associated with this Instance, withtout the volume number (ex: T0001, not T01n0001)."@en ;
 	.
 
 bdr:CBCSiglaU
