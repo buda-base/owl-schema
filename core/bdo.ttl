@@ -487,7 +487,7 @@ Often the Title Page Title for a publication of a reproduction that includes pre
 
 bdo:Gender
 	rdfs:subClassOf bdo:Type ;
-	skos:definition "A category into which humans are divided on the basis of their reproductive functions."@en ;
+	skos:definition "Sex or gender identity."@en ;
 	.
 
 bdo:GeneralNote
@@ -3486,8 +3486,8 @@ bdo:lineageRef
 
 bdo:lineageType
 	a
-		owl:FunctionalProperty ,
-		owl:ObjectProperty
+		owl:ObjectProperty ,
+		owl:FunctionalProperty
 		;
 	rdfs:label "lineage type"@en ;
 	adm:userTooltip "Identifies the type of :Lineage such as empowerment, reading transmission, various sorts of instructions and so on"@en ;
@@ -3810,8 +3810,8 @@ bdo:personHasConsort
 
 bdo:personName
 	a
-		owl:IrreflexiveProperty ,
-		owl:ObjectProperty
+		owl:ObjectProperty ,
+		owl:IrreflexiveProperty
 		;
 	rdfs:label "name"@en ;
 	adm:userTooltip "describe a name for a Person"@en ;
