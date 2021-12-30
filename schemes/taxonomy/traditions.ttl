@@ -258,3 +258,8 @@ bdr:TraditionZurmangKagyu
 	a bdr:TraditionKarmaKagyu ;
 	.
 
+bdr:TraditionsScheme
+	a skos:ConceptScheme ;
+	skos:prefLabel "Traditions"@en ;
+	.
+

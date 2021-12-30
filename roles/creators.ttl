@@ -94,6 +94,7 @@ bdr:R0ER0018
 bdr:R0ER0019
 	a bdo:Creator ;
 	rdfs:comment 'the actual author of a text, sometimes against assertions in the tradition that the text was authored by someone else or produced by processes other than direct authorship, such as translation; in numerous cases, the exact force of this role characterisation can depend upon the nature or genre of the text in question; e.g. to claim that a Chinese person is the "author" of a sutra implies that the text was composed in China, but such texts must necessarily almost universally be presented by the tradition as if they were translated from Indic originals (since sutras are buddhavacana, and the Buddha was generally understood to have been active in India); but the implications might be quite different if we identify someone as the "author" of a commentary'@en ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q36180> ;
 	skos:prefLabel "main author"@en ;
 	.
 
@@ -125,6 +126,7 @@ bdr:R0ER0023
 bdr:R0ER0024
 	a bdo:Creator ;
 	rdfs:comment "An individual who physically wrote the text. Can be during recitation by the author (ex. bdr:W8145)"@en ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q916292> ;
 	skos:prefLabel
 		"scribe"@en ,
 		"yi ge ba/"@bo-x-ewts
@@ -134,6 +136,7 @@ bdr:R0ER0024
 bdr:R0ER0025
 	a bdo:Creator ;
 	rdfs:comment "An individual who revealed the Work as treasure texts (specific to the Tibetan context)"@en ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q2493637> ;
 	skos:prefLabel
 		"tertön"@en ,
 		"གཏེར་སྟོན།"@bo
@@ -143,12 +146,14 @@ bdr:R0ER0025
 bdr:R0ER0026
 	a bdo:Creator ;
 	rdfs:comment "A translator of the Work"@en ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q333634> ;
 	skos:prefLabel "translator"@en ;
 	.
 
 bdr:R0ER0027
 	a bdo:Creator ;
 	rdfs:comment 'a person who produces a text, but then knowingly presents it as the end result of some other process of composition--usually, as a translation from an Indic language, and sometimes under the pretense that it was "translated" by a person other than the forger (i.e. with a false ascription attached).'@en ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q3738757> ;
 	skos:prefLabel
 		"forger"@en ,
 		"偽作"@zh-hant
@@ -165,6 +170,7 @@ bdr:R0ER0028
 bdr:R0ER0030
 	a bdo:Creator ;
 	rdfs:comment "a person who sponsors a work or instance"@en ;
+	rdfs:seeAlso <http://www.wikidata.org/entity/Q152478> ;
 	skos:prefLabel
 		"sponsor"@en ,
 		"yon bdag"@bo-x-ewts
@@ -181,6 +187,18 @@ bdr:R0ER0032
 	a bdo:Creator ;
 	rdfs:comment "In some contexts (Tibetan, Burmese), we have records of instructions by a certain teacher, even though the author of the actual instruction record are not the teacher themselves. This role represents the teacher."@en ;
 	skos:prefLabel "instructions of"@en ;
+	.
+
+bdr:R0ER0033
+	a bdo:Creator ;
+	rdfs:comment "Someone involved in the printing process."@en ;
+	skos:prefLabel "printer"@en ;
+	.
+
+bdr:R0ER0034
+	a bdo:Creator ;
+	rdfs:comment "Someone involved in the process of carving wood blocks for printing."@en ;
+	skos:prefLabel "carver"@en ;
 	.
 
 bdr:Unspecified

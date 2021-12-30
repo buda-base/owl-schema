@@ -8,7 +8,7 @@
 # imports: http://purl.bdrc.io/ontology/adm/types/TermsOfUse/
 # imports: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/translations/AdmBo/
-# imports: http://purl.bdrc.io/ontology/translations/CoreBo/
+# imports: http://purl.bdrc.io/ontology/translations/AdmZhHans/
 
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
@@ -45,7 +45,7 @@
 		<http://purl.bdrc.io/ontology/adm/types/TermsOfUse/> ,
 		<http://purl.bdrc.io/ontology/core/> ,
 		<http://purl.bdrc.io/ontology/translations/AdmBo/> ,
-		<http://purl.bdrc.io/ontology/translations/CoreBo/>
+		<http://purl.bdrc.io/ontology/translations/AdmZhHans/>
 		;
 	.
 
@@ -744,8 +744,8 @@ adm:sameAsDILA
 adm:sameAsMBBT
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:sameAs ;
-	rdfs:label "same as Markus Bingenheimer's Bibliography of Translations"@en ;
-	rdfs:comment "this resource is about the same resource as the resource in Markus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
+	rdfs:label "same as Marcus Bingenheimer's Bibliography of Translations"@en ;
+	rdfs:comment "this resource is about the same resource as the resource in Marcus Bingenheimer's Bibliography of Translations from the Chinese Buddhist Canon into Western Languages"@en ;
 	rdfs:domain bdo:Entity ;
 	.
 

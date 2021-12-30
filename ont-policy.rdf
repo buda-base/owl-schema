@@ -205,6 +205,12 @@
 
     <OntologySpec>
         <!-- local version of the Admin translations vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/translations/ThirdPartyLabels/"/>
+        <altURL    rdf:resource="translations/third_party_labels.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of the Admin translations vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/translations/CoreBo/"/>
         <altURL    rdf:resource="translations/core_bo.ttl"/>
     </OntologySpec>
@@ -253,6 +259,12 @@
         <altURL    rdf:resource="types/lineage_types.ttl"/>
     </OntologySpec>
     
+    <OntologySpec>
+        <!-- local version of the Format vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Format/"/>
+        <altURL    rdf:resource="types/formats.ttl"/>
+    </OntologySpec>
+
     <OntologySpec>
         <!-- local version of the Material vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Material/"/>

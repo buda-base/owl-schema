@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
 # imports: http://www.w3.org/2004/02/skos/core
-# prefix: IdentifierScheme
 
 @prefix IdentifierScheme: <http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -15,516 +13,757 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	owl:versionInfo "Initial version"^^xsd:string ;
+	.
+
 bdo:Identifier
-  a owl:Class ;
-  rdfs:label "Identifier"@en ;
-  skos:definition "Identifiers for Bibliographic entities, Places and other Entities"@en ;
-.
+	a owl:Class ;
+	rdfs:label "Identifier"@en ;
+	skos:definition "Identifiers for Bibliographic entities, Places and other Entities"@en ;
+	.
+
 bdr:BibliographicIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Bibliographic Identifer"@en ;
-  rdfs:subClassOf bf:Identifier ;
-  skos:definition "An identifier associated with a bibliographic concept such as Work, Instance or Item"@en ;
-  skos:editorialNote "extends the Bibframe 2 Identifier class"@en ;
-  skos:narrower bdr:InstanceIdentifier ;
-  skos:narrower bdr:ItemIdentifier ;
-  skos:narrower bdr:WorkIdentifier ;
-  skos:topConceptOf bdr:IdentifierScheme ;
-.
-bdr:WDSBB
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Waddell"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Indicates the Waddell identifier in the collection at the Stabi in Berlin"@en ;
-.
-bdr:IDNGMPP
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "NGMPP Reel Number"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Indicates the NGMPP Reel Number"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:subClassOf bf:Identifier ;
+	rdfs:label "Bibliographic Identifer"@en ;
+	skos:definition "An identifier associated with a bibliographic concept such as Work, Instance or Item"@en ;
+	skos:editorialNote "extends the Bibframe 2 Identifier class"@en ;
+	skos:narrower
+		bdr:InstanceIdentifier ,
+		bdr:ItemIdentifier ,
+		bdr:WorkIdentifier
+		;
+	skos:topConceptOf bdr:IdentifierScheme ;
+	.
+
 bdr:CBCSiglaA
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla A"@en ;
-  rdfs:label "趙城金藏"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla A associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla A"@en ,
+		"趙城金藏"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla A associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaB
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla B"@en ;
-  rdfs:label "大藏經補編"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla B associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla B"@en ,
+		"大藏經補編"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla B associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaC
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla C"@en ;
-  rdfs:label "中華大藏經-中華書局版"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla C associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla C"@en ,
+		"中華大藏經-中華書局版"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla C associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaD
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla D"@en ;
-  rdfs:label "國圖善本"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla D associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla D"@en ,
+		"國圖善本"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla D associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaF
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla F"@en ;
-  rdfs:label "房山石經"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla F associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla F"@en ,
+		"房山石經"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla F associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaG
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla G"@en ;
-  rdfs:label "佛教大藏經"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla G associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla G"@en ,
+		"佛教大藏經"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla G associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaGA
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla GA"@en ;
-  rdfs:label "中國佛寺史志彙刊"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla GA associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla GA"@en ,
+		"中國佛寺史志彙刊"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla GA associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaGB
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla GB"@en ;
-  rdfs:label "中國佛寺志叢刊"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla GB associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla GB"@en ,
+		"中國佛寺志叢刊"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla GB associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaI
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla I"@en ;
-  rdfs:label "北朝佛教石刻拓片百品"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla I associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla I"@en ,
+		"北朝佛教石刻拓片百品"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla I associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla Identifer"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "An identifier associated with a CBC Instance"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "CBC Sigla Identifer"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "An identifier associated with a CBC Instance"@en ;
+	.
+
 bdr:CBCSiglaJ
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla J"@en ;
-  rdfs:label "嘉興藏"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla J associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla J"@en ,
+		"嘉興藏"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla J associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaK
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla K"@en ;
-  rdfs:label "高麗大藏經-新文豐版"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla K associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"Koreana number"@en ,
+		"高麗大藏經-新文豐版"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "The Koreana number, as indicated in the catalog by Lewis R. Lancaster."@en ;
+	.
+
 bdr:CBCSiglaL
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla L"@en ;
-  rdfs:label "乾隆大藏經-新文豐版"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla L associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla L"@en ,
+		"乾隆大藏經-新文豐版"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla L associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaM
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla M"@en ;
-  rdfs:label "卍正藏經-新文豐版"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla M associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla M"@en ,
+		"卍正藏經-新文豐版"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla M associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaN
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla N"@en ;
-  rdfs:label "南傳大藏經"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla N associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla N"@en ,
+		"南傳大藏經"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla N associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaP
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla P"@en ;
-  rdfs:label "永樂北藏"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla P associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla P"@en ,
+		"永樂北藏"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla P associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaS
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla S"@en ;
-  rdfs:label "宋藏遺珍-新文豐版"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla S associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla S"@en ,
+		"宋藏遺珍-新文豐版"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla S associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaT
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla T, Taisho"@en ;
-  rdfs:label "Taisho reference number"@en ;
-  rdfs:label "大正藏"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla T, Taisho, associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"Taisho reference number"@en ,
+		"大正藏"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates the Taisho number associated with this Instance, withtout the volume number (ex: T0001, not T01n0001)."@en ;
+	.
+
 bdr:CBCSiglaU
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla U"@en ;
-  rdfs:label "洪武南藏"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla U associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla U"@en ,
+		"洪武南藏"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla U associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaX
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla X"@en ;
-  rdfs:label "卍續藏"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla X associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla X"@en ,
+		"卍續藏"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla X associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaY
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla Y"@en ;
-  rdfs:label "印順法師佛學著作集"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla Y associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla Y"@en ,
+		"印順法師佛學著作集"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla Y associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaZS
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla ZS"@en ;
-  rdfs:label "正史佛教資料類編"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla ZS associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla ZS"@en ,
+		"正史佛教資料類編"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla ZS associated with this Instance."@en ;
+	.
+
 bdr:CBCSiglaZW
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "CBC Sigla ZW"@en ;
-  rdfs:label "藏外佛教文獻"@zh-hant ;
-  skos:broader bdr:CBCSiglaIdentifier ;
-  skos:definition "Indicates a CBC Sigla ZW associated with this Instance."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label
+		"CBC Sigla ZW"@en ,
+		"藏外佛教文獻"@zh-hant
+		;
+	skos:broader bdr:CBCSiglaIdentifier ;
+	skos:definition "Indicates a CBC Sigla ZW associated with this Instance."@en ;
+	.
+
 bdr:CHGISId
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "chgis id"@en ;
-  skos:broader bdr:PlaceIdentifier ;
-  skos:definition "The China Historical GIS identifier for the Place"@en ;
-  skos:editorialNote "Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with \"TBRC_\", for example, \"TBRC_G162\"."@en ;
-  skos:historyNote "Was bdo:placeChgisId."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "chgis id"@en ;
+	skos:broader bdr:PlaceIdentifier ;
+	skos:definition "The China Historical GIS identifier for the Place"@en ;
+	skos:editorialNote 'Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with "TBRC_", for example, "TBRC_G162".'@en ;
+	skos:historyNote "Was bdo:placeChgisId."@en ;
+	.
+
 bdr:FEMCManuscriptCode
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "FEMC Manuscript code"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "FEMC Manuscript Code"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "FEMC code"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Code used in the publications by the Fonds d'Édition des Manuscrits du Cambodge (FEMC), or extension of these codes by BDRC."@en ;
+	.
+
 bdr:GB2260-2013
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "GB2260-2013"@en ;
-  skos:broader bdr:PlaceIdentifier ;
-  skos:definition "The 2013 Chinese GB code for the Place. Similar to U.S. Zipcode"@en ;
-  skos:historyNote "Was bdo:placeGB2260-2013."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "GB2260-2013"@en ;
+	skos:broader bdr:PlaceIdentifier ;
+	skos:definition "The 2013 Chinese GB code for the Place. Similar to U.S. Zipcode"@en ;
+	skos:historyNote "Was bdo:placeGB2260-2013."@en ;
+	.
+
 bdr:HarvardShelfId
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "hollis shelf id"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Harvard Library identifier for physical items at Harvard and cataloged in BDRC"@en ;
-  skos:historyNote "Was bdo:workSeeHarvard."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "hollis shelf id"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Harvard Library identifier for physical items at Harvard and cataloged in BDRC"@en ;
+	skos:historyNote "Was bdo:workSeeHarvard."@en ;
+	.
+
 bdr:HollisId
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "hollis id"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Identifier assigned by Harvard Library to BDRC digital assets on file at Harvard."@en ;
-  skos:editorialNote "There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"@en ;
-  skos:historyNote "Was bdo:workHollis."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "hollis id"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Identifier assigned by Harvard Library to BDRC digital assets on file at Harvard."@en ;
+	skos:editorialNote "There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"@en ;
+	skos:historyNote "Was bdo:workHollis."@en ;
+	.
+
+bdr:IDNGMPP
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "NGMPP Reel Number"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Indicates the NGMPP Reel Number"@en ;
+	.
+
 bdr:IdentifierScheme
-  a skos:ConceptScheme ;
-  skos:prefLabel "Identifier Scheme"@en ;
-.
-IdentifierScheme:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Initial version" ;
-.
+	a skos:ConceptScheme ;
+	skos:prefLabel "Identifier Scheme"@en ;
+	.
+
 bdr:InstanceIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Instance Identifer"@en ;
-  skos:broader bdr:BibliographicIdentifier ;
-  skos:definition "An identifier associated with an Instance"@en ;
-  skos:narrower bdr:CBCSiglaIdentifier ;
-  skos:narrower bdr:KaTenSiglaIdentifier ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Instance Identifer"@en ;
+	skos:broader bdr:BibliographicIdentifier ;
+	skos:definition "An identifier associated with an Instance"@en ;
+	skos:narrower
+		bdr:CBCSiglaIdentifier ,
+		bdr:KaTenSiglaIdentifier
+		;
+	.
+
 bdr:ItemIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Item Identifer"@en ;
-  skos:broader bdr:BibliographicIdentifier ;
-  skos:definition "An identifier associated with an Item"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Item Identifer"@en ;
+	skos:broader bdr:BibliographicIdentifier ;
+	skos:definition "An identifier associated with an Item"@en ;
+	.
+
 bdr:KDPPOldId
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "KDPPOld Id"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Khmer Digital Preservation Project Old Id"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "KDPPOld Id"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Khmer Digital Preservation Project Old Id"@en ;
+	.
+
 bdr:KaTenSiglaA
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Pedurma catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/756377542> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "From Paul Hackett's catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Pedurma catalogue number"@en ;
+	rdfs:seeAlso <http://www.worldcat.org/oclc/756377542> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "From Paul Hackett's catalogue"@en ;
+	.
+
 bdr:KaTenSiglaBon
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Bon Katen catalog number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number in the Bon Katen"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Bon Katen catalog number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Reference number in the Bon Katen"@en ;
+	.
+
 bdr:KaTenSiglaC
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Cone catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/603601029> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "from Mibu's catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Cone catalogue number"@en ;
+	rdfs:seeAlso <http://www.worldcat.org/oclc/603601029> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "from Mibu's catalogue"@en ;
+	.
+
 bdr:KaTenSiglaCx
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Golden Mustang Kangyur reference number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "from rKTs"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Golden Mustang Kangyur reference number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "from rKTs"@en ;
+	.
+
 bdr:KaTenSiglaD
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Tohoku catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/976594525> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Derge Kangyur and Tengyur reference numbers, from the Tohoku Catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Tohoku catalogue number"@en ;
+	rdfs:seeAlso <http://www.worldcat.org/oclc/976594525> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Derge Kangyur and Tengyur reference numbers, from the Tohoku Catalogue"@en ;
+	.
+
 bdr:KaTenSiglaDo
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Dolpo Kangyur Number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number for this work from the Dolpo Kangyur"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Dolpo Kangyur Number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Reference number for this work from the Dolpo Kangyur"@en ;
+	.
+
 bdr:KaTenSiglaEg
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Egoo Canonical Collection Number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number for this work from the Egoo Canonical Collection"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Egoo Canonical Collection Number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Reference number for this work from the Egoo Canonical Collection"@en ;
+	.
+
 bdr:KaTenSiglaF
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Phugdrak Kangyur Number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number for this work from the Phugdrak Kangyur"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Phugdrak Kangyur Number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Reference number for this work from the Phugdrak Kangyur"@en ;
+	.
+
 bdr:KaTenSiglaG
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Ganden Kangyur reference number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Ganden Kangyur reference number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Ganden (dga’ ldan) or “Golden Manuscript” (gser bris ma) Tengyur reference number"@en ;
+	.
+
 bdr:KaTenSiglaH
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Lhasa Kangyur number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Lhasa Kanjur reference number"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Lhasa Kangyur number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Lhasa Kanjur reference number"@en ;
+	.
+
 bdr:KaTenSiglaHe
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Hemis Kangyur (I) reference number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "from rKTs"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Hemis Kangyur (I) reference number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "from rKTs"@en ;
+	.
+
 bdr:KaTenSiglaIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "KaTen Sigla Identifer"@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "An identifier associated with a KaTen Instance"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "KaTen Sigla Identifer"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "An identifier associated with a KaTen Instance"@en ;
+	.
+
 bdr:KaTenSiglaJ
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Jang catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/769115653> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "From Imaeda's catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Jang catalogue number"@en ;
+	rdfs:seeAlso <http://www.worldcat.org/oclc/769115653> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "From Imaeda's catalogue"@en ;
+	.
+
 bdr:KaTenSiglaN
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Narthang number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/718065580> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Narthang number"@en ;
+	rdfs:seeAlso <http://www.worldcat.org/oclc/718065580> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Narthang Kangyur and Tengyur reference number, from Eimer's catalogue"@en ;
+	.
+
 bdr:KaTenSiglaQ
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Otani catalogue reference"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Pecing Kangyur Reference number from the Otani catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Otani catalogue reference"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Pecing Kangyur Reference number from the Otani catalogue"@en ;
+	.
+
 bdr:KaTenSiglaS
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Stog catalogue number"@en ;
-  rdfs:seeAlso <http://www.worldcat.org/oclc/461960048> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number from Skorupski's catalogue"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Stog catalogue number"@en ;
+	rdfs:seeAlso <http://www.worldcat.org/oclc/461960048> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Reference number from Skorupski's catalogue"@en ;
+	.
+
 bdr:KaTenSiglaU
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Urga catalogue number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Urga Kangyur reference number"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Urga catalogue number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Urga Kangyur reference number"@en ;
+	.
+
 bdr:KaTenSiglaV
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Ulaanbaatar catalogue number"@en ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Reference number from the Ulaanbaatar Kangyur"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Ulaanbaatar catalogue number"@en ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Reference number from the Ulaanbaatar Kangyur"@en ;
+	.
+
 bdr:KaTenSiglaZ
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Shey number"@en ;
-  rdfs:seeAlso <https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php> ;
-  skos:broader bdr:KaTenSiglaIdentifier ;
-  skos:definition "Shey Palace manuscript reference number"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Shey number"@en ;
+	rdfs:seeAlso <https://www.istb.univie.ac.at/kanjur/xml4/sub/sigla.php> ;
+	skos:broader bdr:KaTenSiglaIdentifier ;
+	skos:definition "Shey Palace manuscript reference number"@en ;
+	.
+
 bdr:MARCCountryCode
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "MARC Country Code"@en ;
-  rdfs:seeAlso <http://id.loc.gov/vocabulary/countries.html> ;
-  rdfs:seeAlso <http://www.loc.gov/marc/countries/> ;
-  skos:broader bdr:PlaceIdentifier ;
-  skos:definition "two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)"@en ;
-  skos:historyNote "Was bdo:placeMARCCountryCode."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "MARC Country Code"@en ;
+	rdfs:seeAlso
+		<http://id.loc.gov/vocabulary/countries.html> ,
+		<http://www.loc.gov/marc/countries/>
+		;
+	skos:broader bdr:PlaceIdentifier ;
+	skos:definition "two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)"@en ;
+	skos:historyNote "Was bdo:placeMARCCountryCode."@en ;
+	.
+
 bdr:PL480
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "LOC overseas acq no."@en ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Indicates the overseas acquisition number at Library of Congress."@en ;
-  skos:editorialNote "Do not fill for works not created by Gene in the PL480 period."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "LOC overseas acq no."@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Indicates the overseas acquisition number at Library of Congress."@en ;
+	skos:editorialNote "Do not fill for works not created by Gene in the PL480 period."@en ;
+	.
+
 bdr:PlaceIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Place Identifer"@en ;
-  skos:definition "An identifier associated with a Place"@en ;
-  skos:topConceptOf bdr:IdentifierScheme ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Place Identifer"@en ;
+	skos:definition "An identifier associated with a Place"@en ;
+	skos:topConceptOf bdr:IdentifierScheme ;
+	.
+
 bdr:RefChokLing
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "chokling tersar reference"@en ;
-  rdfs:seeAlso "http://rywiki.tsadra.org/index.php/Catalogue_of_the_New_Treasures_of_Chokgyur_Lingpa_Part_1"^^xsd:anyURI ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642"@en ;
-  skos:historyNote "Was bdo:workRefChokLing."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "chokling tersar reference"@en ;
+	rdfs:seeAlso "http://rywiki.tsadra.org/index.php/Catalogue_of_the_New_Treasures_of_Chokgyur_Lingpa_Part_1"^^xsd:anyURI ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Catalogue of the New Treasures of Chokgyur Lingpa reference used only in cataloguing parts of bdr:W22642"@en ;
+	skos:historyNote "Was bdo:workRefChokLing."@en ;
+	.
+
 bdr:RefIsIAO
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "IsIAO reference"@en ;
-  rdfs:seeAlso bdr:W19841 ;
-  skos:broader bdr:InstanceIdentifier ;
-  skos:definition "Catalog of the Tucci Tibetan fund in the library of ISMEO"@en ;
-  skos:historyNote "Was bdo:workRefIsIAO."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "IsIAO reference"@en ;
+	rdfs:seeAlso bdr:W19841 ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Catalog of the Tucci Tibetan fund in the library of ISMEO"@en ;
+	skos:historyNote "Was bdo:workRefIsIAO."@en ;
+	.
+
 bdr:RefrKTsG
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "rKTs rnying rgyud reference"@en ;
-  rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
-  skos:broader bdr:RefrKTsIdentifier ;
-  skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
-  skos:historyNote "Was bdo:workRefrKTsG."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "rKTs rnying rgyud reference"@en ;
+	rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
+	skos:broader bdr:RefrKTsIdentifier ;
+	skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a rnying rgyud text"@en ;
+	skos:historyNote "Was bdo:workRefrKTsG."@en ;
+	.
+
 bdr:RefrKTsIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "rKTs Identifer"@en ;
-  skos:broader bdr:WorkIdentifier ;
-  skos:definition "An identifier associated with an rKTs Work"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "rKTs Identifer"@en ;
+	skos:broader bdr:WorkIdentifier ;
+	skos:definition "An identifier associated with an rKTs Work"@en ;
+	.
+
 bdr:RefrKTsK
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "rKTs Kangyur reference"@en ;
-  rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
-  skos:broader bdr:RefrKTsIdentifier ;
-  skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
-  skos:historyNote "Was bdo:workRefrKTsK."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "rKTs Kangyur reference"@en ;
+	rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
+	skos:broader bdr:RefrKTsIdentifier ;
+	skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference number for Kangyur texts"@en ;
+	skos:historyNote "Was bdo:workRefrKTsK."@en ;
+	.
+
 bdr:RefrKTsT
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "rKTs Tengyur reference"@en ;
-  rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
-  skos:broader bdr:RefrKTsIdentifier ;
-  skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
-  skos:historyNote "Was bdo:workRefrKTsT."@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "rKTs Tengyur reference"@en ;
+	rdfs:seeAlso "https://www.istb.univie.ac.at/kanjur/rktsneu/sub/index.php"^^xsd:anyURI ;
+	skos:broader bdr:RefrKTsIdentifier ;
+	skos:definition "University of Vienna, resources for Kanjur and Tanjur studies (rKTs) reference for a Tengyur text"@en ;
+	skos:historyNote "Was bdo:workRefrKTsT."@en ;
+	.
+
+bdr:WDSBB
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Waddell"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Indicates the Waddell identifier in the collection at the Stabi in Berlin"@en ;
+	.
+
 bdr:WorkIdentifier
-  a bdo:Identifier ;
-  a skos:Concept ;
-  rdfs:label "Work Identifer"@en ;
-  skos:broader bdr:BibliographicIdentifier ;
-  skos:definition "An identifier associated with a Work"@en ;
-.
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Work Identifer"@en ;
+	skos:broader bdr:BibliographicIdentifier ;
+	skos:definition "An identifier associated with a Work"@en ;
+	.
+

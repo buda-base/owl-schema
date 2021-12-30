@@ -69,13 +69,20 @@ bdr:PrintMethod_Intaglio_Zinc
 
 bdr:PrintMethod_Manuscript
 	a bdo:PrintMethod_Manuscript ;
-	skos:prefLabel "manuscript (using ink)"@en ;
+	skos:definition "use only for manuscripts using ink"@en ;
+	skos:prefLabel "manuscript"@en ;
 	.
 
 bdr:PrintMethod_ManuscriptStylus
 	a bdo:PrintMethod_Manuscript ;
 	adm:userTooltip "The manuscript was carved with a stylus cutter (typically the case in the Southeast Asian context)"@en ;
-	skos:prefLabel "manuscript (carved using a stylus)"@en ;
+	skos:prefLabel "manuscript (stylus)"@en ;
+	.
+
+bdr:PrintMethod_Microfilm
+	a bdo:PrintMethod ;
+	rdfs:comment "Microfilm, microfiche, etc. Most of the time this is an intermediate reproduction."@en ;
+	skos:prefLabel "microfilm"@en ;
 	.
 
 bdr:PrintMethod_Modern
@@ -94,12 +101,13 @@ bdr:PrintMethod_Relief_Letterpress
 bdr:PrintMethod_Relief_WoodBlock
 	a bdo:PrintMethod_Relief ;
 	rdfs:comment "manual pressing of paper or other material on a woodblock"@en ;
-	skos:altLabel "xylograph"@en ;
+	skos:altLabel "xylography"@en ;
 	skos:prefLabel "woodblock"@en ;
 	.
 
 bdr:PrintMethod_Xerography
 	a bdo:PrintMethod ;
+	rdfs:comment "facsimile from the 20th c., photocopies, etc."@en ;
 	skos:altLabel "lithography"@en ;
 	skos:prefLabel "xerography"@en ;
 	.

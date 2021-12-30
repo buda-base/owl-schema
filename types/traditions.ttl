@@ -359,8 +359,8 @@ bdr:TraditionTrophuKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2429665> ;
 	skos:prefLabel
-		"khro phu bka' brgyud"@bo-x-ewts ,
-		"trophu kagyu"@en
+		"Trophu Kagyu"@en ,
+		"khro phu bka' brgyud"@bo-x-ewts
 		;
 	.
 

@@ -3,8 +3,11 @@
 # imports: http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/
 # imports: http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/
 # imports: http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/
+# imports: http://purl.bdrc.io/ontology/translations/CoreBo/
+# imports: http://purl.bdrc.io/ontology/translations/CoreZhHans/
 # imports: http://purl.bdrc.io/ontology/types/Binding/
 # imports: http://purl.bdrc.io/ontology/types/DateIndication/
+# imports: http://purl.bdrc.io/ontology/types/Format/
 # imports: http://purl.bdrc.io/ontology/types/Gender/
 # imports: http://purl.bdrc.io/ontology/types/LangScript/
 # imports: http://purl.bdrc.io/ontology/types/Language/
@@ -49,8 +52,11 @@
 		<http://purl.bdrc.io/ontology/schemes/core/ContentMethodScheme/> ,
 		<http://purl.bdrc.io/ontology/schemes/core/IdentifierScheme/> ,
 		<http://purl.bdrc.io/ontology/schemes/taxonomy/FEMCScheme/> ,
+		<http://purl.bdrc.io/ontology/translations/CoreBo/> ,
+		<http://purl.bdrc.io/ontology/translations/CoreZhHans/> ,
 		<http://purl.bdrc.io/ontology/types/Binding/> ,
 		<http://purl.bdrc.io/ontology/types/DateIndication/> ,
+		<http://purl.bdrc.io/ontology/types/Format/> ,
 		<http://purl.bdrc.io/ontology/types/Gender/> ,
 		<http://purl.bdrc.io/ontology/types/LangScript/> ,
 		<http://purl.bdrc.io/ontology/types/Language/> ,
@@ -156,7 +162,7 @@ bdo:Binding
 
 bdo:BundleInstance
 	a owl:Class ;
-	rdfs:subClassOf bdo:SerialInstance ;
+	rdfs:subClassOf bdo:Instance ;
 	rdfs:label "bundle instance"@en ;
 	adm:userTooltip "An instance that is a bundle of unrelated instances that were not designed to be in the same package. It typically has no associated work."@en ;
 	.
@@ -998,7 +1004,7 @@ bdo:PersonFlourished
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonEvent ;
 	rdfs:label "Flourished"@en ;
-	adm:userTooltip "When a person's activity occured. This is a range of dates, indicated with :notBefore / :notAfter"@en ;
+	adm:userTooltip "When a person's activity occured (less specific than birth or date)"@en ;
 	.
 
 bdo:PersonGterMaDiscovery
@@ -1564,6 +1570,15 @@ bdo:TranslationRevisedEvent
 
 bdo:Transliteration
 	rdfs:subClassOf bdo:Type ;
+	.
+
+bdo:TulkuLine
+	a owl:Class ;
+	rdfs:subClassOf bdo:Role ;
+	skos:prefLabel
+		"Tulku line"@en ,
+		"skye brgyud"@bo-x-ewts
+		;
 	.
 
 bdo:Type
@@ -2264,6 +2279,13 @@ bdo:explicit
 	rdfs:range rdf:langString ;
 	.
 
+bdo:extentStatement
+	a owl:DatatypeProperty ;
+	rdfs:label "extent"@en ;
+	adm:userTooltip "A statement of the extent (mostly for instances)"@en ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:femcConversionOf
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf
@@ -2272,6 +2294,14 @@ bdo:femcConversionOf
 		;
 	rdfs:label "femc conversion of"@en ;
 	adm:userTooltip "This label is a (spelling) correction and conversion from the FEMC catalogs"@en ;
+	.
+
+bdo:format
+	a owl:ObjectProperty ;
+	rdfs:label "format"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	adm:userTooltip "the physical format or layout of the entity"@en ;
+	rdfs:range bdo:Format ;
 	.
 
 bdo:hasAunt
@@ -2355,7 +2385,7 @@ bdo:hasDaughter
 
 bdo:hasFascicles
 	a owl:DatatypeProperty ;
-	rdfs:label "has fascicles"@en ;
+	rdfs:label "fascicles"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "A list of fascicles contained in the physical instance of a Work"@en ;
 	rdfs:domain bdo:PhysicalInstance ;
@@ -3073,6 +3103,7 @@ bdo:instanceExtentStatement
 	adm:userTooltip "A statement of the extent of the instance"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:instanceHasDerivative
@@ -3277,6 +3308,7 @@ bdo:itemMissingVolumes
 	adm:userTooltip "A comma separated list of numbers and ranges of missing volumes"@en ;
 	rdfs:domain bdo:Item ;
 	rdfs:range xsd:string ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:itemShelf
@@ -3294,6 +3326,7 @@ bdo:itemVolumes
 	adm:userTooltip "The number of volumes in the item"@en ;
 	rdfs:domain bdo:Item ;
 	rdfs:range xsd:integer ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:kinWith
@@ -3321,7 +3354,7 @@ bdo:legacyOutlineNodeRID
 	rdfs:label "legacy outline node rid"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "the tbrc legacy outline node rid used to route legacy outline URL references"@en ;
-	rdfs:domain bdo:Work ;
+	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
 	.
 
@@ -3521,6 +3554,13 @@ bdo:migration_exception
 	rdfs:range xsd:string ;
 	.
 
+bdo:missingVolumes
+	a owl:DatatypeProperty ;
+	rdfs:label "missing volumes"@en ;
+	adm:catalogingConvention 'A comma separated list of volume numbers and ranges of missing volumes for the Item. For example: "3-4,11,17,81-88,101"'@en ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:notAfter
 	a owl:DatatypeProperty ;
 	rdfs:subPropertyOf bdo:eventWhen ;
@@ -3577,9 +3617,6 @@ bdo:noteType
 bdo:numberOfVolumes
 	a owl:DatatypeProperty ;
 	rdfs:label "number of volumes"@en ;
-	adm:catalogingConvention 'This is the number of volumes associated with the original instance. Typically this is for a published work. The value may differ from the "actual" number of volumes in an associated Item owing to missing volumes.'@en ;
-	adm:userTooltip "This is the number of volumes associated with the original instance."@en ;
-	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:integer ;
 	.
 
@@ -3624,6 +3661,7 @@ bdo:paginatedBy
 	adm:translationPriority "2"^^xsd:integer ;
 	rdfs:domain bdo:TextualEntity ;
 	rdfs:range bdo:Item ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:partIndex
@@ -3746,6 +3784,7 @@ bdo:personEventRole
 	adm:userTooltip "Indicates a Role that is occupied by a Person associated with the PersonEvent."@en ;
 	rdfs:domain bdo:PersonEvent ;
 	rdfs:range bdo:Role ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:personGender
@@ -3884,6 +3923,7 @@ bdo:placeLocatedIn
 	adm:userTooltip "Identifies a Place that this Place is located in."@en ;
 	rdfs:domain bdo:Place ;
 	rdfs:range bdo:Place ;
+	owl:inverseOf bdo:placeContains ;
 	.
 
 bdo:placeLong
@@ -3958,10 +3998,17 @@ bdo:placeWBArea
 	rdfs:range xsd:integer ;
 	.
 
+bdo:preservationGrade
+	a owl:DatatypeProperty ;
+	rdfs:label "quality of preservation"@en ;
+	adm:userTooltip "The quality of the physical preservation, using a grade from 0 (almost destroyed) to 5 (perfect)."@en ;
+	rdfs:range xsd:integer ;
+	.
+
 bdo:printMethod
 	a owl:ObjectProperty ;
 	rdfs:label "print method"@en ;
-	adm:userTooltip "Indicates the printing method of the Item associated with the Work."@en ;
+	adm:userTooltip "Indicates the printing method of the Instance"@en ;
 	rdfs:domain bdo:PhysicalInstance ;
 	rdfs:range bdo:PrintMethod ;
 	.
@@ -3969,7 +4016,6 @@ bdo:printMethod
 bdo:publisherLocation
 	a owl:DatatypeProperty ;
 	rdfs:label "publisher location"@en ;
-	adm:userTooltip "Loction of the publisher of the form of the Instance that has been digitized."@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
 	.
@@ -3977,7 +4023,6 @@ bdo:publisherLocation
 bdo:publisherName
 	a owl:DatatypeProperty ;
 	rdfs:label "publisher name"@en ;
-	adm:userTooltip "The name of the publisher transcribed from the Work"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range rdf:langString ;
 	.
@@ -3985,8 +4030,15 @@ bdo:publisherName
 bdo:qualityGrade
 	a owl:DatatypeProperty ;
 	rdfs:label "quality of digital reproduction"@en ;
-	adm:userTooltip "The associated with the subject (can be a :DigitalInstance), using a grade from 0 to 5."@en ;
+	adm:userTooltip "The quality of the digital reproduction, using a grade from 0 (barely legible) to 5 (perfect)."@en ;
 	rdfs:range xsd:integer ;
+	.
+
+bdo:reproductionPrintMethod
+	a owl:ObjectProperty ;
+	rdfs:label "print method of the reproduction"@en ;
+	rdfs:domain bdo:Instance ;
+	rdfs:range bdo:PrintMethod ;
 	.
 
 bdo:restored
@@ -4038,13 +4090,7 @@ Such reconstructions are typically approximations to the original and there may 
 bdo:role
 	a owl:ObjectProperty ;
 	rdfs:label "role"@en ;
-	adm:catalogingConvention """The :role property associates a :Role with eiher an :Agents or an :AgentInRole.
-
-When used with an :Agents the triple is asserting that the subject is commonly found performing in the target :Role
-
-When used in an :AgentInRole, the associated :Agents is performing in the target :Role in the context of the subject property for which the :AgentInRole is the target."""@en ;
 	adm:userTooltip "Associates a Role with eiher an Agents or an AgentInRole."@en ;
-	rdfs:domain bdo:Agents ;
 	rdfs:range bdo:Role ;
 	.
 
@@ -4075,9 +4121,8 @@ bdo:seqNum
 bdo:serialHasInstance
 	a owl:ObjectProperty ;
 	rdfs:label "serial has instance"@en ;
-	rdfs:domain bdo:SerialMember ;
+	rdfs:domain bdo:SerialWork ;
 	rdfs:range bdo:SerialInstance ;
-	owl:deprecated "true"^^xsd:boolean ;
 	owl:inverseOf bdo:serialInstanceOf ;
 	.
 
@@ -4095,8 +4140,7 @@ bdo:serialInstanceOf
 	a owl:ObjectProperty ;
 	rdfs:label "serial instance of"@en ;
 	rdfs:domain bdo:SerialInstance ;
-	rdfs:range bdo:SerialMember ;
-	owl:deprecated "true"^^xsd:boolean ;
+	rdfs:range bdo:SerialWork ;
 	owl:inverseOf bdo:serialHasInstance ;
 	.
 
@@ -4106,6 +4150,7 @@ bdo:serialMemberOf
 	adm:catalogingConvention "Indicates that this Work is a member of a series. This property is used rather than :partOf to distinguish between the situation in which a series is typically not published all at once versus a collection of Works such as a Kanjur or gSungbum that is conventionally published and distributed all at once."@en ;
 	adm:userTooltip "Indicates that this Work is a member of a series."@en ;
 	rdfs:range bdo:SerialWork ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:seriesNumber
@@ -4331,8 +4376,8 @@ bdo:workFEMCManuscriptCode
 	a owl:DatatypeProperty ;
 	rdfs:subPropertyOf bdo:workRefs ;
 	rdfs:label "FEMC Manuscript code"@en ;
-	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "FEMC Manuscript Code"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:workGenre
@@ -4456,10 +4501,5 @@ bdr:ChineseDateNotSpecified
 
 bdr:LanguageTaxonomy
 	a bdo:Type ;
-	.
-
-bdr:PrintMethod_Lithography
-	a bdo:PrintMethod_Offset ;
-	skos:prefLabel "lithography"@en ;
 	.
 
