@@ -2046,6 +2046,15 @@ bdo:correctionOf
 	adm:userTooltip "This label is a (spelling) correction of the object label"@en ;
 	.
 
+bdo:creationEvent
+	a owl:DatatypeProperty ;
+	rdfs:label "event"@en ;
+	adm:catalogingConvention "use on an authorship attribution (agent as creator), for cases that are not self-evident (like second revision, second translation, etc.)"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:domain bdo:Event ;
+	rdfs:range bdo:AgentAsCreator ;
+	.
+
 bdo:creator
 	a owl:ObjectProperty ;
 	rdfs:label "has creator"@en ;
