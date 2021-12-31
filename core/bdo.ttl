@@ -212,7 +212,7 @@ bdo:CompiledEvent
 bdo:CompletedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "completed"@en ;
+	rdfs:label "completion"@en ;
 	adm:userTooltip "The event of completing a work"@en ;
 	.
 
@@ -1364,7 +1364,7 @@ bdo:RevealedEvent
 bdo:RevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "revised"@en ;
+	rdfs:label "revision"@en ;
 	adm:userTooltip "An event describing the revision of a work"@en ;
 	.
 
@@ -1393,15 +1393,14 @@ bdo:Script
 bdo:SecondRevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Second revised event"@en ;
+	rdfs:label "Second revision"@en ;
 	adm:userTooltip "An event describing the second revision of a work"@en ;
 	.
 
 bdo:SecondTranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Second translated event"@en ;
-	adm:userTooltip "An event describing the second translation of a work"@en ;
+	rdfs:label "Second translation"@en ;
 	.
 
 bdo:SerialInstance
@@ -1488,14 +1487,14 @@ bdo:TextualEntity
 bdo:ThirdRevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Third revised event"@en ;
+	rdfs:label "Third revision"@en ;
 	adm:userTooltip "An event describing the third revision of a work"@en ;
 	.
 
 bdo:ThirdTranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Third translated event"@en ;
+	rdfs:label "Third translation"@en ;
 	adm:userTooltip "An event describing the third translation of a work"@en ;
 	.
 
@@ -1555,7 +1554,7 @@ bdo:Tradition
 bdo:TranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Translated"@en ;
+	rdfs:label "Translation"@en ;
 	adm:userTooltip "An event of work translation."@en ;
 	.
 
