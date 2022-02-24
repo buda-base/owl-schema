@@ -18,6 +18,19 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bf:Identifier
+	rdfs:label "identifier"@en ;
+	.
+
+bf:Isbn
+	rdfs:label "ISBN"@en ;
+	.
+
+bf:Lccn
+	rdfs:label "LCCN"@en ;
+	rdfs:comment "Library of Congress Control Number that identifies a resource description."@en ;
+	.
+
 bf:ShelfMark
 	rdfs:label "Shelf location"@en ;
 	skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
