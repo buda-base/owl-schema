@@ -53,6 +53,7 @@ bdr:TR0003
 bdr:TraditionBardrukKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107337995> ;
+	rdfs:seeAlso bdr:T3JT13056 ;
 	skos:altLabel "Middle Drukpa Kagyu"@en ;
 	skos:prefLabel
 		"Bardruk Kagyu"@en ,
@@ -63,6 +64,7 @@ bdr:TraditionBardrukKagyu
 bdr:TraditionBaromKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q465135> ;
+	rdfs:seeAlso bdr:T1384 ;
 	skos:prefLabel
 		"'ba' rom bka' brgyud/"@bo-x-ewts ,
 		"Barom Kagyu"@en
@@ -72,6 +74,7 @@ bdr:TraditionBaromKagyu
 bdr:TraditionBodong
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107338009> ;
+	rdfs:seeAlso bdr:T2054 ;
 	skos:prefLabel
 		"Bodong"@en ,
 		"bo dong /"@bo-x-ewts
@@ -81,15 +84,26 @@ bdr:TraditionBodong
 bdr:TraditionBon
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q815628> ;
+	rdfs:seeAlso bdr:T247 ;
 	skos:prefLabel
 		"Bon"@en ,
 		"bon/"@bo-x-ewts
 		;
 	.
 
+bdr:TraditionBonSar
+	a bdo:Tradition ;
+	rdfs:seeAlso bdr:T1710 ;
+	skos:prefLabel
+		"New bon"@en ,
+		"bon sar/"@bo-x-ewts
+		;
+	.
+
 bdr:TraditionChod
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107338013> ;
+	rdfs:seeAlso bdr:T194 ;
 	skos:prefLabel
 		"Chod"@en ,
 		"gcod/"@bo-x-ewts
@@ -102,12 +116,15 @@ bdr:TraditionDakpoKagyu
 	rdfs:comment
 		"""A note is in order regarding the two forms Dkar brgyud pa and Bka' brgyud pa. The term Bka' brgyud pa simply applies to any line of transmission of an esoteric teaching from teacher to disciple. We can properly speak of a Jo nang Bka' brgyud pa or Dge ldan Bka' brgyud pa for the Jo nang pa and Dge lugs pa sects. The adherents of the sects that practice the teachings centering around the Phyag rgya chm po and the Na ro chos drug are properly referred to as the Dwags po Bka' brgyud pa because these teachings were all transmitted through Sgam po pa. Similar teachings and practices centering around the Ni gu chos drug are distinctive of the Shangs pa Bka' brgyud pa. These traditions with their offshoots are often incorrectly referred to two simply as Bka' brgyud pa. 
 
-Some of the more careful Tibetan scholars suggested that the term Dkar brgyud pa be used to refer to the Dwags po Bka' brgyud pa, Shangs pa Bka' brgyud pa, and a few minor traditions transmitted by Naropa, Mar pa, Mi Ia ras pa, or Ras chung but did not pass through Sgam po pa. The term Dkar brgyud pa refers to the use of the white cotton meditation garment by all of these lineages. This complex is what is normally known, inaccurately, as the Bka' brgyud pa. Thu'u bkwan Blo bzang chos kyi nyi rna sums up the mat ter: \"In some later 'Brug pa texts the written form 'Dkar brgyud' indeed appears, because Mar pa, Mi Ia, Gling ras, and others wore only white cotton cloth. Nevertheless, it is fine if [they] are all called Bka' brgyud. ,,., At Thu'u bkwan's suggestion, then, we will side with convention and use the term \"Bka' brgyud.\"
+Some of the more careful Tibetan scholars suggested that the term Dkar brgyud pa be used to refer to the Dwags po Bka' brgyud pa, Shangs pa Bka' brgyud pa, and a few minor traditions transmitted by Naropa, Mar pa, Mi la ras pa, or Ras chung but did not pass through Sgam po pa. The term Dkar brgyud pa refers to the use of the white cotton meditation garment by all of these lineages. This complex is what is normally known, inaccurately, as the Bka' brgyud pa. Thu'u bkwan Blo bzang chos kyi nyi rna sums up the matter: \"In some later 'Brug pa texts the written form 'Dkar brgyud' indeed appears, because Mar pa, Mi la, Gling ras, and others wore only white cotton cloth. Nevertheless, it is fine if [they] are all called Bka' brgyud. At Thu'u bkwan's suggestion, then, we will side with convention and use the term \"Bka' brgyud.\"
 
 See page 40, E.Gene Smith, \"Among Tibetan Texts\""""@en ,
 		"Traditions that arise from Marpa, Milarepa, and Gampopa. The four greater and the minor eight."@en
 		;
-	rdfs:seeAlso bdr:T1187 ;
+	rdfs:seeAlso
+		bdr:T2MS13223 ,
+		bdr:T807
+		;
 	skos:altLabel
 		"Marpa Kargyu"@en ,
 		"dmar pa bka' brgyud/"@bo-x-ewts
@@ -132,6 +149,7 @@ bdr:TraditionDharmaguptaka
 bdr:TraditionDrigungKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q737235> ;
+	rdfs:seeAlso bdr:T1190 ;
 	skos:prefLabel
 		"'bri gung bka' brgyud/"@bo-x-ewts ,
 		"Drigung Kagyu"@en
@@ -141,6 +159,10 @@ bdr:TraditionDrigungKagyu
 bdr:TraditionDrukpaKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q784270> ;
+	rdfs:seeAlso
+		bdr:T1104 ,
+		bdr:T816
+		;
 	skos:prefLabel
 		"'brug pa bka' brgyud/"@bo-x-ewts ,
 		"Drukpa Kagyu"@en
@@ -150,6 +172,7 @@ bdr:TraditionDrukpaKagyu
 bdr:TraditionGeluk
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q319218> ;
+	rdfs:seeAlso bdr:T819 ;
 	skos:prefLabel
 		"Geluk"@en ,
 		"dge lugs/"@bo-x-ewts
@@ -159,6 +182,7 @@ bdr:TraditionGeluk
 bdr:TraditionJonang
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q1702893> ;
+	rdfs:seeAlso bdr:T360 ;
 	skos:prefLabel
 		"Jonang"@en ,
 		"jo nang /"@bo-x-ewts
@@ -178,6 +202,7 @@ bdr:TraditionJordruk
 bdr:TraditionKadam
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q588362> ;
+	rdfs:seeAlso bdr:T791 ;
 	skos:prefLabel
 		"Kadam"@en ,
 		"bka' gdams pa/"@bo-x-ewts
@@ -187,6 +212,7 @@ bdr:TraditionKadam
 bdr:TraditionKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q471187> ;
+	rdfs:seeAlso bdr:T1187 ;
 	skos:prefLabel
 		"Kagyu"@en ,
 		"bka' brgyud/"@bo-x-ewts
@@ -196,6 +222,7 @@ bdr:TraditionKagyu
 bdr:TraditionKarmaKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q785447> ;
+	rdfs:seeAlso bdr:T1386 ;
 	skos:altLabel "Kamtsang Kagyu"@en ;
 	skos:prefLabel
 		"Karma Kagyu"@en ,
@@ -206,6 +233,7 @@ bdr:TraditionKarmaKagyu
 bdr:TraditionMadrukKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2497360> ;
+	rdfs:seeAlso bdr:T3JT13055 ;
 	skos:altLabel "Lower Drukpa Kagyu"@en ;
 	skos:prefLabel
 		"Medruk Kagyu"@en ,
@@ -213,9 +241,20 @@ bdr:TraditionMadrukKagyu
 		;
 	.
 
+bdr:TraditionMadunKagyu
+	a bdo:Tradition ;
+	rdfs:comment "Fusion of Nyingma and Kagyu practices followed at Drakar Taso in western Tibet"@en ;
+	rdfs:seeAlso bdr:T2447 ;
+	skos:prefLabel
+		"Madün Kagyu"@en ,
+		"ma bdun bka' brgyud/"@bo-x-ewts
+		;
+	.
+
 bdr:TraditionMartsangKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q11770752> ;
+	rdfs:seeAlso bdr:T1678 ;
 	skos:prefLabel
 		"Martsang Kagyu"@en ,
 		"smar tshang bka' brgyud/"@bo-x-ewts
@@ -236,6 +275,7 @@ bdr:TraditionMulasarvastivada
 bdr:TraditionNedoKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q1974016> ;
+	rdfs:seeAlso bdr:T1KG8538 ;
 	skos:prefLabel
 		"Nedo Kagyu"@en ,
 		"gnas mdo bka' brgyud/"@bo-x-ewts
@@ -246,6 +286,7 @@ bdr:TraditionNgorSakya
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107338027> ;
 	rdfs:comment "one of sa ngor tsar gsum"@en ;
+	rdfs:seeAlso bdr:T8LS16958 ;
 	skos:prefLabel
 		"Ngor Sakya"@en ,
 		"ngor pa/"@bo-x-ewts
@@ -255,6 +296,7 @@ bdr:TraditionNgorSakya
 bdr:TraditionNyingma
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q848771> ;
+	rdfs:seeAlso bdr:T1082 ;
 	skos:prefLabel
 		"Nyingma"@en ,
 		"rnying ma/"@bo-x-ewts
@@ -264,6 +306,7 @@ bdr:TraditionNyingma
 bdr:TraditionOrgyenNyengyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107338033> ;
+	rdfs:seeAlso bdr:T1542 ;
 	skos:prefLabel
 		"The Three Vajras"@en ,
 		"o rgyan bsnyen sgrub/"@bo-x-ewts
@@ -273,6 +316,7 @@ bdr:TraditionOrgyenNyengyu
 bdr:TraditionPhagGruKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2084716> ;
+	rdfs:seeAlso bdr:T1385 ;
 	skos:prefLabel
 		"Phagdru Kagyu"@en ,
 		"phag gru bka' brgyud/"@bo-x-ewts
@@ -283,6 +327,7 @@ bdr:TraditionRime
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q1571776> ;
 	rdfs:comment "Some might not count Rime as a Tradition but since there are Works and Persons who are identified as such it is approapriate to include for purposes of classification"@en ;
+	rdfs:seeAlso bdr:T808 ;
 	skos:prefLabel
 		"Rime"@en ,
 		"ris med/"@bo-x-ewts
@@ -292,6 +337,7 @@ bdr:TraditionRime
 bdr:TraditionSakya
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q650035> ;
+	rdfs:seeAlso bdr:T617 ;
 	skos:prefLabel
 		"Sakya"@en ,
 		"sa skya/"@bo-x-ewts
@@ -311,6 +357,7 @@ bdr:TraditionSarvastivada
 bdr:TraditionShangpaKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q365116> ;
+	rdfs:seeAlso bdr:T383 ;
 	skos:prefLabel
 		"Shangpa Kagyu"@en ,
 		"shangs pa bka' brgyud/"@bo-x-ewts
@@ -320,6 +367,7 @@ bdr:TraditionShangpaKagyu
 bdr:TraditionShugsepKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2280299> ;
+	rdfs:seeAlso bdr:T2MS13227 ;
 	skos:prefLabel
 		"Shugsep Kagyu"@en ,
 		"shug gseb bka' brgyud/"@bo-x-ewts
@@ -329,6 +377,7 @@ bdr:TraditionShugsepKagyu
 bdr:TraditionTaklungKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2388143> ;
+	rdfs:seeAlso bdr:T869 ;
 	skos:prefLabel
 		"Taklung Kagyu"@en ,
 		"stag lung bka' brgyud/"@bo-x-ewts
@@ -348,6 +397,7 @@ bdr:TraditionTheravada
 bdr:TraditionTodrukKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2009339> ;
+	rdfs:seeAlso bdr:T10MS14532 ;
 	skos:altLabel "Upper Drukpa Kagyu"@en ;
 	skos:prefLabel
 		"Todruk Kagyu"@en ,
@@ -358,6 +408,7 @@ bdr:TraditionTodrukKagyu
 bdr:TraditionTrophuKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2429665> ;
+	rdfs:seeAlso bdr:T2MS13225 ;
 	skos:prefLabel
 		"Trophu Kagyu"@en ,
 		"khro phu bka' brgyud"@bo-x-ewts
@@ -367,6 +418,7 @@ bdr:TraditionTrophuKagyu
 bdr:TraditionTsalpaKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q9362529> ;
+	rdfs:seeAlso bdr:T1387 ;
 	skos:prefLabel
 		"Tsalpa Kagyu"@en ,
 		"tshal pa bka' brgyud/"@bo-x-ewts
@@ -377,6 +429,7 @@ bdr:TraditionTsarSakya
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2458289> ;
 	rdfs:comment "one of  sa ngor tsar gsum"@en ;
+	rdfs:seeAlso bdr:T00AG02467 ;
 	skos:prefLabel
 		"Tsar Sakya"@en ,
 		"tshar pa/"@bo-x-ewts
@@ -386,6 +439,7 @@ bdr:TraditionTsarSakya
 bdr:TraditionYazangKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2599652> ;
+	rdfs:seeAlso bdr:T2MS13229 ;
 	skos:prefLabel
 		"Yazang Kagyu"@en ,
 		"g.ya' bzang bka' brgyud/"@bo-x-ewts
@@ -395,6 +449,7 @@ bdr:TraditionYazangKagyu
 bdr:TraditionYelpaKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q2600040> ;
+	rdfs:seeAlso bdr:T1186 ;
 	skos:prefLabel
 		"Yelpa Kagyu"@en ,
 		"yel pa bka' brgyud/"@bo-x-ewts
@@ -404,9 +459,10 @@ bdr:TraditionYelpaKagyu
 bdr:TraditionZhalu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107338039> ;
-	rdfs:comment """term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala
- 	
-འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།"""@en ;
+	rdfs:comment
+		"term applied to followers of the tradition of zhwa lu monastery in central tibet; the monastery originally was owned by the lce lineage and was bka' brgyud; subsequently became best known for its teachings of the kalacakra and mandala"@en ,
+		"འདི་ལ་ཞྭ་ལུ་དང་ཞ་ལུ་ཞེས་ཝ་ཟུར་ཡོད་མེད་ཀྱི་འབྲི་སྲོལ་གཉིས་སྣང་།"@bo
+		;
 	rdfs:seeAlso
 		bdr:G275 ,
 		bdr:T1198
@@ -430,6 +486,7 @@ bdr:TraditionZhije
 bdr:TraditionZurmangKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q1287654> ;
+	rdfs:seeAlso bdr:T2446 ;
 	skos:prefLabel
 		"Zurmang Kagyu"@en ,
 		"zur mang bka' brgyud/"@bo-x-ewts
