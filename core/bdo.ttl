@@ -1785,11 +1785,7 @@ bdo:colophon
 bdo:contentLocation
 	a owl:ObjectProperty ;
 	rdfs:label "location"@en ;
-	adm:technicalComment
-		"the :contentLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ,
-		"was :workLocation"@en
-		;
-	adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
+	adm:userTooltip "This is the location of the source information"@en ;
 	rdfs:domain [
 		a owl:Class ;
 		owl:unionOf (
