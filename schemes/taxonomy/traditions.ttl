@@ -22,6 +22,10 @@ bdr:TR0003
 	a bdo:ChineseTradition ;
 	.
 
+bdr:TraditionBaraKagyu
+	a bdr:TraditionTodrukKagyu ;
+	.
+
 bdr:TraditionBardrukKagyu
 	a bdr:TraditionDrukpaKagyu ;
 	.

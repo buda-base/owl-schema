@@ -1930,7 +1930,7 @@ bdo:contentLocationSide
 bdo:contentLocationStatement
 	a owl:DatatypeProperty ;
 	rdfs:label "location statement"@en ;
-	adm:userTooltip "A statement of the location of this Instance in a containing Instance or of the pagination present in the text versus the formal location in terms of page images."@en ;
+	adm:userTooltip "A statement of the location in an Instance (usually the pagination, in abbreviated form)"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
 	.

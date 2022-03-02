@@ -50,6 +50,15 @@ bdr:TR0003
 		;
 	.
 
+bdr:TraditionBaraKagyu
+	a bdo:Tradition ;
+	rdfs:seeAlso bdr:T1104 ;
+	skos:prefLabel
+		"'ba' ra bka' brgyud/"@bo-x-ewts ,
+		"Bara Kagyu"@en
+		;
+	.
+
 bdr:TraditionBardrukKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q107337995> ;
@@ -159,10 +168,7 @@ bdr:TraditionDrigungKagyu
 bdr:TraditionDrukpaKagyu
 	a bdo:Tradition ;
 	owl:sameAs <http://www.wikidata.org/entity/Q784270> ;
-	rdfs:seeAlso
-		bdr:T1104 ,
-		bdr:T816
-		;
+	rdfs:seeAlso bdr:T816 ;
 	skos:prefLabel
 		"'brug pa bka' brgyud/"@bo-x-ewts ,
 		"Drukpa Kagyu"@en
