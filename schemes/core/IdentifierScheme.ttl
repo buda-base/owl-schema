@@ -656,6 +656,15 @@ bdr:MARCCountryCode
 	skos:historyNote "Was bdo:placeMARCCountryCode."@en ;
 	.
 
+bdr:OclcControlNumber
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "OCLC Control Number (OCN)"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	.
+
 bdr:PL480
 	a
 		bdo:Identifier ,
@@ -664,7 +673,7 @@ bdr:PL480
 	rdfs:label "LOC overseas acq no."@en ;
 	skos:broader bdr:InstanceIdentifier ;
 	skos:definition "Indicates the overseas acquisition number at Library of Congress."@en ;
-	skos:editorialNote "Do not fill for works not created by Gene in the PL480 period."@en ;
+	skos:editorialNote "Do not fill for works not created by Gene in the PL480 period. Should be replaced with bf:LcOverseasAcq ."@en ;
 	.
 
 bdr:PlaceIdentifier
