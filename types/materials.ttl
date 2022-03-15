@@ -120,7 +120,7 @@ bdr:MaterialDeshog
 
 bdr:MaterialDigital
 	a bdo:BaseMaterial ;
-	rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
+	rdfs:comment "digital material for content which is born digital"@en ;
 	skos:prefLabel "digital material"@en ;
 	.
 
