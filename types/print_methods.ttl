@@ -87,13 +87,13 @@ bdr:PrintMethod_Microfilm
 
 bdr:PrintMethod_Modern
 	a bdo:PrintMethod ;
-	rdfs:comment "modern print, undetermined process"@en ;
+	rdfs:comment "modern print, undetermined process, use for computer input"@en ;
 	skos:prefLabel "modern"@en ;
 	.
 
 bdr:PrintMethod_Relief_Letterpress
 	a bdo:PrintMethod_Relief ;
-	rdfs:comment "mechanical relief printing typically via wood"@en ;
+	rdfs:comment "mechanical relief printing, use for editions before computers"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	skos:prefLabel "letterpress"@en ;
 	.
