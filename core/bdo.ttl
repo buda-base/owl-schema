@@ -567,7 +567,7 @@ Alternatively, a :ImageGroup may have an :hasManifest property that identifies a
 bdo:ImageInstance
 	a owl:Class ;
 	rdfs:subClassOf bdo:DigitalInstance ;
-	rdfs:label "Image item"@en ;
+	rdfs:label "Image Instance (Scans)"@en ;
 	adm:technicalComment "A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats."@en ;
 	adm:userTooltip "An item comprised of digitized images of the pages of a Work"@en ;
 	.
@@ -582,7 +582,7 @@ bdo:IncipitTitle
 bdo:Instance
 	a owl:Class ;
 	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "instance"@en ;
+	rdfs:label "Instance (Version)"@en ;
 	adm:technicalComment
 		"Was PublishedWork, changed to align with Bibframe 2.0"@en ,
 		"Was Work, changed to align with Bibframe 2.0"@en
