@@ -88,7 +88,7 @@ bdr:PrintMethod_Microfilm
 	skos:prefLabel "microfilm"@en ;
 	.
 
-bdr:PrintMethod_Mimeograph
+bdr:PrintMethod_Mimeography
 	a bdo:PrintMethod ;
 	skos:prefLabel
 		"mimeography"@en ,
