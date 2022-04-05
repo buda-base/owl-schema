@@ -8,7 +8,7 @@ usage() {
     echo Formats RDF files into a standard format. Operates on a single file, all files in a directory, or a set of files specified with a wildcard. Files are assumed to have either .owl or .ttl extension. Assumes rdf-toolkit.jar is in the same directory as this script.
     echo Usage: $scriptname [ file \| directory \| wildcard expression ]
     echo Examples:
-    echo $scriptname ./ontologies/starchartMain.ttl
+    echo $scriptname ./ontologies/gistCore.ttl
     echo $scriptname ../ontologies
     echo "$scriptname ../ontologies/*.owl"
 }
