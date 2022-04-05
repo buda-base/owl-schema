@@ -58,7 +58,10 @@ bdo:PrintMethod_Relief
 bdr:PrintMethod_Intaglio_Copper
 	a bdo:PrintMethod_Intaglio ;
 	adm:translationPriority "2"^^xsd:integer ;
-	skos:prefLabel "copper intaglio"@en ;
+	skos:prefLabel
+		"copper intaglio"@en ,
+		"zangs par/"@bo-x-ewts
+		;
 	.
 
 bdr:PrintMethod_Intaglio_Zinc
@@ -85,15 +88,23 @@ bdr:PrintMethod_Microfilm
 	skos:prefLabel "microfilm"@en ;
 	.
 
+bdr:PrintMethod_Mimeography
+	a bdo:PrintMethod ;
+	skos:prefLabel
+		"mimeography"@en ,
+		"snum par/"@bo-x-ewts
+		;
+	.
+
 bdr:PrintMethod_Modern
 	a bdo:PrintMethod ;
-	rdfs:comment "modern print, undetermined process"@en ;
+	rdfs:comment "modern print, undetermined process, use for computer input"@en ;
 	skos:prefLabel "modern"@en ;
 	.
 
 bdr:PrintMethod_Relief_Letterpress
 	a bdo:PrintMethod_Relief ;
-	rdfs:comment "mechanical relief printing typically via wood"@en ;
+	rdfs:comment "mechanical relief printing, use for editions before computers"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	skos:prefLabel "letterpress"@en ;
 	.
@@ -108,7 +119,9 @@ bdr:PrintMethod_Relief_WoodBlock
 bdr:PrintMethod_Xerography
 	a bdo:PrintMethod ;
 	rdfs:comment "facsimile from the 20th c., photocopies, etc."@en ;
-	skos:altLabel "lithography"@en ;
-	skos:prefLabel "xerography"@en ;
+	skos:prefLabel
+		"lithography / xerography"@en ,
+		"rdo par/"@bo-x-ewts
+		;
 	.
 

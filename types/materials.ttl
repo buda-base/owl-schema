@@ -69,7 +69,7 @@ bdr:AppliedMaterial_Poison
 		"poison (usually arsenic), giving a yellow hue"@en ,
 		"usually used to keep away insects and people who would want to take part of the manuscript and turn it into a magical tincture for consumption"@en
 		;
-	skos:prefLabel "poison"@en ;
+	skos:prefLabel "yellow layer"@en ;
 	.
 
 bdr:AppliedMaterial_RedInk
@@ -120,7 +120,7 @@ bdr:MaterialDeshog
 
 bdr:MaterialDigital
 	a bdo:BaseMaterial ;
-	rdfs:comment "digital material for content which is held in digital format in the archive (:Etexts)"@en ;
+	rdfs:comment "digital material for content which is born digital"@en ;
 	skos:prefLabel "digital material"@en ;
 	.
 

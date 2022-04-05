@@ -269,7 +269,7 @@ bdr:ScriptTibt
 	a bdo:Script ;
 	rdfs:seeAlso <http://lexvo.org/id/script/Tibt> ;
 	skos:prefLabel
-		"Tibetan Script"@en ,
+		"Tibetan script"@en ,
 		"bod yig"@bo-x-ewts
 		;
 	.

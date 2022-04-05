@@ -212,7 +212,7 @@ bdo:CompiledEvent
 bdo:CompletedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "completed"@en ;
+	rdfs:label "completion"@en ;
 	adm:userTooltip "The event of completing a work"@en ;
 	.
 
@@ -567,7 +567,7 @@ Alternatively, a :ImageGroup may have an :hasManifest property that identifies a
 bdo:ImageInstance
 	a owl:Class ;
 	rdfs:subClassOf bdo:DigitalInstance ;
-	rdfs:label "Image item"@en ;
+	rdfs:label "Image Instance (Scans)"@en ;
 	adm:technicalComment "A digitized set of pages, one per page (folio side), produced by document scanning, digital photography.  The resulting set of assets in :ItemImageAsset are images in a wide variety of archival and derivative formats."@en ;
 	adm:userTooltip "An item comprised of digitized images of the pages of a Work"@en ;
 	.
@@ -582,7 +582,7 @@ bdo:IncipitTitle
 bdo:Instance
 	a owl:Class ;
 	rdfs:subClassOf bdo:BiblioEntity ;
-	rdfs:label "instance"@en ;
+	rdfs:label "Instance (Version)"@en ;
 	adm:technicalComment
 		"Was PublishedWork, changed to align with Bibframe 2.0"@en ,
 		"Was Work, changed to align with Bibframe 2.0"@en
@@ -1364,7 +1364,7 @@ bdo:RevealedEvent
 bdo:RevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "revised"@en ;
+	rdfs:label "revision"@en ;
 	adm:userTooltip "An event describing the revision of a work"@en ;
 	.
 
@@ -1393,15 +1393,14 @@ bdo:Script
 bdo:SecondRevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Second revised event"@en ;
+	rdfs:label "Second revision"@en ;
 	adm:userTooltip "An event describing the second revision of a work"@en ;
 	.
 
 bdo:SecondTranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Second translated event"@en ;
-	adm:userTooltip "An event describing the second translation of a work"@en ;
+	rdfs:label "Second translation"@en ;
 	.
 
 bdo:SerialInstance
@@ -1488,14 +1487,14 @@ bdo:TextualEntity
 bdo:ThirdRevisedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Third revised event"@en ;
+	rdfs:label "Third revision"@en ;
 	adm:userTooltip "An event describing the third revision of a work"@en ;
 	.
 
 bdo:ThirdTranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Third translated event"@en ;
+	rdfs:label "Third translation"@en ;
 	adm:userTooltip "An event describing the third translation of a work"@en ;
 	.
 
@@ -1555,7 +1554,7 @@ bdo:Tradition
 bdo:TranslatedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:WorkEvent ;
-	rdfs:label "Translated"@en ;
+	rdfs:label "Translation"@en ;
 	adm:userTooltip "An event of work translation."@en ;
 	.
 
@@ -1786,11 +1785,7 @@ bdo:colophon
 bdo:contentLocation
 	a owl:ObjectProperty ;
 	rdfs:label "location"@en ;
-	adm:technicalComment
-		"the :contentLocation may be used with other domains and these will be added in an owl:unionOf as they are added. One such is expected to be :Note"@en ,
-		"was :workLocation"@en
-		;
-	adm:userTooltip "This is the location of the source information for this :Lineage in a specified gsan / thob yig."@en ;
+	adm:userTooltip "This is the location of the source information"@en ;
 	rdfs:domain [
 		a owl:Class ;
 		owl:unionOf (
@@ -1935,7 +1930,7 @@ bdo:contentLocationSide
 bdo:contentLocationStatement
 	a owl:DatatypeProperty ;
 	rdfs:label "location statement"@en ;
-	adm:userTooltip "A statement of the location of this Instance in a containing Instance or of the pagination present in the text versus the formal location in terms of page images."@en ;
+	adm:userTooltip "A statement of the location in an Instance (usually the pagination, in abbreviated form)"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range xsd:string ;
 	.
@@ -2044,6 +2039,14 @@ bdo:correctionOf
 	rdfs:subPropertyOf bdo:labelConnection ;
 	rdfs:label "correction of"@en ;
 	adm:userTooltip "This label is a (spelling) correction of the object label"@en ;
+	.
+
+bdo:creationEventType
+	a owl:DatatypeProperty ;
+	rdfs:label "event type"@en ;
+	adm:catalogingConvention "use on an authorship attribution (agent as creator), for cases that are not self-evident (like second revision, second translation, etc.)"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:range bdo:AgentAsCreator ;
 	.
 
 bdo:creator

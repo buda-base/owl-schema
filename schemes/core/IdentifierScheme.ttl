@@ -344,11 +344,11 @@ bdr:CHGISId
 		bdo:Identifier ,
 		skos:Concept
 		;
-	rdfs:label "chgis id"@en ;
 	skos:broader bdr:PlaceIdentifier ;
 	skos:definition "The China Historical GIS identifier for the Place"@en ;
 	skos:editorialNote 'Note that in the BDRC dataset, these are in fact invalid identifiers that conflict with other ones. The way to get the correct ID is to prefix the local name with "TBRC_", for example, "TBRC_G162".'@en ;
 	skos:historyNote "Was bdo:placeChgisId."@en ;
+	skos:prefLabel "chgis id"@en ;
 	.
 
 bdr:FEMCManuscriptCode
@@ -356,9 +356,9 @@ bdr:FEMCManuscriptCode
 		bdo:Identifier ,
 		skos:Concept
 		;
-	rdfs:label "FEMC code"@en ;
 	skos:broader bdr:InstanceIdentifier ;
 	skos:definition "Code used in the publications by the Fonds d'Édition des Manuscrits du Cambodge (FEMC), or extension of these codes by BDRC."@en ;
+	skos:prefLabel "FEMC code"@en ;
 	.
 
 bdr:GB2260-2013
@@ -377,10 +377,10 @@ bdr:HarvardShelfId
 		bdo:Identifier ,
 		skos:Concept
 		;
-	rdfs:label "hollis shelf id"@en ;
 	skos:broader bdr:InstanceIdentifier ;
 	skos:definition "Harvard Library identifier for physical items at Harvard and cataloged in BDRC"@en ;
 	skos:historyNote "Was bdo:workSeeHarvard."@en ;
+	skos:prefLabel "hollis shelf id"@en ;
 	.
 
 bdr:HollisId
@@ -388,11 +388,11 @@ bdr:HollisId
 		bdo:Identifier ,
 		skos:Concept
 		;
-	rdfs:label "hollis id"@en ;
 	skos:broader bdr:InstanceIdentifier ;
 	skos:definition "Identifier assigned by Harvard Library to BDRC digital assets on file at Harvard."@en ;
 	skos:editorialNote "There may be more than one Hollis ID for a Work owing to differences in cataloguing policy between TBRC and Harvard"@en ;
 	skos:historyNote "Was bdo:workHollis."@en ;
+	skos:prefLabel "hollis id"@en ;
 	.
 
 bdr:IDNGMPP
@@ -656,6 +656,15 @@ bdr:MARCCountryCode
 	skos:historyNote "Was bdo:placeMARCCountryCode."@en ;
 	.
 
+bdr:OclcControlNumber
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "OCLC Control Number (OCN)"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	.
+
 bdr:PL480
 	a
 		bdo:Identifier ,
@@ -664,7 +673,7 @@ bdr:PL480
 	rdfs:label "LOC overseas acq no."@en ;
 	skos:broader bdr:InstanceIdentifier ;
 	skos:definition "Indicates the overseas acquisition number at Library of Congress."@en ;
-	skos:editorialNote "Do not fill for works not created by Gene in the PL480 period."@en ;
+	skos:editorialNote "Do not fill for works not created by Gene in the PL480 period. Should be replaced with bf:LcOverseasAcq ."@en ;
 	.
 
 bdr:PlaceIdentifier

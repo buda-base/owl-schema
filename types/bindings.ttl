@@ -88,16 +88,15 @@ bdr:Binding_Continuous_Scroll
 
 bdr:Binding_LooseLeaf_Pecha
 	a bdo:Binding_LooseLeaf ;
-	rdfs:comment "loose leaves bound between boards or heavy cardboard and wrapped in cloth"@en ;
 	skos:prefLabel
 		"dpe cha/"@bo-x-exts ,
-		"pecha"@en
+		"loose leaves"@en
 		;
 	.
 
 bdr:Binding_LooseLeaf_Pothi
 	a bdo:Binding_LooseLeaf ;
-	rdfs:comment "loose leaves with holes for string to keep the leaves together and wrapped in cloth"@en ;
-	skos:prefLabel "pothi"@en ;
+	rdfs:comment "loose leaves with holes for string to keep the leaves together"@en ;
+	skos:prefLabel "loose leaves with strings"@en ;
 	.
 
