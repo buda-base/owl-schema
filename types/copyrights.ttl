@@ -1,0 +1,50 @@
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix Copyright: <http://purl.bdrc.io/ontology/types/CopyrightStatus/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.bdrc.io/ontology/types/CopyrightStatus/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	.
+
+bdo:CopyrightStatus
+	a owl:Class ;
+	rdfs:label "Copyright status"^^xsd:string ;
+	skos:description "The copyright status of a work or instance, a descriptive legal statement, orthogonal to the access policy. These copyright statuses should represent the most restrictive copyright value between local and internation al copyright"@en ;
+	.
+
+bdr:CopyrightClaimed
+	a owl:CopyrightStatus ;
+	rdfs:label "Copyright claimed"^^xsd:string ;
+	skos:description "The subject has a copyright claim, but can't be determined to be in copyright."@en ;
+	.
+
+bdr:CopyrightInCopyright
+	a owl:CopyrightStatus ;
+	rdfs:label "In copyright"^^xsd:string ;
+	skos:description "The subject has been determined to be in copyright."@en ;
+	.
+
+bdr:CopyrightPublicDomain
+	a owl:CopyrightStatus ;
+	rdfs:label "Public domain"^^xsd:string ;
+	skos:description "The subject has been determined to be in the public domain."@en ;
+	.
+
+bdr:CopyrightUndetermined
+	a owl:CopyrightStatus ;
+	rdfs:label "Copyright undetermined"^^xsd:string ;
+	skos:description "The copyright status has not been determined."@en ;
+	.
+

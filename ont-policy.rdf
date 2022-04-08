@@ -224,6 +224,12 @@
     <!-- types -->
 
     <OntologySpec>
+        <!-- local version of the Copyright status vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/CopyrightStatus/"/>
+        <altURL    rdf:resource="types/copyrights.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
         <!-- local version of the Binding vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/types/Binding/"/>
         <altURL    rdf:resource="types/bindings.ttl"/>

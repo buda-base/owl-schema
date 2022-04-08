@@ -1996,6 +1996,13 @@ bdo:conversionOf
 	adm:userTooltip "This label is a conversion of the object label from one orthographic form to another in the same language, e.g., Khmer"@en ;
 	.
 
+bdo:copyrightStatus
+	a owl:ObjectProperty ;
+	rdfs:label "copyright status"@en ;
+	rdfs:domain bdo:BiblioEntity ;
+	rdfs:range bdo:CopyrightStatus ;
+	.
+
 bdo:corporationHasMember
 	a owl:ObjectProperty ;
 	rdfs:label "has member"@en ;
