@@ -20,31 +20,31 @@
 
 bdo:CopyrightStatus
 	a owl:Class ;
-	rdfs:label "Copyright status"^^xsd:string ;
+	rdfs:label "Copyright status"@en ;
 	skos:description "The copyright status of a work or instance, a descriptive legal statement, orthogonal to the access policy. These copyright statuses should represent the most restrictive copyright value between local and internation al copyright"@en ;
 	.
 
 bdr:CopyrightClaimed
 	a owl:CopyrightStatus ;
-	rdfs:label "Copyright claimed"^^xsd:string ;
 	skos:description "The subject has a copyright claim, but can't be determined to be in copyright."@en ;
+	skos:prefLabel "Copyright claimed"@en ;
 	.
 
 bdr:CopyrightInCopyright
 	a owl:CopyrightStatus ;
-	rdfs:label "In copyright"^^xsd:string ;
 	skos:description "The subject has been determined to be in copyright."@en ;
+	skos:prefLabel "In copyright"@en ;
 	.
 
 bdr:CopyrightPublicDomain
 	a owl:CopyrightStatus ;
-	rdfs:label "Public domain"^^xsd:string ;
 	skos:description "The subject has been determined to be in the public domain."@en ;
+	skos:prefLabel "Public domain"@en ;
 	.
 
 bdr:CopyrightUndetermined
 	a owl:CopyrightStatus ;
-	rdfs:label "Copyright undetermined"^^xsd:string ;
 	skos:description "The copyright status has not been determined."@en ;
+	skos:prefLabel "Copyright undetermined"@en ;
 	.
 

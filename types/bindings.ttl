@@ -20,14 +20,14 @@
 
 bdo:Binding
 	a owl:Class ;
-	rdfs:label "Binding"^^xsd:string ;
+	rdfs:label "Binding"@en ;
 	adm:userTooltip "The binding records how a collection of pages/folia are kept together"@en ;
 	.
 
 bdo:Binding_Codex
 	a owl:Class ;
 	rdfs:subClassOf bdo:Binding ;
-	rdfs:label "Binding Codex"^^xsd:string ;
+	rdfs:label "Binding Codex"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "The codex form of binding is the precursor to the modern Western-style bound book"@en ;
 	.
@@ -43,7 +43,7 @@ bdo:Binding_Continuous
 bdo:Binding_LooseLeaf
 	a owl:Class ;
 	rdfs:subClassOf bdo:Binding ;
-	rdfs:label "Binding Loose leaf"^^xsd:string ;
+	rdfs:label "loose leaves"@en ;
 	adm:userTooltip "A binding form in which some sort of container, cloth wrapping, box, pecha between boards, and so on"@en ;
 	.
 
