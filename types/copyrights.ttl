@@ -1,6 +1,6 @@
 # imports: http://www.w3.org/2004/02/skos/core
 
-@prefix Copyright: <http://purl.bdrc.io/ontology/types/CopyrightStatus/> .
+@prefix CopyrightStatus: <http://purl.bdrc.io/ontology/types/CopyrightStatus/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
