@@ -106,7 +106,8 @@ bdr:PrintMethod_Relief_Letterpress
 	a bdo:PrintMethod_Relief ;
 	rdfs:comment "mechanical relief printing, use for editions before computers"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
-	skos:prefLabel "letterpress"@en ;
+	skos:altLabel "letterpress"@en ;
+	skos:prefLabel "typeset"@en ;
 	.
 
 bdr:PrintMethod_Relief_WoodBlock
