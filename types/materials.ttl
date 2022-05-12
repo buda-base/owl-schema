@@ -108,7 +108,7 @@ bdr:MaterialCoryphaPalmLeaf
 
 bdr:MaterialDeshog
 	a bdr:MaterialPaper ;
-	rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Indeginous to Bhutan, distinct from the Lokta paper."@en ;
+	rdfs:comment "paper made from bark of the Daphne bush (Daphne bholua and Daphne papyracea). Used in Bhutan and Nepal."@en ;
 	rdfs:seeAlso
 		<http://bhutan.ims.tuwien.ac.at/ahtcde00/c-viex/j-02-03-02-11/start.html> ,
 		bdr:MaterialLoktaPaper ,

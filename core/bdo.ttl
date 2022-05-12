@@ -84,7 +84,7 @@ bdo:Agent
 bdo:AgentAsCreator
 	a owl:Class ;
 	rdfs:subClassOf bdo:AgentInRole ;
-	rdfs:label "agent as creator"@en ;
+	rdfs:label "creator"@en ;
 	adm:technicalComment ":AgentAsCreator has :role that is restricted to instances of :Creator (rdfs:subClassOf :Role)"@en ;
 	adm:userTooltip "An agent as creator establishes a given Agent performing some cretation rolw w.r.t. a Work"@en ;
 	.
@@ -170,7 +170,7 @@ bdo:BundleInstance
 bdo:CarvedEvent
 	a owl:Class ;
 	rdfs:subClassOf bdo:InstanceEvent ;
-	rdfs:label "Work carved"@en ;
+	rdfs:label "Carved"@en ;
 	adm:userTooltip "The event of carving a work (in woodblocks, stone, etc.)"@en ;
 	.
 
