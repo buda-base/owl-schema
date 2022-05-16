@@ -351,6 +351,16 @@ bdr:CHGISId
 	skos:prefLabel "chgis id"@en ;
 	.
 
+bdr:DommId
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	skos:broader bdr:PlaceIdentifier ;
+	skos:definition "The identifier used in the Documentation of Mongolian Monasteries project"@en ;
+	skos:prefLabel "DOMM id"@en ;
+	.
+
 bdr:FEMCManuscriptCode
 	a
 		bdo:Identifier ,
