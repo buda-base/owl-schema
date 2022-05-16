@@ -3860,7 +3860,7 @@ bdo:personTeacherOf
 
 bdo:placeAccuracy
 	a owl:DatatypeProperty ;
-	rdfs:label "accuracy"@en ;
+	rdfs:label "coordinates accuracy"@en ;
 	adm:translationPriority "2"^^xsd:integer ;
 	adm:userTooltip "The accuracy of the latitude and longitude"@en ;
 	rdfs:domain bdo:Place ;
