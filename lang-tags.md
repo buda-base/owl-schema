@@ -149,10 +149,10 @@ For Tibetan we do not keep the `-Tibt` script tag. We thus have:
 
 #### Mongolian
 
-- `cmg-Mong` for Classical Mongolian written in Mongolian script
-- `cmg-Cyrl` for Classical Mongolian written in Cyrillic script
-- `cmg-x-poppe` for Classical Mongolian using [Poppe](https://viaf.org/viaf/22157344)'s translitteration (the one used in his [Grammar](http://www.worldcat.org/oclc/888131043))
-- `cmg-x-poppe-simpl` same as previous but with simplifications (`č` -> `c`; `ǰ` -> `j`; `š` -> `sh`; `γ` -> `g`)
+- `mn-Mong` for Classical Mongolian written in Mongolian script
+- `mn-Cyrl` for Classical Mongolian written in Cyrillic script
+- `mn-x-poppe` for Classical Mongolian using [Poppe](https://viaf.org/viaf/22157344)'s translitteration (the one used in his [Grammar](http://www.worldcat.org/oclc/888131043))
+- `mn-x-poppe-simpl` same as previous but with simplifications (`č` -> `c`; `ǰ` -> `j`; `š` -> `sh`; `γ` -> `g`)
 
 #### Rare languages
 
