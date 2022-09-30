@@ -827,6 +827,36 @@ bdo:Note
 	adm:userTooltip "A comment about the subject resource, possibly with a source Work and a location in the Work"@en ;
 	.
 
+bdo:OPFOCRBatch
+	a owl:DatatypeProperty ;
+	rdfs:label "OCR batch"@en ;
+	.
+
+bdo:OPFOCRSoftware
+	a owl:DatatypeProperty ;
+	rdfs:label "OCR software"@en ;
+	.
+
+bdo:OPFOCRSource
+	a owl:DatatypeProperty ;
+	rdfs:label "Source for the OCR"@en ;
+	.
+
+bdo:OPFOCRTimeStamp
+	a owl:DatatypeProperty ;
+	rdfs:label "OCR date"@en ;
+	.
+
+bdo:OPFOCRWordMeanConfidenceIndex
+	a owl:DatatypeProperty ;
+	rdfs:label "Mean OCR confidence index"@en ;
+	.
+
+bdo:OPFOCRWordMedianConfidenceIndex
+	a owl:DatatypeProperty ;
+	rdfs:label "Median OCR confidence index"@en ;
+	.
+
 bdo:ObjectType
 	a owl:Class ;
 	rdfs:subClassOf bdo:Type ;
