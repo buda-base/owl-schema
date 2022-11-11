@@ -651,6 +651,15 @@ bdr:KaTenSiglaZ
 	skos:definition "Shey Palace manuscript reference number"@en ;
 	.
 
+bdr:LTWAId
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	skos:broader bdr:ItemIdentifier ;
+	skos:prefLabel "LTWA Accession Number"@en ;
+	.
+
 bdr:MARCCountryCode
 	a
 		bdo:Identifier ,
@@ -664,6 +673,15 @@ bdr:MARCCountryCode
 	skos:broader bdr:PlaceIdentifier ;
 	skos:definition "two- or three-character lowercase alphabetic codes that designate countries and regions (such as states in the U.S.)"@en ;
 	skos:historyNote "Was bdo:placeMARCCountryCode."@en ;
+	.
+
+bdr:NLMId
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	skos:broader bdr:ItemIdentifier ;
+	skos:prefLabel "National Library of Mongolia Accession Number"@en ;
 	.
 
 bdr:OclcControlNumber
