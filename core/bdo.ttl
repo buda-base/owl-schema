@@ -1812,6 +1812,22 @@ bdo:colophon
 	rdfs:range rdf:langString ;
 	.
 
+bdo:conditionGrade
+	a owl:DatatypeProperty ;
+	rdfs:label "condition grade"@en ;
+	adm:userTooltip "condition of the physical object (0 is nearly completely destroyed, 5 is perfect condition)"@en ;
+	rdfs:domain bdo:Instance ;
+	rdfs:range xsd:integer ;
+	.
+
+bdo:contentHeight
+	a owl:DatatypeProperty ;
+	rdfs:label "content height"@en ;
+	adm:userTooltip "height of the content (printed area) in cm"@en ;
+	rdfs:domain bdo:PhysicalInstance ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:contentLocation
 	a owl:ObjectProperty ;
 	rdfs:label "location"@en ;
@@ -2017,6 +2033,14 @@ bdo:contentPagination
 	rdfs:domain bdo:ContentLocation ;
 	rdfs:range bdo:PaginationType ;
 	rdfs:seeAlso bdo:PaginationType ;
+	.
+
+bdo:contentWidth
+	a owl:DatatypeProperty ;
+	rdfs:label "content width"@en ;
+	adm:userTooltip "width of the content (printed area) in cm"@en ;
+	rdfs:domain bdo:PhysicalInstance ;
+	rdfs:range xsd:string ;
 	.
 
 bdo:conversionOf
@@ -3712,6 +3736,13 @@ bdo:paginatedBy
 	owl:deprecated "true"^^xsd:boolean ;
 	.
 
+bdo:paginationExtentStatement
+	a owl:DatatypeProperty ;
+	rdfs:label "pagination extent"@en ;
+	adm:userTooltip "Indicates the range of paginations actually present in the instance"@en ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:partIndex
 	a owl:DatatypeProperty ;
 	rdfs:label "part index"@en ;
@@ -4083,11 +4114,27 @@ bdo:qualityGrade
 	rdfs:range xsd:integer ;
 	.
 
+bdo:readabilityGrade
+	a owl:DatatypeProperty ;
+	rdfs:label "readability grade"@en ;
+	adm:userTooltip "readability of the physical object, can represent the quality of the handwriting, the quality of printing, etc. Goes from 0 (almost impossible to read) to 5 (perfectly readable)."@en ;
+	rdfs:domain bdo:Instance ;
+	rdfs:range xsd:integer ;
+	.
+
 bdo:reproductionPrintMethod
 	a owl:ObjectProperty ;
 	rdfs:label "print method of the reproduction"@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range bdo:PrintMethod ;
+	.
+
+bdo:reproductionQualityGrade
+	a owl:DatatypeProperty ;
+	rdfs:label "reproduction quality grade"@en ;
+	adm:userTooltip "Quality of the reproduction (microfilm, lithography, scan, etc.), grade between 1 and 5."@en ;
+	rdfs:domain bdo:Instance ;
+	rdfs:range xsd:integer ;
 	.
 
 bdo:restored
