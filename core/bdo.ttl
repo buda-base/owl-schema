@@ -898,6 +898,12 @@ bdo:OtherTitle
 	adm:userTooltip "Title that a work is known by other than one of the defined title types"@en ;
 	.
 
+bdo:Outline
+	a owl:Class ;
+	rdfs:subClassOf bdo:Entity ;
+	rdfs:label "Outline"@en ;
+	.
+
 bdo:PaginationType
 	rdfs:subClassOf bdo:Type ;
 	.
@@ -2792,6 +2798,15 @@ bdo:hasOlderSister
 	skos:definition "Indicates an older sister of the person"@en ;
 	.
 
+bdo:hasOutline
+	a owl:ObjectProperty ;
+	rdfs:label "outline"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:domain bdo:BiblioEntity ;
+	rdfs:range bdo:Outline ;
+	owl:inverseOf bdo:outlineOf ;
+	.
+
 bdo:hasParent
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf bdo:kinWith ;
@@ -3708,6 +3723,15 @@ bdo:onYear
 	adm:userTooltip "The event is known to have occurred during the year given, unless otherwise specified the year is reckoned in the Common Era"@en ;
 	rdfs:domain bdo:Event ;
 	rdfs:range xsd:gYear ;
+	.
+
+bdo:outlineOf
+	a owl:ObjectProperty ;
+	rdfs:label "outline of"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:domain bdo:Outline ;
+	rdfs:range bdo:BiblioEntity ;
+	owl:inverseOf bdo:hasOutline ;
 	.
 
 bdo:ownershipStatement
