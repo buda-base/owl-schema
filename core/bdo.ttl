@@ -638,41 +638,6 @@ bdo:ItemPhysicalAsset
 	a owl:Class ;
 	rdfs:subClassOf bdo:Item ;
 	rdfs:label "Physical item"@en ;
-	adm:technicalComment """A ItemPhysicalAsset refers to the library Place which has one or more physical copies of the  catalogued Work and shows the number of copies that are held at the library. The :itemShelf is the Library's shelving information concerning the location in the library of the physical copies. The exception is an optional note regarding missing volumes in a copy or other information such as may  be useful to qualify the status of one or more copies.
-
-Examples:
-
-bdr:W1TLMTGA000883 a :Work ;
-       :workHasItem bdr:IW1TLMTGA000883_01, bdr:IW1TLMTGA000883_02 .
-
-bdr:IW1TLMTGA000883_01 a :ItemPhysicalAsset ;
-       :itemLibrary bdr:G1TLMTGA000001 ;
-       :itemCopies 1 ;
-       :itemShelf \"ཇ|ཇ|༣||001278\" .
-
-bdr:IW1TLMTGA000883_02 a :ItemPhysicalAsset ;
-       :itemLibrary bdr:G1TLMTGB000001 ;
-       :itemCopies 1 ;
-       :itemShelf \"ག|༦|||000026\" .
-
-
-bdr:W20907 a :Work ;
-      :workHasItem bdr:IW20907_02 .
-
-bdr:IW20907_02 a :ItemPhysicalAsset ;
-       :itemLibrary bdr:G1TLMTGA000001 ;
-       :itemCopies 1 ;
-       :itemShelf \"ཉ|༣|||000567\" .
-
-
-bdr:W1KG20928 a :Work ;
-       :workHasItem bdr:IW1KG20928_02 .
-
-bdr:IW1KG20928_02 a :ItemPhysicalAsset ;
-       :itemLibrary bdr:G1TLMTGA000001 ;
-       :itemCopies 1 ;
-       :itemShelf \"ཉ|༣|||001811\" ;
-       :itemException \"དེབ་གཅིག་ཕྱི་ལ་གཡར་ནས་མ་འབྱོར\"@bo ."""@en ;
 	adm:userTooltip "A item comprised of a physical volume or volumes."@en ;
 	.
 
@@ -3354,6 +3319,7 @@ bdo:itemCopies
 	rdfs:domain bdo:ItemPhysicalAsset ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso bdo:ItemPhysicalAsset ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:itemException
@@ -3374,6 +3340,7 @@ bdo:itemForInstance
 	bdo:inferSubTree "true"^^xsd:boolean ;
 	rdfs:domain bdo:Item ;
 	rdfs:range bdo:PhysicalInstance ;
+	owl:deprecated "true"^^xsd:boolean ;
 	owl:inverseOf bdo:instanceHasItem ;
 	.
 
@@ -3384,6 +3351,7 @@ bdo:itemLibrary
 	rdfs:domain bdo:ItemPhysicalAsset ;
 	rdfs:range bdo:Place ;
 	rdfs:seeAlso bdo:ItemPhysicalAsset ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:itemMissingVolumes
@@ -3405,6 +3373,7 @@ bdo:itemShelf
 	rdfs:domain bdo:ItemPhysicalAsset ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso bdo:ItemPhysicalAsset ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:itemVolumes

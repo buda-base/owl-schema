@@ -18,12 +18,29 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bf:AccessionNumber
+	rdfs:label "Accession number"@en ;
+	.
+
+bf:Barcode
+	rdfs:label "Barcode"@en ;
+	skos:definition "Optical machine-readable representation of data relating to the item to which it is attached."@en ;
+	.
+
 bf:Identifier
 	rdfs:label "identifier"@en ;
 	.
 
 bf:Isbn
 	rdfs:label "ISBN"@en ;
+	.
+
+bf:Item
+	rdfs:label
+		"Item"@en ,
+		"dpe cha/"@bo-x-ewts ,
+		"单件"@zh-hans
+		;
 	.
 
 bf:Lccn
@@ -36,8 +53,26 @@ bf:ShelfMark
 	skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
 	.
 
+bf:hasItem
+	rdf:label "item"@en ;
+	owl:inverseOf bdo:itemOf ;
+	.
+
+bf:heldBy
+	rdfs:label "held by"@en ;
+	.
+
 bf:identifiedBy
 	rdfs:label "identified by"@en ;
+	.
+
+bf:itemOf
+	rdfs:label
+		"dpe rgyun/"@bo-x-ewts ,
+		"item of"@en ,
+		"该单件所属实例"@zh-hans
+		;
+	owl:inverseOf bdo:hasItem ;
 	.
 
 iiif2:Collection
