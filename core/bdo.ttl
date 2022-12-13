@@ -3622,8 +3622,6 @@ bdo:notAfter
 	rdfs:subPropertyOf bdo:eventWhen ;
 	rdfs:label "not after"@en ;
 	adm:userTooltip "Indicates that the event is known to have not occurred after to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
-	rdfs:domain bdo:Event ;
-	rdfs:range xsd:gYear ;
 	.
 
 bdo:notBefore
@@ -3631,8 +3629,6 @@ bdo:notBefore
 	rdfs:subPropertyOf bdo:eventWhen ;
 	rdfs:label "not before"@en ;
 	adm:userTooltip "Indicates that the event is known to have not occurred prior to the year/date given, unless otherwise specified the year/date is reckoned in the Common Era"@en ;
-	rdfs:domain bdo:Event ;
-	rdfs:range xsd:gYear ;
 	.
 
 bdo:note
