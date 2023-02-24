@@ -259,7 +259,7 @@ bda:StatusReleasedPendingWithdrawal
 	.
 
 bda:StatusScanned
-	skos:prefLabel "gsher 'bebs zin pa/"@bo-x-ewts ;
+	skos:prefLabel "par 'grems zin pa/"@bo-x-ewts ;
 	.
 
 bda:StatusSeekingOut
