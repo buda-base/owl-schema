@@ -714,6 +714,16 @@ bdr:PlaceIdentifier
 	skos:topConceptOf bdr:IdentifierScheme ;
 	.
 
+bdr:RefCPN
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "CPN number"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Chinese Palace of Nationalities Number"@en ;
+	.
+
 bdr:RefChokLing
 	a
 		bdo:Identifier ,
