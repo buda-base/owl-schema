@@ -153,7 +153,7 @@ bdo:ImageInstance
 	.
 
 bdo:IncipitTitle
-	rdfs:label "gzhung tshig bkol pa'i mtshan byang /"@bo-x-ewts ;
+	rdfs:label "'go brjod yig 'bru'i mtshan byang /"@bo-x-ewts ;
 	.
 
 bdo:Instance
@@ -984,7 +984,7 @@ bdo:incarnationYangtse
 	.
 
 bdo:incipit
-	rdfs:label "mtshan byang bar ma/"@bo-x-ewts ;
+	rdfs:label "'go brjod yig 'bru/"@bo-x-ewts ;
 	.
 
 bdo:instanceComplete
