@@ -53,6 +53,11 @@ bf:ShelfMark
 	skos:definition "Piece/item identifier, such as a call or other type of number."@en ;
 	.
 
+bf:ShelfMarkLcc
+	rdfs:label "LCC call number"@en ;
+	rdfs:comment "Shelf mark based on Library of Congress Classification."@en ;
+	.
+
 bf:hasItem
 	rdf:label "item"@en ;
 	owl:inverseOf bdo:itemOf ;
