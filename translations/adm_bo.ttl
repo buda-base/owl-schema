@@ -419,7 +419,7 @@ adm:seeOtherToL
 	.
 
 adm:status
-	rdfs:label "gnas babs/"@bo-x-ewts ;
+	rdfs:label "tho 'god gnas bab/"@bo-x-ewts ;
 	.
 
 adm:termsOfUse
