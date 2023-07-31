@@ -2258,6 +2258,14 @@ bdo:editionStatement
 	rdfs:range rdf:langString ;
 	.
 
+bdo:etextInfo
+	a owl:DatatypeProperty ;
+	rdfs:label "etext info"@en ;
+	adm:userTooltip "Where and by whom the etext was produced (or requested)"@en ;
+	rdfs:domain bdo:EtextInstance ;
+	rdfs:range rdf:langString ;
+	.
+
 bdo:eventText
 	a owl:DatatypeProperty ;
 	rdfs:label "event text"@en ;

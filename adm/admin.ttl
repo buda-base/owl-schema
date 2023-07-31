@@ -838,6 +838,14 @@ adm:seeOtherToL
 	rdfs:label "See Treasury of Lives entry"@en ;
 	.
 
+adm:sourcesAccessible
+	a owl:ObjectProperty ;
+	rdfs:label "sources accessible"@en ;
+	rdfs:comment "Only for digital instances. If this is set to true, the interface will allow users to download the source files if they have full access to the derived files."@en ;
+	rdfs:domain adm:AdminData ;
+	rdfs:range xsd:boolean ;
+	.
+
 adm:statementScore
 	a owl:AnnotationProperty ;
 	rdfs:label "score"@en ;
