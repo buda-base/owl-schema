@@ -127,6 +127,13 @@ adm:Entity
 	adm:translationPriority "2"^^xsd:integer ;
 	.
 
+adm:EtextRequested
+	a owl:Class ;
+	rdfs:subClassOf adm:ContentLogEntry ;
+	rdfs:label "Etext requested"@en ;
+	rdfs:comment "Log entry for etext request"@en ;
+	.
+
 adm:Facet
 	a owl:Class ;
 	rdfs:label "administrative facet"@en ;
