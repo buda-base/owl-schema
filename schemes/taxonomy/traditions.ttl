@@ -10,6 +10,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdr:EightMinorKagyuTraditions
+	skos:broader bdr:TraditionDakpoKagyu ;
+	.
+
+bdr:FourMainKagyuTraditions
+	skos:broader bdr:TraditionDakpoKagyu ;
+	.
+
 bdr:TR0001
 	skos:broader bdo:ChineseTradition ;
 	.
