@@ -203,7 +203,7 @@
     <OntologySpec>
         <!-- local version of the TraditionsScheme vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/schemes/core/TraditionsScheme/"/>
-        <altURL    rdf:resource="schemes/core/traditions.ttl"/>
+        <altURL    rdf:resource="schemes/taxonomy/traditions.ttl"/>
     </OntologySpec>
 
 
