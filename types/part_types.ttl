@@ -47,6 +47,12 @@ bdr:PartTypeDigitalCodex
 	skos:prefLabel "digital codex"@en ;
 	.
 
+bdr:PartTypeEditorial
+	a bdo:PartType ;
+	skos:definition "Any editorial content (introduction, illustration, index, notes, etc.)"@en ;
+	skos:prefLabel "editorial content"@en ;
+	.
+
 bdr:PartTypeFascicle
 	a bdo:PartType ;
 	skos:prefLabel
