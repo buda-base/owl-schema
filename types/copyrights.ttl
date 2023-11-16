@@ -48,3 +48,9 @@ bdr:CopyrightUndetermined
 	skos:prefLabel "Copyright undetermined"@en ;
 	.
 
+bdr:CopyrightWaived
+	a owl:CopyrightStatus ;
+	skos:description "The author or editor waived their copyright (in writing)"@en ;
+	skos:prefLabel "Copyright waived"@en ;
+	.
+
