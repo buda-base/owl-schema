@@ -35,6 +35,10 @@ bf:Isbn
 	rdfs:label "ISBN"@en ;
 	.
 
+bf:Issn
+	rdfs:label "ISSN"@en ;
+	.
+
 bf:Item
 	rdfs:label
 		"Item"@en ,
@@ -134,6 +138,10 @@ skos:altLabel
 		"variant label"@en ,
 		"标签异体"@zh-hans
 		;
+	.
+
+skos:broader
+	rdfs:label "broader concept"@en ;
 	.
 
 skos:closeMatch
