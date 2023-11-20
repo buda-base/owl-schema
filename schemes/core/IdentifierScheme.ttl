@@ -748,6 +748,16 @@ bdr:RefIsIAO
 	skos:historyNote "Was bdo:workRefIsIAO."@en ;
 	.
 
+bdr:RefNCLK
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "Drepung number"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "See bdr:PR1NCLK"@en ;
+	.
+
 bdr:RefrKTsG
 	a
 		bdo:Identifier ,
