@@ -27,6 +27,10 @@ bf:Barcode
 	skos:definition "Optical machine-readable representation of data relating to the item to which it is attached."@en ;
 	.
 
+bf:Ean
+	rdfs:label "EAN"@en ;
+	.
+
 bf:Identifier
 	rdfs:label "identifier"@en ;
 	.
