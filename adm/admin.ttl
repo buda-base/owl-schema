@@ -707,6 +707,13 @@ adm:place_TLM_taxonomy
 	rdfs:range bdo:Taxonomy ;
 	.
 
+adm:publicityLevel
+	a owl:DatatypeProperty ;
+	rdfs:label "advised level of publicity"@en ;
+	adm:userTooltip "semantics left to the interpretation of the implementer"@en ;
+	rdfs:range xsd:integer ;
+	.
+
 adm:replaceWith
 	a owl:ObjectProperty ;
 	rdfs:label "replace with another rdfs:Resource"@en ;
