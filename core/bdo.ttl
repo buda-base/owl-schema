@@ -961,7 +961,7 @@ bdo:PersonDivorce
 bdo:PersonDonorName
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonName ;
-	rdfs:label "Residence Monastery name"@en ;
+	rdfs:label "Donor name"@en ;
 	adm:userTooltip "Monastic name associated with the name of the donor who sponsored a monastery of residence. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
 	.
 
@@ -1059,6 +1059,13 @@ bdo:PersonMarriage
 	adm:userTooltip "The Event of a Person becoming married to another Person"@en ;
 	.
 
+bdo:PersonMistakenName
+	a owl:Class ;
+	rdfs:subClassOf bdo:PersonName ;
+	rdfs:label "Mistaken Name"@en ;
+	adm:userTooltip "Name under which a person might be wrongly known to scholarship as a result of confusion, poor editing of the sources, etc."@en ;
+	.
+
 bdo:PersonMonasteryName
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonName ;
@@ -1069,7 +1076,7 @@ bdo:PersonMonasteryName
 bdo:PersonMonasticPositionName
 	a owl:Class ;
 	rdfs:subClassOf bdo:PersonName ;
-	rdfs:label "Residence Monastery name"@en ;
+	rdfs:label "Monastic Position name"@en ;
 	adm:userTooltip "Monastic name of the person that is associated with the person's position in monastic hierarchy or sectarian groups. This is specific to a few socio linguistic contexts, such as the Burmese one."@en ;
 	.
 
@@ -2180,6 +2187,14 @@ bdo:dimensionsStatement
 	rdfs:range xsd:string ;
 	.
 
+bdo:eTextForInstance
+	a owl:ObjectProperty ;
+	rdfs:label "etext for instance (there can be several etexts per instance, in our current format, one per volume)"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:domain bdo:EtextVolume ;
+	rdfs:range bdo:ImageGroup ;
+	.
+
 bdo:eTextHasChunk
 	a owl:ObjectProperty ;
 	rdfs:label "has chunk"@en ;
@@ -2249,6 +2264,14 @@ bdo:eTextTitle
 	rdfs:domain bdo:Etext ;
 	rdfs:range rdf:langString ;
 	owl:deprecated "true"^^xsd:boolean ;
+	.
+
+bdo:eTextVolumeForImageGroup
+	a owl:ObjectProperty ;
+	rdfs:label "etext volume for image group"@en ;
+	adm:translationPriority "2"^^xsd:integer ;
+	rdfs:domain bdo:EtextVolume ;
+	rdfs:range bdo:ImageGroup ;
 	.
 
 bdo:eTextVolumeIndex
@@ -2835,6 +2858,13 @@ bdo:hasPaternalUncle
 	adm:userTooltip "Indicates a paternal uncle of the person"@en ;
 	skos:definition "Indicates a paternal uncle of the person"@en ;
 	skos:scopeNote "A paternal uncle is an uncle related through one's father."@en ;
+	.
+
+bdo:hasPatron
+	a owl:ObjectProperty ;
+	rdfs:label "has patron"@en ;
+	owl:inverseOf bdo:patronOf ;
+	skos:definition "Indicates patronage"@en ;
 	.
 
 bdo:hasSibling
@@ -3836,6 +3866,13 @@ bdo:partType
 	adm:userTooltip "If the subject work is part of another work, then this reflects the type of part: chapter, section, text, etc."@en ;
 	rdfs:domain bdo:Instance ;
 	rdfs:range bdo:PartType ;
+	.
+
+bdo:patronOf
+	a owl:ObjectProperty ;
+	rdfs:label "patron of"@en ;
+	owl:inverseOf bdo:hasPatron ;
+	skos:definition "Indicates patronage"@en ;
 	.
 
 bdo:personConsortOf
