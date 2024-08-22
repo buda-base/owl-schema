@@ -99,6 +99,7 @@ Most Chinese tags are all standardized so their choice is easy:
 For Pali our convention is to always use a script tag:
 
 - `pi-Sinh` for Pali written in Sinhalese script
+- `pi-Mymr` for Pali written in Myanmar script
 - `pi-Thai` for Pali written in Thai script
 - `pi-x-iast` (BDRC) for Pali written in [IAST](https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration)
 - `pi-Khmr` for Pali written in Khmer script
