@@ -110,6 +110,9 @@
     "adm:seeOther": {
       "@type": "xsd:anyURI"
     },
+    "adm:sourcesAccessible": {
+      "@type": "@id"
+    },
     "adm:status": {
       "@type": "@id"
     },
@@ -163,6 +166,12 @@
     "conversionOf": {
       "@type": "@id"
     },
+    "copyrightStatus": {
+      "@type": "@id"
+    },
+    "corporation": {
+      "@type": "@id"
+    },
     "corporationHasMember": {
       "@type": "@id"
     },
@@ -185,6 +194,9 @@
       "@type": "@id"
     },
     "dila": "http://purl.dila.edu.tw/resource/",
+    "eTextForInstance": {
+      "@type": "@id"
+    },
     "eTextHasChunk": {
       "@type": "@id"
     },
@@ -194,7 +206,7 @@
     "eTextInInstance": {
       "@type": "@id"
     },
-    "eTextResource": {
+    "eTextVolumeForImageGroup": {
       "@type": "@id"
     },
     "eventWhere": {
@@ -204,6 +216,9 @@
       "@type": "@id"
     },
     "femcConversionOf": {
+      "@type": "@id"
+    },
+    "format": {
       "@type": "@id"
     },
     "hasAunt": {
@@ -311,6 +326,9 @@
     "hasOlderSister": {
       "@type": "@id"
     },
+    "hasOutline": {
+      "@type": "@id"
+    },
     "hasParent": {
       "@type": "@id"
     },
@@ -324,6 +342,9 @@
       "@type": "@id"
     },
     "hasPaternalUncle": {
+      "@type": "@id"
+    },
+    "hasPatron": {
       "@type": "@id"
     },
     "hasSibling": {
@@ -495,14 +516,14 @@
     "onYear": {
       "@type": "xsd:gYear"
     },
+    "outlineOf": {
+      "@type": "@id"
+    },
     "owl": "http://www.w3.org/2002/07/owl#",
     "owl:sameAs": {
       "@type": "@id"
     },
     "pageHasLine": {
-      "@type": "@id"
-    },
-    "paginatedBy": {
       "@type": "@id"
     },
     "partOf": {
@@ -511,16 +532,13 @@
     "partType": {
       "@type": "@id"
     },
+    "patronOf": {
+      "@type": "@id"
+    },
     "personConsortOf": {
       "@type": "@id"
     },
     "personEvent": {
-      "@type": "@id"
-    },
-    "personEventCorporation": {
-      "@type": "@id"
-    },
-    "personEventRole": {
       "@type": "@id"
     },
     "personGender": {
@@ -561,6 +579,9 @@
     },
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "reproductionPrintMethod": {
+      "@type": "@id"
+    },
     "rkts": "http://purl.rkts.eu/resource/",
     "role": {
       "@type": "@id"

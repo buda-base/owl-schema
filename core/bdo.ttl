@@ -430,6 +430,7 @@ bdo:EtextNonPaginated
 	rdfs:subClassOf bdo:Etext ;
 	rdfs:label "Non Paginated Etext"@en ;
 	adm:userTooltip "An etext without any associated pagination information corresponding to digitized images of a Work"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:EtextPage
@@ -444,6 +445,7 @@ bdo:EtextPaginated
 	rdfs:subClassOf bdo:Etext ;
 	rdfs:label "Paginated Etext"@en ;
 	adm:userTooltip "An etext with associated pagination information corresponding to digitized images of a Work"@en ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:EtextRef
@@ -2224,11 +2226,12 @@ bdo:eTextInInstance
 	.
 
 bdo:eTextInVolume
-	a owl:DatatypeProperty ;
+	a owl:ObjectProperty ;
 	rdfs:label "in volume"@en ;
 	adm:userTooltip "Indicates the volume in which the etext is found."@en ;
 	rdfs:domain bdo:Etext ;
-	rdfs:range xsd:integer ;
+	rdfs:range bdo:EtextVolume ;
+	owl:inverseOf bdo:volumeHasEtext ;
 	.
 
 bdo:eTextIsVolume
@@ -2237,6 +2240,7 @@ bdo:eTextIsVolume
 	adm:userTooltip "The Etext is the entire volume"@en ;
 	rdfs:domain bdo:Etext ;
 	rdfs:range xsd:integer ;
+	owl:deprecated "true"^^xsd:boolean ;
 	.
 
 bdo:eTextResource
@@ -4397,6 +4401,7 @@ bdo:volumeHasEtext
 	adm:userTooltip "refers to an :EtextRef that identifies an :Etext and the position of that :Etext in a containing :EtextVolume"@en ;
 	rdfs:domain bdo:EtextVolume ;
 	rdfs:range bdo:Etext ;
+	owl:inverseOf bdo:eTextInVolume ;
 	.
 
 bdo:volumeName
