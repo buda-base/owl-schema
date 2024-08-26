@@ -206,6 +206,9 @@
     "eTextInInstance": {
       "@type": "@id"
     },
+    "eTextInVolume": {
+      "@type": "@id"
+    },
     "eTextVolumeForImageGroup": {
       "@type": "@id"
     },
