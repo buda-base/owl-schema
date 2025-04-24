@@ -1,6 +1,3 @@
-# baseURI: http://purl.bdrc.io/ontology/adm/types/Access/
-# prefix: Access
-
 @prefix Access: <http://purl.bdrc.io/ontology/adm/types/Access/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admindata/> .
@@ -12,50 +9,65 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.bdrc.io/ontology/adm/types/Access/>
+	a owl:Ontology ;
+	dct:license bda:LicenseCC0 ;
+	.
+
 bda:AccessFairUse
-  a adm:Access ;
-  rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
-  skos:prefLabel "Fair Use"@en ;
-.
+	a adm:Access ;
+	rdfs:comment "Only limitted access is allowed. The typical case is a copyrighted work, for which a small portion of the contents can be made available under the exception for libraries and archives. In the US, this is rules by section 108 of the copyright law."@en ;
+	skos:prefLabel "Fair Use"@en ;
+	.
+
 bda:AccessMixed
-  a adm:Access ;
-  rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
-  skos:prefLabel "mixed access"@en ;
-.
+	a adm:Access ;
+	rdfs:comment "Mixed access is used on a work or Item to indicate that the access on parts may vary. E.g., some part of a work may be provided under the Fair Use exception (a contemporary introduction) and the remaining parts may be Open (for content published in the 18th century), except for a part marked as restricted by tradition."@en ;
+	skos:prefLabel "mixed access"@en ;
+	.
+
 bda:AccessOpen
-  a adm:Access ;
-  rdfs:comment "The contents are made openly accessible"@en ;
-  skos:prefLabel "Open Access"@en ;
-.
+	a adm:Access ;
+	rdfs:comment "The contents are made openly accessible"@en ;
+	skos:prefLabel "Open Access"@en ;
+	.
+
 bda:AccessRestrictedByQuality
-  a adm:Access ;
-  rdfs:comment "The quality of the scanning or eText conversion too poor to warrant making it available online."@en ;
-  skos:prefLabel "Restricted by Quality"@en ;
-  owl:deprecated true ;
-.
+	a adm:Access ;
+	rdfs:comment "The quality of the scanning or eText conversion too poor to warrant making it available online."@en ;
+	owl:deprecated "true"^^xsd:boolean ;
+	skos:prefLabel "Restricted by Quality"@en ;
+	.
+
 bda:AccessRestrictedByTbrc
-  a adm:Access ;
-  rdfs:comment "BDRC is restricting access to the content"@en ;
-  skos:prefLabel "Restricted by BDRC"@en ;
-.
+	a adm:Access ;
+	rdfs:comment "BDRC is restricting access to the content"@en ;
+	skos:prefLabel "Restricted by BDRC"@en ;
+	.
+
 bda:AccessRestrictedSealed
-  a adm:Access ;
-  rdfs:comment "The content is sealed by tradition."@en ;
-  skos:prefLabel "Restricted Sealed"@en ;
-.
+	a adm:Access ;
+	rdfs:comment "The content is sealed by tradition."@en ;
+	skos:prefLabel "Restricted Sealed"@en ;
+	.
+
 bda:AccessRestrictedTemporarily
-  a adm:Access ;
-  rdfs:comment "The content is temporarily restricted."@en ;
-  skos:prefLabel "Temporarily Restricted"@en ;
-.
-Access:
-  a owl:Ontology ;
-  dct:license bda:LicenseCC0 ;
-.
+	a adm:Access ;
+	rdfs:comment "The content is temporarily restricted."@en ;
+	skos:prefLabel "Temporarily Restricted"@en ;
+	.
+
+bda:AccessSameAsOnline
+	a adm:Access ;
+	rdfs:comment "The archive or source files have the same access as the online version"@en ;
+	skos:prefLabel "Same as online"@en ;
+	.
+
 adm:Access
-  a owl:Class ;
-  rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
+	a owl:Class ;
+	rdfs:label "Work Access Type"@en ;
+	rdfs:comment """AccessType specifies the restrictions on access.  This is differentiated by License, which determines the legal status of copyright.  
 
 AccessTypes designations are intended to serve two distinct purposes: (1) maximize access of works as a public good to fulfill BDRC's mission, and (2) protect the legal and cultural rights of Tibetan authors and publishers"""@en ;
-  rdfs:label "Work Access Type"@en ;
-.
+	.
+

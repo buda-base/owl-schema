@@ -127,11 +127,23 @@ adm:Entity
 	adm:translationPriority "2"^^xsd:integer ;
 	.
 
+adm:EtextCreated
+	a owl:Class ;
+	rdfs:subClassOf adm:ContentLogEntry ;
+	rdfs:label "Etext created"@en ;
+	.
+
 adm:EtextRequested
 	a owl:Class ;
 	rdfs:subClassOf adm:ContentLogEntry ;
 	rdfs:label "Etext requested"@en ;
 	rdfs:comment "Log entry for etext request"@en ;
+	.
+
+adm:EtextSynced
+	a owl:Class ;
+	rdfs:subClassOf adm:ContentLogEntry ;
+	rdfs:label "Etext synced"@en ;
 	.
 
 adm:Facet
@@ -352,6 +364,13 @@ adm:adminAbout
 			adm:AdminData
 		) ;
 	] ;
+	.
+
+adm:archiveFilesAccess
+	a owl:ObjectProperty ;
+	rdfs:label "archive files access"@en ;
+	rdfs:domain adm:AdminData ;
+	rdfs:range adm:Access ;
 	.
 
 adm:attributionName
@@ -850,6 +869,13 @@ adm:seeOtherToL
 	a owl:AnnotationProperty ;
 	rdfs:subPropertyOf adm:seeOther ;
 	rdfs:label "See Treasury of Lives entry"@en ;
+	.
+
+adm:sourceFilesAccess
+	a owl:ObjectProperty ;
+	rdfs:label "source files access"@en ;
+	rdfs:domain adm:AdminData ;
+	rdfs:range adm:Access ;
 	.
 
 adm:sourcesAccessible
