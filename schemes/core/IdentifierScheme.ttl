@@ -405,6 +405,16 @@ bdr:HollisId
 	skos:prefLabel "hollis id"@en ;
 	.
 
+bdr:IDALL
+	a
+		bdo:Identifier ,
+		skos:Concept
+		;
+	rdfs:label "ALL"@en ;
+	skos:broader bdr:InstanceIdentifier ;
+	skos:definition "Indicates the ALL / ACIP identifier"@en ;
+	.
+
 bdr:IDNGMPP
 	a
 		bdo:Identifier ,

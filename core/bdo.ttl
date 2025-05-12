@@ -1843,6 +1843,22 @@ bdo:contentLocationByFolio
 	rdfs:range xsd:boolean ;
 	.
 
+bdo:contentLocationEndEtext
+	a owl:DatatypeProperty ;
+	rdfs:label "end etext number"@en ;
+	adm:userTooltip "The etext number where the location ends"@en ;
+	rdfs:domain bdo:ContentLocation ;
+	rdfs:range bdo:IntegerOrString ;
+	.
+
+bdo:contentLocationEndIdInEtext
+	a owl:DatatypeProperty ;
+	rdfs:label "end id in etext"@en ;
+	adm:userTooltip "The xml id in the etext where the location ends"@en ;
+	rdfs:domain bdo:ContentLocation ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:contentLocationEndLine
 	a owl:DatatypeProperty ;
 	rdfs:label "end line"@en ;
@@ -1903,6 +1919,22 @@ bdo:contentLocationEndVolumeName
 	owl:deprecated "true"^^xsd:boolean ;
 	.
 
+bdo:contentLocationEtext
+	a owl:DatatypeProperty ;
+	rdfs:label "etext number"@en ;
+	adm:userTooltip "The etext number where a location starts"@en ;
+	rdfs:domain bdo:ContentLocation ;
+	rdfs:range bdo:IntegerOrString ;
+	.
+
+bdo:contentLocationIdInEtext
+	a owl:DatatypeProperty ;
+	rdfs:label "id in etext"@en ;
+	adm:userTooltip "The xml id in the etext where the location starts"@en ;
+	rdfs:domain bdo:ContentLocation ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:contentLocationInstance
 	a owl:ObjectProperty ;
 	rdfs:label "in instance"@en ;
@@ -1915,7 +1947,6 @@ bdo:contentLocationInstance
 bdo:contentLocationLine
 	a owl:DatatypeProperty ;
 	rdfs:label "line"@en ;
-	adm:technicalComment "was :workLocationLine"@en ;
 	adm:userTooltip "The line on the page that is referenced"@en ;
 	rdfs:domain bdo:ContentLocation ;
 	rdfs:range bdo:IntegerOrString ;
