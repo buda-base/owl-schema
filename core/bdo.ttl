@@ -3748,6 +3748,13 @@ bdo:noteType
 	rdfs:range xsd:string ;
 	.
 
+bdo:numberOfCharacters
+	a owl:DatatypeProperty ;
+	rdfs:label "number of characters"@en ;
+	adm:catalogingConvention "This is the total number of characters in an etext instance, volume or resource"@en ;
+	rdfs:range xsd:integer ;
+	.
+
 bdo:numberOfVolumes
 	a owl:DatatypeProperty ;
 	rdfs:label "number of volumes"@en ;
