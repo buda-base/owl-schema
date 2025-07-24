@@ -146,6 +146,12 @@ adm:EtextSynced
 	rdfs:label "Etext synced"@en ;
 	.
 
+adm:EtextUpdated
+	a owl:Class ;
+	rdfs:subClassOf adm:ContentLogEntry ;
+	rdfs:label "Etext updated"@en ;
+	.
+
 adm:Facet
 	a owl:Class ;
 	rdfs:label "administrative facet"@en ;
