@@ -4354,6 +4354,12 @@ bdo:sliceStartChar
 	adm:translationPriority "2"^^xsd:integer ;
 	.
 
+bdo:sourceFilePath
+	a owl:DatatypeProperty ;
+	rdfs:label "source file path"@en ;
+	rdfs:range xsd:string ;
+	.
+
 bdo:sourceNote
 	a owl:DatatypeProperty ;
 	rdfs:label "source note"@en ;
@@ -4421,6 +4427,11 @@ bdo:uiAbbrFormat
 	adm:userTooltip 'used as labels for items such as canon catalog sigLas and date eras. The value is a string such as "T %s"or "%s C.E."'@en ;
 	rdfs:domain rdfs:Resource ;
 	rdfs:range xsd:string ;
+	.
+
+bdo:version
+	a owl:DatatypeProperty ;
+	rdfs:label "version"@en ;
 	.
 
 bdo:virtualLinkTo
