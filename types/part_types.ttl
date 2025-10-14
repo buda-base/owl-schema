@@ -35,6 +35,11 @@ bdr:PartTypeCodex
 	skos:prefLabel "codex"@en ;
 	.
 
+bdr:PartTypeCodicologicalVolume
+	a bdo:PartType ;
+	skos:prefLabel "volume"@en ;
+	.
+
 bdr:PartTypeCollection
 	a bdo:PartType ;
 	skos:definition "use it only for edited collections and not reproductions"@en ;
