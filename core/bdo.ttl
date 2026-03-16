@@ -3958,6 +3958,7 @@ bdo:personGender
 	adm:userTooltip "The gender of the person"@en ;
 	rdfs:domain bdo:Person ;
 	rdfs:range bdo:Gender ;
+	skos:definition "The gender of the person"@en ;
 	.
 
 bdo:personHasConsort
